@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import HomePage from "./components/Home";
 import AngularPage from "./components/Angular";
-import NewBlogPostPage from "./components/NewBlogPost";
-import ContactPage from "./components/Contact";
+import DotnetPage from "./components/Dotnet";
+import CLRPage from "./components/CLR";
 import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
 import SpeechRecognition, {
   useSpeechRecognition,
@@ -13,7 +13,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
-  const pages = ["home", "angular", "new blog post", "contact"];
+  const pages = ["home", "angular", "new blog post", "clr"];
 
   const commands = [
     {
@@ -29,9 +29,17 @@ function App() {
   const [redirectUrl, setRedirectUrl] = useState("");
   const urls = {
     home: "/",
+    // angular
     angular: "/angular",
-    "new blog post": "/blog/new",
-    contact: "/contact",
+    // difference  between .net and .net core
+    ".net": "/dotnet",
+    "dotnet": "/dotnet",
+    "difference between dotnet standard and dotnet core": "/dotnet",
+    "difference between .net standard and .net core": "/dotnet",
+    ".net .net core": "/dotnet",
+    // CLR
+    clr: "/clr",
+    "common language runtime": "/clr",
   };
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
@@ -80,13 +88,13 @@ function App() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/blog/new">
-                    Add Blog Post
+                  <Link className="nav-link" to="/dotnet">
+                    Dotnet
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/contact">
-                    Contact
+                  <Link className="nav-link" to="/clr">
+                    CLR
                   </Link>
                 </li>
               </ul>
@@ -109,8 +117,8 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/home" component={HomePage} />
           <Route path="/angular" exact component={AngularPage} />
-          <Route path="/blog/new" component={NewBlogPostPage} />
-          <Route path="/contact" component={ContactPage} />
+          <Route path="/blog/new" component={DotnetPage} />
+          <Route path="/contact" component={CLRPage} />
 
           {redirect}
         </div>
