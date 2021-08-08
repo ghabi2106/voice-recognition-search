@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CLR() {
+export default function Clr() {
   return (
     <>
       <h1>CLR</h1>

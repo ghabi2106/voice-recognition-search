@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HomePage from "./components/Home";
 import AngularPage from "./components/Angular";
 import DotnetPage from "./components/Dotnet";
-import CLRPage from "./components/CLR";
+import CLRPage from "./components/Clr";
 import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
 import SpeechRecognition, {
   useSpeechRecognition,
@@ -33,7 +33,7 @@ function App() {
     angular: "/angular",
     // difference  between .net and .net core
     ".net": "/dotnet",
-    "dotnet": "/dotnet",
+    dotnet: "/dotnet",
     "difference between dotnet standard and dotnet core": "/dotnet",
     "difference between .net standard and .net core": "/dotnet",
     ".net .net core": "/dotnet",
@@ -117,8 +117,8 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/home" component={HomePage} />
           <Route path="/angular" exact component={AngularPage} />
-          <Route path="/blog/new" component={DotnetPage} />
-          <Route path="/contact" component={CLRPage} />
+          <Route path="/dotnet" component={DotnetPage} />
+          <Route path="/clr" component={CLRPage} />
 
           {redirect}
         </div>
