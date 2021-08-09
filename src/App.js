@@ -9,8 +9,8 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import stringSimilarity from "string-similarity";
 //import logo from './logo.svg';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
   const pages = ["home", "angular", "new blog post", "clr"];
@@ -57,63 +57,71 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">   
       <BrowserRouter>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
-              Presentation
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/angular">
-                    Angular
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/dotnet">
-                    Dotnet
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/clr">
-                    CLR
-                  </Link>
-                </li>
-              </ul>
-              <div className="d-flex align-items-center">
-                <p className="mb-0 me-2" id="transcript">
-                  Transcript: {transcript}
-                </p>
-                <button
-                  className="btn btn-outline-success"
-                  onClick={SpeechRecognition.startListening}
-                >
-                  Start
-                </button>
+        <header className="bd-header bg-dark d-flex align-items-stretch border-bottom border-dark">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <div className="container-fluid">
+              <Link className="navbar-brand" to="/">
+                Presentation
+              </Link>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div
+                className="collapse navbar-collapse"
+                id="navbarSupportedContent"
+              >
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link active"
+                      aria-current="page"
+                      to="/"
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/angular">
+                      Angular
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/dotnet">
+                      Dotnet
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/clr">
+                      CLR
+                    </Link>
+                  </li>
+                </ul>
+                <div className="d-flex align-items-center">
+                  <p className="mb-0 me-2" id="transcript">
+                    Transcript: {transcript}
+                  </p>
+                  <button
+                    className="btn btn-outline-success"
+                    onClick={SpeechRecognition.startListening}
+                  >
+                    Start
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </nav>
-
-        <div className="container">
+          </nav>
+        </header>
+          
           <Route path="/" exact component={HomePage} />
           <Route path="/home" component={HomePage} />
           <Route path="/angular" exact component={AngularPage} />
@@ -121,7 +129,6 @@ function App() {
           <Route path="/clr" component={CLRPage} />
 
           {redirect}
-        </div>
       </BrowserRouter>
     </div>
   );
