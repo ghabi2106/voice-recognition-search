@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export default function Dotnet() {
   return (
@@ -71,14 +72,36 @@ export default function Dotnet() {
                 </li>
               </ul>
             </li>
+            <li className="my-2">
+              <button
+                className="btn d-inline-flex align-items-center"
+                data-bs-toggle="collapse"
+                aria-expanded="true"
+                data-bs-target="#contents-collapse"
+                aria-controls="contents-collapse"
+              >
+                Related links
+              </button>
+              <ul
+                className="list-unstyled ps-3 collapse show"
+                id="contents-collapse"
+              >
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/entityframework"
+                  >
+                    Entity Framework
+                  </Link>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </aside>
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
-          <h2 className="sticky-xl-top fw-bold p-0 m-0">
-            Contents
-          </h2>
+          <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Différence entre .Net sandard et .Net Core</h3>
           <article className="" id="introduction">
             <h6>Introduction</h6>
