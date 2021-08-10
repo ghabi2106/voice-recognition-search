@@ -6,6 +6,8 @@ import CLRPage from "./components/Clr";
 import EntityframeworkPage from "./components/Entityframework";
 import ControllerPage from "./components/controller";
 import MvcPage from "./components/Mvc";
+import DesignpatternPage from "./components/Designpattern";
+import DiPage from "./components/Di";
 
 import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
 import SpeechRecognition, {
@@ -148,6 +150,16 @@ function App() {
                       Controller
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/di">
+                      DI
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/designpattern">
+                      Design Pattern
+                    </Link>
+                  </li>
                 </ul>
                 <div className="d-flex align-items-center">
                   <p className="mb-0 me-2" id="transcript">
@@ -173,6 +185,8 @@ function App() {
         <Route path="/entityframework" component={EntityframeworkPage} />
         <Route path="/controller" component={ControllerPage} />
         <Route path="/mvc" component={MvcPage} />
+        <Route path="/designpattern" component={DesignpatternPage} />
+        <Route path="/di" component={DiPage} />
 
         {redirect}
       </BrowserRouter>

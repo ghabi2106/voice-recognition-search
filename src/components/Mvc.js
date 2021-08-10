@@ -77,6 +77,7 @@ export default function Mvc() {
                   >
                     Architecture Multilayer
                   </Link>
+                </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
@@ -84,7 +85,6 @@ export default function Mvc() {
                   >
                     Architecture Multilayer
                   </Link>
-                </li>
                 </li>
               </ul>
             </li>

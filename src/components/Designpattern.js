@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function DesignPattern() {
+export default function Designpattern() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -68,19 +68,53 @@ export default function DesignPattern() {
         </nav>
       </aside>
       <div className="bd-cheatsheet container-fluid bg-body">
-        <section id="dotnet-core">
+        <section id="design-pattern">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Design Principle vs Design Pattern</h3>
           <article className="" id="design-pattern">
             <h6>Design Principle</h6>
-            <p>
-              Les Design Principles fournissent des directives de haut niveau
-              pour concevoir de meilleures applications logicielles. Ils ne
-              fournissent pas de directives d'implémentation et ne sont liés à
-              aucun langage de programmation. Les principes SOLID (SRP, OCP,
-              LSP, ISP, DIP) sont l'un des ensembles de principes de conception
-              les plus populaires.
-            </p>
+            <div>
+              <p>
+                Les Design Principles fournissent des directives de haut niveau
+                pour concevoir de meilleures applications logicielles. Ils ne
+                fournissent pas de directives d'implémentation et ne sont liés à
+                aucun langage de programmation. Les principes SOLID (SRP, OCP,
+                LSP, ISP, DIP) sont l'un des ensembles de principes de
+                conception les plus populaires.
+              </p>
+              <ul>
+                <li>
+                  Patrons de création : fournissent des mécanismes de création
+                  d’objets qui augmentent la flexibilité et la réutilisation du
+                  code.
+                  <ul>
+                    <li>Singleton</li>
+                    <li>Factory Method</li>
+                    <li>Abstract Factory</li>
+                  </ul>
+                </li>
+                <li>
+                  Patrons structurels : Ces patrons vous guident pour assembler
+                  des objets et des classes en de plus grandes structures tout
+                  en gardant celles-ci flexibles et efficaces.
+                  <ul>
+                    <li>Proxy</li>
+                    <li>Bridge</li>
+                    <li>Adapter</li>
+                  </ul>
+                </li>
+                <li>
+                  Patrons comportementaux : Ces patrons s’occupent des
+                  algorithmes et de la répartition des responsabilités entre les
+                  objets
+                  <ul>
+                    <li>Mediator</li>
+                    <li>Command</li>
+                    <li>Observer</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </article>
           <article className="" id="design-principle">
             <h6>Design pattern</h6>
