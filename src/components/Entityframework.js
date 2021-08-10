@@ -150,7 +150,7 @@ export default function Entityframework() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Différence entre .Net sandard et .Net Core</h3>
+          <h3>Entity Framework</h3>
           <article className="" id="introduction">
             <h6>Introduction</h6>
             <div>
@@ -191,9 +191,9 @@ export default function Entityframework() {
           <article className="" id="tracking">
             <h6>Suivi des modifications</h6>
             <p>
-              EF garde une trace des modifications apportées aux instances de
-              vos entités (valeurs de propriété) qui doivent être soumises à la
-              base de données.
+              EF garde une trace des modifications apportées aux instances des
+              entités (valeurs de propriété) qui doivent être soumises à la base
+              de données.
             </p>
           </article>
           <article className="" id="saving">

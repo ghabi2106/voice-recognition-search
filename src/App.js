@@ -3,6 +3,10 @@ import HomePage from "./components/Home";
 import AngularPage from "./components/Angular";
 import DotnetPage from "./components/Dotnet";
 import CLRPage from "./components/Clr";
+import EntityframeworkPage from "./components/Entityframework";
+import ControllerPage from "./components/controller";
+import MvcPage from "./components/Mvc";
+
 import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
 import SpeechRecognition, {
   useSpeechRecognition,
@@ -13,7 +17,25 @@ import stringSimilarity from "string-similarity";
 // import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
-  const pages = ["home", "angular", "new blog post", "clr"];
+  const pages = [
+    "home",
+    "angular",
+    // difference  between .net and .net core
+    ".net",
+    "dotnet",
+    "difference between dotnet standard and dotnet core",
+    "difference between .net standard and .net core",
+    ".net .net core",
+    // CLR
+    "clr",
+    "common language runtime",
+    // Entity Framework
+    "fntity framework",
+    // Controller
+    "controller",
+    // MVC
+    "mvc",
+  ];
 
   const commands = [
     {
@@ -40,6 +62,12 @@ function App() {
     // CLR
     clr: "/clr",
     "common language runtime": "/clr",
+    // Entity Framework
+    "entity framework" : "/entityframework",
+    // Entity Framework
+    "Controller" : "/controller",
+    // MVC
+    "mvc" : "/mvc",
   };
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
@@ -57,7 +85,7 @@ function App() {
   }
 
   return (
-    <div className="app">   
+    <div className="app">
       <BrowserRouter>
         <header className="bd-header bg-dark d-flex align-items-stretch border-bottom border-dark">
           <nav className="navbar navbar-expand-lg navbar-light bg-light w-100">
@@ -105,6 +133,21 @@ function App() {
                       CLR
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/entityframework">
+                      Entity Framework
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/mvc">
+                      MVC
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/controller">
+                      Controller
+                    </Link>
+                  </li>
                 </ul>
                 <div className="d-flex align-items-center">
                   <p className="mb-0 me-2" id="transcript">
@@ -121,14 +164,17 @@ function App() {
             </div>
           </nav>
         </header>
-          
-          <Route path="/" exact component={HomePage} />
-          <Route path="/home" component={HomePage} />
-          <Route path="/angular" exact component={AngularPage} />
-          <Route path="/dotnet" component={DotnetPage} />
-          <Route path="/clr" component={CLRPage} />
 
-          {redirect}
+        <Route path="/" exact component={HomePage} />
+        <Route path="/home" component={HomePage} />
+        <Route path="/angular" exact component={AngularPage} />
+        <Route path="/dotnet" component={DotnetPage} />
+        <Route path="/clr" component={CLRPage} />
+        <Route path="/entityframework" component={EntityframeworkPage} />
+        <Route path="/controller" component={ControllerPage} />
+        <Route path="/mvc" component={MvcPage} />
+
+        {redirect}
       </BrowserRouter>
     </div>
   );
