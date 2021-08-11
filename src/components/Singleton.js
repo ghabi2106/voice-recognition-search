@@ -25,9 +25,33 @@ export default function Singleton() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
+                    href="#sigleton"
                   >
-                    Introduction
+                    Singleton
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#mediator"
+                  >
+                    Mediator
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#observer"
+                  >
+                    Observer
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#command"
+                  >
+                    Command
                   </a>
                 </li>
               </ul>
@@ -62,13 +86,42 @@ export default function Singleton() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Singleton</h3>
-          <article className="" id="introduction">
-            <h6>Introduction</h6>
+          <h3>Singleton Mediator Observer Command</h3>
+          <article className="" id="singleton">
+            <h6>Singleton</h6>
             <p>
               Singleton est un patron de conception de création qui garantit que
               l’instance d’une classe n’existe qu’en un seul exemplaire, tout en
               fournissant un point d’accès global à cette instance.
+            </p>
+          </article>
+          <article className="" id="mediator">
+            <h6>Mediator</h6>
+            <p>
+              Médiateur est un patron de conception comportemental qui diminue
+              les dépendances chaotiques entre les objets. Il restreint les
+              communications directes entre les objets et les force à collaborer
+              uniquement via un objet médiateur.
+            </p>
+          </article>
+          <article className="" id="observer">
+            <h6>Observer</h6>
+            <p>
+              L’Observateur est un patron de conception comportemental qui
+              permet de mettre en place un mécanisme de souscription pour
+              envoyer des notifications à plusieurs objets, au sujet
+              d’événements concernant les objets qu’ils observent.
+            </p>
+          </article>
+          <article className="" id="command">
+            <h6>Command</h6>
+            <p>
+              Commande est un patron de conception comportemental qui prend une
+              action à effectuer et la transforme en un objet autonome qui
+              contient tous les détails de cette action. Cette transformation
+              permet de paramétrer des méthodes avec différentes actions,
+              planifier leur exécution, les mettre dans une file d’attente ou
+              d’annuler des opérations effectuées.
             </p>
           </article>
         </section>

@@ -188,53 +188,27 @@ export default function Di() {
               </thead>
               <tbody>
                 <tr>
-                  <td>TransientLifetimeManager</td>
+                  <td>AddSingleton</td>
                   <td>
-                    Crée un nouvel objet du type demandé chaque fois que vous
-                    appelez la méthode Resolve ou ResolveAll.
+                    Si un service est enregistré avec Singleton life ,
+                    l'instance de ce service n'est créée qu'une seule fois et la
+                    même instance de ce service est ensuite utilisée dans
+                    l'ensemble de l'application.
                   </td>
                 </tr>
                 <tr>
-                  <td>ContainerControlledLifetimeManager</td>
+                  <td>AddScoped</td>
                   <td>
-                    Crée un objet singleton la première fois que vous appelez la
-                    méthode Resolve ou ResolveAll, puis renvoie le même objet
-                    lors des appels Resolve ou ResolveAll suivants.
+                    Si un service est enregistré avec Scoped life , une nouvelle
+                    instance de ce service est créée pour chaque demande.
                   </td>
                 </tr>
                 <tr>
-                  <td>HierarchicalLifetimeManager</td>
+                  <td>AddTransient</td>
                   <td>
-                    Identique au ContainerControlledLifetimeManager, la seule
-                    différence est que le conteneur enfant peut créer son propre
-                    objet singleton. Les conteneurs parent et enfant ne
-                    partagent pas le même objet singleton.
-                  </td>
-                </tr>
-                <tr>
-                  <td>PerResolveLifetimeManager</td>
-                  <td>
-                    Similaire au TransientLifetimeManager, mais il réutilise le
-                    même objet de type enregistré dans le graphe d'objet
-                    récursif.
-                  </td>
-                </tr>
-                <tr>
-                  <td>PerThreadLifetimeManager</td>
-                  <td>
-                    Crée un objet singleton par thread. Il renvoie différents
-                    objets du conteneur sur différents threads.
-                  </td>
-                </tr>
-                <tr>
-                  <td>ExternallyControlledLifetimeManager</td>
-                  <td>
-                    Il ne conserve qu'une faible référence des objets qu'il crée
-                    lorsque vous appelez la méthode Resolve ou ResolveAll. Il ne
-                    maintient pas la durée de vie des objets forts qu'il crée et
-                    vous permet, à vous ou au ramasse-miettes, de contrôler la
-                    durée de vie des objets.Il vous permet de créer votre propre
-                    gestionnaire de durée de vie personnalisé.
+                    Si un service est enregistré avec Transient life , une
+                    nouvelle instance de ce service est toujours créée chaque
+                    fois que le service est demandé.
                   </td>
                 </tr>
               </tbody>
