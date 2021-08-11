@@ -9,6 +9,7 @@ import MvcPage from "./components/dotnet/Mvc";
 import DesignpatternPage from "./components/dotnet/Designpattern";
 import DiPage from "./components/dotnet/Di";
 import CleanPage from "./components/dotnet/Clean";
+import StringbuilderPage from "./components/csharp/Stringbuilder";
 
 import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
 import SpeechRecognition, {
@@ -166,6 +167,11 @@ function App() {
                       Clean
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/stringbuilder">
+                      String
+                    </Link>
+                  </li>
                 </ul>
                 <div className="d-flex align-items-center">
                   <p className="mb-0 me-2" id="transcript">
@@ -194,6 +200,7 @@ function App() {
         <Route path="/designpattern" component={DesignpatternPage} />
         <Route path="/di" component={DiPage} />
         <Route path="/clean" component={CleanPage} />
+        <Route path="/stringbuilder" component={StringbuilderPage} />
 
         {redirect}
       </BrowserRouter>
