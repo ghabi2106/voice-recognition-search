@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import HomePage from "./components/Home";
-import AngularPage from "./components/Angular";
-import DotnetPage from "./components/Dotnet";
-import CLRPage from "./components/Clr";
-import EntityframeworkPage from "./components/Entityframework";
-import ControllerPage from "./components/controller";
-import MvcPage from "./components/Mvc";
-import DesignpatternPage from "./components/Designpattern";
-import DiPage from "./components/Di";
-import CleanPage from "./components/Clean";
+import HomePage from "./components/dotnet/Home";
+import AngularPage from "./components/angular/Angular";
+import DotnetPage from "./components/dotnet/Dotnet";
+import CLRPage from "./components/dotnet/Clr";
+import EntityframeworkPage from "./components/dotnet/Entityframework";
+import ControllerPage from "./components/dotnet/controller";
+import MvcPage from "./components/dotnet/Mvc";
+import DesignpatternPage from "./components/dotnet/Designpattern";
+import DiPage from "./components/dotnet/Di";
+import CleanPage from "./components/dotnet/Clean";
 
 import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
 import SpeechRecognition, {
