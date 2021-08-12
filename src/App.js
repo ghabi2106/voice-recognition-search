@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HomePage from "./components/dotnet/Home";
 import AngularPage from "./components/angular/Angular";
 import DotnetPage from "./components/dotnet/Dotnet";
+import ServicePage from "./components/dotnet/Service";
 import CLRPage from "./components/dotnet/Clr";
 import EntityframeworkPage from "./components/dotnet/Entityframework";
 import ControllerPage from "./components/dotnet/controller";
@@ -9,7 +10,11 @@ import MvcPage from "./components/dotnet/Mvc";
 import DesignpatternPage from "./components/dotnet/Designpattern";
 import DiPage from "./components/dotnet/Di";
 import CleanPage from "./components/dotnet/Clean";
+import CqrsPage from "./components/dotnet/Cqrs";
+import NugetpackagesPage from "./components/dotnet/Nugetpackages";
 import StringbuilderPage from "./components/csharp/Stringbuilder";
+import NewfeaturesPage from "./components/csharp/Newfeatures";
+import StructPage from "./components/csharp/Struct";
 
 import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
 import SpeechRecognition, {
@@ -128,6 +133,11 @@ function App() {
                     </Link>
                   </li>
                   <li className="nav-item">
+                    <Link className="nav-link" to="/service">
+                      Service
+                    </Link>
+                  </li>
+                  <li className="nav-item">
                     <Link className="nav-link" to="/dotnet">
                       Dotnet
                     </Link>
@@ -139,7 +149,7 @@ function App() {
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/entityframework">
-                      Entity Framework
+                      Entity-Framework
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -159,7 +169,7 @@ function App() {
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/designpattern">
-                      Design Pattern
+                      Design-Pattern
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -168,8 +178,28 @@ function App() {
                     </Link>
                   </li>
                   <li className="nav-item">
+                    <Link className="nav-link" to="/cqrs">
+                      CQRS
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/nugetpackages">
+                      Nuget-Packages
+                    </Link>
+                  </li>
+                  <li className="nav-item">
                     <Link className="nav-link" to="/stringbuilder">
                       String
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/newfeatures">
+                      C#-features
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/struct">
+                      Struct
                     </Link>
                   </li>
                 </ul>
@@ -192,6 +222,7 @@ function App() {
         <Route path="/" exact component={HomePage} />
         <Route path="/home" component={HomePage} />
         <Route path="/angular" exact component={AngularPage} />
+        <Route path="/service" component={ServicePage} />
         <Route path="/dotnet" component={DotnetPage} />
         <Route path="/clr" component={CLRPage} />
         <Route path="/entityframework" component={EntityframeworkPage} />
@@ -200,7 +231,11 @@ function App() {
         <Route path="/designpattern" component={DesignpatternPage} />
         <Route path="/di" component={DiPage} />
         <Route path="/clean" component={CleanPage} />
+        <Route path="/cqrs" component={CqrsPage} />
+        <Route path="/nugetpackages" component={NugetpackagesPage} />
         <Route path="/stringbuilder" component={StringbuilderPage} />
+        <Route path="/newfeatures" component={NewfeaturesPage} />
+        <Route path="/struct" component={StructPage} />
 
         {redirect}
       </BrowserRouter>
