@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-//import all fr components
+import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
+import stringSimilarity from "string-similarity";
+
+//#region something import all fr components
 import HomePage from "./components/fr/dotnet/Home";
 import AngularPage from "./components/fr/angular/Angular";
 import DotnetPage from "./components/fr/dotnet/Dotnet";
@@ -17,12 +23,8 @@ import NugetpackagesPage from "./components/fr/dotnet/Nugetpackages";
 import StringbuilderPage from "./components/fr/csharp/Stringbuilder";
 import NewfeaturesPage from "./components/fr/csharp/Newfeatures";
 import StructPage from "./components/fr/csharp/Struct";
+//#endregion
 
-import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
-import stringSimilarity from "string-similarity";
 //import logo from './logo.svg';
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min.js";

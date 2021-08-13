@@ -1,0 +1,256 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+export default function Struct() {
+  return (
+    <>
+      <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
+        <h2 className="h6 pt-4 pb-3 mb-4 border-bottom">On this page</h2>
+        <nav className="small" id="toc">
+          <ul className="list-unstyled">
+            <li className="my-2">
+              <button
+                className="btn d-inline-flex align-items-center"
+                data-bs-toggle="collapse"
+                aria-expanded="true"
+                data-bs-target="#contents-collapse"
+                aria-controls="contents-collapse"
+              >
+                Contents
+              </button>
+              <ul
+                className="list-unstyled ps-3 collapse show"
+                id="contents-collapse"
+              >
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#access-modifiers"
+                  >
+                    Struct
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#non-access-modifiers"
+                  >
+                    Record
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li className="my-2">
+              <button
+                className="btn d-inline-flex align-items-center"
+                data-bs-toggle="collapse"
+                aria-expanded="true"
+                data-bs-target="#contents-collapse"
+                aria-controls="contents-collapse"
+              >
+                Related links
+              </button>
+              <ul
+                className="list-unstyled ps-3 collapse show"
+                id="contents-collapse"
+              >
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/entityframework"
+                  >
+                    Entity Framework
+                  </Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div className="bd-cheatsheet container-fluid bg-body">
+        <section id="dotnet-core">
+          <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
+          <h3>Modificateurs</h3>
+          <article className="" id="access-modifiers">
+            <h6>Modificateurs d'accès</h6>
+            <div>
+              <p>Modificateurs d'accès - contrôle le niveau d'accès</p>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Modifier</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>public</code>
+                    </td>
+                    <td>Le code est accessible pour toutes les classes</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>private</code>
+                    </td>
+                    <td>
+                      Le code n'est accessible qu'au sein d'une même classe
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>protected</code>
+                    </td>
+                    <td>
+                      Le code est accessible au sein de la même classe, ou dans
+                      un classe héritée de cette classe.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>internal</code>
+                    </td>
+                    <td>
+                      Le code n'est accessible qu'au sein de son propre
+                      assembly.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>protected internal</code>
+                    </td>
+                    <td>
+                      Le code n'est accessible qu'au sein de son propre
+                      assembly, ou à partir d’un dérivé class dans un autre
+                      assembly.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>private protected</code>
+                    </td>
+                    <td>
+                      le type ou le membre est accessible uniquement dans son
+                      assembly déclarant, par le code dans le même class ou dans
+                      un type dérivé de celui-ci.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article className="" id="non-access-modifiers">
+            <h6>Modificateurs de non-accès</h6>
+            <div>
+              <p>
+                Modificateurs de non-accès - ne contrôlent pas le niveau
+                d'accès, mais fournissent d'autres fonctionnalités
+              </p>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Modifier</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>sealed</code>
+                    </td>
+                    <td>
+                      La classe ne peut pas être héritée par d'autres classes
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>abstract</code>
+                    </td>
+                    <td>
+                      La classe ne peut pas être utilisée pour créer des objets.
+                      Pour accéder à une classe abstraite, elle doit être
+                      héritée d'une autre classe.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>static</code>
+                    </td>
+                    <td>
+                      Les attributs et les méthodes appartiennent à la classe,
+                      plutôt qu'à un objet.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>abstract</code>
+                    </td>
+                    <td>
+                      La classe ne peut pas être utilisée pour créer des objets.
+                      Pour accéder à une classe abstraite, elle doit être
+                      héritée d'une autre classe.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>virtual</code>
+                    </td>
+                    <td>
+                      La méthode virtuelle est une méthode qui peut être
+                      redéfinie dans des classes dérivées.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>override</code>
+                    </td>
+                    <td>
+                      Une override méthode fournit une nouvelle implémentation
+                      de la méthode héritée d’une classe de base.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>readonly</code>
+                    </td>
+                    <td>
+                      Un champ ReadOnly ne peut pas être assigné (sauf s’il
+                      s’agit d’un constructeur ou d’un initialiseur de
+                      variable).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>const</code>
+                    </td>
+                    <td>
+                      Le mot clé readonly est différent du mot clé{" "}
+                      <code>const</code>. Un champ <code>const</code> ne peut
+                      être initialisé qu'au moment de la déclaration du champ.
+                      Un champ <code>readonly</code> peut être initialisé dans
+                      la déclaration ou dans un constructeur.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>volatile</code>
+                    </td>
+                    <td>
+                      Le mot clé volatile indique qu’un champ peut être modifié
+                      par plusieurs threads qui s’exécutent simultanément
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>unsafe</code>
+                    </td>
+                    <td>
+                      Le mot clé unsafe désigne un contexte non sécurisé, qui
+                      est requis pour toute opération impliquant des pointeurs.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </div>
+    </>
+  );
+}
