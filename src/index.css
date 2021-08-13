@@ -1,4 +1,37 @@
-.img-dimension{
-    width: 500px;
-    height: 300px;
+.img-dimension {
+  width: 500px;
+  height: 300px;
+}
+
+.select-lang {
+  width: 105px;
+}
+
+.top-nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end !important;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid black;
+}
+
+@media (min-width: 1200px) {
+  .bd-aside {
+    scroll-margin-top: 6rem;
+  }
+  .bd-aside,
+  .bd-cheatsheet {
+    padding-top: 6rem;
+  }
+
+  .bd-cheatsheet article,
+  .bd-cheatsheet .bd-heading {
+    top: 6rem;
+    scroll-margin-top: 6rem;
+  }
+}
+
+.navbar {
+  padding-top: 0.25rem;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+//import all fr components
 import HomePage from "./components/fr/dotnet/Home";
 import AngularPage from "./components/fr/angular/Angular";
 import DotnetPage from "./components/fr/dotnet/Dotnet";
@@ -99,16 +100,24 @@ function App() {
       <BrowserRouter>
         <header className="bd-header bg-dark d-flex align-items-stretch border-bottom border-dark">
           <nav className="navbar navbar-expand-lg navbar-light bg-light w-100 flex-column">
-            <div Name="d-flex flex-end">
-                  <p className="mb-0 me-2" id="transcript">
-                    Transcript: {transcript}
-                  </p>
-                  <button
-                    className="btn btn-outline-success"
-                    onClick={SpeechRecognition.startListening}
-                  >
-                    <i className="fa fa-microphone"></i>
-                  </button>
+            <div className="top-nav container-fluid">
+              <p className="mb-0 me-2" id="transcript">
+                Transcript: {transcript}
+              </p>
+              <button
+                className="btn btn-outline-primary me-2"
+                onClick={SpeechRecognition.startListening}
+              >
+                <i className="fa fa-microphone"></i>
+              </button>
+              <select className="form-select select-lang me-2">
+                <option defaultValue="csharp">
+                  .Net
+                </option>
+                <option value="angular">Angular</option>
+                <option value="react">React</option>
+              </select>
+              <button className="btn btn-outline-success">FR</button>
             </div>
             <div className="container-fluid">
               <Link className="navbar-brand" to="/">
@@ -220,17 +229,6 @@ function App() {
                     </Link>
                   </li>
                 </ul>
-                <div className="d-flex align-items-center">
-                  <p className="mb-0 me-2" id="transcript">
-                    Transcript: {transcript}
-                  </p>
-                  <button
-                    className="btn btn-outline-success"
-                    onClick={SpeechRecognition.startListening}
-                  >
-                    Start
-                  </button>
-                </div>
               </div>
             </div>
           </nav>
