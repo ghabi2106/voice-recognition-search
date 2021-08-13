@@ -1,20 +1,21 @@
 import React, { useState } from "react";
-import HomePage from "./components/dotnet/Home";
-import AngularPage from "./components/angular/Angular";
-import DotnetPage from "./components/dotnet/Dotnet";
-import ServicePage from "./components/dotnet/Service";
-import CLRPage from "./components/dotnet/Clr";
-import EntityframeworkPage from "./components/dotnet/Entityframework";
-import ControllerPage from "./components/dotnet/controller";
-import MvcPage from "./components/dotnet/Mvc";
-import DesignpatternPage from "./components/dotnet/Designpattern";
-import DiPage from "./components/dotnet/Di";
-import CleanPage from "./components/dotnet/Clean";
-import CqrsPage from "./components/dotnet/Cqrs";
-import NugetpackagesPage from "./components/dotnet/Nugetpackages";
-import StringbuilderPage from "./components/csharp/Stringbuilder";
-import NewfeaturesPage from "./components/csharp/Newfeatures";
-import StructPage from "./components/csharp/Struct";
+import HomePage from "./components/fr/dotnet/Home";
+import AngularPage from "./components/fr/angular/Angular";
+import DotnetPage from "./components/fr/dotnet/Dotnet";
+import ServicePage from "./components/fr/dotnet/Service";
+import HttpmethodsPage from "./components/fr/dotnet/Httpmethods";
+import CLRPage from "./components/fr/dotnet/Clr";
+import EntityframeworkPage from "./components/fr/dotnet/Entityframework";
+import ControllerPage from "./components/fr/dotnet/controller";
+import MvcPage from "./components/fr/dotnet/Mvc";
+import DesignpatternPage from "./components/fr/dotnet/Designpattern";
+import DiPage from "./components/fr/dotnet/Di";
+import CleanPage from "./components/fr/dotnet/Clean";
+import CqrsPage from "./components/fr/dotnet/Cqrs";
+import NugetpackagesPage from "./components/fr/dotnet/Nugetpackages";
+import StringbuilderPage from "./components/fr/csharp/Stringbuilder";
+import NewfeaturesPage from "./components/fr/csharp/Newfeatures";
+import StructPage from "./components/fr/csharp/Struct";
 
 import { BrowserRouter, Route, Link, Redirect } from "react-router-dom";
 import SpeechRecognition, {
@@ -72,11 +73,11 @@ function App() {
     clr: "/clr",
     "common language runtime": "/clr",
     // Entity Framework
-    "entity framework" : "/entityframework",
+    "entity framework": "/entityframework",
     // Entity Framework
-    "Controller" : "/controller",
+    Controller: "/controller",
     // MVC
-    "mvc" : "/mvc",
+    mvc: "/mvc",
   };
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
@@ -97,7 +98,18 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <header className="bd-header bg-dark d-flex align-items-stretch border-bottom border-dark">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light w-100">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light w-100 flex-column">
+            <div Name="d-flex flex-end">
+                  <p className="mb-0 me-2" id="transcript">
+                    Transcript: {transcript}
+                  </p>
+                  <button
+                    className="btn btn-outline-success"
+                    onClick={SpeechRecognition.startListening}
+                  >
+                    <i className="fa fa-microphone"></i>
+                  </button>
+            </div>
             <div className="container-fluid">
               <Link className="navbar-brand" to="/">
                 Presentation
@@ -135,6 +147,11 @@ function App() {
                   <li className="nav-item">
                     <Link className="nav-link" to="/service">
                       Service
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/httpmethods">
+                      HTTP
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -223,6 +240,7 @@ function App() {
         <Route path="/home" component={HomePage} />
         <Route path="/angular" exact component={AngularPage} />
         <Route path="/service" component={ServicePage} />
+        <Route path="/httpmethods" component={HttpmethodsPage} />
         <Route path="/dotnet" component={DotnetPage} />
         <Route path="/clr" component={CLRPage} />
         <Route path="/entityframework" component={EntityframeworkPage} />
