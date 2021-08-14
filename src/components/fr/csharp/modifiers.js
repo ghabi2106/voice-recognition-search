@@ -210,9 +210,9 @@ export default function Struct() {
                       <code>readonly</code>
                     </td>
                     <td>
-                      Un champ ReadOnly ne peut pas être assigné (sauf s’il
-                      s’agit d’un constructeur ou d’un initialiseur de
-                      variable).
+                      Un champ <code>readonly</code> ne peut pas être assigné
+                      (sauf s’il s’agit d’un constructeur ou d’un initialiseur
+                      de variable).
                     </td>
                   </tr>
                   <tr>
@@ -220,7 +220,7 @@ export default function Struct() {
                       <code>const</code>
                     </td>
                     <td>
-                      Le mot clé readonly est différent du mot clé{" "}
+                      Le mot clé <code>readonly</code> est différent du mot clé{" "}
                       <code>const</code>. Un champ <code>const</code> ne peut
                       être initialisé qu'au moment de la déclaration du champ.
                       Un champ <code>readonly</code> peut être initialisé dans
@@ -232,8 +232,9 @@ export default function Struct() {
                       <code>volatile</code>
                     </td>
                     <td>
-                      Le mot clé volatile indique qu’un champ peut être modifié
-                      par plusieurs threads qui s’exécutent simultanément
+                      Le mot clé <code>volatile</code> indique qu’un champ peut
+                      être modifié par plusieurs threads qui s’exécutent
+                      simultanément
                     </td>
                   </tr>
                   <tr>
@@ -241,8 +242,33 @@ export default function Struct() {
                       <code>unsafe</code>
                     </td>
                     <td>
-                      Le mot clé unsafe désigne un contexte non sécurisé, qui
-                      est requis pour toute opération impliquant des pointeurs.
+                      Le mot clé <code>unsafe</code> désigne un contexte non
+                      sécurisé, qui est requis pour toute opération impliquant
+                      des pointeurs.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>in</code>
+                    </td>
+                    <td>
+                      Pour les paramètres de type générique, le mot clé{" "}
+                      <code>in</code> spécifie que le paramètre de type est
+                      contravariant. Vous pouvez utiliser le mot clé
+                      <code>in</code> dans les interfaces et délégués
+                      génériques.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>out</code>
+                    </td>
+                    <td>
+                      Pour les paramètres de type générique, le mot clé{" "}
+                      <code>out</code> spécifie que le paramètre de type est
+                      covariant. Vous pouvez utiliser le mot clé{" "}
+                      <code>out</code> dans les interfaces et délégués
+                      génériques.
                     </td>
                   </tr>
                 </tbody>

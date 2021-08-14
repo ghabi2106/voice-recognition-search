@@ -22,7 +22,7 @@ import CqrsPage from "./components/fr/dotnet/Cqrs";
 import NugetpackagesPage from "./components/fr/dotnet/Nugetpackages";
 import StringbuilderPage from "./components/fr/csharp/Stringbuilder";
 import NewfeaturesPage from "./components/fr/csharp/Newfeatures";
-import StructPage from "./components/fr/csharp/Struct";
+import TypesystemPage from "./components/fr/csharp/Typesystem";
 //#endregion
 
 //import logo from './logo.svg';
@@ -113,9 +113,7 @@ function App() {
                 <i className="fa fa-microphone"></i>
               </button>
               <select className="form-select select-lang me-2">
-                <option defaultValue="csharp">
-                  .Net
-                </option>
+                <option defaultValue="csharp">.Net</option>
                 <option value="angular">Angular</option>
                 <option value="react">React</option>
               </select>
@@ -226,8 +224,8 @@ function App() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/struct">
-                      Struct
+                    <Link className="nav-link" to="/typesystem">
+                      Type-System
                     </Link>
                   </li>
                 </ul>
@@ -253,7 +251,7 @@ function App() {
         <Route path="/nugetpackages" component={NugetpackagesPage} />
         <Route path="/stringbuilder" component={StringbuilderPage} />
         <Route path="/newfeatures" component={NewfeaturesPage} />
-        <Route path="/struct" component={StructPage} />
+        <Route path="/typesystem" component={TypesystemPage} />
 
         {redirect}
       </BrowserRouter>
