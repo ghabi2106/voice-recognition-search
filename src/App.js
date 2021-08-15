@@ -6,23 +6,55 @@ import SpeechRecognition, {
 import stringSimilarity from "string-similarity";
 
 //#region something import all fr components
-import HomePage from "./components/fr/dotnet/Home";
-import AngularPage from "./components/fr/angular/Angular";
-import DotnetPage from "./components/fr/dotnet/Dotnet";
-import ServicePage from "./components/fr/dotnet/Service";
-import HttpmethodsPage from "./components/fr/dotnet/Httpmethods";
+import HomePage from "./components/fr/Home";
+
+//#region dotnet
+import CleanPage from "./components/fr/dotnet/Clean";
 import CLRPage from "./components/fr/dotnet/Clr";
-import EntityframeworkPage from "./components/fr/dotnet/Entityframework";
-import ControllerPage from "./components/fr/dotnet/controller";
-import MvcPage from "./components/fr/dotnet/Mvc";
+import ControllerPage from "./components/fr/dotnet/Controller";
+import ControllervuedataPage from "./components/fr/dotnet/Controllervuedata";
+import CqrsPage from "./components/fr/dotnet/Cqrs";
 import DesignpatternPage from "./components/fr/dotnet/Designpattern";
 import DiPage from "./components/fr/dotnet/Di";
-import CleanPage from "./components/fr/dotnet/Clean";
-import CqrsPage from "./components/fr/dotnet/Cqrs";
+import DotnetPage from "./components/fr/dotnet/Dotnet";
+import EntityframeworkPage from "./components/fr/dotnet/Entityframework";
+import HttpmethodsPage from "./components/fr/dotnet/Httpmethods";
+import MvcPage from "./components/fr/dotnet/Mvc";
 import NugetpackagesPage from "./components/fr/dotnet/Nugetpackages";
-import StringbuilderPage from "./components/fr/csharp/Stringbuilder";
+import ServicePage from "./components/fr/dotnet/Service";
+import SingletonPage from "./components/fr/dotnet/Singleton";
+//#endregion
+
+//#region c# components
+import BoxingPage from "./components/fr/csharp/Boxing";
+import CollectionsPage from "./components/fr/csharp/Collections";
+import CovariancePage from "./components/fr/csharp/Covariance";
+import DatatypePage from "./components/fr/csharp/Datatype";
+import DelegatePage from "./components/fr/csharp/Delegate";
+import EnumindexerPage from "./components/fr/csharp/Enumindexer";
+import ModifiersPage from "./components/fr/csharp/Modifiers";
 import NewfeaturesPage from "./components/fr/csharp/Newfeatures";
+import OopPage from "./components/fr/csharp/Oop";
+import StatementsPage from "./components/fr/csharp/Statements";
+import String2intPage from "./components/fr/csharp/String2int";
+import StringbuilderPage from "./components/fr/csharp/Stringbuilder";
+import TuplePage from "./components/fr/csharp/Tuple";
 import TypesystemPage from "./components/fr/csharp/Typesystem";
+//#endregion
+
+//#region react
+
+//#endregion
+
+//#region angular
+import AngularPage from "./components/fr/angular/Angular";
+//#endregion
+
+//#region frontend
+import CssPage from "./components/fr/frontend/Css";
+import HtmlPage from "./components/fr/frontend/Html";
+//#endregion
+
 //#endregion
 
 //import logo from './logo.svg';
@@ -148,24 +180,13 @@ function App() {
                       Home
                     </Link>
                   </li>
+
+                  {
+                    //#region dotnet
+                  }
                   <li className="nav-item">
-                    <Link className="nav-link" to="/angular">
-                      Angular
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/service">
-                      Service
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/httpmethods">
-                      HTTP
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/dotnet">
-                      Dotnet
+                    <Link className="nav-link" to="/clean">
+                      Clean
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -174,33 +195,13 @@ function App() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/entityframework">
-                      Entity-Framework
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/mvc">
-                      MVC
-                    </Link>
-                  </li>
-                  <li className="nav-item">
                     <Link className="nav-link" to="/controller">
                       Controller
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/di">
-                      DI
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/designpattern">
-                      Design-Pattern
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/clean">
-                      Clean
+                    <Link className="nav-link" to="/controllervuedata">
+                      Controller-Vue-Data
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -209,18 +210,120 @@ function App() {
                     </Link>
                   </li>
                   <li className="nav-item">
+                    <Link className="nav-link" to="/designpattern">
+                      Design-Pattern
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/di">
+                      DI
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/dotnet">
+                      Dotnet
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/entityframework">
+                      EF
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/httpmethods">
+                      Http-Methods
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/mvc">
+                      MVC
+                    </Link>
+                  </li>
+                  <li className="nav-item">
                     <Link className="nav-link" to="/nugetpackages">
                       Nuget-Packages
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/stringbuilder">
-                      String
+                    <Link className="nav-link" to="/service">
+                      Service
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/newfeatures">
-                      C#-features
+                    <Link className="nav-link" to="/singleton">
+                      Singleton
+                    </Link>
+                  </li>
+                  {
+                    //#endregion
+                  }
+
+                  {
+                    //#region csharp
+                  }
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/boxing">
+                      Boxing
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/collections">
+                      Collections
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/covariance">
+                      Covariance
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/datatype">
+                      Datatype
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/delegate">
+                      Delegate
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/enumindexer">
+                      Enumindexer
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/modifiers">
+                      Modifiers
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/csharp-features">
+                      C#-Features
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/oop">
+                      OOP
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/statements">
+                      Statements
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/string2int">
+                      String2Int
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/stringbuilder">
+                      String-Builder
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/tuple">
+                      Tuple
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -228,6 +331,46 @@ function App() {
                       Type-System
                     </Link>
                   </li>
+                  {
+                    //#endregion
+                  }
+
+                  {
+                    //#region angular
+                  }
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/angular">
+                      Angular
+                    </Link>
+                  </li>
+                  {
+                    //#endregion
+                  }
+
+                  {
+                    //#region react
+                  }
+
+                  {
+                    //#endregion
+                  }
+
+                  {
+                    //#region frontend
+                  }
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/css">
+                      CSS
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/html">
+                      HTML
+                    </Link>
+                  </li>
+                  {
+                    //#endregion
+                  }
                 </ul>
               </div>
             </div>
@@ -236,22 +379,73 @@ function App() {
 
         <Route path="/" exact component={HomePage} />
         <Route path="/home" component={HomePage} />
-        <Route path="/angular" exact component={AngularPage} />
-        <Route path="/service" component={ServicePage} />
-        <Route path="/httpmethods" component={HttpmethodsPage} />
-        <Route path="/dotnet" component={DotnetPage} />
+
+        {
+          //#region dotnet
+        }
+        <Route path="/clean" component={CleanPage} />
         <Route path="/clr" component={CLRPage} />
-        <Route path="/entityframework" component={EntityframeworkPage} />
         <Route path="/controller" component={ControllerPage} />
-        <Route path="/mvc" component={MvcPage} />
+        <Route path="/controllervuedata" component={ControllervuedataPage} />
+        <Route path="/cqrs" component={CqrsPage} />
         <Route path="/designpattern" component={DesignpatternPage} />
         <Route path="/di" component={DiPage} />
-        <Route path="/clean" component={CleanPage} />
-        <Route path="/cqrs" component={CqrsPage} />
+        <Route path="/dotnet" component={DotnetPage} />
+        <Route path="/entityframework" component={EntityframeworkPage} />
+        <Route path="/httpmethods" component={HttpmethodsPage} />
+        <Route path="/mvc" component={MvcPage} />
         <Route path="/nugetpackages" component={NugetpackagesPage} />
+        <Route path="/service" component={ServicePage} />
+        <Route path="/singleton" component={SingletonPage} />
+        {
+          //#endregion
+        }
+
+        {
+          //#region csharp
+        }
+        <Route path="/boxing" component={BoxingPage} />
+        <Route path="/collections" component={CollectionsPage} />
+        <Route path="/covariance" component={CovariancePage} />
+        <Route path="/datatype" component={DatatypePage} />
+        <Route path="/delegate" component={DelegatePage} />
+        <Route path="/enumindexer" component={EnumindexerPage} />
+        <Route path="/modifiers" component={ModifiersPage} />
+        <Route path="/csharp-features" component={NewfeaturesPage} />
+        <Route path="/oop" component={OopPage} />
+        <Route path="/statements" component={StatementsPage} />
+        <Route path="/string2int" component={String2intPage} />
         <Route path="/stringbuilder" component={StringbuilderPage} />
-        <Route path="/newfeatures" component={NewfeaturesPage} />
+        <Route path="/tuple" component={TuplePage} />
         <Route path="/typesystem" component={TypesystemPage} />
+        {
+          //#endregion
+        }
+
+        {
+          //#region angular
+        }
+        <Route path="/angular" exact component={AngularPage} />
+        {
+          //#endregion
+        }
+
+        {
+          //#region react
+        }
+
+        {
+          //#endregion
+        }
+
+        {
+          //#region frontend
+        }
+        <Route path="/css" exact component={CssPage} />
+        <Route path="/html" exact component={HtmlPage} />
+        {
+          //#endregion
+        }
 
         {redirect}
       </BrowserRouter>

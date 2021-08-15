@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Css() {
+export default function Controllervuedata() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,25 +25,25 @@ export default function Css() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
+                    href="#viewbag"
                   >
-                    Introduction
+                    ViewBag
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#media-query"
+                    href="#viewdata"
                   >
-                    Media Query
+                    ViewData
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#syntax"
+                    href="#tempdata"
                   >
-                    Syntax
+                    TempData
                   </a>
                 </li>
               </ul>
@@ -65,9 +65,17 @@ export default function Css() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/multilayer"
                   >
-                    Entity Framework
+                    Architecture Multilayer
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/multilayer"
+                  >
+                    Architecture Multilayer
                   </Link>
                 </li>
               </ul>
@@ -78,52 +86,38 @@ export default function Css() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>CSS</h3>
-          <article className="" id="introduction">
-            <h6>Introduction</h6>
+          <h3>Controller Vue data transfert</h3>
+          <article id="viewbag">
+            <h6>ViewBag</h6>
             <div>
               <p>
-                CSS est le langage que nous utilisons pour styliser une page
-                Web.
+                Le ViewBag est utilisé pour transférer des données temporaires
+                (qui ne sont pas incluses dans le modèle) du contrôleur vers la
+                vue.
               </p>
-              <ul>
-                <li>CSS signifie Cascading Style Sheets</li>
-                <li>
-                  CSS décrit comment les éléments HTML doivent être affichés à
-                  l'écran, sur papier ou dans d'autres médias
-                </li>
-                <li>
-                  CSS économise beaucoup de travail. Il peut contrôler la mise
-                  en page de plusieurs pages Web à la fois
-                </li>
-              </ul>
+              <img src="/img/viewbag.png" alt="viewbag" />
             </div>
           </article>
-          <article className="" id="media-query">
-            <h6>Media Query</h6>
-            <p>
-              Il utilise la <code>@media</code> règle pour inclure un bloc de
-              propriétés CSS uniquement si une certaine condition est vraie.
-            </p>
+          <article id="viewdata">
+            <h6>ViewData</h6>
+            <div>
+              <p>
+                ViewData est similaire à ViewBag, qui transfère les données du
+                Controller vers View. ViewData est de type Dictionnaire , alors
+                que ViewBag est de type dynamique.
+              </p>
+              <img src="/img/viewdata.png" alt="viewdata" />
+            </div>
           </article>
-          <article id="bootstrap">
-            <h6>bootstrap</h6>
-            <ul>
-              <li>
-                Bootstrap est un framework frontal gratuit pour un développement
-                Web plus rapide et plus facile
-              </li>
-              <li>
-                Bootstrap comprend des modèles de conception basés sur HTML et
-                CSS pour les formulaires, les boutons, les tableaux, la
-                navigation et bien d'autres, ainsi que des plugins JavaScript en
-                option
-              </li>
-              <li>
-                Bootstrap vous donne également la possibilité de créer
-                facilement des conceptions réactives(responsive)
-              </li>
-            </ul>
+          <article id="tempdata">
+            <h6>TempData</h6>
+            <p>
+              TempData est utilisé pour transférer des données d'une vue à un
+              contrôleur, d'un contrôleur à une vue ou d'une méthode d'action à
+              une autre méthode d'action du même contrôleur ou d'un contrôleur
+              différent. TempData stocke les données temporairement et les
+              supprime automatiquement après avoir récupéré une valeur.
+            </p>
           </article>
         </section>
       </div>
