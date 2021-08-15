@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Datatype() {
+export default function Enumindexer() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,25 +25,25 @@ export default function Datatype() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#anonyme"
+                    href="#enum"
                   >
-                    Anonymous Type
+                    Enum
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#dynamic"
+                    href="#indexer"
                   >
-                    Dynamic Types
+                    Indexer
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#nullable"
+                    href="#generic"
                   >
-                    Nullable Types
+                    Generic
                   </a>
                 </li>
               </ul>
@@ -78,50 +78,39 @@ export default function Datatype() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Data Types</h3>
-          <article id="anonymous">
-            <h6>Type anonyme</h6>
+          <h3>Énumération and Indexer</h3>
+          <article id="enum">
+            <h6>Énumération</h6>
             <div>
               <p>
-                Un type anonyme est un type (classe) sans nom qui ne peut
-                contenir que des propriétés publiques en lecture seule.
+                <code>enum</code> est une "classe" spéciale qui représente un
+                groupe de constantes(variables non modifiables/en lecture
+                seule).
               </p>
-              <img src="/img/type-anonymous.PNG" alt="type anonymous" />
+              <img src="/img/type-enum.PNG" alt="type enum" />
             </div>
           </article>
-          <article id="dynamic">
-            <h6>Types dynamiques</h6>
+          <article id="indexer">
+            <h6>Indexeur</h6>
             <div>
               <p>
-                Un dynamictype échappe à la vérification de type au moment de la
-                compilation ; au lieu de cela, il résout le type au moment de
-                l'exécution.
+                Un indexeur permet d'indexer un objet tel qu'un tableau.
+                Lorsqu'on définit un indexeur pour une classe, cette classe se
+                comporte comme un tableau virtuel. On peut ensuite accéder à
+                l'instance de cette classe à l'aide de l'opérateur d'accès au
+                tableau ([ ]).
               </p>
-              <ul>
-                <li>
-                  Les types dynamiques changent de type au moment de l'exécution
-                  en fonction de la valeur attribuée.
-                </li>
-                <li>
-                  Les variables de type dynamique sont converties implicitement
-                  en d'autres types.
-                </li>
-              </ul>
-              <img src="/img/type-dynamic.PNG" alt="type dynamic" />
+              <img src="/img/indexer.PNG" alt="indexer" />
             </div>
           </article>
-          <article id="nullable">
-            <h6>Types Nullables</h6>
+          <article id="generic">
+            <h6>Génériques</h6>
             <div>
               <p>
-                Comme on le sait, un type valeur ne peut pas se voir
-                attribuer une valeur nulle. Par exemple, int i = null vous
-                donnera une erreur de compilation.
+                Les génériques augmentent la réutilisabilité du code. On n'a pas
+                besoin d'écrire du code pour gérer différents types de données.
               </p>
-              <img
-                src="/img/type-nullable.PNG"
-                alt="type nullable"
-              />
+              <img src="/img/generics.png" alt="generics" />
             </div>
           </article>
         </section>
