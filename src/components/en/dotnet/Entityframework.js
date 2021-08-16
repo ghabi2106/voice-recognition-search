@@ -155,11 +155,11 @@ export default function Entityframework() {
             <h6>Introduction</h6>
             <div>
               <p>
-                Entity Framework est un mappeur relationnel objet (O/RM) qui
-                permet aux développeurs .NET de travailler avec une base de
-                données à l'aide d'objets
+                Entity Framework is an object-relational mapper (O/RM) that
+                enables .NET developers to work with a database using .NET
+                objects.
               </p>
-              <p>Fonctionnalités d'Entity Framework :</p>
+              <p>Entity Framework Features :</p>
               <ul>
                 <li>Modeling</li>
                 <li>Querying</li>
@@ -174,78 +174,76 @@ export default function Entityframework() {
             </div>
           </article>
           <article className="" id="modeling">
-            <h6>Modélisation</h6>
+            <h6>Modelling</h6>
             <p>
-              EF (Entity Framework) crée un EDM (Entity Data Model) basé sur des
-              entités POCO (Plain Old CLR Object) avec des propriétés get/set de
-              différents types de données.
+              EF (Entity Framework) creates an EDM (Entity Data Model) based on
+              POCO (Plain Old CLR Object) entities with get/set properties of
+              different data types.
             </p>
           </article>
           <article className="" id="querying">
             <h6>Querying</h6>
             <p>
-              EF nous permet d'utiliser des requêtes LINQ pour récupérer les
-              données de la base de données.
+              EF allows us to use LINQ queries to retrieve data from the
+              underlying database.
             </p>
           </article>
           <article className="" id="tracking">
-            <h6>Suivi des modifications</h6>
+            <h6>Change Tracking</h6>
             <p>
-              EF garde une trace des modifications apportées aux instances des
-              entités (valeurs de propriété) qui doivent être soumises à la base
-              de données.
+              EF keeps track of changes occurred to instances of your entities
+              (Property values) which need to be submitted to the database.
             </p>
           </article>
           <article className="" id="saving">
-            <h6>Enregistrement</h6>
+            <h6>Saving</h6>
             <p>
-              EF exécute les commandes INSERT, UPDATE et DELETE dans la base de
-              données en fonction des modifications apportées aux entités lors
-              de l'appele du méthode SaveChanges()
+              EF executes INSERT, UPDATE, and DELETE commands to the database
+              based on the changes occurred to your entities when you call the
+              <code>SaveChanges()</code>.
             </p>
           </article>
           <article className="" id="concurrency">
-            <h6>Concurrence</h6>
+            <h6>Concurrency</h6>
             <p>
-              EF utilise la simultanéité optimiste par défaut pour protéger
-              l'écrasement des modifications apportées par un autre utilisateur
-              depuis que les données ont été extraites de la base de données.
+              EF uses Optimistic Concurrency by default to protect overwriting
+              changes made by another user since data was fetched from the
+              database.
             </p>
           </article>
           <article className="" id="transactions">
             <h6>Transactions</h6>
-            <p>EF effectue une gestion automatique des transactions</p>
+            <p>EF performs automatic transaction management.</p>
           </article>
           <article className="" id="caching">
-            <h6>Mise en cache</h6>
+            <h6>Caching</h6>
             <p>
-              EF inclut le premier niveau de mise en cache prêt à l'emploi.
-              Ainsi, des requêtes répétées renverront les données du cache au
-              lieu d'atteindre la base de données.
+              EF includes first level of caching out of the box. So, repeated
+              querying will return data from the cache instead of hitting the
+              database.
             </p>
           </article>
           <article className="" id="conventions">
-            <h6>Conventions</h6>
+            <h6>Built-in Conventions:</h6>
             <p>
-              EF suit les conventions du modèle de programmation de
-              configuration et inclut un ensemble de règles par défaut qui
-              configurent automatiquement le modèle EF.
+              EF follows conventions over the configuration programming pattern,
+              and includes a set of default rules which automatically configure
+              the EF model.
             </p>
           </article>
           <article className="" id="configurations">
             <h6>Configurations</h6>
             <p>
-              EF nous permet de configurer le modèle EF en utilisant Data
-              Annotations ou bien Fluent API pour remplacer les conventions par
-              défaut.
+              EF allows us to configure the EF model by using data annotation
+              attributes or Fluent API to override default conventions.
             </p>
           </article>
           <article className="" id="migrations">
             <h6>Migrations</h6>
             <p>
-              EF fournit un ensemble de commandes de migration qui peuvent être
-              exécutées sur la console pour créer ou gérer un schéma de base de
-              données
+              EF provides a set of migration commands that can be executed on
+              the NuGet Package Manager Console or the Command Line Interface to
+              create or manage underlying database Schema.
             </p>
           </article>
         </section>

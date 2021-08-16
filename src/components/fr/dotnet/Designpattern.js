@@ -72,15 +72,17 @@ export default function Designpattern() {
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Design Principle vs Design Pattern</h3>
           <article className="" id="design-pattern">
-            <h6>Design Principle</h6>
+            <h6>Design Pattern</h6>
             <div>
               <p>
-                Les Design Principles fournissent des directives de haut niveau
-                pour concevoir de meilleures applications logicielles. Ils ne
-                fournissent pas de directives d'implémentation et ne sont liés à
-                aucun langage de programmation. Les principes SOLID (SRP, OCP,
-                LSP, ISP, DIP) sont l'un des ensembles de principes de
-                conception les plus populaires.
+                Design Pattern fournit des solutions de bas niveau liées à la
+                mise en œuvre des problèmes orientés objet courants. En d'autres
+                termes, le modèle de conception suggère une implémentation
+                spécifique pour le problème de programmation orienté objet
+                spécifique. Par exemple, si vous souhaitez créer une classe qui
+                ne peut avoir qu'un seul objet à la fois, vous pouvez utiliser
+                le modèle de conception Singleton qui suggère la meilleure façon
+                de créer une classe qui ne peut avoir qu'un seul objet.
               </p>
               <ul>
                 <li>
@@ -117,16 +119,14 @@ export default function Designpattern() {
             </div>
           </article>
           <article className="" id="design-principle">
-            <h6>Design pattern</h6>
+            <h6>Design Principle</h6>
             <p>
-              Design Pattern fournit des solutions de bas niveau liées à la mise
-              en œuvre des problèmes orientés objet courants. En d'autres
-              termes, le modèle de conception suggère une implémentation
-              spécifique pour le problème de programmation orienté objet
-              spécifique. Par exemple, si vous souhaitez créer une classe qui ne
-              peut avoir qu'un seul objet à la fois, vous pouvez utiliser le
-              modèle de conception Singleton qui suggère la meilleure façon de
-              créer une classe qui ne peut avoir qu'un seul objet.
+              Les Design Principles fournissent des directives de haut niveau
+              pour concevoir de meilleures applications logicielles. Ils ne
+              fournissent pas de directives d'implémentation et ne sont liés à
+              aucun langage de programmation. Les principes SOLID (SRP, OCP,
+              LSP, ISP, DIP) sont l'un des ensembles de principes de conception
+              les plus populaires.
             </p>
           </article>
         </section>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Tuple() {
+export default function Statements() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,17 @@ export default function Tuple() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#tuple"
+                    href="#partial"
                   >
-                    Tuple
+                    partial type
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#value-tuple"
+                    href="#lock"
                   >
-                    ValueTuple
+                    lock
                   </a>
                 </li>
               </ul>
@@ -70,51 +70,42 @@ export default function Tuple() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Tuple</h3>
-          <article id="tuple">
-            <h6>Tuple</h6>
+          <h3>Mots clés d'instruction</h3>
+          <article className="" id="partial">
+            <h6>partial type</h6>
+            <p>
+              Partial type definitions allow for the definition of a class,
+              struct, interface, or record to be split into multiple files.
+            </p>
+          </article>
+          <article id="lock">
+            <h6>lock</h6>
+            <p>
+              The lock statement acquires the mutual-exclusion lock for a given
+              object, executes a statement block, and then releases the lock.
+              While a lock is held, the thread that holds the lock can again
+              acquire and release the lock. Any other thread is blocked from
+              acquiring the lock and waits until the lock is released.
+            </p>
+          </article>
+          <article id="yield">
+            <h6>yield</h6>
             <div>
               <p>
-                Un tuple est une structure de données qui contient une séquence
-                d'éléments de différents types de données. Il peut être utilisé
-                lorsqu'on souhaite disposer d'une structure de données pour
-                contenir un objet avec des propriétés, mais on ne souhaite pas
-                créer un type distinct pour celui-ci.
+                You use a <code>yield return</code> statement to return each
+                element one at a time.
               </p>
-              <img src="/img/tuple-syntax.PNG" alt="tuple syntax" />
-              <img src="/img/tuple-init.PNG" alt="tuple init" />
               <ul>
                 <li>
-                  Utilisation de Tuple: lorsqu'on souhaite renvoyer plusieurs
-                  valeurs à partir d'une méthode sans utiliser de paramètres{" "}
-                  <code>ref</code> ou
-                  <code>out</code>.
+                  A <code>yield return</code> statement can't be located in a
+                  try-catch block. A <code>yield return</code> statement can be
+                  located in the try block of a try-finally statement.
                 </li>
                 <li>
-                  Utilisation de Tuple: lorsqu'on souhaite transmettre plusieurs
-                  valeurs à une méthode via un seul paramètre
-                </li>
-                <li>
-                  Le Tupleest un type référence et non un type valeur. Il alloue
-                  sur le tas et peut entraîner des opérations gourmandes en CPU.
-                </li>
-                <li>
-                  Le Tupleest limité à huit éléments. Vous devez utiliser des
-                  tuples imbriqués si vous devez stocker plus d'éléments.
-                  Cependant, cela peut entraîner une ambiguïté.
+                  A <code>yield break</code> statement can be located in a try
+                  block or a catch block but not a finally block.
                 </li>
               </ul>
-            </div>
-          </article>
-          <article id="value-tuple">
-            <h6>ValueTuple</h6>
-            <div>
-              <img src="/img/valuetuple-syntax.PNG" alt="valuetuple syntax" />
-              <p>
-                <code>ValueTuple</code> permet également des "Discards" en
-                déconstruction pour les membres que vous n'allez pas utiliser.
-              </p>
-              <img src="/img/valuetuple-discard.PNG" alt="valuetuple discard" />
             </div>
           </article>
         </section>

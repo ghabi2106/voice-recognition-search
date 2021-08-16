@@ -70,11 +70,11 @@ export default function Struct() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Modificateurs</h3>
+          <h3>Modifiers</h3>
           <article className="" id="access-modifiers">
-            <h6>Modificateurs d'accès</h6>
+            <h6>Access Modifiers</h6>
             <div>
-              <p>Modificateurs d'accès - contrôle le niveau d'accès</p>
+              <p>Access Modifiers - controls the access level</p>
               <table>
                 <tbody>
                   <tr>
@@ -85,14 +85,14 @@ export default function Struct() {
                     <td>
                       <code>public</code>
                     </td>
-                    <td>Le code est accessible pour toutes les classes</td>
+                    <td>The class is accessible by any other class</td>
                   </tr>
                   <tr>
                     <td>
                       <code>private</code>
                     </td>
                     <td>
-                      Le code n'est accessible qu'au sein d'une même classe
+                      The code is only accessible within the declared class
                     </td>
                   </tr>
                   <tr>
@@ -100,8 +100,7 @@ export default function Struct() {
                       <code>protected</code>
                     </td>
                     <td>
-                      Le code est accessible au sein de la même classe, ou dans
-                      un classe héritée de cette classe.
+                      The code is accessible in the same package and subclasses.
                     </td>
                   </tr>
                   <tr>
@@ -109,8 +108,7 @@ export default function Struct() {
                       <code>internal</code>
                     </td>
                     <td>
-                      Le code n'est accessible qu'au sein de son propre
-                      assembly.
+                      The code is only accessible within its own assembly.
                     </td>
                   </tr>
                   <tr>
@@ -118,9 +116,9 @@ export default function Struct() {
                       <code>protected internal</code>
                     </td>
                     <td>
-                      Le code n'est accessible qu'au sein de son propre
-                      assembly, ou à partir d’un dérivé class dans un autre
-                      assembly.
+                      The code can be accessed by any code in the assembly in
+                      which it's declared, or from within a derived class in
+                      another assembly.
                     </td>
                   </tr>
                   <tr>
@@ -128,9 +126,9 @@ export default function Struct() {
                       <code>private protected</code>
                     </td>
                     <td>
-                      le type ou le membre est accessible uniquement dans son
-                      assembly déclarant, par le code dans le même class ou dans
-                      un type dérivé de celui-ci.
+                      The code can be accessed only within its declaring
+                      assembly, by code in the same class or in a type that is
+                      derived from that class.
                     </td>
                   </tr>
                 </tbody>
@@ -237,11 +235,11 @@ export default function Struct() {
             </div>
           </article>
           <article className="" id="non-access-modifiers">
-            <h6>Modificateurs de non-accès</h6>
+            <h6>Non-Access Modifiers</h6>
             <div>
               <p>
-                Modificateurs de non-accès - ne contrôlent pas le niveau
-                d'accès, mais fournissent d'autres fonctionnalités
+                Non-Access Modifiers - do not control access level, but provides
+                other functionality.
               </p>
               <table>
                 <tbody>
@@ -253,18 +251,16 @@ export default function Struct() {
                     <td>
                       <code>sealed</code>
                     </td>
-                    <td>
-                      La classe ne peut pas être héritée par d'autres classes
-                    </td>
+                    <td>sealed class cannot be inherited.</td>
                   </tr>
                   <tr>
                     <td>
                       <code>abstract</code>
                     </td>
                     <td>
-                      La classe ne peut pas être utilisée pour créer des objets.
-                      Pour accéder à une classe abstraite, elle doit être
-                      héritée d'une autre classe.
+                      Abstract class is a restricted class that cannot be used
+                      to create objects (to access it, it must be inherited from
+                      another class).
                     </td>
                   </tr>
                   <tr>
@@ -272,18 +268,9 @@ export default function Struct() {
                       <code>static</code>
                     </td>
                     <td>
-                      Les attributs et les méthodes appartiennent à la classe,
-                      plutôt qu'à un objet.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <code>abstract</code>
-                    </td>
-                    <td>
-                      La classe ne peut pas être utilisée pour créer des objets.
-                      Pour accéder à une classe abstraite, elle doit être
-                      héritée d'une autre classe.
+                      A static means something which cannot be instantiated. You
+                      cannot create an object of a static class and cannot
+                      access static members using an object.
                     </td>
                   </tr>
                   <tr>
@@ -291,8 +278,8 @@ export default function Struct() {
                       <code>virtual</code>
                     </td>
                     <td>
-                      La méthode virtuelle est une méthode qui peut être
-                      redéfinie dans des classes dérivées.
+                      The virtual method is a method that can be redefined in
+                      derived classes.
                     </td>
                   </tr>
                   <tr>
@@ -300,8 +287,8 @@ export default function Struct() {
                       <code>override</code>
                     </td>
                     <td>
-                      Une override méthode fournit une nouvelle implémentation
-                      de la méthode héritée d’une classe de base.
+                      An override method provides a new implementation of the
+                      method inherited from a base class.
                     </td>
                   </tr>
                   <tr>
@@ -309,9 +296,11 @@ export default function Struct() {
                       <code>readonly</code>
                     </td>
                     <td>
-                      Un champ <code>readonly</code> ne peut pas être assigné
-                      (sauf s’il s’agit d’un constructeur ou d’un initialiseur
-                      de variable).
+                      <code>readonly</code> indicates that assignment to the
+                      field can only occur as part of the declaration or in a
+                      constructor in the same class. A readonly field can be
+                      assigned and reassigned multiple times within the field
+                      declaration and constructor.
                     </td>
                   </tr>
                   <tr>
@@ -319,11 +308,18 @@ export default function Struct() {
                       <code>const</code>
                     </td>
                     <td>
-                      Le mot clé <code>readonly</code> est différent du mot clé{" "}
-                      <code>const</code>. Un champ <code>const</code> ne peut
-                      être initialisé qu'au moment de la déclaration du champ.
-                      Un champ <code>readonly</code> peut être initialisé dans
-                      la déclaration ou dans un constructeur.
+                      <p>
+                        The <code>readonly</code> keyword differs from the{" "}
+                        <code>const</code> keyword. A <code>const</code> field
+                        can only be initialized at the declaration of the field.
+                        A <code>readonly</code> field can be initialized either
+                        at the declaration or in a constructor. Therefore,{" "}
+                        <code>readonly</code> fields can have different values
+                        depending on the constructor used. Also, although a{" "}
+                        <code>const</code> field is a compile-time constant, the{" "}
+                        <code>readonly</code> field can be used for run-time
+                        constants.
+                      </p>
                     </td>
                   </tr>
                   <tr>
@@ -331,9 +327,9 @@ export default function Struct() {
                       <code>volatile</code>
                     </td>
                     <td>
-                      Le mot clé <code>volatile</code> indique qu’un champ peut
-                      être modifié par plusieurs threads qui s’exécutent
-                      simultanément
+                      The <code>volatile</code> keyword indicates that a field
+                      might be modified by multiple threads that are executing
+                      at the same time
                     </td>
                   </tr>
                   <tr>
@@ -341,9 +337,8 @@ export default function Struct() {
                       <code>unsafe</code>
                     </td>
                     <td>
-                      Le mot clé <code>unsafe</code> désigne un contexte non
-                      sécurisé, qui est requis pour toute opération impliquant
-                      des pointeurs.
+                      The <code>unsafe</code> keyword denotes an unsafe context,
+                      which is required for any operation involving pointers.
                     </td>
                   </tr>
                   <tr>
@@ -351,11 +346,10 @@ export default function Struct() {
                       <code>in</code>
                     </td>
                     <td>
-                      Pour les paramètres de type générique, le mot clé{" "}
-                      <code>in</code> spécifie que le paramètre de type est
-                      contravariant. Vous pouvez utiliser le mot clé
-                      <code>in</code> dans les interfaces et délégués
-                      génériques.
+                      For generic type parameters, the <code>in</code> keyword
+                      specifies that the type parameter is contravariant. You
+                      can use the <code>in</code> keyword in generic interfaces
+                      and delegates.
                     </td>
                   </tr>
                   <tr>
@@ -363,11 +357,10 @@ export default function Struct() {
                       <code>out</code>
                     </td>
                     <td>
-                      Pour les paramètres de type générique, le mot clé{" "}
-                      <code>out</code> spécifie que le paramètre de type est
-                      covariant. Vous pouvez utiliser le mot clé{" "}
-                      <code>out</code> dans les interfaces et délégués
-                      génériques.
+                      For generic type parameters, the <code>out</code> keyword
+                      specifies that the type parameter is covariant. You can
+                      use the <code>out</code> keyword in generic interfaces and
+                      delegates.
                     </td>
                   </tr>
                 </tbody>

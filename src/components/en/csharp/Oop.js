@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Datatype() {
+export default function Oop() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,33 +25,41 @@ export default function Datatype() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#anonyme"
+                    href="#introduction"
                   >
-                    Anonymous Type
+                    Introduction
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#dynamic"
+                    href="#inheritance"
                   >
-                    Dynamic Types
+                    Inheritance
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#nullable"
+                    href="#abstraction"
                   >
-                    Nullable Types
+                    Abstraction
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#discard"
+                    href="#polymorphism"
                   >
-                    Discard Types
+                    Polymorphism
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#encapsulation"
+                  >
+                    encapsulation
                   </a>
                 </li>
               </ul>
@@ -86,65 +94,68 @@ export default function Datatype() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Data Types</h3>
-          <article id="anonymous">
-            <h6>Type anonyme</h6>
+          <h3>Object-Oriented Programming</h3>
+          <article className="" id="introduction">
+            <h6>Introduction</h6>
             <div>
               <p>
-                Un type anonyme est un type (classe) sans nom qui ne peut
-                contenir que des propriétés publiques en lecture seule.
+                Procedural programming is about writing procedures or methods
+                that perform operations on the data, while object-oriented
+                programming is about creating objects that contain both data and
+                methods.
               </p>
-              <img src="/img/type-anonymous.PNG" alt="type anonymous" />
+              <ul>
+                <li>OOP is faster and easier to execute</li>
+                <li>OOP provides a clear structure for the programs</li>
+                <li>
+                  OOP helps to keep the C# code DRY "Don't Repeat Yourself", and
+                  makes the code easier to maintain, modify and debug
+                </li>
+                <li>
+                  OOP makes it possible to create full reusable applications
+                  with less code and shorter development time
+                </li>
+              </ul>
             </div>
           </article>
-          <article id="dynamic">
-            <h6>Types dynamiques</h6>
+          <article className="" id="inheritance">
+            <h6>Inheritance</h6>
+            <p>Inheritance is useful for code reusability.</p>
+          </article>
+          <article className="" id="abstraction">
+            <h6>Abstraction</h6>
+            <p>
+              Data abstraction is the process of hiding certain details and
+              showing only essential information to the user. Abstraction can be
+              achieved with either abstract classes or interfaces.
+            </p>
+          </article>
+          <article className="" id="polymorphism">
+            <h6>Polymorphism</h6>
+            <p>
+              Polymorphism means "many forms", and it occurs when we have many
+              classes that are related to each other by inheritance. It is
+              useful for code reusability.
+            </p>
+          </article>
+          <article className="" id="encapsulation">
+            <h6>Properties and Encapsulation</h6>
             <div>
               <p>
-                Un dynamictype échappe à la vérification de type au moment de la
-                compilation ; au lieu de cela, il résout le type au moment de
-                l'exécution.
+                The meaning of <strong>Encapsulation</strong>, is to make sure
+                that "sensitive" data is hidden from users. To achieve this, you
+                must:
               </p>
               <ul>
                 <li>
-                  Les types dynamiques changent de type au moment de l'exécution
-                  en fonction de la valeur attribuée.
+                  declare fields/variables as <code>private</code>.
                 </li>
                 <li>
-                  Les variables de type dynamique sont converties implicitement
-                  en d'autres types.
+                  provide <code>public</code> <code>get</code> and{" "}
+                  <code>set</code> methods, through <strong>properties</strong>,
+                  to access and update the value of a <code>private</code> field
                 </li>
               </ul>
-              <img src="/img/type-dynamic.PNG" alt="type dynamic" />
-            </div>
-          </article>
-          <article id="nullable">
-            <h6>Types Nullables</h6>
-            <div>
-              <p>
-                Comme on le sait, un type valeur ne peut pas se voir attribuer
-                une valeur nulle. Par exemple, int i = null vous donnera une
-                erreur de compilation.
-              </p>
-              <img src="/img/type-nullable.PNG" alt="type nullable" />
-            </div>
-          </article>
-          <article id="discard">
-            <h6>Discards</h6>
-            <div>
-              <p>
-                Discards sont des variables d’espace réservé qui sont
-                intentionnellement inutilisées dans le code de l’application.
-                Les éléments ignorés sont équivalents aux variables non
-                affectées ; ils n’ont pas de valeur. Vous pouvez ignorer le
-                résultat d’une expression, d’un ou de plusieurs membres d’une
-                expression de tuple, ou de la cible d’une expression de critères
-                spéciaux.
-              </p>
-              <u>
-                <li>Déconstruction de tuple et d’objet</li>
-                <li>Utilisation des critères spéciaux(matching) avec switch</li>
-              </u>
             </div>
           </article>
         </section>

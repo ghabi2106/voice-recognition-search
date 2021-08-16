@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Tuple() {
+export default function Controllervuedata() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,25 @@ export default function Tuple() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#tuple"
+                    href="#viewbag"
                   >
-                    Tuple
+                    ViewBag
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#value-tuple"
+                    href="#viewdata"
                   >
-                    ValueTuple
+                    ViewData
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#tempdata"
+                  >
+                    TempData
                   </a>
                 </li>
               </ul>
@@ -57,9 +65,17 @@ export default function Tuple() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/multilayer"
                   >
-                    Entity Framework
+                    Architecture Multilayer
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/multilayer"
+                  >
+                    Architecture Multilayer
                   </Link>
                 </li>
               </ul>
@@ -70,52 +86,39 @@ export default function Tuple() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Tuple</h3>
-          <article id="tuple">
-            <h6>Tuple</h6>
+          <h3>Controller View data transfer</h3>
+          <article id="viewbag">
+            <h6>ViewBag</h6>
             <div>
               <p>
-                Un tuple est une structure de données qui contient une séquence
-                d'éléments de différents types de données. Il peut être utilisé
-                lorsqu'on souhaite disposer d'une structure de données pour
-                contenir un objet avec des propriétés, mais on ne souhaite pas
-                créer un type distinct pour celui-ci.
+                The ViewBag is used to transfer temporary data (which is not
+                included in the model) from the controller to the view. ViewBag
+                is a dynamic type and skips compile-time checking.
               </p>
-              <img src="/img/tuple-syntax.PNG" alt="tuple syntax" />
-              <img src="/img/tuple-init.PNG" alt="tuple init" />
-              <ul>
-                <li>
-                  Utilisation de Tuple: lorsqu'on souhaite renvoyer plusieurs
-                  valeurs à partir d'une méthode sans utiliser de paramètres{" "}
-                  <code>ref</code> ou
-                  <code>out</code>.
-                </li>
-                <li>
-                  Utilisation de Tuple: lorsqu'on souhaite transmettre plusieurs
-                  valeurs à une méthode via un seul paramètre
-                </li>
-                <li>
-                  Le Tupleest un type référence et non un type valeur. Il alloue
-                  sur le tas et peut entraîner des opérations gourmandes en CPU.
-                </li>
-                <li>
-                  Le Tupleest limité à huit éléments. Vous devez utiliser des
-                  tuples imbriqués si vous devez stocker plus d'éléments.
-                  Cependant, cela peut entraîner une ambiguïté.
-                </li>
-              </ul>
+              <img src="/img/viewbag.png" alt="viewbag" />
             </div>
           </article>
-          <article id="value-tuple">
-            <h6>ValueTuple</h6>
+          <article id="viewdata">
+            <h6>ViewData</h6>
             <div>
-              <img src="/img/valuetuple-syntax.PNG" alt="valuetuple syntax" />
               <p>
-                <code>ValueTuple</code> permet également des "Discards" en
-                déconstruction pour les membres que vous n'allez pas utiliser.
+                ViewData is similar to ViewBag, which transfers data from
+                Controller to View. ViewData is of Dictionary type, whereas
+                ViewBag is of dynamic type. ViewData value must be typecast to
+                an appropriate type before using it.
               </p>
-              <img src="/img/valuetuple-discard.PNG" alt="valuetuple discard" />
+              <img src="/img/viewdata.png" alt="viewdata" />
             </div>
+          </article>
+          <article id="tempdata">
+            <h6>TempData</h6>
+            <p>
+              TempData is used to transfer data from view to controller,
+              controller to view, or from one action method to another action
+              method of the same or a different controller. TempData stores the
+              data temporarily and automatically removes it after retrieving a
+              value.
+            </p>
           </article>
         </section>
       </div>

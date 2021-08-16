@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Tuple() {
+export default function Covariance() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,25 @@ export default function Tuple() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#tuple"
+                    href="#introduction"
                   >
-                    Tuple
+                    Introduction
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#value-tuple"
+                    href="#covariance"
                   >
-                    ValueTuple
+                    Covariance
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#contravariance"
+                  >
+                    Contravariance
                   </a>
                 </li>
               </ul>
@@ -70,51 +78,48 @@ export default function Tuple() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Tuple</h3>
-          <article id="tuple">
-            <h6>Tuple</h6>
+          <h3>Covariance and Contravariance</h3>
+          <article id="introduction">
+            <h6>Introduction</h6>
             <div>
               <p>
-                Un tuple est une structure de données qui contient une séquence
-                d'éléments de différents types de données. Il peut être utilisé
-                lorsqu'on souhaite disposer d'une structure de données pour
-                contenir un objet avec des propriétés, mais on ne souhaite pas
-                créer un type distinct pour celui-ci.
+                Covariance and contravariance allow us to be flexible when
+                dealing with class hierarchy. They can be applied on delegate,
+                generic, array, interface, etc.
               </p>
-              <img src="/img/tuple-syntax.PNG" alt="tuple syntax" />
-              <img src="/img/tuple-init.PNG" alt="tuple init" />
-              <ul>
-                <li>
-                  Utilisation de Tuple: lorsqu'on souhaite renvoyer plusieurs
-                  valeurs à partir d'une méthode sans utiliser de paramètres{" "}
-                  <code>ref</code> ou
-                  <code>out</code>.
-                </li>
-                <li>
-                  Utilisation de Tuple: lorsqu'on souhaite transmettre plusieurs
-                  valeurs à une méthode via un seul paramètre
-                </li>
-                <li>
-                  Le Tupleest un type référence et non un type valeur. Il alloue
-                  sur le tas et peut entraîner des opérations gourmandes en CPU.
-                </li>
-                <li>
-                  Le Tupleest limité à huit éléments. Vous devez utiliser des
-                  tuples imbriqués si vous devez stocker plus d'éléments.
-                  Cependant, cela peut entraîner une ambiguïté.
-                </li>
-              </ul>
+              <img src="/img/class-hierarchy.PNG" alt="Class Hierarchy" />
+              <img
+                src="/img/class-initialization.PNG"
+                alt="Class initialization"
+              />
+              <p>
+                A base class can hold a derived class but a derived class cannot
+                hold a base class.
+              </p>
+              <img src="/img/co-contra-variance.PNG" alt="co-contra-variance" />
             </div>
           </article>
-          <article id="value-tuple">
-            <h6>ValueTuple</h6>
+          <article id="covariance">
+            <h6>Covariance</h6>
             <div>
-              <img src="/img/valuetuple-syntax.PNG" alt="valuetuple syntax" />
               <p>
-                <code>ValueTuple</code> permet également des "Discards" en
-                déconstruction pour les membres que vous n'allez pas utiliser.
+                Covariance enables you to use a more derived type than
+                originally specified.
               </p>
-              <img src="/img/valuetuple-discard.PNG" alt="valuetuple discard" />
+              <img src="/img/covariance-script.PNG" alt="covariance script" />
+            </div>
+          </article>
+          <article id="contravariance">
+            <h6>Contravariance</h6>
+            <div>
+              <p>
+                Contravariance enables you to use a more generic (less derived)
+                type than originally specified.
+              </p>
+              <img
+                src="/img/contravariance-script.PNG"
+                alt="contravariance script"
+              />
             </div>
           </article>
         </section>

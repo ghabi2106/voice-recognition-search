@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Tuple() {
+export default function Datatype() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,33 @@ export default function Tuple() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#tuple"
+                    href="#anonyme"
                   >
-                    Tuple
+                    Anonymous Type
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#value-tuple"
+                    href="#dynamic"
                   >
-                    ValueTuple
+                    Dynamic Types
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#nullable"
+                  >
+                    Nullable Types
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#discard"
+                  >
+                    Discard Types
                   </a>
                 </li>
               </ul>
@@ -70,51 +86,61 @@ export default function Tuple() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Tuple</h3>
-          <article id="tuple">
-            <h6>Tuple</h6>
+          <h3>Data Types</h3>
+          <article id="anonymous">
+            <h6>Anonymous Type</h6>
             <div>
               <p>
-                Un tuple est une structure de données qui contient une séquence
-                d'éléments de différents types de données. Il peut être utilisé
-                lorsqu'on souhaite disposer d'une structure de données pour
-                contenir un objet avec des propriétés, mais on ne souhaite pas
-                créer un type distinct pour celui-ci.
+                An anonymous type is a type (class) without any name that can
+                contain public read-only properties only.
               </p>
-              <img src="/img/tuple-syntax.PNG" alt="tuple syntax" />
-              <img src="/img/tuple-init.PNG" alt="tuple init" />
-              <ul>
-                <li>
-                  Utilisation de Tuple: lorsqu'on souhaite renvoyer plusieurs
-                  valeurs à partir d'une méthode sans utiliser de paramètres{" "}
-                  <code>ref</code> ou
-                  <code>out</code>.
-                </li>
-                <li>
-                  Utilisation de Tuple: lorsqu'on souhaite transmettre plusieurs
-                  valeurs à une méthode via un seul paramètre
-                </li>
-                <li>
-                  Le Tupleest un type référence et non un type valeur. Il alloue
-                  sur le tas et peut entraîner des opérations gourmandes en CPU.
-                </li>
-                <li>
-                  Le Tupleest limité à huit éléments. Vous devez utiliser des
-                  tuples imbriqués si vous devez stocker plus d'éléments.
-                  Cependant, cela peut entraîner une ambiguïté.
-                </li>
-              </ul>
+              <img src="/img/type-anonymous.PNG" alt="type anonymous" />
             </div>
           </article>
-          <article id="value-tuple">
-            <h6>ValueTuple</h6>
+          <article id="dynamic">
+            <h6>Dynamic Types</h6>
             <div>
-              <img src="/img/valuetuple-syntax.PNG" alt="valuetuple syntax" />
               <p>
-                <code>ValueTuple</code> permet également des "Discards" en
-                déconstruction pour les membres que vous n'allez pas utiliser.
+                A <code>dynamic</code> type escapes type checking at
+                compile-time; instead, it resolves type at run time.
               </p>
-              <img src="/img/valuetuple-discard.PNG" alt="valuetuple discard" />
+              <ul>
+                <li>
+                  Dynamic types change types at run-time based on the assigned
+                  value.
+                </li>
+                <li>
+                  The dynamic type variables is converted to other types
+                  implicitly.
+                </li>
+              </ul>
+              <img src="/img/type-dynamic.PNG" alt="type dynamic" />
+            </div>
+          </article>
+          <article id="nullable">
+            <h6>Types Nullables</h6>
+            <div>
+              <p>
+                As you know, a value type cannot be assigned a null value. For
+                example, int i = null will give you a compile time error.
+              </p>
+              <img src="/img/type-nullable.PNG" alt="type nullable" />
+            </div>
+          </article>
+          <article id="discard">
+            <h6>Discards</h6>
+            <div>
+              <p>
+                Discards are placeholder variables that are intentionally unused
+                in application code. Discards are equivalent to unassigned
+                variables; they don't have a value.You may want to ignore the
+                result of an expression, one or more members of a tuple
+                expression, or the target of a pattern matching expression.
+              </p>
+              <u>
+                <li>Tuple and object deconstruction</li>
+                <li>Pattern matching with switch</li>
+              </u>
             </div>
           </article>
         </section>

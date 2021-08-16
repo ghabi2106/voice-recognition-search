@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Tuple() {
+export default function Typesystem() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,17 @@ export default function Tuple() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#tuple"
+                    href="#struct"
                   >
-                    Tuple
+                    Struct
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#value-tuple"
+                    href="#record"
                   >
-                    ValueTuple
+                    Record
                   </a>
                 </li>
               </ul>
@@ -70,51 +70,58 @@ export default function Tuple() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Tuple</h3>
-          <article id="tuple">
-            <h6>Tuple</h6>
+          <h3>Difference Between Struct And Class</h3>
+          <article className="" id="struct">
+            <h6>Struct</h6>
             <div>
               <p>
-                Un tuple est une structure de données qui contient une séquence
-                d'éléments de différents types de données. Il peut être utilisé
-                lorsqu'on souhaite disposer d'une structure de données pour
-                contenir un objet avec des propriétés, mais on ne souhaite pas
-                créer un type distinct pour celui-ci.
+                Structs are light versions of classes. Structs are value types
+                and can be used to create objects that behave like built-in
+                types.
               </p>
-              <img src="/img/tuple-syntax.PNG" alt="tuple syntax" />
-              <img src="/img/tuple-init.PNG" alt="tuple init" />
               <ul>
+                <li>Struct cannot have a default constructor.</li>
+                <li>Structs are value types and are copied on assignment</li>
                 <li>
-                  Utilisation de Tuple: lorsqu'on souhaite renvoyer plusieurs
-                  valeurs à partir d'une méthode sans utiliser de paramètres{" "}
-                  <code>ref</code> ou
-                  <code>out</code>.
+                  A struct cannot inherit from another struct or class, and it
+                  cannot be the base of a class.
                 </li>
                 <li>
-                  Utilisation de Tuple: lorsqu'on souhaite transmettre plusieurs
-                  valeurs à une méthode via un seul paramètre
+                  Struct cannot be a base class. So, Struct types cannot
+                  abstract and are always implicitly sealed.
                 </li>
                 <li>
-                  Le Tupleest un type référence et non un type valeur. Il alloue
-                  sur le tas et peut entraîner des opérations gourmandes en CPU.
+                  Function members in a struct cannot be abstract or virtual,
+                  and the override modifier is allowed only to the override
+                  methods inherited from System.ValueType.
                 </li>
-                <li>
-                  Le Tupleest limité à huit éléments. Vous devez utiliser des
-                  tuples imbriqués si vous devez stocker plus d'éléments.
-                  Cependant, cela peut entraîner une ambiguïté.
-                </li>
+                <li>A struct can implement interfaces.</li>
+              </ul>
+              <p>
+                It makes sense to use structs in the following scenarios
+                combined:
+              </p>
+              <ul>
+                <li>when the data is simple</li>
+                <li>can have all the values assigned on its creation</li>
+                <li>when the performance is critical for the system</li>
+                <li>the objects are short-lived</li>
               </ul>
             </div>
           </article>
-          <article id="value-tuple">
-            <h6>ValueTuple</h6>
+          <article className="" id="records">
+            <h6>Record</h6>
             <div>
-              <img src="/img/valuetuple-syntax.PNG" alt="valuetuple syntax" />
               <p>
-                <code>ValueTuple</code> permet également des "Discards" en
-                déconstruction pour les membres que vous n'allez pas utiliser.
+                A record type is a refernce type and immutable data type that
+                has read-only properties only. Because a record type is
+                immutable, it is thread-safe and cannot mutate or change after
+                it has been created. You can initialize a record type only
+                inside a constructor.
               </p>
-              <img src="/img/valuetuple-discard.PNG" alt="valuetuple discard" />
+              <p>Support for inheritance hierarchies.</p>
+              <img src="/img/record1.png" alt="record" />
+              <img src="/img/record2.png" alt="record" />
             </div>
           </article>
         </section>

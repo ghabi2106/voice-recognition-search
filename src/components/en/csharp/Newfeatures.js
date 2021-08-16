@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Datatype() {
+export default function Newfeatures() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,33 +25,33 @@ export default function Datatype() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#anonyme"
+                    href="#top-level-statements"
                   >
-                    Anonymous Type
+                    Top-level statements
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#dynamic"
+                    href="#init-only-setters"
                   >
-                    Dynamic Types
+                    init-only-setters
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#nullable"
+                    href="#record"
                   >
-                    Nullable Types
+                    Record
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#discard"
+                    href="#new"
                   >
-                    Discard Types
+                    Target-typed ‘new’ expressions
                   </a>
                 </li>
               </ul>
@@ -86,65 +86,77 @@ export default function Datatype() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Data Types</h3>
-          <article id="anonymous">
-            <h6>Type anonyme</h6>
+          <h3>New features in C# 9 </h3>
+          <article className="" id="top-level-statements">
+            <h6>Top-level statements</h6>
             <div>
               <p>
-                Un type anonyme est un type (classe) sans nom qui ne peut
-                contenir que des propriétés publiques en lecture seule.
+                Instead of writing a considerable amount of boilerplate code.
               </p>
-              <img src="/img/type-anonymous.PNG" alt="type anonymous" />
+              <img
+                src="/img/top-level-statements1.png"
+                alt="Top-level statements"
+              />
+              <p>
+                With top-level statements, we can eliminate the boilerplate code
+                and start coding the logic right away.
+              </p>
+              <img
+                src="/img/top-level-statements2.png"
+                alt="Top-level statements"
+              />
             </div>
           </article>
-          <article id="dynamic">
-            <h6>Types dynamiques</h6>
+          <article className="" id="init-only-setters">
+            <h6>Init only setters</h6>
             <div>
               <p>
-                Un dynamictype échappe à la vérification de type au moment de la
-                compilation ; au lieu de cela, il résout le type au moment de
-                l'exécution.
+                Pour rendre un objet immutable, on peut accomplir ça en
+                utilisant constructeur.
               </p>
-              <ul>
-                <li>
-                  Les types dynamiques changent de type au moment de l'exécution
-                  en fonction de la valeur attribuée.
-                </li>
-                <li>
-                  Les variables de type dynamique sont converties implicitement
-                  en d'autres types.
-                </li>
-              </ul>
-              <img src="/img/type-dynamic.PNG" alt="type dynamic" />
+              <img src="/img/set-only-setters1.png" alt="Init only setters" />
+              <p>
+                To make immutable this, by using a constructor we can accomplish
+                that.
+              </p>
+              <img src="/img/set-only-setters2.png" alt="Init only setters" />
             </div>
           </article>
-          <article id="nullable">
-            <h6>Types Nullables</h6>
+          <article className="" id="records">
+            <h6>Record</h6>
             <div>
               <p>
-                Comme on le sait, un type valeur ne peut pas se voir attribuer
-                une valeur nulle. Par exemple, int i = null vous donnera une
-                erreur de compilation.
+                Records define an immutable reference type and behave like a
+                value type.
               </p>
-              <img src="/img/type-nullable.PNG" alt="type nullable" />
+              <p>
+                Records support inheritance. You may also seal the records to
+                avoid further derivation.
+              </p>
+              <img src="/img/record1.png" alt="record" />
+              <img src="/img/record2.png" alt="record" />
             </div>
           </article>
-          <article id="discard">
-            <h6>Discards</h6>
+          <article className="" id="switch">
+            <h6>Improved pattern matching</h6>
+            <div>
+              <b>Logical patterns and Relational Pattern Matching In Switch</b>
+              <p>
+                We can use logical operators like ‘and’, ‘or’ and ‘not’, they
+                can even be combined with relational patterns.
+              </p>
+              <img src="/img/switch.png" alt="Improved pattern matching" />
+            </div>
+          </article>
+          <article className="" id="new">
+            <h6>Target-typed ‘new’ expressions</h6>
             <div>
               <p>
-                Discards sont des variables d’espace réservé qui sont
-                intentionnellement inutilisées dans le code de l’application.
-                Les éléments ignorés sont équivalents aux variables non
-                affectées ; ils n’ont pas de valeur. Vous pouvez ignorer le
-                résultat d’une expression, d’un ou de plusieurs membres d’une
-                expression de tuple, ou de la cible d’une expression de critères
-                spéciaux.
+                We can omit the type in the ‘new expression’ when the created
+                object is already known.
               </p>
-              <u>
-                <li>Déconstruction de tuple et d’objet</li>
-                <li>Utilisation des critères spéciaux(matching) avec switch</li>
-              </u>
+              <img src="/img/new1.png" alt="Target-typed ‘new’ expressions" />
+              <img src="/img/new2.png" alt="Target-typed ‘new’ expressions" />
             </div>
           </article>
         </section>

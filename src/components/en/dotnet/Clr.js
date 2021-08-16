@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Tuple() {
+export default function Clr() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,17 @@ export default function Tuple() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#tuple"
+                    href="#introduction"
                   >
-                    Tuple
+                    Introduction
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#value-tuple"
+                    href="#metadata"
                   >
-                    ValueTuple
+                    Metadata
                   </a>
                 </li>
               </ul>
@@ -70,51 +70,78 @@ export default function Tuple() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Tuple</h3>
-          <article id="tuple">
-            <h6>Tuple</h6>
+          <h3>Common Runtime Language</h3>
+          <article className="" id="introduction">
+            <h6>Introduction</h6>
             <div>
               <p>
-                Un tuple est une structure de données qui contient une séquence
-                d'éléments de différents types de données. Il peut être utilisé
-                lorsqu'on souhaite disposer d'une structure de données pour
-                contenir un objet avec des propriétés, mais on ne souhaite pas
-                créer un type distinct pour celui-ci.
+                Compiling translates your source code into MSIL and generates
+                the required metadata.
               </p>
-              <img src="/img/tuple-syntax.PNG" alt="tuple syntax" />
-              <img src="/img/tuple-init.PNG" alt="tuple init" />
-              <ul>
-                <li>
-                  Utilisation de Tuple: lorsqu'on souhaite renvoyer plusieurs
-                  valeurs à partir d'une méthode sans utiliser de paramètres{" "}
-                  <code>ref</code> ou
-                  <code>out</code>.
-                </li>
-                <li>
-                  Utilisation de Tuple: lorsqu'on souhaite transmettre plusieurs
-                  valeurs à une méthode via un seul paramètre
-                </li>
-                <li>
-                  Le Tupleest un type référence et non un type valeur. Il alloue
-                  sur le tas et peut entraîner des opérations gourmandes en CPU.
-                </li>
-                <li>
-                  Le Tupleest limité à huit éléments. Vous devez utiliser des
-                  tuples imbriqués si vous devez stocker plus d'éléments.
-                  Cependant, cela peut entraîner une ambiguïté.
-                </li>
-              </ul>
+              <p>
+                The Common Language Runtime (CLR) includes a JIT compiler for
+                converting MSIL to native code.
+              </p>
+              <p>
+                Managed code benefits from features such as cross-language
+                integration, cross-language exception handling, enhanced
+                security, versioning and deployment support, a simplified model
+                for component interaction, and debugging.
+              </p>
             </div>
           </article>
-          <article id="value-tuple">
-            <h6>ValueTuple</h6>
+          <article className="" id="metadata">
+            <h6>Metadata</h6>
             <div>
-              <img src="/img/valuetuple-syntax.PNG" alt="valuetuple syntax" />
               <p>
-                <code>ValueTuple</code> permet également des "Discards" en
-                déconstruction pour les membres que vous n'allez pas utiliser.
+                Metadata describes every type and member defined in your code in
+                a language-neutral manner :
               </p>
-              <img src="/img/valuetuple-discard.PNG" alt="valuetuple discard" />
+              <ul>
+                <li>
+                  <p>Description of the assembly.</p>
+                  <ul>
+                    <li>
+                      <p>Identity (name, version, culture, public key).</p>
+                    </li>
+                    <li>
+                      <p>The types that are exported.</p>
+                    </li>
+                    <li>
+                      <p>Other assemblies that this assembly depends on.</p>
+                    </li>
+                    <li>
+                      <p>Security permissions needed to run.</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Description of types.</p>
+                  <ul>
+                    <li>
+                      <p>
+                        Name, visibility, base class, and interfaces
+                        implemented.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        Members (methods, fields, properties, events, nested
+                        types).
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Attributes.</p>
+                  <ul>
+                    <li>
+                      Additional descriptive elements that modify types and
+                      members.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </article>
         </section>

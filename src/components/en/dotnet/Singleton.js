@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Statements() {
+export default function Singleton() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,33 @@ export default function Statements() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#partial"
+                    href="#sigleton"
                   >
-                    partial type
+                    Singleton
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#lock"
+                    href="#mediator"
                   >
-                    lock
+                    Mediator
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#observer"
+                  >
+                    Observer
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#command"
+                  >
+                    Command
                   </a>
                 </li>
               </ul>
@@ -57,9 +73,9 @@ export default function Statements() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/designpattern"
                   >
-                    Entity Framework
+                    Design Pattern
                   </Link>
                 </li>
               </ul>
@@ -70,47 +86,41 @@ export default function Statements() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Mots clés d'instruction</h3>
-          <article className="" id="partial">
-            <h6>partial type</h6>
+          <h3>Singleton Mediator Observer Command</h3>
+          <article className="" id="singleton">
+            <h6>Singleton</h6>
             <p>
-              Les définitions de type partiel permettent de fractionner en
-              plusieurs fichiers la définition d’une classe, d’une structure,
-              d’une interface ou d’un enregistrement.
+              Singleton is a creational design pattern that lets you ensure that
+              a class has only one instance, while providing a global access
+              point to this instance.
             </p>
           </article>
-          <article id="lock">
-            <h6>lock</h6>
+          <article className="" id="mediator">
+            <h6>Mediator</h6>
             <p>
-              Le mot-clé Lock garantit qu'un thread exécute un morceau de code à
-              la fois. Le mot-clé lock garantit qu'un thread n'entre pas dans
-              une section critique de code alors qu'un autre thread se trouve
-              dans cette section
+              Mediator is a behavioral design pattern that lets you reduce
+              chaotic dependencies between objects. The pattern restricts direct
+              communications between the objects and forces them to collaborate
+              only via a mediator object.
             </p>
           </article>
-          <article id="yield">
-            <h6>yield</h6>
-            <div>
-              <p>
-                Utilisez une instruction <code>yield return</code> pour
-                retourner chaque élément un par un dans un{" "}
-                <code>IEnumerable</code> ou <code>Inumerator</code> en utilisant
-                par exemple <code></code>
-                freach
-              </p>
-              <ul>
-                <li>
-                  Il ne peut pas y avoir d'instruction <code>yield return</code>{" "}
-                  dans un bloc try-catch. Une instruction{" "}
-                  <code>yield return</code> peut se trouver dans le bloc try
-                  d'une instruction try-finally.
-                </li>
-                <li>
-                  Une instruction <code>yield break</code> peut se trouver dans
-                  un bloc try ou un bloc catch mais pas dans un bloc finally.
-                </li>
-              </ul>
-            </div>
+          <article className="" id="observer">
+            <h6>Observer</h6>
+            <p>
+              Observer is a behavioral design pattern that lets you define a
+              subscription mechanism to notify multiple objects about any events
+              that happen to the object they’re observing.
+            </p>
+          </article>
+          <article className="" id="command">
+            <h6>Command</h6>
+            <p>
+              Command is a behavioral design pattern that turns a request into a
+              stand-alone object that contains all information about the
+              request. This transformation lets you pass requests as a method
+              arguments, delay or queue a request’s execution, and support
+              undoable operations.
+            </p>
           </article>
         </section>
       </div>

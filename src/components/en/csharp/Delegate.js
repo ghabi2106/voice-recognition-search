@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Datatype() {
+export default function Delegate() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,33 +25,41 @@ export default function Datatype() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#anonyme"
+                    href="#delegate"
                   >
-                    Anonymous Type
+                    Delegate
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#dynamic"
+                    href="#func"
                   >
-                    Dynamic Types
+                    Func delegate
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#nullable"
+                    href="#action"
                   >
-                    Nullable Types
+                    Action delegate
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#discard"
+                    href="#predicate"
                   >
-                    Discard Types
+                    Predicate delegate
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#events"
+                  >
+                    Events
                   </a>
                 </li>
               </ul>
@@ -86,65 +94,76 @@ export default function Datatype() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Data Types</h3>
-          <article id="anonymous">
-            <h6>Type anonyme</h6>
+          <h3>Délégués</h3>
+          <article id="delegate">
+            <h6>Delegate</h6>
             <div>
               <p>
-                Un type anonyme est un type (classe) sans nom qui ne peut
-                contenir que des propriétés publiques en lecture seule.
+                Delegates are similar to pointers to functions, in C or C++. A
+                delegate is a reference type variable that holds the reference
+                to a method. The reference can be changed at runtime.
               </p>
-              <img src="/img/type-anonymous.PNG" alt="type anonymous" />
+              <img src="/img/delegate-init.PNG" alt="delegate init" />
+              <img src="/img/delegate-invoke.PNG" alt="delegate invoke" />
             </div>
           </article>
-          <article id="dynamic">
-            <h6>Types dynamiques</h6>
+          <article id="func">
+            <h6>Func Delegate</h6>
             <div>
               <p>
-                Un dynamictype échappe à la vérification de type au moment de la
-                compilation ; au lieu de cela, il résout le type au moment de
-                l'exécution.
+                <code>Func</code> is a generic delegate. It has zero or more
+                input parameters and one out parameter.
               </p>
               <ul>
+                <li>Func delegate type must return a value.</li>
                 <li>
-                  Les types dynamiques changent de type au moment de l'exécution
-                  en fonction de la valeur attribuée.
+                  Func delegate type can have zero to 16 input parameters.
                 </li>
-                <li>
-                  Les variables de type dynamique sont converties implicitement
-                  en d'autres types.
-                </li>
+                <li>Func delegate does not allow ref and out parameters.</li>
               </ul>
-              <img src="/img/type-dynamic.PNG" alt="type dynamic" />
+              <img src="/img/delegate-func.png" alt="delegate func" />
+              <img
+                src="/img/delegate-func-program.PNG"
+                alt="delegate func program"
+              />
             </div>
           </article>
-          <article id="nullable">
-            <h6>Types Nullables</h6>
+          <article id="action">
+            <h6>Action Delegate</h6>
             <div>
               <p>
-                Comme on le sait, un type valeur ne peut pas se voir attribuer
-                une valeur nulle. Par exemple, int i = null vous donnera une
-                erreur de compilation.
+                <code>Action</code> is a delegate type defined in the System
+                namespace. An Action type delegate is the same as Func delegate
+                except that the Action delegate doesn't return a value. In other
+                words, an Action delegate can be used with a method that has a
+                void return type.
               </p>
-              <img src="/img/type-nullable.PNG" alt="type nullable" />
+              <img
+                src="/img/delegate-action-init.PNG"
+                alt="delegate action init"
+              />
             </div>
           </article>
-          <article id="discard">
-            <h6>Discards</h6>
+          <article id="predicate">
+            <h6>Predicate Delegate</h6>
             <div>
               <p>
-                Discards sont des variables d’espace réservé qui sont
-                intentionnellement inutilisées dans le code de l’application.
-                Les éléments ignorés sont équivalents aux variables non
-                affectées ; ils n’ont pas de valeur. Vous pouvez ignorer le
-                résultat d’une expression, d’un ou de plusieurs membres d’une
-                expression de tuple, ou de la cible d’une expression de critères
-                spéciaux.
+                <code>Predicate</code> delegate takes one input parameter and
+                boolean return type.
               </p>
-              <u>
-                <li>Déconstruction de tuple et d’objet</li>
-                <li>Utilisation des critères spéciaux(matching) avec switch</li>
-              </u>
+              <img src="/img/delegate-predicate.PNG" alt="delegate predicate" />
+            </div>
+          </article>
+          <article id="events">
+            <h6>Events</h6>
+            <div>
+              <p>
+                An event is a notification sent by an object to signal the
+                occurrence of an action. Events follow the observer design
+                pattern. The class who raises events is called Publisher, and
+                the class who receives the notification is called Subscriber.
+                There can be multiple subscribers of a single event.
+              </p>
             </div>
           </article>
         </section>

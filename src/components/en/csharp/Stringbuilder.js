@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Statements() {
+export default function Stringbuilder() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,9 @@ export default function Statements() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#partial"
+                    href="#introduction"
                   >
-                    partial type
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#lock"
-                  >
-                    lock
+                    Introduction
                   </a>
                 </li>
               </ul>
@@ -70,46 +62,21 @@ export default function Statements() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Mots clés d'instruction</h3>
-          <article className="" id="partial">
-            <h6>partial type</h6>
-            <p>
-              Les définitions de type partiel permettent de fractionner en
-              plusieurs fichiers la définition d’une classe, d’une structure,
-              d’une interface ou d’un enregistrement.
-            </p>
-          </article>
-          <article id="lock">
-            <h6>lock</h6>
-            <p>
-              Le mot-clé Lock garantit qu'un thread exécute un morceau de code à
-              la fois. Le mot-clé lock garantit qu'un thread n'entre pas dans
-              une section critique de code alors qu'un autre thread se trouve
-              dans cette section
-            </p>
-          </article>
-          <article id="yield">
-            <h6>yield</h6>
+          <h3>String Builder</h3>
+          <article className="" id="introduction">
+            <h6>Introduction</h6>
             <div>
               <p>
-                Utilisez une instruction <code>yield return</code> pour
-                retourner chaque élément un par un dans un{" "}
-                <code>IEnumerable</code> ou <code>Inumerator</code> en utilisant
-                par exemple <code></code>
-                freach
+                The string type is immutable. It means a string cannot be
+                changed once created. Now, by changing the initial string will
+                create a new string object on the memory heap instead of
+                modifying an original string at the same memory address.
               </p>
-              <ul>
-                <li>
-                  Il ne peut pas y avoir d'instruction <code>yield return</code>{" "}
-                  dans un bloc try-catch. Une instruction{" "}
-                  <code>yield return</code> peut se trouver dans le bloc try
-                  d'une instruction try-finally.
-                </li>
-                <li>
-                  Une instruction <code>yield break</code> peut se trouver dans
-                  un bloc try ou un bloc catch mais pas dans un bloc finally.
-                </li>
-              </ul>
+              <p>
+                The <code>StringBuilder</code> doesn't create a new object in
+                the memory but dynamically expands memory to accommodate the
+                modified string.
+              </p>
             </div>
           </article>
         </section>
