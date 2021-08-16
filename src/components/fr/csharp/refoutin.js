@@ -33,9 +33,9 @@ export default function Refoutin() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#ref"
+                    href="#out"
                   >
-                    ref
+                    out
                   </a>
                 </li>
                 <li>
@@ -52,6 +52,14 @@ export default function Refoutin() {
                     href="#in"
                   >
                     in
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#limit"
+                  >
+                    Limit
                   </a>
                 </li>
               </ul>
