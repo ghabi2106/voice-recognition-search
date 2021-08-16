@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -24,268 +25,50 @@ export default function Home() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#typography"
+                    href="#diginov"
                   >
-                    Typography
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded active"
-                    href="#images"
-                  >
-                    Images
+                    Diginov
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#tables"
+                    href="#itgwana"
                   >
-                    Tables
+                    ITGWANA
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#figures"
+                    href="#taysir"
                   >
-                    Figures
+                    Taysir Solutions
                   </a>
                 </li>
               </ul>
             </li>
             <li className="my-2">
               <button
-                className="btn d-inline-flex align-items-center collapsed"
+                className="btn d-inline-flex align-items-center"
                 data-bs-toggle="collapse"
-                aria-expanded="false"
-                data-bs-target="#forms-collapse"
-                aria-controls="forms-collapse"
+                aria-expanded="true"
+                data-bs-target="#contents-collapse"
+                aria-controls="contents-collapse"
               >
-                Forms
+                Related links
               </button>
-              <ul className="list-unstyled ps-3 collapse" id="forms-collapse">
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#overview"
-                  >
-                    Overview
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#disabled-forms"
-                  >
-                    Disabled forms
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#sizing"
-                  >
-                    Sizing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#input-group"
-                  >
-                    Input group
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#floating-labels"
-                  >
-                    Floating labels
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#validation"
-                  >
-                    Validation
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="my-2">
-              <button
-                className="btn d-inline-flex align-items-center collapsed"
-                data-bs-toggle="collapse"
-                aria-expanded="false"
-                data-bs-target="#components-collapse"
-                aria-controls="components-collapse"
+              <ul
+                className="list-unstyled ps-3 collapse show"
+                id="contents-collapse"
               >
-                Components
-              </button>
-              <ul className="list-unstyled ps-3 collapse" id="components-collapse">
                 <li>
-                  <a
+                  <Link
                     className="d-inline-flex align-items-center rounded"
-                    href="#accordion"
+                    to="/entityframework"
                   >
-                    Accordion
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#alerts"
-                  >
-                    Alerts
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#badge"
-                  >
-                    Badge
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#breadcrumb"
-                  >
-                    Breadcrumb
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#buttons"
-                  >
-                    Buttons
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#button-group"
-                  >
-                    Button group
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#card"
-                  >
-                    Card
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#carousel"
-                  >
-                    Carousel
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#dropdowns"
-                  >
-                    Dropdowns
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#list-group"
-                  >
-                    List group
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#modal"
-                  >
-                    Modal
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#navs"
-                  >
-                    Navs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#navbar"
-                  >
-                    Navbar
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#pagination"
-                  >
-                    Pagination
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#popovers"
-                  >
-                    Popovers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#progress"
-                  >
-                    Progress
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#scrollspy"
-                  >
-                    Scrollspy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#spinners"
-                  >
-                    Spinners
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#toasts"
-                  >
-                    Toasts
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#tooltips"
-                  >
-                    Tooltips
-                  </a>
+                    Entity Framework
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -293,387 +76,112 @@ export default function Home() {
         </nav>
       </aside>
       <div className="bd-cheatsheet container-fluid bg-body">
-        <section id="content">
-          <h2 className="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">
-            Contents
-          </h2>
-
-          <article className="my-3" id="typography">
-            <div className="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-              <h3>Typography</h3>
-              <a
-                className="d-flex align-items-center"
-                href="/docs/5.0/content/typography/"
-              >
-                Documentation
-              </a>
-            </div>
-
+        <section id="dotnet-core">
+          <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
+          <h3>Presentation</h3>
+          <article id="diginov">
+            <h6>Diginov</h6>
             <div>
-              <div className="bd-example">
-                <p className="display-1">Display 1</p>
-                <p className="display-2">Display 2</p>
-                <p className="display-3">Display 3</p>
-                <p className="display-4">Display 4</p>
-                <p className="display-5">Display 5</p>
-                <p className="display-6">Display 6</p>
-              </div>
-
-              <div className="bd-example">
-                <p className="h1">Heading 1</p>
-                <p className="h2">Heading 2</p>
-                <p className="h3">Heading 3</p>
-                <p className="h4">Heading 4</p>
-                <p className="h5">Heading 5</p>
-                <p className="h6">Heading 6</p>
-              </div>
-
-              <div className="bd-example">
-                <p className="lead">
-                  This is a lead paragraph. It stands out from regular
-                  paragraphs.
-                </p>
-              </div>
-
-              <div className="bd-example">
-                <p>
-                  You can use the mark tag to <mark>highlight</mark> text.
-                </p>
-                <p>
-                  <del>
-                    This line of text is meant to be treated as deleted text.
-                  </del>
-                </p>
-                <p>
-                  <s>
-                    This line of text is meant to be treated as no longer
-                    accurate.
-                  </s>
-                </p>
-                <p>
-                  <ins>
-                    This line of text is meant to be treated as an addition to
-                    the document.
-                  </ins>
-                </p>
-                <p>
-                  <u>This line of text will render as underlined.</u>
-                </p>
-                <p>
-                  <small>
-                    This line of text is meant to be treated as fine print.
-                  </small>
-                </p>
-                <p>
-                  <strong>This line rendered as bold text.</strong>
-                </p>
-                <p>
-                  <em>This line rendered as italicized text.</em>
-                </p>
-              </div>
-
-              <div className="bd-example">
-                <blockquote className="blockquote">
-                  <p>A well-known quote, contained in a blockquote element.</p>
-                  <footer className="blockquote-footer">
-                    Someone famous in{" "}
-                    <cite title="Source Title">Source Title</cite>
-                  </footer>
-                </blockquote>
-              </div>
-
-              <div className="bd-example">
-                <ul className="list-unstyled">
-                  <li>This is a list.</li>
-                  <li>It appears completely unstyled.</li>
-                  <li>Structurally, it's still a list.</li>
-                  <li>
-                    However, this style only applies to immediate child
-                    elements.
-                  </li>
-                  <li>
-                    Nested lists:
-                    <ul>
-                      <li>are unaffected by this style</li>
-                      <li>will still show a bullet</li>
-                      <li>and have appropriate left margin</li>
-                    </ul>
-                  </li>
-                  <li>This may still come in handy in some situations.</li>
-                </ul>
-              </div>
-
-              <div className="bd-example">
-                <ul className="list-inline">
-                  <li className="list-inline-item">This is a list item.</li>
-                  <li className="list-inline-item">And another one.</li>
-                  <li className="list-inline-item">
-                    But they're displayed inline.
-                  </li>
-                </ul>
-              </div>
+              <p>
+                Je suis Ghabi Assaad, je suis un ingénieur de développement .Net
+                senior. Je suis actuellement en poste chez Diginov à partir de
+                début de 2020. J’ai travaillé en deux projets « UAE SME » et «
+                FGIC » pour des clients émiratis (Ministère d’économie).
+              </p>
+              <p>
+                <strong>Le premier c’est « UAE SME » :</strong> Le programme
+                national pour les PME fournit un soutien financier pour
+                développer les entreprises et surmonter les obstacles, obtenir
+                de meilleurs rendements des projets et renforcer la présence des
+                entreprises sur les marchés locaux et étrangers.
+              </p>
+              <p>
+                <strong>Le deuxième c’est « FGIC » :</strong> Le centre fédéral
+                d'information géospatiale (FGIC) désormais responsable du
+                développement et de la supervision d'une infrastructure
+                nationale de données spatiales a pour objectif d'établir les
+                éléments institutionnels, techniques et les processus de
+                gouvernance nécessaires pour soutenir un partage et une
+                utilisation plus efficaces des données à travers le gouvernement
+                et la société.
+              </p>
+              <p>
+                <strong>La méthodologie</strong> suivie dans les deux projets
+                Agile Scrum. On travaille par sprint, chaque sprint dure 2
+                semaines, et chaque semaine on a une réunion avec le client.
+              </p>
+              <p>
+                <strong>Les technologies</strong> de développement .Net Core
+                3.1, Orchard CMS, Clean Architecture, Razor Pages, SCSS.
+              </p>
             </div>
           </article>
-          <article className="my-3" id="images">
-            <div className="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-              <h3>Images</h3>
-              <a
-                className="d-flex align-items-center"
-                href="/docs/5.0/content/images/"
-              >
-                Documentation
-              </a>
-            </div>
-
+          <article id="itgwana">
+            <h6>ITGWANA</h6>
             <div>
-              <div className="bd-example">
-                <svg
-                  className="bd-placeholder-img bd-placeholder-img-lg img-fluid"
-                  width="100%"
-                  height="250"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Responsive image"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#868e96"></rect>
-                  <text x="50%" y="50%" fill="#dee2e6" dy=".3em">
-                    Responsive image
-                  </text>
-                </svg>
-              </div>
-
-              <div className="bd-example">
-                <svg
-                  className="bd-placeholder-img img-thumbnail"
-                  width="200"
-                  height="200"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera: 200x200"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                >
-                  <title>
-                    A generic square placeholder image with a white border
-                    around it, making it resemble a photograph taken with an old
-                    instant camera
-                  </title>
-                  <rect width="100%" height="100%" fill="#868e96"></rect>
-                  <text x="50%" y="50%" fill="#dee2e6" dy=".3em">
-                    200x200
-                  </text>
-                </svg>
-              </div>
+              <p>
+                Auparavant j’ai travaillé pendant ≈ 1 ans au sein de la société
+                ITGWANA | RFIT TECH qui aide au développement de l’industrie
+                4.0. J’ai travaillé sur le projet Carry Track pour un client
+                français Nexans.
+              </p>
+              <p>
+                <strong>« Carry Track »</strong> c’est une solution de gestion
+                et de traçabilité es contenants en utilisant la technologie RFID
+                a pour objectif d’achever telle fonctionnalités comme : Gestion
+                de parc de contenants : traçabilité du référentiel de
+                contenants, fiches techniques et photos, statut (plein/vide),
+                Cartographie / localisation, Gestion de la répartition des
+                contenants sur différentes zones/différents sites, Gestion des
+                erreurs de chargement/déchargement, Tableaux de bord et
+                rapports, Alertes (dévoyé, maintenance, température, choc…),
+                Historique des mouvements.
+              </p>
+              <p>
+                <strong>La méthodologie</strong> suivie dans les deux projets
+                Agile Scrum. SCSS.
+              </p>
+              <p>
+                <strong>Les technologies</strong> de développement .Net Core
+                2.1, CSLA.NET, Architecture Multi layer, MVC, Telerik,
+              </p>
             </div>
           </article>
-          <article className="my-3" id="tables">
-            <div className="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-              <h3>Tables</h3>
-              <a
-                className="d-flex align-items-center"
-                href="/docs/5.0/content/tables/"
-              >
-                Documentation
-              </a>
-            </div>
-
+          <article id="taysir">
+            <h6>Taysir Solutions</h6>
             <div>
-              <div className="bd-example">
-                <table className="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colSpan="2">Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="bd-example">
-                <table className="table table-dark table-borderless">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colSpan="2">Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="bd-example">
-                <table className="table table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col">className</th>
-                      <th scope="col">Heading</th>
-                      <th scope="col">Heading</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">Default</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                    </tr>
-
-                    <tr className="table-primary">
-                      <th scope="row">Primary</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                    </tr>
-                    <tr className="table-secondary">
-                      <th scope="row">Secondary</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                    </tr>
-                    <tr className="table-success">
-                      <th scope="row">Success</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                    </tr>
-                    <tr className="table-danger">
-                      <th scope="row">Danger</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                    </tr>
-                    <tr className="table-warning">
-                      <th scope="row">Warning</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                    </tr>
-                    <tr className="table-info">
-                      <th scope="row">Info</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                    </tr>
-                    <tr className="table-light">
-                      <th scope="row">Light</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                    </tr>
-                    <tr className="table-dark">
-                      <th scope="row">Dark</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="bd-example">
-                <table className="table table-sm table-bordered">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colSpan="2">Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </article>
-          <article className="my-3" id="figures">
-            <div className="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
-              <h3>Figures</h3>
-              <a
-                className="d-flex align-items-center"
-                href="/docs/5.0/content/figures/"
-              >
-                Documentation
-              </a>
-            </div>
-
-            <div>
-              <div className="bd-example">
-                <figure className="figure">
-                  <svg
-                    className="bd-placeholder-img figure-img img-fluid rounded"
-                    width="400"
-                    height="300"
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-label="Placeholder: 400x300"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#868e96"></rect>
-                    <text x="50%" y="50%" fill="#dee2e6" dy=".3em">
-                      400x300
-                    </text>
-                  </svg>
-
-                  <figcaption className="figure-caption">
-                    A caption for the above image.
-                  </figcaption>
-                </figure>
-              </div>
+              <p>
+                Auparavant j’ai notamment travaillé pour Taysir Solutions ≈ 2ans
+                dans les secteurs médecines, facturation et agence des voyages.
+                J’ai travaillé en plusieurs projets « ADD Invoice », « DMI » et
+                « Ticketing ».
+              </p>
+              <p>
+                <strong>« ADD Invoice »</strong> Réalisation d’une solution de
+                facturation avec la possibilité d’étudier les factures avec un
+                suivi pour les paiements.
+              </p>
+              <p>
+                <strong>Les technologies</strong> de développement .Net
+                Framework 4, Architecture Multi layer, MVC.
+              </p>
+              <p>
+                <strong>« DMI »</strong> Réalisation d’une solution permettant
+                aux médecins d’accéder au dossier médical de ses patients.
+              </p>
+              <p>
+                <strong>Les technologies</strong> de développement .Net Core
+                2.0, Clean Architecture, MVC.
+              </p>
+              <p>
+                <strong>« Ticketing »</strong> Réalisation d’une solution
+                permettant de gérer les agences de voyages. ce qui m’amène à ma
+                poste actuelle.
+              </p>
+              <p>
+                <strong>Les technologies</strong> de développement .Net Core
+                2.1, Clean Architecture, Restful Api, Reactjs.
+              </p>
             </div>
           </article>
         </section>
