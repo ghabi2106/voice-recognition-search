@@ -35,6 +35,7 @@ import EnumindexerPage from "./components/fr/csharp/Enumindexer";
 import ModifiersPage from "./components/fr/csharp/Modifiers";
 import NewfeaturesPage from "./components/fr/csharp/Newfeatures";
 import OopPage from "./components/fr/csharp/Oop";
+import RefoutinPage from "./components/fr/csharp/refoutin";
 import StatementsPage from "./components/fr/csharp/Statements";
 import String2intPage from "./components/fr/csharp/String2int";
 import StringbuilderPage from "./components/fr/csharp/Stringbuilder";
@@ -336,6 +337,11 @@ function App() {
                         </Link>
                       </li>
                       <li className="nav-item">
+                        <Link className="dropdown-item" to="/refoutin">
+                          Ref-Out-In
+                        </Link>
+                      </li>
+                      <li className="nav-item">
                         <Link className="dropdown-item" to="/statements">
                           Statements
                         </Link>
@@ -444,6 +450,7 @@ function App() {
         <Route path="/modifiers" component={ModifiersPage} />
         <Route path="/csharp-features" component={NewfeaturesPage} />
         <Route path="/oop" component={OopPage} />
+        <Route path="/refoutin" component={RefoutinPage} />
         <Route path="/statements" component={StatementsPage} />
         <Route path="/string2int" component={String2intPage} />
         <Route path="/stringbuilder" component={StringbuilderPage} />
