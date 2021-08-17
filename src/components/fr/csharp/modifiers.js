@@ -346,30 +346,6 @@ export default function Struct() {
                       des pointeurs.
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      <code>in</code>
-                    </td>
-                    <td>
-                      Pour les paramètres de type générique, le mot clé{" "}
-                      <code>in</code> spécifie que le paramètre de type est
-                      contravariant. Vous pouvez utiliser le mot clé
-                      <code>in</code> dans les interfaces et délégués
-                      génériques.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <code>out</code>
-                    </td>
-                    <td>
-                      Pour les paramètres de type générique, le mot clé{" "}
-                      <code>out</code> spécifie que le paramètre de type est
-                      covariant. Vous pouvez utiliser le mot clé{" "}
-                      <code>out</code> dans les interfaces et délégués
-                      génériques.
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>

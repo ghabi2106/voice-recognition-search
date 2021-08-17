@@ -95,43 +95,6 @@ export default function Qualities() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Presentation</h3>
-          <article id="diginov">
-            <h6>Diginov</h6>
-            <div>
-              <p>
-                Je suis Ghabi Assaad, je suis un ingénieur de développement .Net
-                senior. Je suis actuellement en poste chez Diginov à partir de
-                début de 2020. J’ai travaillé en deux projets « UAE SME » et «
-                FGIC » pour des clients émiratis (Ministère d’économie).
-              </p>
-              <p>
-                <strong>Le premier c’est « UAE SME » :</strong> Le programme
-                national pour les PME fournit un soutien financier pour
-                développer les entreprises et surmonter les obstacles, obtenir
-                de meilleurs rendements des projets et renforcer la présence des
-                entreprises sur les marchés locaux et étrangers.
-              </p>
-              <p>
-                <strong>Le deuxième c’est « FGIC » :</strong> Le centre fédéral
-                d'information géospatiale (FGIC) désormais responsable du
-                développement et de la supervision d'une infrastructure
-                nationale de données spatiales a pour objectif d'établir les
-                éléments institutionnels, techniques et les processus de
-                gouvernance nécessaires pour soutenir un partage et une
-                utilisation plus efficaces des données à travers le gouvernement
-                et la société.
-              </p>
-              <p>
-                <strong>La méthodologie</strong> suivie dans les deux projets
-                Agile Scrum. On travaille par sprint, chaque sprint dure 2
-                semaines, et chaque semaine on a une réunion avec le client.
-              </p>
-              <p>
-                <strong>Les technologies</strong> de développement .Net Core
-                3.1, Orchard CMS, Clean Architecture, Razor Pages, SCSS.
-              </p>
-            </div>
-          </article>
           <article id="skills">
             <h6>Quels sont vos compétences :</h6>
             <div>

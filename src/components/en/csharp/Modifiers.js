@@ -341,28 +341,6 @@ export default function Struct() {
                       which is required for any operation involving pointers.
                     </td>
                   </tr>
-                  <tr>
-                    <td>
-                      <code>in</code>
-                    </td>
-                    <td>
-                      For generic type parameters, the <code>in</code> keyword
-                      specifies that the type parameter is contravariant. You
-                      can use the <code>in</code> keyword in generic interfaces
-                      and delegates.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <code>out</code>
-                    </td>
-                    <td>
-                      For generic type parameters, the <code>out</code> keyword
-                      specifies that the type parameter is covariant. You can
-                      use the <code>out</code> keyword in generic interfaces and
-                      delegates.
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>

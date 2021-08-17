@@ -7,6 +7,7 @@ import stringSimilarity from "string-similarity";
 
 //#region something import all fr components
 import HomePage from "./components/fr/Home";
+import QualitiesPage from "./components/fr/Qualities";
 
 //#region dotnet
 import CleanPage from "./components/fr/dotnet/Clean";
@@ -176,9 +177,9 @@ function App() {
                     <Link
                       className="nav-link active"
                       aria-current="page"
-                      to="/"
+                      to="/qualities"
                     >
-                      Home
+                      Qualities
                     </Link>
                   </li>
 
@@ -415,7 +416,7 @@ function App() {
         </header>
 
         <Route path="/" exact component={HomePage} />
-        <Route path="/home" component={HomePage} />
+        <Route path="/qualities" component={QualitiesPage} />
 
         {
           //#region dotnet
