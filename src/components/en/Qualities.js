@@ -25,6 +25,14 @@ export default function Qualities() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#describe"
+                  >
+                    Describe yourself :
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#leave"
                   >
                     Why you leave :
@@ -119,6 +127,16 @@ export default function Qualities() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Presentation</h3>
+          <article id="describe">
+            <h6>Describe yourself :</h6>
+            <div>
+              <p>
+                I'd really describe myself as a person with a versatile
+                skill-set, a lot of integrity and a willingness to go the extra
+                mile to satisfy a customer.
+              </p>
+            </div>
+          </article>
           <article id="leave">
             <h6>Why you leave?</h6>
             <div>
