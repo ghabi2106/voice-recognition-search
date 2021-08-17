@@ -54,6 +54,14 @@ export default function Datatype() {
                     Discard Types
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#extension"
+                  >
+                    Extension Method
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -145,6 +153,35 @@ export default function Datatype() {
                 <li>Déconstruction de tuple et d’objet</li>
                 <li>Utilisation des critères spéciaux(matching) avec switch</li>
               </u>
+            </div>
+          </article>
+          <article id="extension">
+            <h6>Méthode d'extension</h6>
+            <div>
+              <p>
+                Les méthodes d'extension vous permettent d'injecter des méthodes
+                supplémentaires sans modifier, dériver ou recompiler la classe,
+                la structure ou l'interface d'origine.
+              </p>
+              <p>
+                Les méthodes d'extension ont un symbole spécial dans
+                l'intellisense du studio visuel, de sorte que vous pouvez
+                facilement différencier les méthodes de classe et les méthodes
+                d'extension.
+              </p>
+              <img src="/img/extension-method.png" alt="extension method" />
+              <p>
+                Une méthode d'extension est en fait un type spécial de méthode
+                statique définie dans une classe statique.
+              </p>
+              <img
+                src="/img/extension-method-definition.PNG"
+                alt="extension method definition"
+              />
+              <p>
+                LINQ repose sur des méthodes d'extension qui fonctionnent sur
+                les types IEnumerable et IQeryable.
+              </p>
             </div>
           </article>
         </section>

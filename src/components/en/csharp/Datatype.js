@@ -54,6 +54,14 @@ export default function Datatype() {
                     Discard Types
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#extension"
+                  >
+                    Extension Method
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -141,6 +149,34 @@ export default function Datatype() {
                 <li>Tuple and object deconstruction</li>
                 <li>Pattern matching with switch</li>
               </u>
+            </div>
+          </article>
+          <article id="extension">
+            <h6>Extension Method</h6>
+            <div>
+              <p>
+                Extension methods allow you to inject additional methods without
+                modifying, deriving or recompiling the original class, struct or
+                interface.
+              </p>
+              <p>
+                The extension methods have a special symbol in intellisense of
+                the visual studio, so that you can easily differentiate between
+                class methods and extension methods.
+              </p>
+              <img src="/img/extension-method.png" alt="extension method" />
+              <p>
+                An extension method is actually a special kind of static method
+                defined in a static class.
+              </p>
+              <img
+                src="/img/extension-method-definition.PNG"
+                alt="extension method definition"
+              />
+              <p>
+                LINQ is built upon extension methods that operate on IEnumerable
+                and IQeryable type.
+              </p>
             </div>
           </article>
         </section>
