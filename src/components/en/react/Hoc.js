@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function JSX() {
+export default function Hoc() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,25 +25,25 @@ export default function JSX() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#jsx"
+                    href="#definition"
                   >
-                    JSX
+                    HOC
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#browsers"
+                    href="#use"
                   >
-                    Browsers can't read JSX
+                    use of HOC
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#usability"
+                    href="#pure"
                   >
-                    use of JSX
+                    Pure Component
                   </a>
                 </li>
               </ul>
@@ -78,56 +78,35 @@ export default function JSX() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>JSX</h3>
-          <article id="jsx">
-            <h6>What is JSX?</h6>
-            <div>
-              <p>
-                JSX stands for JavaScript XML. It is a React extension which
-                allows writing JavaScript code that looks similar to HTML. It
-                makes HTML file easy to understand. The JSX file makes the React
-                application robust and boosts its performance. JSX provides you
-                to write XML-like syntax in the same file where you write
-                JavaScript code, and then preprocessor (i.e., transpilers like
-                Babel) transform these expressions into actual JavaScript code.
-                Just like XML/HTML, JSX tags have a tag name, attributes, and
-                children.
-              </p>
-              <strong>Example</strong>
-              <img src="/img/react/jsx-script-1.PNG" alt="jsx script" />
-              <p>
-                After compilation, the JSX expression becomes a normal
-                JavaScript function.
-              </p>
-              <img src="/img/react/jsx-script-2.PNG" alt="jsx script" />
-            </div>
-          </article>
-          <article id="browsers">
-            <h6>Why can't browsers read JSX?</h6>
+          <h3>HOC and Pure</h3>
+          <article id="definition">
+            <h6>What are Higher Order Components(HOC)?</h6>
             <p>
-              Browsers cannot read JSX directly because they can only understand
-              JavaScript objects, and JSX is not a regular JavaScript object.
-              Thus, we need to transform the JSX file into a JavaScript object
-              using transpilers like Babel and then pass it to the browser.
+              In React, Higher Order Component is an advanced technique for
+              reusing component logic. It is a function that takes a component
+              and returns a new component. In other words, it is a function
+              which accepts another function as an argument. According to the
+              official website, it is not the feature(part) in React API, but a
+              pattern that emerges from React's compositional nature.
             </p>
           </article>
-          <article id="usability">
-            <h6>Why we use JSX?</h6>
+          <article id="use">
+            <h6>What can you do with HOC?</h6>
             <ul>
-              <li>
-                It is faster than regular JavaScript because it performs
-                optimization while translating the code to JavaScript.
-              </li>
-              <li>
-                Instead of separating technologies by putting markup and logic
-                in separate files, React uses components that contain both.
-              </li>
-              <li>
-                It is type-safe, and most of the errors can be found at
-                compilation time.
-              </li>
-              <li>It makes easier to create templates.</li>
+              <li>Code Reusability</li>
+              <li>Props manipulation</li>
+              <li>State manipulation</li>
+              <li>Render highjacking</li>
             </ul>
+          </article>
+          <article id="pure">
+            <h6>What are Pure Components?</h6>
+            <p>
+              Pure components are the simplest and fastest components which can
+              be written. They can replace any component which only has a
+              render(). These components enhance the simplicity of the code and
+              performance of the application.
+            </p>
           </article>
         </section>
       </div>

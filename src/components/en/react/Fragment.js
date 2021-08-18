@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function JSX() {
+export default function Fragment() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,25 +25,25 @@ export default function JSX() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#jsx"
+                    href="#fragment"
                   >
-                    JSX
+                    Fragments
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#browsers"
+                    href="#better"
                   >
-                    Browsers can't read JSX
+                    Fragments better than container divs?
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#usability"
+                    href="#capital"
                   >
-                    use of JSX
+                    Components starts with a capital letter
                   </a>
                 </li>
               </ul>
@@ -78,56 +78,45 @@ export default function JSX() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>JSX</h3>
-          <article id="jsx">
-            <h6>What is JSX?</h6>
+          <h3>React Fragments</h3>
+          <article id="fragment">
+            <h6>What are fragments?</h6>
             <div>
               <p>
-                JSX stands for JavaScript XML. It is a React extension which
-                allows writing JavaScript code that looks similar to HTML. It
-                makes HTML file easy to understand. The JSX file makes the React
-                application robust and boosts its performance. JSX provides you
-                to write XML-like syntax in the same file where you write
-                JavaScript code, and then preprocessor (i.e., transpilers like
-                Babel) transform these expressions into actual JavaScript code.
-                Just like XML/HTML, JSX tags have a tag name, attributes, and
-                children.
+                Fragments are used for components to return multiple elements.
+                It allows you to group a list of multiple children without
+                adding an extra node to the DOM.
               </p>
-              <strong>Example</strong>
-              <img src="/img/react/jsx-script-1.PNG" alt="jsx script" />
-              <p>
-                After compilation, the JSX expression becomes a normal
-                JavaScript function.
-              </p>
-              <img src="/img/react/jsx-script-2.PNG" alt="jsx script" />
+              <img src="/img/react/fragment-react-1.PNG" alt="fragment react" />
+              <img src="/img/react/fragment-react-2.PNG" alt="fragment react" />
             </div>
           </article>
-          <article id="browsers">
-            <h6>Why can't browsers read JSX?</h6>
-            <p>
-              Browsers cannot read JSX directly because they can only understand
-              JavaScript objects, and JSX is not a regular JavaScript object.
-              Thus, we need to transform the JSX file into a JavaScript object
-              using transpilers like Babel and then pass it to the browser.
-            </p>
-          </article>
-          <article id="usability">
-            <h6>Why we use JSX?</h6>
+          <article id="better">
+            <h6>Why are fragments better than container divs?</h6>
             <ul>
               <li>
-                It is faster than regular JavaScript because it performs
-                optimization while translating the code to JavaScript.
+                Fragments are faster and consume less memory because it did not
+                create an extra DOM node.
               </li>
               <li>
-                Instead of separating technologies by putting markup and logic
-                in separate files, React uses components that contain both.
+                Some CSS styling like CSS Grid and Flexbox have a special
+                parent-child relationship and add &lt;div&gt; tags in the
+                middle, which makes it hard to keep the desired layout.
               </li>
-              <li>
-                It is type-safe, and most of the errors can be found at
-                compilation time.
-              </li>
-              <li>It makes easier to create templates.</li>
+              <li>The DOM Inspector is less cluttered.</li>
             </ul>
+          </article>
+          <article id="capital">
+            <h6>
+              Why is it necessary to start component names with a capital
+              letter?
+            </h6>
+            <p>
+              In React, it is necessary to start component names with a capital
+              letter. If we start the component name with lower case, it will
+              throw an error as an unrecognized tag. It is because, in JSX,
+              lower case tag names are considered as HTML tags.
+            </p>
           </article>
         </section>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function JSX() {
+export default function Dom() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,25 +25,17 @@ export default function JSX() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#jsx"
+                    href="#virtual-dom"
                   >
-                    JSX
+                    Virtual DOM
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#browsers"
+                    href="#explain"
                   >
-                    Browsers can't read JSX
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#usability"
-                  >
-                    use of JSX
+                    Explain Virtual DOM.
                   </a>
                 </li>
               </ul>
@@ -78,55 +70,43 @@ export default function JSX() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>JSX</h3>
-          <article id="jsx">
-            <h6>What is JSX?</h6>
-            <div>
-              <p>
-                JSX stands for JavaScript XML. It is a React extension which
-                allows writing JavaScript code that looks similar to HTML. It
-                makes HTML file easy to understand. The JSX file makes the React
-                application robust and boosts its performance. JSX provides you
-                to write XML-like syntax in the same file where you write
-                JavaScript code, and then preprocessor (i.e., transpilers like
-                Babel) transform these expressions into actual JavaScript code.
-                Just like XML/HTML, JSX tags have a tag name, attributes, and
-                children.
-              </p>
-              <strong>Example</strong>
-              <img src="/img/react/jsx-script-1.PNG" alt="jsx script" />
-              <p>
-                After compilation, the JSX expression becomes a normal
-                JavaScript function.
-              </p>
-              <img src="/img/react/jsx-script-2.PNG" alt="jsx script" />
-            </div>
-          </article>
-          <article id="browsers">
-            <h6>Why can't browsers read JSX?</h6>
+          <h3>Virtual DOM.</h3>
+          <article id="virtual-dom">
+            <h6>What do you understand by Virtual DOM?</h6>
             <p>
-              Browsers cannot read JSX directly because they can only understand
-              JavaScript objects, and JSX is not a regular JavaScript object.
-              Thus, we need to transform the JSX file into a JavaScript object
-              using transpilers like Babel and then pass it to the browser.
+              A virtual DOM is a lightweight JavaScript object which originally
+              is just the copy of the real DOM. It is a node tree that lists the
+              elements, their attributes and content as Objects and their
+              properties. React’s render function creates a node tree out of the
+              React components. It then updates this tree in response to the
+              mutations in the data model which is caused by various actions
+              done by the user or by the system.
             </p>
           </article>
-          <article id="usability">
-            <h6>Why we use JSX?</h6>
+          <article id="explain">
+            <h6>Explain the working of Virtual DOM.</h6>
             <ul>
               <li>
-                It is faster than regular JavaScript because it performs
-                optimization while translating the code to JavaScript.
+                <p>
+                  Whenever any data changes in the React App, the entire UI is
+                  re-rendered in Virtual DOM representation.
+                </p>
+                <img src="/img/react/1dom-528x193.png" alt="Virtual DOM" />
               </li>
               <li>
-                Instead of separating technologies by putting markup and logic
-                in separate files, React uses components that contain both.
+                <p>
+                  Then the difference between the previous DOM representation
+                  and the new one is calculated.
+                </p>
+                <img src="/img/react/2dom-528x221.png" alt="Virtual DOM" />
               </li>
               <li>
-                It is type-safe, and most of the errors can be found at
-                compilation time.
+                <p>
+                  Once the calculations are done, the real DOM will be updated
+                  with only the things that have actually changed.
+                </p>
+                <img src="/img/react/3dom-209x180.png" alt="Virtual DOM" />
               </li>
-              <li>It makes easier to create templates.</li>
             </ul>
           </article>
         </section>
