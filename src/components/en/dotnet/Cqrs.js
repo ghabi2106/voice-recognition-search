@@ -137,7 +137,7 @@ export default function Cqrs() {
             <h6>Request</h6>
             <div>
               <p>Queries describe the behavior of your commands and queries.</p>
-              <img src="/img/cqrs-request-script.PNG" alt="Request" />
+              <img src="/img/dotnet/cqrs-request-script.PNG" alt="Request" />
             </div>
           </article>
           <article className="" id="handler">
@@ -147,7 +147,7 @@ export default function Cqrs() {
                 When a request is created, we need a manager to resolve this
                 request request.
               </p>
-              <img src="/img/cqrs-handler-script.PNG" alt="Handler" />
+              <img src="/img/dotnet/cqrs-handler-script.PNG" alt="Handler" />
             </div>
           </article>
         </section>

@@ -87,16 +87,16 @@ export default function Covariance() {
                 face à l'hiérarchie des classes. Elles peuvent être appliquées
                 sur le délégué, le générique, le tableau, l'interface, etc.
               </p>
-              <img src="/img/class-hierarchy.PNG" alt="Class Hierarchy" />
+              <img src="/img/dotnet/class-hierarchy.PNG" alt="Class Hierarchy" />
               <img
-                src="/img/class-initialization.PNG"
+                src="/img/dotnet/class-initialization.PNG"
                 alt="Class initialization"
               />
               <p>
                 Une classe de base peut contenir une classe dérivée mais une
                 classe dérivée ne peut pas contenir une classe de base.
               </p>
-              <img src="/img/co-contra-variance.PNG" alt="co-contra-variance" />
+              <img src="/img/dotnet/co-contra-variance.PNG" alt="co-contra-variance" />
             </div>
           </article>
           <article id="covariance">
@@ -106,7 +106,7 @@ export default function Covariance() {
                 Covariance permet d'utiliser un type plus dérivé que celui
                 spécifié à l'origine.
               </p>
-              <img src="/img/covariance-script.PNG" alt="covariance script" />
+              <img src="/img/dotnet/covariance-script.PNG" alt="covariance script" />
             </div>
           </article>
           <article id="contravariance">
@@ -117,7 +117,7 @@ export default function Covariance() {
                 spécifié à l'origine.
               </p>
               <img
-                src="/img/contravariance-script.PNG"
+                src="/img/dotnet/contravariance-script.PNG"
                 alt="contravariance script"
               />
             </div>

@@ -86,7 +86,7 @@ export default function Nugetpackages() {
                 OData est une technologie de protocole ouvert et open source qui
                 offre la possibilité de développer des API Queryable.
               </p>
-              <img src="/img/odata.PNG" alt="OData" />
+              <img src="/img/dotnet/odata.PNG" alt="OData" />
             </div>
           </article>
           <article className="" id="fluent-validation">

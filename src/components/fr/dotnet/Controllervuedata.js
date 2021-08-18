@@ -95,7 +95,7 @@ export default function Controllervuedata() {
                 (qui ne sont pas incluses dans le modèle) du contrôleur vers la
                 vue.
               </p>
-              <img src="/img/viewbag.png" alt="viewbag" />
+              <img src="/img/dotnet/viewbag.png" alt="viewbag" />
             </div>
           </article>
           <article id="viewdata">
@@ -106,7 +106,7 @@ export default function Controllervuedata() {
                 Controller vers View. ViewData est de type Dictionnaire , alors
                 que ViewBag est de type dynamique.
               </p>
-              <img src="/img/viewdata.png" alt="viewdata" />
+              <img src="/img/dotnet/viewdata.png" alt="viewdata" />
             </div>
           </article>
           <article id="tempdata">

@@ -143,7 +143,7 @@ export default function Cqrs() {
                 Les requêtes décrivent le comportement de vos commandes et
                 requêtes.
               </p>
-              <img src="/img/cqrs-request-script.PNG" alt="Request" />
+              <img src="/img/dotnet/cqrs-request-script.PNG" alt="Request" />
             </div>
           </article>
           <article className="" id="handler">
@@ -153,7 +153,7 @@ export default function Cqrs() {
                 Lorsqu'une rquète est créée, On abesoin besoin d'un gestionnaire
                 pour résoudre cette demande demande.
               </p>
-              <img src="/img/cqrs-handler-script.PNG" alt="Handler" />
+              <img src="/img/dotnet/cqrs-handler-script.PNG" alt="Handler" />
             </div>
           </article>
         </section>

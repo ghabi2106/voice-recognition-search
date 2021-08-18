@@ -128,8 +128,8 @@ export default function Typesystem() {
                 quatrième étage d'héritage, on put le rendre <code>sealed</code>
                 .
               </p>
-              <img src="/img/record1.png" alt="record" />
-              <img src="/img/record2.png" alt="record" />
+              <img src="/img/dotnet/record1.png" alt="record" />
+              <img src="/img/dotnet/record2.png" alt="record" />
             </div>
           </article>
         </section>

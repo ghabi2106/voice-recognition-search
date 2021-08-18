@@ -102,7 +102,7 @@ export default function Datatype() {
                 Un type anonyme est un type (classe) sans nom qui ne peut
                 contenir que des propriétés publiques en lecture seule.
               </p>
-              <img src="/img/type-anonymous.PNG" alt="type anonymous" />
+              <img src="/img/dotnet/type-anonymous.PNG" alt="type anonymous" />
             </div>
           </article>
           <article id="dynamic">
@@ -123,7 +123,7 @@ export default function Datatype() {
                   en d'autres types.
                 </li>
               </ul>
-              <img src="/img/type-dynamic.PNG" alt="type dynamic" />
+              <img src="/img/dotnet/type-dynamic.PNG" alt="type dynamic" />
             </div>
           </article>
           <article id="nullable">
@@ -134,7 +134,7 @@ export default function Datatype() {
                 une valeur nulle. Par exemple, int i = null vous donnera une
                 erreur de compilation.
               </p>
-              <img src="/img/type-nullable.PNG" alt="type nullable" />
+              <img src="/img/dotnet/type-nullable.PNG" alt="type nullable" />
             </div>
           </article>
           <article id="discard">
@@ -169,13 +169,13 @@ export default function Datatype() {
                 facilement différencier les méthodes de classe et les méthodes
                 d'extension.
               </p>
-              <img src="/img/extension-method.png" alt="extension method" />
+              <img src="/img/dotnet/extension-method.png" alt="extension method" />
               <p>
                 Une méthode d'extension est en fait un type spécial de méthode
                 statique définie dans une classe statique.
               </p>
               <img
-                src="/img/extension-method-definition.PNG"
+                src="/img/dotnet/extension-method-definition.PNG"
                 alt="extension method definition"
               />
               <p>

@@ -103,7 +103,7 @@ export default function Collections() {
                 collection générique qui stocke les paires clé-valeur.
               </p>
               <img
-                src="/img/collections-dictionary.PNG"
+                src="/img/dotnet/collections-dictionary.PNG"
                 alt="collections dictionary"
               />
             </div>
@@ -115,7 +115,7 @@ export default function Collections() {
                 <code>Stack</code> est un type spécial de collection qui stocke
                 des éléments dans le style LIFO (Last In First Out).
               </p>
-              <img src="/img/collections-stack.PNG" alt="collections stack" />
+              <img src="/img/dotnet/collections-stack.PNG" alt="collections stack" />
             </div>
           </article>
           <article id="queue">

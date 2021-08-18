@@ -127,11 +127,11 @@ export default function Clean() {
               <div className="d-flex">
                 <img
                   className="img-dimension"
-                  src="/img/clean-architecture-layers.png"
+                  src="/img/dotnet/clean-architecture-layers.png"
                   alt="Clean architecture layers"
                 />
                 <img
-                  src="/img/clean-architecture-repos.PNG"
+                  src="/img/dotnet/clean-architecture-repos.PNG"
                   alt="Clean architecture repos"
                 />
               </div>

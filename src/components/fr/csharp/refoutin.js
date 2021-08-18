@@ -192,7 +192,7 @@ export default function Refoutin() {
                 modifiée. Lors de l'utilisation avec des types de référence,
                 cela vous empêche uniquement d'attribuer une nouvelle référence.
               </p>
-              <img src="/img/modifier-in.PNG" alt="modifier in" />
+              <img src="/img/dotnet/modifier-in.PNG" alt="modifier in" />
             </div>
           </article>
           <article id="limit">

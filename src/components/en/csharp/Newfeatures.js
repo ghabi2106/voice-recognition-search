@@ -94,7 +94,7 @@ export default function Newfeatures() {
                 Instead of writing a considerable amount of boilerplate code.
               </p>
               <img
-                src="/img/top-level-statements1.png"
+                src="/img/dotnet/top-level-statements1.png"
                 alt="Top-level statements"
               />
               <p>
@@ -102,7 +102,7 @@ export default function Newfeatures() {
                 and start coding the logic right away.
               </p>
               <img
-                src="/img/top-level-statements2.png"
+                src="/img/dotnet/top-level-statements2.png"
                 alt="Top-level statements"
               />
             </div>
@@ -114,12 +114,12 @@ export default function Newfeatures() {
                 Pour rendre un objet immutable, on peut accomplir ça en
                 utilisant constructeur.
               </p>
-              <img src="/img/set-only-setters1.png" alt="Init only setters" />
+              <img src="/img/dotnet/set-only-setters1.png" alt="Init only setters" />
               <p>
                 To make immutable this, by using a constructor we can accomplish
                 that.
               </p>
-              <img src="/img/set-only-setters2.png" alt="Init only setters" />
+              <img src="/img/dotnet/set-only-setters2.png" alt="Init only setters" />
             </div>
           </article>
           <article className="" id="records">
@@ -133,8 +133,8 @@ export default function Newfeatures() {
                 Records support inheritance. You may also seal the records to
                 avoid further derivation.
               </p>
-              <img src="/img/record1.png" alt="record" />
-              <img src="/img/record2.png" alt="record" />
+              <img src="/img/dotnet/record1.png" alt="record" />
+              <img src="/img/dotnet/record2.png" alt="record" />
             </div>
           </article>
           <article className="" id="switch">
@@ -145,7 +145,7 @@ export default function Newfeatures() {
                 We can use logical operators like ‘and’, ‘or’ and ‘not’, they
                 can even be combined with relational patterns.
               </p>
-              <img src="/img/switch.png" alt="Improved pattern matching" />
+              <img src="/img/dotnet/switch.png" alt="Improved pattern matching" />
             </div>
           </article>
           <article className="" id="new">
@@ -155,8 +155,8 @@ export default function Newfeatures() {
                 We can omit the type in the ‘new expression’ when the created
                 object is already known.
               </p>
-              <img src="/img/new1.png" alt="Target-typed ‘new’ expressions" />
-              <img src="/img/new2.png" alt="Target-typed ‘new’ expressions" />
+              <img src="/img/dotnet/new1.png" alt="Target-typed ‘new’ expressions" />
+              <img src="/img/dotnet/new2.png" alt="Target-typed ‘new’ expressions" />
             </div>
           </article>
         </section>

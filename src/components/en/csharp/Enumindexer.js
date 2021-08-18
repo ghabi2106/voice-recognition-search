@@ -86,7 +86,7 @@ export default function Enumindexer() {
                 <code>Enum</code> is a special "class" that represents a group
                 of constants (unchangeable/read-only variables).
               </p>
-              <img src="/img/type-enum.PNG" alt="type enum" />
+              <img src="/img/dotnet/type-enum.PNG" alt="type enum" />
             </div>
           </article>
           <article id="indexer">
@@ -98,7 +98,7 @@ export default function Enumindexer() {
                 a virtual array. You can then access the instance of this class
                 using the array access operator ([ ]).
               </p>
-              <img src="/img/indexer.PNG" alt="indexer" />
+              <img src="/img/dotnet/indexer.PNG" alt="indexer" />
             </div>
           </article>
           <article id="generic">
@@ -110,7 +110,7 @@ export default function Enumindexer() {
                 performance advantage because it removes the possibilities of
                 boxing and unboxing.
               </p>
-              <img src="/img/generics.png" alt="generics" />
+              <img src="/img/dotnet/generics.png" alt="generics" />
             </div>
           </article>
         </section>

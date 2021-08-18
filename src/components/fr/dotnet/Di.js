@@ -121,9 +121,9 @@ export default function Di() {
                 forcer d'autres classes à changer, de sorte que l'ensemble de
                 l'application peut devenir maintenable et extensible.
               </p>
-              <img src="/img/ioc-steps.png" alt="ioc steps" />
+              <img src="/img/dotnet/ioc-steps.png" alt="ioc steps" />
               <img
-                src="/img/principles-and-patterns.png"
+                src="/img/dotnet/principles-and-patterns.png"
                 alt="principles and patterns"
               />
             </div>

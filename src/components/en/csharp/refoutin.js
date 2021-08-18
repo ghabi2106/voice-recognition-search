@@ -191,7 +191,7 @@ export default function Refoutin() {
                 reference types, it only prevents you from assigning a new
                 reference.
               </p>
-              <img src="/img/modifier-in.PNG" alt="modifier in" />
+              <img src="/img/dotnet/modifier-in.PNG" alt="modifier in" />
             </div>
           </article>
           <article id="limit">

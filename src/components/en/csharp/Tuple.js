@@ -81,8 +81,8 @@ export default function Tuple() {
                 object with properties, but you don't want to create a separate
                 type for it.
               </p>
-              <img src="/img/tuple-syntax.PNG" alt="tuple syntax" />
-              <img src="/img/tuple-init.PNG" alt="tuple init" />
+              <img src="/img/dotnet/tuple-syntax.PNG" alt="tuple syntax" />
+              <img src="/img/dotnet/tuple-init.PNG" alt="tuple init" />
               <ul>
                 <li>
                   Tuples can be used: The <code>Tuple</code> is a reference type
@@ -109,13 +109,13 @@ export default function Tuple() {
           <article id="value-tuple">
             <h6>ValueTuple</h6>
             <div>
-              <img src="/img/valuetuple-syntax.PNG" alt="valuetuple syntax" />
+              <img src="/img/dotnet/valuetuple-syntax.PNG" alt="valuetuple syntax" />
               <p>
                 <code>ValueTuple</code> is a value type representation of the
                 Tuple. It also allows "discards" in deconstruction for the
                 members you are not going to use.
               </p>
-              <img src="/img/valuetuple-discard.PNG" alt="valuetuple discard" />
+              <img src="/img/dotnet/valuetuple-discard.PNG" alt="valuetuple discard" />
             </div>
           </article>
         </section>

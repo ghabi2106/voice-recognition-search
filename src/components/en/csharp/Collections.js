@@ -103,7 +103,7 @@ export default function Collections() {
                 collection that stores key-value pairs in no particular order.
               </p>
               <img
-                src="/img/collections-dictionary.PNG"
+                src="/img/dotnet/collections-dictionary.PNG"
                 alt="collections dictionary"
               />
             </div>
@@ -115,7 +115,7 @@ export default function Collections() {
                 <code>Stack</code> is a special type of collection that stores
                 elements in LIFO style (Last In First Out).
               </p>
-              <img src="/img/collections-stack.PNG" alt="collections stack" />
+              <img src="/img/dotnet/collections-stack.PNG" alt="collections stack" />
             </div>
           </article>
           <article id="queue">

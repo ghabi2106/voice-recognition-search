@@ -270,7 +270,7 @@ export default function Dotnet() {
                 the resource, whereas the PATCH method supplies a set of
                 instructions to modify the resource.
               </p>
-              <img src="/img/patch-put.PNG" alt="Patch Put image" />
+              <img src="/img/dotnet/patch-put.PNG" alt="Patch Put image" />
             </div>
           </article>
           <article className="" id="options">

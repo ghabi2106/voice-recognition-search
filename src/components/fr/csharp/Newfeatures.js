@@ -92,7 +92,7 @@ export default function Newfeatures() {
             <div>
               <p>à la place d'écrire</p>
               <img
-                src="/img/top-level-statements1.png"
+                src="/img/dotnet/top-level-statements1.png"
                 alt="Top-level statements"
               />
               <p>
@@ -100,7 +100,7 @@ export default function Newfeatures() {
                 la logique immédiatement.
               </p>
               <img
-                src="/img/top-level-statements2.png"
+                src="/img/dotnet/top-level-statements2.png"
                 alt="Top-level statements"
               />
             </div>
@@ -112,12 +112,12 @@ export default function Newfeatures() {
                 Pour rendre un objet immutable, on peut accomplir ça en
                 utilisant constructeur.
               </p>
-              <img src="/img/set-only-setters1.png" alt="Init only setters" />
+              <img src="/img/dotnet/set-only-setters1.png" alt="Init only setters" />
               <p>
                 On peut accomplir ça en utilisant c# 9 syntaxe en utilisant
                 init.
               </p>
-              <img src="/img/set-only-setters2.png" alt="Init only setters" />
+              <img src="/img/dotnet/set-only-setters2.png" alt="Init only setters" />
             </div>
           </article>
           <article className="" id="records">
@@ -132,8 +132,8 @@ export default function Newfeatures() {
                 quatrième étage d'héritage, on put le rendre <code>sealed</code>
                 .
               </p>
-              <img src="/img/record1.png" alt="record" />
-              <img src="/img/record2.png" alt="record" />
+              <img src="/img/dotnet/record1.png" alt="record" />
+              <img src="/img/dotnet/record2.png" alt="record" />
             </div>
           </article>
           <article className="" id="switch">
@@ -144,7 +144,7 @@ export default function Newfeatures() {
                 On peut utiliser des opérateurs logiques comme 'and' , 'or' et 'not' ,
                 ils peuvent même être combinés avec des modèles relationnels.
               </p>
-              <img src="/img/switch.png" alt="Improved pattern matching" />
+              <img src="/img/dotnet/switch.png" alt="Improved pattern matching" />
             </div>
           </article>
           <article className="" id="new">
@@ -153,8 +153,8 @@ export default function Newfeatures() {
               <p>
               On peut omettre le type 'new' lorsque l'objet créé est déjà connu.
               </p>
-              <img src="/img/new1.png" alt="Target-typed ‘new’ expressions" />
-              <img src="/img/new2.png" alt="Target-typed ‘new’ expressions" />
+              <img src="/img/dotnet/new1.png" alt="Target-typed ‘new’ expressions" />
+              <img src="/img/dotnet/new2.png" alt="Target-typed ‘new’ expressions" />
             </div>
           </article>
         </section>

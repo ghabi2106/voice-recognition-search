@@ -104,8 +104,8 @@ export default function Delegate() {
                 contient la référence à une méthode. La référence peut être
                 modifiée au moment de l'exécution.
               </p>
-              <img src="/img/delegate-init.PNG" alt="delegate init" />
-              <img src="/img/delegate-invoke.PNG" alt="delegate invoke" />
+              <img src="/img/dotnet/delegate-init.PNG" alt="delegate init" />
+              <img src="/img/dotnet/delegate-invoke.PNG" alt="delegate invoke" />
             </div>
           </article>
           <article id="func">
@@ -125,9 +125,9 @@ export default function Delegate() {
                   Le délégué Func n'autorise pas les paramètres ref et out.
                 </li>
               </ul>
-              <img src="/img/delegate-func.png" alt="delegate func" />
+              <img src="/img/dotnet/delegate-func.png" alt="delegate func" />
               <img
-                src="/img/delegate-func-program.PNG"
+                src="/img/dotnet/delegate-func-program.PNG"
                 alt="delegate func program"
               />
             </div>
@@ -142,7 +142,7 @@ export default function Delegate() {
                 a un type de retour void.
               </p>
               <img
-                src="/img/delegate-action-init.PNG"
+                src="/img/dotnet/delegate-action-init.PNG"
                 alt="delegate action init"
               />
             </div>
@@ -154,7 +154,7 @@ export default function Delegate() {
                 Le délégué de prédicat prend un paramètre d'entrée et un type de
                 retour booléen.
               </p>
-              <img src="/img/delegate-predicate.PNG" alt="delegate predicate" />
+              <img src="/img/dotnet/delegate-predicate.PNG" alt="delegate predicate" />
             </div>
           </article>
           <article id="events">

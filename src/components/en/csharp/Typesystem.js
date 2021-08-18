@@ -120,8 +120,8 @@ export default function Typesystem() {
                 inside a constructor.
               </p>
               <p>Support for inheritance hierarchies.</p>
-              <img src="/img/record1.png" alt="record" />
-              <img src="/img/record2.png" alt="record" />
+              <img src="/img/dotnet/record1.png" alt="record" />
+              <img src="/img/dotnet/record2.png" alt="record" />
             </div>
           </article>
         </section>

@@ -87,7 +87,7 @@ export default function Enumindexer() {
                 groupe de constantes(variables non modifiables/en lecture
                 seule).
               </p>
-              <img src="/img/type-enum.PNG" alt="type enum" />
+              <img src="/img/dotnet/type-enum.PNG" alt="type enum" />
             </div>
           </article>
           <article id="indexer">
@@ -100,7 +100,7 @@ export default function Enumindexer() {
                 l'instance de cette classe à l'aide de l'opérateur d'accès au
                 tableau ([ ]).
               </p>
-              <img src="/img/indexer.PNG" alt="indexer" />
+              <img src="/img/dotnet/indexer.PNG" alt="indexer" />
             </div>
           </article>
           <article id="generic">
@@ -110,7 +110,7 @@ export default function Enumindexer() {
                 Les génériques augmentent la réutilisabilité du code. On n'a pas
                 besoin d'écrire du code pour gérer différents types de données.
               </p>
-              <img src="/img/generics.png" alt="generics" />
+              <img src="/img/dotnet/generics.png" alt="generics" />
             </div>
           </article>
         </section>

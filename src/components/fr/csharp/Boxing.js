@@ -78,7 +78,7 @@ export default function Boxing() {
                 Le boxing est le processus de conversion d'un type valeur en
                 type objet.
               </p>
-              <img src="/img/boxing.PNG" alt="boxing" />
+              <img src="/img/dotnet/boxing.PNG" alt="boxing" />
             </div>
           </article>
           <article id="unboxing">
@@ -88,7 +88,7 @@ export default function Boxing() {
                 C'est le processus de conversion d'un type référence en type
                 valeur.
               </p>
-              <img src="/img/unboxing.PNG" alt="unboxing" />
+              <img src="/img/dotnet/unboxing.PNG" alt="unboxing" />
             </div>
           </article>
         </section>

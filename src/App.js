@@ -45,7 +45,7 @@ import TypesystemPage from "./components/fr/csharp/Typesystem";
 //#endregion
 
 //#region react
-
+import ReactPage from "./components/en/react/Jsx";
 //#endregion
 
 //#region angular
@@ -473,6 +473,7 @@ function App() {
           //#region react
         }
 
+<Route path="/react" component={ReactPage} />
         {
           //#endregion
         }

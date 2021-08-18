@@ -78,7 +78,7 @@ export default function String2int() {
                 Boxing is the process of converting a value type to the object
                 type.
               </p>
-              <img src="/img/boxing.PNG" alt="boxing" />
+              <img src="/img/dotnet/boxing.PNG" alt="boxing" />
             </div>
           </article>
           <article id="unboxing">
@@ -87,7 +87,7 @@ export default function String2int() {
               <p>
                 It is the process of converting a reference type to value type.
               </p>
-              <img src="/img/unboxing.PNG" alt="unboxing" />
+              <img src="/img/dotnet/unboxing.PNG" alt="unboxing" />
             </div>
           </article>
         </section>

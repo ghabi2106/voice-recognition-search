@@ -120,9 +120,9 @@ export default function Di() {
                 coupled, though, so that a change in one class doesn't force you
                 to rewrite every class. Here's how to keep them loosely coupled.
               </p>
-              <img src="/img/ioc-steps.png" alt="ioc steps" />
+              <img src="/img/dotnet/ioc-steps.png" alt="ioc steps" />
               <img
-                src="/img/principles-and-patterns.png"
+                src="/img/dotnet/principles-and-patterns.png"
                 alt="principles and patterns"
               />
             </div>
