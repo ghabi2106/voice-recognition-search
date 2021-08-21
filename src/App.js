@@ -27,11 +27,7 @@ export const LangContext = React.createContext();
 export const CourseContext = React.createContext();
 
 function App() {
-  const initialLang = "FR";
-  const [lang, setLang] = useState(initialLang);
-  const [selectedCourse, setSelectedCourse] = useState("dotnet");
-
-  const pages = [
+  const pagesdotnet = [
     "home",
     "angular",
     // difference  between .net and .net core
@@ -50,6 +46,49 @@ function App() {
     // MVC
     "mvc",
   ];
+  const pagesreact = [
+    "home",
+    "angular",
+    // difference  between .net and .net core
+    ".net",
+    "dotnet",
+    "difference between dotnet standard and dotnet core",
+    "difference between .net standard and .net core",
+    ".net .net core",
+    // CLR
+    "clr",
+    "common language runtime",
+    // Entity Framework
+    "fntity framework",
+    // Controller
+    "controller",
+    // MVC
+    "mvc",
+  ];
+  const pagesangular = [
+    "home",
+    "angular",
+    // difference  between .net and .net core
+    ".net",
+    "dotnet",
+    "difference between dotnet standard and dotnet core",
+    "difference between .net standard and .net core",
+    ".net .net core",
+    // CLR
+    "clr",
+    "common language runtime",
+    // Entity Framework
+    "fntity framework",
+    // Controller
+    "controller",
+    // MVC
+    "mvc",
+  ];
+  
+  const initialLang = "FR";
+  const [lang, setLang] = useState(initialLang);
+  const [selectedCourse, setSelectedCourse] = useState("dotnet");
+  const [pages, setPages] = useState(pagesdotnet);
 
   const commands = [
     {
@@ -117,7 +156,22 @@ function App() {
               <select
                 className="form-select select-lang me-2"
                 value={selectedCourse}
-                onChange={(event) => setSelectedCourse(event.target.value)}
+                onChange={(event) => {
+                  setSelectedCourse(event.target.value);
+                  switch (event.target.value) {
+                    case "dotnet":
+                      setPages(pagesdotnet);
+                      break;
+                    case "react":
+                      setPages(pagesreact);
+                      break;
+                    case "angular":
+                      setPages(pagesangular);
+                      break;
+                    default:
+                      setPages(pagesdotnet);
+                  }
+                }}
               >
                 <option value="dotnet">.Net</option>
                 <option value="angular">Angular</option>
