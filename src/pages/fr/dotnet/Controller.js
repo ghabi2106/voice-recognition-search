@@ -111,6 +111,7 @@ export default function Controller() {
                 Toutes les méthodes publiques de la classe Controller sont
                 appelées méthodes Action.
               </p>
+              <img src="/img/dotnet/action-method.png" alt="action method"/>
               <ul>
                 <li>
                   La méthode d'action doit être publique. Il ne peut pas être

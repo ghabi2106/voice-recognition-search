@@ -95,7 +95,7 @@ export default function Controller() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Action selectors</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <p>
               The controller handles the user request. Typically, the user uses
@@ -104,35 +104,34 @@ export default function Controller() {
               appropriate view as a response.
             </p>
           </article>
-          <article className="" id="action-method">
+          <article id="action-method">
             <h6>Action method</h6>
             <div>
               <p>
-                Toutes les méthodes publiques de la classe Controller sont
-                appelées méthodes Action.
+                All the public methods of the Controller class are called Action
+                methods.
               </p>
+              <img src="/img/dotnet/action-method.png" alt="action method" />
               <ul>
                 <li>
-                  La méthode d'action doit être publique. Il ne peut pas être
-                  privé ou protégé.
+                  Action method must be public. It cannot be private or
+                  protected.
                 </li>
-                <li>La méthode d'action ne peut pas être surchargée.</li>
-                <li>
-                  La méthode d'action ne peut pas être une méthode statique.
-                </li>
+                <li>Action method cannot be overloaded.</li>
+                <li>Action method cannot be a static method.</li>
               </ul>
             </div>
           </article>
-          <article className="" id="action-result">
+          <article id="action-result">
             <h6>Action Result</h6>
             <div>
               <p>
-                ActionResult est une classe de base de tous les types de
-                résultats qui renvoient de la ActionMethod.
+                ActionResult is a base class of all the result type which
+                returns from Action method.
               </p>
               <p>
-                ActionResult représentent différents types de réponses, telles
-                que HTML, fichier, chaîne, JSON, javascript, etc.
+                ActionResult represent different types of responses, such as
+                HTML, file, string, JSON, javascript, etc.
               </p>
               <table class="table table-bordered">
                 <thead>
@@ -144,11 +143,11 @@ export default function Controller() {
                 <tbody>
                   <tr>
                     <td>ViewResult</td>
-                    <td>Représente le HTML et le balisage.</td>
+                    <td>Represents HTML and markup.</td>
                   </tr>
                   <tr>
                     <td>EmptyResult</td>
-                    <td>Représente Aucune réponse.</td>
+                    <td>Represents No response.</td>
                   </tr>
                   <tr>
                     <td>ContentResult</td>
@@ -156,59 +155,58 @@ export default function Controller() {
                   </tr>
                   <tr>
                     <td>FileContentResult/ FilePathResult/ FileStreamResult</td>
-                    <td>Représente le contenu d'un fichier.</td>
+                    <td>Represents the content of a file.</td>
                   </tr>
                   <tr>
                     <td>JavaScriptResult</td>
-                    <td>Représenter un script JavaScript.</td>
+                    <td>Represent a JavaScript script.</td>
                   </tr>
                   <tr>
                     <td>JsonResult</td>
-                    <td>Représente JSON qui peut être utilisé dans AJAX.</td>
+                    <td>Represent JSON that can be used in AJAX.</td>
                   </tr>
                   <tr>
                     <td>RedirectResult</td>
-                    <td>Représente une redirection vers une nouvelle URL.</td>
+                    <td>Represents a redirection to a new URL.</td>
                   </tr>
                   <tr>
                     <td>RedirectToRouteResult</td>
                     <td>
-                      Représente une autre action du même ou d'un autre
-                      contrôleur.
+                      Represent another action of same or other controller.
                     </td>
                   </tr>
                   <tr>
                     <td>PartialViewResult</td>
-                    <td>Renvoie le code HTML à partir de la vue partielle.</td>
+                    <td>Returns HTML from Partial view.</td>
                   </tr>
                   <tr>
                     <td>HttpUnauthorizedResult</td>
-                    <td>Renvoie l'état HTTP 403.</td>
+                    <td>Returns HTTP 403 status.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </article>
-          <article className="" id="action-selectors">
+          <article id="action-selectors">
             <h6>Action Selectors</h6>
             <div>
               <p>
-                Action Selector est un attribut qui peut être appliqué aux
-                méthodes d'action.
+                Action selector is the attribute that can be applied to the
+                action methods.
               </p>
               <ul>
                 <li>
-                  ActionName : L'attribut ActionName nous permet de spécifier un
-                  nom d'action différent du nom de la méthode
+                  <code>ActionName</code> : The ActionName attribute allows us
+                  to specify a different action name than the method name
                 </li>
                 <li>
-                  NonAction : l'attribut NonAction est utilisé lorsqu'on une
-                  méthode publique dans un contrôleur mais qu'on ne veut pas le
-                  traiter comme une méthode d'action.
+                  <code>NonAction</code> : Use the NonAction attribute when you
+                  want public method in a controller but do not want to treat it
+                  as an action method.
                 </li>
                 <li>
-                  ActionVerbs : Le sélecteur ActionVerbs doit gérer différents
-                  types de requêtes Http.
+                  <code>ActionVerbs</code> : The ActionVerbs selector is to
+                  handle different type of Http requests.
                 </li>
               </ul>
               <table class="table table-bordered">
@@ -221,40 +219,37 @@ export default function Controller() {
                 <tbody>
                   <tr>
                     <td>GET</td>
-                    <td> Pour récupérer les informations du serveur.</td>
+                    <td> To retrieve the information from the server.</td>
                   </tr>
                   <tr>
                     <td>POST</td>
-                    <td>Pour créer une nouvelle ressource.</td>
+                    <td>To create a new resource.</td>
                   </tr>
                   <tr>
                     <td>PUT</td>
-                    <td>Pour mettre à jour une ressource existante.</td>
+                    <td>To update an existing resource.</td>
                   </tr>
                   <tr>
                     <td>HEAD</td>
                     <td>
-                      Identique à GET sauf que le serveur ne renvoie pas le
-                      corps du message.
+                      Identical to GET except that server do not return the
+                      message body.
                     </td>
                   </tr>
                   <tr>
                     <td>OPTIONS</td>
                     <td>
-                      Il représente une demande d'informations sur les options
-                      de communication prises en charge par le serveur Web.
+                      It represents a request for information about the
+                      communication options supported by the web server.
                     </td>
                   </tr>
                   <tr>
                     <td>DELETE</td>
-                    <td>Pour supprimer une ressource existante.</td>
+                    <td>To delete an existing resource.</td>
                   </tr>
                   <tr>
                     <td>PATCH</td>
-                    <td>
-                      Pour mettre à jour complètement ou partiellement la
-                      ressource.
-                    </td>
+                    <td>To full or partial update the resource.</td>
                   </tr>
                 </tbody>
               </table>
