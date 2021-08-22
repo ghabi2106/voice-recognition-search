@@ -25,12 +25,37 @@ import { urlsangular } from "./json/urls/urlsangular";
 export const LangContext = React.createContext();
 export const CourseContext = React.createContext();
 
-function App() { 
-  const initialLang = "FR";
+function App() {
+  const initialLang = localStorage.getItem("lang") ?? "FR";
   const [lang, setLang] = useState(initialLang);
-  const [selectedCourse, setSelectedCourse] = useState("dotnet");
-  const [pages, setPages] = useState(pagesdotnet);
-  const [urls, setUrls] = useState(urlsdotnet);
+  const initialCourse = localStorage.getItem("course") ?? "dotnet";
+  const [selectedCourse, setSelectedCourse] = useState(initialCourse);
+  const initialPages = () => {
+    switch (initialCourse) {
+      case "dotnet":
+        return pagesdotnet;
+      case "react":
+        return pagesreact;
+      case "angular":
+        return pagesangular;
+      default:
+        return pagesdotnet;
+    }
+  };
+  const [pages, setPages] = useState(initialPages);
+  const initialUrls = () => {
+    switch (initialCourse) {
+      case "dotnet":
+        return urlsdotnet;
+      case "react":
+        return urlsreact;
+      case "angular":
+        return urlsangular;
+      default:
+        return urlsdotnet;
+    }
+  };
+  const [urls, setUrls] = useState(initialUrls);
 
   const commands = [
     {
@@ -59,6 +84,36 @@ function App() {
     }
   }
 
+  const handleChangeCourse = (event) => {
+    setSelectedCourse(event.target.value);
+    switch (event.target.value) {
+      case "dotnet":
+        setPages(pagesdotnet);
+        setUrls(urlsdotnet);
+        localStorage.setItem("course", "dotnet");
+        break;
+      case "react":
+        setPages(pagesreact);
+        setUrls(urlsreact);
+        localStorage.setItem("course", "react");
+        break;
+      case "angular":
+        setPages(pagesangular);
+        setUrls(urlsangular);
+        localStorage.setItem("course", "angular");
+        break;
+      default:
+        setPages(pagesdotnet);
+        setUrls(urlsdotnet);
+        localStorage.setItem("course", "dotnet");
+    }
+  };
+
+  const handleChangeLang = () => {
+    setLang((prevLang) => (prevLang === "EN" ? "FR" : "EN"));
+    localStorage.setItem("lang", lang === "EN" ? "FR" : "EN");
+  };
+
   return (
     <div className="app">
       <BrowserRouter>
@@ -77,26 +132,7 @@ function App() {
               <select
                 className="form-select select-lang me-2"
                 value={selectedCourse}
-                onChange={(event) => {
-                  setSelectedCourse(event.target.value);
-                  switch (event.target.value) {
-                    case "dotnet":
-                      setPages(pagesdotnet);
-                      setUrls(urlsdotnet);
-                      break;
-                    case "react":
-                      setPages(pagesreact);
-                      setUrls(urlsreact);
-                      break;
-                    case "angular":
-                      setPages(pagesangular);
-                      setUrls(urlsangular);
-                      break;
-                    default:
-                      setPages(pagesdotnet);
-                      setUrls(urlsdotnet);
-                  }
-                }}
+                onChange={handleChangeCourse}
               >
                 <option value="dotnet">.Net</option>
                 <option value="angular">Angular</option>
@@ -104,9 +140,7 @@ function App() {
               </select>
               <button
                 className="btn btn-outline-success"
-                onClick={() =>
-                  setLang((prevLang) => (prevLang === "EN" ? "FR" : "EN"))
-                }
+                onClick={handleChangeLang}
               >
                 {lang}
               </button>

@@ -1,4 +1,5 @@
 export const pagesreact = [
+  "home",
   // html
   "html",
   "hyper text markup language",

@@ -1,4 +1,5 @@
 export const pagesangular = [
+  "home",
   // html
   "html",
   "hyper text markup language",
