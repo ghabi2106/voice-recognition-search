@@ -165,13 +165,10 @@ export const pagesdotnet = [
   "lock",
   "yield",
   // string2int
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "",
+  "string to int",
+  "convert",
+  "parse",
+  "try parse",
   // String Builder
   "string builder",
   // Tuple

@@ -164,13 +164,10 @@ export const urlsdotnet = {
   "lock": "/statements",
   "yield": "/statements",
   // string2int
-  "": "/string2int",
-  "": "/string2int",
-  "": "/string2int",
-  "": "/string2int",
-  "": "/string2int",
-  "": "/string2int",
-  "": "/string2int",
+  "string to int": "/string2int",
+  "convert": "/string2int",
+  "parse": "/string2int",
+  "try parse": "/string2int",
   // String Builder
   "string builder": "/stringbuilder",
   // Tuple

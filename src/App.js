@@ -151,16 +151,15 @@ function App() {
           </nav>
         </header>
 
-        {/* <Switch> */}
+        <Switch>
+          <LangContext.Provider value={lang}>
+            <CourseContext.Provider value={selectedCourse}>
+              <Routing />
+            </CourseContext.Provider>
+          </LangContext.Provider>
 
-        <LangContext.Provider value={lang}>
-          <CourseContext.Provider value={selectedCourse}>
-            <Routing />
-          </CourseContext.Provider>
-        </LangContext.Provider>
-
-        {redirect}
-        {/* </Switch> */}
+          {redirect}
+        </Switch>
       </BrowserRouter>
     </div>
   );

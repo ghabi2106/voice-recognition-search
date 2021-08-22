@@ -25,17 +25,25 @@ export default function String2int() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#boxing"
+                    href="#parse"
                   >
-                    Boxing
+                    Parse()
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#unboxing"
+                    href="#convert"
                   >
-                    Unboxing
+                    Convert
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#tryparse"
+                  >
+                    TryParse()
                   </a>
                 </li>
               </ul>
@@ -70,25 +78,64 @@ export default function String2int() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Boxing and Unboxing</h3>
+          <h3>How to convert string to int in C#?</h3>
           <article id="boxing">
-            <h6>Boxing</h6>
+            <h6>Parse() method</h6>
             <div>
-              <p>
-                Le boxing est le processus de conversion d'un type valeur en
-                type objet.
-              </p>
-              <img src="/img/dotnet/boxing.PNG" alt="boxing" />
+              <ul>
+                <li>Convertit une chaîne numérique valide en valeur entière.</li>
+                <li>Prend en charge différents styles de nombres.</li>
+                <li>Prend en charge les formats personnalisés spécifiques à la culture.</li>
+              </ul>
+              <img
+                src="/img/dotnet/string2int-parse-syntax.PNG"
+                alt="string2int parse syntax"
+              />
+              <img
+                src="/img/dotnet/string2int-parse-script.PNG"
+                alt="string2int parse script"
+              />
+              <img
+                src="/img/dotnet/string2int-parse-exception.PNG"
+                alt="string2int parse exception"
+              />
             </div>
           </article>
-          <article id="unboxing">
-            <h6>Unboxing</h6>
+          <article id="convert">
+            <h6>Convert Class</h6>
             <div>
-              <p>
-                C'est le processus de conversion d'un type référence en type
-                valeur.
-              </p>
-              <img src="/img/dotnet/unboxing.PNG" alt="unboxing" />
+              <ul>
+                <li>Convertit de n'importe quel type de données en entier.</li>
+                <li>Convertit null en 0, donc ne lève pas d'exception.</li>
+              </ul>
+              <img
+                src="/img/dotnet/string2int-convert-syntax.PNG"
+                alt="string2int convert syntax"
+              />
+              <img
+                src="/img/dotnet/string2int-convert-script.PNG"
+                alt="string2int convert script"
+              />
+            </div>
+          </article>
+          <article id="tryparse">
+            <h6>TryParse Method</h6>
+            <div>
+              <ul>
+                <li>Convertit différentes chaînes numériques en nombres entiers.</li>
+                <li>Convertit la représentation sous forme de chaîne de différents styles de nombres.</li>
+                <li>Convertit les chaînes numériques spécifiques à la culture en entiers.</li>
+                <li>Ne lève jamais d'exception. Renvoie false s'il ne peut pas analyser un entier.</li>
+                <li>Doit utiliser le paramètre out.</li>
+              </ul>
+              <img
+                src="/img/dotnet/string2int-tryparse-syntax.PNG"
+                alt="string2int tryparse syntax"
+              />
+              <img
+                src="/img/dotnet/string2int-tryparse-script.PNG"
+                alt="string2int tryparse script"
+              />
             </div>
           </article>
         </section>
