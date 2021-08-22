@@ -8,15 +8,14 @@ import stringSimilarity from "string-similarity";
 import Nav from "./components/Nav";
 import Routing from "./components/Routing";
 
-//#region something import all fr pages
-import HomePage from "./pages/fr/Home";
-import QualitiesPage from "./pages/fr/Qualities";
+//#region import json
+import { pagesdotnet } from "./json/search/searchdotnet";
+import { pagesreact } from "./json/search/searchreact";
+import { pagesangular } from "./json/search/searchangular";
 
-//#region frontend
-import CssPage from "./pages/fr/frontend/Css";
-import HtmlPage from "./pages/fr/frontend/Html";
-//#endregion
-
+import { urlsdotnet } from "./json/urls/urlsdotnet";
+import { urlsreact } from "./json/urls/urlsreact";
+import { urlsangular } from "./json/urls/urlsangular";
 //#endregion
 
 //import logo from './logo.svg';
@@ -26,69 +25,12 @@ import HtmlPage from "./pages/fr/frontend/Html";
 export const LangContext = React.createContext();
 export const CourseContext = React.createContext();
 
-function App() {
-  const pagesdotnet = [
-    "home",
-    "angular",
-    // difference  between .net and .net core
-    ".net",
-    "dotnet",
-    "difference between dotnet standard and dotnet core",
-    "difference between .net standard and .net core",
-    ".net .net core",
-    // CLR
-    "clr",
-    "common language runtime",
-    // Entity Framework
-    "fntity framework",
-    // Controller
-    "controller",
-    // MVC
-    "mvc",
-  ];
-  const pagesreact = [
-    "home",
-    "angular",
-    // difference  between .net and .net core
-    ".net",
-    "dotnet",
-    "difference between dotnet standard and dotnet core",
-    "difference between .net standard and .net core",
-    ".net .net core",
-    // CLR
-    "clr",
-    "common language runtime",
-    // Entity Framework
-    "fntity framework",
-    // Controller
-    "controller",
-    // MVC
-    "mvc",
-  ];
-  const pagesangular = [
-    "home",
-    "angular",
-    // difference  between .net and .net core
-    ".net",
-    "dotnet",
-    "difference between dotnet standard and dotnet core",
-    "difference between .net standard and .net core",
-    ".net .net core",
-    // CLR
-    "clr",
-    "common language runtime",
-    // Entity Framework
-    "fntity framework",
-    // Controller
-    "controller",
-    // MVC
-    "mvc",
-  ];
-  
+function App() { 
   const initialLang = "FR";
   const [lang, setLang] = useState(initialLang);
   const [selectedCourse, setSelectedCourse] = useState("dotnet");
   const [pages, setPages] = useState(pagesdotnet);
+  const [urls, setUrls] = useState(urlsdotnet);
 
   const commands = [
     {
@@ -102,27 +44,6 @@ function App() {
 
   const { transcript } = useSpeechRecognition({ commands });
   const [redirectUrl, setRedirectUrl] = useState("");
-
-  const urls = {
-    home: "/",
-    // angular
-    angular: "/angular",
-    // difference  between .net and .net core
-    ".net": "/dotnet",
-    dotnet: "/dotnet",
-    "difference between dotnet standard and dotnet core": "/dotnet",
-    "difference between .net standard and .net core": "/dotnet",
-    ".net .net core": "/dotnet",
-    // CLR
-    clr: "/clr",
-    "common language runtime": "/clr",
-    // Entity Framework
-    "entity framework": "/entityframework",
-    // Entity Framework
-    Controller: "/controller",
-    // MVC
-    mvc: "/mvc",
-  };
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     return null;
@@ -161,15 +82,19 @@ function App() {
                   switch (event.target.value) {
                     case "dotnet":
                       setPages(pagesdotnet);
+                      setUrls(urlsdotnet);
                       break;
                     case "react":
                       setPages(pagesreact);
+                      setUrls(urlsreact);
                       break;
                     case "angular":
                       setPages(pagesangular);
+                      setUrls(urlsangular);
                       break;
                     default:
                       setPages(pagesdotnet);
+                      setUrls(urlsdotnet);
                   }
                 }}
               >

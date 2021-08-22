@@ -70,7 +70,7 @@ export default function Tuple() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Covariance et Contravariance</h3>
+          <h3>Tuple</h3>
           <article id="tuple">
             <h6>Tuple</h6>
             <div>
