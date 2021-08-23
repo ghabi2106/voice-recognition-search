@@ -112,7 +112,7 @@ export default function Dotnet() {
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>HTTP Request Methods</h3>
           <article id="introduction">
-            <h6>Introduction</h6>
+            <h6>HTTP</h6>
             <div>
               <p>
                 The Hypertext Transfer Protocol (HTTP) is designed to enable

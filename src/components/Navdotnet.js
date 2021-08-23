@@ -53,6 +53,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/https">
+              Https
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="/httpmethods">
               Http-Methods
             </Link>

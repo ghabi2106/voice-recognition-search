@@ -11,6 +11,7 @@ import DesignpatternPage from "../../pages/en/dotnet/Designpattern";
 import DiPage from "../../pages/en/dotnet/Di";
 import DotnetPage from "../../pages/en/dotnet/Dotnet";
 import EntityframeworkPage from "../../pages/en/dotnet/Entityframework";
+import HttpsPage from "../../pages/en/dotnet/Https";
 import HttpmethodsPage from "../../pages/en/dotnet/Httpmethods";
 import MiddlewarePage from "../../pages/en/dotnet/Middleware";
 import MvcPage from "../../pages/en/dotnet/Mvc";
@@ -52,6 +53,7 @@ export default function Routecsharpen() {
       <Route path="/di" component={DiPage} />
       <Route path="/dotnet" component={DotnetPage} />
       <Route path="/entityframework" component={EntityframeworkPage} />
+      <Route path="/https" component={HttpsPage} /> 
       <Route path="/httpmethods" component={HttpmethodsPage} />     
       <Route path="/middleware" component={MiddlewarePage} />
       <Route path="/mvc" component={MvcPage} />

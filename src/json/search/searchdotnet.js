@@ -45,6 +45,16 @@ export const pagesdotnet = [
   // Entity Framework
   "entity framework",
   "entity framework core",
+  // HTTPS
+  "https",
+  "http",
+  "https versus http",
+  "http versus https",
+  "ssl",
+  "tsl",
+  "hyper text transfer protocol",
+  "secure socket layer",
+  "transfert socket layer",
   // HTTP Request Methods
   "http request methods",
   "http methods",

@@ -45,6 +45,16 @@ export const urlsdotnet = {
   // Entity Framework
   "entity framework": "/entityframework",
   "entity framework core": "/entityframework",
+  // HTTPS
+  "https": "/https",
+  "http": "/https",
+  "https versus http": "/https",
+  "http versus https": "/https",
+  "ssl": "/https",
+  "tsl": "/https",
+  "hyper text transfer protocol": "/https",
+  "secure socket layer": "/https",
+  "transfert socket layer": "/https",
   // HTTP Request Methods
   "http request methods": "/httpmethods",
   "http methods": "/httpmethods",

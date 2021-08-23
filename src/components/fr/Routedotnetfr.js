@@ -11,6 +11,7 @@ import DesignpatternPage from "../../pages/fr/dotnet/Designpattern";
 import DiPage from "../../pages/fr/dotnet/Di";
 import DotnetPage from "../../pages/fr/dotnet/Dotnet";
 import EntityframeworkPage from "../../pages/fr/dotnet/Entityframework";
+import HttpsPage from "../../pages/fr/dotnet/Https";
 import HttpmethodsPage from "../../pages/fr/dotnet/Httpmethods";
 import MiddlewarePage from "../../pages/fr/dotnet/Middleware";
 import MvcPage from "../../pages/fr/dotnet/Mvc";
@@ -52,6 +53,7 @@ export default function Routedotnetfr() {
       <Route path="/di" component={DiPage} />
       <Route path="/dotnet" component={DotnetPage} />
       <Route path="/entityframework" component={EntityframeworkPage} />
+      <Route path="/https" component={HttpsPage} />
       <Route path="/httpmethods" component={HttpmethodsPage} />
       <Route path="/middleware" component={MiddlewarePage} />
       <Route path="/mvc" component={MvcPage} />
