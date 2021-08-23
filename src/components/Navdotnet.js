@@ -82,16 +82,6 @@ export default function Navdotnet() {
               Service
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/singleton">
-              Singleton
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/boxing">
-              Boxing
-            </Link>
-          </li>
       {
         //#endregion
       }
@@ -110,7 +100,17 @@ export default function Navdotnet() {
         >
           Csharp
         </a>
-        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">         
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/singleton">
+              Singleton
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/boxing">
+              Boxing
+            </Link>
+          </li>         
           <li className="nav-item">
             <Link className="dropdown-item" to="/collections">
               Collections
