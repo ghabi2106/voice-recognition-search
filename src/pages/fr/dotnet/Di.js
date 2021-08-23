@@ -111,7 +111,7 @@ export default function Di() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Différence entre .Net sandard et .Net Core</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -128,14 +128,14 @@ export default function Di() {
               />
             </div>
           </article>
-          <article className="" id="ioc">
+          <article id="ioc">
             <h6>Inversion de contrôle</h6>
             <p>
               Le principe IoC suggère d'inverser le contrôle. Cela signifie de
               déléguer le contrôle à une autre classe.
             </p>
           </article>
-          <article className="" id="dip">
+          <article id="dip">
             <h6>DIP</h6>
             <p>
               DIP est l'un des principes orientés objet SOLID. Les modules de
@@ -143,7 +143,7 @@ export default function Di() {
               deux devraient dépendre de l'abstraction.
             </p>
           </article>
-          <article className="" id="di">
+          <article id="di">
             <h6>DI</h6>
             <div>
               <p>
@@ -160,7 +160,7 @@ export default function Di() {
               </ul>
             </div>
           </article>
-          <article className="" id="ioc-container">
+          <article id="ioc-container">
             <h6>IoC Container</h6>
             <div>
               <p>
@@ -177,7 +177,7 @@ export default function Di() {
               </ul>
             </div>
           </article>
-          <article className="" id="lifetime">
+          <article id="lifetime">
             <h6>Lifetime managers</h6>
             <table class="table table-bordered">
               <thead>

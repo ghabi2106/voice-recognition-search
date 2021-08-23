@@ -95,7 +95,7 @@ export default function Cqrs() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>CQRS</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -126,7 +126,7 @@ export default function Cqrs() {
               </p>
             </div>
           </article>
-          <article className="" id="mediator">
+          <article id="mediator">
             <h6>MediatR</h6>
             <p>
               MediatR permet de composer des messages, de créer et d'écouter des
@@ -136,7 +136,7 @@ export default function Cqrs() {
               qui répartit le travail(Handler).
             </p>
           </article>
-          <article className="" id="request">
+          <article id="request">
             <h6>Request</h6>
             <div>
               <p>
@@ -146,7 +146,7 @@ export default function Cqrs() {
               <img src="/img/dotnet/cqrs-request-script.PNG" alt="Request" />
             </div>
           </article>
-          <article className="" id="handler">
+          <article id="handler">
             <h6>Handler</h6>
             <div>
               <p>

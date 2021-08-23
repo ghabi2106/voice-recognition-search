@@ -103,7 +103,7 @@ export default function Clean() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Clean Architecture</h3>
-          <article className="" id="monolithic">
+          <article id="monolithic">
             <h6>Monolithic</h6>
             <p>
               A monolithic application is one that is entirely self-contained,
@@ -111,7 +111,7 @@ export default function Clean() {
               deployed as a single unit.
             </p>
           </article>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -137,7 +137,7 @@ export default function Clean() {
               </div>
             </div>
           </article>
-          <article className="" id="application-core">
+          <article id="application-core">
             <h6>Application Core</h6>
             <ul>
               <li>Entities (business model classes that are persisted)</li>
@@ -145,7 +145,7 @@ export default function Clean() {
               <li>Services</li>
             </ul>
           </article>
-          <article className="" id="infrastructure">
+          <article id="infrastructure">
             <h6>Infrastructure</h6>
             <ul>
               <li>
@@ -158,7 +158,7 @@ export default function Clean() {
               </li>
             </ul>
           </article>
-          <article className="" id="ui">
+          <article id="ui">
             <h6>UI Layer</h6>
             <ul>
               <li>Controllers</li>

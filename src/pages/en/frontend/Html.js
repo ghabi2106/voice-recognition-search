@@ -71,7 +71,7 @@ export default function Html() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>HTML</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -89,7 +89,7 @@ export default function Html() {
               </ul>
             </div>
           </article>
-          <article className="" id="new-features">
+          <article id="new-features">
             <h6>New features</h6>
             <ul>
               <li>

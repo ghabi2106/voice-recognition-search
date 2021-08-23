@@ -79,7 +79,7 @@ export default function Css() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>CSS</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -99,7 +99,7 @@ export default function Css() {
               </ul>
             </div>
           </article>
-          <article className="" id="media-query">
+          <article id="media-query">
             <h6>Media Query</h6>
             <p>
               Il utilise la <code>@media</code> règle pour inclure un bloc de

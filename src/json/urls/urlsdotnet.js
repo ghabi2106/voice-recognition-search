@@ -64,6 +64,8 @@ export const urlsdotnet = {
   "delete method": "/httpmethods",
   "patch method": "/httpmethods",
   "options method": "/httpmethods",
+  // Middleware
+  "middleware": "/middleware",
   // MVC Architecture
   "mvc architecture": "/mvc",
   "mvc": "/mvc",

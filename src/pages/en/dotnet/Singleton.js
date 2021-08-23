@@ -87,7 +87,7 @@ export default function Singleton() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Singleton Mediator Observer Command</h3>
-          <article className="" id="singleton">
+          <article id="singleton">
             <h6>Singleton</h6>
             <p>
               Singleton is a creational design pattern that lets you ensure that
@@ -95,7 +95,7 @@ export default function Singleton() {
               point to this instance.
             </p>
           </article>
-          <article className="" id="mediator">
+          <article id="mediator">
             <h6>Mediator</h6>
             <p>
               Mediator is a behavioral design pattern that lets you reduce
@@ -104,7 +104,7 @@ export default function Singleton() {
               only via a mediator object.
             </p>
           </article>
-          <article className="" id="observer">
+          <article id="observer">
             <h6>Observer</h6>
             <p>
               Observer is a behavioral design pattern that lets you define a
@@ -112,7 +112,7 @@ export default function Singleton() {
               that happen to the object they’re observing.
             </p>
           </article>
-          <article className="" id="command">
+          <article id="command">
             <h6>Command</h6>
             <p>
               Command is a behavioral design pattern that turns a request into a

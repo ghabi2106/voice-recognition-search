@@ -87,7 +87,7 @@ export default function Singleton() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Singleton Mediator Observer Command</h3>
-          <article className="" id="singleton">
+          <article id="singleton">
             <h6>Singleton</h6>
             <p>
               Singleton est un patron de conception de création qui garantit que
@@ -95,7 +95,7 @@ export default function Singleton() {
               fournissant un point d’accès global à cette instance.
             </p>
           </article>
-          <article className="" id="mediator">
+          <article id="mediator">
             <h6>Mediator</h6>
             <p>
               Médiateur est un patron de conception comportemental qui diminue
@@ -104,7 +104,7 @@ export default function Singleton() {
               uniquement via un objet médiateur.
             </p>
           </article>
-          <article className="" id="observer">
+          <article id="observer">
             <h6>Observer</h6>
             <p>
               L’Observateur est un patron de conception comportemental qui
@@ -113,7 +113,7 @@ export default function Singleton() {
               d’événements concernant les objets qu’ils observent.
             </p>
           </article>
-          <article className="" id="command">
+          <article id="command">
             <h6>Command</h6>
             <p>
               Commande est un patron de conception comportemental qui prend une

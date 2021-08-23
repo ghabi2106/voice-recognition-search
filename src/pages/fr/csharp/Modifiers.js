@@ -71,7 +71,7 @@ export default function Struct() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Modificateurs</h3>
-          <article className="" id="access-modifiers">
+          <article id="access-modifiers">
             <h6>Modificateurs d'accès</h6>
             <div>
               <p>Modificateurs d'accès - contrôle le niveau d'accès</p>
@@ -236,7 +236,7 @@ export default function Struct() {
               </table>
             </div>
           </article>
-          <article className="" id="non-access-modifiers">
+          <article id="non-access-modifiers">
             <h6>Modificateurs de non-accès</h6>
             <div>
               <p>

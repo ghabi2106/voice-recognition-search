@@ -95,7 +95,7 @@ export default function Controller() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Sélecteurs d'actions</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <p>
               Le contrôleur gère la demande de l'utilisateur. En règle générale,
@@ -104,7 +104,7 @@ export default function Controller() {
               renvoie la vue appropriée en réponse.
             </p>
           </article>
-          <article className="" id="action-method">
+          <article id="action-method">
             <h6>Action method</h6>
             <div>
               <p>
@@ -124,7 +124,7 @@ export default function Controller() {
               </ul>
             </div>
           </article>
-          <article className="" id="action-result">
+          <article id="action-result">
             <h6>Action Result</h6>
             <div>
               <p>
@@ -190,7 +190,7 @@ export default function Controller() {
               </table>
             </div>
           </article>
-          <article className="" id="action-selectors">
+          <article id="action-selectors">
             <h6>Action Selectors</h6>
             <div>
               <p>

@@ -87,7 +87,7 @@ export default function Reactjs() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>React Programming</h3>
-          <article className="" id="react">
+          <article id="react">
             <h6>What is React?</h6>
             <p>
               React is a declarative, efficient, flexible open source front-end
@@ -97,7 +97,7 @@ export default function Reactjs() {
               interactive view layer of web and mobile apps.
             </p>
           </article>
-          <article className="" id="features">
+          <article id="features">
             <h6>What are the features of React?</h6>
             <ul>
               <li>JSX</li>
@@ -108,7 +108,7 @@ export default function Reactjs() {
               <li>Performance</li>
             </ul>
           </article>
-          <article className="" id="advantages">
+          <article id="advantages">
             <h6>What are the advantages of React?</h6>
             <ul>
               <li>It increases the application’s performance</li>
@@ -119,7 +119,7 @@ export default function Reactjs() {
               <li>Using React, writing UI test cases become extremely easyt</li>
             </ul>
           </article>
-          <article className="" id="limitations">
+          <article id="limitations">
             <h6>What are the limitations of React?</h6>
             <ul>
               <li>React is just a library, not a full-blown framework</li>
@@ -134,7 +134,7 @@ export default function Reactjs() {
               </li>
             </ul>
           </article>
-          <article className="" id="everything-component">
+          <article id="everything-component">
             <h6>
               What do you understand from "In React, everything is a component."
             </h6>

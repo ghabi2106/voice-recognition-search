@@ -71,7 +71,7 @@ export default function Statements() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Mots clés d'instruction</h3>
-          <article className="" id="partial">
+          <article id="partial">
             <h6>partial type</h6>
             <p>
               Partial type definitions allow for the definition of a class,

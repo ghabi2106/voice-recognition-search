@@ -58,6 +58,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/middleware">
+              Middleware
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="/mvc">
               MVC
             </Link>

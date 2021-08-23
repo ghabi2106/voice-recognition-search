@@ -111,7 +111,7 @@ export default function Di() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Dependency injection</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -127,14 +127,14 @@ export default function Di() {
               />
             </div>
           </article>
-          <article className="" id="ioc">
+          <article id="ioc">
             <h6>Inversion of Control</h6>
             <p>
               The IoC principle suggests to invert the control. This means to
               delegate the control to another class.
             </p>
           </article>
-          <article className="" id="dip">
+          <article id="dip">
             <h6>DIP</h6>
             <p>
               DIP is one of the SOLID object-oriented principle. High-level
@@ -142,7 +142,7 @@ export default function Di() {
               on the abstraction.
             </p>
           </article>
-          <article className="" id="di">
+          <article id="di">
             <h6>DI</h6>
             <div>
               <p>
@@ -159,7 +159,7 @@ export default function Di() {
               </ul>
             </div>
           </article>
-          <article className="" id="ioc-container">
+          <article id="ioc-container">
             <h6>IoC Container</h6>
             <div>
               <p>
@@ -175,7 +175,7 @@ export default function Di() {
               </ul>
             </div>
           </article>
-          <article className="" id="lifetime">
+          <article id="lifetime">
             <h6>Lifetime managers</h6>
             <table>
               <tbody>

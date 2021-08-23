@@ -151,7 +151,7 @@ export default function Entityframework() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Entity Framework</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -173,7 +173,7 @@ export default function Entityframework() {
               </ul>
             </div>
           </article>
-          <article className="" id="modeling">
+          <article id="modeling">
             <h6>Modélisation</h6>
             <p>
               EF (Entity Framework) crée un EDM (Entity Data Model) basé sur des
@@ -181,14 +181,14 @@ export default function Entityframework() {
               différents types de données.
             </p>
           </article>
-          <article className="" id="querying">
+          <article id="querying">
             <h6>Querying</h6>
             <p>
               EF nous permet d'utiliser des requêtes LINQ pour récupérer les
               données de la base de données.
             </p>
           </article>
-          <article className="" id="tracking">
+          <article id="tracking">
             <h6>Suivi des modifications</h6>
             <p>
               EF garde une trace des modifications apportées aux instances des
@@ -196,7 +196,7 @@ export default function Entityframework() {
               de données.
             </p>
           </article>
-          <article className="" id="saving">
+          <article id="saving">
             <h6>Enregistrement</h6>
             <p>
               EF exécute les commandes INSERT, UPDATE et DELETE dans la base de
@@ -204,7 +204,7 @@ export default function Entityframework() {
               de l'appele du méthode SaveChanges()
             </p>
           </article>
-          <article className="" id="concurrency">
+          <article id="concurrency">
             <h6>Concurrence</h6>
             <p>
               EF utilise la simultanéité optimiste par défaut pour protéger
@@ -212,11 +212,11 @@ export default function Entityframework() {
               depuis que les données ont été extraites de la base de données.
             </p>
           </article>
-          <article className="" id="transactions">
+          <article id="transactions">
             <h6>Transactions</h6>
             <p>EF effectue une gestion automatique des transactions</p>
           </article>
-          <article className="" id="caching">
+          <article id="caching">
             <h6>Mise en cache</h6>
             <p>
               EF inclut le premier niveau de mise en cache prêt à l'emploi.
@@ -224,7 +224,7 @@ export default function Entityframework() {
               lieu d'atteindre la base de données.
             </p>
           </article>
-          <article className="" id="conventions">
+          <article id="conventions">
             <h6>Conventions</h6>
             <p>
               EF suit les conventions du modèle de programmation de
@@ -232,7 +232,7 @@ export default function Entityframework() {
               configurent automatiquement le modèle EF.
             </p>
           </article>
-          <article className="" id="configurations">
+          <article id="configurations">
             <h6>Configurations</h6>
             <p>
               EF nous permet de configurer le modèle EF en utilisant Data
@@ -240,7 +240,7 @@ export default function Entityframework() {
               défaut.
             </p>
           </article>
-          <article className="" id="migrations">
+          <article id="migrations">
             <h6>Migrations</h6>
             <p>
               EF fournit un ensemble de commandes de migration qui peuvent être

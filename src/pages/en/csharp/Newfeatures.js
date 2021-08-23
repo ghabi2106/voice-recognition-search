@@ -87,7 +87,7 @@ export default function Newfeatures() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>New features in C# 9 </h3>
-          <article className="" id="top-level-statements">
+          <article id="top-level-statements">
             <h6>Top-level statements</h6>
             <div>
               <p>
@@ -107,7 +107,7 @@ export default function Newfeatures() {
               />
             </div>
           </article>
-          <article className="" id="init-only-setters">
+          <article id="init-only-setters">
             <h6>Init only setters</h6>
             <div>
               <p>
@@ -122,7 +122,7 @@ export default function Newfeatures() {
               <img src="/img/dotnet/set-only-setters2.png" alt="Init only setters" />
             </div>
           </article>
-          <article className="" id="records">
+          <article id="records">
             <h6>Record</h6>
             <div>
               <p>
@@ -137,7 +137,7 @@ export default function Newfeatures() {
               <img src="/img/dotnet/record2.png" alt="record" />
             </div>
           </article>
-          <article className="" id="switch">
+          <article id="switch">
             <h6>Improved pattern matching</h6>
             <div>
               <b>Logical patterns and Relational Pattern Matching In Switch</b>
@@ -148,7 +148,7 @@ export default function Newfeatures() {
               <img src="/img/dotnet/switch.png" alt="Improved pattern matching" />
             </div>
           </article>
-          <article className="" id="new">
+          <article id="new">
             <h6>Target-typed ‘new’ expressions</h6>
             <div>
               <p>

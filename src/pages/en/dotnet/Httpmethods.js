@@ -111,7 +111,7 @@ export default function Dotnet() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>HTTP Request Methods</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -144,7 +144,7 @@ export default function Dotnet() {
               </ul>
             </div>
           </article>
-          <article className="" id="get-post">
+          <article id="get-post">
             <h6>Get vs Post</h6>
             <div>
               <b>GET is used to request data from a specified resource.</b>
@@ -213,7 +213,7 @@ export default function Dotnet() {
               </table>
             </div>
           </article>
-          <article className="" id="put">
+          <article id="put">
             <h6>PUT Method</h6>
             <div>
               <b>
@@ -229,7 +229,7 @@ export default function Dotnet() {
               </p>
             </div>
           </article>
-          <article className="" id="head">
+          <article id="head">
             <h6>HEAD Method</h6>
             <div>
               <b>
@@ -247,11 +247,11 @@ export default function Dotnet() {
               </p>
             </div>
           </article>
-          <article className="" id="delete">
+          <article id="delete">
             <h6>DELETE Method</h6>
             <p>The DELETE method deletes the specified resource.</p>
           </article>
-          <article className="" id="patch">
+          <article id="patch">
             <h6>Patch Method</h6>
             <div>
               <p>
@@ -273,7 +273,7 @@ export default function Dotnet() {
               <img src="/img/dotnet/patch-put.PNG" alt="Patch Put image" />
             </div>
           </article>
-          <article className="" id="options">
+          <article id="options">
             <h6>OPTIONS Method</h6>
             <div>
               <p>

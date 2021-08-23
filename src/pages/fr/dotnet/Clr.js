@@ -71,7 +71,7 @@ export default function Clr() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Common Runtime Language</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -92,7 +92,7 @@ export default function Clr() {
               </p>
             </div>
           </article>
-          <article className="" id="metadata">
+          <article id="metadata">
             <h6>Metadata</h6>
             <div>
               <p>

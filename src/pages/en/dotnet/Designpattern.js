@@ -71,7 +71,7 @@ export default function Designpattern() {
         <section id="design-pattern">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Design Principle vs Design Pattern</h3>
-          <article className="" id="design-pattern">
+          <article id="design-pattern">
             <h6>Design Pattern</h6>
             <div>
               <p>
@@ -117,7 +117,7 @@ export default function Designpattern() {
               </ul>
             </div>
           </article>
-          <article className="" id="design-principle">
+          <article id="design-principle">
             <h6>Design principle</h6>
             <p>
               Design principles provide high level guidelines to design better

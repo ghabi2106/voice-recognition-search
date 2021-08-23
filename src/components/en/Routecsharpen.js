@@ -12,6 +12,7 @@ import DiPage from "../../pages/en/dotnet/Di";
 import DotnetPage from "../../pages/en/dotnet/Dotnet";
 import EntityframeworkPage from "../../pages/en/dotnet/Entityframework";
 import HttpmethodsPage from "../../pages/en/dotnet/Httpmethods";
+import MiddlewarePage from "../../pages/en/dotnet/Middleware";
 import MvcPage from "../../pages/en/dotnet/Mvc";
 import NugetpackagesPage from "../../pages/en/dotnet/Nugetpackages";
 import ServicePage from "../../pages/en/dotnet/Service";
@@ -51,7 +52,8 @@ export default function Routecsharpen() {
       <Route path="/di" component={DiPage} />
       <Route path="/dotnet" component={DotnetPage} />
       <Route path="/entityframework" component={EntityframeworkPage} />
-      <Route path="/httpmethods" component={HttpmethodsPage} />
+      <Route path="/httpmethods" component={HttpmethodsPage} />     
+      <Route path="/middleware" component={MiddlewarePage} />
       <Route path="/mvc" component={MvcPage} />
       <Route path="/nugetpackages" component={NugetpackagesPage} />
       <Route path="/service" component={ServicePage} />

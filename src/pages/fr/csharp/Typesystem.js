@@ -71,7 +71,7 @@ export default function Typesystem() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Différence entre Struct et Class en C#</h3>
-          <article className="" id="struct">
+          <article id="struct">
             <h6>Struct</h6>
             <div>
               <p>
@@ -116,7 +116,7 @@ export default function Typesystem() {
               </ul>
             </div>
           </article>
-          <article className="" id="records">
+          <article id="records">
             <h6>Record</h6>
             <div>
               <p>

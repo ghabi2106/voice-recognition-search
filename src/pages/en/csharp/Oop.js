@@ -95,7 +95,7 @@ export default function Oop() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Object-Oriented Programming</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -118,11 +118,11 @@ export default function Oop() {
               </ul>
             </div>
           </article>
-          <article className="" id="inheritance">
+          <article id="inheritance">
             <h6>Inheritance</h6>
             <p>Inheritance is useful for code reusability.</p>
           </article>
-          <article className="" id="abstraction">
+          <article id="abstraction">
             <h6>Abstraction</h6>
             <p>
               Data abstraction is the process of hiding certain details and
@@ -130,7 +130,7 @@ export default function Oop() {
               achieved with either abstract classes or interfaces.
             </p>
           </article>
-          <article className="" id="polymorphism">
+          <article id="polymorphism">
             <h6>Polymorphism</h6>
             <p>
               Polymorphism means "many forms", and it occurs when we have many
@@ -138,7 +138,7 @@ export default function Oop() {
               useful for code reusability.
             </p>
           </article>
-          <article className="" id="encapsulation">
+          <article id="encapsulation">
             <h6>Properties and Encapsulation</h6>
             <div>
               <p>

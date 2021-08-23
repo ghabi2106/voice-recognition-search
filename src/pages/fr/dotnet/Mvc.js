@@ -95,7 +95,7 @@ export default function Mvc() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Architecture MVC</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>MVC signifie Modèle, Vue et Contrôleur :</p>
@@ -106,7 +106,7 @@ export default function Mvc() {
               </ul>
             </div>
           </article>
-          <article className="" id="model">
+          <article id="model">
             <h6>Modèle</h6>
             <p>
               Le modèle représente la forme des données. Une classe en C# est
@@ -114,7 +114,7 @@ export default function Mvc() {
               données extraites de la base de données.
             </p>
           </article>
-          <article className="" id="view">
+          <article id="view">
             <h6>Vue</h6>
             <p>
               Vue dans MVC est une interface utilisateur. Affichez les données
@@ -124,7 +124,7 @@ export default function Mvc() {
               modèle et le contrôleur.
             </p>
           </article>
-          <article className="" id="controller">
+          <article id="controller">
             <h6>Contrôleur</h6>
             <p>
               Le contrôleur gère la demande de l'utilisateur. En règle générale,

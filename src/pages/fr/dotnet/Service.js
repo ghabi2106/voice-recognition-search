@@ -71,7 +71,7 @@ export default function Service() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Services</h3>
-          <article className="" id="service">
+          <article id="service">
             <h6>Service</h6>
             <p>
               Les services web fournissent une plateforme commune permettant aux
@@ -80,7 +80,7 @@ export default function Service() {
               HTTP, FTP, Ethernet ...
             </p>
           </article>
-          <article className="" id="microservices">
+          <article id="microservices">
             <h6>Microservices</h6>
             <p>
               Dans une architecture basée sur les microservices, l’application

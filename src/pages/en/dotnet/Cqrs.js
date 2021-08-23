@@ -95,7 +95,7 @@ export default function Cqrs() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>CQRS</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -124,7 +124,7 @@ export default function Cqrs() {
               </p>
             </div>
           </article>
-          <article className="" id="mediator">
+          <article id="mediator">
             <h6>MediatR</h6>
             <p>
               MediatR allows you to compose messages, create and listen for
@@ -133,14 +133,14 @@ export default function Cqrs() {
               be done and creating the handler that dispatches the work.
             </p>
           </article>
-          <article className="" id="request">
+          <article id="request">
             <h6>Request</h6>
             <div>
               <p>Queries describe the behavior of your commands and queries.</p>
               <img src="/img/dotnet/cqrs-request-script.PNG" alt="Request" />
             </div>
           </article>
-          <article className="" id="handler">
+          <article id="handler">
             <h6>Handler</h6>
             <div>
               <p>

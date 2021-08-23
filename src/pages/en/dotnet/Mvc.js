@@ -95,7 +95,7 @@ export default function Mvc() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>MVC Architecture</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>MVC stands for Model, View and Controller :</p>
@@ -106,7 +106,7 @@ export default function Mvc() {
               </ul>
             </div>
           </article>
-          <article className="" id="model">
+          <article id="model">
             <h6>Model</h6>
             <p>
               Model represents the shape of the data. A class is used to
@@ -114,7 +114,7 @@ export default function Mvc() {
               database.
             </p>
           </article>
-          <article className="" id="view">
+          <article id="view">
             <h6>View</h6>
             <p>
               View in MVC is a user interface. View display model data to the
@@ -123,7 +123,7 @@ export default function Mvc() {
               easy to communicate with the model and the controller.
             </p>
           </article>
-          <article className="" id="controller">
+          <article id="controller">
             <h6>Controller</h6>
             <p>
               The controller handles the user request. Typically, the user uses

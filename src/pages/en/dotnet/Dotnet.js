@@ -103,7 +103,7 @@ export default function Dotnet() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Difference Between .NET and .NET Core</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>Use .NET Core for your server application when:</p>
@@ -116,14 +116,14 @@ export default function Dotnet() {
               </ul>
             </div>
           </article>
-          <article className="" id="crossplatforme">
+          <article id="crossplatforme">
             <h6>Cross-platform needs</h6>
             <p>
               If your application (web/service) needs to run on multiple
               platforms (Windows, Linux, and macOS), use .NET Core.
             </p>
           </article>
-          <article className="" id="microservices">
+          <article id="microservices">
             <h6>Microservices architecture</h6>
             <p>
               All these platforms; Azure Service Fabric, Azure App Service and
@@ -131,14 +131,14 @@ export default function Dotnet() {
               microservices.
             </p>
           </article>
-          <article className="" id="containers">
+          <article id="containers">
             <h6>Containers</h6>
             <p>
               When creating and deploying a container, the size of its image is
               much smaller with .NET Core than with .NET Framework.
             </p>
           </article>
-          <article className="" id="performance">
+          <article id="performance">
             <h6>High-performance and scalable systems</h6>
             <p>
               Performance and scalability are especially relevant for
@@ -148,7 +148,7 @@ export default function Dotnet() {
               save costs in infrastructure and hosting.
             </p>
           </article>
-          <article className="" id="versions">
+          <article id="versions">
             <h6>Side by side .NET versions per application level</h6>
             <div>
               <p>
@@ -167,7 +167,7 @@ export default function Dotnet() {
               </p>
             </div>
           </article>
-          <article className="" id="dotnet">
+          <article id="dotnet">
             <h6>.NET Framework technologies not available for .NET Core</h6>
             <ul>
               <li>

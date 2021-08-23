@@ -64,6 +64,8 @@ export const pagesdotnet = [
   "delete method",
   "patch method",
   "options method",
+  // Middleware
+  "middleware",
   // MVC Architecture
   "mvc architecture",
   "mvc",

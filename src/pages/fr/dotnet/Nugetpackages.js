@@ -79,7 +79,7 @@ export default function Nugetpackages() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Nuget packages</h3>
-          <article className="" id="odata">
+          <article id="odata">
             <h6>OData</h6>
             <div>
               <p>
@@ -89,7 +89,7 @@ export default function Nugetpackages() {
               <img src="/img/dotnet/odata.PNG" alt="OData" />
             </div>
           </article>
-          <article className="" id="fluent-validation">
+          <article id="fluent-validation">
             <h6>Fluent Validation</h6>
             <p>
               Au lieu de coder en dur les règles sur le modèle à l'aide de
@@ -97,7 +97,7 @@ export default function Nugetpackages() {
               encombrantes des modèles et les écrit dans une classe distincte
             </p>
           </article>
-          <article className="" id="open-api">
+          <article id="open-api">
             <h6>Open API</h6>
             <p>
               open api

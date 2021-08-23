@@ -151,7 +151,7 @@ export default function Entityframework() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Entity Framework</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -173,7 +173,7 @@ export default function Entityframework() {
               </ul>
             </div>
           </article>
-          <article className="" id="modeling">
+          <article id="modeling">
             <h6>Modelling</h6>
             <p>
               EF (Entity Framework) creates an EDM (Entity Data Model) based on
@@ -181,21 +181,21 @@ export default function Entityframework() {
               different data types.
             </p>
           </article>
-          <article className="" id="querying">
+          <article id="querying">
             <h6>Querying</h6>
             <p>
               EF allows us to use LINQ queries to retrieve data from the
               underlying database.
             </p>
           </article>
-          <article className="" id="tracking">
+          <article id="tracking">
             <h6>Change Tracking</h6>
             <p>
               EF keeps track of changes occurred to instances of your entities
               (Property values) which need to be submitted to the database.
             </p>
           </article>
-          <article className="" id="saving">
+          <article id="saving">
             <h6>Saving</h6>
             <p>
               EF executes INSERT, UPDATE, and DELETE commands to the database
@@ -203,7 +203,7 @@ export default function Entityframework() {
               <code>SaveChanges()</code>.
             </p>
           </article>
-          <article className="" id="concurrency">
+          <article id="concurrency">
             <h6>Concurrency</h6>
             <p>
               EF uses Optimistic Concurrency by default to protect overwriting
@@ -211,11 +211,11 @@ export default function Entityframework() {
               database.
             </p>
           </article>
-          <article className="" id="transactions">
+          <article id="transactions">
             <h6>Transactions</h6>
             <p>EF performs automatic transaction management.</p>
           </article>
-          <article className="" id="caching">
+          <article id="caching">
             <h6>Caching</h6>
             <p>
               EF includes first level of caching out of the box. So, repeated
@@ -223,7 +223,7 @@ export default function Entityframework() {
               database.
             </p>
           </article>
-          <article className="" id="conventions">
+          <article id="conventions">
             <h6>Built-in Conventions:</h6>
             <p>
               EF follows conventions over the configuration programming pattern,
@@ -231,14 +231,14 @@ export default function Entityframework() {
               the EF model.
             </p>
           </article>
-          <article className="" id="configurations">
+          <article id="configurations">
             <h6>Configurations</h6>
             <p>
               EF allows us to configure the EF model by using data annotation
               attributes or Fluent API to override default conventions.
             </p>
           </article>
-          <article className="" id="migrations">
+          <article id="migrations">
             <h6>Migrations</h6>
             <p>
               EF provides a set of migration commands that can be executed on

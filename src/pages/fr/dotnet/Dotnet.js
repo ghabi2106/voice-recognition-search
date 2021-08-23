@@ -103,7 +103,7 @@ export default function Dotnet() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Différence entre .Net sandard et .Net Core</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>.Net Core est plus perfermant dans les cas suivants :</p>
@@ -116,14 +116,14 @@ export default function Dotnet() {
               </ul>
             </div>
           </article>
-          <article className="" id="crossplatforme">
+          <article id="crossplatforme">
             <h6>Besoins multiplateformes</h6>
             <p>
               Si votre application (Web/service) doit s’exécuter sur plusieurs
               plateformes (Windows, Linux et macOS), utilisez .NET Core.
             </p>
           </article>
-          <article className="" id="microservices">
+          <article id="microservices">
             <h6>Architecture de microservices</h6>
             <p>
               Toutes ces plateformes; Azure Service Fabric, Azure App Service et
@@ -131,7 +131,7 @@ export default function Dotnet() {
               l’hébergement des microservices
             </p>
           </article>
-          <article className="" id="containers">
+          <article id="containers">
             <h6>Containers</h6>
             <p>
               Lorsque vous créez et déployez un conteneur, la taille de son
@@ -140,7 +140,7 @@ export default function Dotnet() {
               serveur sur des conteneurs Docker Linux, par exemple.
             </p>
           </article>
-          <article className="" id="performance">
+          <article id="performance">
             <h6>Systèmes hautes performances et évolutifs</h6>
             <p>
               Niveau de performance et scalabilité sont particulièrement
@@ -150,7 +150,7 @@ export default function Dotnet() {
               des coûts d’infrastructure et d’hébergement.
             </p>
           </article>
-          <article className="" id="versions">
+          <article id="versions">
             <h6>Versions .NET côte à côte par niveau d’application</h6>
             <div>
               <p>
@@ -172,7 +172,7 @@ export default function Dotnet() {
               </p>
             </div>
           </article>
-          <article className="" id="dotnet">
+          <article id="dotnet">
             <h6>
               Technologies de .NET Framework non disponibles pour .NET Core
             </h6>

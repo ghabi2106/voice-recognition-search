@@ -95,7 +95,7 @@ export default function Oop() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Object-Oriented Programming</h3>
-          <article className="" id="introduction">
+          <article id="introduction">
             <h6>Introduction</h6>
             <div>
               <p>
@@ -119,11 +119,11 @@ export default function Oop() {
               </ul>
             </div>
           </article>
-          <article className="" id="inheritance">
+          <article id="inheritance">
             <h6>Héritage</h6>
             <p>L'héritage est utile pour la réutilisabilité du code.</p>
           </article>
-          <article className="" id="abstraction">
+          <article id="abstraction">
             <h6>L'abstraction</h6>
             <p>
               Pour assurer la sécurité, masquez certains détails et n'affichez
@@ -131,7 +131,7 @@ export default function Oop() {
               réalisée avec des classes abstraites ou des interfaces.
             </p>
           </article>
-          <article className="" id="polymorphism">
+          <article id="polymorphism">
             <h6>Polymorphisme</h6>
             <p>
               Le polymorphisme signifie "plusieurs formes", et il se produit
@@ -140,7 +140,7 @@ export default function Oop() {
               code.
             </p>
           </article>
-          <article className="" id="encapsulation">
+          <article id="encapsulation">
             <h6>Properties and Encapsulation</h6>
             <div>
               <p>

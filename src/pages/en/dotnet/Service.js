@@ -71,7 +71,7 @@ export default function Service() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Services</h3>
-          <article className="" id="service">
+          <article id="service">
             <h6>Service</h6>
             <p>
               Web Service provides a common platform for application developed
@@ -79,7 +79,7 @@ export default function Service() {
               protocol like HTTP, FTP, Ethernet ...
             </p>
           </article>
-          <article className="" id="microservices">
+          <article id="microservices">
             <h6>Microservices</h6>
             <p>
               In a microservice-based architecture, the application is built on
