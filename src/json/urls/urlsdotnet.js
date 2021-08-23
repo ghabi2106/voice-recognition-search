@@ -78,6 +78,12 @@ export const urlsdotnet = {
   // Services
   "service": "/service",
   "micro service": "/service",
+  "api": "/service",
+  "web api": "/service",
+  "wcf": "/service",
+  "wcf versus web api": "/service",
+  "web api versus wcf": "/service",
+  "media type": "/service",
   // Singleton Mediator Observer Command
   "singleton": "/singleton",
   "mediator": "/singleton",
