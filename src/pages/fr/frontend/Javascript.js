@@ -126,7 +126,7 @@ export default function Javascript() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>CSS</h3>
+          <h3>JavaScript</h3>
           <article id="introduction">
             <h6>Qu'est-ce que JavaScript</h6>
             <p>
