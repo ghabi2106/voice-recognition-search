@@ -11,6 +11,14 @@ export const urlsreact = {
   // sass
   "sass": "/sass",
   "mixins": "/sass",
+  // javascript
+  "javascript": "/javascript",
+  "this": "/javascript",
+  "strict mode": "/javascript",
+  "hoisting": "/javascript",
+  "closure": "/javascript",
+  "iife": "/javascript",
+  "promise": "/javascript",
   // Arrow function
   "arrow function": "/arrowfunc",
   "arrow": "/arrowfunc",

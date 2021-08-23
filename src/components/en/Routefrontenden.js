@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import HtmlPage from "../../pages/en/frontend/Html";
 import CssPage from "../../pages/en/frontend/Css";
 import SassPage from "../../pages/en/frontend/Sass";
+import JavascriptPage from "../../pages/en/frontend/Javascript";
 //#endregion
 
 export default function Routefrontenden() {
@@ -16,6 +17,7 @@ export default function Routefrontenden() {
       <Route path="/html" component={HtmlPage} />
       <Route path="/css" component={CssPage} />
       <Route path="/sass" component={SassPage} />
+      <Route path="/javascript" component={JavascriptPage} />
       {
         //#endregion
       }

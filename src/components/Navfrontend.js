@@ -34,6 +34,11 @@ export default function Navfrontend() {
               SASS
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/javascript">
+              Javascript
+            </Link>
+          </li>
         </ul>
       </li>
 

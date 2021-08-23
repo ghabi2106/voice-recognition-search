@@ -11,6 +11,14 @@ export const pagesangular = [
   // sass
   "sass",
   "mixins",
+  // javascript
+  "javascript",
+  "this",
+  "strict mode",
+  "hoisting",
+  "closure",
+  "iife",
+  "promise",
   // angular
   "angular",
   // // ggggggggggggggggggggggggggggg

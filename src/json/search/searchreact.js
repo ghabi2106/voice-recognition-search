@@ -11,6 +11,14 @@ export const pagesreact = [
   // sass
   "sass",
   "mixins",
+  // javascript
+  "javascript",
+  "this",
+  "strict mode",
+  "hoisting",
+  "closure",
+  "iife",
+  "promise",
   // Arrow function
   "arrow function",
   // Difference between controlled and uncontrolled components
