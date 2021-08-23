@@ -183,6 +183,9 @@ export const pagesdotnet = [
   "try parse",
   // String Builder
   "string builder",
+  // Thread Task
+  "task",
+  "thread",
   // Tuple
   "tuple",
   "value tuple",

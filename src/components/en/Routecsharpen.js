@@ -34,6 +34,7 @@ import RefoutinPage from "../../pages/en/csharp/refoutin";
 import StatementsPage from "../../pages/en/csharp/Statements";
 import String2intPage from "../../pages/en/csharp/String2int";
 import StringbuilderPage from "../../pages/en/csharp/Stringbuilder";
+import ThreadsPage from "../../pages/en/csharp/Threads";
 import TuplePage from "../../pages/en/csharp/Tuple";
 import TypesystemPage from "../../pages/en/csharp/Typesystem";
 //#endregion
@@ -80,6 +81,7 @@ export default function Routecsharpen() {
       <Route path="/statements" component={StatementsPage} />
       <Route path="/string2int" component={String2intPage} />
       <Route path="/stringbuilder" component={StringbuilderPage} />
+      <Route path="/threads" component={ThreadsPage} />
       <Route path="/tuple" component={TuplePage} />
       <Route path="/typesystem" component={TypesystemPage} />
       {

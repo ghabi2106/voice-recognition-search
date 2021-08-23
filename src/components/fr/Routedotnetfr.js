@@ -34,6 +34,7 @@ import RefoutinPage from "../../pages/fr/csharp/refoutin";
 import StatementsPage from "../../pages/fr/csharp/Statements";
 import String2intPage from "../../pages/fr/csharp/String2int";
 import StringbuilderPage from "../../pages/fr/csharp/Stringbuilder";
+import ThreadsPage from "../../pages/fr/csharp/Threads";
 import TuplePage from "../../pages/fr/csharp/Tuple";
 import TypesystemPage from "../../pages/fr/csharp/Typesystem";
 //#endregion
@@ -80,6 +81,7 @@ export default function Routedotnetfr() {
       <Route path="/statements" component={StatementsPage} />
       <Route path="/string2int" component={String2intPage} />
       <Route path="/stringbuilder" component={StringbuilderPage} />
+      <Route path="/threads" component={ThreadsPage} />
       <Route path="/tuple" component={TuplePage} />
       <Route path="/typesystem" component={TypesystemPage} />
       {

@@ -188,6 +188,9 @@ export const urlsdotnet = {
   "try parse": "/string2int",
   // String Builder
   "string builder": "/stringbuilder",
+  // Thread Task
+  "task": "/thrads",
+  "thread": "/thrads",
   // Tuple
   "tuple": "/tuple",
   "value tuple": "/tuple",

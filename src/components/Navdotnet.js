@@ -172,6 +172,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/threads">
+              Threads
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/tuple">
               Tuple
             </Link>
