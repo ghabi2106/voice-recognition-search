@@ -8,6 +8,9 @@ export const pagesangular = [
   "cascading style sheets",
   "media query",
   "bootstrap",
+  // sass
+  "sass",
+  "mixins",
   // angular
   "angular",
   // // ggggggggggggggggggggggggggggg

@@ -29,6 +29,11 @@ export default function Navfrontend() {
               HTML
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/sass">
+              SASS
+            </Link>
+          </li>
         </ul>
       </li>
 

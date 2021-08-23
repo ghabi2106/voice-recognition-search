@@ -8,6 +8,9 @@ export const pagesreact = [
   "cascading style sheets",
   "media query",
   "bootstrap",
+  // sass
+  "sass",
+  "mixins",
   // Arrow function
   "arrow function",
   // Difference between controlled and uncontrolled components

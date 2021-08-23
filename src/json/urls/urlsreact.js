@@ -8,6 +8,9 @@ export const urlsreact = {
   "cascading style sheets": "/css",
   "media query": "/css",
   "bootstrap": "/css",
+  // sass
+  "sass": "/sass",
+  "mixins": "/sass",
   // Arrow function
   "arrow function": "/arrowfunc",
   "arrow": "/arrowfunc",

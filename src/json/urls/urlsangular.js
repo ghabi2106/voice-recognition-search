@@ -8,6 +8,9 @@ export const urlsangular = {
   "cascading style sheets": "/css",
   "media query": "/css",
   "bootstrap": "/css",
+  // sass
+  "sass": "/sass",
+  "mixins": "/sass",
   // angular
   "angular": "/angular",
 };
