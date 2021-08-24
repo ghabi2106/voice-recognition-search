@@ -27,6 +27,7 @@ import CovariancePage from "../../pages/en/csharp/Covariance";
 import DatatypePage from "../../pages/en/csharp/Datatype";
 import DelegatePage from "../../pages/en/csharp/Delegate";
 import EnumindexerPage from "../../pages/en/csharp/Enumindexer";
+import LinqPage from "../../pages/en/csharp/Linq";
 import ModifiersPage from "../../pages/en/csharp/Modifiers";
 import NewfeaturesPage from "../../pages/en/csharp/Newfeatures";
 import OopPage from "../../pages/en/csharp/Oop";
@@ -74,6 +75,7 @@ export default function Routecsharpen() {
       <Route path="/datatype" component={DatatypePage} />
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />
+      <Route path="/linq" component={LinqPage} />
       <Route path="/modifiers" component={ModifiersPage} />
       <Route path="/csharp-features" component={NewfeaturesPage} />
       <Route path="/oop" component={OopPage} />

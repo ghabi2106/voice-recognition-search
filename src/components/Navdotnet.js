@@ -137,6 +137,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/linq">
+              Linq
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/modifiers">
               Modifiers
             </Link>

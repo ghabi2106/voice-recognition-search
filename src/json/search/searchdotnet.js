@@ -132,6 +132,10 @@ export const pagesdotnet = [
   "enumeration",
   "indexer",
   "generic",
+  // Linq
+  "linq",
+  "language integrated query",
+  "query",
   // Modifiers
   "access modifiers",
   "non access modifiers",

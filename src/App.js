@@ -161,6 +161,7 @@ function App() {
           {redirect}
         </Switch>
       </BrowserRouter>
+      <footer className="bd-cheatsheet container-fluid bg-body vh-100"></footer>
     </div>
   );
 }

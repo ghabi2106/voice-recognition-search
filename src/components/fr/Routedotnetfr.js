@@ -27,6 +27,7 @@ import CovariancePage from "../../pages/fr/csharp/Covariance";
 import DatatypePage from "../../pages/fr/csharp/Datatype";
 import DelegatePage from "../../pages/fr/csharp/Delegate";
 import EnumindexerPage from "../../pages/fr/csharp/Enumindexer";
+import LinqPage from "../../pages/fr/csharp/Linq";
 import ModifiersPage from "../../pages/fr/csharp/Modifiers";
 import NewfeaturesPage from "../../pages/fr/csharp/Newfeatures";
 import OopPage from "../../pages/fr/csharp/Oop";
@@ -74,6 +75,7 @@ export default function Routedotnetfr() {
       <Route path="/datatype" component={DatatypePage} />
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />
+      <Route path="/linq" component={LinqPage} />
       <Route path="/modifiers" component={ModifiersPage} />
       <Route path="/csharp-features" component={NewfeaturesPage} />
       <Route path="/oop" component={OopPage} />

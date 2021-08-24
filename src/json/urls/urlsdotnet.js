@@ -138,6 +138,10 @@ export const urlsdotnet = {
   "enumeration": "/enumindexer",
   "indexer": "/enumindexer",
   "generic": "/enumindexer",
+  // Linq
+  "linq": "/linq",
+  "language integrated query": "/linq",
+  "query": "/linq",
   // Modifiers
   "access modifiers": "/modifiers",
   "non access modifiers": "/modifiers",
