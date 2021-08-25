@@ -35,3 +35,8 @@
 .navbar {
   padding-top: 0.25rem;
 }
+
+.dropdown-menu {
+  max-height: 650px;
+  overflow-y: scroll;
+}
