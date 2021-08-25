@@ -18,6 +18,12 @@ import MvcPage from "../../pages/fr/dotnet/Mvc";
 import NugetpackagesPage from "../../pages/fr/dotnet/Nugetpackages";
 import ServicePage from "../../pages/fr/dotnet/Service";
 import SingletonPage from "../../pages/fr/dotnet/Singleton";
+import AssemblyPage from "../../pages/fr/dotnet/Assembly";
+import CachingPage from "../../pages/fr/dotnet/Caching";
+import DllexePage from "../../pages/fr/dotnet/Dllexe";
+import DotnetcomponentsPage from "../../pages/fr/dotnet/Dotnetcomponents";
+import FuncstoredprocPage from "../../pages/fr/dotnet/Funcstoredproc";
+import GcPage from "../../pages/fr/dotnet/Gc";
 //#endregion
 
 //#region c# pages
@@ -62,6 +68,12 @@ export default function Routedotnetfr() {
       <Route path="/nugetpackages" component={NugetpackagesPage} />
       <Route path="/service" component={ServicePage} />
       <Route path="/singleton" component={SingletonPage} />
+      <Route path="/assembly" component={AssemblyPage} />
+      <Route path="/caching" component={CachingPage} />
+      <Route path="/dllexe" component={DllexePage} />
+      <Route path="/dotnetcomponents" component={DotnetcomponentsPage} />
+      <Route path="/funcstoredproc" component={FuncstoredprocPage} />
+      <Route path="/gc" component={GcPage} />
       {
         //#endregion
       }

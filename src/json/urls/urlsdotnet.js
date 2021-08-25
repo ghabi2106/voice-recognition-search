@@ -1,5 +1,41 @@
 export const urlsdotnet = {
   home: "/",
+  // Assembly
+  "assembly": "/assembly",
+  // Caching
+  "caching": "/caching",
+  // DLL vs EXE
+  "dll": "/dllexe",
+  "exe": "/dllexe",
+  "dll versus exe": "/dllexe",
+  "exe versus dll": "/dllexe",
+  "dll exe": "/dllexe",
+  "dynamic link library": "/dllexe",
+  "difference between dll and exe": "/dllexe",
+  "difference between exe and dll": "/dllexe",
+  // dotnet components
+  "dotnet components": "/dotnetcomponents",
+  ".net components": "/dotnetcomponents",
+  // Function vs Stored procedure
+  "function": "/funcproc",
+  "stored procedure": "/funcproc",
+  "function versus stored procedure": "/funcproc",
+  "stored procedure versus function": "/funcproc",
+  "function stored procedure": "/funcproc",
+  "difference between function and stored procedure": "/funcproc",
+  "difference between stored procedure and function": "/funcproc",
+  // 
+  "gc": "/gc",
+  "garbage collector": "/gc",
+  "unmanaged" : "/gc",
+  "managed" : "/gc",
+  "unmanaged code": "/gc",
+  "managed  code" : "/gc",
+  "managed versus unmanaged": "/gc",
+  "unmanaged versus managed": "/gc",
+  "managed unmanaged": "/gc",
+  "difference between managed and unmanaged": "/gc",
+  "difference between unmanaged and managed": "/gc",
   // Clean Architecture
   "monolithic": "/clean",
   "clean architecture": "/clean",
@@ -11,6 +47,15 @@ export const urlsdotnet = {
   "common language runtime": "/clr",
   "jit": "/clr",
   "just in time": "/clr",
+  "global assembly cache": "/clr",
+  "gac": "/clr",
+  "common type system": "/clr",
+  "cts": "/clr",
+  "code access security": "/clr",
+  "cas": "/clr",
+  "common language specification": "/clr",
+  "cls": "/clr",
+  "metadata": "/clr",
   // Controller
   "action selectors": "/controller",
   "action method": "/controller",

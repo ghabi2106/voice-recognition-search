@@ -27,7 +27,55 @@ export default function Clr() {
                     className="d-inline-flex align-items-center rounded"
                     href="#introduction"
                   >
-                    Introduction
+                    Common Language Runtime
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#msil"
+                  >
+                    MSIL
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#jit"
+                  >
+                    JIT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#gac"
+                  >
+                    Global Assembly Cache
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#cts"
+                  >
+                    Common Type System
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#cls"
+                  >
+                    Common Language Specification
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#cas"
+                  >
+                    Code Access Security
                   </a>
                 </li>
                 <li>
@@ -72,15 +120,33 @@ export default function Clr() {
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Common Runtime Language</h3>
           <article id="introduction">
-            <h6>Introduction</h6>
+            <h6>CLR</h6>
             <div>
               <p>
-                La compilation traduit code source en langage MSIL (Microsoft
-                Intermediate Language) et génère les métadonnées requises.
+                Le CLR (Common Language Runtime) est un environnement
+                d’exécution faisant partie du framework .NET de Microsoft. CLR
+                gère l’exécution des programmes écrits dans différentes langages
+                prises en charge.
               </p>
               <p>
-                Au moment de l'exécution, un compilateur juste-à-temps (JIT)
-                transforme le MSIL en code natif.
+                CLR transforme le code source en une forme de code secondaire
+                appelée CIL (Common Intermediate Language). Au moment de
+                l’exécution, CLR gère l’exécution du code CIL.
+              </p>
+              <p>
+                Le CLR (Common Language Runtime) est responsable du
+                garbage-collector(ramasse-miettes), sécurité d’accès et
+                vérification du code
+              </p>
+            </div>
+          </article>
+          <article id="msil">
+            <h6>MSIL</h6>
+            <div>
+              <p>
+                Le code managé est un code dont l’exécution est gérée par Common
+                Language Runtime. Il récupère le code managé et le compile en
+                code machine.
               </p>
               <p>
                 Le code managé -MSIL- bénéficie de fonctionnalités telles que
@@ -91,6 +157,58 @@ export default function Clr() {
                 débogage.
               </p>
             </div>
+          </article>
+          <article id="jit">
+            <h6>JIT</h6>
+            <p>
+              Le compilateur JIT compile le MSIL en code machine au moment de
+              l’exécution. Le code compilé par le compilateur JIT s’exécute sous
+              CLR.
+            </p>
+          </article>
+          <article id="gac">
+            <h6>Global Assembly Cache</h6>
+            <div>
+              <p>
+                Le Global Assembly Cache (GAC) est un dossier du répertoire
+                Windows (\windows\assembly) dans lequel sont stockés les «
+                assembly » .NET spécifiquement désignés pour être partagés par
+                toutes les applications exécutées sur un système.
+              </p>
+              <p>
+                Le concept de GAC est le résultat de l’architecture .NET dont la
+                conception répond au problème de « DLL » qui existait dans COM
+                (Component Object Model).
+              </p>
+            </div>
+          </article>
+          <article id="cts">
+            <h6>Common Type System</h6>
+            <p>
+              Common Type System (CTS) est une norme qui spécifie comment les
+              définitions et les valeurs spécifiques d’un type sont représentées
+              dans la mémoire de l’ordinateur. Il est destiné à permettre aux
+              programmes écrits dans différents langages de programmation de
+              partager facilement des informations.
+            </p>
+          </article>
+          <article id="cas">
+            <h6>Code Access Security</h6>
+            <p>
+              CAS est la solution pour empêcher le code non approuvé d’effectuer
+              des actions privilégiées. Il empêche l’accès non autorisé aux
+              ressources et aux opérations et limite le code pour l’exécution de
+              tâches particulières.
+            </p>
+          </article>
+          <article id="cls">
+            <h6>Qu'est-ce que CLS ?</h6>
+            <p>
+              CLS signifie Common Language Specification . Avec les règles
+              mentionnées sous CLS, les développeurs sont obligés d'utiliser les
+              composants compatibles entre les langues. Ils sont réutilisables
+              dans toutes les langues compatibles .Net.
+            </p>
           </article>
           <article id="metadata">
             <h6>Metadata</h6>

@@ -27,7 +27,55 @@ export default function Clr() {
                     className="d-inline-flex align-items-center rounded"
                     href="#introduction"
                   >
-                    Introduction
+                    Common Language Runtime
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#msil"
+                  >
+                    MSIL
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#jit"
+                  >
+                    JIT
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#gac"
+                  >
+                    Global Assembly Cache
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#cts"
+                  >
+                    Common Type System
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#cls"
+                  >
+                    Common Language Specification
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#cas"
+                  >
+                    Code Access Security
                   </a>
                 </li>
                 <li>
@@ -72,16 +120,26 @@ export default function Clr() {
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Common Runtime Language</h3>
           <article id="introduction">
-            <h6>Introduction</h6>
+            <h6>Common Runtime Language</h6>
             <div>
+              <p>
+                .NET CLR is a run-time environment that manages and executes the
+                code written in any .NET programming language.
+              </p>
               <p>
                 Compiling translates your source code into MSIL and generates
                 the required metadata.
               </p>
               <p>
-                The Common Language Runtime (CLR) includes a JIT compiler for
-                converting MSIL to native code.
+                CLR does various operations like memory management, security
+                checks, assemblies to be loaded and thread management. It
+                provides a secure execution environment for applications.
               </p>
+            </div>
+          </article>
+          <article id="msil">
+            <h6>MSIL</h6>
+            <div>
               <p>
                 Managed code benefits from features such as cross-language
                 integration, cross-language exception handling, enhanced
@@ -89,6 +147,58 @@ export default function Clr() {
                 for component interaction, and debugging.
               </p>
             </div>
+          </article>
+          <article id="jit">
+            <h6>Just In Time</h6>
+            <div>
+              <p>
+                JIT stands for Just In Time. JIT is a compiler that converts
+                Intermediate Language to a Native code.
+              </p>
+            </div>
+          </article>
+          <article id="gac">
+            <h6>Global Assembly Cache</h6>
+            <p>
+              GAC stands for Global Assembly Cache. Whenever CLR gets installed
+              on the machine, GAC comes as a part of it. GAC specifically stores
+              those assemblies which will be shared by many applications. A
+              Developer tool called Gacutil.exe is used to add any file to GAC.
+            </p>
+          </article>
+          <article id="cts">
+            <h6>Common Type System</h6>
+            <p>
+              CTS stands for Common Type System. It has a set of rules which
+              state how a data type should be declared, defined and used in the
+              program. It describes the data types that are to be used in the
+              application.
+            </p>
+          </article>
+          <article id="cas">
+            <h6>Code Access Security</h6>
+            <div>
+              <p>
+                .Net provides a security model that prevents unauthorized access
+                to resources. CAS is a part of that security model. CAS is
+                present in the CLR. It enables the users to set permissions at a
+                granular level for the code.
+              </p>
+              <p>
+                CLR then executes the code depending on the available
+                permissions. CAS can be applied only to the managed code.
+                Unmanaged code runs without CAS.
+              </p>
+            </div>
+          </article>
+          <article id="cls">
+            <h6>Common Language Specification</h6>
+            <p>
+              CLS stands for Common Language Specification. With the rules
+              mentioned under CLS, the developers are made to use the components
+              that are inter-language compatible. They are reusable across all
+              the .Net Compliant languages.
+            </p>
           </article>
           <article id="metadata">
             <h6>Metadata</h6>

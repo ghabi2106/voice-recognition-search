@@ -1,5 +1,41 @@
 export const pagesdotnet = [
   "home",
+  // Assembly
+  "assembly",
+  // Caching
+  "caching",
+  // DLL vs EXE
+  "dll",
+  "exe",
+  "dll versus exe",
+  "exe versus dll",
+  "dll exe",
+  "dynamic link library",
+  "difference between dll and exe",
+  "difference between exe and dll",
+  // dotnet components
+  "dotnet components",
+  ".net components",
+  // Function vs Stored procedure
+  "function",
+  "stored procedure",
+  "function versus stored procedure",
+  "stored procedure versus function",
+  "function stored procedure",
+  "difference between function and stored procedure",
+  "difference between stored procedure and function",
+  // 
+  "gc",
+  "garbage collector",
+  "unmanaged" ,
+  "managed" ,
+  "unmanaged code",
+  "managed  code" ,
+  "managed versus unmanaged",
+  "unmanaged versus managed",
+  "managed unmanaged",
+  "difference between managed and unmanaged",
+  "difference between unmanaged and managed",
   // Clean Architecture
   "monolithic",
   "clean architecture",
@@ -11,6 +47,15 @@ export const pagesdotnet = [
   "common language runtime",
   "jit",
   "just in time",
+  "global assembly cache",
+  "gac",
+  "common type system",
+  "cts",
+  "code access security",
+  "cas",
+  "common language specification",
+  "cls",
+  "metadata",
   // Controller
   "action selectors",
   "action method",

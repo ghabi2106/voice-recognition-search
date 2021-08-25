@@ -102,8 +102,33 @@ export default function Navdotnet() {
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
-            <Link className="dropdown-item" to="/singleton">
-              Singleton
+            <Link className="dropdown-item" to="/assembly">
+              Assembly
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/caching">
+              Caching
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/dllexe">
+              DLL-EXE
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/dotnetcomponents">
+            .Net-Components
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/funcstoredproc">
+              Func-Proc
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/gc">
+              GC
             </Link>
           </li>
           <li className="nav-item">
