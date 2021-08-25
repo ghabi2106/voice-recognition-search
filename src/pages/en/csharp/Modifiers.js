@@ -38,6 +38,22 @@ export default function Struct() {
                     Record
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#const-readonly"
+                  >
+                    const vs readonly
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#abstruct-interface"
+                  >
+                    abstruct vs interface
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -344,6 +360,80 @@ export default function Struct() {
                 </tbody>
               </table>
             </div>
+          </article>
+          <article id="const-readonly">
+            <h6>const vs readonly</h6>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Constants</strong>
+                  </td>
+                  <td>
+                    <strong>Read-only Variables</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Evaluated at compile time</td>
+                  <td>Evaluated at run-time</td>
+                </tr>
+                <tr>
+                  <td>Support only value type variables</td>
+                  <td>They can hold the reference type variables</td>
+                </tr>
+                <tr>
+                  <td>
+                    They are used when the value is not changing at compile time
+                  </td>
+                  <td>
+                    Used when the actual value is unknown before the run-time
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Cannot be initialized at the time of declaration or in a
+                    constructor
+                  </td>
+                  <td>
+                    Can be initialized at the time of declaration or in a
+                    constructor
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="abstruct-interface">
+            <h6>class abstruct vs interface</h6>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Interface</strong>
+                  </td>
+                  <td>
+                    <strong>Abstract Class</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    An interface merely declares a contract or behavior that
+                    implementing classes should have.
+                  </td>
+                  <td>
+                    An abstract class provides a partial implementation for a
+                    functionality that must be implemented by the inheriting
+                    entities.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    An interface may declare only properties, methods and events
+                    with no access modifier.
+                  </td>
+                  <td>An abstract class declares fields too.</td>
+                </tr>
+              </tbody>
+            </table>
           </article>
         </section>
       </div>

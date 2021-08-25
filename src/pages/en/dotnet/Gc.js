@@ -102,6 +102,14 @@ export default function Gc() {
                     Managed vs Unmanaged code
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#stack-heap"
+                  >
+                    stack vs heap
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -306,6 +314,35 @@ export default function Gc() {
                 <tr>
                   <td>Memory management is done through garbage collection.</td>
                   <td>Runtime environment takes care of memory management.</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="stack-heap">
+            <h6>What is the difference between a stack and a heap?</h6>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Stack</strong>
+                  </td>
+                  <td>
+                    <strong>Heap</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Stored value type</td>
+                  <td>Stored reference type</td>
+                </tr>
+                <tr>
+                  <td>
+                    A stack is responsible for keeping track of each executing
+                    thread and its location.
+                  </td>
+                  <td>
+                    The heap is responsible for keeping track of the more
+                    precise objects or data.
+                  </td>
                 </tr>
               </tbody>
             </table>

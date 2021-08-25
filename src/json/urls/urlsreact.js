@@ -19,6 +19,14 @@ export const urlsreact = {
   "closure": "/javascript",
   "iife": "/javascript",
   "promise": "/javascript",
+  // sql
+  "transaction": "/sql",
+  "commit": "/sql",
+  "roll back": "/sql",
+  "commit roll back": "/sql",
+  "roll back commit": "/sql",
+  "commit and roll back": "/sql",
+  "roll back and commit": "/sql",
   // Arrow function
   "arrow function": "/arrowfunc",
   "arrow": "/arrowfunc",

@@ -4,6 +4,8 @@ export const pagesdotnet = [
   "assembly",
   // Caching
   "caching",
+  "cookie",
+  "cookies",
   // DLL vs EXE
   "dll",
   "exe",
@@ -24,7 +26,7 @@ export const pagesdotnet = [
   "function stored procedure",
   "difference between function and stored procedure",
   "difference between stored procedure and function",
-  // 
+  // Garbage collector
   "gc",
   "garbage collector",
   "unmanaged" ,
@@ -36,6 +38,16 @@ export const pagesdotnet = [
   "managed unmanaged",
   "difference between managed and unmanaged",
   "difference between unmanaged and managed",
+  "stack",
+  "heap",
+  "stack heap",
+  "heap stack",
+  "stack versus heap",
+  "heap versus stack",
+  "stack and heap",
+  "heap and stack",
+  "difference between stack and heap",
+  "difference between heap and stack",
   // Clean Architecture
   "monolithic",
   "clean architecture",
@@ -141,6 +153,11 @@ export const pagesdotnet = [
   // Boxing and Unboxing
   "boxing",
   "unboxing",
+  "boxing versus unboxing",
+  "unboxing versus boxing",
+  "boxing and unboxing",
+  "unboxing and boxing",
+  "boxing unboxing",
   // Collections
   "collections",
   "dictionary",
@@ -181,6 +198,13 @@ export const pagesdotnet = [
   "linq",
   "language integrated query",
   "query",
+  "deferred",
+  "immediate",
+  "deferred immediate",
+  "deferred versus immediate",
+  "immediate versus deferred",
+  "deferred and immediate",
+  "immediate and deferred",
   // Modifiers
   "access modifiers",
   "non access modifiers",
@@ -202,6 +226,12 @@ export const pagesdotnet = [
   "const",
   "volatile",
   "unsafe",
+  "abstract interface",
+  "interface abstract",
+  "abstract versus interface",
+  "interface versus abstract",
+  "abstract and interface",
+  "interface and abstract",
   // New features in C# 9
   "csharp new features",
   "top level statements",
@@ -245,4 +275,14 @@ export const pagesdotnet = [
   "struct and class",
   "struct versus class",
   "difference between class and struct",
+  "class object",
+  "object class",
+  "class",
+  "object",
+  "class versus object",
+  "object versus class",
+  "class and object",
+  "object and class",
+  "difference between object and class",
+  "difference between class and object",
 ];

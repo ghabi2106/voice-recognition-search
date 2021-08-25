@@ -38,6 +38,22 @@ export default function Struct() {
                     Record
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#const-readonly"
+                  >
+                    const vs readonly
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#abstruct-interface"
+                  >
+                    abstruct vs interface
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -349,6 +365,85 @@ export default function Struct() {
                 </tbody>
               </table>
             </div>
+          </article>
+          <article id="const-readonly">
+            <h6>const vs readonly</h6>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Constants</strong>
+                  </td>
+                  <td>
+                    <strong>Read-only Variables</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Constantes Variables en lecture seule</td>
+                  <td>Évalué au moment de la compilation</td>
+                </tr>
+                <tr>
+                  <td>
+                    Prend en charge uniquement les variables de type valeur
+                  </td>
+                  <td>Ils peuvent contenir les variables de type référence</td>
+                </tr>
+                <tr>
+                  <td>
+                    Ils sont utilisés lorsque la valeur ne change pas au moment
+                    de la compilation
+                  </td>
+                  <td>
+                    Utilisé lorsque la valeur réelle est inconnue avant
+                    l'exécution
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Ne peut pas être initialisé au moment de la déclaration ou
+                    dans un constructeur
+                  </td>
+                  <td>
+                    Peut être initialisé au moment de la déclaration ou dans un
+                    constructeur
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="abstruct-interface">
+            <h6>class abstruct vs interface</h6>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Interface</strong>
+                  </td>
+                  <td>
+                    <strong>Abstract Class</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Une interface déclare simplement un contrat ou un
+                    comportement que les classes d'implémentation devraient
+                    avoir.
+                  </td>
+                  <td>
+                    Une classe abstraite fournit une implémentation partielle
+                    d'une fonctionnalité qui doit être implémentée par les
+                    entités qui héritent.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Une interface ne peut déclarer que des propriétés, des
+                    méthodes et des événements sans modificateur d'accès.
+                  </td>
+                  <td>Une classe abstraite déclare également des champs.</td>
+                </tr>
+              </tbody>
+            </table>
           </article>
         </section>
       </div>

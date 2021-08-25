@@ -62,6 +62,14 @@ export default function Linq() {
                     into
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#deferred-immediate"
+                  >
+                    Deferred Execution vs Immediate
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -309,6 +317,35 @@ export default function Linq() {
               </p>
               <img src="/img/dotnet/linq-into.PNG" alt="linq-into" />
             </div>
+          </article>
+          <article id="deferred-immediate">
+            <h6>Deferred Vs Immediate Query Execution in LINQ</h6>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Deferred/Lazy Operators</strong>
+                  </td>
+                  <td>
+                    <strong>Immediate/Greedy Operators</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Query n'est pas exécutée au moment de sa déclaration.</td>
+                  <td>Query est exécutée au moment de sa déclaration.</td>
+                </tr>
+                <tr>
+                  <td>
+                    Projection Operator – Select, SelectMany Restriction
+                    Operator – Where Paging Operator – Take, Skip
+                  </td>
+                  <td>
+                    Aggregate Functions – Count, Average, Min, Max, Sum Element
+                    Operators – First, Last, SingleToList, ToArray, ToDictionary
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </article>
         </section>
       </div>

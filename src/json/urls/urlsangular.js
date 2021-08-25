@@ -19,6 +19,14 @@ export const urlsangular = {
   "closure": "/javascript",
   "iife": "/javascript",
   "promise": "/javascript",
+  // sql
+  "transaction": "/sql",
+  "commit": "/sql",
+  "roll back": "/sql",
+  "commit roll back": "/sql",
+  "roll back commit": "/sql",
+  "commit and roll back": "/sql",
+  "roll back and commit": "/sql",
   // angular
   "angular": "/angular",
 };

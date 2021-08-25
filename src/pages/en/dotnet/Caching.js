@@ -30,6 +30,14 @@ export default function Caching() {
                     Caching
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#cookie"
+                  >
+                    cookie
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -72,6 +80,19 @@ export default function Caching() {
               application and its speed. System.Runtime.Caching namespace is
               used for Caching information in .Net.
             </p>
+          </article>
+          <article id="cookie">
+            <h6>What are the different types of cookies in ASP.NET?</h6>
+            <ul>
+              <li><strong>Session Cookie: </strong>It resides on the client
+                  machine for a single session until the user logs out.
+              </li>
+              <li>
+                  <strong>Persistent Cookie: </strong>Resides on the user
+                  machine for a period specified for its expiry. It may be an
+                  hour, a month or never.
+              </li>
+            </ul>
           </article>
         </section>
       </div>

@@ -102,6 +102,14 @@ export default function Gc() {
                     Managed vs Unmanaged code
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#stack-heap"
+                  >
+                    stack vs heap
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -182,14 +190,14 @@ export default function Gc() {
           <article id="memory-allocation">
             <h6>Allocation de mémoire</h6>
             <p>
-              L'allocation de mémoire à partir du heap managé est plus rapide que
-              l'allocation de mémoire non managée. Étant donné que le runtime
-              alloue de la mémoire pour un objet en ajoutant une valeur à un
-              pointeur, il est presque aussi rapide que d’allouer de la mémoire
-              à partir de la stack. En outre, étant donné que les nouveaux objets
-              qui sont alloués consécutivement sont stockés de façon contiguë
-              dans le heap managé, une application peut accéder rapidement aux
-              objets.
+              L'allocation de mémoire à partir du heap managé est plus rapide
+              que l'allocation de mémoire non managée. Étant donné que le
+              runtime alloue de la mémoire pour un objet en ajoutant une valeur
+              à un pointeur, il est presque aussi rapide que d’allouer de la
+              mémoire à partir de la stack. En outre, étant donné que les
+              nouveaux objets qui sont alloués consécutivement sont stockés de
+              façon contiguë dans le heap managé, une application peut accéder
+              rapidement aux objets.
             </p>
           </article>
           <article id="memory-release">
@@ -203,8 +211,8 @@ export default function Gc() {
           <article id="managed-heap">
             <h6>Heap managé</h6>
             <p>
-              Le heap managé est un segment de mémoire alloué par GC pour stocker
-              et gérer des objets.
+              Le heap managé est un segment de mémoire alloué par GC pour
+              stocker et gérer des objets.
             </p>
           </article>
           <article id="generations">
@@ -301,12 +309,15 @@ export default function Gc() {
               </p>
               <p>
                 Il est recommandé de fournir le code nécessaire pour nettoyer la
-                ressource non managée dans une <code>Dispose</code> méthode publique.
+                ressource non managée dans une <code>Dispose</code> méthode
+                publique.
               </p>
             </div>
           </article>
           <article id="managed-unmanaged">
-            <h6>Quelle est la différence entre le code managé et non managé ?</h6>
+            <h6>
+              Quelle est la différence entre le code managé et non managé ?
+            </h6>
             <table>
               <thead>
                 <tr>
@@ -325,7 +336,39 @@ export default function Gc() {
                 </tr>
                 <tr>
                   <td>La gestion de la mémoire se fait par ramasse-miettes.</td>
-                  <td>L'environnement d'exécution prend en charge la gestion de la mémoire.</td>
+                  <td>
+                    L'environnement d'exécution prend en charge la gestion de la
+                    mémoire.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="stack-heap">
+            <h6>What is the difference between a stack and a heap?</h6>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Stack</strong>
+                  </td>
+                  <td>
+                    <strong>Heap</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Type de valeur stockée</td>
+                  <td>Type de référence stocké</td>
+                </tr>
+                <tr>
+                  <td>
+                    Stack est responsable du suivi de chaque thread en cours
+                    d'exécution et de son emplacement.
+                  </td>
+                  <td>
+                    Heap est responsable du suivi des objets ou des données les
+                    plus précis.
+                  </td>
                 </tr>
               </tbody>
             </table>

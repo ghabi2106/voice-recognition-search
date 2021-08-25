@@ -4,6 +4,8 @@ export const urlsdotnet = {
   "assembly": "/assembly",
   // Caching
   "caching": "/caching",
+  "cookie": "/caching",
+  "cookies": "/caching",
   // DLL vs EXE
   "dll": "/dllexe",
   "exe": "/dllexe",
@@ -24,7 +26,7 @@ export const urlsdotnet = {
   "function stored procedure": "/funcproc",
   "difference between function and stored procedure": "/funcproc",
   "difference between stored procedure and function": "/funcproc",
-  // 
+  // garbage collector
   "gc": "/gc",
   "garbage collector": "/gc",
   "unmanaged" : "/gc",
@@ -36,6 +38,16 @@ export const urlsdotnet = {
   "managed unmanaged": "/gc",
   "difference between managed and unmanaged": "/gc",
   "difference between unmanaged and managed": "/gc",
+  "stack": "/gc",
+  "heap": "/gc",
+  "stack heap": "/gc",
+  "heap stack": "/gc",
+  "stack versus heap": "/gc",
+  "heap versus stack": "/gc",
+  "stack and heap": "/gc",
+  "heap and stack": "/gc",
+  "difference between stack and heap": "/gc",
+  "difference between heap and stack": "/gc",
   // Clean Architecture
   "monolithic": "/clean",
   "clean architecture": "/clean",
@@ -147,6 +159,11 @@ export const urlsdotnet = {
   // Boxing and Unboxing
   "boxing": "/boxing",
   "unboxing": "/boxing",
+  "boxing versus unboxing": "/boxing",
+  "unboxing versus boxing": "/boxing",
+  "boxing and unboxing": "/boxing",
+  "unboxing and boxing": "/boxing",
+  "boxing unboxing": "/boxing",
   // Collections
   "collections": "/collections",
   "dictionary": "/collections",
@@ -187,6 +204,13 @@ export const urlsdotnet = {
   "linq": "/linq",
   "language integrated query": "/linq",
   "query": "/linq",
+  "deferred": "/linq",
+  "immediate": "/linq",
+  "deferred immediate": "/linq",
+  "deferred versus immediate": "/linq",
+  "immediate versus deferred": "/linq",
+  "deferred and immediate": "/linq",
+  "immediate and deferred": "/linq",
   // Modifiers
   "access modifiers": "/modifiers",
   "non access modifiers": "/modifiers",
@@ -206,6 +230,12 @@ export const urlsdotnet = {
   "const": "/modifiers",
   "volatile": "/modifiers",
   "unsafe": "/modifiers",
+  "abstract interface": "/modifiers",
+  "interface abstract": "/modifiers",
+  "abstract versus interface": "/modifiers",
+  "interface versus abstract": "/modifiers",
+  "abstract and interface": "/modifiers",
+  "interface and abstract": "/modifiers",
   // New features in C# 9
   "csharp new features": "/csharp-features",
   "top level statements": "/csharp-features",
@@ -250,4 +280,14 @@ export const urlsdotnet = {
   "struct and class": "/typesystem",
   "struct versus class": "/typesystem",
   "difference between class and struct": "/typesystem",
+  "class object": "/typesystem",
+  "object class": "/typesystem",
+  "class": "/typesystem",
+  "object": "/typesystem",
+  "class versus object": "/typesystem",
+  "object versus class": "/typesystem",
+  "class and object": "/typesystem",
+  "object and class": "/typesystem",
+  "difference between object and class": "/typesystem",
+  "difference between class and object": "/typesystem",
 };

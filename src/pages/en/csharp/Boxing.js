@@ -38,6 +38,14 @@ export default function Boxing() {
                     Unboxing
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#boxing-unboxing"
+                  >
+                    Boxing vs Unboxing
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -90,6 +98,33 @@ export default function Boxing() {
               </p>
               <img src="/img/dotnet/unboxing.PNG" alt="unboxing" />
             </div>
+          </article>
+          <article id="boxing-unboxing">
+            <h6>Boxing vs Unboxing</h6>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Boxing</strong>
+                  </td>
+                  <td>
+                    <strong>Unboxing</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Implicit</td>
+                  <td>Explicit</td>
+                </tr>
+                <tr>
+                  <td>Converting a value type to the type object</td>
+                  <td>Extracting the value type from the object</td>
+                </tr>
+                <tr>
+                  <td>eg : obj myObject = i;</td>
+                  <td>eg : i = (int)myObject;</td>
+                </tr>
+              </tbody>
+            </table>
           </article>
         </section>
       </div>

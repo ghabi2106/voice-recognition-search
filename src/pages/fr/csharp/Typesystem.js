@@ -38,7 +38,23 @@ export default function Typesystem() {
                     Record
                   </a>
                 </li>
-                </ul>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#class-object"
+                  >
+                    class vs object
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#contructor-type"
+                  >
+                    Constructor types
+                  </a>
+                </li>
+              </ul>
             </li>
             <li className="my-2">
               <button
@@ -110,7 +126,9 @@ export default function Typesystem() {
               </p>
               <ul>
                 <li>quand les données sont simples</li>
-                <li>peut avoir toutes les valeurs attribuées lors de sa création</li>
+                <li>
+                  peut avoir toutes les valeurs attribuées lors de sa création
+                </li>
                 <li>lorsque la performance est critique pour le système</li>
                 <li>les objets sont de courte durée</li>
               </ul>
@@ -131,6 +149,48 @@ export default function Typesystem() {
               <img src="/img/dotnet/record1.png" alt="record" />
               <img src="/img/dotnet/record2.png" alt="record" />
             </div>
+          </article>
+          <article id="class-object">
+            <h6>Class vs object</h6>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Classer</strong>
+                  </td>
+                  <td>
+                    <strong>Objet</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>La classe est la définition d'un objet</td>
+                  <td>Un objet est une instance d'une classe.</td>
+                </tr>
+                <tr>
+                  <td>C'est un modèle de l'objet</td>
+                  <td>
+                    Une classe ne devient un objet que si elle est instanciée
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il décrit toutes les méthodes, propriétés, etc.</td>
+                  <td>
+                    Un objet est utilisé pour accéder à toutes ces propriétés de
+                    la classe.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="constructor-type">
+            <h6>Quels sont les différents types de constructeurs en c# ?</h6>
+            <ul>
+              <li>Constructeur par défaut</li>
+              <li>Constructeur paramétré</li>
+              <li>Copier le constructeur</li>
+              <li>Constructeur statique</li>
+              <li>Constructeur privé</li>
+            </ul>
           </article>
         </section>
       </div>

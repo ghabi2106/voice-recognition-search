@@ -30,6 +30,14 @@ export default function Caching() {
                     Caching
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#cookie"
+                  >
+                    cookie
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -73,6 +81,21 @@ export default function Caching() {
               de noms System.Runtime.Caching est utilisé pour la mise en cache
               des informations dans .Net.
             </p>
+          </article>
+          <article id="cookie">
+            <h6>Qu'est-ce que la mise en cache ?</h6>
+            <ul>
+              <li>
+                <strong>Cookie de session : </strong> il réside sur la machine
+                cliente pour une seule session jusqu'à ce que l'utilisateur se
+                déconnecte.
+              </li>
+              <li>
+                <strong>Cookie persistant : </strong> réside sur la machine de
+                l'utilisateur pendant une période spécifiée pour son expiration.
+                Cela peut être une heure, un mois ou jamais.
+              </li>
+            </ul>
           </article>
         </section>
       </div>

@@ -38,6 +38,22 @@ export default function Typesystem() {
                     Record
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#class-object"
+                  >
+                    class vs object
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#contructor-type"
+                  >
+                    Constructor types
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -123,6 +139,46 @@ export default function Typesystem() {
               <img src="/img/dotnet/record1.png" alt="record" />
               <img src="/img/dotnet/record2.png" alt="record" />
             </div>
+          </article>
+          <article id="class-object">
+            <h6>Class vs object</h6>
+            <table border="1">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Class</strong>
+                  </td>
+                  <td>
+                    <strong>Object</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Class is the definition of an object</td>
+                  <td>An object is an instance of a class.</td>
+                </tr>
+                <tr>
+                  <td>It is a template of the object</td>
+                  <td>A class does not become an object unless instantiated</td>
+                </tr>
+                <tr>
+                  <td>It describes all the methods, properties, etc</td>
+                  <td>
+                    An object is used to access all those properties from the
+                    class.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="constructor-type">
+            <h6>What are the different types of constructors in c#?</h6>
+            <ul>
+              <li>Default Constructor</li>
+              <li>Parameterized constructor</li>
+              <li>Copy Constructor</li>
+              <li>Static Constructor</li>
+              <li>Private Constructor</li>
+            </ul>
           </article>
         </section>
       </div>

@@ -152,8 +152,10 @@ export default function Clr() {
             <h6>Just In Time</h6>
             <div>
               <p>
-                JIT stands for Just In Time. JIT is a compiler that converts
-                Intermediate Language to a Native code.
+                JIT is a compiler which stands for Just In Time. It is used to
+                convert the intermediate code into the native language. During
+                the execution, the intermediate code is converted into the
+                native language.
               </p>
             </div>
           </article>
@@ -169,10 +171,13 @@ export default function Clr() {
           <article id="cts">
             <h6>Common Type System</h6>
             <p>
-              CTS stands for Common Type System. It has a set of rules which
-              state how a data type should be declared, defined and used in the
-              program. It describes the data types that are to be used in the
-              application.
+              CTS stands for Common Type System. It follows certain rules
+              according to which a data type should be declared and used in the
+              program code. CTS also describes the data types that are going to
+              be used in the application. We can even make our own classes and
+              functions following the rules in the CTS, it helps in calling the
+              data type declared in one program language by other programming
+              languages.
             </p>
           </article>
           <article id="cas">
@@ -194,10 +199,10 @@ export default function Clr() {
           <article id="cls">
             <h6>Common Language Specification</h6>
             <p>
-              CLS stands for Common Language Specification. With the rules
-              mentioned under CLS, the developers are made to use the components
-              that are inter-language compatible. They are reusable across all
-              the .Net Compliant languages.
+              Common language specification helps the developers to use the
+              components that are inter-language compatible with certain rules
+              that come with CLS. It then helps in reusing the code in other
+              .NET compatible languages.
             </p>
           </article>
           <article id="metadata">

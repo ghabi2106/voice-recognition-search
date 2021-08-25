@@ -6,6 +6,7 @@ import HtmlPage from "../../pages/en/frontend/Html";
 import CssPage from "../../pages/en/frontend/Css";
 import SassPage from "../../pages/en/frontend/Sass";
 import JavascriptPage from "../../pages/en/frontend/Javascript";
+import SqlPage from "../../pages/en/frontend/Sql";
 //#endregion
 
 export default function Routefrontenden() {
@@ -18,6 +19,7 @@ export default function Routefrontenden() {
       <Route path="/css" component={CssPage} />
       <Route path="/sass" component={SassPage} />
       <Route path="/javascript" component={JavascriptPage} />
+      <Route path="/sql" component={SqlPage} />
       {
         //#endregion
       }

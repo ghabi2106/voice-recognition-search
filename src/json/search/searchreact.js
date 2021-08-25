@@ -19,6 +19,14 @@ export const pagesreact = [
   "closure",
   "iife",
   "promise",
+  // sql
+  "transaction",
+  "commit",
+  "roll back",
+  "commit roll back",
+  "roll back commit",
+  "commit and roll back",
+  "roll back and commit",
   // Arrow function
   "arrow function",
   // Difference between controlled and uncontrolled components
