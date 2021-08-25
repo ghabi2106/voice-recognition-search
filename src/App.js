@@ -151,7 +151,7 @@ function App() {
           </nav>
         </header>
 
-        <Switch>
+        {/* <Switch> */}
           <LangContext.Provider value={lang}>
             <CourseContext.Provider value={selectedCourse}>
               <Routing />
@@ -159,7 +159,7 @@ function App() {
           </LangContext.Provider>
 
           {redirect}
-        </Switch>
+        {/* </Switch> */}
       </BrowserRouter>
       <footer className="bd-cheatsheet container-fluid bg-body vh-100"></footer>
     </div>
