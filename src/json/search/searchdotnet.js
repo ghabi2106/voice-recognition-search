@@ -6,6 +6,15 @@ export const pagesdotnet = [
   "caching",
   "cookie",
   "cookies",
+  // Clean Code
+  "dry",
+  "clean code",
+  "kiss",
+  "yagni",
+  "occam's razor",
+  "persistence ignorance",
+  "modularity",
+  "bounded context",
   // DLL vs EXE
   "dll",
   "exe",
@@ -150,6 +159,8 @@ export const pagesdotnet = [
   "mediator",
   "observer",
   "command",
+  // Solid
+  "solid",
   // Boxing and Unboxing
   "boxing",
   "unboxing",

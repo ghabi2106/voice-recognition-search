@@ -38,7 +38,6 @@ export const urlsdotnet = {
   "managed unmanaged": "/gc",
   "difference between managed and unmanaged": "/gc",
   "difference between unmanaged and managed": "/gc",
-  "stack": "/gc",
   "heap": "/gc",
   "stack heap": "/gc",
   "heap stack": "/gc",
@@ -48,6 +47,15 @@ export const urlsdotnet = {
   "heap and stack": "/gc",
   "difference between stack and heap": "/gc",
   "difference between heap and stack": "/gc",
+  // Clean Code
+  "dry": "/cleancode",
+  "clean code": "/cleancode",
+  "kiss": "/cleancode",
+  "yagni": "/cleancode",
+  "occam's razor": "/cleancode",
+  "persistence ignorance": "/cleancode",
+  "modularity": "/cleancode",
+  "bounded context": "/cleancode",
   // Clean Architecture
   "monolithic": "/clean",
   "clean architecture": "/clean",
@@ -156,6 +164,8 @@ export const urlsdotnet = {
   "mediator": "/singleton",
   "observer": "/singleton",
   "command": "/singleton",
+  // Solid
+  "solid": "/solid",
   // Boxing and Unboxing
   "boxing": "/boxing",
   "unboxing": "/boxing",

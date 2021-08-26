@@ -101,9 +101,17 @@ export default function Navdotnet() {
           Csharp
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li className="nav-item">
+        <li className="nav-item">
             <Link className="dropdown-item" to="/assembly">
               Assembly
+            </Link>
+          </li><li className="nav-item">
+            <Link className="dropdown-item" to="/cleancode">
+              Clean-Code
+            </Link>
+          </li><li className="nav-item">
+            <Link className="dropdown-item" to="/solid">
+            Solid
             </Link>
           </li>
           <li className="nav-item">

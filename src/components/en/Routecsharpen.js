@@ -24,6 +24,8 @@ import DllexePage from "../../pages/en/dotnet/Dllexe";
 import DotnetcomponentsPage from "../../pages/en/dotnet/Dotnetcomponents";
 import FuncstoredprocPage from "../../pages/en/dotnet/Funcstoredproc";
 import GcPage from "../../pages/en/dotnet/Gc";
+import CleancodePage from "../../pages/en/dotnet/Cleancode";
+import SolidPage from "../../pages/en/dotnet/Solid";
 //#endregion
 
 //#region csharp
@@ -74,6 +76,8 @@ export default function Routecsharpen() {
       <Route path="/dotnetcomponents" component={DotnetcomponentsPage} />
       <Route path="/funcstoredproc" component={FuncstoredprocPage} />
       <Route path="/gc" component={GcPage} />
+      <Route path="/cleancode" component={CleancodePage} />
+      <Route path="/solid" component={SolidPage} />
       {
         //#endregion
       }
