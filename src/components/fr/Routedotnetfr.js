@@ -26,6 +26,7 @@ import FuncstoredprocPage from "../../pages/fr/dotnet/Funcstoredproc";
 import GcPage from "../../pages/fr/dotnet/Gc";
 import CleancodePage from "../../pages/fr/dotnet/Cleancode";
 import SolidPage from "../../pages/fr/dotnet/Solid";
+import AgilePage from "../../pages/fr/dotnet/Agile";
 //#endregion
 
 //#region c# pages
@@ -78,6 +79,7 @@ export default function Routedotnetfr() {
       <Route path="/gc" component={GcPage} />
       <Route path="/cleancode" component={CleancodePage} />
       <Route path="/solid" component={SolidPage} />
+      <Route path="/agile" component={AgilePage} />
       {
         //#endregion
       }

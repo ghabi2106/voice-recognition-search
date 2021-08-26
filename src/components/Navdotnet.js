@@ -8,80 +8,80 @@ export default function Navdotnet() {
         //#region dotnet
       }
       <li className="nav-item">
-            <Link className="nav-link" to="/clean">
-              Clean
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/clr">
-              CLR
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/controller">
-              Controller
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/controllervuedata">
-              Controller-Vue-Data
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/cqrs">
-              CQRS
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/designpattern">
-              Design-Pattern
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/di">
-              DI
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/dotnet">
-              Dotnet
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/entityframework">
-              EF
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/https">
-              Https
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/httpmethods">
-              Http-Methods
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/middleware">
-              Middleware
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/mvc">
-              MVC
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/nugetpackages">
-              Nuget-Packages
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/service">
-              Service
-            </Link>
-          </li>
+        <Link className="nav-link" to="/clean">
+          Clean
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/clr">
+          CLR
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/controller">
+          Controller
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/controllervuedata">
+          Controller-Vue-Data
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/cqrs">
+          CQRS
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/designpattern">
+          Design-Pattern
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/di">
+          DI
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/dotnet">
+          Dotnet
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/entityframework">
+          EF
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/https">
+          Https
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/httpmethods">
+          Http-Methods
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/middleware">
+          Middleware
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/mvc">
+          MVC
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/nugetpackages">
+          Nuget-Packages
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/service">
+          Service
+        </Link>
+      </li>
       {
         //#endregion
       }
@@ -101,17 +101,24 @@ export default function Navdotnet() {
           Csharp
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li className="nav-item">
+          <li className="nav-item">
             <Link className="dropdown-item" to="/assembly">
               Assembly
             </Link>
-          </li><li className="nav-item">
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/agile">
+              Agile
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/cleancode">
               Clean-Code
             </Link>
-          </li><li className="nav-item">
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/solid">
-            Solid
+              Solid
             </Link>
           </li>
           <li className="nav-item">
@@ -126,7 +133,7 @@ export default function Navdotnet() {
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/dotnetcomponents">
-            .Net-Components
+              .Net-Components
             </Link>
           </li>
           <li className="nav-item">
@@ -143,7 +150,7 @@ export default function Navdotnet() {
             <Link className="dropdown-item" to="/boxing">
               Boxing
             </Link>
-          </li>         
+          </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/collections">
               Collections

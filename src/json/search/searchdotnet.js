@@ -1,5 +1,14 @@
 export const pagesdotnet = [
   "home",
+  // Agile
+  "agile",
+  "agile scrum",
+  "sprint",
+  "backlog",
+  "scrum master",
+  "test driven development",
+  "agile values",
+  "agile principles",
   // Assembly
   "assembly",
   // Caching

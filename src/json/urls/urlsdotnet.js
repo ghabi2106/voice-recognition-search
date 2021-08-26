@@ -1,5 +1,14 @@
 export const urlsdotnet = {
   home: "/",
+  // Agile
+  "agile": "/agile",
+  "agile scrum": "/agile",
+  "sprint": "/agile",
+  "backlog": "/agile",
+  "scrum master": "/agile",
+  "test driven development": "/agile",
+  "agile values": "/agile",
+  "agile principles": "/agile",
   // Assembly
   "assembly": "/assembly",
   // Caching
