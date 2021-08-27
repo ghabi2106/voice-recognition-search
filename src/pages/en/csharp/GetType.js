@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Rules() {
+export default function GetType() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,41 +25,9 @@ export default function Rules() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#"
+                    href="#typeof-gettype"
                   >
-                    
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#"
-                  >
-                    
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href=""
-                  >
-                    
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href=""
-                  >
-                    
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href=""
-                  >
-                    
+                    typeof vs GetType
                   </a>
                 </li>
               </ul>
@@ -94,7 +62,7 @@ export default function Rules() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Rules</h3>
+          <h3>typeof vs GetType</h3>
           <article id="typeof-gettype">
             <h6>typeof vs GetType</h6>
             <div>
@@ -103,43 +71,14 @@ export default function Rules() {
                 generic type known at compile-time. The typeof(obj) will give a
                 compile-time error because <code>obj</code> is a variable, not a
                 type. You can use the <code>typeof</code> with type, e.g.,{" "}
-                <code>typeof(int)</code>. The <code>GetType()</code> is called on
-                an object at runtime. In both cases, the return type will be an
-                object of the <code>System.Type</code>.
+                <code>typeof(int)</code>. The <code>GetType()</code> is called
+                on an object at runtime. In both cases, the return type will be
+                an object of the <code>System.Type</code>.
               </p>
-              <img src="/img/dotnet/" alt="" />
-            </div>
-          </article>
-          <article id="">
-            <h6></h6>
-            <div>
-              <p>
-              </p>
-              <img src="/img/dotnet/" alt="" />
-            </div>
-          </article>
-          <article id="">
-            <h6></h6>
-            <div>
-              <p>
-              </p>
-              <img src="/img/dotnet/" alt="" />
-            </div>
-          </article>
-          <article id="">
-            <h6></h6>
-            <div>
-              <p>
-              </p>
-              <img src="/img/dotnet/" alt="" />
-            </div>
-          </article>
-          <article id="">
-            <h6></h6>
-            <div>
-              <p>
-              </p>
-              <img src="/img/dotnet/" alt="*" />
+              <img
+                src="/img/dotnet/rules-typeof-gettype.PNG"
+                alt="rules-typeof-gettype"
+              />
             </div>
           </article>
         </section>

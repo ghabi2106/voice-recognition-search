@@ -47,6 +47,7 @@ import StringbuilderPage from "../../pages/en/csharp/Stringbuilder";
 import ThreadsPage from "../../pages/en/csharp/Threads";
 import TuplePage from "../../pages/en/csharp/Tuple";
 import TypesystemPage from "../../pages/en/csharp/Typesystem";
+import GetTypePage from "../../pages/en/csharp/GetType";
 //#endregion
 
 export default function Routecsharpen() {
@@ -104,6 +105,7 @@ export default function Routecsharpen() {
       <Route path="/threads" component={ThreadsPage} />
       <Route path="/tuple" component={TuplePage} />
       <Route path="/typesystem" component={TypesystemPage} />
+      <Route path="/gettype" component={GetTypePage} />
       {
         //#endregion
       }

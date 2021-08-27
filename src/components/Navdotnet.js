@@ -231,6 +231,11 @@ export default function Navdotnet() {
               Type-System
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/gettype">
+              GetType-typeof
+            </Link>
+          </li>
         </ul>
       </li>
       {
