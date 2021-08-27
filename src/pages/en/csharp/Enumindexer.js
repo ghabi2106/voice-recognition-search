@@ -93,11 +93,17 @@ export default function Enumindexer() {
             <h6>Indexer</h6>
             <div>
               <p>
-                An indexer allows an object to be indexed such as an array. When
-                you define an indexer for a class, this class behaves similar to
-                a virtual array. You can then access the instance of this class
-                using the array access operator ([ ]).
+                An Indexer is a special type of property that allows a class or
+                structure to be accessed the same way as an array for its
+                internal collection. It is the same as property except that it
+                is defined with <code>this</code> keyword with square bracket
+                and parameters.
               </p>
+              <ul>
+                <li>Indexer does not allow ref and out paramters.</li>
+                <li>Indexer canbe overloaded</li>
+                <li>Indexer can also be generic.</li>
+              </ul>
               <img src="/img/dotnet/indexer.PNG" alt="indexer" />
             </div>
           </article>
