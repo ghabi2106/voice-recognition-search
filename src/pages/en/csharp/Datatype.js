@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Datatype() {
   return (
@@ -102,7 +104,9 @@ export default function Datatype() {
                 An anonymous type is a type (class) without any name that can
                 contain public read-only properties only.
               </p>
-              <img src="/img/dotnet/type-anonymous.PNG" alt="type anonymous" />
+              <Highlight language="csharp">
+                {`var student = new { Id = 1, FirstName = "James", LastName = "Bond" };`}
+              </Highlight>
             </div>
           </article>
           <article id="dynamic">
@@ -122,7 +126,9 @@ export default function Datatype() {
                   implicitly.
                 </li>
               </ul>
-              <img src="/img/dotnet/type-dynamic.PNG" alt="type dynamic" />
+              <Highlight language="csharp">
+                {`dynamic MyDynamicVar = 1;`}
+              </Highlight>
             </div>
           </article>
           <article id="nullable">
@@ -132,7 +138,9 @@ export default function Datatype() {
                 As you know, a value type cannot be assigned a null value. For
                 example, int i = null will give you a compile time error.
               </p>
-              <img src="/img/dotnet/type-nullable.PNG" alt="type nullable" />
+              <Highlight language="csharp">
+                {`Nullable<int> i = null;`}
+              </Highlight>
             </div>
           </article>
           <article id="discard">
@@ -164,15 +172,35 @@ export default function Datatype() {
                 the visual studio, so that you can easily differentiate between
                 class methods and extension methods.
               </p>
-              <img src="/img/dotnet/extension-method.png" alt="extension method" />
+              <img
+                src="/img/dotnet/extension-method.png"
+                alt="extension method"
+              />
               <p>
                 An extension method is actually a special kind of static method
                 defined in a static class.
               </p>
-              <img
-                src="/img/dotnet/extension-method-definition.PNG"
-                alt="extension method definition"
-              />
+              <Highlight language="csharp">
+                {`public static class IntExtensions
+{
+	public static bool IsGreaterThan(this int i, int value)
+	{
+		return i > value;
+	}
+}
+
+public class Program
+{
+	public static void Main()
+	{
+		int i = 10;
+
+        bool result = i.IsGreaterThan(100); 
+
+		Console.WriteLine("Result: {0}",result);
+	}
+}`}
+              </Highlight>
               <p>
                 LINQ is built upon extension methods that operate on IEnumerable
                 and IQeryable type.

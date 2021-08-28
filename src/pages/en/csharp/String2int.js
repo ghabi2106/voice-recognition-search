@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function String2int() {
   return (
@@ -91,14 +93,24 @@ export default function String2int() {
                 src="/img/dotnet/string2int-parse-syntax.PNG"
                 alt="string2int parse syntax"
               />
-              <img
-                src="/img/dotnet/string2int-parse-script.PNG"
-                alt="string2int parse script"
-              />
-              <img
-                src="/img/dotnet/string2int-parse-exception.PNG"
-                alt="string2int parse exception"
-              />
+              <Highlight language="csharp">
+                {`Int16.Parse("100"); // returns 100
+Int16.Parse("(100)", NumberStyles.AllowParentheses); // returns -100
+
+int.Parse("30,000", NumberStyles.AllowThousands, new CultureInfo("en-au"));// returns 30000
+int.Parse("$ 10000", NumberStyles.AllowCurrencySymbol); //returns 10000
+int.Parse("-100", NumberStyles.AllowLeadingSign); // returns -100
+int.Parse(" 100 ", NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite); // returns 100
+
+Int64.Parse("2147483649"); // returns 2147483649`}
+              </Highlight>
+              <Highlight language="csharp">
+                {`int.Parse(null);//thows FormatException
+int.Parse("");//thows FormatException
+int.Parse("100.00"); // throws FormatException
+int.Parse( "100a"); //throws formatexception
+int.Parse(2147483649);//throws overflow exception use Int64.Parse()`}
+              </Highlight>
             </div>
           </article>
           <article id="convert">
@@ -112,10 +124,22 @@ export default function String2int() {
                 src="/img/dotnet/string2int-convert-syntax.PNG"
                 alt="string2int convert syntax"
               />
-              <img
-                src="/img/dotnet/string2int-convert-script.PNG"
-                alt="string2int convert script"
-              />
+              <Highlight language="csharp">
+                {`Convert.ToInt16("100"); // returns short
+Convert.ToInt16(null);//returns 0
+
+Convert.ToInt32("233300");// returns int
+Convert.ToInt32("1234",16); // returns 4660 - Hexadecimal of 1234
+
+Convert.ToInt64("1003232131321321");//returns long
+
+// the following throw exceptions
+Convert.ToInt16("");//throws FormatException
+Convert.ToInt32("30,000"); //throws FormatException
+Convert.ToInt16("(100)");//throws FormatException
+Convert.ToInt16("100a"); //throws FormatException
+Convert.ToInt16(2147483649);//throws OverflowException`}
+              </Highlight>
             </div>
           </article>
           <article id="tryparse">
@@ -123,19 +147,31 @@ export default function String2int() {
             <div>
               <ul>
                 <li>Converts different numeric strings to integers.</li>
-                <li>Converts string representation of different number styles.</li>
+                <li>
+                  Converts string representation of different number styles.
+                </li>
                 <li>Converts culture-specific numeric strings to integers.</li>
-                <li>Never throws an exception. Returns false if cannot parse to an integer.</li>
+                <li>
+                  Never throws an exception. Returns false if cannot parse to an
+                  integer.
+                </li>
                 <li>Must use out parameter.</li>
               </ul>
               <img
                 src="/img/dotnet/string2int-tryparse-syntax.PNG"
                 alt="string2int tryparse syntax"
               />
-              <img
-                src="/img/dotnet/string2int-tryparse-script.PNG"
-                alt="string2int tryparse script"
-              />
+              <Highlight language="csharp">
+                {`string numberStr = "123456";
+int number;
+
+bool isParsable = Int32.TryParse(numberStr, out number);
+
+if (isParsable)
+    Console.WriteLine(number);
+else
+    Console.WriteLine("Could not be parsed.");`}
+              </Highlight>
             </div>
           </article>
         </section>

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Cqrs() {
   return (
@@ -143,7 +145,16 @@ export default function Cqrs() {
                 Les requêtes décrivent le comportement de vos commandes et
                 requêtes.
               </p>
-              <img src="/img/dotnet/cqrs-request-script.PNG" alt="Request" />
+              <Highlight language="csharp">
+                {`public class GetUserDetailQuery : IRequest<UserDto>
+{
+    public GetUserDetailQuery(int id) {
+    	Id = id;
+    }
+    
+    public int Id {get;}
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="handler">
@@ -153,7 +164,29 @@ export default function Cqrs() {
                 Lorsqu'une rquète est créée, On abesoin besoin d'un gestionnaire
                 pour résoudre cette demande demande.
               </p>
-              <img src="/img/dotnet/cqrs-handler-script.PNG" alt="Handler" />
+              <Highlight language="csharp">
+                {`public class GetUserDetailHandler : IRequestHandler<GetUserDetailQuery, UserDto> 
+{
+   	private readonly IUserRepository _userRepository;
+    private readonly IUserMapper _userMapper;
+    
+    public GetUserDetailHandler(IUserRepository userRepository, IUserMapper userMapper) {
+    	_userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
+    	_userMapper = userMapper ?? throw new ArgumentNullException(nameof(userMapper));
+    }
+    
+    public async Task<UserDto> Handle(GetUserDetailQuery request, CancellationToken cancellationToken) {
+    var user = await _userRepository.GetAsync(u => u.Id == request.Id)
+    
+    if user == null {
+    	return null
+    }
+    
+    var userDto = _userMapper.MapUserDto(user);
+    return userDto;
+    }
+}`}
+              </Highlight>
             </div>
           </article>
         </section>

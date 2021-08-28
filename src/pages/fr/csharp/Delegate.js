@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Delegate() {
   return (
@@ -104,8 +106,27 @@ export default function Delegate() {
                 contient la référence à une méthode. La référence peut être
                 modifiée au moment de l'exécution.
               </p>
-              <img src="/img/dotnet/delegate-init.PNG" alt="delegate init" />
-              <img src="/img/dotnet/delegate-invoke.PNG" alt="delegate invoke" />
+              <Highlight language="csharp">
+                {`public delegate void MyDelegate(string msg); // declare a delegate
+
+// set target method
+MyDelegate del = new MyDelegate(MethodA);
+// or 
+MyDelegate del = MethodA; 
+// or set lambda expression 
+MyDelegate del = (string msg) =>  Console.WriteLine(msg);
+
+// target method
+static void MethodA(string message)
+{
+    Console.WriteLine(message);
+}`}
+              </Highlight>
+              <Highlight language="csharp">
+                {`del.Invoke("Hello World!");
+// or 
+del("Hello World!");`}
+              </Highlight>
             </div>
           </article>
           <article id="func">
@@ -126,10 +147,24 @@ export default function Delegate() {
                 </li>
               </ul>
               <img src="/img/dotnet/delegate-func.png" alt="delegate func" />
-              <img
-                src="/img/dotnet/delegate-func-program.PNG"
-                alt="delegate func program"
-              />
+              <Highlight language="csharp">
+                {`class Program
+{
+    static int Sum(int x, int y)
+    {
+        return x + y;
+    }
+
+    static void Main(string[] args)
+    {
+        Func<int,int, int> add = Sum;
+
+        int result = add(10, 10);
+
+        Console.WriteLine(result); 
+    }
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="action">
@@ -141,10 +176,13 @@ export default function Delegate() {
                 termes, un délégué Action peut être utilisé avec une méthode qui
                 a un type de retour void.
               </p>
-              <img
-                src="/img/dotnet/delegate-action-init.PNG"
-                alt="delegate action init"
-              />
+              <Highlight language="csharp">
+                {`Action<int> printActionDel = ConsolePrint;
+
+//Or
+
+Action<int> printActionDel = new Action<int>(ConsolePrint);`}
+              </Highlight>
             </div>
           </article>
           <article id="predicate">
@@ -154,7 +192,21 @@ export default function Delegate() {
                 Le délégué de prédicat prend un paramètre d'entrée et un type de
                 retour booléen.
               </p>
-              <img src="/img/dotnet/delegate-predicate.PNG" alt="delegate predicate" />
+              <Highlight language="csharp">
+                {`static bool IsUpperCase(string str)
+{
+    return str.Equals(str.ToUpper());
+}
+
+static void Main(string[] args)
+{
+    Predicate<string> isUpper = IsUpperCase;
+
+    bool result = isUpper("hello world!!");
+
+    Console.WriteLine(result);
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="events">

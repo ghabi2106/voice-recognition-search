@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Middleware() {
   return (
@@ -94,7 +96,17 @@ export default function Middleware() {
                 HttpModules where both needs to be configured and executed in
                 each request.
               </p>
-              <img src="/img/dotnet/middleware-app.PNG" alt="middleware app"/>
+              <Highlight language="csharp">
+                {`public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    app.UseMyMiddleware();
+
+    app.Run(async (context) =>
+    {
+        await context.Response.WriteAsync("Hello World!");
+    });
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="example">
@@ -148,7 +160,37 @@ export default function Middleware() {
           </article>
           <article id="custom-middleware">
             <h6>Custom Middleware</h6>
-            <img src="/img/dotnet/middleware-custom.PNG" alt="custom middleware"/>
+            <Highlight language="csharp">
+              {`public class MyMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly ILogger _logger;
+
+    public MyMiddleware(RequestDelegate next, ILoggerFactory logFactory)
+    {
+        _next = next;
+
+        _logger = logFactory.CreateLogger("MyMiddleware");
+    }
+
+    public async Task Invoke(HttpContext httpContext)
+    {
+        _logger.LogInformation("MyMiddleware executing..");
+
+        await _next(httpContext); // calling next middleware
+
+    }
+}
+
+// Extension method used to add the middleware to the HTTP request pipeline.
+public static class MyMiddlewareExtensions
+{
+    public static IApplicationBuilder UseMyMiddleware(this IApplicationBuilder builder)
+    {
+        return builder.UseMiddleware<MyMiddleware>();
+    }
+} `}
+            </Highlight>
           </article>
         </section>
       </div>

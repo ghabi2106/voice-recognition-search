@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Refoutin() {
   return (
@@ -191,7 +193,16 @@ export default function Refoutin() {
                 reference types, it only prevents you from assigning a new
                 reference.
               </p>
-              <img src="/img/dotnet/modifier-in.PNG" alt="modifier in" />
+              <Highlight language="csharp">
+                {`static void Enroll(in Student student)
+{
+  // With in assigning a new object would throw an error
+  // student = new Student();
+
+  // We can still do this with reference types though
+  student.Enrolled = true;
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="limit">

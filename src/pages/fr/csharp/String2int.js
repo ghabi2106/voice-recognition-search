@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function String2int() {
   return (
@@ -79,26 +81,41 @@ export default function String2int() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>How to convert string to int in C#?</h3>
-          <article id="boxing">
+          <article id="parse">
             <h6>Parse() method</h6>
             <div>
               <ul>
-                <li>Convertit une chaîne numérique valide en valeur entière.</li>
+                <li>
+                  Convertit une chaîne numérique valide en valeur entière.
+                </li>
                 <li>Prend en charge différents styles de nombres.</li>
-                <li>Prend en charge les formats personnalisés spécifiques à la culture.</li>
+                <li>
+                  Prend en charge les formats personnalisés spécifiques à la
+                  culture.
+                </li>
               </ul>
               <img
                 src="/img/dotnet/string2int-parse-syntax.PNG"
                 alt="string2int parse syntax"
               />
-              <img
-                src="/img/dotnet/string2int-parse-script.PNG"
-                alt="string2int parse script"
-              />
-              <img
-                src="/img/dotnet/string2int-parse-exception.PNG"
-                alt="string2int parse exception"
-              />
+              <Highlight language="csharp">
+                {`Int16.Parse("100"); // returns 100
+Int16.Parse("(100)", NumberStyles.AllowParentheses); // returns -100
+
+int.Parse("30,000", NumberStyles.AllowThousands, new CultureInfo("en-au"));// returns 30000
+int.Parse("$ 10000", NumberStyles.AllowCurrencySymbol); //returns 10000
+int.Parse("-100", NumberStyles.AllowLeadingSign); // returns -100
+int.Parse(" 100 ", NumberStyles.AllowLeadingWhite | NumberStyles.AllowTrailingWhite); // returns 100
+
+Int64.Parse("2147483649"); // returns 2147483649`}
+              </Highlight>
+              <Highlight language="csharp">
+                {`int.Parse(null);//thows FormatException
+int.Parse("");//thows FormatException
+int.Parse("100.00"); // throws FormatException
+int.Parse( "100a"); //throws formatexception
+int.Parse(2147483649);//throws overflow exception use Int64.Parse()`}
+              </Highlight>
             </div>
           </article>
           <article id="convert">
@@ -112,30 +129,60 @@ export default function String2int() {
                 src="/img/dotnet/string2int-convert-syntax.PNG"
                 alt="string2int convert syntax"
               />
-              <img
-                src="/img/dotnet/string2int-convert-script.PNG"
-                alt="string2int convert script"
-              />
+              <Highlight language="csharp">
+                {`Convert.ToInt16("100"); // returns short
+Convert.ToInt16(null);//returns 0
+
+Convert.ToInt32("233300");// returns int
+Convert.ToInt32("1234",16); // returns 4660 - Hexadecimal of 1234
+
+Convert.ToInt64("1003232131321321");//returns long
+
+// the following throw exceptions
+Convert.ToInt16("");//throws FormatException
+Convert.ToInt32("30,000"); //throws FormatException
+Convert.ToInt16("(100)");//throws FormatException
+Convert.ToInt16("100a"); //throws FormatException
+Convert.ToInt16(2147483649);//throws OverflowException`}
+              </Highlight>
             </div>
           </article>
           <article id="tryparse">
             <h6>TryParse Method</h6>
             <div>
               <ul>
-                <li>Convertit différentes chaînes numériques en nombres entiers.</li>
-                <li>Convertit la représentation sous forme de chaîne de différents styles de nombres.</li>
-                <li>Convertit les chaînes numériques spécifiques à la culture en entiers.</li>
-                <li>Ne lève jamais d'exception. Renvoie false s'il ne peut pas analyser un entier.</li>
+                <li>
+                  Convertit différentes chaînes numériques en nombres entiers.
+                </li>
+                <li>
+                  Convertit la représentation sous forme de chaîne de différents
+                  styles de nombres.
+                </li>
+                <li>
+                  Convertit les chaînes numériques spécifiques à la culture en
+                  entiers.
+                </li>
+                <li>
+                  Ne lève jamais d'exception. Renvoie false s'il ne peut pas
+                  analyser un entier.
+                </li>
                 <li>Doit utiliser le paramètre out.</li>
               </ul>
               <img
                 src="/img/dotnet/string2int-tryparse-syntax.PNG"
                 alt="string2int tryparse syntax"
               />
-              <img
-                src="/img/dotnet/string2int-tryparse-script.PNG"
-                alt="string2int tryparse script"
-              />
+              <Highlight language="csharp">
+                {`string numberStr = "123456";
+int number;
+
+bool isParsable = Int32.TryParse(numberStr, out number);
+
+if (isParsable)
+    Console.WriteLine(number);
+else
+    Console.WriteLine("Could not be parsed.");`}
+              </Highlight>
             </div>
           </article>
         </section>

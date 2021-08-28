@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Collections() {
   return (
@@ -102,10 +104,14 @@ export default function Collections() {
                 The <code>Dictionary&lt;TKey, TValue&gt;</code> is a generic
                 collection that stores key-value pairs in no particular order.
               </p>
-              <img
-                src="/img/dotnet/collections-dictionary.PNG"
-                alt="collections dictionary"
-              />
+              <Highlight language="csharp">
+                {`//creating a dictionary using collection-initializer syntax
+var cities = new Dictionary<string, string>(){
+  {"UK","London"},
+  {"USA","New York"},
+  {"India","Mumbai,"}
+};`}
+              </Highlight>
             </div>
           </article>
           <article id="stack">
@@ -115,7 +121,10 @@ export default function Collections() {
                 <code>Stack</code> is a special type of collection that stores
                 elements in LIFO style (Last In First Out).
               </p>
-              <img src="/img/dotnet/collections-stack.PNG" alt="collections stack" />
+              <Highlight language="csharp">
+                {`int[] arr = new int[]{ 1, 2, 3, 4};
+Stack<int> myStack = new Stack<int>(arr);`}
+              </Highlight>
             </div>
           </article>
           <article id="queue">

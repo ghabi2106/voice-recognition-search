@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Covariance() {
   return (
@@ -87,16 +89,28 @@ export default function Covariance() {
                 dealing with class hierarchy. They can be applied on delegate,
                 generic, array, interface, etc.
               </p>
-              <img src="/img/dotnet/class-hierarchy.PNG" alt="Class Hierarchy" />
+              <Highlight language="csharp">
+                {`public class Small
+{ 
+
+}
+public class Big: Small
+{
+
+}
+public class Bigger : Big
+{ 
+    
+}`}
+              </Highlight>
               <img
-                src="/img/dotnet/class-initialization.PNG"
+                src="/img/dotnet/class-initialization.png"
                 alt="Class initialization"
               />
               <p>
                 A base class can hold a derived class but a derived class cannot
                 hold a base class.
               </p>
-              <img src="/img/dotnet/co-contra-variance.PNG" alt="co-contra-variance" />
             </div>
           </article>
           <article id="covariance">
@@ -106,7 +120,35 @@ export default function Covariance() {
                 Covariance enables you to use a more derived type than
                 originally specified.
               </p>
-              <img src="/img/dotnet/covariance-script.PNG" alt="covariance script" />
+              <Highlight language="csharp">
+                {`public delegate Small covarDel(Big mc);
+
+public class Program
+{
+    public static Big Method1(Big bg)
+    {
+        Console.WriteLine("Method1");
+    
+        return new Big();
+    }
+    public static Small Method2(Big bg)
+    {
+        Console.WriteLine("Method2");
+    
+        return new Small();
+    }
+        
+    public static void Main(string[] args)
+    {
+        covarDel del = Method1;
+
+        Small sm1 = del(new Big());
+
+        del= Method2;
+        Small sm2 = del(new Big());
+    }
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="contravariance">
@@ -116,10 +158,37 @@ export default function Covariance() {
                 Contravariance enables you to use a more generic (less derived)
                 type than originally specified.
               </p>
-              <img
-                src="/img/dotnet/contravariance-script.PNG"
-                alt="contravariance script"
-              />
+              <Highlight language="csharp">
+                {`delegate Small covarDel(Big mc);
+
+class Program
+{
+    static Big Method1(Big bg)
+    {
+        Console.WriteLine("Method1");
+        return new Big();
+    }
+    static Small Method2(Big bg)
+    {
+        Console.WriteLine("Method2");
+        return new Small();
+    }
+
+    static Small Method3(Small sml)
+    {
+        Console.WriteLine("Method3");
+        
+        return new Small();
+    }
+    static void Main(string[] args)
+    {
+        covarDel del = Method1;
+        del += Method2;
+        del += Method3;
+
+        Small sm = del(new Big());
+}`}
+              </Highlight>
             </div>
           </article>
         </section>

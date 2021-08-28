@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Threads() {
   return (
@@ -98,7 +100,13 @@ export default function Threads() {
               <p>
                 A threadpool is a pool of threads, which are ready to carry out
               </p>
-              <img src="/img/dotnet/task-create.PNG" alt="task-create" />
+              <Highlight language="csharp">
+                {`static void Main(string[] args) {  
+    Task < string > obTask = Task.Run(() => (  
+        return“ Hello”));  
+    Console.WriteLine(obTask.result);  
+} `}
+              </Highlight>
             </div>
           </article>
           <article id="thread">
@@ -110,7 +118,13 @@ export default function Threads() {
                 The thread class System.Threading from .NET is just a way to
                 create and manage threads.
               </p>
-              <img src="/img/dotnet/thread-create.PNG" alt="thread-create" />
+              <Highlight language="csharp">
+                {`static void Main(string[] args) {  
+    Thread thread = new Thread(new ThreadStart(getMyName));  
+    thread.Start();  
+}  
+public void getMyName() {} `}
+              </Highlight>
             </div>
           </article>
           <article id="task-thread">

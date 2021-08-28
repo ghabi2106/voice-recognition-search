@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Enumindexer() {
   return (
@@ -87,7 +89,18 @@ export default function Enumindexer() {
                 groupe de constantes(variables non modifiables/en lecture
                 seule).
               </p>
-              <img src="/img/dotnet/type-enum.PNG" alt="type enum" />
+              <Highlight language="csharp">
+                {`enum WeekDays
+{
+    Monday,     // 0
+    Tuesday,    // 1
+    Wednesday,  // 2
+    Thursday,   // 3
+    Friday,     // 4
+    Saturday,   // 5
+    Sunday      // 6
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="indexer">
@@ -101,11 +114,38 @@ export default function Enumindexer() {
                 <code>this</code>mot-clé avec des crochets et des paramètres.
               </p>
               <ul>
-                <li>L'indexeur n'autorise pas les paramètres de référence et de sortie.</li>
+                <li>
+                  L'indexeur n'autorise pas les paramètres de référence et de
+                  sortie.
+                </li>
                 <li>L'indexeur peut être surchargé.</li>
                 <li>L'indexeur peut également être générique.</li>
               </ul>
-              <img src="/img/dotnet/indexer.PNG" alt="indexer" />
+              <Highlight language="csharp">
+                {`class StringDataStore
+{
+    private string[] strArr = new string[10]; // internal data storage
+
+    public string this[int index]
+    {
+        get
+        {
+            if (index < 0 || index >= strArr.Length)
+                throw new IndexOutOfRangeException("Index out of range");
+
+                return strArr[index];
+        }
+
+        set
+        {
+            if (index < 0 ||  index >= strArr.Length)
+                throw new IndexOutOfRangeException("Index out of range");
+
+            strArr[index] = value;
+        }
+    }
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="generic">

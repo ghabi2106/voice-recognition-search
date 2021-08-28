@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Linq() {
   return (
@@ -315,7 +317,14 @@ export default function Linq() {
                 former un groupe ou pour continuer une requête après une{" "}
                 <code>select</code> clause.
               </p>
-              <img src="/img/dotnet/linq-into.PNG" alt="linq-into" />
+              <Highlight language="csharp">
+                {`var teenAgerStudents = from s in studentList
+    where s.age > 12 && s.age < 20
+    select s
+        into teenStudents
+        where teenStudents.StudentName.StartsWith("B")
+        select teenStudents;`}
+              </Highlight>
             </div>
           </article>
           <article id="deferred-immediate">
@@ -336,12 +345,20 @@ export default function Linq() {
                 </tr>
                 <tr>
                   <td>
-                    Projection Operator – Select, SelectMany Restriction
-                    Operator – Where Paging Operator – Take, Skip
+                    Projection Operator – <code>Select, SelectMany</code>
+                    <br />
+                    Restriction Operator – <code>Where</code>
+                    <br />
+                    Paging Operator – <code>Take, Skip</code>
                   </td>
                   <td>
-                    Aggregate Functions – Count, Average, Min, Max, Sum Element
-                    Operators – First, Last, SingleToList, ToArray, ToDictionary
+                    Aggregate Functions –{" "}
+                    <code>Count, Average, Min, Max, Sum</code>
+                    <br />
+                    Element Operators –{" "}
+                    <code>
+                      First, Last, SingleToList, ToArray, ToDictionary
+                    </code>
                   </td>
                 </tr>
               </tbody>

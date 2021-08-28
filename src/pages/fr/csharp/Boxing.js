@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Boxing() {
   return (
@@ -86,7 +88,10 @@ export default function Boxing() {
                 Le boxing est le processus de conversion d'un type valeur en
                 type objet.
               </p>
-              <img src="/img/dotnet/boxing.PNG" alt="boxing" />
+              <Highlight language="csharp">
+                {`int i = 10;
+object o = i; //performs boxing`}
+              </Highlight>
             </div>
           </article>
           <article id="unboxing">
@@ -96,7 +101,10 @@ export default function Boxing() {
                 C'est le processus de conversion d'un type référence en type
                 valeur.
               </p>
-              <img src="/img/dotnet/unboxing.PNG" alt="unboxing" />
+              <Highlight language="csharp">
+                {`object o = 10;
+int i = (int)o; //performs unboxing`}
+              </Highlight>
             </div>
           </article>
           <article id="boxing-unboxing">
@@ -120,8 +128,8 @@ export default function Boxing() {
                   <td>Extraire le type de valeur de l'objet</td>
                 </tr>
                 <tr>
-                  <td>ex : obj myObject = i;</td>
-                  <td>ex : i = (int)myObject;</td>
+                  <td>ex : <code>obj myObject = i;</code></td>
+                  <td>ex : <code>i = (int)myObject;</code></td>
                 </tr>
               </tbody>
             </table>
