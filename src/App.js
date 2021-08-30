@@ -12,10 +12,12 @@ import Routing from "./components/Routing";
 import { pagesdotnet } from "./json/search/searchdotnet";
 import { pagesreact } from "./json/search/searchreact";
 import { pagesangular } from "./json/search/searchangular";
+import { pagessql } from "./json/search/searchsql";
 
 import { urlsdotnet } from "./json/urls/urlsdotnet";
 import { urlsreact } from "./json/urls/urlsreact";
 import { urlsangular } from "./json/urls/urlsangular";
+import { urlssql } from "./json/urls/urlssql";
 //#endregion
 
 //import logo from './logo.svg';
@@ -38,6 +40,8 @@ function App() {
         return pagesreact;
       case "angular":
         return pagesangular;
+      case "sql":
+        return pagessql;
       default:
         return pagesdotnet;
     }
@@ -51,6 +55,8 @@ function App() {
         return urlsreact;
       case "angular":
         return urlsangular;
+      case "sql":
+        return urlssql;
       default:
         return urlsdotnet;
     }
@@ -102,6 +108,11 @@ function App() {
         setUrls(urlsangular);
         localStorage.setItem("course", "angular");
         break;
+      case "sql":
+        setPages(pagessql);
+        setUrls(urlssql);
+        localStorage.setItem("course", "sql");
+        break;
       default:
         setPages(pagesdotnet);
         setUrls(urlsdotnet);
@@ -137,6 +148,7 @@ function App() {
                 <option value="dotnet">.Net</option>
                 <option value="angular">Angular</option>
                 <option value="react">React</option>
+                <option value="sql">SQL</option>
               </select>
               <button
                 className="btn btn-outline-success"

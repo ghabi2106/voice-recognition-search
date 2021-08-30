@@ -3,6 +3,7 @@ import { CourseContext } from "../../App";
 import Routeangularfr from "./Routeangularfr";
 import Routedotnetfr from "./Routedotnetfr";
 import Routereactfr from "./Routereactfr";
+import Routesqlfr from "./Routesqlfr";
 import Routefrontendfr from "./Routefrontendfr";
 import Routepresentationfr from "./Routepresentationfr";
 
@@ -26,7 +27,13 @@ export default function Routefr() {
             <Routeangularfr />
           </>
         );
-
+      case "sql":
+        return (
+          <>
+            <Routefrontendfr />
+            <Routesqlfr />
+          </>
+        );
       default:
         return <h1>No project match</h1>;
     }

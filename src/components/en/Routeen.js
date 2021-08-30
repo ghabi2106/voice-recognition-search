@@ -3,6 +3,7 @@ import { CourseContext } from "../../App";
 import Routeangularen from "./Routeangularen";
 import Routereacten from "./Routereacten";
 import Routecsharpen from "./Routecsharpen";
+import Routesqlen from "./Routesqlen";
 import Routefrontenden from "./Routefrontenden";
 import Routepresentationen from "./Routepresentationen";
 
@@ -27,7 +28,13 @@ export default function Routeen() {
             <Routeangularen />
           </>
         );
-
+      case "sql":
+        return (
+          <>
+            <Routefrontenden />
+            <Routesqlen />
+          </>
+        );
       default:
         return <h1>No project match</h1>;
     }
