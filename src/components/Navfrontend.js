@@ -39,14 +39,8 @@ export default function Navfrontend() {
               Javascript
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/sql">
-              SQL
-            </Link>
-          </li>
         </ul>
       </li>
-
       {
         //#endregion
       }

@@ -4,6 +4,7 @@ import { CourseContext } from "../App";
 import Navreact from "./Navreact";
 import Navangular from "./Navangular";
 import Navdotnet from "./Navdotnet";
+import Navsql from "./Navsql";
 import Navfrontend from "./Navfrontend";
 
 export default function Nav() {
@@ -26,7 +27,13 @@ export default function Nav() {
             <Navangular />
           </>
         );
-
+      case "sql":
+        return (
+          <>
+            <Navfrontend />
+            <Navsql />
+          </>
+        );  
       default:
         return <h1>No project match</h1>;
     }

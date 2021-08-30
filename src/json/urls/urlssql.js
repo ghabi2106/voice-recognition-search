@@ -1,4 +1,4 @@
-export const urlstransaction = {
+export const urlssql = {
   home: "/",
   // Transaction
   "transaction": "/transaction",
