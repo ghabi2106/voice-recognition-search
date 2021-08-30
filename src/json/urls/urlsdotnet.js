@@ -9,6 +9,32 @@ export const urlsdotnet = {
   "test driven development": "/agile",
   "agile values": "/agile",
   "agile principles": "/agile",
+  // Clean Code
+  "dry": "/cleancode",
+  "clean code": "/cleancode",
+  "kiss": "/cleancode",
+  "yagni": "/cleancode",
+  "occam's razor": "/cleancode",
+  "persistence ignorance": "/cleancode",
+  "modularity": "/cleancode",
+  "bounded context": "/cleancode",
+  // Solid
+  "solid": "/solid",
+  // Design Principle vs Design Pattern
+  "design pattern versus design principle": "/designpattern",
+  "difference between design pattern and design principle": "/designpattern",
+  "design pattern": "/designpattern",
+  "design principle": "/designpattern",
+  // Singleton
+  "singleton": "/singleton",
+  // Factory
+  "factory": "/factory",
+  // Mediator
+  "mediator": "/mediator",
+  // Observer
+  "observer": "/observer",
+  // Command
+  "command": "/command",
   // Assembly
   "assembly": "/assembly",
   // Caching
@@ -56,15 +82,6 @@ export const urlsdotnet = {
   "heap and stack": "/gc",
   "difference between stack and heap": "/gc",
   "difference between heap and stack": "/gc",
-  // Clean Code
-  "dry": "/cleancode",
-  "clean code": "/cleancode",
-  "kiss": "/cleancode",
-  "yagni": "/cleancode",
-  "occam's razor": "/cleancode",
-  "persistence ignorance": "/cleancode",
-  "modularity": "/cleancode",
-  "bounded context": "/cleancode",
   // Clean Architecture
   "monolithic": "/clean",
   "clean architecture": "/clean",
@@ -99,11 +116,6 @@ export const urlsdotnet = {
   // CQRS
   "cqrs": "/cqrs",
   "command queries responbility segregation": "/cqrs",
-  // Design Principle vs Design Pattern
-  "design pattern versus design principle": "/designpattern",
-  "difference between design pattern and design principle": "/designpattern",
-  "design pattern": "/designpattern",
-  "design principle": "/designpattern",
   // Dependency injection
   "dependency injection": "/di",
   "inversion of control": "/di",
@@ -168,13 +180,6 @@ export const urlsdotnet = {
   "wcf versus web api": "/service",
   "web api versus wcf": "/service",
   "media type": "/service",
-  // Singleton Mediator Observer Command
-  "singleton": "/singleton",
-  "mediator": "/singleton",
-  "observer": "/singleton",
-  "command": "/singleton",
-  // Solid
-  "solid": "/solid",
   // Boxing and Unboxing
   "boxing": "/boxing",
   "unboxing": "/boxing",

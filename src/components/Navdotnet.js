@@ -33,11 +33,6 @@ export default function Navdotnet() {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/designpattern">
-          Design-Pattern
-        </Link>
-      </li>
-      <li className="nav-item">
         <Link className="nav-link" to="/di">
           DI
         </Link>
@@ -82,6 +77,73 @@ export default function Navdotnet() {
           Service
         </Link>
       </li>
+
+      {
+        //#region design pattern
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Design
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/agile">
+              Agile
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/cleancode">
+              Clean-Code
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/solid">
+              Solid
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/designpattern">
+              Design-Pattern
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/singleton">
+              Singleton
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/factory">
+              Factory
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/mediator">
+              Mediator
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/observer">
+              Observer
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/command">
+              Command
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
+
       {
         //#endregion
       }
@@ -104,21 +166,6 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/assembly">
               Assembly
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/agile">
-              Agile
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/cleancode">
-              Clean-Code
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/solid">
-              Solid
             </Link>
           </li>
           <li className="nav-item">

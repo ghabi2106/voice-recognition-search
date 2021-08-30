@@ -7,7 +7,6 @@ import CLRPage from "../../pages/en/dotnet/Clr";
 import ControllerPage from "../../pages/en/dotnet/Controller";
 import ControllervuedataPage from "../../pages/en/dotnet/Controllervuedata";
 import CqrsPage from "../../pages/en/dotnet/Cqrs";
-import DesignpatternPage from "../../pages/en/dotnet/Designpattern";
 import DiPage from "../../pages/en/dotnet/Di";
 import DotnetPage from "../../pages/en/dotnet/Dotnet";
 import EntityframeworkPage from "../../pages/en/dotnet/Entityframework";
@@ -17,16 +16,25 @@ import MiddlewarePage from "../../pages/en/dotnet/Middleware";
 import MvcPage from "../../pages/en/dotnet/Mvc";
 import NugetpackagesPage from "../../pages/en/dotnet/Nugetpackages";
 import ServicePage from "../../pages/en/dotnet/Service";
-import SingletonPage from "../../pages/en/dotnet/Singleton";
 import AssemblyPage from "../../pages/en/dotnet/Assembly";
 import CachingPage from "../../pages/en/dotnet/Caching";
 import DllexePage from "../../pages/en/dotnet/Dllexe";
 import DotnetcomponentsPage from "../../pages/en/dotnet/Dotnetcomponents";
 import FuncstoredprocPage from "../../pages/en/dotnet/Funcstoredproc";
 import GcPage from "../../pages/en/dotnet/Gc";
-import CleancodePage from "../../pages/en/dotnet/Cleancode";
-import SolidPage from "../../pages/en/dotnet/Solid";
-import AgilePage from "../../pages/en/dotnet/Agile";
+
+//#region dotnet
+import CleancodePage from "../../pages/en/dotnet/designpattern/Cleancode";
+import SolidPage from "../../pages/en/dotnet/designpattern/Solid";
+import AgilePage from "../../pages/en/dotnet/designpattern/Agile";
+import DesignpatternPage from "../../pages/en/dotnet/designpattern/Designpattern";
+import SingletonPage from "../../pages/en/dotnet/designpattern/Singleton";
+import MediatorPage from "../../pages/en/dotnet/designpattern/Mediator";
+import ObserverPage from "../../pages/en/dotnet/designpattern/Observer";
+import FactoryPage from "../../pages/en/dotnet/designpattern/Factory";
+import CommandPage from "../../pages/en/dotnet/designpattern/Command";
+//#endregion
+
 //#endregion
 
 //#region csharp
@@ -61,7 +69,6 @@ export default function Routecsharpen() {
       <Route path="/controller" component={ControllerPage} />
       <Route path="/controllervuedata" component={ControllervuedataPage} />
       <Route path="/cqrs" component={CqrsPage} />
-      <Route path="/designpattern" component={DesignpatternPage} />
       <Route path="/di" component={DiPage} />
       <Route path="/dotnet" component={DotnetPage} />
       <Route path="/entityframework" component={EntityframeworkPage} />
@@ -71,16 +78,29 @@ export default function Routecsharpen() {
       <Route path="/mvc" component={MvcPage} />
       <Route path="/nugetpackages" component={NugetpackagesPage} />
       <Route path="/service" component={ServicePage} />
-      <Route path="/singleton" component={SingletonPage} />
       <Route path="/assembly" component={AssemblyPage} />
       <Route path="/caching" component={CachingPage} />
       <Route path="/dllexe" component={DllexePage} />
       <Route path="/dotnetcomponents" component={DotnetcomponentsPage} />
       <Route path="/funcstoredproc" component={FuncstoredprocPage} />
       <Route path="/gc" component={GcPage} />
+
+      {
+        //#region design pattern
+      }
       <Route path="/cleancode" component={CleancodePage} />
       <Route path="/solid" component={SolidPage} />
       <Route path="/agile" component={AgilePage} />
+      <Route path="/designpattern" component={DesignpatternPage} />
+      <Route path="/singleton" component={SingletonPage} />
+      <Route path="/factory" component={FactoryPage} />
+      <Route path="/mediator" component={MediatorPage} />
+      <Route path="/observer" component={ObserverPage} />
+      <Route path="/command" component={CommandPage} />
+      {
+        //#endregion
+      }
+      
       {
         //#endregion
       }

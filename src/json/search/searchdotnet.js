@@ -9,12 +9,6 @@ export const pagesdotnet = [
   "test driven development",
   "agile values",
   "agile principles",
-  // Assembly
-  "assembly",
-  // Caching
-  "caching",
-  "cookie",
-  "cookies",
   // Clean Code
   "dry",
   "clean code",
@@ -24,6 +18,29 @@ export const pagesdotnet = [
   "persistence ignorance",
   "modularity",
   "bounded context",
+  // Solid
+  "solid",
+  // Design Principle vs Design Pattern
+  "design pattern versus design principle",
+  "difference between design pattern and design principle",
+  "design pattern",
+  "design principle",
+  // Singleton
+  "singleton",
+  // Factory
+  "factory",
+  // Mediator
+  "mediator",
+  // Observer
+  "observer",
+  // Command
+  "command",
+  // Assembly
+  "assembly",
+  // Caching
+  "caching",
+  "cookie",
+  "cookies",
   // DLL vs EXE
   "dll",
   "exe",
@@ -100,11 +117,6 @@ export const pagesdotnet = [
   // CQRS
   "cqrs",
   "command queries responbility segregation",
-  // Design Principle vs Design Pattern
-  "design pattern versus design principle",
-  "difference between design pattern and design principle",
-  "design pattern",
-  "design principle",
   // Dependency injection
   "dependency injection",
   "inversion of control",
@@ -163,13 +175,6 @@ export const pagesdotnet = [
   // Services
   "service",
   "micro service",
-  // Singleton Mediator Observer Command
-  "singleton",
-  "mediator",
-  "observer",
-  "command",
-  // Solid
-  "solid",
   // Boxing and Unboxing
   "boxing",
   "unboxing",
