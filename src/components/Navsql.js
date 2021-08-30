@@ -7,13 +7,11 @@ export default function Navsql() {
       {
         //#region SQL
       }
-
       <li className="nav-item">
         <Link className="nav-link" to="/case">
           Case
         </Link>
       </li>
-
       <li className="nav-item">
         <Link className="nav-link" to="/betweenin">
           Betweenin
