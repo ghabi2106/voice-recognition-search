@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Sql() {
+export default function Transaction() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -82,77 +82,74 @@ export default function Sql() {
           <article id="transaction">
             <h6>Transaction</h6>
             <p>
-              La transaction peut être définie comme une série d'opérations. Si
-              la transaction est réussie, toutes les modifications de données
-              effectuées dans la base de données seront validées et
-              enregistrées.
+              Transaction can be defined as a series of operations. If the
+              transaction is successful, all the data modifications performed in
+              the database will be committed and saved.
             </p>
           </article>
           <article id="acid">
-            <h6>Propriétés ACID des transactions</h6>
+            <h6>ACID properties of transactions</h6>
             <dl>
-              <dt>Atomicité</dt>
+              <dt>Atomicity</dt>
               <dd>
-                Toutes les modifications apportées aux données sont effectuées
-                comme s'il s'agissait d'une seule opération. C'est-à-dire que
-                toutes les modifications sont effectuées, ou aucune d'entre
-                elles ne l'est.
+                All changes to data are performed as if they are a single
+                operation. That is, all the changes are performed, or none of
+                them are.
               </dd>
               <dd>
-                Par exemple, dans une application qui transfère des fonds d'un
-                compte à un autre, la propriété d'atomicité garantit que, si un
-                débit est effectué avec succès à partir d'un compte, le crédit
-                correspondant est effectué sur l'autre compte.
+                For example, in an application that transfers funds from one
+                account to another, the atomicity property ensures that, if a
+                debit is made successfully from one account, the corresponding
+                credit is made to the other account.
               </dd>
-              <dt>Cohérence</dt>
+              <dt>Consistency</dt>
               <dd>
-                Les données sont dans un état cohérent au début et à la fin
-                d'une transaction.
+                Data is in a consistent state when a transaction starts and when
+                it ends.
               </dd>
               <dd>
-                Par exemple, dans une application qui transfère des fonds d'un
-                compte à un autre, la propriété de cohérence garantit que la
-                valeur totale des fonds dans les deux comptes est la même au
-                début et à la fin de chaque transaction.
+                For example, in an application that transfers funds from one
+                account to another, the consistency property ensures that the
+                total value of funds in both the accounts is the same at the
+                start and end of each transaction.
               </dd>
               <dt>Isolation</dt>
               <dd>
-                L'état intermédiaire d'une transaction est invisible pour les
-                autres transactions. Par conséquent, les transactions qui
-                s'exécutent simultanément semblent être sérialisées.
+                The intermediate state of a transaction is invisible to other
+                transactions. As a result, transactions that run concurrently
+                appear to be serialized.
               </dd>
               <dd>
-                Par exemple, dans une application qui transfère des fonds d'un
-                compte à un autre, la propriété d'isolement garantit qu'une
-                autre transaction voit les fonds transférés dans un compte ou
-                l'autre, mais pas dans les deux, ni dans aucun.
+                For example, in an application that transfers funds from one
+                account to another, the isolation property ensures that another
+                transaction sees the transferred funds in one account or the
+                other, but not in both, nor in neither.
               </dd>
-              <dt>Durabilité</dt>
+              <dt>Durability</dt>
               <dd>
-                Une fois la transaction terminée avec succès, les modifications
-                apportées aux données persistent et ne sont pas annulées, même
-                en cas de défaillance du système.
+                After a transaction successfully completes, changes to data
+                persist and are not undone, even in the event of a system
+                failure.
               </dd>
               <dd>
-                Par exemple, dans une application qui transfère des fonds d'un
-                compte à un autre, la propriété de durabilité garantit que les
-                modifications apportées à chaque compte ne seront pas annulées.
+                For example, in an application that transfers funds from one
+                account to another, the durability property ensures that the
+                changes made to each account will not be reversed.
               </dd>
             </dl>
           </article>
           <article id="commit-rollback">
-            <h6>Commit et rollback</h6>
+            <h6>Commit and rollback</h6>
             <div>
               <p>
-                Lorsqu'une transaction se termine normalement, un système de
-                traitement de transaction commit les modifications apportées aux
-                données ; c'est-à-dire qu'il les rend permanents et visibles
-                pour les autres transactions.
+                When a transaction completes normally, a transaction processing
+                system commits the changes made to the data; that is, it makes
+                them permanent and visible to other transactions.
               </p>
               <p>
-                Lorsqu'une transaction ne se termine pas normalement, le système
-                rolls back (ou annule ) les modifications ; c'est-à-dire qu'il
-                restaure les données à leur dernier état cohérent.
+                When a transaction does not complete normally, the system rolls
+                back (or backs out) the changes; that is, it restores the data
+                to its last consistent state.
               </p>
             </div>
           </article>

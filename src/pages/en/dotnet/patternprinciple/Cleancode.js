@@ -66,6 +66,12 @@ export default function Cleancode() {
           <article id="clean-code">
             <h6>Coding Standards and Principles</h6>
             <div>
+              <p>
+                “Clean code looks like it was written by someone who cares.”.
+                The goal of clean code is to encourage programmers to care.
+                Nothing will make you work faster than keeping your workspace
+                clean.
+              </p>
               <ul>
                 <li>
                   The need for coding standards, principles, and methodologies

@@ -66,6 +66,13 @@ export default function Cleancode() {
           <article id="clean-code">
             <h6>Coding Standards and Principles</h6>
             <div>
+              <p>
+                "Le code propre semble avoir été écrit par quelqu'un qui s'en
+                soucie.". Ie but du code propre est d'encourager les
+                programmeurs à s'en soucier et à être fiers de leur travail.
+                Rien ne vous fera travailler plus vite que de garder votre
+                espace de travail propre.
+              </p>
               <ul>
                 <li>
                   Le besoin de normes, de principes et de méthodologies de
