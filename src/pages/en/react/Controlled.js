@@ -68,7 +68,7 @@ export default function Controlled() {
               what is the difference between controlled and uncontrolled
               components?
             </h6>
-            <table>
+            <table class="table table-bordered">
               <caption>
                 <h4>Controlled vs Uncontrolled Components</h4>
               </caption>

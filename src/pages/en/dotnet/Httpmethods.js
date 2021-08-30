@@ -152,7 +152,7 @@ export default function Dotnet() {
                 POST is used to send data to a server to create/update a
                 resource.
               </b>
-              <table>
+              <table class="table table-bordered">
                 <tbody>
                   <tr>
                     <th>&nbsp;</th>

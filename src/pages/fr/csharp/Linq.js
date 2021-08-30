@@ -329,7 +329,7 @@ export default function Linq() {
           </article>
           <article id="deferred-immediate">
             <h6>Deferred Vs Immediate Query Execution in LINQ</h6>
-            <table>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
                   <td>

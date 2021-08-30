@@ -109,7 +109,7 @@ int i = (int)o; //performs unboxing`}
           </article>
           <article id="boxing-unboxing">
             <h6>Boxing vs Unboxing</h6>
-            <table>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
                   <td>

@@ -142,7 +142,7 @@ export default function Typesystem() {
           </article>
           <article id="class-object">
             <h6>Class vs object</h6>
-            <table border="1">
+            <table className="table table-bordered">
               <tbody>
                 <tr>
                   <td>

@@ -146,7 +146,7 @@ export default function Router() {
           </article>
           <article id="conventional">
             <h6>How is React Router different from conventional routing?</h6>
-            <table>
+            <table class="table table-bordered">
               <caption>
                 <h4>Conventional Routing vs React Routing</h4>
               </caption>

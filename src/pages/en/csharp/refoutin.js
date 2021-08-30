@@ -132,7 +132,7 @@ export default function Refoutin() {
           </article>
           <article id="ref-out">
             <h6>ref vs out</h6>
-            <table>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
                   <th>ref</th>

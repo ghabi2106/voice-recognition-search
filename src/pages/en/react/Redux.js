@@ -236,7 +236,7 @@ export default function Redux() {
           </article>
           <article id="redux-flux">
             <h6>How is Redux different from Flux?</h6>
-            <table>
+            <table class="table table-bordered">
               <caption>
                 <h4>Flux vs Redux</h4>
               </caption>

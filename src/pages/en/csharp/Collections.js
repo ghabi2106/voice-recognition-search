@@ -136,7 +136,7 @@ Stack<int> myStack = new Stack<int>(arr);`}
           </article>
           <article id="array-list">
             <h6>Array vs ArrayList vs List</h6>
-            <table>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
                   <th>Array</th>
@@ -179,7 +179,7 @@ Stack<int> myStack = new Stack<int>(arr);`}
           </article>
           <article id="hashtable">
             <h6>Hashtable vs dictionnary</h6>
-            <table>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
                   <th>Hashtable</th>

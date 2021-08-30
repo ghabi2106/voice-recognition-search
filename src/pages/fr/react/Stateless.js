@@ -65,7 +65,7 @@ export default function Stateless() {
           <h3>Stateful vs Stateless</h3>
           <article id="stateless">
             <h6>Differentiate between stateful and stateless components.</h6>
-            <table>
+            <table class="table table-bordered">
               <caption>
                 <h4>Stateful vs Stateless</h4>
               </caption>

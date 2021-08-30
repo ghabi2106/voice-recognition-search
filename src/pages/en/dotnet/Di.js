@@ -177,7 +177,7 @@ export default function Di() {
           </article>
           <article id="lifetime">
             <h6>Lifetime managers</h6>
-            <table>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
                   <th>Parameter</th>

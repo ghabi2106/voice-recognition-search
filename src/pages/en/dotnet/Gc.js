@@ -295,7 +295,7 @@ export default function Gc() {
           </article>
           <article id="managed-unmanaged">
             <h6>What is the difference between managed and unmanaged code?</h6>
-            <table>
+            <table class="table table-bordered">
               <thead>
                 <tr>
                   <th>Managed Code</th>
@@ -320,7 +320,7 @@ export default function Gc() {
           </article>
           <article id="stack-heap">
             <h6>What is the difference between a stack and a heap?</h6>
-            <table>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
                   <td>

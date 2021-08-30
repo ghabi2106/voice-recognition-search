@@ -23,11 +23,6 @@ export default function Navdotnet() {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/controllervuedata">
-          Controller-Vue-Data
-        </Link>
-      </li>
-      <li className="nav-item">
         <Link className="nav-link" to="/cqrs">
           CQRS
         </Link>
@@ -65,11 +60,6 @@ export default function Navdotnet() {
       <li className="nav-item">
         <Link className="nav-link" to="/mvc">
           MVC
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/nugetpackages">
-          Nuget-Packages
         </Link>
       </li>
       <li className="nav-item">
@@ -163,6 +153,16 @@ export default function Navdotnet() {
           Csharp
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/controllervuedata">
+              Controller-Vue-Data
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/nugetpackages">
+              Nuget-Packages
+            </Link>
+          </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/assembly">
               Assembly

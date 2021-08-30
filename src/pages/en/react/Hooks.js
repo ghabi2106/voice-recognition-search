@@ -251,7 +251,7 @@ export default function Hooks() {
                 resulting in a single output value.
               </p>
               <img src="/img/react/hooks-reduce-js.PNG" alt="hooks reduce js" />
-              <table>
+              <table class="table table-bordered">
               <caption>
                 <h4>reduce vs useReducer</h4>
               </caption>
@@ -282,7 +282,7 @@ export default function Hooks() {
           </article>
           <article id="usestate-usereducer">
             <h6>useState vs useReducer</h6>            
-              <table>
+              <table class="table table-bordered">
               <caption>
                 <h4>useState vs useReducer</h4>
               </caption>

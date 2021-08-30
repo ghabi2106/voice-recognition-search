@@ -24,15 +24,15 @@ import FuncstoredprocPage from "../../pages/en/dotnet/Funcstoredproc";
 import GcPage from "../../pages/en/dotnet/Gc";
 
 //#region dotnet
-import CleancodePage from "../../pages/en/dotnet/designpattern/Cleancode";
-import SolidPage from "../../pages/en/dotnet/designpattern/Solid";
-import AgilePage from "../../pages/en/dotnet/designpattern/Agile";
-import DesignpatternPage from "../../pages/en/dotnet/designpattern/Designpattern";
-import SingletonPage from "../../pages/en/dotnet/designpattern/Singleton";
-import MediatorPage from "../../pages/en/dotnet/designpattern/Mediator";
-import ObserverPage from "../../pages/en/dotnet/designpattern/Observer";
-import FactoryPage from "../../pages/en/dotnet/designpattern/Factory";
-import CommandPage from "../../pages/en/dotnet/designpattern/Command";
+import CleancodePage from "../../pages/en/dotnet/patternprinciple/Cleancode";
+import SolidPage from "../../pages/en/dotnet/patternprinciple/Solid";
+import AgilePage from "../../pages/en/dotnet/patternprinciple/Agile";
+import DesignpatternPage from "../../pages/en/dotnet/patternprinciple/Designpattern";
+import SingletonPage from "../../pages/en/dotnet/patternprinciple/Singleton";
+import MediatorPage from "../../pages/en/dotnet/patternprinciple/Mediator";
+import ObserverPage from "../../pages/en/dotnet/patternprinciple/Observer";
+import FactoryPage from "../../pages/en/dotnet/patternprinciple/Factory";
+import CommandPage from "../../pages/en/dotnet/patternprinciple/Command";
 //#endregion
 
 //#endregion

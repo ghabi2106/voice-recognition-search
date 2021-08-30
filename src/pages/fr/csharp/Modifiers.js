@@ -91,7 +91,7 @@ export default function Struct() {
             <h6>Modificateurs d'accès</h6>
             <div>
               <p>Modificateurs d'accès - contrôle le niveau d'accès</p>
-              <table>
+              <table class="table table-bordered">
                 <tbody>
                   <tr>
                     <th>Modifier</th>
@@ -151,7 +151,7 @@ export default function Struct() {
                   </tr>
                 </tbody>
               </table>
-              <table>
+              <table class="table table-bordered">
                 <caption>Table 1</caption>
                 <thead>
                   <tr>
@@ -259,7 +259,7 @@ export default function Struct() {
                 Modificateurs de non-accès - ne contrôlent pas le niveau
                 d'accès, mais fournissent d'autres fonctionnalités
               </p>
-              <table>
+              <table class="table table-bordered">
                 <tbody>
                   <tr>
                     <th>Modifier</th>
@@ -368,7 +368,7 @@ export default function Struct() {
           </article>
           <article id="const-readonly">
             <h6>const vs readonly</h6>
-            <table>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
                   <td>
@@ -413,7 +413,7 @@ export default function Struct() {
           </article>
           <article id="abstruct-interface">
             <h6>class abstruct vs interface</h6>
-            <table>
+            <table class="table table-bordered">
               <tbody>
                 <tr>
                   <td>

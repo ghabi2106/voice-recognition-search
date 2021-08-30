@@ -65,7 +65,7 @@ export default function Reactvsangular() {
           <h3>React vs Angula</h3>
           <article id="">
             <h6>How is React different from Angular?</h6>
-            <table>
+            <table class="table table-bordered">
               <caption>
                 <h4>React vs Angular</h4>
               </caption>
