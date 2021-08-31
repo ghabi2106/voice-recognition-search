@@ -62,6 +62,14 @@ export default function Oop() {
                     encapsulation
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#overloading"
+                  >
+                    overloading
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -157,6 +165,15 @@ export default function Oop() {
                 </li>
               </ul>
             </div>
+          </article>
+          <article id="overloading">
+            <h6>What is method overloading?</h6>
+            <p>
+              Method overloading is creating multiple methods with the same name
+              with unique signatures in the same class. When we compile, the
+              compiler uses overload resolution to determine the specific method
+              to be invoke.
+            </p>
           </article>
         </section>
       </div>

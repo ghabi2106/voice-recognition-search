@@ -269,6 +269,8 @@ export const urlsdotnet = {
   polymorphism: "/oop",
   encapsulation: "/oop",
   properties: "/oop",
+  overloading: "/oop",
+  overload: "/oop",
   // Ref, in and Out
   ref: "/refoutin",
   out: "/refoutin",

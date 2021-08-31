@@ -62,6 +62,14 @@ export default function Oop() {
                     encapsulation
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#overloading"
+                  >
+                    overloading
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -161,6 +169,15 @@ export default function Oop() {
                 </li>
               </ul>
             </div>
+          </article>
+          <article id="overloading">
+            <h6>Qu'est-ce que la surcharge de méthode ?</h6>
+            <p>
+              La surcharge de méthode crée plusieurs méthodes avec le même nom
+              avec des signatures uniques dans la même classe. Lorsque nous
+              compilons, le compilateur utilise la résolution de surcharge pour
+              déterminer la méthode spécifique à appeler.
+            </p>
           </article>
         </section>
       </div>

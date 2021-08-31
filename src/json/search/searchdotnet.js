@@ -266,6 +266,8 @@ export const pagesdotnet = [
   "polymorphism",
   "encapsulation",
   "properties",
+  "overloading",
+  "overload",
   // Ref, in and Out
   "out",
   "ref versus out",
