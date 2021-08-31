@@ -75,6 +75,9 @@ export const pagesdotnet = [
   "heap and stack",
   "difference between stack and heap",
   "difference between heap and stack",
+  // Garbage collector methods
+  "GC method",
+  "garbage collector method",
   // Clean Architecture
   "monolithic",
   "clean architecture",

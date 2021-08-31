@@ -189,6 +189,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/gcmethods">
+              GC-Methods
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/boxing">
               Boxing
             </Link>

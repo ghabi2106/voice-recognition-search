@@ -21,6 +21,7 @@ import CachingPage from "../../pages/en/dotnet/Caching";
 import DllexePage from "../../pages/en/dotnet/Dllexe";
 import DotnetcomponentsPage from "../../pages/en/dotnet/Dotnetcomponents";
 import GcPage from "../../pages/en/dotnet/Gc";
+import GcmethodsPage from "../../pages/en/dotnet/Gcmethods";
 
 //#region dotnet
 import CleancodePage from "../../pages/en/dotnet/patternprinciple/Cleancode";
@@ -82,6 +83,7 @@ export default function Routecsharpen() {
       <Route path="/dllexe" component={DllexePage} />
       <Route path="/dotnetcomponents" component={DotnetcomponentsPage} />
       <Route path="/gc" component={GcPage} />
+      <Route path="/gcmethods" component={GcmethodsPage} />
 
       {
         //#region design pattern

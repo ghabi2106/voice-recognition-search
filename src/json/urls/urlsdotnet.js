@@ -74,6 +74,9 @@ export const urlsdotnet = {
   "heap and stack": "/gc",
   "difference between stack and heap": "/gc",
   "difference between heap and stack": "/gc",
+  // Garbage collector methods
+  "GC method": "/gcmethods",
+  "garbage collector method": "/gcmethods",
   // Clean Architecture
   monolithic: "/clean",
   "clean architecture": "/clean",
