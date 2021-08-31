@@ -252,6 +252,7 @@ export const urlsdotnet = {
   "interface versus abstract": "/modifiers",
   "abstract and interface": "/modifiers",
   "interface and abstract": "/modifiers",
+  "this": "/modifiers",
   // New features in C# 9
   "csharp new features": "/csharp-features",
   "top level statements": "/csharp-features",
@@ -306,4 +307,5 @@ export const urlsdotnet = {
   "object and class": "/typesystem",
   "difference between object and class": "/typesystem",
   "difference between class and object": "/typesystem",
+  serialization: "/typesystem",
 };

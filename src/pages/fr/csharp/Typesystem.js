@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Typesystem() {
   return (
@@ -41,6 +43,22 @@ export default function Typesystem() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#object"
+                  >
+                    Object
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#class"
+                  >
+                    Class
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#class-object"
                   >
                     class vs object
@@ -52,6 +70,14 @@ export default function Typesystem() {
                     href="#contructor-type"
                   >
                     Constructor types
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#serialization"
+                  >
+                    Serialization
                   </a>
                 </li>
               </ul>
@@ -150,6 +176,26 @@ export default function Typesystem() {
               <img src="/img/dotnet/record2.png" alt="record" />
             </div>
           </article>
+          <article id="object">
+            <h6>Qu'est-ce qu'un objet ?</h6>
+            <p>
+              Un objet est une instance d'une classe à travers laquelle nous
+              accédons aux méthodes de cette classe. Le mot-clé "new" est
+              utilisé pour créer un objet. Une classe qui crée un objet en
+              mémoire contiendra les informations sur les méthodes, les
+              variables et le comportement de cette classe.
+            </p>
+          </article>
+          <article id="class">
+            <h6>Qu'est-ce que la classe ?</h6>
+            <p>
+              Les classes sont un plan ou un ensemble d'instructions pour
+              construire un type d'objet spécifique. C'est un concept de base de
+              la programmation orientée objet qui tourne autour des entités de
+              la vie réelle. La classe en C# détermine le comportement d'un
+              objet et ce que l'objet contiendra.
+            </p>
+          </article>
           <article id="class-object">
             <h6>Class vs object</h6>
             <table class="table table-bordered">
@@ -191,6 +237,53 @@ export default function Typesystem() {
               <li>Constructeur statique</li>
               <li>Constructeur privé</li>
             </ul>
+          </article>
+          <article id="serialization">
+            <h6>Qu'est-ce que la sérialisation ?</h6>
+            <div>
+              <p>
+                La sérialisation en C# est le processus de conversion d'un objet
+                en un flux d'octets pour stocker l'objet en mémoire , une base
+                de données ou un fichier. Son objectif principal est de
+                sauvegarder l'état d'un objet afin de pouvoir le recréer en cas
+                de besoin. Le processus inverse est appelé désérialisation.
+              </p>
+              <img src="/img/dotnet/serialization.jpg" alt="serialization" />
+              <Highlight language="csharp">
+                {`using System;  
+using System.IO;  
+using System.Runtime.Serialization;  
+using System.Runtime.Serialization.Formatters.Binary;  
+public class SerialTest {  
+    public void SerializeNow() {  
+        ClassToSerialize c = new ClassToSerialize();  
+        File f = new File("temp.dat");  
+        Stream s = f.Open(FileMode.Create);  
+        BinaryFormatter b = new BinaryFormatter();  
+        b.Serialize(s, c);  
+        s.Close();  
+    }  
+    public void DeSerializeNow() {  
+        ClassToSerialize c = new ClassToSerialize();  
+        File f = new File("temp.dat");  
+        Stream s = f.Open(FileMode.Open);  
+        BinaryFormatter b = new BinaryFormatter();  
+        c = (ClassToSerialize) b.Deserialize(s);  
+        Console.WriteLine(c.name);  
+        s.Close();  
+    }  
+    public static void Main(string[] s) {  
+        SerialTest st = new SerialTest();  
+        st.SerializeNow();  
+        st.DeSerializeNow();  
+    }  
+}  
+public class ClassToSerialize {  
+    public int age = 100;  
+    public string name = "bipin";  
+}  `}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

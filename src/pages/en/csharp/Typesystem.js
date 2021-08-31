@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Typesystem() {
   return (
@@ -41,6 +43,22 @@ export default function Typesystem() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#object"
+                  >
+                    Object
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#class"
+                  >
+                    Class
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#class-object"
                   >
                     class vs object
@@ -52,6 +70,14 @@ export default function Typesystem() {
                     href="#contructor-type"
                   >
                     Constructor types
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#serialization"
+                  >
+                    Serialization
                   </a>
                 </li>
               </ul>
@@ -140,6 +166,26 @@ export default function Typesystem() {
               <img src="/img/dotnet/record2.png" alt="record" />
             </div>
           </article>
+          <article id="object">
+            <h6>What is an object?</h6>
+            <p>
+              An object is an instance of a class through which we access the
+              methods of that class. “New” keyword is used to create an object.
+              A class that creates an object in memory will contain the
+              information about the methods, variables, and behavior of that
+              class.
+            </p>
+          </article>
+          <article id="class">
+            <h6>What is Class?</h6>
+            <p>
+              Class are a blueprint or a set of instructions to build a specific
+              type of object. It is a basic concept of Object-Oriented
+              Programming which revolve around the real-life entities. Class in
+              C# determines how an object will behave and what the object will
+              contain.
+            </p>
+          </article>
           <article id="class-object">
             <h6>Class vs object</h6>
             <table className="table table-bordered">
@@ -172,13 +218,68 @@ export default function Typesystem() {
           </article>
           <article id="constructor-type">
             <h6>What are the different types of constructors in c#?</h6>
-            <ul>
-              <li>Default Constructor</li>
-              <li>Parameterized constructor</li>
-              <li>Copy Constructor</li>
-              <li>Static Constructor</li>
-              <li>Private Constructor</li>
-            </ul>
+            <div>
+              <p>
+                A constructor is a member function in a class that has the same
+                name as its class. The constructor is automatically invoked
+                whenever an object class is created. It constructs the values of
+                data members while initializing the class.
+              </p>
+              <ul>
+                <li>Default Constructor</li>
+                <li>Parameterized constructor</li>
+                <li>Copy Constructor</li>
+                <li>Static Constructor</li>
+                <li>Private Constructor</li>
+              </ul>
+            </div>
+          </article>
+          <article id="serialization">
+            <h6>What is serialization?</h6>
+            <div>
+              <p>
+                Serialization in C# is the process of converting an object into
+                a stream of bytes to store the object to memory, a database, or
+                a file. Its main purpose is to save the state of an object in
+                order to be able to recreate it when needed. The reverse process
+                is called deserialization.
+              </p>
+              <img src="/img/dotnet/serialization.jpg" alt="serialization" />
+              <Highlight language="csharp">
+                {`using System;  
+using System.IO;  
+using System.Runtime.Serialization;  
+using System.Runtime.Serialization.Formatters.Binary;  
+public class SerialTest {  
+    public void SerializeNow() {  
+        ClassToSerialize c = new ClassToSerialize();  
+        File f = new File("temp.dat");  
+        Stream s = f.Open(FileMode.Create);  
+        BinaryFormatter b = new BinaryFormatter();  
+        b.Serialize(s, c);  
+        s.Close();  
+    }  
+    public void DeSerializeNow() {  
+        ClassToSerialize c = new ClassToSerialize();  
+        File f = new File("temp.dat");  
+        Stream s = f.Open(FileMode.Open);  
+        BinaryFormatter b = new BinaryFormatter();  
+        c = (ClassToSerialize) b.Deserialize(s);  
+        Console.WriteLine(c.name);  
+        s.Close();  
+    }  
+    public static void Main(string[] s) {  
+        SerialTest st = new SerialTest();  
+        st.SerializeNow();  
+        st.DeSerializeNow();  
+    }  
+}  
+public class ClassToSerialize {  
+    public int age = 100;  
+    public string name = "bipin";  
+}  `}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

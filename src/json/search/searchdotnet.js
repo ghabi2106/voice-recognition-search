@@ -249,6 +249,7 @@ export const pagesdotnet = [
   "interface versus abstract",
   "abstract and interface",
   "interface and abstract",
+  "this",
   // New features in C# 9
   "csharp new features",
   "top level statements",
@@ -302,4 +303,5 @@ export const pagesdotnet = [
   "object and class",
   "difference between object and class",
   "difference between class and object",
+  "serialization",
 ];

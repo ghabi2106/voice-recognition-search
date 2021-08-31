@@ -54,6 +54,14 @@ export default function Struct() {
                     abstruct vs interface
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#this"
+                  >
+                    this
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -444,6 +452,17 @@ export default function Struct() {
                 </tr>
               </tbody>
             </table>
+          </article>
+          <article id="this">
+            <h6>
+              Pouvons-nous utiliser la commande « this » dans une méthode
+              statique ?
+            </h6>
+            <p>
+              Nous ne pouvons pas utiliser « this » dans une méthode statique
+              car nous ne pouvons utiliser que des variables/méthodes statiques
+              dans une méthode statique.
+            </p>
           </article>
         </section>
       </div>
