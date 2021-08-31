@@ -25,6 +25,14 @@ export default function Newfeatures() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#csharp"
+                  >
+                    C#
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#top-level-statements"
                   >
                     Top-level statements
@@ -87,6 +95,14 @@ export default function Newfeatures() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>New features in C# 9 </h3>
+          <article id="csharp">
+            <h6>What is C#?</h6>
+            <p>
+              C# is an object-oriented, type-safe, and managed language that is
+              compiled by .Net framework to generate Microsoft Intermediate
+              Language.
+            </p>
+          </article>
           <article id="top-level-statements">
             <h6>Top-level statements</h6>
             <div>
@@ -114,12 +130,18 @@ export default function Newfeatures() {
                 Pour rendre un objet immutable, on peut accomplir ça en
                 utilisant constructeur.
               </p>
-              <img src="/img/dotnet/set-only-setters1.png" alt="Init only setters" />
+              <img
+                src="/img/dotnet/set-only-setters1.png"
+                alt="Init only setters"
+              />
               <p>
                 To make immutable this, by using a constructor we can accomplish
                 that.
               </p>
-              <img src="/img/dotnet/set-only-setters2.png" alt="Init only setters" />
+              <img
+                src="/img/dotnet/set-only-setters2.png"
+                alt="Init only setters"
+              />
             </div>
           </article>
           <article id="records">
@@ -145,7 +167,10 @@ export default function Newfeatures() {
                 We can use logical operators like ‘and’, ‘or’ and ‘not’, they
                 can even be combined with relational patterns.
               </p>
-              <img src="/img/dotnet/switch.png" alt="Improved pattern matching" />
+              <img
+                src="/img/dotnet/switch.png"
+                alt="Improved pattern matching"
+              />
             </div>
           </article>
           <article id="new">
@@ -155,8 +180,14 @@ export default function Newfeatures() {
                 We can omit the type in the ‘new expression’ when the created
                 object is already known.
               </p>
-              <img src="/img/dotnet/new1.png" alt="Target-typed ‘new’ expressions" />
-              <img src="/img/dotnet/new2.png" alt="Target-typed ‘new’ expressions" />
+              <img
+                src="/img/dotnet/new1.png"
+                alt="Target-typed ‘new’ expressions"
+              />
+              <img
+                src="/img/dotnet/new2.png"
+                alt="Target-typed ‘new’ expressions"
+              />
             </div>
           </article>
         </section>

@@ -252,6 +252,8 @@ export const pagesdotnet = [
   "this",
   // New features in C# 9
   "csharp new features",
+  "csharp",
+  "c#",
   "top level statements",
   "init only setters",
   "record",

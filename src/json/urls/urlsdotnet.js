@@ -252,9 +252,11 @@ export const urlsdotnet = {
   "interface versus abstract": "/modifiers",
   "abstract and interface": "/modifiers",
   "interface and abstract": "/modifiers",
-  "this": "/modifiers",
+  this: "/modifiers",
   // New features in C# 9
   "csharp new features": "/csharp-features",
+  csharp: "/csharp-features",
+  "c#": "/csharp-features",
   "top level statements": "/csharp-features",
   "init only setters": "/csharp-features",
   "pattern matching": "/csharp-features",

@@ -25,6 +25,14 @@ export default function Newfeatures() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#csharp"
+                  >
+                    C#
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#top-level-statements"
                   >
                     Top-level statements
@@ -87,6 +95,14 @@ export default function Newfeatures() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>New features in C# 9 </h3>
+          <article id="csharp">
+            <h6>Qu'est-ce que C# ?</h6>
+            <p>
+              C# est un langage orienté objet, de type sécurisé et managé qui
+              est compilé par le framework .Net pour générer le langage
+              intermédiaire Microsoft.
+            </p>
+          </article>
           <article id="top-level-statements">
             <h6>Top-level statements</h6>
             <div>
@@ -112,12 +128,18 @@ export default function Newfeatures() {
                 Pour rendre un objet immutable, on peut accomplir ça en
                 utilisant constructeur.
               </p>
-              <img src="/img/dotnet/set-only-setters1.png" alt="Init only setters" />
+              <img
+                src="/img/dotnet/set-only-setters1.png"
+                alt="Init only setters"
+              />
               <p>
                 On peut accomplir ça en utilisant c# 9 syntaxe en utilisant
                 init.
               </p>
-              <img src="/img/dotnet/set-only-setters2.png" alt="Init only setters" />
+              <img
+                src="/img/dotnet/set-only-setters2.png"
+                alt="Init only setters"
+              />
             </div>
           </article>
           <article id="records">
@@ -141,20 +163,31 @@ export default function Newfeatures() {
             <div>
               <b>Logical patterns and Relational Pattern Matching In Switch</b>
               <p>
-                On peut utiliser des opérateurs logiques comme 'and' , 'or' et 'not' ,
-                ils peuvent même être combinés avec des modèles relationnels.
+                On peut utiliser des opérateurs logiques comme 'and' , 'or' et
+                'not' , ils peuvent même être combinés avec des modèles
+                relationnels.
               </p>
-              <img src="/img/dotnet/switch.png" alt="Improved pattern matching" />
+              <img
+                src="/img/dotnet/switch.png"
+                alt="Improved pattern matching"
+              />
             </div>
           </article>
           <article id="new">
             <h6>Target-typed ‘new’ expressions</h6>
             <div>
               <p>
-              On peut omettre le type 'new' lorsque l'objet créé est déjà connu.
+                On peut omettre le type 'new' lorsque l'objet créé est déjà
+                connu.
               </p>
-              <img src="/img/dotnet/new1.png" alt="Target-typed ‘new’ expressions" />
-              <img src="/img/dotnet/new2.png" alt="Target-typed ‘new’ expressions" />
+              <img
+                src="/img/dotnet/new1.png"
+                alt="Target-typed ‘new’ expressions"
+              />
+              <img
+                src="/img/dotnet/new2.png"
+                alt="Target-typed ‘new’ expressions"
+              />
             </div>
           </article>
         </section>
