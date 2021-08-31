@@ -182,15 +182,15 @@ ADD column_name datatype;`}</Highlight>
                 L'instruction <code>SELECT INTO</code> copie les données d'une
                 table dans une nouvelle table.
               </p>
+              <Highlight language="sql">{`SELECT *
+INTO newtable [IN externaldb]
+FROM oldtable
+WHERE condition;`}</Highlight>
+              <Highlight language="sql">{`SELECT column1, column2, column3, ...
+INTO newtable [IN externaldb]
+FROM oldtable
+WHERE condition;`}</Highlight>
             </div>
-            <Highlight language="sql">{`SELECT *
-INTO newtable [IN externaldb]
-FROM oldtable
-WHERE condition;`}</Highlight>
-            <Highlight language="sql">{`SELECT column1, column2, column3, ...
-INTO newtable [IN externaldb]
-FROM oldtable
-WHERE condition;`}</Highlight>
           </article>
           <article id="insert-into-sellect">
             <h6>INSERT INTO SELECT Statement</h6>

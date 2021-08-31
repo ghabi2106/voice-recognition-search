@@ -28,19 +28,25 @@ export default function Funcproc() {
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#stored-procedure"
-                  >Stored Procedure</a>
+                  >
+                    Stored Procedure
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#function"
-                  >Function</a>
+                  >
+                    Function
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#function-proc"
-                  >Stored Procedure vs Function</a>
+                  >
+                    Stored Procedure vs Function
+                  </a>
                 </li>
               </ul>
             </li>
@@ -79,8 +85,9 @@ export default function Funcproc() {
             <h6>Stored Procedure</h6>
             <div>
               <p>
-                A stored procedure is a prepared SQL code that you can save, so
-                the code can be reused over and over again.
+                Une procédure stockée est un code SQL préparé que vous pouvez
+                enregistrer afin que le code puisse être réutilisé maintes et
+                maintes fois.
               </p>
               <dl>
                 <dt>Stored Procedure Syntax</dt>
@@ -111,9 +118,9 @@ GO;`}</Highlight>
             <h6>Functions</h6>
             <div>
               <p>
-                A function is compiled and executed every time whenever it is
-                called. A function must return a value and cannot modify the
-                data received as parameters.
+                Une fonction est compilée et exécutée à chaque fois qu'elle est
+                appelée. Une fonction doit retourner une valeur et ne peut pas
+                modifier les données reçues en paramètre.
               </p>
               <dl>
                 <dt>Functions</dt>
@@ -142,58 +149,64 @@ end `}</Highlight>
             <h6>Stored Procedure vs Function</h6>
             <div>
               <p>
-                Basic Differences between Stored Procedure and Function in SQL
-                Server
+                Différences de base entre la procédure stockée et la fonction
+                dans SQL Server.
               </p>
               <ul>
                 <li>
-                  The function must return a value but in Stored Procedure it is
-                  optional. Even a procedure can return zero or n values.
+                  La fonction doit renvoyer une valeur mais dans la procédure
+                  stockée, elle est facultative. Même une procédure peut
+                  renvoyer zéro ou n valeurs.
                 </li>
                 <li>
-                  Functions can be called from Procedure whereas Procedures
-                  cannot be called from a Function.
+                  Les fonctions peuvent être appelées à partir d'une procédure
+                  alors que les procédures ne peuvent pas être appelées à partir
+                  d'une fonction.
                 </li>
               </ul>
               <p>
-                Advance Differences between Stored Procedure and Function in SQL
-                Server
+                Différences avancées entre la procédure stockée et la fonction
+                dans SQL Server
               </p>
               <ul>
                 <li>
-                  The procedure allows SELECT as well as
-                  DML(INSERT/UPDATE/DELETE) statement in it whereas Function
-                  allows only SELECT statement in it.
+                  La procédure autorise l'instruction SELECT ainsi que
+                  l'instruction DML (INSERT/UPDATE/DELETE) alors que la fonction
+                  n'y autorise que l'instruction SELECT.
                 </li>
                 <li>
-                  Procedures cannot be utilized in a SELECT statement whereas
-                  Function can be embedded in a SELECT statement.
+                  Les procédures ne peuvent pas être utilisées dans une
+                  instruction SELECT alors que Function peut être incorporée
+                  dans une instruction SELECT.
                 </li>
                 <li>
-                  Stored Procedures cannot be used in the SQL statements
-                  anywhere in the WHERE/HAVING/SELECT section whereas Function
-                  can be.
+                  Les procédures stockées ne peuvent pas être utilisées dans les
+                  instructions SQL n'importe où dans la section
+                  WHERE/HAVING/SELECT alors que Function peut l'être.
                 </li>
                 <li>
-                  Functions that return tables can be treated as another rowset.
-                  This can be used in JOINs with other tables.
+                  Les fonctions qui renvoient des tables peuvent être traitées
+                  comme un autre ensemble de lignes. Cela peut être utilisé dans
+                  les JOINTURE avec d'autres tables.
                 </li>
                 <li>
-                  Inline Function can be though of as views that take parameters
-                  and can be used in JOINs and other Rowset operations.
+                  La fonction en ligne peut être considérée comme une vue qui
+                  prend des paramètres et peut être utilisée dans les JOIN et
+                  autres opérations d'ensemble de lignes.
                 </li>
                 <li>
-                  An exception can be handled by try-catch block in a Procedure
-                  whereas try-catch block cannot be used in a Function.
+                  Une exception peut être gérée par le bloc try-catch dans une
+                  procédure alors que le bloc try-catch ne peut pas être utilisé
+                  dans une fonction.
                 </li>
                 <li>
-                  We can use Transactions in Procedure whereas we can't use
-                  Transactions in Function.
+                  Nous pouvons utiliser Transactions in Procedure alors que nous
+                  ne pouvons pas utiliser Transactions in Function.
                 </li>
               </ul>
             </div>
           </article>
-       </section>
+        </section>
       </div>
     </>
   );
