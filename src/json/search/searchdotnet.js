@@ -250,6 +250,8 @@ export const pagesdotnet = [
   "abstract and interface",
   "interface and abstract",
   "this",
+  "is",
+  "as",
   // New features in C# 9
   "csharp new features",
   "csharp",

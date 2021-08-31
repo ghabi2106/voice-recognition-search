@@ -62,6 +62,14 @@ export default function Struct() {
                     this
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#is-as"
+                  >
+                    is - as
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -449,6 +457,19 @@ export default function Struct() {
               We can’t use “this” in a static method because we can only use
               static variables/methods in a static method.
             </p>
+          </article>
+          <article id="is-as">
+            <h6>What is difference between “is” and “as” operators in c#?</h6>
+            <div>
+              <p>
+                “is” operator is used to check the compatibility of an object
+                with a given type, and it returns the result as Boolean.
+              </p>
+              <p>
+                “as” operator is used for casting of an object to a type or a
+                class.
+              </p>
+            </div>
           </article>
         </section>
       </div>

@@ -62,6 +62,14 @@ export default function Struct() {
                     this
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#is-as"
+                  >
+                    is - as
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -463,6 +471,20 @@ export default function Struct() {
               car nous ne pouvons utiliser que des variables/méthodes statiques
               dans une méthode statique.
             </p>
+          </article>
+          <article id="is-as">
+            <h6>What is difference between “is” and “as” operators in c#?</h6>
+            <div>
+              <p>
+                L'opérateur « is » est utilisé pour vérifier la compatibilité
+                d'un objet avec un type donné, et il renvoie le résultat sous
+                forme booléenne.
+              </p>
+              <p>
+                L'opérateur "as" est utilisé pour convertir un objet en un type
+                ou une classe.
+              </p>
+            </div>
           </article>
         </section>
       </div>
