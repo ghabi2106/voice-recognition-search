@@ -184,11 +184,6 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/funcstoredproc">
-              Func-Proc
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link className="dropdown-item" to="/gc">
               GC
             </Link>

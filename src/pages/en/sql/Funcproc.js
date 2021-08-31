@@ -151,10 +151,6 @@ end `}</Highlight>
                   optional. Even a procedure can return zero or n values.
                 </li>
                 <li>
-                  Functions can have only input parameters for it whereas
-                  Procedures can have input or output parameters.
-                </li>
-                <li>
                   Functions can be called from Procedure whereas Procedures
                   cannot be called from a Function.
                 </li>

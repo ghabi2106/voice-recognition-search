@@ -20,7 +20,6 @@ import AssemblyPage from "../../pages/en/dotnet/Assembly";
 import CachingPage from "../../pages/en/dotnet/Caching";
 import DllexePage from "../../pages/en/dotnet/Dllexe";
 import DotnetcomponentsPage from "../../pages/en/dotnet/Dotnetcomponents";
-import FuncstoredprocPage from "../../pages/en/dotnet/Funcstoredproc";
 import GcPage from "../../pages/en/dotnet/Gc";
 
 //#region dotnet
@@ -82,7 +81,6 @@ export default function Routecsharpen() {
       <Route path="/caching" component={CachingPage} />
       <Route path="/dllexe" component={DllexePage} />
       <Route path="/dotnetcomponents" component={DotnetcomponentsPage} />
-      <Route path="/funcstoredproc" component={FuncstoredprocPage} />
       <Route path="/gc" component={GcPage} />
 
       {

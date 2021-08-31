@@ -53,14 +53,6 @@ export const pagesdotnet = [
   // dotnet components
   "dotnet components",
   ".net components",
-  // Function vs Stored procedure
-  "function",
-  "stored procedure",
-  "function versus stored procedure",
-  "stored procedure versus function",
-  "function stored procedure",
-  "difference between function and stored procedure",
-  "difference between stored procedure and function",
   // Garbage collector
   "gc",
   "garbage collector",
