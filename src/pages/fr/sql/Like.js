@@ -77,20 +77,17 @@ export default function Like() {
             <h6>LIKE Operator</h6>
             <div>
               <p>
-                The <code>LIKE</code> operator is used in a <code>WHERE</code>{" "}
-                clause to search for a specified pattern in a column.
+                L'opérateur  <code>LIKE</code> est utilisé dans une <code>WHERE</code> clause pour rechercher un modèle spécifié dans une colonne.
               </p>
               <p>
-                There are two wildcards often used in conjunction with the{" "}
-                <code>LIKE</code> operator:
+              Il existe deux caractères génériques souvent utilisés en conjonction avec l'opérateur <code>LIKE</code> :
               </p>
               <ul>
                 <li>
-                  &nbsp;The percent sign (%) represents zero, one, or multiple
-                  characters
+                Le signe de pourcentage (%) représente zéro, un ou plusieurs caractères
                 </li>
                 <li>
-                  &nbsp;The underscore sign (_) represents one, single character
+                Le signe de soulignement (_) représente un seul caractère
                 </li>
               </ul>
               <Highlight language="sql">{`SELECT column1, column2, ...
@@ -102,10 +99,8 @@ WHERE columnN LIKE pattern;`}</Highlight>
             <h6>Wildcards</h6>
             <div>
               <p>
-                Wildcard characters are used with the <code> LIKE</code>
-                operator. The <code>LIKE</code> operator is used in a{" "}
-                <code>WHERE</code> clause to search for a specified pattern in a
-                column.
+              Des caractères génériques sont utilisés avec l'opérateur <code> LIKE</code>. l'opérateur <code>LIKE</code> est utilisé dans
+                <code>WHERE</code> clause pour rechercher un modèle spécifié dans une colonne.
               </p>
               <table class="table table-bordered">
                 <tbody>

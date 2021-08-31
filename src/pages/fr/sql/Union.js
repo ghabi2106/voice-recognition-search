@@ -77,20 +77,23 @@ export default function Union() {
             <h6>UNION Operator</h6>
             <div>
               <p>
-                The <code>UNION</code> operator is used to combine the
-                result-set of two or more
+                L'opérateur <code>UNION</code> est utilisé pour combiner
+                l'ensemble de résultats de deux ou plusieurs instructions{" "}
                 <code>SELECT</code>
                 statements.
               </p>
               <ul>
                 <li>
-                  Every <code>SELECT</code> statement within
-                  <code>UNION</code> must have the same number of columns
+                  Chaque instruction <code>SELECT</code> à l'intérieur{" "}
+                  <code>UNION</code> doit avoir le même nombre de colonnes.
                 </li>
-                <li>The columns must also have similar data types</li>
                 <li>
-                  The columns in every <code>SELECT</code> statement must also
-                  be in the same order
+                  Les colonnes doivent également avoir des types de données
+                  similaires
+                </li>
+                <li>
+                  Les colonnes de chaque instruction <code>SELECT</code> doivent
+                  également être dans le même ordre
                 </li>
               </ul>
               <Highlight language="sql">{`SELECT column_name(s) FROM table1
@@ -102,8 +105,9 @@ SELECT column_name(s) FROM table2;`}</Highlight>
             <h6>UNION ALL</h6>
             <div>
               <p>
-                The <code>UNION</code> operator selects only distinct values by
-                default. To allow duplicate values, use <code>UNION ALL</code>:
+                L'opérateur <code>UNION</code> sélectionne uniquement des
+                valeurs distinctes par défaut. Pour autoriser les valeurs en
+                double, utilisez <code>UNION ALL</code>:
               </p>
               <Highlight language="sql">{`SELECT column_name(s) FROM table1
 UNION ALL

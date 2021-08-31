@@ -149,8 +149,8 @@ export default function Constraint() {
             <h6>SQL Constraints</h6>
             <div>
               <p>
-                SQL constraints are used to specify rules for the data in a
-                table.
+                Les contraintes SQL sont utilisées pour spécifier des règles
+                pour les données d'une table.
               </p>
               <Highlight language="sql">
                 {`CREATE TABLE table_name (
@@ -162,33 +162,33 @@ export default function Constraint() {
               </Highlight>
               <ul>
                 <li>
-                  <code>NOT NULL</code> - Ensures that a column cannot have a
-                  NULL value
+                  <code>NOT NULL</code> - Assure qu'une colonne ne peut pas
+                  avoir une valeur NULL.
                 </li>
                 <li>
-                  <code>UNIQUE</code> - Ensures that all values in a column are
-                  different
+                  <code>UNIQUE</code> - Assure que toutes les valeurs d'une
+                  colonne sont différentes.
                 </li>
                 <li>
-                  <code>PRIMARY KEY</code> - A combination of a
-                  <code>NOT NULL</code> and <code>UNIQUE</code>. Uniquely
-                  identifies each row in a table
+                  <code>PRIMARY KEY</code> - Une combinaison de
+                  <code>NOT NULL</code> et <code>UNIQUE</code>. Identifie de
+                  manière unique chaque ligne d'un tableau
                 </li>
                 <li>
-                  <code>FOREIGN KEY</code>- Prevents actions that would destroy
-                  links between tables
+                  <code>FOREIGN KEY</code>- Empêche les actions qui détruiraient
+                  les liens entre les tables.
                 </li>
                 <li>
-                  <code>CHECK</code> - Ensures that the values in a column
-                  satisfies a specific condition
+                  <code>CHECK</code> - Assure que les valeurs d'une colonne
+                  satisfont à une condition spécifique.
                 </li>
                 <li>
-                  <code>DEFAULT</code> - Sets a default value for a column if no
-                  value is specified
+                  <code>DEFAULT</code> - Définit une valeur par défaut pour une
+                  colonne si aucune valeur n'est spécifiée.
                 </li>
                 <li>
-                  <code>CREATE INDEX</code> - Used to create and retrieve data
-                  from the database very quickly
+                  <code>CREATE INDEX</code> - Utilisé pour créer et récupérer
+                  des données de la base de données très rapidement.
                 </li>
               </ul>
             </div>
@@ -197,9 +197,9 @@ export default function Constraint() {
             <h6>PRIMARY KEY Constraint</h6>
             <div>
               <p>
-                <code>PRIMARY KEY</code> - A combination of a
-                <code>NOT NULL</code> and <code>UNIQUE</code>. Uniquely
-                identifies each row in a table
+                <code>PRIMARY KEY</code> - Une combinaison de
+                <code>NOT NULL</code> et <code>UNIQUE</code>. Identifie de
+                manière unique chaque ligne d'un tableau
               </p>
               <dl>
                 <dt>SQL PRIMARY KEY on CREATE TABLE</dt>
@@ -251,8 +251,8 @@ DROP CONSTRAINT PK_Person;`}
             <h6>FOREIGN KEY Constraint</h6>
             <div>
               <p>
-                <code>FOREIGN KEY</code>- Prevents actions that would destroy
-                links between tables
+                <code>FOREIGN KEY</code>- Empêche les actions qui détruiraient
+                les liens entre les tables.
               </p>
               <dl>
                 <dt>SQL FOREIGN KEY on CREATE TABLE</dt>
@@ -305,8 +305,8 @@ DROP CONSTRAINT FK_PersonOrder;`}
             <h6>SQL UNIQUE Constraint</h6>
             <div>
               <p>
-                <code>UNIQUE</code> - Ensures that all values in a column are
-                different
+                <code>UNIQUE</code> - Assure que toutes les valeurs d'une
+                colonne sont différentes.
               </p>
               <dl>
                 <dt>SQL UNIQUE Constraint on CREATE TABLE</dt>
@@ -358,8 +358,8 @@ DROP CONSTRAINT UC_Person;`}
             <h6>SQL NOT NULL Constraint</h6>
             <div>
               <p>
-                <code>NOT NULL</code> - Ensures that a column cannot have a NULL
-                value
+                <code>NOT NULL</code> - Assure qu'une colonne ne peut pas avoir
+                une valeur NULL.
               </p>
               <dl>
                 <dt>SQL NOT NULL on CREATE TABLE</dt>
@@ -387,8 +387,8 @@ MODIFY Age int NOT NULL;`}
             <h6>SQL DEFAULT Constraint</h6>
             <div>
               <p>
-                <code>DEFAULT</code> - Sets a default value for a column if no
-                value is specified
+                <code>DEFAULT</code> - Définit une valeur par défaut pour une
+                colonne si aucune valeur n'est spécifiée.
               </p>
               <dl>
                 <dt>SQL DEFAULT on CREATE TABLE</dt>
@@ -434,8 +434,8 @@ ALTER COLUMN City DROP DEFAULT;`}
             <h6>SQL CHECK Constraint</h6>
             <div>
               <p>
-                <code>CHECK</code> - Ensures that the values in a column
-                satisfies a specific condition
+                <code>CHECK</code> - Assure que les valeurs d'une colonne
+                satisfont à une condition spécifique.
               </p>
               <dl>
                 <dt>SQL CHECK on CREATE TABLE</dt>
@@ -487,24 +487,29 @@ DROP CONSTRAINT CHK_PersonAge;`}
           <article id="primary-unique">
             <h6>Primary key vs Unique Key</h6>
             <p>
-              Both Primary and Unique key carry unique values but the primary
-              key can not have a null value where the Unique key can. And in a
-              table, there cannot be more than one Primary key but unique keys
-              can be multiple.
+              La clé primaire et la clé unique portent toutes deux des valeurs
+              uniques, mais la clé primaire ne peut pas avoir une valeur nulle
+              là où la clé unique peut l'avoir. Et dans une table, il ne peut
+              pas y avoir plus qu'une clé primaire mais les clés uniques peuvent
+              être multiples.
             </p>
           </article>
           <article id="index">
             <h6>SQL CREATE INDEX Statement</h6>
             <div>
               <p>
-                <code>CREATE INDEX</code> - Used to create and retrieve data
-                from the database very quickly
+                <code>CREATE INDEX</code> - Utilisé pour créer et récupérer des
+                données de la base de données très rapidement.
               </p>
-              <img src="img/sql/Explain-the-types-of-Indexes.png" alt="Explain-the-types-of-Indexes" />
+              <img
+                src="img/sql/Explain-the-types-of-Indexes.png"
+                alt="Explain-the-types-of-Indexes"
+              />
               <dl>
                 <dt>CREATE INDEX Syntax</dt>
                 <dd>
-                  Creates an index on a table. Duplicate values are allowed:
+                  Crée un index sur une table. Les valeurs en double sont
+                  autorisées :
                 </dd>
                 <dd>
                   <Highlight language="sql">
@@ -514,8 +519,8 @@ ON table_name (column1, column2, ...);`}
                 </dd>
                 <dt>CREATE UNIQUE INDEX Syntax</dt>
                 <dd>
-                  Creates a unique index on a table. Duplicate values are not
-                  allowed:
+                  Crée un index unique sur une table. Les valeurs en double ne
+                  sont pas autorisées :
                 </dd>
                 <dd>
                   <Highlight language="sql">
@@ -546,12 +551,12 @@ ON Persons (LastName, FirstName);`}
             </div>
           </article>
           <article id="clustered-index">
-            <h6>clustered vs non-clustered indexes.</h6>
+            <h6>les index clusterisés vs non clusterisés.</h6>
             <table class="table table-bordered">
               <thead>
                 <tr>
                   <td>
-                    <strong>Parameters</strong>
+                    <strong>Paramètres</strong>
                   </td>
                   <td>
                     <strong>Clustered Index</strong>
@@ -563,47 +568,56 @@ ON Persons (LastName, FirstName);`}
               </thead>
               <tbody>
                 <tr>
-                  <td>Used for</td>
-                  <td>Sorting and storing records physically in memory</td>
+                  <td>Utilisé pour</td>
                   <td>
-                    Creating a logical order for data rows. Pointers are used
-                    for physical data files
+                    Trier et stocker physiquement les enregistrements en mémoire
+                  </td>
+                  <td>
+                    Création d'un ordre logique pour les lignes de données. Les
+                    pointeurs sont utilisés pour les fichiers de données
+                    physiques
                   </td>
                 </tr>
                 <tr>
-                  <td>Methods for storing</td>
-                  <td>Stores data in the leaf nodes of the index</td>
-                  <td>Never stores data in the leaf nodes of the index</td>
-                </tr>
-                <tr>
-                  <td>Size</td>
-                  <td>Quite large</td>
-                  <td>Comparatively, small</td>
-                </tr>
-                <tr>
-                  <td>Data accessing</td>
-                  <td>Fast</td>
-                  <td>Slow</td>
-                </tr>
-                <tr>
-                  <td>Additional disk space</td>
-                  <td>Not required</td>
-                  <td>Required to store indexes separately</td>
-                </tr>
-                <tr>
-                  <td>Type of key</td>
+                  <td>Méthodes de stockage</td>
+                  <td>Stocke les données dans les nœuds feuilles de l'index</td>
                   <td>
-                    By default, the primary key of a table is a clustered index
-                  </td>
-                  <td>
-                    It can be used with the unique constraint on the table that
-                    acts as a composite key
+                    Ne stocke jamais de données dans les nœuds feuilles de
+                    l'index
                   </td>
                 </tr>
                 <tr>
-                  <td>Main feature</td>
-                  <td>Improves the performance of data retrieval</td>
-                  <td>Should be created on columns used in Joins</td>
+                  <td>Taille</td>
+                  <td>Assez grand</td>
+                  <td>Comparativement, petit</td>
+                </tr>
+                <tr>
+                  <td>Accès aux données</td>
+                  <td>Rapide</td>
+                  <td>Lent</td>
+                </tr>
+                <tr>
+                  <td>Espace disque supplémentaire</td>
+                  <td>Non requis</td>
+                  <td>Nécessaire pour stocker les index séparément</td>
+                </tr>
+                <tr>
+                  <td>Type de clé</td>
+                  <td>
+                    Par défaut, la clé primaire d'une table est un index
+                    clusterisé
+                  </td>
+                  <td>
+                    Il peut être utilisé avec la contrainte d'unicité sur la
+                    table qui agit comme une clé composite
+                  </td>
+                </tr>
+                <tr>
+                  <td>Caractéristique principale</td>
+                  <td>Améliore les performances de récupération des données</td>
+                  <td>
+                    Doit être créé sur les colonnes utilisées dans les jointures
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -612,8 +626,9 @@ ON Persons (LastName, FirstName);`}
             <h6>SQL AUTO INCREMENT Field</h6>
             <div>
               <p>
-                Auto-increment allows a unique number to be generated
-                automatically when a new record is inserted into a table.
+                L'auto-incrémentation permet de générer automatiquement un
+                numéro unique lorsqu'un nouvel enregistrement est inséré dans
+                une table.
               </p>
               <dl>
                 <dt></dt>
@@ -626,8 +641,8 @@ ON Persons (LastName, FirstName);`}
 );`}</Highlight>
                 </dd>
                 <dd>
-                  The MS SQL Server uses the <code>IDENTITY</code> keyword to
-                  perform an auto-increment feature.
+                  Le serveur MS SQL utilise le mot-clé<code>IDENTITY</code> pour
+                  exécuter une fonction d'auto-incrémentation.
                 </dd>
               </dl>
             </div>

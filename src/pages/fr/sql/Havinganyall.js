@@ -101,9 +101,9 @@ export default function Havinganyall() {
             <h6>HAVING Clause</h6>
             <div>
               <p>
-                The <code>HAVING</code> clause was added to SQL because the{" "}
-                <code>WHERE</code> keyword cannot be used with aggregate
-                functions.
+                La <code>HAVING</code> a été ajoutée à SQL car le mot-clé
+                <code>WHERE</code> ne peut pas être utilisé avec des fonctions
+                d'agrégation.
               </p>
               <Highlight language="sql">{`SELECT column_name(s)
 FROM table_name
@@ -117,13 +117,13 @@ ORDER BY column_name(s);`}</Highlight>
             <h6>ANY</h6>
             <div>
               <p>
-                The <code>ANY</code> and <code>ALL</code> operators allow you to
-                perform a comparison between a single column value and a range
-                of other values.
+                Les opérateurs <code>ANY</code> et <code>ALL</code> permettent
+                d'effectuer une comparaison entre une valeur de colonne unique
+                et une plage d'autres valeurs.
               </p>
               <p>
-                <code>ANY</code> means that the condition will be true if the
-                operation is true for any of the values in the range.
+                <code>ANY</code> signifie que la condition sera vraie si
+                l'opération est vraie pour l'une des valeurs de la plage.
               </p>
               <Highlight language="sql">{`SELECT column_name(s)
 FROM table_name
@@ -137,11 +137,11 @@ WHERE column_name operator ANY
             <h6>ALL Operator</h6>
             <div>
               <p>
-                <code>ALL</code> means that the condition will be true only if
-                the operation is true for all values in the range.
+                <code>ALL</code> signifie que la condition ne sera vraie que si
+                l'opération est vraie pour toutes les valeurs de la plage.
               </p>
               <dl>
-                <dt>ALL Syntax With SELECT</dt>
+                <dt>ALL Syntaxe avec SELECT</dt>
                 <dd>
                   <Highlight language="sql">{`SELECT ALL column_name(s)
 FROM table_name
@@ -163,9 +163,9 @@ WHERE column_name operator ALL
             <h6>GROUP BY Statement</h6>
             <div>
               <p>
-                The <code>GROUP BY</code> statement groups rows that have the
-                same values into summary rows, like "find the number of
-                customers in each country".
+                L'instruction <code>GROUP BY</code> regroupe les lignes qui ont
+                les mêmes valeurs dans des lignes récapitulatives, comme
+                "trouver le nombre de clients dans chaque pays".
               </p>
               <Highlight language="sql">{`SELECT column_name(s)
 FROM table_name
@@ -178,12 +178,12 @@ ORDER BY column_name(s);`}</Highlight>
             <h6>EXISTS Operator</h6>
             <div>
               <p>
-                The <code>EXISTS</code> operator is used to test for the
-                existence of any record in a subquery.
+                L'opérateur <code>EXISTS</code> est utilisé pour tester
+                l'existence de tout enregistrement dans une sous-requête.
               </p>
               <p>
-                The <code>EXISTS</code> operator returns TRUE if the subquery
-                returns one or more records.
+                L'opérateur <code>EXISTS</code> renvoie TRUE si la sous-requête
+                renvoie un ou plusieurs enregistrements.
               </p>
               <Highlight language="sql">{`SELECT column_name(s)
 FROM table_name
@@ -195,13 +195,13 @@ WHERE EXISTS
             <h6>ORDER BY</h6>
             <div>
               <p>
-                The <code>ORDER BY</code> keyword is used to sort the result-set
-                in ascending or descending order.
+                Le mot-clé <code>ORDER BY</code> est utilisé pour trier le jeu
+                de résultats par ordre croissant ou décroissant.
               </p>
               <p>
-                The <code>ORDER BY</code> keyword sorts the records in ascending
-                order by default. To sort the records in descending order, use
-                the <code>DESC</code> keyword.
+                Le mot-clé <code>ORDER BY</code> trie les enregistrements par
+                ordre croissant par défaut. Pour trier les enregistrements par
+                ordre décroissant, utilisez le mot-clé <code>DESC</code>.
               </p>
               <Highlight language="sql">{`SELECT column1, column2, ...
 FROM table_name

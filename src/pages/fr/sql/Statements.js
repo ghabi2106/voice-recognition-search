@@ -117,8 +117,8 @@ export default function Statements() {
             <h6>CREATE DATABASE Statement</h6>
             <div>
               <p>
-                The <code>CREATE DATABASE</code> statement is used to create a
-                new SQL database.
+                L'instruction <code>CREATE DATABASE</code> est utilisée pour
+                créer une nouvelle base de données SQL.
               </p>
               <Highlight language="sql">{`CREATE DATABASE databasename;`}</Highlight>
             </div>
@@ -127,8 +127,8 @@ export default function Statements() {
             <h6>DROP DATABASE Statement</h6>
             <div>
               <p>
-                The <code>DROP DATABASE</code> statement is used to drop an
-                existing SQL database.
+                L'instruction <code>DROP DATABASE</code> est utilisée pour
+                supprimer une base de données SQL existante.
               </p>
               <Highlight language="sql">{`DROP DATABASE databasename;`}</Highlight>
             </div>
@@ -137,8 +137,8 @@ export default function Statements() {
             <h6>CREATE TABLE Statement</h6>
             <div>
               <p>
-                The <code>CREATE TABLE</code> statement is used to create a new
-                table in a database.
+                L'instruction <code>CREATE TABLE</code> est utilisée pour créer
+                une nouvelle table dans une base de données.
               </p>
               <Highlight language="sql">{`CREATE TABLE table_name (
     column1 datatype,
@@ -152,8 +152,8 @@ export default function Statements() {
             <h6>DROP TABLE Statement</h6>
             <div>
               <p>
-                The <code>DROP TABLE</code> statement is used to drop an
-                existing table in a database.
+                L'instruction <code>DROP TABLE</code> est utilisée pour
+                supprimer une table existante dans une base de données.
               </p>
               <Highlight language="sql">{`DROP TABLE table_name;`}</Highlight>
             </div>
@@ -162,12 +162,14 @@ export default function Statements() {
             <h6>ALTER TABLE Statement</h6>
             <div>
               <p>
-                The <code>ALTER TABLE</code> statement is used to add, delete,
-                or modify columns in an existing table.
+                L'instruction <code>ALTER TABLE</code> est utilisée pour
+                ajouter, supprimer ou modifier des colonnes dans une table
+                existante.
               </p>
               <p>
-                The <code>ALTER TABLE</code> statement is also used to add and
-                drop various constraints on an existing table.
+                L'instruction <code>ALTER TABLE</code> est également utilisée
+                pour ajouter et supprimer diverses contraintes sur une table
+                existante.
               </p>
               <Highlight language="sql">{`ALTER TABLE table_name
 ADD column_name datatype;`}</Highlight>
@@ -177,8 +179,8 @@ ADD column_name datatype;`}</Highlight>
             <h6>SELECT INTO Statement</h6>
             <div>
               <p>
-                The <code>SELECT INTO</code> statement copies data from one
-                table into a new table.
+                L'instruction <code>SELECT INTO</code> copie les données d'une
+                table dans une nouvelle table.
               </p>
             </div>
             <Highlight language="sql">{`SELECT *
@@ -194,12 +196,12 @@ WHERE condition;`}</Highlight>
             <h6>INSERT INTO SELECT Statement</h6>
             <div>
               <p>
-                The <code>INSERT INTO SELECT</code> statement copies data from
-                one table and inserts it into another table.
+                L'instruction <code>INSERT INTO SELECT</code> copie les données
+                d'une table et les insère dans une autre table.
               </p>
               <p>
-                The <code>INSERT INTO SELECT</code> statement requires that the
-                data types in source and target tables matches.
+                L'instruction <code>INSERT INTO SELECT</code> requiert que les
+                types de données dans les tables source et cible correspondent.
               </p>
               <Highlight language="sql">{`INSERT INTO table2
 SELECT * FROM table1

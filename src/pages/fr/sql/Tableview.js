@@ -93,8 +93,8 @@ export default function Tableview() {
             <h6>Views</h6>
             <div>
               <p>
-                In SQL, a view is a virtual table based on the result-set of an
-                SQL statement.
+                En SQL, une vue est une table virtuelle basée sur le jeu de
+                résultats d'une instruction SQL.
               </p>
               <dl>
                 <dt>CREATE VIEW Syntax</dt>
@@ -119,41 +119,41 @@ WHERE condition;`}</Highlight>
             </div>
           </article>
           <article id="table-field">
-            <h6>What do you mean by table and field in SQL?</h6>
+            <h6>Qu'entendez-vous par table et champ en SQL ?</h6>
             <div>
               <p>
-                An organized data in the form of rows and columns is said to be
-                a table. Here rows and columns are referred to as tuples and
-                attributes.
+                Une donnée organisée sous forme de lignes et de colonnes est
+                dite un tableau. Ici, les lignes et les colonnes sont appelées
+                tuples et attributs.
               </p>
               <p>
-                And the number of columns in a table is referred to as a field.
-                In the record, fields represent the characteristics and
-                attributes.
+                Et le nombre de colonnes dans une table est appelé un champ.
+                Dans l'enregistrement, les champs représentent les
+                caractéristiques et les attributs.
               </p>
             </div>
           </article>
           <article id="entities-relationships">
-            <h6>What are Entities and Relationships?</h6>
+            <h6>Que sont les entités et les relations ?</h6>
             <div>
               <p>
-                <strong>Entities:</strong> Entity can be a person, place, thing,
-                or any identifiable object for which data can be stored in a
-                database.
+                <strong>Entities:</strong> une entité peut être une personne, un
+                lieu, une chose ou tout objet identifiable pour lequel des
+                données peuvent être stockées dans une base de données.
               </p>
               <p>
-                <strong>For example:</strong> In a company’s database,
-                employees, projects, salaries, etc can be referred to as
-                entities.
+                <strong>Par example:</strong> IDans la base de données d'une
+                entreprise, les employés, les projets, les salaires, etc.
+                peuvent être appelés entités.
               </p>
               <p>
-                <strong>Relationships:</strong> Relationships between entities
-                can be referred to as the connection between two tables or
-                entities.
+                <strong>Relationships:</strong> les relations entre les entités
+                peuvent être appelées la connexion entre deux tables ou entités.
               </p>
               <p>
-                <strong>For example:</strong> In a college database, the student
-                entity and department entities are associated with each other.
+                <strong>Par example:</strong> Dans une base de données
+                collégiale, l'entité étudiant et les entités département sont
+                associées entre elles.
               </p>
             </div>
           </article>
@@ -171,36 +171,40 @@ WHERE condition;`}</Highlight>
                 </tr>
                 <tr>
                   <td>
-                    It is a virtual table that is extracted from a database.
+                    C'est une table virtuelle qui est extraite d'une base de
+                    données.
                   </td>
                   <td>
-                    A table is structured with a set number of columns and a
-                    boundless number of rows.
-                  </td>
-                </tr>
-                <tr>
-                  <td>Views do not hold data themselves.</td>
-                  <td>
-                    A table contains data and stores the data in databases.
+                    Un tableau est structuré avec un nombre défini de colonnes
+                    et un nombre illimité de lignes.
                   </td>
                 </tr>
                 <tr>
+                  <td>Les vues ne contiennent pas de données elles-mêmes.</td>
                   <td>
-                    A view is also utilized to query certain information
-                    contained in a few distinct tables.
-                  </td>
-                  <td>
-                    A table holds fundamental client information and the cases
-                    of a characterized object.
+                    Une table contient des données et stocke les données dans
+                    des bases de données.
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    &nbsp;In a view, we will get frequently queried information.
+                    Une vue est également utilisée pour interroger certaines
+                    informations contenues dans quelques tables distinctes.
                   </td>
                   <td>
-                    In a table, changing the information in the database changes
-                    the information that appears in the view
+                    Une table contient des informations client fondamentales et
+                    les cas d'un objet caractérisé.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Dans une vue, nous obtiendrons des informations fréquemment
+                    demandées.
+                  </td>
+                  <td>
+                    Dans une table, la modification des informations dans la
+                    base de données modifie les informations qui apparaissent
+                    dans la vue
                   </td>
                 </tr>
               </tbody>

@@ -88,40 +88,55 @@ export default function Sql() {
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>SQL</h3>
           <article id="sql">
-            <h6>What is SQL?</h6>
+            <h6>Qu'est-ce que SQL ?</h6>
             <p>
-              SQL stands for "Structured Query Language" is a standard language
-              for accessing and manipulating databases.
+              SQL signifie "Structured Query Language" est un langage standard
+              pour accéder et manipuler des bases de données.
             </p>
           </article>
           <article id="can-do">
-            <h6>What Can SQL do?</h6>
+            <h6>Que peut faire SQL ?</h6>
             <ul>
-              <li> SQL can execute queries against a database</li>
-              <li>SQL can retrieve data from a database</li>
-              <li>SQL can insert records in a database</li>
-              <li>SQL can update records in a database</li>
-              <li>SQL can delete records from a database</li>
-              <li>SQL can create new databases</li>
-              <li>SQL can create new tables in a database</li>
-              <li>SQL can create stored procedures in a database</li>
-              <li>SQL can create views in a database</li>
-              <li>SQL can set permissions on tables, procedures, and views</li>
+              <li> SQL peut exécuter des requêtes sur une base de données</li>
+              <li>SQL peut récupérer des données d'une base de données</li>
+              <li>
+                SQL peut insérer des enregistrements dans une base de données
+              </li>
+              <li>
+                SQL peut mettre à jour des enregistrements dans une base de
+                données
+              </li>
+              <li>
+                SQL peut supprimer des enregistrements d'une base de données
+              </li>
+              <li>SQL peut créer de nouvelles bases de données</li>
+              <li>
+                SQL peut créer de nouvelles tables dans une base de données
+              </li>
+              <li>
+                SQL peut créer des procédures stockées dans une base de données
+              </li>
+              <li>SQL peut créer des vues dans une base de données</li>
+              <li>
+                SQL peut définir des autorisations sur les tables, les
+                procédures et les vues
+              </li>
             </ul>
           </article>
           <article id="rdbms">
             <h6>RDBMS</h6>
             <p>
-              RDBMS or Relational Database Management Systems are database
-              management systems that maintain data in the form of tables. We
-              can create relationships between the tables. An RDBMS can
-              recombine the data items from different files, providing powerful
-              tools for data usage.
+              SGBDR ou systèmes de gestion de bases de données relationnelles
+              sont des systèmes de gestion de bases de données qui conservent
+              les données sous forme de tableaux. Nous pouvons créer des
+              relations entre les tables. Un SGBDR peut recombiner les éléments
+              de données de différents fichiers, fournissant des outils
+              puissants pour l'utilisation des données.
             </p>
           </article>
           <article id="tcp-ip">
-            <h6>Which TCP/IP port does SQL Server run on?</h6>
-            <p>By default SQL Server runs on port 1433.</p>
+            <h6>Sur quel port TCP/IP SQL Server s'exécute-t-il ?</h6>
+            <p>Par défaut, SQL Server s'exécute sur le port 1433.</p>
           </article>
           <article id="sql-plsql">
             <h6>SQL vs PL/SQL</h6>
@@ -136,41 +151,52 @@ export default function Sql() {
                   </td>
                 </tr>
                 <tr>
-                  <td>SQL is a database structured query language.</td>
                   <td>
-                    It is a programming language for a database that uses SQL.
+                    SQL est un langage de requête structuré en base de données.
+                  </td>
+                  <td>
+                    C'est un langage de programmation pour une base de données
+                    qui utilise SQL.
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    SQL is an individual query that is used to execute DML and
-                    DDL commands.
+                    SQL est une requête individuelle utilisée pour exécuter des
+                    commandes DML et DDL.
                   </td>
                   <td>
-                    PL/SQL is a block of codes used to write the entire
-                    procedure or a function.
-                  </td>
-                </tr>
-                <tr>
-                  <td>SQL is a declarative and data-oriented language.</td>
-                  <td>
-                    PL/SQL is a procedural and application-oriented language.
+                    PL/SQL est un bloc de codes utilisé pour écrire toute la
+                    procédure ou une fonction.
                   </td>
                 </tr>
                 <tr>
-                  <td>It is mainly used for the manipulation of data.</td>
-                  <td>It is used for creating an application.</td>
-                </tr>
-                <tr>
-                  <td>It provides interaction with the database server.</td>
+                  <td>SQL est un langage déclaratif et orienté données.</td>
                   <td>
-                    It does not provide interaction with the database server.
+                    PL/SQL est un langage procédural et orienté application.
                   </td>
                 </tr>
                 <tr>
-                  <td>It cannot contain PL/SQL code in it.</td>
                   <td>
-                    It can contain SQL in it because it is an extension of SQL.
+                    Il est principalement utilisé pour la manipulation de
+                    données.
+                  </td>
+                  <td>Il est utilisé pour créer une application.</td>
+                </tr>
+                <tr>
+                  <td>
+                    Il fournit une interaction avec le serveur de base de
+                    données.
+                  </td>
+                  <td>
+                    Il ne fournit pas d'interaction avec le serveur de base de
+                    données.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il ne peut pas contenir de code PL/SQL.</td>
+                  <td>
+                    Il peut contenir du SQL car il s'agit d'une extension de
+                    SQL.
                   </td>
                 </tr>
               </tbody>

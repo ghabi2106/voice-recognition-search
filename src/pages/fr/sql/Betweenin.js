@@ -77,8 +77,8 @@ export default function Betweenin() {
             <h6>IN Operator</h6>
             <div>
               <p>
-                The <code>IN</code> operator allows you to specify multiple
-                values in a <code>WHERE</code> clause.
+                L'opérateur <code>IN</code> permet de spécifier plusieurs
+                valeurs dans une <code>WHERE</code> clause.
               </p>
               <dl>
                 <dt>IN Syntax</dt>
@@ -99,8 +99,9 @@ WHERE column_name IN (SELECT STATEMENT);`}</Highlight>
             <h6>BETWEEN Operator</h6>
             <div>
               <p>
-                The <code>BETWEEN</code> operator selects values within a given
-                range. The values can be numbers, text, or dates.
+                L'opérateur <code>BETWEEN</code> sélectionne des valeurs dans
+                une plage donnée. Les valeurs peuvent être des nombres, du texte
+                ou des dates.
               </p>
               <dl>
                 <dt></dt>

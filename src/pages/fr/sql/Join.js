@@ -28,37 +28,49 @@ export default function Join() {
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#join"
-                  >Join</a>
+                  >
+                    Join
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#inner-join"
-                  >INNER JOIN</a>
+                  >
+                    INNER JOIN
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#left-join"
-                  >LEFT JOIN</a>
+                  >
+                    LEFT JOIN
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#right-join"
-                  >RIGHT JOIN</a>
+                  >
+                    RIGHT JOIN
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#full-outer-join"
-                  >FULL OUTER JOIN</a>
+                  >
+                    FULL OUTER JOIN
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#self-join"
-                  >Self Join</a>
+                  >
+                    Self Join
+                  </a>
                 </li>
               </ul>
             </li>
@@ -97,26 +109,30 @@ export default function Join() {
             <h6>SQL JOIN</h6>
             <div>
               <p>
-                A <code>JOIN</code> clause is used to combine rows from two or
-                more tables, based on a related column between them.
+                Le <code>JOIN</code> clause est utilisée pour combiner des
+                lignes de deux tables ou plus, en fonction d'une colonne liée
+                entre elles.
               </p>
-              <p>Here are the different types of the JOINs in SQL:</p>
+              <p>Les différents types de JOIN en SQL :</p>
               <ul>
                 <li>
-                  <code>(INNER) JOIN</code>: Returns records that have matching
-                  values in both tables
+                  <code>(INNER) JOIN</code>: renvoie les enregistrements qui ont
+                  des valeurs correspondantes dans les deux tables.
                 </li>
                 <li>
-                  <code>LEFT (OUTER) JOIN</code>: Returns all records from the
-                  left table, and the matched records from the right table
+                  <code>LEFT (OUTER) JOIN</code>: renvoie tous les
+                  enregistrements de la table de gauche et les enregistrements
+                  correspondants de la table de droite.
                 </li>
                 <li>
-                  <code>RIGHT (OUTER) JOIN</code>: Returns all records from the
-                  right table, and the matched records from the left table
+                  <code>RIGHT (OUTER) JOIN</code>: renvoie tous les
+                  enregistrements de la table de droite et les enregistrements
+                  correspondants de la table de gauche.
                 </li>
                 <li>
-                  <code>FULL (OUTER) JOIN</code>: Returns all records when there
-                  is a match in either left or right table
+                  <code>FULL (OUTER) JOIN</code>: renvoie tous les
+                  enregistrements lorsqu'il y a une correspondance dans la table
+                  de gauche ou de droite.
                 </li>
               </ul>
               <p>
@@ -151,8 +167,9 @@ export default function Join() {
             <h6>INNER JOIN</h6>
             <div>
               <p>
-                The <code>INNER JOIN</code> keyword selects records that have
-                matching values in both tables.
+                Le mot-clé <code>INNER JOIN</code> sélectionne les
+                enregistrements qui ont des valeurs correspondantes dans les
+                deux tables.
               </p>
               <Highlight language="sql">{`SELECT column_name(s)
 FROM table1
@@ -170,10 +187,11 @@ ON table1.column_name = table2.column_name;`}</Highlight>
             <h6>LEFT JOIN</h6>
             <div>
               <p>
-                The <code>LEFT JOIN</code> keyword returns all records from the
-                left table (table1), and the matching records from the right
-                table (table2). The result is 0 records from the right side, if
-                there is no match.
+                Le mot-clé <code>LEFT JOIN</code> renvoie tous les
+                enregistrements de la table de gauche (table1) et les
+                enregistrements correspondants de la table de droite (table2).
+                Le résultat est 0 enregistrement du côté droit, s'il n'y a pas
+                de correspondance.
               </p>
               <Highlight language="sql">{`SELECT column_name(s)
 FROM table1
@@ -190,22 +208,34 @@ ON table1.column_name = table2.column_name;`}</Highlight>
           <article id="right-join">
             <h6>RIGHT JOIN</h6>
             <div>
-            <p>The <code>RIGHT JOIN</code> keyword returns all records from the right table (table2), and the 
-matching records from the left table (table1). The result is 0 records from the left side, 
-if there is no match.</p>
-<Highlight language="sql">{`SELECT column_name(s)
+              <p>
+                Le mot-clé <code>RIGHT JOIN</code> renvoie tous les
+                enregistrements de la table de droite (table2) et les
+                enregistrements correspondants de la table de gauche (table1).
+                Le résultat est 0 enregistrement du côté gauche, s'il n'y a pas
+                de correspondance.
+              </p>
+              <Highlight language="sql">{`SELECT column_name(s)
 FROM table1
 RIGHT JOIN table2
 ON table1.column_name = table2.column_name;`}</Highlight>
-<img alt="SQL RIGHT JOIN" height="145" src="img/sql/img_rightjoin.gif" width="200"></img>
+              <img
+                alt="SQL RIGHT JOIN"
+                height="145"
+                src="img/sql/img_rightjoin.gif"
+                width="200"
+              ></img>
             </div>
           </article>
           <article id="full-outer-join">
             <h6>FULL OUTER JOIN</h6>
             <div>
-            <p>The <code>FULL OUTER JOIN</code> keyword returns all records when there is a match in 
-left (table1) or right (table2) table records.</p>
-<Highlight language="sql">{`SELECT column_name(s)
+              <p>
+                Le mot-clé <code>FULL OUTER JOIN</code> renvoie tous les
+                enregistrements lorsqu'il existe une correspondance dans les
+                enregistrements de la
+              </p>
+              <Highlight language="sql">{`SELECT column_name(s)
 FROM table1
 FULL OUTER JOIN table2
 ON table1.column_name = table2.column_name
@@ -215,7 +245,10 @@ WHERE condition;`}</Highlight>
           <article id="self-join">
             <h6>Self Join</h6>
             <div>
-            <p>A self join is a regular join, but the table is joined with itself.</p>
+              <p>
+                Une auto-jointure est une jointure normale, mais la table est
+                jointe à elle-même.
+              </p>
               <Highlight language="sql">{`SELECT column_name(s)
 FROM table1 T1, table1 T2
 WHERE condition;`}</Highlight>

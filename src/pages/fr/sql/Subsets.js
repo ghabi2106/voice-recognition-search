@@ -96,7 +96,7 @@ export default function Subsets() {
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>DDL &amp; DML &amp; DCL &amp; VTCL</h3>
           <article id="introduction">
-            <h6>What are the subsets of SQL?</h6>
+            <h6>Quels sont les sous-ensembles de SQL ?</h6>
             <div>
               <ol>
                 <li>DDL(Data Definition Language)</li>
@@ -104,30 +104,39 @@ export default function Subsets() {
                 <li>DCL(Data Control Language)</li>
                 <li>TCL(Transaction Control Language)</li>
               </ol>
-              <img src="img/sql/SQL-Commands-1-700x470.png" alt="SQL-Commands" />
+              <img
+                src="img/sql/SQL-Commands-1-700x470.png"
+                alt="SQL-Commands"
+              />
             </div>
           </article>
           <article id="ddl">
             <h6>DDL</h6>
             <div>
               <p>
-                DDL is short name of Data Definition Language, which deals with
-                database schemas and descriptions, of how the data should reside
-                in the database.
+                DDL signifie Data Definition Language, qui traite des schémas et
+                des descriptions de base de données, de la façon dont les
+                données doivent résider dans la base de données.
               </p>
               <ul>
                 <li>
-                  CREATE - to create a database and its objects like (table,
-                  index, views, store procedure, function, and triggers)
+                  CREATE - pour créer une base de données et ses objets tels que
+                  (table, index, vues, procédure de stockage, fonction et
+                  déclencheurs)
                 </li>
-                <li>ALTER - alters the structure of the existing database</li>
-                <li>DROP - delete objects from the database</li>
                 <li>
-                  TRUNCATE - remove all records from a table, including all
-                  spaces allocated for the records are removed
+                  ALTER - modifie la structure de la base de données existante
                 </li>
-                <li>COMMENT - add comments to the data dictionary</li>
-                <li>RENAME - rename an object</li>
+                <li>DROP - supprimer des objets de la base de données</li>
+                <li>
+                  TRUNCATE - supprime tous les enregistrements d'une table, y
+                  compris tous les espaces alloués aux enregistrements sont
+                  supprimés
+                </li>
+                <li>
+                  COMMENT - ajouter des commentaires au dictionnaire de données
+                </li>
+                <li>RENAME - renommer un objet</li>
               </ul>
             </div>
           </article>
@@ -135,20 +144,28 @@ export default function Subsets() {
             <h6>DML</h6>
             <div>
               <p>
-                DML is short name of Data Manipulation Language which deals with
-                data manipulation and includes most common SQL statements such
-                SELECT, INSERT, UPDATE, DELETE, etc., and it is used to store,
-                modify, retrieve, delete and update data in a database.
+                DML signifie Data Manipulation Language qui traite de la
+                manipulation de données et comprend les instructions SQL les
+                plus courantes telles que SELECT, INSERT, UPDATE, DELETE, etc.,
+                et il est utilisé pour stocker, modifier, récupérer, supprimer
+                et mettre à jour des données dans une base de données.
               </p>
               <ul>
-                <li>SELECT - retrieve data from a database</li>
-                <li>INSERT - insert data into a table</li>
-                <li>UPDATE - updates existing data within a table</li>
-                <li>DELETE - Delete all records from a database table</li>
-                <li>MERGE - UPSERT operation (insert or update)</li>
-                <li>CALL - call a PL/SQL or Java subprogram</li>
-                <li>EXPLAIN PLAN - interpretation of the data access path</li>
-                <li>LOCK TABLE - concurrency Control</li>
+                <li>SELECT - récupérer les données d'une base de données</li>
+                <li>INSERT - insérer des données dans une table</li>
+                <li>
+                  UPDATE - met à jour les données existantes dans une table
+                </li>
+                <li>
+                  DELETE - Supprimer tous les enregistrements d'une table de
+                  base de données
+                </li>
+                <li>MERGE - Opération UPSERT (insertion ou mise à jour)</li>
+                <li>CALL - appelle un sous-programme PL/SQL ou Java</li>
+                <li>
+                  EXPLAIN PLAN - interprétation du chemin d'accès aux données
+                </li>
+                <li>LOCK TABLE - Contrôle de la concurrence</li>
               </ul>
             </div>
           </article>
@@ -156,15 +173,14 @@ export default function Subsets() {
             <h6>DCL</h6>
             <div>
               <p>
-                DCL is short name of Data Control Language which includes
-                commands such as GRANT and mostly concerned with rights,
-                permissions and other controls of the database system.
+                DCL signifie Data Control Language qui inclut des commandes
+                telles que GRANT et concerne principalement les droits,
+                autorisations et autres contrôles du système de base de données.
               </p>
               <ul>
-                <li>GRANT - allow users access privileges to the database</li>
+                <li>GRANT - autorise les utilisateurs à accéder aux privilèges de la base de données</li>
                 <li>
-                  REVOKE - withdraw users access privileges given by using the
-                  GRANT command
+                  REVOKE - retirer les privilèges d'accès des utilisateurs donnés à l'aide de la commande GRANT
                 </li>
               </ul>
             </div>
@@ -173,20 +189,19 @@ export default function Subsets() {
             <h6>TCL</h6>
             <div>
               <p>
-                TCL is short name of Transaction Control Language which deals
-                with a transaction within a database.
+                TCL signifie Transaction Control Language qui traite une transaction au sein d'une base de données.
               </p>
               <ul>
-                <li>COMMIT - commits a Transaction</li>
+                <li>COMMIT - valide une transaction</li>
                 <li>
-                  ROLLBACK - rollback a transaction in case of any error occurs
+                  ROLLBACK - annuler une transaction en cas d'erreur
                 </li>
                 <li>
-                  SAVEPOINT - to rollback the transaction making points within
+                  SAVEPOINT - pour annuler la transaction en faisant des points au sein des groupes
                   groups
                 </li>
                 <li>
-                  SET TRANSACTION - specify characteristics of the transaction
+                  SET TRANSACTION - spécifiez les caractéristiques de la transaction
                 </li>
               </ul>
             </div>
