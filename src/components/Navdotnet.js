@@ -62,11 +62,6 @@ export default function Navdotnet() {
           MVC
         </Link>
       </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/service">
-          Service
-        </Link>
-      </li>
 
       {
         //#region design pattern
@@ -126,6 +121,52 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/command">
               Command
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
+
+      {
+        //#region host
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Host
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/docker">
+              Docker
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/httpsys">
+              Http.sys
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/iis">
+              IIS
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/kestrel">
+              Kestrel
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/server">
+              Server
             </Link>
           </li>
         </ul>
@@ -246,6 +287,11 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/refoutin">
               Ref-Out-In
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/service">
+              Service
             </Link>
           </li>
           <li className="nav-item">

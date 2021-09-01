@@ -313,4 +313,28 @@ export const pagesdotnet = [
   "difference between object and class",
   "difference between class and object",
   "serialization",
+  // Docker
+  "docker",
+  "container",
+  "container image",
+  "dockerfile",
+  "volumes",
+  "docker hub",
+  "compose",
+  "registry",
+  "orchestrator",
+  // HTTPS.sys
+  "http.sys",
+  // IIS
+  "iis",
+  "Internet Information Services",
+  "in process hosting",
+  "out process hosting",
+  // Kestrel
+  "kestrel",
+  "reverse proxy",
+  "forwarded headers",
+  // Server
+  "server",
+  "web server",
 ];

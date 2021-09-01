@@ -317,4 +317,28 @@ export const urlsdotnet = {
   "difference between object and class": "/typesystem",
   "difference between class and object": "/typesystem",
   serialization: "/typesystem",
+  // Docker
+  docker: "/docker",
+  container: "/docker",
+  "container image": "/docker",
+  dockerfile: "/docker",
+  volumes: "/docker",
+  "docker hub": "/docker",
+  compose: "/docker",
+  registry: "/docker",
+  orchestrator: "/docker",
+  // HTTPS.sys
+  "http.sys": "/httpsys",
+  // IIS
+  iis: "/iis",
+  "Internet Information Services": "/iis",
+  "in process hosting": "/iis",
+  "out process hosting": "/iis",
+  // Kestrel
+  kestrel: "/kestrel",
+  "reverse proxy": "/kestrel",
+  "forwarded headers": "/kestrel",
+  // Server
+  server: "/server",
+  "web server": "/server",
 };

@@ -93,14 +93,14 @@ export default function Iis() {
             <h6>IIS</h6>
             <div>
               <p>
-                Internet Information Services (IIS) is a flexible, secure and
-                manageable Web Server for hosting web apps, including ASP.NET
-                Core.
+                Internet Information Services (IIS) est un serveur web flexible,
+                sécurisé et facile à gérer pour héberger des applications web, y
+                compris des ASP.NET Core.
               </p>
               <p>
-                When building a host in <code>CreateHostBuilder</code> (
-                <code>Program.cs</code>), call reateDefaultBuilder to enable IIS
-                integration:
+                Lors de la génération d’un hôte dans{" "}
+                <code>CreateHostBuilder</code> (<code>Program.cs</code>),
+                appelez CreateDefaultBuilder pour activer l’intégration d’IIS :
               </p>
               <Highlight language="csharp">
                 {`public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -113,18 +113,21 @@ export default function Iis() {
             <h6>ASP.NET Core Module</h6>
             <div>
               <p>
-                The ASP.NET Core Module is a native IIS module that plugs into
-                the IIS pipeline, allowing ASP.NET Core applications to work
-                with IIS. Run ASP.NET Core apps with IIS by either:
+                le module ASP.NET Core est un module iis natif qui se connecte
+                au pipeline iis, ce qui permet aux applications ASP.NET Core de
+                fonctionner avec IIS. exécutez ASP.NET Core des applications
+                avec IIS en procédant de l’une des deux :
               </p>
               <ul>
                 <li>
-                  Hosting an ASP.NET Core app inside of the IIS worker process (
-                  <code>w3wp.exe</code>), called the in-process hosting model.
+                  l’hébergement d’une application ASP.NET Core à l’intérieur du
+                  processus de travail IIS (<code>w3wp.exe</code>), appelé
+                  modèle d’hébergement in-process.
                 </li>
                 <li>
-                  Forwarding web requests to a backend ASP.NET Core app running
-                  the Kestrel server, called the out-of-process hosting model.
+                  transfert des requêtes web à un serveur principal ASP.NET Core
+                  application exécutant le Kestrel serveur, appelé modèle
+                  d’hébergement hors processus.
                 </li>
               </ul>
             </div>
@@ -133,57 +136,60 @@ export default function Iis() {
             <h6>In-process hosting with IIS</h6>
             <div>
               <p>
-                In-process hosting runs an ASP.NET Core app in the same process
-                as its IIS worker process. In-process hosting provides improved
-                performance over out-of-process hosting because requests aren't
-                proxied over the loopback adapter, a network interface that
-                returns outgoing network traffic back to the same machine.
+                l’hébergement In-process exécute une application ASP.NET Core
+                dans le même processus que son processus de travail IIS.
+                L’hébergement in-process offre de meilleures performances que
+                l’hébergement out-of-process parce que les requêtes n’ont pas de
+                proxy sur l’adaptateur de bouclage, interface réseau qui
+                retourne du trafic réseau sortant à la même machine.
               </p>
               <img src="img/dotnet/ancm-inprocess.png" alt="ancm-inprocess" />
               <p>
-                To explicitly configure an app for in-process hosting, set the
-                value of the <code>&lt;AspNetCoreHostingModel&gt;</code>{" "}
-                property to <code>InProcess</code> in the project file (
-                <code>.csproj</code>):
+                Pour configurer explicitement une application pour l’hébergement
+                in-process, affectez à la{" "}
+                <code>&lt;AspNetCoreHostingModel&gt;</code> propriété la valeur{" "}
+                <code>InProcess</code> dans le fichier projet ({" "}
+                <code>.csproj</code> ) :
               </p>
               <Highlight language="xml">
                 {`<PropertyGroup>
   <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
 </PropertyGroup>`}
               </Highlight>
-              <p>The general flow of a request is as follows:</p>
+              <p>Le déroulement général d’une requête est le suivant :</p>
               <ol>
                 <li>
-                  A request arrives from the web to the kernel-mode HTTP.sys
-                  driver.
+                  Une requête arrive du web au pilote HTTP.sys en mode noyau.
                 </li>
                 <li>
-                  The driver routes the native request to IIS on the website's
-                  configured port, usually 80 (HTTP) or 443 (HTTPS).
+                  Le pilote achemine la requête native vers IIS sur le port
+                  configuré du site web, généralement 80&nbsp;(HTTP) ou
+                  443&nbsp;(HTTPS).
                 </li>
                 <li>
-                  The ASP.NET Core Module receives the native request and passes
-                  it to IIS HTTP Server (<code>IISHttpServer</code>). IIS HTTP
-                  Server is an in-process server implementation for IIS that
-                  converts the request from native to managed.
+                  le Module ASP.NET Core reçoit la demande native et la transmet
+                  au serveur HTTP IIS ( <code>IISHttpServer</code> ). Le serveur
+                  HTTP IIS est une implémentation du serveur in-process pour IIS
+                  qui convertit la requête native en requête managée.
                 </li>
               </ol>
-              <p>After the IIS HTTP Server processes the request:</p>
+              <p>Une fois que le serveur HTTP IIS a traité la requête :</p>
               <ol>
                 <li>
-                  The request is sent to the ASP.NET Core middleware pipeline.
+                  la demande est envoyée au pipeline de l’intergiciel
+                  (middleware) ASP.NET Core.
                 </li>
                 <li>
-                  The middleware pipeline handles the request and passes it on
-                  as an <code>HttpContext</code> instance to the app's logic.
+                  Le pipeline de middlewares traite la requête et la passe en
+                  tant qu’instance de <code>HttpContext</code> à la logique de
+                  l’application.
                 </li>
                 <li>
-                  The app's response is passed back to IIS through IIS HTTP
-                  Server.
+                  La réponse de l’application est retransmise à IIS via le
+                  serveur HTTP IIS.
                 </li>
                 <li>
-                  IIS sends the response to the client that initiated the
-                  request.
+                  IIS envoie la réponse au client qui a initié la demande.
                 </li>
               </ol>
             </div>
@@ -192,11 +198,12 @@ export default function Iis() {
             <h6>Out-of-process hosting with IIS</h6>
             <div>
               <p>
-                Because ASP.NET Core apps run in a process separate from the IIS
-                worker process, the ASP.NET Core Module handles process
-                management. The module starts the process for the ASP.NET Core
-                app when the first request arrives and restarts the app if it
-                shuts down or crashes.
+                étant donné que ASP.NET Core applications s’exécutent dans un
+                processus distinct du processus de travail IIS, le Module
+                ASP.NET Core gère la gestion des processus. Le module démarre le
+                processus pour l’application ASP.NET Core quand la première
+                requête arrive, et il redémarre l’application si elle s’arrête
+                ou se bloque.
               </p>
               <img
                 src="img/dotnet/ancm-outofprocess.png"
@@ -204,24 +211,25 @@ export default function Iis() {
               />
               <ol>
                 <li>
-                  Requests arrive from the web to the kernel-mode HTTP.sys
-                  driver.
+                  Les requêtes arrivent du web au pilote HTTP.sys en mode noyau.
                 </li>
                 <li>
-                  The driver routes the requests to IIS on the website's
-                  configured port. The configured port is usually 80 (HTTP) or
-                  443 (HTTPS).
+                  Le pilote achemine les requêtes vers IIS sur le port configuré
+                  du site Web. Le port configuré est généralement 80 (HTTP) ou
+                  443 (HTTPs).
                 </li>
                 <li>
-                  The module forwards the requests to Kestrel on a random port
-                  for the app. The random port isn't 80 or 443.
+                  Le module transfère les demandes à Kestrel sur un port
+                  aléatoire pour l’application. Le port aléatoire n’est pas 80
+                  ou 443.
                 </li>
               </ol>
               <p>
-                To configure an app for out-of-process hosting, set the value of
-                the <code>&lt;AspNetCoreHostingModel&gt;</code> property to{" "}
-                <code>OutOfProcess</code> in the project file (
-                <code>.csproj</code>):
+                Pour configurer une application pour l’hébergement hors
+                processus, affectez à la propriété la valeur{" "}
+                <code>&lt;AspNetCoreHostingModel&gt;</code>{" "}
+                <code>OutOfProcess</code> dans le fichier projet ({" "}
+                <code>.csproj</code> ) :
               </p>
               <Highlight language="xml">
                 {`<PropertyGroup>

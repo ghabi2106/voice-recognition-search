@@ -83,13 +83,15 @@ export default function Server() {
             <h6>Web server</h6>
             <div>
               <p>
-                A web server is software and hardware that uses HTTP (Hypertext
-                Transfer Protocol) and other protocols to respond to client
-                requests made over the World Wide Web. The main job of a web
-                server is to display website content through storing, processing
-                and delivering webpages to users. Besides HTTP, web servers also
-                support SMTP (Simple Mail Transfer Protocol) and FTP (File
-                Transfer Protocol), used for email, file transfer and storage.
+                Un serveur Web est un logiciel et un matériel qui utilise HTTP
+                (Hypertext Transfer Protocol) et d'autres protocoles pour
+                répondre aux demandes des clients effectuées sur le World Wide
+                Web. La tâche principale d'un serveur Web consiste à afficher le
+                contenu du site Web en stockant, en traitant et en fournissant
+                des pages Web aux utilisateurs. Outre HTTP, les serveurs Web
+                prennent également en charge SMTP (Simple Mail Transfer
+                Protocol) et FTP (File Transfer Protocol), utilisés pour le
+                courrier électronique, le transfert de fichiers et le stockage.
               </p>
               <ul>
                 <li>Apache</li>
@@ -113,32 +115,38 @@ export default function Server() {
           <article id="kestrel-httpsys">
             <h6>Kestrel vs. HTTP.sys</h6>
             <div>
-              <p>Kestrel has the following advantages over HTTP.sys:</p>
+              <p>
+                Kestrel offre les avantages suivants par rapport à
+                HTTP.sys&nbsp;:
+              </p>
               <ul>
-                <li>Better performance and memory utilization.</li>
-                <li>Cross platform</li>
+                <li>Meilleures performances et utilisation de la mémoire.</li>
+                <li>Multiplateforme</li>
                 <li>
-                  Agility, it's developed and patched independent of the OS.
+                  L’agilité, elle est développée et corrigée indépendamment du
+                  système d’exploitation.
                 </li>
-                <li>Programmatic port and TLS configuration</li>
                 <li>
-                  Extensibility that allows for protocols like PPv2 and
-                  alternate transports.
+                  Configuration du port et du protocole TLS par programmation
+                </li>
+                <li>
+                  Extensibilité qui autorise les protocoles tels que PPv2 et les
+                  transports alternatifs.
                 </li>
               </ul>
               <p>
-                Http.Sys operates as a shared kernel mode component with the
-                following features that kestrel does not have:
+                Http.Sys fonctionne comme un composant partagé en mode noyau
+                avec les fonctionnalités suivantes que Kestrel n’a pas:
               </p>
               <ul>
-                <li>Port sharing</li>
+                <li>Partage de port</li>
                 <li>
-                  Kernel mode windows authentication. Kestrel supports only
-                  user-mode authentication.
+                  Authentification Windows en mode noyau. Kestrel prend en
+                  charge uniquement l’authentification en mode utilisateur.
                 </li>
-                <li>Fast proxying via queue transfers</li>
-                <li>Direct file transmission</li>
-                <li>Response caching</li>
+                <li>Proxy rapide via les transferts de file d’attente</li>
+                <li>Transmission de fichier directe</li>
+                <li>Mise en cache des réponses</li>
               </ul>
             </div>
           </article>

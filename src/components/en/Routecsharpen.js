@@ -23,7 +23,7 @@ import DotnetcomponentsPage from "../../pages/en/dotnet/Dotnetcomponents";
 import GcPage from "../../pages/en/dotnet/Gc";
 import GcmethodsPage from "../../pages/en/dotnet/Gcmethods";
 
-//#region dotnet
+//#region design pattern
 import CleancodePage from "../../pages/en/dotnet/patternprinciple/Cleancode";
 import SolidPage from "../../pages/en/dotnet/patternprinciple/Solid";
 import AgilePage from "../../pages/en/dotnet/patternprinciple/Agile";
@@ -33,6 +33,14 @@ import MediatorPage from "../../pages/en/dotnet/patternprinciple/Mediator";
 import ObserverPage from "../../pages/en/dotnet/patternprinciple/Observer";
 import FactoryPage from "../../pages/en/dotnet/patternprinciple/Factory";
 import CommandPage from "../../pages/en/dotnet/patternprinciple/Command";
+//#endregion
+
+//#region Host Deployment
+import DockerPage from "../../pages/en/dotnet/hostdeploy/Docker";
+import HttpsysPage from "../../pages/en/dotnet/hostdeploy/Httpsys";
+import IisPage from "../../pages/en/dotnet/hostdeploy/Iis";
+import KestrelPage from "../../pages/en/dotnet/hostdeploy/Kestrel";
+import ServerPage from "../../pages/en/dotnet/hostdeploy/Server";
 //#endregion
 
 //#endregion
@@ -72,8 +80,8 @@ export default function Routecsharpen() {
       <Route path="/di" component={DiPage} />
       <Route path="/dotnet" component={DotnetPage} />
       <Route path="/entityframework" component={EntityframeworkPage} />
-      <Route path="/https" component={HttpsPage} /> 
-      <Route path="/httpmethods" component={HttpmethodsPage} />     
+      <Route path="/https" component={HttpsPage} />
+      <Route path="/httpmethods" component={HttpmethodsPage} />
       <Route path="/middleware" component={MiddlewarePage} />
       <Route path="/mvc" component={MvcPage} />
       <Route path="/nugetpackages" component={NugetpackagesPage} />
@@ -100,7 +108,19 @@ export default function Routecsharpen() {
       {
         //#endregion
       }
-      
+
+      {
+        //#region Host Deploy
+      }
+      <Route path="/docker" component={DockerPage} />
+      <Route path="/httpsys" component={HttpsysPage} />
+      <Route path="/iis" component={IisPage} />
+      <Route path="/kestrel" component={KestrelPage} />
+      <Route path="/server" component={ServerPage} />
+      {
+        //#endregion
+      }
+
       {
         //#endregion
       }

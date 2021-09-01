@@ -85,64 +85,73 @@ export default function Kestrel() {
             <h6>Kestrel</h6>
             <div>
               <p>
-                Kestrel is a cross-platform web server for ASP.NET Core. Kestrel
-                is the web server that's included and enabled by default in
-                ASP.NET Core project templates.
+                Kestrelest un serveur Web multiplateforme pour ASP.net Core.
+                Kestrelest le serveur web qui est inclus et activé par défaut
+                dans les modèles de projet ASP.NET Core.
               </p>
-              <img src="img/dotnet/kestrel-default-config.PNG" alt="kestrel-default-config" />
+              <img
+                src="img/dotnet/kestrel-default-config.PNG"
+                alt="kestrel-default-config"
+              />
             </div>
           </article>
           <article id="reverse-proxy">
             <h6>use Kestrel with a reverse proxy</h6>
             <div>
               <p>
-                Kestrel can be used by itself or with a reverse proxy server,
-                such as Internet Information Services (IIS), Nginx, or Apache. A
-                reverse proxy server receives HTTP requests from the network and
-                forwards them to Kestrel.
+                Kestrelpeut être utilisé seul ou avec un serveur proxy inverse,
+                tel que Internet Information Services (IIS), Nginxou Apache. Un
+                serveur proxy inverse reçoit les requêtes HTTP à partir du
+                réseau et les transfère vers Kestrel .
               </p>
-              <p>Kestrel used as an edge (Internet-facing) web server</p>
+              <p>
+                Kestrel utilisé en tant que serveur Web Edge (accessible sur
+                Internet) :
+              </p>
               <img
                 src="img/dotnet/kestrel-to-internet2.png"
                 alt="kestrel-to-internet2"
               />
-              <p>Kestrel used in a reverse proxy configuration:</p>
+              <p>Kestrel utilisé dans une configuration de proxy inverse :</p>
               <img
                 src="img/dotnet/kestrel-to-internet.png"
                 alt="kestrel-to-internet"
               />
               <p>
-                Either configuration, with or without a reverse proxy server, is
-                a supported hosting configuration.
+                L’une ou l’autre des configurations, avec ou sans serveur proxy
+                inverse, est une configuration d’hébergement prise en charge.
               </p>
               <p>
-                When Kestrel is used as an edge server without a reverse proxy
-                server, sharing of the same IP address and port among multiple
-                processes is unsupported. When Kestrel is configured to listen
-                on a port, Kestrel handles all traffic for that port regardless
-                of requests' <code>Host</code> headers. A reverse proxy that can
-                share ports can forward requests to Kestrel on a unique IP and
-                port.
+                Lorsque Kestrel est utilisé comme serveur Edge sans serveur
+                proxy inverse, le partage de la même adresse IP et du même port
+                entre plusieurs processus n’est pas pris en charge. Lorsque
+                Kestrel est configuré pour écouter sur un port, Kestrel gère
+                tout le trafic pour ce port, quels que soient les Host en-têtes
+                des demandes. Un proxy inverse pouvant partager des ports peut
+                transférer des demandes à Kestrel sur une adresse IP et un port
+                uniques.
               </p>
               <p>
-                Even if a reverse proxy server isn't required, using a reverse
-                proxy server might be a good choice.
+                Même si un serveur proxy inverse n’est pas nécessaire, en
+                utiliser un peut être un bon choix.
               </p>
-              <p>A reverse proxy:</p>
+              <p>Un proxy inverse :</p>
               <ul>
                 <li>
-                  Can limit the exposed public surface area of the apps that it
-                  hosts.
+                  Peut limiter la surface publique exposée des applications
+                  qu’il héberge.
                 </li>
                 <li>
-                  Provide an additional layer of configuration and defense.
+                  Fournit une couche supplémentaire de configuration et de
+                  défense.
                 </li>
-                <li>Might integrate better with existing infrastructure.</li>
+                <li>Peut mieux s’intégrer à l’infrastructure existante.</li>
                 <li>
-                  Simplify load balancing and secure communication (HTTPS)
-                  configuration. Only the reverse proxy server requires an X.509
-                  certificate, and that server can communicate with the app's
-                  servers on the internal network using plain HTTP.
+                  Simplifie la configuration de l’équilibrage de charge et d’une
+                  communication sécurisée (HTTPS). Seul le serveur proxy inverse
+                  requiert un certificat X. 509 et ce serveur peut communiquer
+                  avec les serveurs de l’application sur le réseau interne à
+                  l’aide du protocole HTTP simple.
                 </li>
               </ul>
             </div>
@@ -152,36 +161,37 @@ export default function Kestrel() {
             <div>
               <ul>
                 <li>
-                  When HTTPS requests are proxied over HTTP, the original scheme
-                  (HTTPS) is lost and must be forwarded in a header.
+                  Quand les requêtes HTTPS sont transmises par proxy via HTTP,
+                  le schéma d’origine (HTTPS) est perdu et doit être transféré
+                  dans un en-tête.
                 </li>
                 <li>
-                  Because an app receives a request from the proxy and not its
-                  true source on the Internet or corporate network, the
-                  originating client IP address must also be forwarded in a
-                  header.
+                  Étant donné qu’une requête adressée à une application transite
+                  par le proxy au lieu de provenir directement de sa source sur
+                  Internet ou le réseau d’entreprise, l’adresse IP cliente
+                  d’origine doit également être transférée dans un en-tête.
                 </li>
               </ul>
               <p>
-                The Forwarded Headers Middleware (ForwardedHeadersMiddleware),
-                reads these headers and fills in the associated fields on
-                HttpContext.
+                L’intergiciel d’en-têtes transféré ( ForwardedHeadersMiddleware
+                ) lit ces en-têtes et remplit les champs associés sur
+                HttpContext .
               </p>
               <p>The middleware updates:</p>
               <ul>
                 <li>
-                  HttpContext.Connection.RemoteIpAddress: Set using the
-                  <code>X-Forwarded-For</code> header value. Additional settings
-                  influence how the middleware sets <code>RemoteIpAddress</code>
-                  .
+                  HttpContext. Connection. RemoteIpAddress: défini à l’aide de
+                  la <code>X-Forwarded-For</code> valeur d’en-tête. Des
+                  paramètres supplémentaires déterminent la façon dont le
+                  middleware définit <code>RemoteIpAddress</code>.
                 </li>
                 <li>
-                  HttpContext.Request.Scheme: Set using the{" "}
-                  <code>X-Forwarded-Proto</code> header value.
+                  HttpContext. Request. Scheme: défini à l’aide de la{" "}
+                  <code>X-Forwarded-Proto</code> valeur d’en-tête.
                 </li>
                 <li>
-                  HttpContext.Request.Host: Set using the{" "}
-                  <code>X-Forwarded-Host</code> header value.
+                  HttpContext. Request. Host: défini à l’aide de la{" "}
+                  <code>X-Forwarded-Host</code> valeur d’en-tête.
                 </li>
               </ul>
               <Highlight language="csharp">

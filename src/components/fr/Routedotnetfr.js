@@ -23,7 +23,7 @@ import DotnetcomponentsPage from "../../pages/fr/dotnet/Dotnetcomponents";
 import GcPage from "../../pages/fr/dotnet/Gc";
 import GcmethodsPage from "../../pages/fr/dotnet/Gcmethods";
 
-//#region dotnet
+//#region Design Pattern
 import CleancodePage from "../../pages/fr/dotnet/patternprinciple/Cleancode";
 import SolidPage from "../../pages/fr/dotnet/patternprinciple/Solid";
 import AgilePage from "../../pages/fr/dotnet/patternprinciple/Agile";
@@ -33,6 +33,14 @@ import MediatorPage from "../../pages/fr/dotnet/patternprinciple/Mediator";
 import ObserverPage from "../../pages/fr/dotnet/patternprinciple/Observer";
 import FactoryPage from "../../pages/fr/dotnet/patternprinciple/Factory";
 import CommandPage from "../../pages/fr/dotnet/patternprinciple/Command";
+//#endregion
+
+//#region Host Deployment
+import DockerPage from "../../pages/fr/dotnet/hostdeploy/Docker";
+import HttpsysPage from "../../pages/fr/dotnet/hostdeploy/Httpsys";
+import IisPage from "../../pages/fr/dotnet/hostdeploy/Iis";
+import KestrelPage from "../../pages/fr/dotnet/hostdeploy/Kestrel";
+import ServerPage from "../../pages/fr/dotnet/hostdeploy/Server";
 //#endregion
 
 //#endregion
@@ -97,6 +105,18 @@ export default function Routedotnetfr() {
       <Route path="/mediator" component={MediatorPage} />
       <Route path="/observer" component={ObserverPage} />
       <Route path="/command" component={CommandPage} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region Host Deploy
+      }
+      <Route path="/docker" component={DockerPage} />
+      <Route path="/httpsys" component={HttpsysPage} />
+      <Route path="/iis" component={IisPage} />
+      <Route path="/kestrel" component={KestrelPage} />
+      <Route path="/server" component={ServerPage} />
       {
         //#endregion
       }
