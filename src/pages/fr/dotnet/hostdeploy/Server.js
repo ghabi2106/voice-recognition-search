@@ -104,7 +104,7 @@ export default function Server() {
           <article id="in-process">
             <h6> in-process HTTP</h6>
             <div>
-              <p>ASP.NET Core ships with the following:</p>
+              <p>ASP.NET Core est fourni avec les composants suivants :</p>
               <ul>
                 <li>Kestrel server</li>
                 <li>IIS HTTP Server</li>
