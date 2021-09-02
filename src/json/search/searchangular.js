@@ -3,6 +3,12 @@ export const pagesangular = [
   // html
   "html",
   "hyper text markup language",
+  // web storage
+  "web storage",
+  "storage",
+  "cookie",
+  "local storage",
+  "session storage",
   // CSS
   "css",
   "cascading style sheets",

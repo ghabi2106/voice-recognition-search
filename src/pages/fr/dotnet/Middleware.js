@@ -80,7 +80,7 @@ export default function Middleware() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Common Runtime Language</h3>
+          <h3>Middleware</h3>
           <article id="introduction">
             <h6>Middleware</h6>
             <div>

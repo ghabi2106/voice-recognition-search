@@ -3,6 +3,12 @@ export const urlsreact = {
   // html
   html: "/html",
   "hyper text markup language": "/html",
+  // web storage
+  "web storage": "/webstorage",
+  storage: "/webstorage",
+  cookie: "/webstorage",
+  "local storage": "/webstorage",
+  "session storage": "/webstorage",
   // CSS
   css: "/css",
   "cascading style sheets": "/css",

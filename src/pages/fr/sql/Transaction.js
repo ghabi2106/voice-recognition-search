@@ -78,7 +78,7 @@ export default function Transaction() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>SQL</h3>
+          <h3>Transaction</h3>
           <article id="transaction">
             <h6>Transaction</h6>
             <p>

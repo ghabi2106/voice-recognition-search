@@ -110,7 +110,7 @@ export default function Di() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Différence entre .Net sandard et .Net Core</h3>
+          <h3>Dependency injection</h3>
           <article id="introduction">
             <h6>Introduction</h6>
             <div>

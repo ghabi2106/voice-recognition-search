@@ -30,6 +30,11 @@ export default function Navfrontend() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/webstorage">
+              Web-Storage
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/sass">
               SASS
             </Link>

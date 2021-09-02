@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Html() {
   return (
@@ -36,6 +38,46 @@ export default function Html() {
                     href="#new-features"
                   >
                     New features
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="element"
+                  >
+                    Elements
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="attribute"
+                  >
+                    Attributes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="semantic-elements"
+                  >
+                    Semantic Elements
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="entity"
+                  >
+                    Entities
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="encoding"
+                  >
+                    Encoding
                   </a>
                 </li>
               </ul>
@@ -106,6 +148,86 @@ export default function Html() {
                 <code>figure</code>,<code>progressbar</code>,<code>svg</code>
               </li>
             </ul>
+          </article>
+          <article id="element">
+            <h6>HTML Elements</h6>
+            <div>
+              <p>
+                Un élément HTML est défini par une balise de début, du contenu
+                et une balise de fin.
+              </p>
+              <Highlight language="html">
+                {`<tagname>Content goes here...</tagname>`}
+              </Highlight>
+            </div>
+          </article>
+          <article id="attribute">
+            <h6>HTML Attributes</h6>
+            <p>
+              Les attributs HTML fournissent des informations supplémentaires
+              sur les éléments HTML.
+              <br />
+              Les attributs se présentent généralement sous forme de paires
+              nom/valeur telles que : nom="valeur"
+              <br />
+              La <code>&lt;a&gt;</code>balise définit un lien hypertexte. L'
+              <code>href</code>attribut spécifie l'URL de la page vers laquelle
+              le lien renvoie&nbsp;:
+            </p>
+          </article>
+          <article id="semantic-elements">
+            <h6>HTML Semantic Elements</h6>
+            <div>
+              <p>Éléments sémantiques = éléments ayant un sens.</p>
+              <p>
+                Un élément sémantique décrit clairement sa signification à la
+                fois pour le navigateur et le développeur.
+              </p>
+              <p>
+                Exemples d' éléments <strong>non sémantiques</strong> :{" "}
+                <code>&lt;div&gt;</code>et <code>&lt;span&gt;</code>- Ne dit
+                rien sur son contenu.
+              </p>
+              <p>
+                Exemples d' éléments <strong>sémantiques</strong> :{" "}
+                <code>&lt;form&gt;</code>, <code>&lt;table&gt;</code>, et{" "}
+                <code>&lt;article&gt;</code>- Définit clairement son contenu.
+              </p>
+            </div>
+          </article>
+          <article id="entity">
+            <h6>HTML Entities</h6>
+            <div>
+              <p>
+                Les caractères réservés en HTML doivent être remplacés par des
+                entités de caractères.
+              </p>
+              <p>
+                Si vous utilisez les signes inférieur à (&lt;) ou supérieur à
+                (&gt;) dans votre texte, le navigateur peut les mélanger avec
+                des balises.
+              </p>
+              <Highlight language="html">
+                {`&entity_name;
+OR
+
+&#entity_number;`}
+              </Highlight>
+              <p>
+                Pour afficher un signe inférieur à (&lt;), nous devons écrire :{" "}
+                <b>&lt; </b>ou <b>&lt;</b>
+              </p>
+            </div>
+          </article>
+          <article id="encoding">
+            <h6>HTML Encoding (Character Sets)</h6>
+            <div>
+              <p>
+                Pour afficher correctement une page HTML, un navigateur Web doit
+                savoir quel jeu de caractères utiliser.
+              </p>
+              <Highlight language="html">{`<meta charset="UTF-8">`}</Highlight>
+            </div>
           </article>
         </section>
       </div>
