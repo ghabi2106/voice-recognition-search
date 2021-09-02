@@ -8,48 +8,8 @@ export default function Navdotnet() {
         //#region dotnet
       }
       <li className="nav-item">
-        <Link className="nav-link" to="/clean">
-          Clean
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/clr">
-          CLR
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/controller">
-          Controller
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/cqrs">
-          CQRS
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/di">
-          DI
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/dotnet">
-          Dotnet
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/entityframework">
-          EF
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/https">
-          Https
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/httpmethods">
-          Http-Methods
+        <Link className="nav-link" to="/boxing">
+          Boxing
         </Link>
       </li>
       <li className="nav-item">
@@ -58,10 +18,173 @@ export default function Navdotnet() {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/mvc">
-          MVC
+        <Link className="nav-link" to="/enumindexer">
+          Enumindexer
         </Link>
       </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/csharp-features">
+          C#-Features
+        </Link>
+      </li>
+
+      {
+        //#region Architecture
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Architecture
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/clean">
+              Clean
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/cqrs">
+              CQRS
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/mvc">
+              MVC
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
+
+      {
+        //#region Framework
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Framework
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/dotnetcomponents">
+              .Net-Components
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/dotnet">
+              .Net
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/assembly">
+              Assembly
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-menu" to="/clr">
+              CLR
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/dllexe">
+              DLL-EXE
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/entityframework">
+              EF
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/gc">
+              GC
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/gcmethods">
+              GC-Methods
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/linq">
+              Linq
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/nugetpackages">
+              Nuget-Packages
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
+
+      {
+        //#region HTTPS
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          HTTPS
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/caching">
+              Caching
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/controller">
+              Controller
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/controllervuedata">
+              Controller-Vue-Data
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/https">
+              Https
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/httpmethods">
+              Https-Methods
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/service">
+              Service
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
 
       {
         //#region design pattern
@@ -89,8 +212,8 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/solid">
-              Solid
+            <Link className="dropdown-item" to="/command">
+              Command
             </Link>
           </li>
           <li className="nav-item">
@@ -99,8 +222,8 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/singleton">
-              Singleton
+            <Link className="dropdown-item" to="/di">
+              DI
             </Link>
           </li>
           <li className="nav-item">
@@ -119,8 +242,54 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/command">
-              Command
+            <Link className="dropdown-item" to="/singleton">
+              Singleton
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/solid">
+              Solid
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
+
+      {
+        //#region OOP
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          OOP
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/modifiers">
+              Modifiers
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/oop">
+              OOP
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/statements">
+              Statements
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/typesystem">
+              Type-System
             </Link>
           </li>
         </ul>
@@ -195,51 +364,6 @@ export default function Navdotnet() {
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
-            <Link className="dropdown-item" to="/controllervuedata">
-              Controller-Vue-Data
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/nugetpackages">
-              Nuget-Packages
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/assembly">
-              Assembly
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/caching">
-              Caching
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/dllexe">
-              DLL-EXE
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/dotnetcomponents">
-              .Net-Components
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/gc">
-              GC
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/gcmethods">
-              GC-Methods
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/boxing">
-              Boxing
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link className="dropdown-item" to="/collections">
               Collections
             </Link>
@@ -260,43 +384,13 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/enumindexer">
-              Enumindexer
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/linq">
-              Linq
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/modifiers">
-              Modifiers
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/csharp-features">
-              C#-Features
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/oop">
-              OOP
+            <Link className="dropdown-item" to="/gettype">
+              GetType-typeof
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/refoutin">
               Ref-Out-In
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/service">
-              Service
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/statements">
-              Statements
             </Link>
           </li>
           <li className="nav-item">
@@ -317,16 +411,6 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/tuple">
               Tuple
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/typesystem">
-              Type-System
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/gettype">
-              GetType-typeof
             </Link>
           </li>
         </ul>
