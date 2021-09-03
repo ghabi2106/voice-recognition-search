@@ -96,7 +96,7 @@ export default function Index() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Constraints</h3>
+          <h3>Indexes</h3>
           <article id="index">
             <h6>SQL CREATE INDEX Statement</h6>
             <div>
