@@ -5,6 +5,9 @@ export const urlssql = {
   in: "/betweenin",
   // CASE
   case: "/case",
+  // index
+  "clusterd index": "/index",
+  index: "/index",
   // constraint
   constraint: "/constraint",
   "not null": "/constraint",

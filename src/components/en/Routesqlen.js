@@ -7,6 +7,7 @@ import CasePage from "../../pages/en/sql/Case";
 import ConstraintPage from "../../pages/en/sql/Constraint";
 import FuncprocPage from "../../pages/en/sql/Funcproc";
 import HavinganyallPage from "../../pages/en/sql/Havinganyall";
+import IndexPage from "../../pages/en/sql/Index";
 import JoinPage from "../../pages/en/sql/Join";
 import LikePage from "../../pages/en/sql/Like";
 import SqlPage from "../../pages/en/sql/Sql";
@@ -28,6 +29,7 @@ export default function Routesqlen() {
       <Route path="/constraint" component={ConstraintPage} />
       <Route path="/funcproc" component={FuncprocPage} />
       <Route path="/havinganyall" component={HavinganyallPage} />
+      <Route path="/index" component={IndexPage} />
       <Route path="/join" component={JoinPage} />
       <Route path="/like" component={LikePage} />
       <Route path="/sql" component={SqlPage} />

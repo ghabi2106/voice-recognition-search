@@ -33,6 +33,11 @@ export default function Navsql() {
         </Link>
       </li>
       <li className="nav-item">
+        <Link className="nav-link" to="/index">
+          Index
+        </Link>
+      </li>
+      <li className="nav-item">
         <Link className="nav-link" to="/join">
           Join
         </Link>

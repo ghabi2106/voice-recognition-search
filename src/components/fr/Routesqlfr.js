@@ -7,6 +7,7 @@ import CasePage from "../../pages/fr/sql/Case";
 import ConstraintPage from "../../pages/fr/sql/Constraint";
 import FuncprocPage from "../../pages/fr/sql/Funcproc";
 import HavinganyallPage from "../../pages/fr/sql/Havinganyall";
+import IndexPage from "../../pages/fr/sql/Index";
 import JoinPage from "../../pages/fr/sql/Join";
 import LikePage from "../../pages/fr/sql/Like";
 import SqlPage from "../../pages/fr/sql/Sql";
@@ -28,6 +29,7 @@ export default function Routesqlfr() {
       <Route path="/constraint" component={ConstraintPage} />
       <Route path="/funcproc" component={FuncprocPage} />
       <Route path="/havinganyall" component={HavinganyallPage} />
+      <Route path="/index" component={IndexPage} />
       <Route path="/join" component={JoinPage} />
       <Route path="/like" component={LikePage} />
       <Route path="/sql" component={SqlPage} />

@@ -5,6 +5,9 @@ export const pagessql = [
   "in",
   // CASE
   "case",
+  // index
+  "clustered index",
+  "index",
   // Constraints
   "constraint",
   "not null",
