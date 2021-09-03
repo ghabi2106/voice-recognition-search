@@ -101,6 +101,22 @@ export default function Constraint() {
                     className="d-inline-flex align-items-center rounded"
                     href="#clustered-index"
                   >
+                    clustered indexes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#non-clustered-index"
+                  >
+                    non-clustered indexes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#clustered-index-non-clustered"
+                  >
                     clustered vs non-clustered indexes
                   </a>
                 </li>
@@ -551,13 +567,55 @@ ON Persons (LastName, FirstName);`}
             </div>
           </article>
           <article id="clustered-index">
+            <h6>clustered indexes</h6>
+            <div>
+              <p>
+                Un index de cluster a déterminé l'ordre des données physiques de
+                la table. Par conséquent, la table ne peut avoir qu'un seul
+                index de cluster dans SQL.
+              </p>
+              <p>
+                L'index de cluster sera automatiquement créé chaque fois que
+                nous appliquons une contrainte de clé primaire sur la colonne de
+                la table.
+              </p>
+              <p>
+                <strong>Index de cluster personnalisé ou composite</strong>
+              </p>
+              <Highlight language="sql">
+                {`CREATE CLUSTERED INDEX IX_tblMember_Gender_FirstName  
+ON member(gender ASC, firstName DESC) `}
+              </Highlight>
+            </div>
+          </article>
+          <article id="non-clustered-index">
+            <h6>Non-clustered indexes</h6>
+            <div>
+              <p>
+                L'index non-Cluster ne trie pas les données physiques comme
+                l'index Cluster. Cela signifie que la séquence de données ne
+                sera pas modifiée et que les données reviendront dans la même
+                séquence dans laquelle elles ont été insérées.
+              </p>
+              <p>
+                Comme un livre, l'index Non-Cluster sera stocké à un endroit et
+                les données seront stockées à un autre endroit. Cela permettra
+                de créer plus d'un index non-cluster sur la table.
+              </p>
+              <p>
+                <strong>Non-Cluster index syntax</strong>
+              </p>
+              <Highlight language="sql">
+                {`CREATE NONCLUSTERED INDEX IX_tblmumbai_Name  
+ON member(firstname ASC)`}
+              </Highlight>
+            </div>
+          </article>
+          <article id="clustered-index-non-clustered">
             <h6>les index clusterisés vs non clusterisés.</h6>
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <td>
-                    <strong>Paramètres</strong>
-                  </td>
                   <td>
                     <strong>Clustered Index</strong>
                   </td>
@@ -568,55 +626,24 @@ ON Persons (LastName, FirstName);`}
               </thead>
               <tbody>
                 <tr>
-                  <td>Utilisé pour</td>
-                  <td>
-                    Trier et stocker physiquement les enregistrements en mémoire
-                  </td>
-                  <td>
-                    Création d'un ordre logique pour les lignes de données. Les
-                    pointeurs sont utilisés pour les fichiers de données
-                    physiques
-                  </td>
+                  <td>Ne peut avoir qu'un seul index de cluster par table.</td>
+                  <td>Peut avoir plusieurs index de non-cluster par table.</td>
                 </tr>
                 <tr>
-                  <td>Méthodes de stockage</td>
-                  <td>Stocke les données dans les nœuds feuilles de l'index</td>
                   <td>
-                    Ne stocke jamais de données dans les nœuds feuilles de
-                    l'index
+                    Ne peut pas consommer de stockage sur disque supplémentaire
+                    car cela ne fait que trier la ligne de données dans la table
+                  </td>
+                  <td>
+                    Peut consommer plus d'espace de stockage sur disque car les
+                    données et l'index seront stockés à des endroits différents.
                   </td>
                 </tr>
                 <tr>
-                  <td>Taille</td>
-                  <td>Assez grand</td>
-                  <td>Comparativement, petit</td>
-                </tr>
-                <tr>
-                  <td>Accès aux données</td>
-                  <td>Rapide</td>
-                  <td>Lent</td>
-                </tr>
-                <tr>
-                  <td>Espace disque supplémentaire</td>
-                  <td>Non requis</td>
-                  <td>Nécessaire pour stocker les index séparément</td>
-                </tr>
-                <tr>
-                  <td>Type de clé</td>
+                  <td>Il est plus rapide que l'index de non-cluster.</td>
                   <td>
-                    Par défaut, la clé primaire d'une table est un index
-                    clusterisé
-                  </td>
-                  <td>
-                    Il peut être utilisé avec la contrainte d'unicité sur la
-                    table qui agit comme une clé composite
-                  </td>
-                </tr>
-                <tr>
-                  <td>Caractéristique principale</td>
-                  <td>Améliore les performances de récupération des données</td>
-                  <td>
-                    Doit être créé sur les colonnes utilisées dans les jointures
+                    Il est plus lent que l'index de cluster car il nécessite une
+                    recherche supplémentaire pour rechercher un enregistrement.
                   </td>
                 </tr>
               </tbody>

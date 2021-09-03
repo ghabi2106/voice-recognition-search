@@ -101,6 +101,22 @@ export default function Constraint() {
                     className="d-inline-flex align-items-center rounded"
                     href="#clustered-index"
                   >
+                    clustered indexes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#non-clustered-index"
+                  >
+                    non-clustered indexes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#clustered-index-non-clustered"
+                  >
                     clustered vs non-clustered indexes
                   </a>
                 </li>
@@ -500,7 +516,10 @@ DROP CONSTRAINT CHK_PersonAge;`}
                 <code>CREATE INDEX</code> - Used to create and retrieve data
                 from the database very quickly
               </p>
-              <img src="img/sql/Explain-the-types-of-Indexes.png" alt="Explain-the-types-of-Indexes" />
+              <img
+                src="img/sql/Explain-the-types-of-Indexes.png"
+                alt="Explain-the-types-of-Indexes"
+              />
               <dl>
                 <dt>CREATE INDEX Syntax</dt>
                 <dd>
@@ -546,13 +565,44 @@ ON Persons (LastName, FirstName);`}
             </div>
           </article>
           <article id="clustered-index">
+            <h6>clustered indexes</h6>
+            <div>
+              <p>
+                A Cluster Index determined the order of physical data of table,
+                hence table can have only one cluster index in SQL.
+              </p>
+              <p>
+                Cluster Index will be automatically created whenever we apply
+                primary key constrain on the table column.
+              </p>
+              <p><strong>Custom or Composite Cluster index syntax</strong></p>
+              <Highlight language="sql">
+                {`CREATE CLUSTERED INDEX IX_tblMember_Gender_FirstName  
+ON member(gender ASC, firstName DESC) `}
+              </Highlight>
+            </div>
+          </article>
+          <article id="non-clustered-index">
+            <h6>Non-clustered indexes</h6>
+            <div>
+              <p>
+              The non-Cluster index doesn’t sort physical data like the Cluster index. It means that the sequence of data will not be change and data will be returning on the same sequence in which its inserted.
+              </p>
+              <p>
+              Like Book, Non-Cluster index will be store in one place and data will be store in another place. This will allow creating more than one Non-cluster index on the table.
+              </p>
+              <p><strong>Non-Cluster index syntax</strong></p>
+              <Highlight language="sql">
+                {`CREATE NONCLUSTERED INDEX IX_tblmumbai_Name  
+ON member(firstname ASC)`}
+              </Highlight>
+            </div>
+          </article>
+          <article id="clustered-index-non-clustered">
             <h6>clustered vs non-clustered indexes.</h6>
             <table class="table table-bordered">
               <thead>
                 <tr>
-                  <td>
-                    <strong>Parameters</strong>
-                  </td>
                   <td>
                     <strong>Clustered Index</strong>
                   </td>
@@ -563,47 +613,25 @@ ON Persons (LastName, FirstName);`}
               </thead>
               <tbody>
                 <tr>
-                  <td>Used for</td>
-                  <td>Sorting and storing records physically in memory</td>
+                  <td>Can have only one Cluster Index per table.</td>
+                  <td>Can have more than one Non-Cluster Index per table.</td>
+                </tr>
+                <tr>
                   <td>
-                    Creating a logical order for data rows. Pointers are used
-                    for physical data files
+                    Cannot consume extra disk storage as that only sort data row
+                    in the table
+                  </td>
+                  <td>
+                    Can consume more disk storage space as data and index will
+                    be store in different places.
                   </td>
                 </tr>
                 <tr>
-                  <td>Methods for storing</td>
-                  <td>Stores data in the leaf nodes of the index</td>
-                  <td>Never stores data in the leaf nodes of the index</td>
-                </tr>
-                <tr>
-                  <td>Size</td>
-                  <td>Quite large</td>
-                  <td>Comparatively, small</td>
-                </tr>
-                <tr>
-                  <td>Data accessing</td>
-                  <td>Fast</td>
-                  <td>Slow</td>
-                </tr>
-                <tr>
-                  <td>Additional disk space</td>
-                  <td>Not required</td>
-                  <td>Required to store indexes separately</td>
-                </tr>
-                <tr>
-                  <td>Type of key</td>
+                  <td>It is faster than Non-Cluster Index.</td>
                   <td>
-                    By default, the primary key of a table is a clustered index
+                    It is slower than Cluster index as it needs extra look up to
+                    search record.
                   </td>
-                  <td>
-                    It can be used with the unique constraint on the table that
-                    acts as a composite key
-                  </td>
-                </tr>
-                <tr>
-                  <td>Main feature</td>
-                  <td>Improves the performance of data retrieval</td>
-                  <td>Should be created on columns used in Joins</td>
                 </tr>
               </tbody>
             </table>
