@@ -2,32 +2,49 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
 //#region dotnet
-import CleanPage from "../../pages/fr/dotnet/Clean";
-import CLRPage from "../../pages/fr/dotnet/Clr";
 import ControllerPage from "../../pages/fr/dotnet/Controller";
-import ControllervuedataPage from "../../pages/fr/dotnet/Controllervuedata";
-import CqrsPage from "../../pages/fr/dotnet/Cqrs";
-import DiPage from "../../pages/fr/dotnet/Di";
-import DotnetPage from "../../pages/fr/dotnet/Dotnet";
-import EntityframeworkPage from "../../pages/fr/dotnet/Entityframework";
-import HttpsPage from "../../pages/fr/dotnet/Https";
-import HttpmethodsPage from "../../pages/fr/dotnet/Httpmethods";
-import MiddlewarePage from "../../pages/fr/dotnet/Middleware";
-import MvcPage from "../../pages/fr/dotnet/Mvc";
-import NugetpackagesPage from "../../pages/fr/dotnet/Nugetpackages";
-import ServicePage from "../../pages/fr/dotnet/Service";
-import AssemblyPage from "../../pages/fr/dotnet/Assembly";
-import CachingPage from "../../pages/fr/dotnet/Caching";
-import DllexePage from "../../pages/fr/dotnet/Dllexe";
-import DotnetcomponentsPage from "../../pages/fr/dotnet/Dotnetcomponents";
-import GcPage from "../../pages/fr/dotnet/Gc";
-import GcmethodsPage from "../../pages/fr/dotnet/Gcmethods";
 
-//#region Design Pattern
+//#region Architecture
+import CqrsPage from "../../pages/fr/dotnet/architecture/Cqrs";
+import CleanPage from "../../pages/fr/dotnet/architecture/Clean";
+import MvcPage from "../../pages/fr/dotnet/architecture/Mvc";
+//#endregion
+
+//#region Framework
+import DotnetPage from "../../pages/fr/dotnet/framework/Dotnet";
+import DotnetcomponentsPage from "../../pages/fr/dotnet/framework/Dotnetcomponents";
+import AssemblyPage from "../../pages/fr/dotnet/framework/Assembly";
+import CLRPage from "../../pages/fr/dotnet/framework/Clr";
+import DllexePage from "../../pages/fr/dotnet/framework/Dllexe";
+import EntityframeworkPage from "../../pages/fr/dotnet/framework/Entityframework";
+import GcPage from "../../pages/fr/dotnet/framework/Gc";
+import GcmethodsPage from "../../pages/fr/dotnet/framework/Gcmethods";
+import LinqPage from "../../pages/fr/dotnet/framework/Linq";
+import NugetpackagesPage from "../../pages/fr/dotnet/framework/Nugetpackages";
+//#endregion
+
+//#region OOP
+import ModifiersPage from "../../pages/fr/dotnet/oop/Modifiers";
+import OopPage from "../../pages/fr/dotnet/oop/Oop";
+import StatementsPage from "../../pages/fr/dotnet/oop/Statements";
+import TypesystemPage from "../../pages/fr/dotnet/oop/Typesystem";
+//#endregion
+
+//#region Http
+import CachingPage from "../../pages/fr/dotnet/http/Caching";
+import ControllervuedataPage from "../../pages/fr/dotnet/http/Controllervuedata";
+import HttpsPage from "../../pages/fr/dotnet/http/Https";
+import HttpmethodsPage from "../../pages/fr/dotnet/http/Httpmethods";
+import MiddlewarePage from "../../pages/fr/dotnet/http/Middleware";
+import ServicePage from "../../pages/fr/dotnet/http/Service";
+//#endregion
+
+//#region design pattern
 import CleancodePage from "../../pages/fr/dotnet/patternprinciple/Cleancode";
 import SolidPage from "../../pages/fr/dotnet/patternprinciple/Solid";
 import AgilePage from "../../pages/fr/dotnet/patternprinciple/Agile";
 import DesignpatternPage from "../../pages/fr/dotnet/patternprinciple/Designpattern";
+import DiPage from "../../pages/fr/dotnet/patternprinciple/Di";
 import SingletonPage from "../../pages/fr/dotnet/patternprinciple/Singleton";
 import MediatorPage from "../../pages/fr/dotnet/patternprinciple/Mediator";
 import ObserverPage from "../../pages/fr/dotnet/patternprinciple/Observer";
@@ -45,25 +62,20 @@ import ServerPage from "../../pages/fr/dotnet/hostdeploy/Server";
 
 //#endregion
 
-//#region c# pages
+//#region csharp
 import BoxingPage from "../../pages/fr/csharp/Boxing";
 import CollectionsPage from "../../pages/fr/csharp/Collections";
 import CovariancePage from "../../pages/fr/csharp/Covariance";
 import DatatypePage from "../../pages/fr/csharp/Datatype";
 import DelegatePage from "../../pages/fr/csharp/Delegate";
 import EnumindexerPage from "../../pages/fr/csharp/Enumindexer";
-import LinqPage from "../../pages/fr/csharp/Linq";
-import ModifiersPage from "../../pages/fr/csharp/Modifiers";
 import NewfeaturesPage from "../../pages/fr/csharp/Newfeatures";
-import OopPage from "../../pages/fr/csharp/Oop";
 import RefoutinPage from "../../pages/fr/csharp/refoutin";
-import StatementsPage from "../../pages/fr/csharp/Statements";
 import String2intPage from "../../pages/fr/csharp/String2int";
 import StringbuilderPage from "../../pages/fr/csharp/Stringbuilder";
 import ThreadsPage from "../../pages/fr/csharp/Threads";
 import TuplePage from "../../pages/fr/csharp/Tuple";
-import TypesystemPage from "../../pages/fr/csharp/Typesystem";
-import GetTypePage from "../../pages/en/csharp/GetType";
+import GetTypePage from "../../pages/fr/csharp/GetType";
 //#endregion
 
 export default function Routedotnetfr() {
