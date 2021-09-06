@@ -7,6 +7,7 @@ import WebstoragePage from "../../pages/fr/frontend/Webstorage";
 import CssPage from "../../pages/fr/frontend/Css";
 import SassPage from "../../pages/fr/frontend/Sass";
 import JavascriptPage from "../../pages/fr/frontend/Javascript";
+import SpaPage from "../../pages/fr/frontend/Spa";
 //#endregion
 
 export default function Routefrontenden() {
@@ -20,6 +21,7 @@ export default function Routefrontenden() {
       <Route path="/css" component={CssPage} />
       <Route path="/sass" component={SassPage} />
       <Route path="/javascript" component={JavascriptPage} />
+      <Route path="/spa" component={SpaPage} />
       {
         //#endregion
       }

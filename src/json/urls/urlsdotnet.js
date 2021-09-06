@@ -39,8 +39,6 @@ export const urlsdotnet = {
   assembly: "/assembly",
   // Caching
   caching: "/caching",
-  cookie: "/caching",
-  cookies: "/caching",
   // DLL vs EXE
   dll: "/dllexe",
   exe: "/dllexe",
@@ -155,6 +153,16 @@ export const urlsdotnet = {
   "delete method": "/httpmethods",
   "patch method": "/httpmethods",
   "options method": "/httpmethods",
+  // Hosted service
+  "hoster service": "/hostedservice",
+  "background service": "/hostedservice",
+  // jwt
+  jwt: "/jwt",
+  "json web token": "/jwt",
+  "cross-site scripting": "/jwt",
+  xss: "/jwt",
+  csrf: "/jwt",
+  "cross-site request forgery": "/jwt",
   // Middleware
   middleware: "/middleware",
   // MVC Architecture

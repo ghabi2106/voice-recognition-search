@@ -25,6 +25,14 @@ export const urlsreact = {
   closure: "/javascript",
   iife: "/javascript",
   promise: "/javascript",
+  // spa
+  "spa": "/spa",
+  "single-page application": "/spa",
+  "mpa": "/spa",
+  "multi-page application": "/spa",
+  "ajax": "/spa",
+  "asynchronous javaScript and xml": "/spa",
+  "search engine optimization": "/spa",
   // Arrow function
   "arrow function": "/arrowfunc",
   arrow: "/arrowfunc",

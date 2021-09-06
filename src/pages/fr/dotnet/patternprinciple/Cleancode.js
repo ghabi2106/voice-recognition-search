@@ -30,6 +30,110 @@ export default function Cleancode() {
                     clean code
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#dry"
+                  >
+                    DRY
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#kiss"
+                  >
+                    KISS
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#yagni"
+                  >
+                    YAGNI
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#occam-razor"
+                  >
+                    Occam's razor
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#boyscout"
+                  >
+                    Boyscout rule
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#consistency"
+                  >
+                    Focus on consistency
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#soc"
+                  >
+                    Separation of Concerns
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#pi"
+                  >
+                    Persistence Ignorance
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#bounded-context"
+                  >
+                    Bounded Context
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#modularity"
+                  >
+                    Modularity
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#explicit-dependencies"
+                  >
+                    Explicit Dependencies
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#coi"
+                  >
+                    Composition over Inheritance
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#encapsulation"
+                  >
+                    Encapsulation
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -85,112 +189,163 @@ export default function Cleancode() {
                 <li>YAGNI "You Aren't Gonna Need It"</li>
                 <li>DRY "Don't repeat yourself"</li>
                 <li>SOLID</li>
-                <li>Separation of Concerns (SoC)</li>
+                <li>Separation of Concerns principle (SoC)</li>
                 <li>Persistence Ignorance (PI)</li>
                 <li>Occam's Razor</li>
+                <li>Boyscout rule</li>
+                <li>Focus on consistency</li>
                 <li>Bounded Context</li>
-                <li>Dépendances explicites</li>
+                <li>Modularity</li>
+                <li>Explicit Dependencies</li>
+                <li>Composition over Inheritance (COI)</li>
                 <li>Encapsulation</li>
               </ul>
-              <dl>
-                <dt>DRY :</dt>
-                <dd>
-                  Le principe DRY signifie "Don't repeat yourself" se traduit
-                  par « Ne vous répétez pas » vise à éviter la redondance de
-                  code au sein d’une application afin de faciliter la
-                  maintenance, le test, le débogage et les évolutions de cette
-                  dernière.
-                </dd>
-                <dt>KISS :</dt>
-                <dd>
-                  Le principe KISS signifie "Keep It Simple, Stupid" se traduite
-                  par « garde ça simple, idiot » est de faire le code le plus
-                  simple possible pour qu’il soit beaucoup plus facile à faire
-                  évoluer et à maintenir.
-                </dd>
-                <dt>YAGNI :</dt>
-                <dd>
-                  Le principe YAGINI signifie "You Aren't Gonna Need It" qui
-                  peut se traduite par « vous n'en aurez pas besoin » déclare
-                  que les programmeurs ne devraient pas ajouter de
-                  fonctionnalité à un logiciel tant que celle-ci n'est pas
-                  absolument nécessaire..
-                </dd>
-                <dt>Occam's razor :</dt>
-                <dd>
-                  Le rasoir d'Occam énonce que "Entities should not be
-                  multiplied without necessity". se traduit par « les entités ne
-                  doivent pas être multipliées au - delà de la nécessité ». Ce
-                  rasoir philosophique préconise que lorsqu'on est confronté à
-                  des hypothèses concurrentes sur la même prédiction, il faut
-                  sélectionner la solution avec le moins d'hypothèses, et que ce
-                  n'est pas censé être une façon de choisir entre des hypothèses
-                  qui font des prédictions différentes.
-                </dd>
-                <dt>Separation of Concerns principle (SoC) :</dt>
-                <dd>
-                  La séparation des responsabilités est un principe qui sert à
-                  divisé l'application en fonction des types des tâches qu’il
-                  effectue.
-                  <br />
-                  De manière architecturale, les applications peuvent être
-                  créées logiquement pour respecter ce principe en séparant le
-                  comportement métier principal de la logique d’infrastructure
-                  et de l’interface utilisateur. Cette séparation permet de
-                  garantir que le modèle d’entreprise est facile à tester et
-                  peut évoluer sans être étroitement couplé à des détails
-                  d’implémentation de bas niveau. La séparation des
-                  responsabilités est un aspect fondamental de l’utilisation des
-                  couches dans les architectures d’applications.
-                </dd>
-                <dt>Persistence Ignorance (PI) :</dt>
-                <dd>
-                  Le principe de Persistence Ignorance (PI) soutient que les
-                  classes modélisant le domaine métier dans une application
-                  logicielle ne devraient pas être affectées par la façon dont
-                  elles pourraient être persistantes.
-                  <br />
-                  Il existe des degrés d'ignorance de la persistance, le degré
-                  le plus élevé étant décrit comme des objets POCO (Plain Old
-                  CLR) dans .NET
-                </dd>
-                <dt>Bounded Context :</dt>
-                <dd>
-                  Les contextes délimités sont un modèle essentiel dans la
-                  conception pilotée par le domaine. Elles offrent un moyen de
-                  maîtriser la complexité dans les applications ou les
-                  organisations de grande ampleur en la fractionnant en modules
-                  conceptuels distincts.
-                  <br />
-                  Chaque module conceptuel représente ensuite un contexte qui
-                  est séparé des autres contextes (par conséquent, délimité) et
-                  peut évoluer indépendamment.
-                </dd>
-                <dt>Modularity :</dt>
-                <dd>
-                  La modularité est le degré auquel les composants d' un système
-                  peuvent être séparés et recombinés, souvent avec l'avantage de
-                  la flexibilité et de la variété d'utilisation.
-                </dd>
-                <dt>Dépendances explicites</dt>
-                <dd>
-                  Les méthodes et les classes doivent demander explicitement
-                  tous les objets de collaboration dont ils ont besoin pour
-                  fonctionner correctement.
-                  <br />
-                  En suivant le principe des dépendances explicites, vos classes
-                  et vos méthodes sont honnêtes avec leurs clients quant à ce
-                  dont elles ont besoin pour fonctionner.
-                </dd>
-                <dt>Encapsulation</dt>
-                <dd>
-                  On doit utiliser l’encapsulation pour isoler les unes des
-                  autres les différentes parties d’une application. Il décrit
-                  l'idée de regrouper des données et des méthodes qui
-                  fonctionnent sur ces données au sein d'une unité.
-                </dd>
-              </dl>
             </div>
+          </article>
+          <article id="dry">
+            <h6>DRY : Don't repeat yourself</h6>
+            <p>
+              Le principe DRY signifie "Don't repeat yourself" se traduit par «
+              Ne vous répétez pas » vise à éviter la redondance de code au sein
+              d’une application afin de faciliter la maintenance, le test, le
+              débogage et les évolutions de cette dernière.
+            </p>
+          </article>
+          <article id="kiss">
+            <h6>KISS : Keep It Simple, Stupid</h6>
+            <p>
+              Le principe KISS signifie "Keep It Simple, Stupid" se traduite par
+              « garde ça simple, idiot » est de faire le code le plus simple
+              possible pour qu’il soit beaucoup plus facile à faire évoluer et à
+              maintenir.
+            </p>
+          </article>
+          <article id="yagni">
+            <h6>YAGNI : You Aren't Gonna Need It</h6>
+            <p>
+              Le principe YAGINI signifie "You Aren't Gonna Need It" qui peut se
+              traduite par « vous n'en aurez pas besoin » déclare que les
+              programmeurs ne devraient pas ajouter de fonctionnalité à un
+              logiciel tant que celle-ci n'est pas absolument nécessaire.
+            </p>
+          </article>
+          <article id="occam-razor">
+            <h6>Occam's razor :</h6>
+            <p>
+              Le rasoir d'Occam énonce que "Entities should not be multiplied
+              without necessity". se traduit par « les entités ne doivent pas
+              être multipliées au - delà de la nécessité ». Ce rasoir
+              philosophique préconise que lorsqu'on est confronté à des
+              hypothèses concurrentes sur la même prédiction, il faut
+              sélectionner la solution avec le moins d'hypothèses, et que ce
+              n'est pas censé être une façon de choisir entre des hypothèses qui
+              font des prédictions différentes.
+            </p>
+          </article>
+          <article id="boyscout">
+            <h6>Boyscout rule :</h6>
+            <p>
+              La règle du boyscout: 'Always leave the code better than you found
+              it.' : « Laissez toujours le code mieux que vous ne l'avez trouvé
+              ». Si seulement tous les ingénieurs logiciels se comportaient
+              comme bons citoyens, notre logiciel ne se détériorerait pas aussi
+              implacablement.
+            </p>
+          </article>
+          <article id="consistency">
+            <h6>Mettre l'accent sur la cohérence :</h6>
+            <p>
+              Ce principe ne vous dit pas vraiment comment coder, il vous dit
+              plutôt de vous en tenir à la façon dont vous le faites déjà. La
+              cohérence signifie pratiquer les mêmes techniques et méthodes à
+              travers le code. Cela permet d'identifier facilement les problèmes
+              potentiels.
+            </p>
+          </article>
+          <article id="soc">
+            <h6>SoC : Separation of Concerns principle</h6>
+            <p>
+              La séparation des responsabilités est un principe qui sert à
+              divisé l'application en fonction des types des tâches qu’il
+              effectue.
+              <br />
+              De manière architecturale, les applications peuvent être créées
+              logiquement pour respecter ce principe en séparant le comportement
+              métier principal de la logique d’infrastructure et de l’interface
+              utilisateur. Cette séparation permet de garantir que le modèle
+              d’entreprise est facile à tester et peut évoluer sans être
+              étroitement couplé à des détails d’implémentation de bas niveau.
+              La séparation des responsabilités est un aspect fondamental de
+              l’utilisation des couches dans les architectures d’applications.
+            </p>
+          </article>
+          <article id="pi">
+            <h6>PI : Persistence Ignorance</h6>
+            <p>
+              Le principe de Persistence Ignorance (PI) soutient que les classes
+              modélisant le domaine métier dans une application logicielle ne
+              devraient pas être affectées par la façon dont elles pourraient
+              être persistantes.
+              <br />
+              Il existe des degrés d'ignorance de la persistance, le degré le
+              plus élevé étant décrit comme des objets POCO (Plain Old CLR) dans
+              .NET
+            </p>
+          </article>
+          <article id="bounded-context">
+            <h6>Bounded Context :</h6>
+            <p>
+              Les contextes délimités sont un modèle essentiel dans la
+              conception pilotée par le domaine. Elles offrent un moyen de
+              maîtriser la complexité dans les applications ou les organisations
+              de grande ampleur en la fractionnant en modules conceptuels
+              distincts.
+              <br />
+              Chaque module conceptuel représente ensuite un contexte qui est
+              séparé des autres contextes (par conséquent, délimité) et peut
+              évoluer indépendamment.
+            </p>
+          </article>
+          <article id="modularity">
+            <h6>Modularity :</h6>
+            <p>
+              La modularité est le degré auquel les composants d' un système
+              peuvent être séparés et recombinés, souvent avec l'avantage de la
+              flexibilité et de la variété d'utilisation.
+            </p>
+          </article>
+          <article id="explicit-dependencies">
+            <h6>Explicit Dependencies</h6>
+            <p>
+              Les méthodes et les classes doivent demander explicitement tous
+              les objets de collaboration dont ils ont besoin pour fonctionner
+              correctement.
+              <br />
+              En suivant le principe des dépendances explicites, vos classes et
+              vos méthodes sont honnêtes avec leurs clients quant à ce dont
+              elles ont besoin pour fonctionner.
+            </p>
+          </article>
+          <article id="coi">
+            <h6>COI : Composition over Inheritance</h6>
+            <p>
+              La composition sur l'héritage (ou principe de réutilisation
+              composite ) dans la programmation orientée objet (OOP) est le
+              principe selon lequel les classes doivent obtenir un comportement
+              polymorphe et une réutilisation du code par leur composition (en
+              contenant des instances d'autres classes qui implémentent la
+              fonctionnalité souhaitée) plutôt que l' héritage d'un classe de
+              base ou parent.
+            </p>
+          </article>
+          <article id="encapsulation">
+            <h6>Encapsulation</h6>
+            <p>
+              On doit utiliser l’encapsulation pour isoler les unes des autres
+              les différentes parties d’une application. Il décrit l'idée de
+              regrouper des données et des méthodes qui fonctionnent sur ces
+              données au sein d'une unité.
+            </p>
           </article>
         </section>
       </div>

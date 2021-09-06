@@ -25,6 +25,14 @@ export const pagesangular = [
   "closure",
   "iife",
   "promise",
+  // spa
+  "spa",
+  "single-page application",
+  "mpa",
+  "multi-page application",
+  "ajax",
+  "asynchronous javaScript and xml",
+  "search engine optimization",
   // angular
   "angular",
   // // ggggggggggggggggggggggggggggg

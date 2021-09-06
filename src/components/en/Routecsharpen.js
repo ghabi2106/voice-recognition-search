@@ -3,6 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 
 //#region dotnet
 import ControllerPage from "../../pages/en/dotnet/Controller";
+import HostedservicePage from "../../pages/en/dotnet/Hostedservice";
 
 //#region Architecture
 import CqrsPage from "../../pages/en/dotnet/architecture/Cqrs";
@@ -35,6 +36,7 @@ import CachingPage from "../../pages/en/dotnet/http/Caching";
 import ControllervuedataPage from "../../pages/en/dotnet/http/Controllervuedata";
 import HttpsPage from "../../pages/en/dotnet/http/Https";
 import HttpmethodsPage from "../../pages/en/dotnet/http/Httpmethods";
+import JwtPage from "../../pages/en/dotnet/http/Jwt";
 import MiddlewarePage from "../../pages/en/dotnet/http/Middleware";
 import ServicePage from "../../pages/en/dotnet/http/Service";
 //#endregion
@@ -84,6 +86,7 @@ export default function Routecsharpen() {
       {
         //#region dotnet
       }
+      <Route path="/hostedservice" component={HostedservicePage} />
       <Route path="/clean" component={CleanPage} />
       <Route path="/clr" component={CLRPage} />
       <Route path="/controller" component={ControllerPage} />
@@ -94,6 +97,7 @@ export default function Routecsharpen() {
       <Route path="/entityframework" component={EntityframeworkPage} />
       <Route path="/https" component={HttpsPage} />
       <Route path="/httpmethods" component={HttpmethodsPage} />
+      <Route path="/jwt" component={JwtPage} />
       <Route path="/middleware" component={MiddlewarePage} />
       <Route path="/mvc" component={MvcPage} />
       <Route path="/nugetpackages" component={NugetpackagesPage} />

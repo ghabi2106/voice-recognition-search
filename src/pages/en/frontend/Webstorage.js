@@ -28,31 +28,41 @@ export default function Webstorage() {
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#storage"
-                  >Web Storage</a>
+                  >
+                    Web Storage
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#storage-type"
-                  >Storage Types</a>
+                  >
+                    Storage Types
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#local-storage"
-                  >localStorage</a>
+                  >
+                    localStorage
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#session-storage"
-                  >session-storage</a>
+                  >
+                    session-storage
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#cookies"
-                  >Cookies</a>
+                  >
+                    Cookies
+                  </a>
                 </li>
               </ul>
             </li>
@@ -178,6 +188,17 @@ sessionStorage.clear();`}
               <p>
                 Cookies are data, stored in small text files, on your computer.
               </p>
+              <ul>
+                <li>
+                  <strong>Session Cookie: </strong>It resides on the client
+                  machine for a single session until the user logs out.
+                </li>
+                <li>
+                  <strong>Persistent Cookie: </strong>Resides on the user
+                  machine for a period specified for its expiry. It may be an
+                  hour, a month or never.
+                </li>
+              </ul>
               <p>
                 When a web server has sent a web page to a browser, the
                 connection is shut down, and the server forgets everything about

@@ -39,8 +39,6 @@ export const pagesdotnet = [
   "assembly",
   // Caching
   "caching",
-  "cookie",
-  "cookies",
   // DLL vs EXE
   "dll",
   "exe",
@@ -156,6 +154,16 @@ export const pagesdotnet = [
   "delete method",
   "patch method",
   "options method",
+  // Hosted service
+  "hoster service",
+  "background service",
+  // jwt
+  "jwt",
+  "json web token",
+  "cross-site scripting",
+  "xss",
+  "csrf",
+  "cross-site request forgery",
   // Middleware
   "middleware",
   // MVC Architecture

@@ -25,6 +25,14 @@ export const pagesreact = [
   "closure",
   "iife",
   "promise",
+  // spa
+  "spa",
+  "single-page application",
+  "mpa",
+  "multi-page application",
+  "ajax",
+  "asynchronous javaScript and xml",
+  "search engine optimization",
   // Arrow function
   "arrow function",
   // Difference between controlled and uncontrolled components

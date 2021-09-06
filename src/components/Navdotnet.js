@@ -27,6 +27,11 @@ export default function Navdotnet() {
           C#-Features
         </Link>
       </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/hostedservice">
+          Hosted-Service
+        </Link>
+      </li>
 
       {
         //#region Architecture
@@ -173,6 +178,11 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/httpmethods">
               Https-Methods
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/jwt">
+              JWT
             </Link>
           </li>
           <li className="nav-item">

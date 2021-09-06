@@ -194,6 +194,18 @@ sessionStorage.clear();`}
                 Les cookies sont des données, stockées dans de petits fichiers
                 texte, sur votre ordinateur.
               </p>
+              <ul>
+                <li>
+                  <strong>Cookie de session : </strong> il réside sur la machine
+                  cliente pour une seule session jusqu'à ce que l'utilisateur se
+                  déconnecte.
+                </li>
+                <li>
+                  <strong>Cookie persistant : </strong> réside sur la machine de
+                  l'utilisateur pendant une période spécifiée pour son
+                  expiration. Cela peut être une heure, un mois ou jamais.
+                </li>
+              </ul>
               <p>
                 Lorsqu'un serveur Web a envoyé une page Web à un navigateur, la
                 connexion est coupée et le serveur oublie tout de l'utilisateur.

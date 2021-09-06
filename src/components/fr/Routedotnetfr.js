@@ -3,6 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 
 //#region dotnet
 import ControllerPage from "../../pages/fr/dotnet/Controller";
+import HostedservicePage from "../../pages/fr/dotnet/Hostedservice";
 
 //#region Architecture
 import CqrsPage from "../../pages/fr/dotnet/architecture/Cqrs";
@@ -35,6 +36,7 @@ import CachingPage from "../../pages/fr/dotnet/http/Caching";
 import ControllervuedataPage from "../../pages/fr/dotnet/http/Controllervuedata";
 import HttpsPage from "../../pages/fr/dotnet/http/Https";
 import HttpmethodsPage from "../../pages/fr/dotnet/http/Httpmethods";
+import JwtPage from "../../pages/fr/dotnet/http/Jwt";
 import MiddlewarePage from "../../pages/fr/dotnet/http/Middleware";
 import ServicePage from "../../pages/fr/dotnet/http/Service";
 //#endregion
@@ -76,6 +78,7 @@ import StringbuilderPage from "../../pages/fr/csharp/Stringbuilder";
 import ThreadsPage from "../../pages/fr/csharp/Threads";
 import TuplePage from "../../pages/fr/csharp/Tuple";
 import GetTypePage from "../../pages/fr/csharp/GetType";
+import Jwt from "../../pages/en/dotnet/http/Jwt";
 //#endregion
 
 export default function Routedotnetfr() {
@@ -85,6 +88,7 @@ export default function Routedotnetfr() {
         //#region dotnet
       }
       <Route path="/clean" component={CleanPage} />
+      <Route path="/hostedservice" component={HostedservicePage} />
       <Route path="/clr" component={CLRPage} />
       <Route path="/controller" component={ControllerPage} />
       <Route path="/controllervuedata" component={ControllervuedataPage} />
@@ -94,6 +98,7 @@ export default function Routedotnetfr() {
       <Route path="/entityframework" component={EntityframeworkPage} />
       <Route path="/https" component={HttpsPage} />
       <Route path="/httpmethods" component={HttpmethodsPage} />
+      <Route path="/jwt" component={JwtPage} />
       <Route path="/middleware" component={MiddlewarePage} />
       <Route path="/mvc" component={MvcPage} />
       <Route path="/nugetpackages" component={NugetpackagesPage} />
