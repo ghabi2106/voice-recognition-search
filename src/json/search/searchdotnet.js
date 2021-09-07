@@ -266,12 +266,17 @@ export const pagesdotnet = [
   // New features in C# 9
   "csharp new features",
   "csharp",
+  "csharp 9",
+  "c# 9",
   "c#",
   "top level statements",
   "init only setters",
   "record",
   "pattern matching",
   "target typed new",
+  // New features in C# 9
+  "csharp 10",
+  "c# 10",
   // OOP
   "object oriented programming",
   "inheritance",

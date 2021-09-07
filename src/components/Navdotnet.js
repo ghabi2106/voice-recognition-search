@@ -28,6 +28,11 @@ export default function Navdotnet() {
         </Link>
       </li>
       <li className="nav-item">
+        <Link className="nav-link" to="/csharp10">
+          C# 10
+        </Link>
+      </li>
+      <li className="nav-item">
         <Link className="nav-link" to="/hostedservice">
           Hosted-Service
         </Link>

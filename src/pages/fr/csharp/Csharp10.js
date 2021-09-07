@@ -146,22 +146,23 @@ export default function Csharp10() {
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>New features in C# 10 </h3>
           <article id="csharp">
-            <h6>What is C#?</h6>
+            <h6>Qu'est-ce que C# ?</h6>
             <p>
-              C# is an object-oriented, type-safe, and managed language that is
-              compiled by .Net framework to generate Microsoft Intermediate
-              Language.
+              C# est un langage orienté objet, de type sécurisé et managé qui
+              est compilé par le framework .Net pour générer le langage
+              intermédiaire Microsoft.
             </p>
           </article>
           <article id="global-usings">
-            <h6>Global using directives</h6>
+            <h6>global using adoptées</h6>
             <div>
               <p>
-                C# 10 introduces a new pattern that lets you define namespace
-                imports across an entire project using the <code>global</code>{" "}
-                keyword. It’s recommended that you place your global imports in
-                a separate file (one for each project), possibly named usings.cs
-                or imports.cs.
+                C# 10 introduit un nouveau modèle qui vous permet de définir des
+                importations d'espaces de noms sur l'ensemble d'un projet à
+                l'aide du mot-clé <code>global</code>. Il est recommandé de
+                placer vos importations globales dans un fichier séparé (un pour
+                chaque projet), éventuellement nommé <code>usings.cs</code> ou{" "}
+                <code>imports.cs</code>.
               </p>
               <Highlight language="csharp">
                 {`global using Microsoft.AspNetCore.Builder;
@@ -181,13 +182,11 @@ global using System.Threading.Tasks;`}
             </div>
           </article>
           <article id="file-scoped-namespace">
-            <h6>File-scoped namespace declaration</h6>
+            <h6>Déclaration d’espace de noms de portée de fichier</h6>
             <div>
               <p>
-                Another way to streamline your code in C# 10 is to declare a
-                file-scoped namespace for your code. The file-scoped namespace
-                applies automatically to your entire file, with no need to
-                indent anything.
+                Vous pouvez utiliser une nouvelle forme de la namespace
+                déclaration pour déclarer que toutes les déclarations.
               </p>
               <Highlight language="csharp">
                 {`namespace MyNamespace;`}
@@ -195,12 +194,11 @@ global using System.Threading.Tasks;`}
             </div>
           </article>
           <article id="extended-property-patterns">
-            <h6>Extended property patterns</h6>
+            <h6>Modèles de propriété étendus</h6>
             <div>
               <p>
-                Beginning with C# 10.0, you can reference nested properties or
-                fields within a property pattern. For example, a pattern of the
-                form
+                À compter de C# 10,0, on peut référencer des propriétés ou des
+                champs imbriqués dans un modèle de propriété.
               </p>
               <Highlight language="csharp">
                 {`{ Prop1.Prop2: pattern }`}
@@ -212,12 +210,12 @@ global using System.Threading.Tasks;`}
             </div>
           </article>
           <article id="constant-interpolated-strings">
-            <h6>Constant interpolated strings</h6>
+            <h6>Autoriser les const chaînes interpolées</h6>
             <div>
               <p>
-                In C# 10.0, <code>const</code> strings may be initialized using
-                string interpolation if all the placeholders are themselves
-                constant strings.
+                En C# 10,0, <code>const</code> les chaînes peuvent être
+                initialisées à l’aide de l' interpolation de chaîne si tous les
+                espaces réservés sont eux-mêmes des chaînes constantes.
               </p>
               <Highlight language="csharp">
                 {`string name = "Mark";
@@ -229,24 +227,29 @@ Console.WriteLine("Hello, {0}! Today is {1}, it's {2:HH:mm} now.", name, date.Da
             </div>
           </article>
           <article id="record-seal-tostring">
-            <h6>Record types can seal ToString</h6>
+            <h6>Les types d’enregistrements peuvent sceller ToString</h6>
             <div>
               <p>
-                In C# 10.0, you can add the <code>sealed</code> modifier when
-                you override <code>ToString</code> in a record type. Sealing the{" "}
-                <code>ToString</code> method prevents the compiler from
-                synthesizing a <code>ToString</code> method for any derived
-                record types.
+                En C# 10,0, on peut ajouter le <code>sealed</code> modificateur
+                lorsqu'on remplace <code>ToString</code> dans un type
+                d’enregistrement. La fermeture de la <code>ToString</code>{" "}
+                méthode empêche le compilateur de synthétiser une{" "}
+                <code>ToString</code> méthode pour tous les types
+                d’enregistrements dérivés.
               </p>
             </div>
           </article>
           <article id="deconstruction">
-            <h6>Assignment and declaration in same deconstruction</h6>
+            <h6>
+              Autoriser l’assignation et la déclaration dans la même
+              déconstruction
+            </h6>
             <div>
               <p>
-                This change removes a restriction from earlier versions of C#.
-                Previously, a deconstruction could assign all values to existing
-                variables, or initialize newly declared variables:
+                Cette modification supprime une restriction des versions
+                antérieures de C#. Auparavant, une déconstruction pouvait
+                affecter toutes les valeurs aux variables existantes ou
+                initialiser les variables nouvellement déclarées :
               </p>
               <Highlight language="csharp">
                 {`// Initialization:
@@ -265,13 +268,13 @@ int y1 = 0;
             </div>
           </article>
           <article id="null-parameter-checking">
-            <h6>Null parameter checking</h6>
+            <h6>Vérification des paramètres nuls</h6>
             <div>
               <p>
-                In the same spirit of reducing boilerplate, C# has a very nice
-                new feature called <code>null</code> parameter checking. No
-                doubt you’ve written a method that’s had to reject null values
-                before.
+                Dans le même esprit de réduction du passe-partout, C# a une
+                nouvelle fonctionnalité très intéressante appelée vérification
+                des paramètres nuls. Vous avez sans aucun doute écrit une
+                méthode qui a déjà dû rejeter les valeurs nulles.
               </p>
               <Highlight language="csharp">
                 {`public UpdateAddress(int personId, Address newAddress)
@@ -289,18 +292,19 @@ int y1 = 0;
 }`}
               </Highlight>
               <p>
-                Now if you pass a null value in the place of an Address object,
-                the ArgumentNullException is thrown automatically.
+                Maintenant, si on passe une valeur nulle à la place d'un{" "}
+                <code>Address</code> objet, le{" "}
+                <code>ArgumentNullException</code> est automatiquement levé.
               </p>
             </div>
           </article>
           <article id="required">
-            <h6>Required properties</h6>
+            <h6>Propriétés requises</h6>
             <div>
               <p>
-                Now the compiler won’t allow you write code that creates an
-                <code>Employee</code> but doesn’t set the <code>Name</code>{" "}
-                property.
+                Maintenant, le compilateur ne vous permettra pas d'écrire du
+                code qui crée un <code>Employee</code> mais ne définit pas la
+                propriété <code>Name</code> property.
               </p>
               <Highlight language="csharp">
                 {`public record Employee
@@ -313,7 +317,7 @@ int y1 = 0;
             </div>
           </article>
           <article id="field">
-            <h6>The field keyword</h6>
+            <h6>Le mot-clé field</h6>
             <div>
               <Highlight language="csharp">
                 {`private string _firstName;public string FirstName
@@ -329,7 +333,9 @@ int y1 = 0;
     }
 }`}
               </Highlight>
-              <p>Now you can use an autoimplemented property and field:</p>
+              <p>
+                On peut maintenant utiliser une propriété auto-implémentée et
+              </p>
               <Highlight language="csharp">
                 {`public string FirstName {get;
     set

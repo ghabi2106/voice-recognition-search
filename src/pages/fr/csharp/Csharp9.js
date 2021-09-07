@@ -223,7 +223,7 @@ export default function Csharp9() {
               />
             </div>
           </article>
-          <article id="records">
+          <article id="record">
             <h6>Record</h6>
             <div>
               <p>

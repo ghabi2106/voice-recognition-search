@@ -72,6 +72,7 @@ import DatatypePage from "../../pages/fr/csharp/Datatype";
 import DelegatePage from "../../pages/fr/csharp/Delegate";
 import EnumindexerPage from "../../pages/fr/csharp/Enumindexer";
 import Csharp9Page from "../../pages/fr/csharp/Csharp9";
+import Csharp10Page from "../../pages/fr/csharp/Csharp10";
 import RefoutinPage from "../../pages/fr/csharp/refoutin";
 import String2intPage from "../../pages/fr/csharp/String2int";
 import StringbuilderPage from "../../pages/fr/csharp/Stringbuilder";
@@ -154,6 +155,7 @@ export default function Routedotnetfr() {
       <Route path="/linq" component={LinqPage} />
       <Route path="/modifiers" component={ModifiersPage} />
       <Route path="/csharp9" component={Csharp9Page} />
+      <Route path="/csharp10" component={Csharp10Page} />
       <Route path="/oop" component={OopPage} />
       <Route path="/refoutin" component={RefoutinPage} />
       <Route path="/statements" component={StatementsPage} />

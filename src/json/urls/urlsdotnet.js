@@ -270,10 +270,15 @@ export const urlsdotnet = {
   "csharp new features": "/csharp9",
   csharp: "/csharp9",
   "c#": "/csharp9",
+  "csharp 9": "/csharp9",
+  "c# 9": "/csharp9",
   "top level statements": "/csharp9",
   "init only setters": "/csharp9",
   "pattern matching": "/csharp9",
   "target typed new": "/csharp9",
+  // New features in C# 10
+  "csharp 10": "/csharp10",
+  "c# 10": "/csharp10",
   // OOP
   "object oriented programming": "/oop",
   oop: "/oop",
