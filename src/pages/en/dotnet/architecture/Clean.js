@@ -81,17 +81,25 @@ export default function Clean() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/multilayer"
+                    to="/mvc"
                   >
-                    Architecture Multilayer
+                    MVC
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/multilayer"
+                    to="/clean"
                   >
-                    Architecture Multilayer
+                    Clean Architecture
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/cqrs"
+                  >
+                    CQRS
                   </Link>
                 </li>
               </ul>

@@ -67,9 +67,90 @@ export default function Boxing() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/stringbuilder"
                   >
-                    Entity Framework
+                    String Builder
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/tuple"
+                  >
+                    Tuple
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/collections"
+                  >
+                    Collections
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/enumindexer"
+                  >
+                    Enumeration, Indexer and Generics 
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/refoutin"
+                  >
+                    Ref, in and Out
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/covariance"
+                  >
+                    Covariance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/delegate"
+                  >
+                    Delegate
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/string2int"
+                  >
+                    string to int
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/threads"
+                  >
+                    Task And Thread
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/gettype"
+                  >
+                    typeof vs GetType
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/datatype"
+                  >
+                    Dynamic, Nullables, Discards and Anonymous Types, Extension
+                    methods
                   </Link>
                 </li>
               </ul>

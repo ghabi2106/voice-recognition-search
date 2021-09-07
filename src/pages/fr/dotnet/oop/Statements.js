@@ -57,9 +57,33 @@ export default function Statements() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/modifiers"
                   >
-                    Entity Framework
+                    Modifiers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/oop"
+                  >
+                    OOP
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/statements"
+                  >
+                    Partial type, lock, yield
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/typesystem"
+                  >
+                    Struct, Record, Class, Object, Constructor, Serialization
                   </Link>
                 </li>
               </ul>

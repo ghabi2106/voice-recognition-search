@@ -89,9 +89,81 @@ export default function Solid() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/agile"
                   >
-                    Entity Framework
+                    Agile
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/cleancode"
+                  >
+                    Clean code
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/command"
+                  >
+                    Command
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/designpattern"
+                  >
+                    Design Principle &amp; Pattern
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/di"
+                  >
+                    Dependency injection
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/factory"
+                  >
+                    Factory Method
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/mediator"
+                  >
+                    Mediator
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/observer"
+                  >
+                    Observer
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/singleton"
+                  >
+                    Singleton
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/solid"
+                  >
+                    S.O.L.I.D. Principles
                   </Link>
                 </li>
               </ul>

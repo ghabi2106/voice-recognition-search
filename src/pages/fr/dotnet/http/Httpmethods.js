@@ -97,10 +97,50 @@ export default function Dotnet() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/caching"
                   >
-                    Entity Framework
+                    Caching
                   </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/controller"
+                  >
+                    Action Method, Result, Selectors
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/controllervuedata"
+                  >ViewBag, ViewData and TempData</Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/https"
+                  >
+                  HTTPS, HTTP and SSL</Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/httpmethods"
+                  >
+                  HTTP Request Methods</Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/jwt"
+                  >JWT</Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/"
+                  >Services, Microservices, Web API, Web API vs WCF</Link>
                 </li>
               </ul>
             </li>

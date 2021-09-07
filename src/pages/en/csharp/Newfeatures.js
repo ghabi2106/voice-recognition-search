@@ -81,9 +81,17 @@ export default function Newfeatures() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/hostedservice"
                   >
-                    Entity Framework
+                    IHostedService, BackgroundService
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/csharp-features"
+                  >
+                    New features in C# 9
                   </Link>
                 </li>
               </ul>

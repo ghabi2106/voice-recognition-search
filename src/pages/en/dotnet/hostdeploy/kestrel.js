@@ -67,9 +67,41 @@ export default function Kestrel() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/docker"
                   >
-                    Entity Framework
+                    Docker
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/server"
+                  >
+                    Web server implementations
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/httpsys"
+                  >
+                    HTTP.sys web server
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/iis"
+                  >
+                    IIS
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/kestrel"
+                  >
+                    Kestrel
                   </Link>
                 </li>
               </ul>
@@ -89,7 +121,10 @@ export default function Kestrel() {
                 is the web server that's included and enabled by default in
                 ASP.NET Core project templates.
               </p>
-              <img src="img/dotnet/kestrel-default-config.PNG" alt="kestrel-default-config" />
+              <img
+                src="img/dotnet/kestrel-default-config.PNG"
+                alt="kestrel-default-config"
+              />
             </div>
           </article>
           <article id="reverse-proxy">

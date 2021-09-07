@@ -131,9 +131,41 @@ export default function Docker() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/docker"
                   >
-                    Entity Framework
+                    Docker
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/server"
+                  >
+                    Web server implementations
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/httpsys"
+                  >
+                    HTTP.sys web server
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/iis"
+                  >
+                    IIS
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/kestrel"
+                  >
+                    Kestrel
                   </Link>
                 </li>
               </ul>

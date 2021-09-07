@@ -30,13 +30,61 @@ export default function Httpsys() {
                     HTTP.sys
                   </a>
                 </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#use"
+                <li className="my-2">
+                  <button
+                    className="btn d-inline-flex align-items-center"
+                    data-bs-toggle="collapse"
+                    aria-expanded="true"
+                    data-bs-target="#contents-collapse"
+                    aria-controls="contents-collapse"
                   >
-                    Use
-                  </a>
+                    Related links
+                  </button>
+                  <ul
+                    className="list-unstyled ps-3 collapse show"
+                    id="contents-collapse"
+                  >
+                    <li>
+                      <Link
+                        className="d-inline-flex align-items-center rounded"
+                        to="/docker"
+                      >
+                        Docker
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="d-inline-flex align-items-center rounded"
+                        to="/server"
+                      >
+                        Web server implementations
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="d-inline-flex align-items-center rounded"
+                        to="/httpsys"
+                      >
+                        HTTP.sys web server
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="d-inline-flex align-items-center rounded"
+                        to="/iis"
+                      >
+                        IIS
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="d-inline-flex align-items-center rounded"
+                        to="/kestrel"
+                      >
+                        Kestrel
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>

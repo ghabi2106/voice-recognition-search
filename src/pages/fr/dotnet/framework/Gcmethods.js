@@ -57,9 +57,73 @@ export default function Gcmethods() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/clr"
+                    to="/dotnetcomponents"
                   >
-                    CLR
+                    .Net Components
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/dotnet"
+                  >
+                    Difference Between .NET and .NET Core
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/assembly"
+                  >
+                    Assembly
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/dllexe"
+                  >
+                    DLL vs EXE
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/entityframework"
+                  >
+                    Entity Framework
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/gc"
+                  >
+                    Garbage Collector &amp; stack vs heap
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/gcmethods"
+                  >
+                    GC Methods
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/linq"
+                  >
+                    Linq
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/nugetpackages"
+                  >
+                    Nuget packages
                   </Link>
                 </li>
               </ul>

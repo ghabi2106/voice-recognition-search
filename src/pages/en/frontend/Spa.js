@@ -74,12 +74,52 @@ export default function Spa() {
                 className="list-unstyled ps-3 collapse show"
                 id="contents-collapse"
               >
+              <li>
+                <Link
+                  className="d-inline-flex align-items-center rounded"
+                  to="/css"
+                >
+                  CSS
+                </Link>
+              </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/html"
                   >
-                    Entity Framework
+                    HTML
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/javascript"
+                  >
+                    Javascript
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/webstorage"
+                  >
+                    Web Storage API
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/sass"
+                  >
+                    Sass
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/spa"
+                  >
+                    MPA SPA XMLHttpRequest Ajax
                   </Link>
                 </li>
               </ul>

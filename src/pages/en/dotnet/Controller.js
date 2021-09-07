@@ -81,10 +81,42 @@ export default function Controller() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/multilayer"
+                    to="/controller"
                   >
-                    Multilayer
+                    Action Method, Result, Selectors
                   </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/controller"
+                  >Controller</Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/https"
+                  >
+                  HTTPS, HTTP and SSL</Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/httpmethods"
+                  >
+                  HTTP Request Methods</Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/jwt"
+                  >JWT</Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/"
+                  >Services, Microservices, Web API, Web API vs WCF</Link>
                 </li>
               </ul>
             </li>
