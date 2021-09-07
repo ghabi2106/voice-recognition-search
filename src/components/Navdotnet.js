@@ -23,8 +23,8 @@ export default function Navdotnet() {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/csharp-features">
-          C#-Features
+        <Link className="nav-link" to="/csharp9">
+          C# 9
         </Link>
       </li>
       <li className="nav-item">

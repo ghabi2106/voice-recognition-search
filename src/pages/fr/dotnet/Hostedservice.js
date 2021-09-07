@@ -67,7 +67,7 @@ export default function Hostedservice() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/csharp-features"
+                    to="/csharp9"
                   >
                     New features in C# 9
                   </Link>

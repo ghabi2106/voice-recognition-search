@@ -214,7 +214,7 @@ export default function Header(pages) {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="dropdown-item" to="/csharp-features">
+                    <Link className="dropdown-item" to="/csharp9">
                       C#-Features
                     </Link>
                   </li>

@@ -71,7 +71,7 @@ import CovariancePage from "../../pages/fr/csharp/Covariance";
 import DatatypePage from "../../pages/fr/csharp/Datatype";
 import DelegatePage from "../../pages/fr/csharp/Delegate";
 import EnumindexerPage from "../../pages/fr/csharp/Enumindexer";
-import NewfeaturesPage from "../../pages/fr/csharp/Newfeatures";
+import Csharp9Page from "../../pages/fr/csharp/Csharp9";
 import RefoutinPage from "../../pages/fr/csharp/refoutin";
 import String2intPage from "../../pages/fr/csharp/String2int";
 import StringbuilderPage from "../../pages/fr/csharp/Stringbuilder";
@@ -153,7 +153,7 @@ export default function Routedotnetfr() {
       <Route path="/enumindexer" component={EnumindexerPage} />
       <Route path="/linq" component={LinqPage} />
       <Route path="/modifiers" component={ModifiersPage} />
-      <Route path="/csharp-features" component={NewfeaturesPage} />
+      <Route path="/csharp9" component={Csharp9Page} />
       <Route path="/oop" component={OopPage} />
       <Route path="/refoutin" component={RefoutinPage} />
       <Route path="/statements" component={StatementsPage} />
