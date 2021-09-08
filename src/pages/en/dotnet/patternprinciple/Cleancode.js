@@ -58,7 +58,8 @@ export default function Cleancode() {
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#occam-razor"
-                  >Occam's razor
+                  >
+                    Occam's razor
                   </a>
                 </li>
                 <li>
@@ -83,6 +84,14 @@ export default function Cleancode() {
                     href="#soc"
                   >
                     Separation of Concerns
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#lod"
+                  >
+                    Law of Demeter
                   </a>
                 </li>
                 <li>
@@ -338,6 +347,31 @@ export default function Cleancode() {
               Separation of concerns is a key consideration behind the use of
               layers in application architectures.
             </p>
+          </article>
+          <article id="lod">
+            <h6>LoD : Law of Demeter</h6>
+            <div>
+              <p>
+                The <strong>Law of Demeter (LoD)</strong> or{" "}
+                <strong>principle of least knowledge</strong> is a design
+                guideline for developing software applications.
+                <br />
+                The Law of Demeter principle reduces dependencies and helps
+                build components that are loose coupled for code reuse, easier
+                maintenance, and testability
+              </p>
+              <ul>
+                <li>
+                  Each unit should have only limited knowledge about other
+                  units: only units "closely" related to the current unit.
+                </li>
+                <li>
+                  Each unit should only talk to its friends; don't talk to
+                  strangers.
+                </li>
+                <li>Only talk to your immediate friends.</li>
+              </ul>
+            </div>
           </article>
           <article id="pi">
             <h6>PI : Persistence Ignorance</h6>

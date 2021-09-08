@@ -89,6 +89,14 @@ export default function Cleancode() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#lod"
+                  >
+                    Law of Demeter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#pi"
                   >
                     Persistence Ignorance
@@ -350,6 +358,33 @@ export default function Cleancode() {
               La séparation des responsabilités est un aspect fondamental de
               l’utilisation des couches dans les architectures d’applications.
             </p>
+          </article>
+          <article id="lod">
+            <h6>LoD : Law of Demeter</h6>
+            <div>
+              <p>
+                La <strong>loi de Déméter (LoD)</strong> ou le{" "}
+                <strong>principe de moindre connaissance</strong> est une
+                directive de conception pour le développement d'applications
+                logicielles.
+                <br />
+                Le principe de la loi de Demeter réduit les dépendances et aide
+                à créer des composants à couplage lâche pour la réutilisation du
+                code, une maintenance plus facile et la testabilité
+              </p>
+              <ul>
+                <li>
+                  Chaque unité ne devrait avoir qu'une connaissance limitée des
+                  autres unités : uniquement des unités « étroitement » liées à
+                  l'unité actuelle.
+                </li>
+                <li>
+                  Chaque unité ne doit parler qu'à ses amis ; ne parle pas aux
+                  étrangers.
+                </li>
+                <li>Ne parlez qu'à vos amis immédiats.</li>
+              </ul>
+            </div>
           </article>
           <article id="pi">
             <h6>PI : Persistence Ignorance</h6>
