@@ -101,9 +101,9 @@ export default function Composition() {
                 héritage d'un classe de base ou parent.
               </p>
               <p>Diagramme de classe inheritance</p>
-              <img src="img/dotnet/" alt="composition1" />
+              <img src="/img/dotnet/composition1.png" alt="composition1" />
               <p>Diagramme de classe composition</p>
-              <img src="img/dotnet/" alt="composition2" />
+              <img src="/img/dotnet/composition2.png" alt="composition2" />
               <Highlight language="javascript">
                 {`interface IAction {
     speak(): string
