@@ -70,6 +70,14 @@ export default function Oop() {
                     overloading
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#diamond"
+                  >
+                    Diamond problem
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -202,6 +210,21 @@ export default function Oop() {
               compilons, le compilateur utilise la résolution de surcharge pour
               déterminer la méthode spécifique à appeler.
             </p>
+          </article>
+          <article id="diamond">
+            <h6>Le problème du diamant</h6>
+            <div>
+              <p>Pourquoi c# ne prend-il pas en charge l'héritage multiple ?</p>
+              <img src="img/dotnet/csharp-diamond.png" alt="csharp-diamond" />
+              <p>
+                Le <strong>«problème du diamant»</strong> (parfois appelé le
+                «diamant mortel de la mort») est une ambiguïté qui survient
+                lorsque deux classes B et C héritent de A, et la classe D hérite
+                à la fois de B et de C. S'il y a un procédé A que B et C ont de
+                substitution , et D ne prévaut pas, alors que la version de la
+                méthode ne hérite D: celui de B, ou de C?
+              </p>
+            </div>
           </article>
         </section>
       </div>

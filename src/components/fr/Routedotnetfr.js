@@ -27,6 +27,9 @@ import NugetpackagesPage from "../../pages/fr/dotnet/framework/Nugetpackages";
 //#region OOP
 import ModifiersPage from "../../pages/fr/dotnet/oop/Modifiers";
 import OopPage from "../../pages/fr/dotnet/oop/Oop";
+import Oop2Page from "../../pages/fr/dotnet/oop/Oop2";
+import Oop3Page from "../../pages/fr/dotnet/oop/Oop3";
+import CompositionPage from "../../pages/fr/dotnet/oop/Composition";
 import StatementsPage from "../../pages/fr/dotnet/oop/Statements";
 import TypesystemPage from "../../pages/fr/dotnet/oop/Typesystem";
 //#endregion
@@ -44,6 +47,7 @@ import ServicePage from "../../pages/fr/dotnet/http/Service";
 //#region design pattern
 import CleancodePage from "../../pages/fr/dotnet/patternprinciple/Cleancode";
 import SolidPage from "../../pages/fr/dotnet/patternprinciple/Solid";
+import AdapterPage from "../../pages/fr/dotnet/patternprinciple/Adapter";
 import AgilePage from "../../pages/fr/dotnet/patternprinciple/Agile";
 import DesignpatternPage from "../../pages/fr/dotnet/patternprinciple/Designpattern";
 import DiPage from "../../pages/fr/dotnet/patternprinciple/Di";
@@ -79,7 +83,8 @@ import StringbuilderPage from "../../pages/fr/csharp/Stringbuilder";
 import ThreadsPage from "../../pages/fr/csharp/Threads";
 import TuplePage from "../../pages/fr/csharp/Tuple";
 import GetTypePage from "../../pages/fr/csharp/GetType";
-import Jwt from "../../pages/en/dotnet/http/Jwt";
+import MemberwiseclonePage from "../../pages/fr/csharp/Memberwiseclone";
+import UserdefinedtypePage from "../../pages/fr/csharp/Userdefinedtype";
 //#endregion
 
 export default function Routedotnetfr() {
@@ -116,6 +121,7 @@ export default function Routedotnetfr() {
       }
       <Route path="/cleancode" component={CleancodePage} />
       <Route path="/solid" component={SolidPage} />
+      <Route path="/adapter" component={AdapterPage} />
       <Route path="/agile" component={AgilePage} />
       <Route path="/designpattern" component={DesignpatternPage} />
       <Route path="/singleton" component={SingletonPage} />
@@ -157,6 +163,9 @@ export default function Routedotnetfr() {
       <Route path="/csharp9" component={Csharp9Page} />
       <Route path="/csharp10" component={Csharp10Page} />
       <Route path="/oop" component={OopPage} />
+      <Route path="/oop2" component={Oop2Page} />
+      <Route path="/oop3" component={Oop3Page} />
+      <Route path="/composition" component={CompositionPage} />
       <Route path="/refoutin" component={RefoutinPage} />
       <Route path="/statements" component={StatementsPage} />
       <Route path="/string2int" component={String2intPage} />
@@ -165,6 +174,8 @@ export default function Routedotnetfr() {
       <Route path="/tuple" component={TuplePage} />
       <Route path="/typesystem" component={TypesystemPage} />
       <Route path="/gettype" component={GetTypePage} />
+      <Route path="/memberwiseclone" component={MemberwiseclonePage} />
+      <Route path="/userdefinedtype" component={UserdefinedtypePage} />
       {
         //#endregion
       }

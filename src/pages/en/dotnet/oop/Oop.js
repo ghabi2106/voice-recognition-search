@@ -70,6 +70,14 @@ export default function Oop() {
                     overloading
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#diamond"
+                  >
+                    Diamond problem
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -198,6 +206,20 @@ export default function Oop() {
               compiler uses overload resolution to determine the specific method
               to be invoke.
             </p>
+          </article>
+          <article id="diamond">
+            <h6>Diamond problem</h6>
+            <div>
+              <img src="img/dotnet/csharp-diamond.png" alt="csharp-diamond" />
+              <p>
+                The <strong>"diamond problem"</strong> (sometimes referred to as
+                the "Deadly Diamond of Death") is an ambiguity that arises when
+                two classes B and C inherit from A, and class D inherits from
+                both B and C. If there is a method in A that B and C have
+                overridden, and D does not override it, then which version of
+                the method does D inherit: that of B, or that of C?
+              </p>
+            </div>
           </article>
         </section>
       </div>

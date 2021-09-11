@@ -1,5 +1,8 @@
 export const pagesdotnet = [
   "home",
+  // Adapter
+  "adapter",
+  "adapter principle",
   // Agile
   "agile",
   "agile scrum",
@@ -96,6 +99,8 @@ export const pagesdotnet = [
   "common language specification",
   "cls",
   "metadata",
+  // Composition
+  "composition",
   // Controller
   "action selectors",
   "action method",
@@ -233,6 +238,12 @@ export const pagesdotnet = [
   "immediate versus deferred",
   "deferred and immediate",
   "immediate and deferred",
+  // Memberwiseclone
+  "memberwise clone",
+  "shallow copy",
+  "deep copy",
+  "shallow",
+  "deep",
   // Modifiers
   "access modifiers",
   "non access modifiers",
@@ -263,6 +274,8 @@ export const pagesdotnet = [
   "this",
   "is",
   "as",
+  "new",
+  "hiding method",
   // New features in C# 9
   "csharp new features",
   "csharp",
@@ -286,6 +299,23 @@ export const pagesdotnet = [
   "properties",
   "overloading",
   "overload",
+  "diamond",
+  "diamond problem",
+  // OOP2
+  "association",
+  "aggregation",
+  "composition versus aggregation",
+  "aggregation versus composition",
+  "composition and aggregation",
+  "aggregation and composition",
+  "composition aggregation",
+  "aggregation composition",
+  "difference between composition and aggregation",
+  "difference between aggregation and composition",
+  // OOP3
+  "delegation",
+  "coupling",
+  "cohesion",
   // Ref, in and Out
   "out",
   "ref versus out",
@@ -350,4 +380,7 @@ export const pagesdotnet = [
   // Server
   "server",
   "web server",
+  // Userdefinedtype
+  "user-defined conversion",
+  "user-defined type",
 ];

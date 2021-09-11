@@ -27,6 +27,9 @@ import NugetpackagesPage from "../../pages/en/dotnet/framework/Nugetpackages";
 //#region OOP
 import ModifiersPage from "../../pages/en/dotnet/oop/Modifiers";
 import OopPage from "../../pages/en/dotnet/oop/Oop";
+import Oop2Page from "../../pages/en/dotnet/oop/Oop2";
+import Oop3Page from "../../pages/en/dotnet/oop/Oop3";
+import CompositionPage from "../../pages/en/dotnet/oop/Composition";
 import StatementsPage from "../../pages/en/dotnet/oop/Statements";
 import TypesystemPage from "../../pages/en/dotnet/oop/Typesystem";
 //#endregion
@@ -44,6 +47,7 @@ import ServicePage from "../../pages/en/dotnet/http/Service";
 //#region design pattern
 import CleancodePage from "../../pages/en/dotnet/patternprinciple/Cleancode";
 import SolidPage from "../../pages/en/dotnet/patternprinciple/Solid";
+import AdapterPage from "../../pages/en/dotnet/patternprinciple/Adapter";
 import AgilePage from "../../pages/en/dotnet/patternprinciple/Agile";
 import DesignpatternPage from "../../pages/en/dotnet/patternprinciple/Designpattern";
 import DiPage from "../../pages/en/dotnet/patternprinciple/Di";
@@ -79,6 +83,8 @@ import StringbuilderPage from "../../pages/en/csharp/Stringbuilder";
 import ThreadsPage from "../../pages/en/csharp/Threads";
 import TuplePage from "../../pages/en/csharp/Tuple";
 import GetTypePage from "../../pages/en/csharp/GetType";
+import MemberwiseclonePage from "../../pages/en/csharp/Memberwiseclone";
+import UserdefinedtypePage from "../../pages/en/csharp/Userdefinedtype";
 //#endregion
 
 export default function Routecsharpen() {
@@ -115,6 +121,7 @@ export default function Routecsharpen() {
       }
       <Route path="/cleancode" component={CleancodePage} />
       <Route path="/solid" component={SolidPage} />
+      <Route path="/adapter" component={AdapterPage} />
       <Route path="/agile" component={AgilePage} />
       <Route path="/designpattern" component={DesignpatternPage} />
       <Route path="/singleton" component={SingletonPage} />
@@ -156,6 +163,9 @@ export default function Routecsharpen() {
       <Route path="/csharp9" component={Csharp9Page} />
       <Route path="/csharp10" component={Csharp10Page} />
       <Route path="/oop" component={OopPage} />
+      <Route path="/oop2" component={Oop2Page} />
+      <Route path="/oop3" component={Oop3Page} />
+      <Route path="/composition" component={CompositionPage} />
       <Route path="/refoutin" component={RefoutinPage} />
       <Route path="/statements" component={StatementsPage} />
       <Route path="/string2int" component={String2intPage} />
@@ -164,6 +174,8 @@ export default function Routecsharpen() {
       <Route path="/tuple" component={TuplePage} />
       <Route path="/typesystem" component={TypesystemPage} />
       <Route path="/gettype" component={GetTypePage} />
+      <Route path="/memberwiseclone" component={MemberwiseclonePage} />
+      <Route path="/userdefinedtype" component={UserdefinedtypePage} />
       {
         //#endregion
       }

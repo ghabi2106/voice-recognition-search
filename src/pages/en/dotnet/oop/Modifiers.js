@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Struct() {
   return (
@@ -68,6 +70,14 @@ export default function Struct() {
                     href="#is-as"
                   >
                     is - as
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#new"
+                  >
+                    new
                   </a>
                 </li>
               </ul>
@@ -493,6 +503,48 @@ export default function Struct() {
                 “as” operator is used for casting of an object to a type or a
                 class.
               </p>
+            </div>
+          </article>
+          <article id="new">
+            <h6>What is method shadowing or method hiding in C#?</h6>
+            <div>
+              <p>
+                When used as a declaration modifier, the <code>new</code>{" "}
+                keyword explicitly hides a member that is inherited from a base
+                class. When you hide an inherited member, the derived version of
+                the member replaces the base class version.
+              </p>
+              <Highlight language="csharp">
+                {`public class BaseC
+{
+    public static int x = 55;
+    public static int y = 22;
+}
+
+public class DerivedC : BaseC
+{
+    // Hide field 'x'.
+    new public static int x = 100;
+
+    static void Main()
+    {
+        // Display the new value of x:
+        Console.WriteLine(x);
+
+        // Display the hidden value of x:
+        Console.WriteLine(BaseC.x);
+
+        // Display the unhidden member y:
+        Console.WriteLine(y);
+    }
+}
+/*
+Output:
+100
+55
+22
+*/`}
+              </Highlight>
             </div>
           </article>
         </section>

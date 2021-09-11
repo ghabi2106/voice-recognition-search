@@ -222,6 +222,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/adapter">
+              Adapter
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/cleancode">
               Clean-Code
             </Link>
@@ -295,6 +300,21 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/oop">
               OOP
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/oop2">
+              OOP2
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/oop3">
+              OOP3
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/composition">
+              Composition
             </Link>
           </li>
           <li className="nav-item">
@@ -404,6 +424,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/memberwiseclone">
+              Memberwiseclone
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/refoutin">
               Ref-Out-In
             </Link>
@@ -426,6 +451,11 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/tuple">
               Tuple
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/userdefinedtype">
+              Userdefinedtype
             </Link>
           </li>
         </ul>

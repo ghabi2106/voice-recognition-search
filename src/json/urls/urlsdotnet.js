@@ -1,5 +1,8 @@
 export const urlsdotnet = {
   home: "/",
+  // Adapter
+  adapter: "/adapter",
+  "adapter principle": "/adapter",
   // Agile
   agile: "/agile",
   "agile scrum": "/agile",
@@ -95,6 +98,8 @@ export const urlsdotnet = {
   "common language specification": "/clr",
   cls: "/clr",
   metadata: "/clr",
+  // Composition
+  composition: "/composition",
   // Controller
   "action selectors": "/controller",
   "action method": "/controller",
@@ -238,6 +243,12 @@ export const urlsdotnet = {
   "immediate versus deferred": "/linq",
   "deferred and immediate": "/linq",
   "immediate and deferred": "/linq",
+  // Memberwiseclone
+  "memberwise clone": "/memberwiseclone",
+  "shallow copy": "/memberwiseclone",
+  "deep copy": "/memberwiseclone",
+  shallow: "/memberwiseclone",
+  deep: "/memberwiseclone",
   // Modifiers
   "access modifiers": "/modifiers",
   "non access modifiers": "/modifiers",
@@ -266,6 +277,8 @@ export const urlsdotnet = {
   this: "/modifiers",
   is: "/modifiers",
   as: "/modifiers",
+  new: "/modifiers",
+  "hiding method": "/modifiers",
   // New features in C# 9
   "csharp new features": "/csharp9",
   csharp: "/csharp9",
@@ -289,6 +302,23 @@ export const urlsdotnet = {
   properties: "/oop",
   overloading: "/oop",
   overload: "/oop",
+  diamond: "/oop",
+  "diamond problem": "/oop",
+  // OOP2
+  association: "/oop2",
+  aggregation: "/oop2",
+  "composition versus aggregation": "/oop2",
+  "aggregation versus composition": "/oop2",
+  "composition and aggregation": "/oop2",
+  "aggregation and composition": "/oop2",
+  "composition aggregation": "/oop2",
+  "aggregation composition": "/oop2",
+  "difference between composition and aggregation": "/oop2",
+  "difference between aggregation and composition": "/oop2",
+  // OOP3
+  delegation: "/oop3",
+  coupling: "/oop3",
+  cohesion: "/oop3",
   // Ref, in and Out
   ref: "/refoutin",
   out: "/refoutin",
@@ -354,4 +384,7 @@ export const urlsdotnet = {
   // Server
   server: "/server",
   "web server": "/server",
+  // Userdefinedtype
+  "user-defined conversion": "/userdefinedtype",
+  "user-defined type": "/userdefinedtype",
 };

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Struct() {
   return (
@@ -68,6 +70,14 @@ export default function Struct() {
                     href="#is-as"
                   >
                     is - as
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#new"
+                  >
+                    new
                   </a>
                 </li>
               </ul>
@@ -508,6 +518,52 @@ export default function Struct() {
                 L'opérateur "as" est utilisé pour convertir un objet en un type
                 ou une classe.
               </p>
+            </div>
+          </article>
+          <article id="new">
+            <h6>
+              Qu'est-ce que l'observation de méthode ou le masquage de méthode
+              en C# ?
+            </h6>
+            <div>
+              <p>
+                En cas d'utilisation comme un modificateur de déclaration, le
+                mot clé <code>new</code> masque explicitement un membre qui est
+                hérité d'une classe de base. Lorsque vous masquez un membre
+                hérité, la version dérivée du membre remplace la version de
+                classe de base.
+              </p>
+              <Highlight language="csharp">
+                {`public class BaseC
+{
+    public static int x = 55;
+    public static int y = 22;
+}
+
+public class DerivedC : BaseC
+{
+    // Hide field 'x'.
+    new public static int x = 100;
+
+    static void Main()
+    {
+        // Display the new value of x:
+        Console.WriteLine(x);
+
+        // Display the hidden value of x:
+        Console.WriteLine(BaseC.x);
+
+        // Display the unhidden member y:
+        Console.WriteLine(y);
+    }
+}
+/*
+Output:
+100
+55
+22
+*/`}
+              </Highlight>
             </div>
           </article>
         </section>
