@@ -41,7 +41,11 @@ import HttpsPage from "../../pages/fr/dotnet/http/Https";
 import HttpmethodsPage from "../../pages/fr/dotnet/http/Httpmethods";
 import JwtPage from "../../pages/fr/dotnet/http/Jwt";
 import MiddlewarePage from "../../pages/fr/dotnet/http/Middleware";
-import ServicePage from "../../pages/fr/dotnet/http/Service";
+//#endregion
+
+//#region Services
+import IdealsPage from "../../pages/fr/dotnet/services/Ideals";
+import ServicePage from "../../pages/fr/dotnet/services/Service";
 //#endregion
 
 //#region design pattern
@@ -93,42 +97,32 @@ export default function Routedotnetfr() {
       {
         //#region dotnet
       }
-      <Route path="/clean" component={CleanPage} />
       <Route path="/hostedservice" component={HostedservicePage} />
-      <Route path="/clr" component={CLRPage} />
       <Route path="/controller" component={ControllerPage} />
-      <Route path="/controllervuedata" component={ControllervuedataPage} />
-      <Route path="/cqrs" component={CqrsPage} />
-      <Route path="/di" component={DiPage} />
-      <Route path="/dotnet" component={DotnetPage} />
-      <Route path="/entityframework" component={EntityframeworkPage} />
-      <Route path="/https" component={HttpsPage} />
-      <Route path="/httpmethods" component={HttpmethodsPage} />
-      <Route path="/jwt" component={JwtPage} />
-      <Route path="/middleware" component={MiddlewarePage} />
-      <Route path="/mvc" component={MvcPage} />
-      <Route path="/nugetpackages" component={NugetpackagesPage} />
-      <Route path="/service" component={ServicePage} />
-      <Route path="/assembly" component={AssemblyPage} />
-      <Route path="/caching" component={CachingPage} />
-      <Route path="/dllexe" component={DllexePage} />
-      <Route path="/dotnetcomponents" component={DotnetcomponentsPage} />
-      <Route path="/gc" component={GcPage} />
-      <Route path="/gcmethods" component={GcmethodsPage} />
 
       {
-        //#region design pattern
+        //#region Architecture
       }
-      <Route path="/cleancode" component={CleancodePage} />
-      <Route path="/solid" component={SolidPage} />
-      <Route path="/adapter" component={AdapterPage} />
-      <Route path="/agile" component={AgilePage} />
-      <Route path="/designpattern" component={DesignpatternPage} />
-      <Route path="/singleton" component={SingletonPage} />
-      <Route path="/factory" component={FactoryPage} />
-      <Route path="/mediator" component={MediatorPage} />
-      <Route path="/observer" component={ObserverPage} />
-      <Route path="/command" component={CommandPage} />
+      <Route path="/clean" component={CleanPage} />
+      <Route path="/cqrs" component={CqrsPage} />
+      <Route path="/mvc" component={MvcPage} />
+      {
+        //#endregion
+      }
+      
+      {
+        //#region Framework
+      }
+      <Route path="/assembly" component={AssemblyPage} />
+      <Route path="/clr" component={CLRPage} />
+      <Route path="/dllexe" component={DllexePage} />
+      <Route path="/dotnet" component={DotnetPage} />
+      <Route path="/dotnetcomponents" component={DotnetcomponentsPage} />
+      <Route path="/entityframework" component={EntityframeworkPage} />
+      <Route path="/gc" component={GcPage} />
+      <Route path="/gcmethods" component={GcmethodsPage} />
+      <Route path="/linq" component={LinqPage} />
+      <Route path="/nugetpackages" component={NugetpackagesPage} />
       {
         //#endregion
       }
@@ -146,6 +140,60 @@ export default function Routedotnetfr() {
       }
 
       {
+        //#region HTTP
+      }
+      <Route path="/caching" component={CachingPage} />
+      <Route path="/controllervuedata" component={ControllervuedataPage} />
+      <Route path="/https" component={HttpsPage} />
+      <Route path="/httpmethods" component={HttpmethodsPage} />
+      <Route path="/jwt" component={JwtPage} />
+      <Route path="/middleware" component={MiddlewarePage} />
+      {
+        //#endregion
+      }
+      
+      {
+        //#region OOP
+      }
+      <Route path="/composition" component={CompositionPage} />
+      <Route path="/modifiers" component={ModifiersPage} />
+      <Route path="/oop" component={OopPage} />
+      <Route path="/oop2" component={Oop2Page} />
+      <Route path="/oop3" component={Oop3Page} />
+      <Route path="/statements" component={StatementsPage} />
+      <Route path="/typesystem" component={TypesystemPage} />
+      {
+        //#endregion
+      }
+      
+      {
+        //#region design pattern
+      }
+      <Route path="/adapter" component={AdapterPage} />
+      <Route path="/agile" component={AgilePage} />
+      <Route path="/cleancode" component={CleancodePage} />
+      <Route path="/command" component={CommandPage} />
+      <Route path="/designpattern" component={DesignpatternPage} />
+      <Route path="/di" component={DiPage} />
+      <Route path="/factory" component={FactoryPage} />
+      <Route path="/mediator" component={MediatorPage} />
+      <Route path="/observer" component={ObserverPage} />
+      <Route path="/singleton" component={SingletonPage} />
+      <Route path="/solid" component={SolidPage} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region Services
+      }
+      <Route path="/ideals" component={IdealsPage} />
+      <Route path="/service" component={ServicePage} />
+      {
+        //#endregion
+      }
+
+      {
         //#endregion
       }
 
@@ -158,21 +206,13 @@ export default function Routedotnetfr() {
       <Route path="/datatype" component={DatatypePage} />
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />
-      <Route path="/linq" component={LinqPage} />
-      <Route path="/modifiers" component={ModifiersPage} />
       <Route path="/csharp9" component={Csharp9Page} />
       <Route path="/csharp10" component={Csharp10Page} />
-      <Route path="/oop" component={OopPage} />
-      <Route path="/oop2" component={Oop2Page} />
-      <Route path="/oop3" component={Oop3Page} />
-      <Route path="/composition" component={CompositionPage} />
       <Route path="/refoutin" component={RefoutinPage} />
-      <Route path="/statements" component={StatementsPage} />
       <Route path="/string2int" component={String2intPage} />
       <Route path="/stringbuilder" component={StringbuilderPage} />
       <Route path="/threads" component={ThreadsPage} />
       <Route path="/tuple" component={TuplePage} />
-      <Route path="/typesystem" component={TypesystemPage} />
       <Route path="/gettype" component={GetTypePage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/userdefinedtype" component={UserdefinedtypePage} />

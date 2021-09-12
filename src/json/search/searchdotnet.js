@@ -227,6 +227,8 @@ export const pagesdotnet = [
   "enumeration",
   "indexer",
   "generic",
+  // IDEALS
+  "ideals",
   // Linq
   "linq",
   "language integrated query",

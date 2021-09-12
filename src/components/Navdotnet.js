@@ -202,6 +202,37 @@ export default function Navdotnet() {
       }
 
       {
+        //#region Services
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Services
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li className="nav-item">
+            <Link className="dropdown-item" to="/service">
+              Service
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/ideals">
+              IDEALS
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
+
+      {
         //#region design pattern
       }
       <li className="nav-item dropdown">

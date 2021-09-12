@@ -232,6 +232,8 @@ export const urlsdotnet = {
   enumeration: "/enumindexer",
   indexer: "/enumindexer",
   generic: "/enumindexer",
+  // IDEALS
+  ideals: "/ideals",
   // Linq
   linq: "/linq",
   "language integrated query": "/linq",
