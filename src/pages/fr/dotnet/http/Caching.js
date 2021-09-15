@@ -244,7 +244,8 @@ public class EmployeeController : ControllerBase
                   cache Redis.
                   <br />
                   <Highlight language="csharp">{`public static class DistributedCacheExtension {
-    public static async Task SetRecordAsync < T > (this IDistributedCache cache, string recodeId, T data, TimeSpan ? absoluteExpireTime = null, TimeSpan ? slidingExpirationTime = null) {
+    public static async Task SetRecordAsync < T > (this IDistributedCache cache, string recodeId, T data, 
+      TimeSpan ? absoluteExpireTime = null, TimeSpan ? slidingExpirationTime = null) {
         var options = new DistributedCacheEntryOptions();
         options.AbsoluteExpirationRelativeToNow = absoluteExpireTime ?? TimeSpan.FromSeconds(60);
         options.SlidingExpiration = slidingExpirationTime;

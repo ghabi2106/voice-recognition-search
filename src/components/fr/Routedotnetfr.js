@@ -11,6 +11,11 @@ import CleanPage from "../../pages/fr/dotnet/architecture/Clean";
 import MvcPage from "../../pages/fr/dotnet/architecture/Mvc";
 //#endregion
 
+//#region Csharp
+import Csharp9Page from "../../pages/fr/csharp/csharp/Csharp9";
+import Csharp10Page from "../../pages/fr/csharp/csharp/Csharp10";
+//#endregion
+
 //#region Framework
 import DotnetPage from "../../pages/fr/dotnet/framework/Dotnet";
 import DotnetcomponentsPage from "../../pages/fr/dotnet/framework/Dotnetcomponents";
@@ -25,12 +30,10 @@ import NugetpackagesPage from "../../pages/fr/dotnet/framework/Nugetpackages";
 //#endregion
 
 //#region OOP
-import ModifiersPage from "../../pages/fr/dotnet/oop/Modifiers";
 import OopPage from "../../pages/fr/dotnet/oop/Oop";
 import Oop2Page from "../../pages/fr/dotnet/oop/Oop2";
 import Oop3Page from "../../pages/fr/dotnet/oop/Oop3";
 import CompositionPage from "../../pages/fr/dotnet/oop/Composition";
-import StatementsPage from "../../pages/fr/dotnet/oop/Statements";
 import TypesystemPage from "../../pages/fr/dotnet/oop/Typesystem";
 //#endregion
 
@@ -44,8 +47,8 @@ import MiddlewarePage from "../../pages/fr/dotnet/http/Middleware";
 //#endregion
 
 //#region Services
-import IdealsPage from "../../pages/fr/dotnet/services/Ideals";
 import ServicePage from "../../pages/fr/dotnet/services/Service";
+import IdealsPage from "../../pages/fr/dotnet/services/Ideals";
 //#endregion
 
 //#region design pattern
@@ -73,21 +76,29 @@ import ServerPage from "../../pages/fr/dotnet/hostdeploy/Server";
 //#endregion
 
 //#region csharp
+
+//#region Keywords
+import ModifiersPage from "../../pages/fr/csharp/keywords/Modifiers";
+import ContextualPage from "../../pages/fr/csharp/keywords/Contextual";
+import OperatorsPage from "../../pages/fr/csharp/keywords/Operators";
+import ParametersPage from "../../pages/fr/csharp/keywords/Parameters";
+import StatementsPage from "../../pages/fr/csharp/keywords/Statements";
+import ThisbasePage from "../../pages/fr/csharp/keywords/Thisbase";
+//#endregion
+import AdvancedPage from "../../pages/fr/csharp/Advanced";
+import BindingPage from "../../pages/fr/csharp/Binding";
 import BoxingPage from "../../pages/fr/csharp/Boxing";
 import CollectionsPage from "../../pages/fr/csharp/Collections";
 import CovariancePage from "../../pages/fr/csharp/Covariance";
 import DatatypePage from "../../pages/fr/csharp/Datatype";
 import DelegatePage from "../../pages/fr/csharp/Delegate";
 import EnumindexerPage from "../../pages/fr/csharp/Enumindexer";
-import Csharp9Page from "../../pages/fr/csharp/Csharp9";
-import Csharp10Page from "../../pages/fr/csharp/Csharp10";
-import RefoutinPage from "../../pages/fr/csharp/refoutin";
+import MemberwiseclonePage from "../../pages/fr/csharp/Memberwiseclone";
+import PreprocessordirectivesPage from "../../pages/fr/csharp/Preprocessordirectives";
 import String2intPage from "../../pages/fr/csharp/String2int";
 import StringbuilderPage from "../../pages/fr/csharp/Stringbuilder";
 import ThreadsPage from "../../pages/fr/csharp/Threads";
 import TuplePage from "../../pages/fr/csharp/Tuple";
-import GetTypePage from "../../pages/fr/csharp/GetType";
-import MemberwiseclonePage from "../../pages/fr/csharp/Memberwiseclone";
 import UserdefinedtypePage from "../../pages/fr/csharp/Userdefinedtype";
 //#endregion
 
@@ -99,6 +110,9 @@ export default function Routedotnetfr() {
       }
       <Route path="/hostedservice" component={HostedservicePage} />
       <Route path="/controller" component={ControllerPage} />
+      {
+        //#endregion
+      }
 
       {
         //#region Architecture
@@ -109,7 +123,7 @@ export default function Routedotnetfr() {
       {
         //#endregion
       }
-      
+
       {
         //#region Framework
       }
@@ -151,21 +165,19 @@ export default function Routedotnetfr() {
       {
         //#endregion
       }
-      
+
       {
         //#region OOP
       }
       <Route path="/composition" component={CompositionPage} />
-      <Route path="/modifiers" component={ModifiersPage} />
       <Route path="/oop" component={OopPage} />
       <Route path="/oop2" component={Oop2Page} />
       <Route path="/oop3" component={Oop3Page} />
-      <Route path="/statements" component={StatementsPage} />
       <Route path="/typesystem" component={TypesystemPage} />
       {
         //#endregion
       }
-      
+
       {
         //#region design pattern
       }
@@ -194,26 +206,44 @@ export default function Routedotnetfr() {
       }
 
       {
+        //#region csharp
+      }
+      <Route path="/csharp9" component={Csharp9Page} />
+      <Route path="/csharp10" component={Csharp10Page} />
+      {
         //#endregion
       }
 
       {
-        //#region csharp
+        //#region keywords
       }
+      <Route path="/contextual" component={ContextualPage} />
+      <Route path="/modifiers" component={ModifiersPage} />
+      <Route path="/operators" component={OperatorsPage} />
+      <Route path="/parameters" component={ParametersPage} />
+      <Route path="/statements" component={StatementsPage} />
+      <Route path="/thisbase" component={ThisbasePage} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region others
+      }
+      <Route path="/advanced" component={AdvancedPage} />
+      <Route path="/binding" component={BindingPage} />
       <Route path="/boxing" component={BoxingPage} />
       <Route path="/collections" component={CollectionsPage} />
       <Route path="/covariance" component={CovariancePage} />
       <Route path="/datatype" component={DatatypePage} />
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />
-      <Route path="/csharp9" component={Csharp9Page} />
-      <Route path="/csharp10" component={Csharp10Page} />
-      <Route path="/refoutin" component={RefoutinPage} />
+      <Route path="/memberwiseclone" component={MemberwiseclonePage} />
+      <Route path="/preprocessordirectives" component={PreprocessordirectivesPage} />
       <Route path="/string2int" component={String2intPage} />
       <Route path="/stringbuilder" component={StringbuilderPage} />
       <Route path="/threads" component={ThreadsPage} />
       <Route path="/tuple" component={TuplePage} />
-      <Route path="/gettype" component={GetTypePage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/userdefinedtype" component={UserdefinedtypePage} />
       {

@@ -27,6 +27,22 @@ export default function Datatype() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#datatype"
+                  >
+                    Data Type
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#safetype"
+                  >
+                    Type safety
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#anonyme"
                   >
                     Anonymous Type
@@ -109,13 +125,13 @@ export default function Datatype() {
                     className="d-inline-flex align-items-center rounded"
                     to="/enumindexer"
                   >
-                    Enumeration, Indexer and Generics 
+                    Enumeration, Indexer and Generics
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/refoutin"
+                    to="/parameters"
                   >
                     Ref, in and Out
                   </Link>
@@ -155,9 +171,9 @@ export default function Datatype() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/gettype"
+                    to="/operators"
                   >
-                    typeof vs GetType
+                    Operators
                   </Link>
                 </li>
                 <li>
@@ -178,6 +194,24 @@ export default function Datatype() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Data Types</h3>
+          <article id="datatype">
+            <h6>Data Type</h6>
+            <p>
+              Datatype désigne le type de données qui peuvent être stockées dans
+              une variable. Il identifie également la façon dont la mémoire est
+              allouée à une variable ainsi que les opérations qui peuvent être
+              effectuées sur la même variable.
+            </p>
+          </article>
+          <article id="safetype">
+            <h6>Type safety</h6>
+            <p>
+              Type safety a été introduite pour empêcher l'objet d'un type de
+              jeter un coup d'œil dans la mémoire qui a été affectée à d'autres
+              objets. Un code sécurisé est également écrit pour arrêter de
+              perdre des données lors de la conversion d'un type à l'autre.
+            </p>
+          </article>
           <article id="anonymous">
             <h6>Type anonyme</h6>
             <div>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Highlight from "react-highlight";
-import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
-export default function Datatype() {
+export default function Advanced() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -27,57 +27,33 @@ export default function Datatype() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#datatype"
+                    href="#marshaling"
                   >
-                    Data Type
+                    Type marshaling
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#safetype"
+                    href="#platform-invoke"
                   >
-                    Type safety
+                    Platform Invoke (P/Invoke)
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#anonyme"
+                    href="#simd"
                   >
-                    Anonymous Type
+                    Use SIMD-accelerated numeric types
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#dynamic"
+                    href="#simd-accelerated-types"
                   >
-                    Dynamic Types
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#nullable"
-                  >
-                    Nullable Types
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#discard"
-                  >
-                    Discard Types
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#extension"
-                  >
-                    Extension Method
+                    .NET SIMD-accelerated types
                   </a>
                 </li>
               </ul>
@@ -193,135 +169,130 @@ export default function Datatype() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Data Types</h3>
-          <article id="datatype">
-            <h6>Data Type</h6>
-            <p>
-              Datatype means the type of data which can be stored in a variable.
-              It also identifies the way memory is allocated to a variable as
-              well as the operations that can be performed on the same variable.
-            </p>
-          </article>
-          <article id="safetype">
-            <h6>Type safety</h6>
-            <p>
-              Type safety in C# was introduced to stop the object of one type
-              from peeking into the memory which was assigned for other objects.
-              Safe code is also written to stop losing data during the
-              conversion of one type to the other.
-            </p>
-          </article>
-          <article id="anonymous">
-            <h6>Anonymous Type</h6>
+          <h3>Advanced Topics</h3>
+          <article id="marshaling">
+            <h6>Type marshaling</h6>
             <div>
               <p>
-                An anonymous type is a type (class) without any name that can
-                contain public read-only properties only.
+                Le <strong>marshaling</strong> est le processus qui consiste à
+                transformer les types quand ils doivent naviguer entre du code
+                managé et du code natif.
+              </p>
+              <p>
+                La raison pour laquelle le marshaling est nécessaire est que les
+                types diffèrent entre le code managé et le code non managé. Dans
+                le code managé, par exemple, vous avez un <code>String</code> ,
+                tandis que dans les chaînes universelles non managées peuvent
+                être Unicode (« larges »), non-Unicode, null-terminated, ASCII,
+                etc.
               </p>
               <Highlight language="csharp">
-                {`var student = new { Id = 1, FirstName = "James", LastName = "Bond" };`}
+                {`[DllImport("somenativelibrary.dll")]
+static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);`}
               </Highlight>
             </div>
           </article>
-          <article id="dynamic">
-            <h6>Dynamic Types</h6>
+          <article id="platform-invoke">
+            <h6>Appel de code non managé (P/Invoke)</h6>
             <div>
               <p>
-                A <code>dynamic</code> type escapes type checking at
-                compile-time; instead, it resolves type at run time.
+                P/Invoke est une technologie qui vous permet d’accéder aux
+                structures, aux rappels et aux fonctions des bibliothèques non
+                managées à partir de votre code managé. Une grande partie de
+                l’API P/Invoke est contenue dans deux espaces de noms :{" "}
+                <code>System</code> et{" "}
+                <code>System.Runtime.InteropServices</code>. Utiliser ces deux
+                espaces de noms vous donne les outils pour décrire la façon dont
+                vous voulez communiquer avec le composant natif.
               </p>
-              <ul>
-                <li>
-                  Dynamic types change types at run-time based on the assigned
-                  value.
-                </li>
-                <li>
-                  The dynamic type variables is converted to other types
-                  implicitly.
-                </li>
-              </ul>
-              <Highlight language="csharp">
-                {`dynamic MyDynamicVar = 1;`}
-              </Highlight>
-            </div>
-          </article>
-          <article id="nullable">
-            <h6>Types Nullables</h6>
-            <div>
-              <p>
-                As you know, a value type cannot be assigned a null value. For
-                example, int i = null will give you a compile time error.
-              </p>
-              <Highlight language="csharp">
-                {`Nullable<int> i = null;`}
-              </Highlight>
-            </div>
-          </article>
-          <article id="discard">
-            <h6>Discards</h6>
-            <div>
-              <p>
-                Discards are placeholder variables that are intentionally unused
-                in application code. Discards are equivalent to unassigned
-                variables; they don't have a value.You may want to ignore the
-                result of an expression, one or more members of a tuple
-                expression, or the target of a pattern matching expression.
-              </p>
-              <u>
-                <li>Tuple and object deconstruction</li>
-                <li>Pattern matching with switch</li>
-              </u>
-            </div>
-          </article>
-          <article id="extension">
-            <h6>Extension Method</h6>
-            <div>
-              <p>
-                Extension methods allow you to inject additional methods without
-                modifying, deriving or recompiling the original class, struct or
-                interface.
-              </p>
-              <p>
-                The extension methods have a special symbol in intellisense of
-                the visual studio, so that you can easily differentiate between
-                class methods and extension methods.
-              </p>
-              <img
-                src="/img/dotnet/extension-method.png"
-                alt="extension method"
-              />
-              <p>
-                An extension method is actually a special kind of static method
-                defined in a static class.
-              </p>
-              <Highlight language="csharp">
-                {`public static class IntExtensions
-{
-	public static bool IsGreaterThan(this int i, int value)
-	{
-		return i > value;
-	}
-}
+              <Highlight language="csharp">{`using System;
+using System.Runtime.InteropServices;
 
 public class Program
 {
-	public static void Main()
-	{
-		int i = 10;
+    // Import user32.dll (containing the function we need) and define
+    // the method corresponding to the native function.
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+    private static extern int MessageBox(IntPtr hWnd, string lpText, string lpCaption, uint uType);
 
-        bool result = i.IsGreaterThan(100); 
-
-		Console.WriteLine("Result: {0}",result);
-	}
-}`}
-              </Highlight>
+    public static void Main(string[] args)
+    {
+        // Invoke the function as a regular managed method.
+        MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
+    }
+}`}</Highlight>
+            </div>
+          </article>
+          <article id="simd">
+            <h6>Types numériques SIMD accélérés</h6>
+            <div>
               <p>
-                LINQ is built upon extension methods that operate on IEnumerable
-                and IQeryable type.
+                SIMD (instruction unique, plusieurs données) fournit une prise
+                en charge matérielle pour effectuer une opération sur plusieurs
+                éléments de données, en parallèle, à l’aide d’une seule
+                instruction. Dans .NET, il existe un ensemble de types accélérés
+                SIMD sous l' System.Numerics espace de noms. Les opérations SIMD
+                peuvent être parallèles au niveau du matériel. Cela augmente le
+                débit des calculs vectorisés, couramment utilisés dans les
+                applications mathématiques, scientifiques et graphiques.
               </p>
             </div>
           </article>
-          </section>
+          <article id="simd-accelerated-types">
+            <h6>.NET SIMD-accelerated types</h6>
+            <div>
+              <p>
+                Les types accélérés par le .NET SIMD incluent les types suivants
+                :
+              </p>
+              <ul>
+                <li>
+                  Les types <code>Vector2</code>, <code>Vector3</code> et{" "}
+                  <code>Vector4</code>, qui représentent des vecteurs à 2, 3 et
+                  4 valeurs Single.
+                </li>
+                <li>
+                  Deux types de matrices, <code>Matrix3x2</code> , qui
+                  représente une matrice matrice, et <code>Matrix4x4</code> ,
+                  qui représente une matrice 4x4 de Single valeurs.
+                </li>
+                <li>
+                  <code>Plane</code> type, qui représente un plan dans l’espace
+                  tridimensionnel à l’aide de Single valeurs.
+                </li>
+                <li>
+                  <code>Quaternion</code> qui représente un vecteur utilisé pour
+                  encoder des rotations physiques en trois dimensions à l’aide
+                  de Single valeurs.
+                </li>
+                <li>
+                  Le type <code>Vector&lt;T&gt;</code>, qui représente un
+                  vecteur d’un type numérique spécifié et fournit un large
+                  éventail d’opérateurs bénéficiant d’un support SIMD. Le nombre
+                  d’une <code>Vector&lt;T&gt;</code> instance est fixe pour la
+                  durée de vie d’une application, mais sa valeur{" "}
+                  <code>Vector&lt;T&gt;.Count</code> dépend de l’UC de
+                  l’ordinateur qui exécute le code.
+                </li>
+              </ul>
+              <p>
+                Le <code>Vector&lt;T&gt;</code> type n’est pas inclus dans le
+                .NET Framework. Vous devez installer le package NuGet
+                System.Numerics.Vectors pour accéder à ce type.
+              </p>
+              <Highlight language="csharp">
+                {`var m1 = new Matrix4x4(
+            1.1f, 1.2f, 1.3f, 1.4f,
+            2.1f, 2.2f, 3.3f, 4.4f,
+            3.1f, 3.2f, 3.3f, 3.4f,
+            4.1f, 4.2f, 4.3f, 4.4f);
+
+var m2 = Matrix4x4.Transpose(m1);
+var mResult = Matrix4x4.Multiply(m1, m2);`}
+              </Highlight>
+            </div>
+          </article>
+        </section>
       </div>
     </>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Highlight from "react-highlight";
-import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
-export default function Refoutin() {
+export default function Advanced() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -27,41 +27,33 @@ export default function Refoutin() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
+                    href="#marshaling"
                   >
-                    Modifiers in, ref et out
+                    Type marshaling
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#out"
+                    href="#platform-invoke"
                   >
-                    out
+                    Platform Invoke (P/Invoke)
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#ref-out"
+                    href="#simd"
                   >
-                    ref vs out
+                    Use SIMD-accelerated numeric types
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#in"
+                    href="#simd-accelerated-types"
                   >
-                    in
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#limit"
-                  >
-                    Limit
+                    .NET SIMD-accelerated types
                   </a>
                 </li>
               </ul>
@@ -109,13 +101,13 @@ export default function Refoutin() {
                     className="d-inline-flex align-items-center rounded"
                     to="/enumindexer"
                   >
-                    Enumeration, Indexer and Generics 
+                    Enumeration, Indexer and Generics
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/refoutin"
+                    to="/parameters"
                   >
                     Ref, in and Out
                   </Link>
@@ -155,9 +147,9 @@ export default function Refoutin() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/gettype"
+                    to="/operators"
                   >
-                    typeof vs GetType
+                    Operators
                   </Link>
                 </li>
                 <li>
@@ -177,129 +169,118 @@ export default function Refoutin() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Ref, in and Out</h3>
-          <article id="introduction">
-            <h6>Les modificateurs in, ref et out</h6>
+          <h3>Advanced Topics</h3>
+          <article id="marshaling">
+            <h6>Type marshaling</h6>
             <div>
-              <ul>
-                <li>
-                  <code>ref</code> is used to state that the parameter passed{" "}
-                  <strong>may</strong> be modified by the method.
-                </li>
-                <li>
-                  <code>in</code> is used to state that the parameter passed{" "}
-                  <strong>cannot</strong> be modified by the method.
-                </li>
-                <li>
-                  <code>out</code> is used to state that the parameter passed{" "}
-                  <code>must</code> be modified by the method.
-                </li>
-              </ul>
               <p>
-                Both the <code>ref</code> and <code>in</code> require the
-                parameter to have been initialized before being passed to a
-                method. The <code>out</code> modifier does not require this and
-                is typically not initialized prior to being used in a method.
+                <strong>Marshaling</strong> is the process of transforming types
+                when they need to cross between managed and native code.
               </p>
-            </div>
-          </article>
-          <article id="out">
-            <h6>out</h6>
-            <p>
-              The <code>out</code> is a keyword in C# which is used for the
-              passing the arguments to methods as a reference type. It is
-              generally used when a method returns multiple values.
-            </p>
-          </article>
-          <article id="ref-out">
-            <h6>ref vs out</h6>
-            <table class="table table-bordered">
-              <tbody>
-                <tr>
-                  <th>ref</th>
-                  <th>out</th>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <td>
-                    It is necessary the parameters should initialize before it
-                    pass to ref.
-                  </td>
-                  <td>
-                    It is not necessary to initialize parameters before it pass
-                    to out.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    It is not necessary to initialize the value of a parameter
-                    before returning to the calling method.
-                  </td>
-                  <td>
-                    It is necessary to initialize the value of a parameter
-                    before returning to the calling method.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    The passing of value through ref parameter is useful when
-                    the called method also need to change the value of passed
-                    parameter.
-                  </td>
-                  <td>
-                    The declaring of parameter through out parameter is useful
-                    when a method return multiple values.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    When ref keyword is used the data may pass in
-                    bi-directional.
-                  </td>
-                  <td>
-                    When out keyword is used the data only passed in
-                    unidirectional.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </article>
-          <article id="in">
-            <h6>in</h6>
-            <div>
               <p>
-                <code>in</code> is used with a struct to improve performance by
-                declaring that the value will not be modified. When using with
-                reference types, it only prevents you from assigning a new
-                reference.
+                Marshaling is needed because the types in the managed and
+                unmanaged code are different. In managed code, for instance, you
+                have a <code>String</code>, while in the unmanaged world strings
+                can be Unicode ("wide"), non-Unicode, null-terminated, ASCII,
+                etc.
               </p>
               <Highlight language="csharp">
-                {`static void Enroll(in Student student)
-{
-  // With in assigning a new object would throw an error
-  // student = new Student();
-
-  // We can still do this with reference types though
-  student.Enrolled = true;
-}`}
+                {`[DllImport("somenativelibrary.dll")]
+static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);`}
               </Highlight>
             </div>
           </article>
-          <article id="limit">
-            <h6>Limitations</h6>
-            <ul>
-              <li>
-                It's important to note that <code>in</code>, <code>out</code>,
-                and <code>ref</code> cannot be used in methods with the{" "}
-                <code>async</code> modifier. You can use them in synchronous
-                methods that return a task, though.
-              </li>
-              <li>
-                You cannot use them in iterator methods that have a{" "}
-                <code>yield return</code> or <code>yield break</code> either.
-              </li>
-            </ul>
+          <article id="platform-invoke">
+            <h6>Platform Invoke (P/Invoke)</h6>
+            <div>
+              <p>
+                P/Invoke is a technology that allows you to access structs,
+                callbacks, and functions in unmanaged libraries from your
+                managed code. Most of the P/Invoke API is contained in two
+                namespaces: <code>System</code> and{" "}
+                <code>System.Runtime.InteropServices</code>. Using these two
+                namespaces give you the tools to describe how you want to
+                communicate with the native component.
+              </p>
+              <Highlight language="csharp">{`using System;
+using System.Runtime.InteropServices;
+
+public class Program
+{
+    // Import user32.dll (containing the function we need) and define
+    // the method corresponding to the native function.
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+    private static extern int MessageBox(IntPtr hWnd, string lpText, string lpCaption, uint uType);
+
+    public static void Main(string[] args)
+    {
+        // Invoke the function as a regular managed method.
+        MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
+    }
+}`}</Highlight>
+            </div>
+          </article>
+          <article id="simd">
+            <h6>Use SIMD-accelerated numeric types</h6>
+            <div>
+              <p>
+                SIMD (Single instruction, multiple data) provides hardware
+                support for performing an operation on multiple pieces of data,
+                in parallel, using a single instruction. In .NET, there's set of
+                SIMD-accelerated types under the System.Numerics namespace. SIMD
+                operations can be parallelized at the hardware level. That
+                increases the throughput of the vectorized computations, which
+                are common in mathematical, scientific, and graphics apps.
+              </p>
+            </div>
+          </article>
+          <article id="simd-accelerated-types">
+            <h6>.NET SIMD-accelerated types</h6>
+            <div>
+              <p>
+                The .NET SIMD-accelerated types include the following types:
+              </p>
+              <ul>
+                <li>
+                  The <code>Vector2</code>, <code>Vector3</code>, and{" "}
+                  <code>Vector4</code> types, which represent vectors with 2, 3,
+                  and 4 Single values.
+                </li>
+                <li>
+                  Two matrix types, <code>Matrix3x2</code>, which represents a
+                  3x2 matrix, and <code>Matrix4x4</code>, which represents a 4x4
+                  matrix of Single values.
+                </li>
+                <li>
+                  The <code>Plane</code> type, which represents a plane in
+                  three-dimensional space using Single values.
+                </li>
+                <li>
+                  The <code>Quaternion</code> type, which represents a vector
+                  that is used to encode three-dimensional physical rotations
+                  using Single values.
+                </li>
+                <li>
+                  The <code>Vector&lt;T&gt;</code> type, which represents a
+                  vector of a specified numeric type and provides a broad set of
+                  operators that benefit from SIMD support. The count of a{" "}
+                  <code>Vector&lt;T&gt;</code> instance is fixed for the
+                  lifetime of an application, but its value{" "}
+                  <code>Vector&lt;T&gt;.Count</code> depends on the CPU of the
+                  machine running the code.
+                </li>
+              </ul>
+              <Highlight language="csharp">
+                {`var m1 = new Matrix4x4(
+            1.1f, 1.2f, 1.3f, 1.4f,
+            2.1f, 2.2f, 3.3f, 4.4f,
+            3.1f, 3.2f, 3.3f, 3.4f,
+            4.1f, 4.2f, 4.3f, 4.4f);
+
+var m2 = Matrix4x4.Transpose(m1);
+var mResult = Matrix4x4.Multiply(m1, m2);`}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

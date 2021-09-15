@@ -48,6 +48,14 @@ export default function Threads() {
                     Task vs Thread
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#deadlock"
+                  >
+                    Deadlock
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -93,13 +101,13 @@ export default function Threads() {
                     className="d-inline-flex align-items-center rounded"
                     to="/enumindexer"
                   >
-                    Enumeration, Indexer and Generics 
+                    Enumeration, Indexer and Generics
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/refoutin"
+                    to="/parameters"
                   >
                     Ref, in and Out
                   </Link>
@@ -139,9 +147,9 @@ export default function Threads() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/gettype"
+                    to="/operators"
                   >
-                    typeof vs GetType
+                    Operators
                   </Link>
                 </li>
                 <li>
@@ -253,6 +261,119 @@ public void getMyName() {} `}
                 use Thread directly, every use will start a new Thread.
               </li>
             </ul>
+          </article>
+          <article id="deadlock">
+            <h6>Deadlock</h6>
+            <div>
+              <p>
+                A deadlock is a situation where two or more threads are{" "}
+                <strong>frozen</strong> in their execution because they are
+                waiting for each other to finish. For example, thread A is
+                waiting on <strong>lock_1</strong> that is held by thread B.
+                Thread B can’t finish and release <strong>lock_1</strong>{" "}
+                because it waits on <strong>lock_2</strong>, which is held by
+                thread A. Too confusing? I’ll show you an example in a moment,
+                but first let’s talk about <strong>Locks</strong>.
+              </p>
+              <h6>Explanation of the code:</h6>
+              <Highlight language="csharp">
+                {`public void Foo()
+{
+    object lock1 = new object();
+    object lock2 = new object();
+    Console.WriteLine("Starting...");
+    var task1 = Task.Run(() =>
+    {
+        lock (lock1)
+        {
+            Thread.Sleep(1000);
+            lock (lock2)
+            {
+                Console.WriteLine("Finished Thread 1");
+            }
+        }
+    });
+ 
+    var task2 = Task.Run(() =>
+    {
+        lock (lock2)
+        {
+            Thread.Sleep(1000);
+            lock (lock1)
+            {
+                Console.WriteLine("Finished Thread 2");
+            }
+        }
+    });
+ 
+    Task.WaitAll(task1, task2);
+    Console.WriteLine("Finished...");
+}`}
+              </Highlight>
+              <ul>
+                <li>
+                  Two objects are created for <strong>lock</strong> purposes. In
+                  C#, any object can be used as a lock.
+                </li>
+                <li>
+                  <code>Task.Run</code> starts 2 Tasks, which are run by 2
+                  Threads on the <strong>Thread-Pool</strong>.
+                </li>
+                <li>
+                  The first Thread acquires <strong>lock1 </strong>and sleeps
+                  for 1 second. The second acquires <strong>lock2</strong> and
+                  also sleeps for a second. Afterward, thread 1 waits for{" "}
+                  <strong>lock2</strong> to be released and thread 2 waits for{" "}
+                  <strong>lock1</strong> to be released. So they both wait
+                  indefinitely and result in a <strong>Deadlock</strong>.
+                </li>
+                <li>
+                  <code>Task.WaitAll(task1, task2)</code> waits on the method’s
+                  Thread until both Tasks are finished, which never happens.
+                  This makes it a 3-Thread deadlock. The Console print is:{" "}
+                  <code>Starting…</code>
+                </li>
+              </ul>
+              <h6>Debugging a Deadlock</h6>
+              <p>
+                You can see the deadlock in the debugger easily, once you know
+                what to look for. In the example above, running the code in
+                Visual Studio results in a hang. Hit on the{" "}
+                <strong>Debug | Break All</strong> (Ctrl + Alt + Break), then go
+                to <strong>Debug | Windows | Threads</strong>. You’ll see the
+                following:
+              </p>
+              <img
+                src="/img/dotnet/nested_deadlock_breakall.png"
+                alt="nested_deadlock_breakall"
+              />
+              <h6>Solving the Nested-Lock Deadlock</h6>
+              <Highlight language="csharp">
+                {`// After (without deadlock, change only in "Transfer" method)
+public class Account
+{
+    public uint Id { get; set; }
+}
+// ...
+private Task Transfer(Account acc1, Account acc2, int sum)
+{
+    var lock1 = acc1.Id < acc2.Id ? acc1 : acc2;//smalled Id account
+    var lock2 = acc1.Id < acc2.Id ? acc2 : acc1;//biggest Id account
+    var task = Task.Run(() =>
+    {
+        lock (lock1)
+        {
+            Thread.Sleep(1000);
+            lock (lock2)
+            {
+                Console.WriteLine($"Finished transferring sum {sum}");
+            }
+        }
+    });
+    return task;
+}`}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

@@ -224,8 +224,8 @@ export default function Header(pages) {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="dropdown-item" to="/refoutin">
-                      Ref-Out-In
+                    <Link className="dropdown-item" to="/parameters">
+                      Parameters
                     </Link>
                   </li>
                   <li className="nav-item">

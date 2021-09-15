@@ -48,6 +48,14 @@ export default function Threads() {
                     Task vs Thread
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#deadlock"
+                  >
+                    Deadlock
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -93,13 +101,13 @@ export default function Threads() {
                     className="d-inline-flex align-items-center rounded"
                     to="/enumindexer"
                   >
-                    Enumeration, Indexer and Generics 
+                    Enumeration, Indexer and Generics
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/refoutin"
+                    to="/parameters"
                   >
                     Ref, in and Out
                   </Link>
@@ -139,9 +147,9 @@ export default function Threads() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/gettype"
+                    to="/operators"
                   >
-                    typeof vs GetType
+                    Operators
                   </Link>
                 </li>
                 <li>
@@ -260,6 +268,120 @@ public void getMyName() {} `}
                 nouveau Thread.
               </li>
             </ul>
+          </article>
+          <article id="deadlock">
+            <h6>Deadlock</h6>
+            <div>
+              <p>
+                Un blocage en C# est une situation dans laquelle deux threads ou
+                plus sont gelés (<strong>frozen</strong>) dans leur exécution
+                car ils attendent que l'autre se termine. Par exemple, le thread
+                A attend le <strong>lock_1</strong> détenu par le thread B. Le
+                thread B ne peut pas terminer et libérer le{" "}
+                <strong>lock_1</strong> car il attend le <strong>lock_2</strong>
+                , qui est détenu par le thread A. Trop déroutant ? Je vais vous
+                montrer un exemple dans un instant, maispremierparlons des{" "}
+                <strong>Locks</strong>.
+              </p>
+              <h6>Explication du code :</h6>
+              <Highlight language="csharp">
+                {`public void Foo()
+{
+    object lock1 = new object();
+    object lock2 = new object();
+    Console.WriteLine("Starting...");
+    var task1 = Task.Run(() =>
+    {
+        lock (lock1)
+        {
+            Thread.Sleep(1000);
+            lock (lock2)
+            {
+                Console.WriteLine("Finished Thread 1");
+            }
+        }
+    });
+ 
+    var task2 = Task.Run(() =>
+    {
+        lock (lock2)
+        {
+            Thread.Sleep(1000);
+            lock (lock1)
+            {
+                Console.WriteLine("Finished Thread 2");
+            }
+        }
+    });
+ 
+    Task.WaitAll(task1, task2);
+    Console.WriteLine("Finished...");
+}`}
+              </Highlight>
+              <ul>
+                <li>
+                  Deux objets sont créés à des fins de{" "}
+                  <strong>verrouillage</strong> . En C#, n'importe quel objet
+                  peut être utilisé comme verrou.
+                </li>
+                <li>
+                  <code>Task.Run</code> démarre 2 tâches, qui sont exécutées par
+                  2 threads sur le <strong>Thread-Pool</strong> .
+                </li>
+                <li>
+                  Le premier Thread acquiert <strong>lock1</strong> et se met en{" "}
+                  <strong>veille</strong> pendant 1 seconde. Le second acquiert{" "}
+                  <strong>lock2</strong> et dort également pendant une seconde.
+                  Ensuite, le thread 1 attend que <strong>lock2</strong> soit
+                  libéré et le thread 2 attend que <strong>lock1</strong> soit
+                  libéré. Donc, ils attendent tous les deux indéfiniment et
+                  aboutissent à un <strong>Deadlock</strong> .
+                </li>
+                <li>
+                  <code>Task.WaitAll(task1, task2)</code> attend sur le Thread
+                  de la méthode jusqu'à ce que les deux Tasks soient terminées,
+                  ce qui n'arrive jamais. Cela en fait une impasse 3-Thread.
+                  L'impression de la console est : <code>Starting…</code>
+                </li>
+              </ul>
+              <h6>Déboguer un blocage</h6>
+              <p>
+                Vous pouvez facilement voir le blocage dans le débogueur, une
+                fois que vous savez quoi rechercher. Coup sur le{" "}
+                <strong>Debug | Break All</strong> (Ctrl + Alt + Break), puis
+                allez dans <strong>Debug | Windows | Threads</strong>.
+              </p>
+              <img
+                src="/img/dotnet/nested_deadlock_breakall.png"
+                alt="nested_deadlock_breakall"
+              />
+              <h6>Résoudre l'impasse(Deadlock) Nested-Lock</h6>
+              <Highlight language="csharp">
+                {`// After (without deadlock, change only in "Transfer" method)
+public class Account
+{
+    public uint Id { get; set; }
+}
+// ...
+private Task Transfer(Account acc1, Account acc2, int sum)
+{
+    var lock1 = acc1.Id < acc2.Id ? acc1 : acc2;//smalled Id account
+    var lock2 = acc1.Id < acc2.Id ? acc2 : acc1;//biggest Id account
+    var task = Task.Run(() =>
+    {
+        lock (lock1)
+        {
+            Thread.Sleep(1000);
+            lock (lock2)
+            {
+                Console.WriteLine($"Finished transferring sum {sum}");
+            }
+        }
+    });
+    return task;
+}`}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

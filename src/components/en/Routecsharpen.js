@@ -11,6 +11,11 @@ import CleanPage from "../../pages/en/dotnet/architecture/Clean";
 import MvcPage from "../../pages/en/dotnet/architecture/Mvc";
 //#endregion
 
+//#region Csharp
+import Csharp9Page from "../../pages/en/csharp/csharp/Csharp9";
+import Csharp10Page from "../../pages/en/csharp/csharp/Csharp10";
+//#endregion
+
 //#region Framework
 import DotnetPage from "../../pages/en/dotnet/framework/Dotnet";
 import DotnetcomponentsPage from "../../pages/en/dotnet/framework/Dotnetcomponents";
@@ -25,12 +30,10 @@ import NugetpackagesPage from "../../pages/en/dotnet/framework/Nugetpackages";
 //#endregion
 
 //#region OOP
-import ModifiersPage from "../../pages/en/dotnet/oop/Modifiers";
 import OopPage from "../../pages/en/dotnet/oop/Oop";
 import Oop2Page from "../../pages/en/dotnet/oop/Oop2";
 import Oop3Page from "../../pages/en/dotnet/oop/Oop3";
 import CompositionPage from "../../pages/en/dotnet/oop/Composition";
-import StatementsPage from "../../pages/en/dotnet/oop/Statements";
 import TypesystemPage from "../../pages/en/dotnet/oop/Typesystem";
 //#endregion
 
@@ -73,21 +76,29 @@ import ServerPage from "../../pages/en/dotnet/hostdeploy/Server";
 //#endregion
 
 //#region csharp
+
+//#region Keywords
+import ModifiersPage from "../../pages/en/csharp/keywords/Modifiers";
+import ContextualPage from "../../pages/en/csharp/keywords/Contextual";
+import OperatorsPage from "../../pages/en/csharp/keywords/Operators";
+import ParametersPage from "../../pages/en/csharp/keywords/Parameters";
+import StatementsPage from "../../pages/en/csharp/keywords/Statements";
+import ThisbasePage from "../../pages/en/csharp/keywords/Thisbase";
+//#endregion
+import AdvancedPage from "../../pages/en/csharp/Advanced";
+import BindingPage from "../../pages/en/csharp/Binding";
 import BoxingPage from "../../pages/en/csharp/Boxing";
 import CollectionsPage from "../../pages/en/csharp/Collections";
 import CovariancePage from "../../pages/en/csharp/Covariance";
 import DatatypePage from "../../pages/en/csharp/Datatype";
 import DelegatePage from "../../pages/en/csharp/Delegate";
 import EnumindexerPage from "../../pages/en/csharp/Enumindexer";
-import Csharp9Page from "../../pages/en/csharp/Csharp9";
-import Csharp10Page from "../../pages/en/csharp/Csharp10";
-import RefoutinPage from "../../pages/en/csharp/refoutin";
+import MemberwiseclonePage from "../../pages/en/csharp/Memberwiseclone";
+import PreprocessordirectivesPage from "../../pages/en/csharp/Preprocessordirectives";
 import String2intPage from "../../pages/en/csharp/String2int";
 import StringbuilderPage from "../../pages/en/csharp/Stringbuilder";
 import ThreadsPage from "../../pages/en/csharp/Threads";
 import TuplePage from "../../pages/en/csharp/Tuple";
-import GetTypePage from "../../pages/en/csharp/GetType";
-import MemberwiseclonePage from "../../pages/en/csharp/Memberwiseclone";
 import UserdefinedtypePage from "../../pages/en/csharp/Userdefinedtype";
 //#endregion
 
@@ -99,6 +110,9 @@ export default function Routecsharpen() {
       }
       <Route path="/hostedservice" component={HostedservicePage} />
       <Route path="/controller" component={ControllerPage} />
+      {
+        //#endregion
+      }
 
       {
         //#region Architecture
@@ -109,7 +123,7 @@ export default function Routecsharpen() {
       {
         //#endregion
       }
-      
+
       {
         //#region Framework
       }
@@ -151,21 +165,19 @@ export default function Routecsharpen() {
       {
         //#endregion
       }
-      
+
       {
         //#region OOP
       }
       <Route path="/composition" component={CompositionPage} />
-      <Route path="/modifiers" component={ModifiersPage} />
       <Route path="/oop" component={OopPage} />
       <Route path="/oop2" component={Oop2Page} />
       <Route path="/oop3" component={Oop3Page} />
-      <Route path="/statements" component={StatementsPage} />
       <Route path="/typesystem" component={TypesystemPage} />
       {
         //#endregion
       }
-      
+
       {
         //#region design pattern
       }
@@ -194,26 +206,44 @@ export default function Routecsharpen() {
       }
 
       {
+        //#region csharp
+      }
+      <Route path="/csharp9" component={Csharp9Page} />
+      <Route path="/csharp10" component={Csharp10Page} />
+      {
         //#endregion
       }
 
       {
-        //#region csharp
+        //#region keywords
       }
+      <Route path="/contextual" component={ContextualPage} />
+      <Route path="/modifiers" component={ModifiersPage} />
+      <Route path="/operators" component={OperatorsPage} />
+      <Route path="/parameters" component={ParametersPage} />
+      <Route path="/statements" component={StatementsPage} />
+      <Route path="/thisbase" component={ThisbasePage} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region others
+      }
+      <Route path="/advanced" component={AdvancedPage} />
+      <Route path="/binding" component={BindingPage} />
       <Route path="/boxing" component={BoxingPage} />
       <Route path="/collections" component={CollectionsPage} />
       <Route path="/covariance" component={CovariancePage} />
       <Route path="/datatype" component={DatatypePage} />
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />
-      <Route path="/csharp9" component={Csharp9Page} />
-      <Route path="/csharp10" component={Csharp10Page} />
-      <Route path="/refoutin" component={RefoutinPage} />
+      <Route path="/memberwiseclone" component={MemberwiseclonePage} />
+      <Route path="/preprocessordirectives" component={PreprocessordirectivesPage} />
       <Route path="/string2int" component={String2intPage} />
       <Route path="/stringbuilder" component={StringbuilderPage} />
       <Route path="/threads" component={ThreadsPage} />
       <Route path="/tuple" component={TuplePage} />
-      <Route path="/gettype" component={GetTypePage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/userdefinedtype" component={UserdefinedtypePage} />
       {

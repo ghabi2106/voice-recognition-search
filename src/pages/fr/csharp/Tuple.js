@@ -91,7 +91,7 @@ export default function Tuple() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/refoutin"
+                    to="/parameters"
                   >
                     Ref, in and Out
                   </Link>
@@ -131,9 +131,9 @@ export default function Tuple() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/gettype"
+                    to="/operators"
                   >
-                    typeof vs GetType
+                    Operators
                   </Link>
                 </li>
                 <li>

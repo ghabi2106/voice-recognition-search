@@ -29,7 +29,7 @@ export default function Struct() {
                     className="d-inline-flex align-items-center rounded"
                     href="#access-modifiers"
                   >
-                    Struct
+                    Modificateurs d'accès
                   </a>
                 </li>
                 <li>
@@ -37,7 +37,7 @@ export default function Struct() {
                     className="d-inline-flex align-items-center rounded"
                     href="#non-access-modifiers"
                   >
-                    Record
+                    Modificateurs de non-accès
                   </a>
                 </li>
                 <li>
@@ -54,22 +54,6 @@ export default function Struct() {
                     href="#abstruct-interface"
                   >
                     abstruct vs interface
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#this"
-                  >
-                    this
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#is-as"
-                  >
-                    is - as
                   </a>
                 </li>
                 <li>
@@ -136,11 +120,11 @@ export default function Struct() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Modifiers</h3>
+          <h3>Modificateurs</h3>
           <article id="access-modifiers">
-            <h6>Access Modifiers</h6>
+            <h6>Modificateurs d'accès</h6>
             <div>
-              <p>Access Modifiers - controls the access level</p>
+              <p>Modificateurs d'accès - contrôle le niveau d'accès</p>
               <table class="table table-bordered">
                 <tbody>
                   <tr>
@@ -151,14 +135,14 @@ export default function Struct() {
                     <td>
                       <code>public</code>
                     </td>
-                    <td>The class is accessible by any other class</td>
+                    <td>Le code est accessible pour toutes les classes</td>
                   </tr>
                   <tr>
                     <td>
                       <code>private</code>
                     </td>
                     <td>
-                      The code is only accessible within the declared class
+                      Le code n'est accessible qu'au sein d'une même classe
                     </td>
                   </tr>
                   <tr>
@@ -166,7 +150,8 @@ export default function Struct() {
                       <code>protected</code>
                     </td>
                     <td>
-                      The code is accessible in the same package and subclasses.
+                      Le code est accessible au sein de la même classe, ou dans
+                      un classe héritée de cette classe.
                     </td>
                   </tr>
                   <tr>
@@ -174,7 +159,8 @@ export default function Struct() {
                       <code>internal</code>
                     </td>
                     <td>
-                      The code is only accessible within its own assembly.
+                      Le code n'est accessible qu'au sein de son propre
+                      assembly.
                     </td>
                   </tr>
                   <tr>
@@ -182,9 +168,9 @@ export default function Struct() {
                       <code>protected internal</code>
                     </td>
                     <td>
-                      The code can be accessed by any code in the assembly in
-                      which it's declared, or from within a derived class in
-                      another assembly.
+                      Le code n'est accessible qu'au sein de son propre
+                      assembly, ou à partir d’un dérivé class dans un autre
+                      assembly.
                     </td>
                   </tr>
                   <tr>
@@ -192,9 +178,9 @@ export default function Struct() {
                       <code>private protected</code>
                     </td>
                     <td>
-                      The code can be accessed only within its declaring
-                      assembly, by code in the same class or in a type that is
-                      derived from that class.
+                      le type ou le membre est accessible uniquement dans son
+                      assembly déclarant, par le code dans le même class ou dans
+                      un type dérivé de celui-ci.
                     </td>
                   </tr>
                 </tbody>
@@ -301,11 +287,11 @@ export default function Struct() {
             </div>
           </article>
           <article id="non-access-modifiers">
-            <h6>Non-Access Modifiers</h6>
+            <h6>Modificateurs de non-accès</h6>
             <div>
               <p>
-                Non-Access Modifiers - do not control access level, but provides
-                other functionality.
+                Modificateurs de non-accès - ne contrôlent pas le niveau
+                d'accès, mais fournissent d'autres fonctionnalités
               </p>
               <table class="table table-bordered">
                 <tbody>
@@ -317,16 +303,18 @@ export default function Struct() {
                     <td>
                       <code>sealed</code>
                     </td>
-                    <td>sealed class cannot be inherited.</td>
+                    <td>
+                      La classe ne peut pas être héritée par d'autres classes
+                    </td>
                   </tr>
                   <tr>
                     <td>
                       <code>abstract</code>
                     </td>
                     <td>
-                      Abstract class is a restricted class that cannot be used
-                      to create objects (to access it, it must be inherited from
-                      another class).
+                      La classe ne peut pas être utilisée pour créer des objets.
+                      Pour accéder à une classe abstraite, elle doit être
+                      héritée d'une autre classe.
                     </td>
                   </tr>
                   <tr>
@@ -334,9 +322,8 @@ export default function Struct() {
                       <code>static</code>
                     </td>
                     <td>
-                      A static means something which cannot be instantiated. You
-                      cannot create an object of a static class and cannot
-                      access static members using an object.
+                      Les attributs et les méthodes appartiennent à la classe,
+                      plutôt qu'à un objet.
                     </td>
                   </tr>
                   <tr>
@@ -344,8 +331,8 @@ export default function Struct() {
                       <code>virtual</code>
                     </td>
                     <td>
-                      The virtual method is a method that can be redefined in
-                      derived classes.
+                      La méthode virtuelle est une méthode qui peut être
+                      redéfinie dans des classes dérivées.
                     </td>
                   </tr>
                   <tr>
@@ -353,8 +340,8 @@ export default function Struct() {
                       <code>override</code>
                     </td>
                     <td>
-                      An override method provides a new implementation of the
-                      method inherited from a base class.
+                      Une override méthode fournit une nouvelle implémentation
+                      de la méthode héritée d’une classe de base.
                     </td>
                   </tr>
                   <tr>
@@ -362,11 +349,9 @@ export default function Struct() {
                       <code>readonly</code>
                     </td>
                     <td>
-                      <code>readonly</code> indicates that assignment to the
-                      field can only occur as part of the declaration or in a
-                      constructor in the same class. A readonly field can be
-                      assigned and reassigned multiple times within the field
-                      declaration and constructor.
+                      Un champ <code>readonly</code> ne peut pas être assigné
+                      (sauf s’il s’agit d’un constructeur ou d’un initialiseur
+                      de variable).
                     </td>
                   </tr>
                   <tr>
@@ -374,18 +359,11 @@ export default function Struct() {
                       <code>const</code>
                     </td>
                     <td>
-                      <p>
-                        The <code>readonly</code> keyword differs from the{" "}
-                        <code>const</code> keyword. A <code>const</code> field
-                        can only be initialized at the declaration of the field.
-                        A <code>readonly</code> field can be initialized either
-                        at the declaration or in a constructor. Therefore,{" "}
-                        <code>readonly</code> fields can have different values
-                        depending on the constructor used. Also, although a{" "}
-                        <code>const</code> field is a compile-time constant, the{" "}
-                        <code>readonly</code> field can be used for run-time
-                        constants.
-                      </p>
+                      Le mot clé <code>readonly</code> est différent du mot clé{" "}
+                      <code>const</code>. Un champ <code>const</code> ne peut
+                      être initialisé qu'au moment de la déclaration du champ.
+                      Un champ <code>readonly</code> peut être initialisé dans
+                      la déclaration ou dans un constructeur.
                     </td>
                   </tr>
                   <tr>
@@ -393,9 +371,9 @@ export default function Struct() {
                       <code>volatile</code>
                     </td>
                     <td>
-                      The <code>volatile</code> keyword indicates that a field
-                      might be modified by multiple threads that are executing
-                      at the same time
+                      Le mot clé <code>volatile</code> indique qu’un champ peut
+                      être modifié par plusieurs threads qui s’exécutent
+                      simultanément
                     </td>
                   </tr>
                   <tr>
@@ -403,8 +381,29 @@ export default function Struct() {
                       <code>unsafe</code>
                     </td>
                     <td>
-                      The <code>unsafe</code> keyword denotes an unsafe context,
-                      which is required for any operation involving pointers.
+                      Le mot clé <code>unsafe</code> désigne un contexte non
+                      sécurisé, qui est requis pour toute opération impliquant
+                      des pointeurs.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>extern</code>
+                    </td>
+                    <td>
+                      <p>
+                        Le modificateur <code>extern</code> permet de déclarer
+                        une méthode qui est implémentée en externe. Le
+                        modificateur <code>extern</code> est souvent utilisé
+                        avec l'attribut <code>DllImport</code> lors de
+                        l'utilisation de services Interop à appeler dans du code
+                        non managé. Dans ce cas, la méthode doit également être
+                        déclarée comme <code>static</code>.
+                      </p>
+                      <Highlight language="csharp">
+                        {`[DllImport("avifil32.dll")]
+private static extern void AVIFileInit();`}
+                      </Highlight>
                     </td>
                   </tr>
                 </tbody>
@@ -424,29 +423,33 @@ export default function Struct() {
                   </td>
                 </tr>
                 <tr>
-                  <td>Evaluated at compile time</td>
-                  <td>Evaluated at run-time</td>
-                </tr>
-                <tr>
-                  <td>Support only value type variables</td>
-                  <td>They can hold the reference type variables</td>
+                  <td>Constantes Variables en lecture seule</td>
+                  <td>Évalué au moment de la compilation</td>
                 </tr>
                 <tr>
                   <td>
-                    They are used when the value is not changing at compile time
+                    Prend en charge uniquement les variables de type valeur
+                  </td>
+                  <td>Ils peuvent contenir les variables de type référence</td>
+                </tr>
+                <tr>
+                  <td>
+                    Ils sont utilisés lorsque la valeur ne change pas au moment
+                    de la compilation
                   </td>
                   <td>
-                    Used when the actual value is unknown before the run-time
+                    Utilisé lorsque la valeur réelle est inconnue avant
+                    l'exécution
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    Cannot be initialized at the time of declaration or in a
-                    constructor
+                    Ne peut pas être initialisé au moment de la déclaration ou
+                    dans un constructeur
                   </td>
                   <td>
-                    Can be initialized at the time of declaration or in a
-                    constructor
+                    Peut être initialisé au moment de la déclaration ou dans un
+                    constructeur
                   </td>
                 </tr>
               </tbody>
@@ -466,53 +469,37 @@ export default function Struct() {
                 </tr>
                 <tr>
                   <td>
-                    An interface merely declares a contract or behavior that
-                    implementing classes should have.
+                    Une interface déclare simplement un contrat ou un
+                    comportement que les classes d'implémentation devraient
+                    avoir.
                   </td>
                   <td>
-                    An abstract class provides a partial implementation for a
-                    functionality that must be implemented by the inheriting
-                    entities.
+                    Une classe abstraite fournit une implémentation partielle
+                    d'une fonctionnalité qui doit être implémentée par les
+                    entités qui héritent.
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    An interface may declare only properties, methods and events
-                    with no access modifier.
+                    Une interface ne peut déclarer que des propriétés, des
+                    méthodes et des événements sans modificateur d'accès.
                   </td>
-                  <td>An abstract class declares fields too.</td>
+                  <td>Une classe abstraite déclare également des champs.</td>
                 </tr>
               </tbody>
             </table>
           </article>
-          <article id="this">
-            <h6>Can we use “this” command within a static method?</h6>
-            <p>
-              We can’t use “this” in a static method because we can only use
-              static variables/methods in a static method.
-            </p>
-          </article>
-          <article id="is-as">
-            <h6>What is difference between “is” and “as” operators in c#?</h6>
-            <div>
-              <p>
-                “is” operator is used to check the compatibility of an object
-                with a given type, and it returns the result as Boolean.
-              </p>
-              <p>
-                “as” operator is used for casting of an object to a type or a
-                class.
-              </p>
-            </div>
-          </article>
           <article id="new">
-            <h6>What is method shadowing or method hiding in C#?</h6>
+            <h6>
+              new (modificateur de membre)
+            </h6>
             <div>
               <p>
-                When used as a declaration modifier, the <code>new</code>{" "}
-                keyword explicitly hides a member that is inherited from a base
-                class. When you hide an inherited member, the derived version of
-                the member replaces the base class version.
+                En cas d'utilisation comme un modificateur de déclaration, le
+                mot clé <code>new</code> masque explicitement un membre qui est
+                hérité d'une classe de base. Lorsque vous masquez un membre
+                hérité, la version dérivée du membre remplace la version de
+                classe de base.
               </p>
               <Highlight language="csharp">
                 {`public class BaseC

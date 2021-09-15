@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Highlight from "react-highlight";
 import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
-export default function Oop3() {
+export default function Preprocessordirectives() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -27,25 +27,9 @@ export default function Oop3() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#delegation"
+                    href="#preprocessor-directives"
                   >
-                    Delegation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#coupling"
-                  >
-                    Coupling
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#cohesion"
-                  >
-                    Cohesion
+                    Preprocessor Directives
                   </a>
                 </li>
               </ul>
@@ -161,93 +145,140 @@ export default function Oop3() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>OOP 3</h3>
-          <article id="delegation">
-            <h6>Delegation</h6>
+          <h3>Preprocessor Directives</h3>
+          <article id="preprocessor-directives">
+            <h6>Preprocessor Directives</h6>
             <div>
               <p>
-                In object-oriented programming, <strong>delegation</strong>{" "}
-                refers to evaluating a member (property or method) of one object
-                (the receiver) in the context of another original object (the
-                sender).
+                Les directives de préprocesseur en C# indiquent au compilateur
+                de traiter les informations données avant que la compilation
+                réelle du programme ne commence. Il commence par un symbole de
+                hashtag (#) et comme ces préprocesseurs ne sont pas des
+                instructions, aucun point-virgule n'est ajouté à la fin. Le
+                compilateur C# n'a pas de préprocesseur séparé, mais les
+                directives sont traitées comme s'il y en avait un. Il ne peut y
+                avoir rien d'autre dans une ligne que la directive du
+                préprocesseur.
               </p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Préprocesseur</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#define</td>
+                    <td>Pour définir un symbole</td>
+                  </tr>
+                  <tr>
+                    <td>#undef</td>
+                    <td>Supprime toute définition d'un symbole</td>
+                  </tr>
+                  <tr>
+                    <td>#if</td>
+                    <td>Vérifie si le symbole est évalué à vrai</td>
+                  </tr>
+                  <tr>
+                    <td>#endif</td>
+                    <td>
+                      Termine la directive conditionnelle qui a commencé par #if
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#else</td>
+                    <td>
+                      Si la valeur symbolique de #if est fausse, les
+                      instructions de la directive #else sont exécutées
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#elif</td>
+                    <td>
+                      Crée une directive conditionnelle composée qui est
+                      exécutée si la valeur symbolique est vraie
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#error</td>
+                    <td>Crée une erreur définie par l'utilisateur</td>
+                  </tr>
+                  <tr>
+                    <td>#warning</td>
+                    <td>Crée un avertissement défini par l'utilisateur</td>
+                  </tr>
+                  <tr>
+                    <td>#line</td>
+                    <td>
+                      Modifie la numérotation des lignes par défaut du
+                      compilateur
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#region</td>
+                    <td>
+                      Spécifie un bloc de code qui peut être développé ou réduit
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#endregion</td>
+                    <td>Spécifie la fin d'une région</td>
+                  </tr>
+                  <tr>
+                    <td>#pragma</td>
+                    <td>
+                      Donne au compilateur des informations pour la compilation
+                      du fichier
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#pragma warning</td>
+                    <td>
+                      Utilisé pour activer ou désactiver les avertissements
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#pragma checksum</td>
+                    <td>
+                      Crée des sommes de contrôle pour les fichiers source
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
               <Highlight language="csharp">
-                {`class A {
-  void foo() {
-    // "this" also known under the names "current", "me" and "self" in other languages
-    this.bar();
-  }
+                {`// C# Program to show the use of
+// preprocessor directives
 
-  void bar() {
-    print("a.bar");
-  }
-};
+// Defining a symbol shape
+#define shape
 
-class B {
-  private delegate A a; // delegation link
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
 
-  public B(A a) {
-    this.a = a;
-  }
+namespace Preprocessor {
 
-  void foo() {
-    a.foo(); // call foo() on the a-instance
-  }
+class Program {
 
-  void bar() {
-    print("b.bar");
-  }
-};
+	static void Main(string[] args)
+	{
+		// Checking if symbol shape exists or not
+		#if (shape)
+		Console.WriteLine("Shape Exists");
+		#else
+		Console.WriteLine("Shape does not Exist");
 
-a = new A();
-b = new B(a); // establish delegation between two objects`}
+	// Ending the if directive
+	#endif
+	}
+}
+}
+`}
               </Highlight>
-            </div>
-          </article>
-          <article id="coupling">
-            <h6>Coupling</h6>
-            <div>
-              <p>
-                <strong>Coupling</strong> is the degree of interdependence
-                between software modules; a measure of how closely connected two
-                routines or modules are; the strength of the relationships
-                between modules.
-                <br />
-                Coupling is usually contrasted with cohesion. Low coupling often
-                correlates with high cohesion, and vice versa.
-              </p>
-              <p>There are two types of coupling:</p>
-              <ol>
-                <li>
-                  <strong>Tight coupling :</strong> In general, Tight coupling
-                  means the two classes often change together. In other words,
-                  if A knows more than it should about the way in which B was
-                  implemented, then A and B are tightly coupled.
-                </li>
-                <li>
-                  <strong>Loose coupling :</strong> In simple words, loose
-                  coupling means they are mostly independent. If the only
-                  knowledge that class A has about class B, is what class B has
-                  exposed through its interface, then class A and class B are
-                  said to be loosely coupled.
-                </li>
-              </ol>
-            </div>
-          </article>
-          <article id="cohesion">
-            <h6>Cohesion</h6>
-            <div>
-              <p>
-                <strong>cohesion</strong> refers to the degree to which the
-                elements inside a module belong together. In one sense, it is a
-                measure of the strength of relationship between the methods and
-                data of a class and some unifying purpose or concept served by
-                that class. In another sense, it is a measure of the strength of
-                relationship between the class's methods and data themselves.
-                <br />
-                Cohesion is an ordinal type of measurement and is usually
-                described as “high cohesion” or “low cohesion”.
-              </p>
             </div>
           </article>
         </section>

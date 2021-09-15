@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Highlight from "react-highlight";
-import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
-export default function Datatype() {
+export default function Binding() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -27,57 +27,41 @@ export default function Datatype() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#datatype"
+                    href="#binding"
                   >
-                    Data Type
+                    Binding
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#safetype"
+                    href="#late-bound"
                   >
-                    Type safety
+                    Late-bound
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#anonyme"
+                    href="#early-bound"
                   >
-                    Anonymous Type
+                    Early-bound
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#dynamic"
+                    href="#Late-early-bound"
                   >
-                    Dynamic Types
+                    Late-bound vs early-bound
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#nullable"
+                    href="#entity"
                   >
-                    Nullable Types
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#discard"
-                  >
-                    Discard Types
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#extension"
-                  >
-                    Extension Method
+                    Entity
                   </a>
                 </li>
               </ul>
@@ -193,135 +177,162 @@ export default function Datatype() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Data Types</h3>
-          <article id="datatype">
-            <h6>Data Type</h6>
+          <h3>Late-bound and early-bound</h3>
+          <article id="binding">
+            <h6>Binding</h6>
+            <div>
+              <p>
+                When you work with the Organization service assemblies you have
+                two programming styles you can use: <em>late-bound</em> and{" "}
+                <em>early-bound</em>.
+              </p>
+              <p>
+                The key difference between early and late binding involves type
+                conversion. While early binding provides compile-time checking
+                of all types so that no implicit casts occur, late binding
+                checks types only when the object is created or an action is
+                performed on the type. The Entity class requires types to be
+                explicitly specified to prevent implicit casts.
+              </p>
+            </div>
+          </article>
+          <article id="late-bound">
+            <h6>Late-bound</h6>
+            <div>
+              <p>
+                Late binding allows you to work with custom tables (entities) or
+                columns (attributes) that weren't available when your code was
+                compiled.
+              </p>
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul>
+                    <li>
+                      <i class="fa fa-fw fa-check" aria-hidden="true"></i> The
+                      main advantage for late-bound programming is that you
+                      don't need to generate the classes or include that
+                      generated file within your projects. The generated file
+                      can be quite large
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <ul>
+                    <li>
+                      <i class="fa fa-fw fa-times" aria-hidden="true"></i> You
+                      don't get compile time validation on names of entities,
+                      attributes, and relationships.
+                    </li>
+                    <li>
+                      <i class="fa fa-fw fa-times" aria-hidden="true"></i> You
+                      need to know the names of the attributes and relationships
+                      in the metadata.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <Highlight language="csharp">
+                {`//Use Entity class specifying the entity logical name
+var account = new Entity("account");
+
+// set attribute values
+    // string primary name
+    account["name"] = "Contoso";            
+    // Boolean (Two option)
+    account["creditonhold"] = false;
+    // DateTime
+    account["lastonholdtime"] = new DateTime(2017, 1, 1);
+    // Double
+    account["address1_latitude"] = 47.642311;
+    account["address1_longitude"] = -122.136841;
+    // Int
+    account["numberofemployees"] = 500;
+    // Money
+    account["revenue"] = new Money(new decimal(5000000.00));
+    // Picklist (Option set)
+    account["accountcategorycode"] = new OptionSetValue(1); //Preferred customer
+                
+//Create the account
+Guid accountid = svc.Create(account);`}
+              </Highlight>
+            </div>
+          </article>
+          <article id="early-bound">
+            <h6>Early-bound</h6>
+            <div>
+              <Highlight language="csharp">
+                {`var account = new Account();
+// set attribute values
+    // string primary name
+    account.Name = "Contoso";
+    // Boolean (Two option)
+    account.CreditOnHold = false;
+    // DateTime
+    account.LastOnHoldTime = new DateTime(2017, 1, 1);
+    // Double
+    account.Address1_Latitude = 47.642311;
+    account.Address1_Longitude = -122.136841;
+    // Int
+    account.NumberOfEmployees = 500;
+    // Money
+    account.Revenue = new Money(new decimal(5000000.00));
+    // Picklist (Option set)
+    account.AccountCategoryCode = new OptionSetValue(1); //Preferred customer
+
+//Create the account
+Guid accountid = svc.Create(account);`}
+              </Highlight>
+            </div>
+          </article>
+          <article id="Late-early-bound">
+            <h6>Late-bound vs early-bound</h6>
+            <table class="table table-bordered">
+              <caption>Choose which style</caption>
+              <thead>
+                <tr>
+                  <th>Early-bound</th>
+                  <th>Late-bound</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    You can verify entity, attribute, and relationship names at
+                    compile time
+                  </td>
+                  <td>
+                    No compile time verification of entity, attribute, and
+                    relationship names
+                  </td>
+                </tr>
+                <tr>
+                  <td>You must generate entity classes</td>
+                  <td>You don't need to generate entity classes</td>
+                </tr>
+                <tr>
+                  <td>Better IntelliSense support</td>
+                  <td>Less IntelliSense support</td>
+                </tr>
+                <tr>
+                  <td>Less, more readable code</td>
+                  <td>More, less readable code</td>
+                </tr>
+                <tr>
+                  <td>Very slightly less performant</td>
+                  <td>Very slightly more performant</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="entity">
+            <h6>Entity</h6>
             <p>
-              Datatype means the type of data which can be stored in a variable.
-              It also identifies the way memory is allocated to a variable as
-              well as the operations that can be performed on the same variable.
+              <code>Entity</code> is the base class for all types of entities in
+              Microsoft Dynamics 365. You use this class for both early and late
+              bound programming.
             </p>
           </article>
-          <article id="safetype">
-            <h6>Type safety</h6>
-            <p>
-              Type safety in C# was introduced to stop the object of one type
-              from peeking into the memory which was assigned for other objects.
-              Safe code is also written to stop losing data during the
-              conversion of one type to the other.
-            </p>
-          </article>
-          <article id="anonymous">
-            <h6>Anonymous Type</h6>
-            <div>
-              <p>
-                An anonymous type is a type (class) without any name that can
-                contain public read-only properties only.
-              </p>
-              <Highlight language="csharp">
-                {`var student = new { Id = 1, FirstName = "James", LastName = "Bond" };`}
-              </Highlight>
-            </div>
-          </article>
-          <article id="dynamic">
-            <h6>Dynamic Types</h6>
-            <div>
-              <p>
-                A <code>dynamic</code> type escapes type checking at
-                compile-time; instead, it resolves type at run time.
-              </p>
-              <ul>
-                <li>
-                  Dynamic types change types at run-time based on the assigned
-                  value.
-                </li>
-                <li>
-                  The dynamic type variables is converted to other types
-                  implicitly.
-                </li>
-              </ul>
-              <Highlight language="csharp">
-                {`dynamic MyDynamicVar = 1;`}
-              </Highlight>
-            </div>
-          </article>
-          <article id="nullable">
-            <h6>Types Nullables</h6>
-            <div>
-              <p>
-                As you know, a value type cannot be assigned a null value. For
-                example, int i = null will give you a compile time error.
-              </p>
-              <Highlight language="csharp">
-                {`Nullable<int> i = null;`}
-              </Highlight>
-            </div>
-          </article>
-          <article id="discard">
-            <h6>Discards</h6>
-            <div>
-              <p>
-                Discards are placeholder variables that are intentionally unused
-                in application code. Discards are equivalent to unassigned
-                variables; they don't have a value.You may want to ignore the
-                result of an expression, one or more members of a tuple
-                expression, or the target of a pattern matching expression.
-              </p>
-              <u>
-                <li>Tuple and object deconstruction</li>
-                <li>Pattern matching with switch</li>
-              </u>
-            </div>
-          </article>
-          <article id="extension">
-            <h6>Extension Method</h6>
-            <div>
-              <p>
-                Extension methods allow you to inject additional methods without
-                modifying, deriving or recompiling the original class, struct or
-                interface.
-              </p>
-              <p>
-                The extension methods have a special symbol in intellisense of
-                the visual studio, so that you can easily differentiate between
-                class methods and extension methods.
-              </p>
-              <img
-                src="/img/dotnet/extension-method.png"
-                alt="extension method"
-              />
-              <p>
-                An extension method is actually a special kind of static method
-                defined in a static class.
-              </p>
-              <Highlight language="csharp">
-                {`public static class IntExtensions
-{
-	public static bool IsGreaterThan(this int i, int value)
-	{
-		return i > value;
-	}
-}
-
-public class Program
-{
-	public static void Main()
-	{
-		int i = 10;
-
-        bool result = i.IsGreaterThan(100); 
-
-		Console.WriteLine("Result: {0}",result);
-	}
-}`}
-              </Highlight>
-              <p>
-                LINQ is built upon extension methods that operate on IEnumerable
-                and IQeryable type.
-              </p>
-            </div>
-          </article>
-          </section>
+        </section>
       </div>
     </>
   );
