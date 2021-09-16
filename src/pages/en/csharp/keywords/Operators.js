@@ -398,7 +398,8 @@ public class InheritanceExample
         Direction.Right => Orientation.East,
         Direction.Down  => Orientation.South,
         Direction.Left  => Orientation.West,
-        _ => throw new ArgumentOutOfRangeException(nameof(direction), $"Not expected direction value: {direction}"),
+        _ => throw new ArgumentOutOfRangeException(nameof(direction), 
+        $"Not expected direction value: {direction}"),
     };
 
     public static void Main()

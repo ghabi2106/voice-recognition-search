@@ -8,23 +8,8 @@ export default function Navdotnet() {
         //#region dotnet
       }
       <li className="nav-item">
-        <Link className="nav-link" to="/boxing">
-          Boxing
-        </Link>
-      </li>
-      <li className="nav-item">
         <Link className="nav-link" to="/middleware">
           Middleware
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/enumindexer">
-          Enumindexer
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/hostedservice">
-          Hosted-Service
         </Link>
       </li>
       {
@@ -501,6 +486,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/boxing">
+              Boxing
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/collections">
               Collections
             </Link>
@@ -521,13 +511,23 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/preprocessordirectives">
-              Preprocessordirectives
+            <Link className="dropdown-item" to="/enumindexer">
+              Enumindexer
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/hostedservice">
+              Hosted-Service
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/memberwiseclone">
               Memberwiseclone
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/preprocessordirectives">
+              Preprocessordirectives
             </Link>
           </li>
           <li className="nav-item">
