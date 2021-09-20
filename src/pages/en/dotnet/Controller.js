@@ -90,33 +90,41 @@ export default function Controller() {
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/controller"
-                  >Controller</Link>
+                  >
+                    Controller
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/https"
                   >
-                  HTTPS, HTTP and SSL</Link>
+                    HTTPS, HTTP and SSL
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/httpmethods"
                   >
-                  HTTP Request Methods</Link>
+                    HTTP Request Methods
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/jwt"
-                  >JWT</Link>
+                  >
+                    JWT
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/"
-                  >Services, Microservices, Web API, Web API vs WCF</Link>
+                  >
+                    Services, Microservices, Web API, Web API vs WCF
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -244,7 +252,9 @@ export default function Controller() {
               <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th>Http method</th>
+                    <th>
+                      <Link to="/httpmethods">Http method</Link>
+                    </th>
                     <th>Usage</th>
                   </tr>
                 </thead>

@@ -160,7 +160,8 @@ export default function Clean() {
             <h6>Infrastructure</h6>
             <ul>
               <li>
-                EF Core types (<code>DbContext</code>, <code>Migration</code>)
+                <Link to="/entityframework">EF Core</Link> types (
+                <code>DbContext</code>, <code>Migration</code>)
               </li>
               <li>Data access implementation types (Repositories)</li>
               <li>
@@ -172,9 +173,9 @@ export default function Clean() {
           <article id="ui">
             <h6>UI Layer</h6>
             <ul>
-              <li>Controllers</li>
+              <li><Link to="/controllers">Controllers</Link></li>
               <li>Filters</li>
-              <li>Views</li>
+              <li><Link to="/mvc">Views</Link></li>
               <li>ViewModels</li>
               <li>Startup</li>
             </ul>

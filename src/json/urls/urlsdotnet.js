@@ -218,6 +218,8 @@ export const urlsdotnet = {
   discard: "/datatype",
   "extension method": "/datatype",
   extension: "/datatype",
+  "type safety": "/datatype",
+  "safety type": "/datatype",
   // Delegates
   delegate: "/delegate",
   func: "/delegate",
@@ -341,15 +343,15 @@ export const urlsdotnet = {
   "stack alloc": "/operators",
   "name of": "/operators",
   "size of": "/operators",
-  // keyword parametrers
-  ref: "/parametrers",
-  reference: "/parametrers",
-  out: "/parametrers",
-  "ref verus out": "/parametrers",
-  "reference versus out": "/parametrers",
-  "out verus ref": "/parametrers",
-  "out versus reference": "/parametrers",
-  in: "/parametrers",
+  // keyword parameters
+  ref: "/parameters",
+  reference: "/parameters",
+  out: "/parameters",
+  "ref verus out": "/parameters",
+  "reference versus out": "/parameters",
+  "out verus ref": "/parameters",
+  "out versus reference": "/parameters",
+  in: "/parameters",
   // keyword statements
   lock: "/statements",
   fixed: "/statements",

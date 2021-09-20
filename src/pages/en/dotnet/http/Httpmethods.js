@@ -114,33 +114,41 @@ export default function Dotnet() {
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/controllervuedata"
-                  >ViewBag, ViewData and TempData</Link>
+                  >
+                    ViewBag, ViewData and TempData
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/https"
                   >
-                  HTTPS, HTTP and SSL</Link>
+                    HTTPS, HTTP and SSL
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/httpmethods"
                   >
-                  HTTP Request Methods</Link>
+                    HTTP Request Methods
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/jwt"
-                  >JWT</Link>
+                  >
+                    JWT
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/"
-                  >Services, Microservices, Web API, Web API vs WCF</Link>
+                  >
+                    Services, Microservices, Web API, Web API vs WCF
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -155,7 +163,8 @@ export default function Dotnet() {
             <h6>HTTP</h6>
             <div>
               <p>
-                The Hypertext Transfer Protocol (HTTP) is designed to enable
+                The Hypertext Transfer Protocol (
+                <Link to="/https">HTTP</Link>) is designed to enable
                 communications between clients and servers. HTTP works as a
                 request-response protocol between a client and server.
               </p>

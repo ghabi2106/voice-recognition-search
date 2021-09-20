@@ -135,12 +135,15 @@ export default function Cqrs() {
             </div>
           </article>
           <article id="mediator">
-            <h6>MediatR</h6>
+            <h6>
+              <Link to="/mediator">MediatR</Link>
+            </h6>
             <p>
-              MediatR allows you to compose messages, create and listen for
-              events using synchronous or asynchronous patterns. It helps to
-              reduce coupling and isolate the concerns of requesting the work to
-              be done and creating the handler that dispatches the work.
+              <Link to="/mediator">MediatR</Link> allows you to compose
+              messages, create and listen for events using synchronous or
+              asynchronous patterns. It helps to reduce coupling and isolate the
+              concerns of requesting the work to be done and creating the
+              handler that dispatches the work.
             </p>
           </article>
           <article id="request">

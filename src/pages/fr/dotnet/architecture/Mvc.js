@@ -106,11 +106,11 @@ export default function Mvc() {
           <article id="introduction">
             <h6>Introduction</h6>
             <div>
-              <p>MVC signifie Modèle, Vue et Contrôleur :</p>
+              <p>MVC signifie Modèle, Vue et <Link to="/controller" >contrôleur</Link> :</p>
               <ul>
                 <li>Le modèle représente les données.</li>
                 <li>La vue est l'interface utilisateur.</li>
-                <li>Le contrôleur est le gestionnaire de requêtes.</li>
+                <li>Le <Link to="/controller" >contrôleur</Link> est le gestionnaire de requêtes.</li>
               </ul>
             </div>
           </article>
@@ -133,11 +133,11 @@ export default function Mvc() {
             </p>
           </article>
           <article id="controller">
-            <h6>Contrôleur</h6>
+            <h6><Link to="/controller" >Contrôleur</Link></h6>
             <p>
-              Le contrôleur gère la demande de l'utilisateur. En règle générale,
+              Le <Link to="/controller" >contrôleur</Link> gère la demande de l'utilisateur. En règle générale,
               l'utilisateur utilise la vue et génère une requête HTTP, qui sera
-              gérée par le contrôleur. Le contrôleur traite la demande et
+              gérée par le <Link to="/controller" >contrôleur</Link>. Le <Link to="/controller" >contrôleur</Link> traite la demande et
               renvoie la vue appropriée en réponse.
             </p>
           </article>

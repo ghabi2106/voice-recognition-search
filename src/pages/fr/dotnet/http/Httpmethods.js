@@ -114,33 +114,41 @@ export default function Dotnet() {
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/controllervuedata"
-                  >ViewBag, ViewData and TempData</Link>
+                  >
+                    ViewBag, ViewData and TempData
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/https"
                   >
-                  HTTPS, HTTP and SSL</Link>
+                    HTTPS, HTTP and SSL
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/httpmethods"
                   >
-                  HTTP Request Methods</Link>
+                    HTTP Request Methods
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/jwt"
-                  >JWT</Link>
+                  >
+                    JWT
+                  </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
                     to="/"
-                  >Services, Microservices, Web API, Web API vs WCF</Link>
+                  >
+                    Services, Microservices, Web API, Web API vs WCF
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -155,8 +163,9 @@ export default function Dotnet() {
             <h6>Introduction</h6>
             <div>
               <p>
-                Le protocole HTTP (Hypertext Transfer Protocol) est conçu pour
-                permettre les communications entre les clients et les serveurs.
+                Le protocole <Link to="/https">HTTP</Link> (Hypertext
+                Transfer Protocol) est conçu pour permettre les communications
+                entre les clients et les serveurs.
               </p>
               <ul>
                 <li>

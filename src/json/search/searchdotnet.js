@@ -213,6 +213,8 @@ export const pagesdotnet = [
   "discard",
   "extension method",
   "extension",
+  "type safety",
+  "safety type",
   // Delegates
   "delegate",
   "func",
@@ -338,7 +340,7 @@ export const pagesdotnet = [
   "stack alloc",
   "name of",
   "size of",
-  // keyword parametrers
+  // keyword parameters
   "ref",
   "reference",
   "out",

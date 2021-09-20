@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Mvc() {
+export default function Handlersmodules() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,33 +25,17 @@ export default function Mvc() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
+                    href="#http-handlers"
                   >
-                    Introduction
+                    HTTP Handlers
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#model"
+                    href="#http-modules"
                   >
-                    Model
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded active"
-                    href="#view"
-                  >
-                    View
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#controller"
-                  >
-                    Controller
+                    HTTP Modiles
                   </a>
                 </li>
               </ul>
@@ -73,25 +57,57 @@ export default function Mvc() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/mvc"
+                    to="/caching"
                   >
-                    MVC
+                    Caching
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/clean"
+                    to="/controller"
                   >
-                    Clean Architecture
+                    Action Method, Result, Selectors
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/cqrs"
+                    to="/controllervuedata"
                   >
-                    CQRS
+                    ViewBag, ViewData and TempData
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/https"
+                  >
+                    HTTPS, HTTP and SSL
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/httpmethods"
+                  >
+                    HTTP Request Methods
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/jwt"
+                  >
+                    JWT
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/"
+                  >
+                    Services, Microservices, Web API, Web API vs WCF
                   </Link>
                 </li>
               </ul>
@@ -102,53 +118,33 @@ export default function Mvc() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>MVC Architecture</h3>
-          <article id="introduction">
-            <h6>Introduction</h6>
+          <h3>HTTP Handlers and HTTP Modules</h3>
+          <article id="http-handlers">
+            <h6>HTTP Handlers</h6>
             <div>
               <p>
-                MVC stands for Model, View and{" "}
-                <Link to="/controller">Controller</Link> :
+                An ASP.NET HTTP handler is the process (frequently referred to
+                as the "endpoint") that runs in response to a request made to an
+                ASP.NET Web application. The most common handler is an ASP.NET
+                page handler that processes .aspx files. When users request an
+                .aspx file, the request is processed by the page through the
+                page handler. You can create your own HTTP handlers that render
+                custom output to the browser.
               </p>
-              <ul>
-                <li>Model represents the data.</li>
-                <li>View is the User Interface.</li>
-                <li>
-                  <Link to="/controller">Controller</Link> is the request
-                  handler.
-                </li>
-              </ul>
             </div>
           </article>
-          <article id="model">
-            <h6>Model</h6>
-            <p>
-              Model represents the shape of the data. A class is used to
-              describe a model. Model objects store data retrieved from the
-              database.
-            </p>
-          </article>
-          <article id="view">
-            <h6>View</h6>
-            <p>
-              View in MVC is a user interface. View display model data to the
-              user and also enables them to modify them. View in ASP.NET MVC is
-              HTML, CSS, and some special syntax (Razor syntax) that makes it
-              easy to communicate with the model and the controller.
-            </p>
-          </article>
-          <article id="controller">
-            <h6>
-              <Link to="/controller">Controller</Link>
-            </h6>
-            <p>
-              The <Link to="/controller">Controller</Link> handles the user
-              request. Typically, the user uses the view and raises an HTTP
-              request, which will be handled by the
-              <Link to="/controller">Controller</Link>. The{" "}
-              <Link to="/controller">Controller</Link> processes the request and
-              returns the appropriate view as a response.
-            </p>
+          <article id="http-modules">
+            <h6>HTTP Modiles</h6>
+            <div>
+              <p>
+                An HTTP module is an assembly that is called on every request
+                that is made to your application. HTTP modules are called as
+                part of the ASP.NET request pipeline and have access to
+                life-cycle events throughout the request. HTTP modules let you
+                examine incoming and outgoing requests and take action based on
+                the request.
+              </p>
+            </div>
           </article>
         </section>
       </div>

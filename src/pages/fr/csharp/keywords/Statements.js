@@ -64,6 +64,14 @@ export default function Statements() {
                     jump statements
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#exception"
+                  >
+                    exception statements
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -264,6 +272,73 @@ int1 = unchecked(ConstantMax + 10);`}
                       également retourner une valeur facultative. Si la méthode
                       est un type <code>void</code>, l’instruction{" "}
                       <code>return</code> peut être omise.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="exception">
+            <h6>Exception statements</h6>
+            <table class="table table-bordered">
+              <caption>jump statements</caption>
+              <thead>
+                <tr>
+                  <th>mot clés</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>throw</code>
+                  </td>
+                  <td>
+                    Signale l’occurrence d’une exception pendant l’exécution du
+                    programme.. <code>throw [e];</code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>try-catch</code>
+                  </td>
+                  <td>
+                    <p>
+                      L'instruction try-catch consiste en un bloc{" "}
+                      <code>try</code> suivi d'une ou plusieurs clauses{" "}
+                      <code>catch</code> qui spécifient des gestionnaires pour
+                      différentes exceptions.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>try-finally</code>
+                  </td>
+                  <td>
+                    <p>
+                      En utilisant un bloc <code>finally</code>, vous pouvez
+                      nettoyer toutes les ressources allouées dans un bloc{" "}
+                      <code>try</code> et vous pouvez exécuter du code même si
+                      une exception se produit dans le bloc <code>try</code>. En
+                      règle générale, les instructions d’un bloc{" "}
+                      <code>finally</code> s’exécutent lorsque le contrôle
+                      quitte une instruction <code>try</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>try-catch-finally</code>
+                  </td>
+                  <td>
+                    <p>
+                      <code>catch</code> et <code>finally</code> sont souvent
+                      utilisés ensemble pour obtenir et utiliser des ressources
+                      dans un bloc <code>try</code>, pour traiter des
+                      circonstances exceptionnelles dans un bloc{" "}
+                      <code>catch</code> et pour libérer les ressources dans le
+                      bloc <code>finally</code>.
                     </p>
                   </td>
                 </tr>

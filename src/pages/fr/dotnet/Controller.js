@@ -247,7 +247,7 @@ export default function Controller() {
               <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th>Http method</th>
+                    <th><Link to="/httpmethods">Http method</Link></th>
                     <th>Usage</th>
                   </tr>
                 </thead>

@@ -113,11 +113,18 @@ export default function Clean() {
           <h3>Clean Architecture</h3>
           <article id="monolithic">
             <h6>Monolithic</h6>
-            <p>
-              A monolithic application is one that is entirely self-contained,
-              in terms of its behavior. The entire application is typically
-              deployed as a single unit.
-            </p>
+            <div>
+              <p>
+                A monolithic application is one that is entirely self-contained,
+                in terms of its behavior. The entire application is typically
+                deployed as a single unit.
+              </p>
+              <img
+                className="img-dimension"
+                src="/img/dotnet/clean-architecture-monolothic.png"
+                alt="clean-architecture-monolothic"
+              />
+            </div>
           </article>
           <article id="introduction">
             <h6>Introduction</h6>
@@ -157,7 +164,8 @@ export default function Clean() {
             <h6>Infrastructure</h6>
             <ul>
               <li>
-                EF Core types (<code>DbContext</code>, <code>Migration</code>)
+                <Link to="/entityframework">EF Core</Link> types (
+                <code>DbContext</code>, <code>Migration</code>)
               </li>
               <li>Data access implementation types (Repositories)</li>
               <li>
@@ -169,9 +177,13 @@ export default function Clean() {
           <article id="ui">
             <h6>UI Layer</h6>
             <ul>
-              <li>Controllers</li>
+              <li>
+                <Link to="/controllers">Controllers</Link>
+              </li>
               <li>Filters</li>
-              <li>Views</li>
+              <li>
+                <Link to="/mvc">Views</Link>
+              </li>
               <li>ViewModels</li>
               <li>Startup</li>
             </ul>

@@ -24,37 +24,53 @@ export default function Statements() {
                 className="list-unstyled ps-3 collapse show"
                 id="contents-collapse"
               >
-              <li>
-                <a
-                  className="d-inline-flex align-items-center rounded"
-                  href="#lock"
-                >
-                  lock
-                </a>
-              </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#lock"
+                  >
+                    lock
+                  </a>
+                </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#fixed"
-                  >fixed</a>
+                  >
+                    fixed
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#checked"
-                  >checked</a>
+                  >
+                    checked
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#unchecked"
-                  >unchecked</a>
+                  >
+                    unchecked
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#jump"
-                  >jump statements</a>
+                  >
+                    jump statements
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#exception"
+                  >
+                    exception statements
+                  </a>
                 </li>
               </ul>
             </li>
@@ -247,6 +263,71 @@ int1 = unchecked(ConstantMax + 10);`}
                     calling method. It can also return an optional value. If the
                     method is a <code>void</code> type, the <code>return</code>{" "}
                     statement can be omitted.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="exception">
+            <h6>Exception statements</h6>
+            <table class="table table-bordered">
+              <caption>jump statements</caption>
+              <thead>
+                <tr>
+                  <th>keyzords</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <code>throw</code>
+                  </td>
+                  <td>
+                    Signals the occurrence of an exception during program
+                    execution. <code>throw [e];</code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>try-catch</code>
+                  </td>
+                  <td>
+                    <p>
+                      The try-catch statement consists of a <code>try</code>{" "}
+                      block followed by one or more <code>catch</code> clauses,
+                      which specify handlers for different exceptions.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>try-finally</code>
+                  </td>
+                  <td>
+                    <p>
+                      By using a <code>finally</code> block, you can clean up
+                      any resources that are allocated in a <code>try</code>
+                      block, and you can run code even if an exception occurs in
+                      the <code>try</code> block. Typically, the statements of a{" "}
+                      <code>finally</code> block run when control leaves a{" "}
+                      <code>try</code> statement.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code>try-catch-finally</code>
+                  </td>
+                  <td>
+                    <p>
+                      A common usage of <code>catch</code> and{" "}
+                      <code>finally</code> together is to obtain and use
+                      resources in a <code>try</code> block, deal with
+                      exceptional circumstances in a <code>catch</code> block,
+                      and release the resources in the <code>finally</code>{" "}
+                      block.
+                    </p>
                   </td>
                 </tr>
               </tbody>
