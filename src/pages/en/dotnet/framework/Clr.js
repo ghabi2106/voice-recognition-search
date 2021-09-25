@@ -184,7 +184,7 @@ export default function Clr() {
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Common Runtime Language</h3>
           <article id="introduction">
-            <h6>Common Runtime Language</h6>
+            <h6>Common Runtime Language (CLR)</h6>
             <div>
               <p>
                 .NET CLR is a run-time environment that manages and executes the
@@ -213,7 +213,7 @@ export default function Clr() {
             </div>
           </article>
           <article id="jit">
-            <h6>Just In Time</h6>
+            <h6>Just In Time (JIT)</h6>
             <div>
               <p>
                 JIT is a compiler which stands for Just In Time. It is used to
@@ -224,7 +224,7 @@ export default function Clr() {
             </div>
           </article>
           <article id="gac">
-            <h6>Global Assembly Cache</h6>
+            <h6>Global Assembly Cache (GAC)</h6>
             <p>
               GAC stands for Global Assembly Cache. Whenever CLR gets installed
               on the machine, GAC comes as a part of it. GAC specifically stores
@@ -233,7 +233,7 @@ export default function Clr() {
             </p>
           </article>
           <article id="cts">
-            <h6>Common Type System</h6>
+            <h6>Common Type System (CTS)</h6>
             <p>
               CTS stands for Common Type System. It follows certain rules
               according to which a data type should be declared and used in the
@@ -245,7 +245,7 @@ export default function Clr() {
             </p>
           </article>
           <article id="cas">
-            <h6>Code Access Security</h6>
+            <h6>Code Access Security (CAS)</h6>
             <div>
               <p>
                 .Net provides a security model that prevents unauthorized access
@@ -261,7 +261,7 @@ export default function Clr() {
             </div>
           </article>
           <article id="cls">
-            <h6>Common Language Specification</h6>
+            <h6>Common Language Specification (CLS)</h6>
             <p>
               Common language specification helps the developers to use the
               components that are inter-language compatible with certain rules

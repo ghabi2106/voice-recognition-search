@@ -7,11 +7,6 @@ export default function Navdotnet() {
       {
         //#region dotnet
       }
-      <li className="nav-item">
-        <Link className="nav-link" to="/middleware">
-          Middleware
-        </Link>
-      </li>
       {
         //#endregion
       }
@@ -77,6 +72,16 @@ export default function Navdotnet() {
               C# 10
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/algo">
+              Algorithme
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/recursion">
+              Recursion
+            </Link>
+          </li>
         </ul>
       </li>
       {
@@ -105,7 +110,7 @@ export default function Navdotnet() {
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/dotnet">
-              .Net
+              .Net vs .Net Core
             </Link>
           </li>
           <li className="nav-item">
@@ -114,7 +119,7 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-menu" to="/clr">
+            <Link className="dropdown-item" to="/clr">
               CLR
             </Link>
           </li>
@@ -200,6 +205,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/middleware">
+              Middleware
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/service">
               Service
             </Link>
@@ -242,6 +252,47 @@ export default function Navdotnet() {
       }
 
       {
+        //#region methodology
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Methodology
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/agile">
+              Agile
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/cleancode">
+              Clean-Code
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/cleancode1">
+              Clean-Code1
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/solid">
+              Solid
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
+
+      {
         //#region design pattern
       }
       <li className="nav-item dropdown">
@@ -257,18 +308,8 @@ export default function Navdotnet() {
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
-            <Link className="dropdown-item" to="/agile">
-              Agile
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link className="dropdown-item" to="/adapter">
               Adapter
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/cleancode">
-              Clean-Code
             </Link>
           </li>
           <li className="nav-item">
@@ -304,11 +345,6 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/singleton">
               Singleton
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/solid">
-              Solid
             </Link>
           </li>
         </ul>
@@ -523,6 +559,11 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/memberwiseclone">
               Memberwiseclone
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/operatoroverloading">
+              Operator overloading
             </Link>
           </li>
           <li className="nav-item">

@@ -149,9 +149,18 @@ export default function Server() {
               </p>
               <ul>
                 <li>Apache</li>
-                <li>Internet Information Services (IIS)</li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/iis"
+                  >
+                    Internet Information Services (IIS)
+                  </Link>
+                </li>
                 <li>Nginx</li>
-                <li>Kestrel</li>
+                <li>
+                  <Link to="/kestrel">Kestrel</Link>
+                </li>
               </ul>
             </div>
           </article>
@@ -160,16 +169,28 @@ export default function Server() {
             <div>
               <p>ASP.NET Core ships with the following:</p>
               <ul>
-                <li>Kestrel server</li>
-                <li>IIS HTTP Server</li>
-                <li>HTTP.sys server</li>
+                <li>
+                  <Link to="/kestrel">Kestrel server</Link>
+                </li>
+                <li>
+                  <Link to="/iis">IIS HTTP Server</Link>
+                </li>
+                <li>
+                  <Link to="/httpsys">HTTP.sys server</Link>
+                </li>
               </ul>
             </div>
           </article>
           <article id="kestrel-httpsys">
-            <h6>Kestrel vs. HTTP.sys</h6>
+            <h6>
+              <Link to="/kestrel">Kestrel</Link> vs.{" "}
+              <Link to="/httpsys">HTTP.sys</Link>
+            </h6>
             <div>
-              <p>Kestrel has the following advantages over HTTP.sys:</p>
+              <p>
+                <Link to="/kestrel">Kestrel</Link> has the following advantages
+                over <Link to="/httpsys">HTTP.sys</Link>:
+              </p>
               <ul>
                 <li>Better performance and memory utilization.</li>
                 <li>Cross platform</li>
@@ -183,14 +204,16 @@ export default function Server() {
                 </li>
               </ul>
               <p>
-                Http.Sys operates as a shared kernel mode component with the
-                following features that kestrel does not have:
+                <Link to="/httpsys">HTTP.sys</Link> operates as a shared kernel
+                mode component with the following features that{" "}
+                <Link to="/kestrel">kestrel</Link> does not have:
               </p>
               <ul>
                 <li>Port sharing</li>
                 <li>
-                  Kernel mode windows authentication. Kestrel supports only
-                  user-mode authentication.
+                  Kernel mode windows authentication.{" "}
+                  <Link to="/kestrel">Kestrel</Link> supports only user-mode
+                  authentication.
                 </li>
                 <li>Fast proxying via queue transfers</li>
                 <li>Direct file transmission</li>

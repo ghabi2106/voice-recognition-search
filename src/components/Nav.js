@@ -33,7 +33,7 @@ export default function Nav() {
             <Navfrontend />
             <Navsql />
           </>
-        );  
+        );
       default:
         return <h1>No project match</h1>;
     }
@@ -42,9 +42,9 @@ export default function Nav() {
   return (
     <>
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        {/* <Link className="navbar-brand" to="/">
           Presentation
-        </Link>
+        </Link> */}
         <button
           className="navbar-toggler"
           type="button"
@@ -58,7 +58,7 @@ export default function Nav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 className="nav-link active"
                 aria-current="page"
@@ -66,7 +66,38 @@ export default function Nav() {
               >
                 Qualities
               </Link>
+            </li> */}
+
+            {
+              //#region presentation
+            }
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Presentation
+              </a>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li className="nav-item">
+                  <Link className="dropdown-item" to="/">
+                    Presentation
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="dropdown-item" to="/qualities">
+                    Qualities
+                  </Link>
+                </li>
+              </ul>
             </li>
+            {
+              //#endregion
+            }
 
             {courseComponent()}
           </ul>

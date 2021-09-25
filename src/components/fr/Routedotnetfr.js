@@ -16,6 +16,11 @@ import Csharp9Page from "../../pages/fr/csharp/csharp/Csharp9";
 import Csharp10Page from "../../pages/fr/csharp/csharp/Csharp10";
 //#endregion
 
+//#region algorithme
+import AlgoPage from "../../pages/fr/algorithme/Algo";
+import RecursionPage from "../../pages/fr/algorithme/Recursion";
+//#endregion
+
 //#region Framework
 import DotnetPage from "../../pages/fr/dotnet/framework/Dotnet";
 import DotnetcomponentsPage from "../../pages/fr/dotnet/framework/Dotnetcomponents";
@@ -52,17 +57,21 @@ import IdealsPage from "../../pages/fr/dotnet/services/Ideals";
 //#endregion
 
 //#region design pattern
-import CleancodePage from "../../pages/fr/dotnet/patternprinciple/Cleancode";
-import SolidPage from "../../pages/fr/dotnet/patternprinciple/Solid";
-import AdapterPage from "../../pages/fr/dotnet/patternprinciple/Adapter";
-import AgilePage from "../../pages/fr/dotnet/patternprinciple/Agile";
-import DesignpatternPage from "../../pages/fr/dotnet/patternprinciple/Designpattern";
-import DiPage from "../../pages/fr/dotnet/patternprinciple/Di";
-import SingletonPage from "../../pages/fr/dotnet/patternprinciple/Singleton";
-import MediatorPage from "../../pages/fr/dotnet/patternprinciple/Mediator";
-import ObserverPage from "../../pages/fr/dotnet/patternprinciple/Observer";
-import FactoryPage from "../../pages/fr/dotnet/patternprinciple/Factory";
-import CommandPage from "../../pages/fr/dotnet/patternprinciple/Command";
+import AdapterPage from "../../pages/fr/dotnet/design/Adapter";
+import DesignpatternPage from "../../pages/fr/dotnet/design/Designpattern";
+import DiPage from "../../pages/fr/dotnet/design/Di";
+import SingletonPage from "../../pages/fr/dotnet/design/Singleton";
+import MediatorPage from "../../pages/fr/dotnet/design/Mediator";
+import ObserverPage from "../../pages/fr/dotnet/design/Observer";
+import FactoryPage from "../../pages/fr/dotnet/design/Factory";
+import CommandPage from "../../pages/fr/dotnet/design/Command";
+//#endregion
+
+//#region methodology
+import CleancodePage from "../../pages/fr/dotnet/methodology/Cleancode";
+import Cleancode1Page from "../../pages/fr/dotnet/methodology/Cleancode1";
+import SolidPage from "../../pages/fr/dotnet/methodology/Solid";
+import AgilePage from "../../pages/fr/dotnet/methodology/Agile";
 //#endregion
 
 //#region Host Deployment
@@ -94,6 +103,7 @@ import DatatypePage from "../../pages/fr/csharp/Datatype";
 import DelegatePage from "../../pages/fr/csharp/Delegate";
 import EnumindexerPage from "../../pages/fr/csharp/Enumindexer";
 import MemberwiseclonePage from "../../pages/fr/csharp/Memberwiseclone";
+import OperatoroverloadingPage from "../../pages/fr/csharp/Operatoroverloading";
 import PreprocessordirectivesPage from "../../pages/fr/csharp/Preprocessordirectives";
 import String2intPage from "../../pages/fr/csharp/String2int";
 import StringbuilderPage from "../../pages/fr/csharp/Stringbuilder";
@@ -182,8 +192,6 @@ export default function Routedotnetfr() {
         //#region design pattern
       }
       <Route path="/adapter" component={AdapterPage} />
-      <Route path="/agile" component={AgilePage} />
-      <Route path="/cleancode" component={CleancodePage} />
       <Route path="/command" component={CommandPage} />
       <Route path="/designpattern" component={DesignpatternPage} />
       <Route path="/di" component={DiPage} />
@@ -191,6 +199,16 @@ export default function Routedotnetfr() {
       <Route path="/mediator" component={MediatorPage} />
       <Route path="/observer" component={ObserverPage} />
       <Route path="/singleton" component={SingletonPage} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region methodology
+      }
+      <Route path="/agile" component={AgilePage} />
+      <Route path="/cleancode" component={CleancodePage} />
+      <Route path="/cleancode1" component={Cleancode1Page} />
       <Route path="/solid" component={SolidPage} />
       {
         //#endregion
@@ -210,6 +228,15 @@ export default function Routedotnetfr() {
       }
       <Route path="/csharp9" component={Csharp9Page} />
       <Route path="/csharp10" component={Csharp10Page} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region algorithme
+      }
+      <Route path="/algo" component={AlgoPage} />
+      <Route path="/recursion" component={RecursionPage} />
       {
         //#endregion
       }
@@ -239,6 +266,7 @@ export default function Routedotnetfr() {
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
+      <Route path="/operatoroverloading" component={OperatoroverloadingPage} />
       <Route path="/preprocessordirectives" component={PreprocessordirectivesPage} />
       <Route path="/string2int" component={String2intPage} />
       <Route path="/stringbuilder" component={StringbuilderPage} />

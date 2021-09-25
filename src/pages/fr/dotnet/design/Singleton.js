@@ -228,9 +228,9 @@ export default function Singleton() {
           <article id="singleton">
             <h6>Singleton</h6>
             <p>
-              Singleton is a creational design pattern that lets you ensure that
-              a class has only one instance, while providing a global access
-              point to this instance.
+              Singleton est un patron de conception de création qui garantit que
+              l’instance d’une classe n’existe qu’en un seul exemplaire, tout en
+              fournissant un point d’accès global à cette instance.
             </p>
           </article>
           <article id="types">
@@ -246,15 +246,15 @@ export default function Singleton() {
           <article id="implementation">
             <h6>Implementation</h6>
             <ul>
-              <li>Private and parameterless single constructor</li>
+              <li>Constructeur unique privé et sans paramètre</li>
               <li>Sealed class.</li>
               <li>
-                Static variable to hold a reference to the single created
-                instance
+                Variable statique pour contenir une référence à l'instance
+                unique créée
               </li>
               <li>
-                A public and static way of getting the reference to the created
-                instance.
+                Une propriété public et statique d'obtenir la référence à
+                l'instance créée.
               </li>
             </ul>
           </article>
@@ -262,68 +262,72 @@ export default function Singleton() {
             <h6>Common use</h6>
             <ul>
               <li>
-                <strong>Service Proxies:</strong> As we know invoking a Service
-                API is an extensive operation in an application. The process
-                that taking most of the time is creating the Service client in
-                order to invoke the service API. If you create the Service proxy
-                as Singleton then it will improve the performance of your
-                application.
+                <strong>Facades:</strong> On peut également créer des connexions
+                de base de données en tant que Singleton, ce qui peut améliorer
+                les performances de l'application.
               </li>
               <li>
-                <strong>Facades:</strong> You can also create Database
-                connections as Singleton which can improve the performance of
-                the application.
+                <strong>Logs:</strong> dans une application, effectuer
+                l'opération d'E/S sur un fichier est une opération coûteuse. Si
+                vous créez votre Logger en tant que Singleton, cela améliorera
+                les performances de l'opération d'E/S.
               </li>
               <li>
-                <strong>Logs:</strong> In an application, performing the I/O
-                operation on a file is an expensive operation. If you create
-                your Logger as Singleton then it will improve the performance of
-                the I/O operation.
+                <strong>Data sharing:</strong> si vous avez des valeurs
+                constantes ou des valeurs de configuration, vous pouvez
+                conserver ces valeurs dans Singleton afin qu'elles puissent être
+                lues par d'autres composants de l'application.
               </li>
               <li>
-                <strong>Data sharing:</strong> If you have any constant values
-                or configuration values then you can keep these values in
-                Singleton So that these can be read by other components of the
-                application.
-              </li>
-              <li>
-                <strong>Caching:</strong> As we know fetching the data from a
-                database is a time-consuming process. In your application, you
-                can cache the master and configuration in memory which will
-                avoid the DB calls. In such situations, the Singleton class can
-                be used to handle the caching with thread synchronization in an
-                efficient manner which drastically improves the performance of
-                the application.
+                <strong>Caching:</strong> comme nous le savons, récupérer les
+                données d'une base de données est un processus qui prend du
+                temps. Dans une application, On peut mettre en cache le maître
+                et la configuration en mémoire ce qui évitera les appels de DB.
+                Dans de telles situations, la classe Singleton peut être
+                utilisée pour gérer la mise en cache avec la synchronisation des
+                threads de manière efficace, ce qui améliore considérablement
+                les performances de l'application.
               </li>
             </ul>
           </article>
           <article id="advantages">
-            <h6>Advantages</h6>
+            <h6>Avantages</h6>
             <ul>
-              <li>Ensure that a class only has one instance</li>
-              <li>Easily access the sole instance of a class</li>
-              <li>Control its instantiation</li>
-              <li>Restrict the number of instances</li>
-              <li>Access a global variable</li>
+              <li>S'assurer qu'une classe n'a qu'une seule instance</li>
+              <li>Accéder facilement à l'instance unique d'une classe</li>
+              <li>Contrôler son instanciation</li>
+              <li>Restreindre le nombre d'instances</li>
+              <li>Accéder à une variable globale</li>
             </ul>
           </article>
           <article id="disadvantages">
-            <h6>Disadvantages</h6>
+            <h6>Disavantages</h6>
             <ul>
               <li>
-                Unit testing is a bit difficult as it introduces a global state
-                into an application
+                Les tests unitaires sont un peu difficiles car ils introduisent
+                un état global dans une application
               </li>
               <li>
-                Reduces the potential for parallelism within a program by
-                locking.
+                Réduit le potentiel de parallélisme au sein d'un programme en se
+                verrouillant.
               </li>
             </ul>
           </article>
           <article id="not-thread-safe">
             <h6>not thread-safe</h6>
-            <Highlight language="csharp">
-              {`// Bad code! Do not use!
+            <div>
+              <p>
+                Deux threads différents auraient tous deux pu évaluer le test{" "}
+                <code>if (instance==null)</code> et le trouver vrai, puis tous
+                deux créeraient des instances, ce qui viole le modèle singleton.
+                Notez qu'en fait, l'instance peut déjà avoir été créée avant que
+                l'expression ne soit évaluée, mais le modèle de mémoire ne
+                garantit pas que la nouvelle valeur d'instance sera vue par
+                d'autres threads à moins que des barrières mémoire appropriées
+                n'aient été passées.
+              </p>
+              <Highlight language="csharp">
+                {`// Bad code! Do not use!
 public sealed class Singleton
 {
     private static Singleton instance = null;
@@ -344,12 +348,29 @@ public sealed class Singleton
         }
     }
 }`}
-            </Highlight>
+              </Highlight>
+            </div>
           </article>
           <article id="simple-thread-safety">
             <h6>simple thread-safety</h6>
-            <Highlight language="csharp">
-              {`public sealed class Singleton
+            <div>
+              <p>
+                Le thread prend un verrou sur un objet partagé, puis vérifie si
+                l'instance a été créée ou non avant de créer l'instance. Cela
+                résout le problème de la barrière mémoire (car le verrouillage
+                garantit que toutes les lectures se produisent logiquement après
+                l'acquisition du verrou, et le déverrouillage garantit que
+                toutes les écritures se produisent logiquement avant la
+                libération du verrou) et garantit qu'un seul thread créera une
+                instance (comme seul un thread peut être dans cette partie du
+                code à la fois - au moment où le deuxième thread y entre, le
+                premier thread aura créé l'instance, donc l'expression sera
+                évaluée à false). Malheureusement, les performances en pâtissent
+                car un verrou est acquis chaque fois que l'instance est
+                demandée.
+              </p>
+              <Highlight language="csharp">
+                {`public sealed class Singleton
 {
     private static Singleton instance = null;
     private static readonly object padlock = new object();
@@ -373,7 +394,8 @@ public sealed class Singleton
         }
     }
 }`}
-            </Highlight>
+              </Highlight>
+            </div>
           </article>
           <article id="thread-safety-double-check">
             <h6>attempted thread-safety using double-check locking</h6>

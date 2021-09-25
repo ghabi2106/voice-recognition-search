@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Dotnetcomponents() {
+export default function Recursion() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,17 @@ export default function Dotnetcomponents() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#dotnet"
+                    href="#recursion"
                   >
-                    Defnition .Net framework
+                    Récursif et itératif
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#components"
+                    href="#dis-advantages"
                   >
-                    Components of .Net framework
+                    Advantages and disadvantages
                   </a>
                 </li>
               </ul>
@@ -57,73 +57,90 @@ export default function Dotnetcomponents() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/dotnetcomponents"
+                    to="/stringbuilder"
                   >
-                    .Net Components
+                    String Builder
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/dotnet"
+                    to="/tuple"
                   >
-                    Difference Between .NET and .NET Core
+                    Tuple
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/assembly"
+                    to="/collections"
                   >
-                    Assembly
+                    Collections
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/dllexe"
+                    to="/enumindexer"
                   >
-                    DLL vs EXE
+                    Enumeration, Indexer and Generics
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/entityframework"
+                    to="/parameters"
                   >
-                    Entity Framework
+                    Ref, in and Out
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/gc"
+                    to="/covariance"
                   >
-                    Garbage Collector &amp; stack vs heap
+                    Covariance
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/gcmethods"
+                    to="/delegate"
                   >
-                    GC Methods
+                    Delegate
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/linq"
+                    to="/string2int"
                   >
-                    Linq
+                    string to int
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/nugetpackages"
+                    to="/threads"
                   >
-                    Nuget packages
+                    Task And Thread
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/operators"
+                  >
+                    Operators
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/datatype"
+                  >
+                    Dynamic, Nullables, Discards and Anonymous Types, Extension
+                    methods
                   </Link>
                 </li>
               </ul>
@@ -134,65 +151,60 @@ export default function Dotnetcomponents() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>.Net framework</h3>
-          <article id="dotnet">
-            <h6>Le framework .Net</h6>
-            <p>
-              .Net s'agit d'une plate-forme permettant de créer diverses
-              applications sur Windows. Il contient une liste de fonctionnalités
-              intégrées sous forme de classe, de bibliothèque et d'API qui sont
-              utilisées pour créer, déployer et exécuter des services Web et
-              différentes applications. Il prend en charge différents langages
-              tels que C#, VB .Net, Cobol, Perl, etc.
-            </p>
+          <h3>Iteration &amp; Recursion</h3>
+          <article id="recursion">
+            <h6>Iteration &amp; Recursion</h6>
+            <div>
+              <p>
+                A recursive function is one that calls itself again to repeat
+                the code.
+              </p>
+              <p>
+                An iterative function is one that loops to repeat some part of
+                the code.
+              </p>
+            </div>
           </article>
-          <article id="components">
-            <h6> Composants de .Net Framework</h6>
-            <ul>
-              <li>
-                <strong>.NET Class Library: </strong>- Le framework .NET
-                contient plusieurs classes qui sont facilement disponibles pour
-                les développeurs. Les classes de la FCL (framework class
-                library) sont regroupées sous plusieurs espaces de noms.
-              </li>
-              <li>
-                <Link to="/clr">
-                  <strong>Common Language Runtime:</strong>
-                </Link>{" "}
-                - CLR fournit l'interopérabilité entre différents langages,
-                comme C# , VB, Visual C++, en fournissant un environnement
-                commun pour l'exécution du code écrit dans ces langages.
-              </li>
-              <li>
-                <strong>Dynamic Language runtime: </strong> - Le DLR permet
-                d'exécuter des langages dynamiques sur .NET Framework en
-                ajoutant des services spéciaux au CLR.
-              </li>
-              <li>
-                <strong>Application domains: </strong> - Il est utilisé pour
-                isoler le processus de différentes applications et peut être
-                défini par le framework .NET.
-              </li>
-              <li>
-                <strong>.NET Framework Security: </strong> - Le framework .NET
-                fournit plusieurs outils qui peuvent être utilisés par les
-                développeurs pour protéger les ressources et le code des
-                utilisateurs non autorisés.
-              </li>
-              <li>
-                <strong>Cross Language interoperability: </strong> - L'objet ou
-                le code conforme d'un langage peut être utilisé dans un autre
-                langage compatible .NET.
-              </li>
-              <li>
-                <strong>Side by side execution: </strong> - Dans la même
-                application, nous pouvons utiliser plusieurs versions de CLR
-                simultanément.
-              </li>
-              <li>
-                <strong>Common Type System</strong>
-              </li>
-            </ul>
+          <article id="dis-advantages">
+            <h6>Advantages and disadvantages</h6>
+            <div class="row">
+              <div class="col-sm-6">
+                <ul>
+                  <li>
+                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
+                    <em>Recursion uses more memory</em>: Because the function
+                    has to add to the stack with each recursive call and keep
+                    the values there until the call is finished, the memory
+                    allocation is greater than that of an iterative function.
+                  </li>
+                  <li>
+                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
+                    Recursive methods will often throw a StackOverflowException
+                    when processing big sets. Iterative loops don't have this
+                    problem though.
+                  </li>
+                  <li>
+                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
+                    <em>Immutability</em> Iterative solutions often rely on
+                    varying temporary variables which makes the code hard to
+                    read. This can be avoided with recursion.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <ul>
+                  <li>
+                    <i class="fa fa-fw fa-times" aria-hidden="true"></i>{" "}
+                    Recursion adds clarity and reduces the time needed to write
+                    and debug code.
+                  </li>
+                  <li>
+                    <i class="fa fa-fw fa-times" aria-hidden="true"></i>{" "}
+                    Recursion is better at tree traversal.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </article>
         </section>
       </div>

@@ -231,7 +231,7 @@ export default function Clr() {
             </p>
           </article>
           <article id="gac">
-            <h6>Global Assembly Cache</h6>
+            <h6>Global Assembly Cache (GAC)</h6>
             <div>
               <p>
                 Le Global Assembly Cache (GAC) est un dossier du répertoire
@@ -247,7 +247,7 @@ export default function Clr() {
             </div>
           </article>
           <article id="cts">
-            <h6>Common Type System</h6>
+            <h6>Common Type System (CTS)</h6>
             <p>
               Common Type System (CTS) est une norme qui spécifie comment les
               définitions et les valeurs spécifiques d’un type sont représentées
@@ -257,7 +257,7 @@ export default function Clr() {
             </p>
           </article>
           <article id="cas">
-            <h6>Code Access Security</h6>
+            <h6>Code Access Security (CAS)</h6>
             <p>
               CAS est la solution pour empêcher le code non approuvé d’effectuer
               des actions privilégiées. Il empêche l’accès non autorisé aux
@@ -266,7 +266,7 @@ export default function Clr() {
             </p>
           </article>
           <article id="cls">
-            <h6>Qu'est-ce que CLS ?</h6>
+            <h6>Common Language Specification (CLS)</h6>
             <p>
               CLS signifie Common Language Specification . Avec les règles
               mentionnées sous CLS, les développeurs sont obligés d'utiliser les

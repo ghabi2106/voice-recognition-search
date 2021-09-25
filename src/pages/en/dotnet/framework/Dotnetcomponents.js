@@ -136,7 +136,7 @@ export default function Dotnetcomponents() {
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>.Net framework</h3>
           <article id="dotnet">
-            <h6>What is the .Net framework?</h6>
+            <h6>.Net framework</h6>
             <p>
               .Net framework is a platform for building various applications on
               windows. It has a list of inbuilt functionalities in the form of
@@ -146,7 +146,7 @@ export default function Dotnetcomponents() {
             </p>
           </article>
           <article id="components">
-            <h6>What are the components of .Net framework?</h6>
+            <h6>Components of .Net framework</h6>
             <ul>
               <li>
                 <strong>.NET Class Library: </strong>- .NET framework contains
@@ -155,10 +155,12 @@ export default function Dotnetcomponents() {
                 multiple namespaces.
               </li>
               <li>
-                <strong>Common Language Runtime: </strong> - CLR provides
-                interoperability between different language, like C# , VB,
-                Visual C++, by providing a common environment for the execution
-                of code written in of these languages.
+                <Link to="/clr">
+                  <strong>Common Language Runtime:</strong>
+                </Link>{" "}
+                - CLR provides interoperability between different language, like
+                C# , VB, Visual C++, by providing a common environment for the
+                execution of code written in of these languages.
               </li>
               <li>
                 <strong>Dynamic Language runtime: </strong> - DLR provides to
@@ -176,10 +178,13 @@ export default function Dotnetcomponents() {
                 protect the resources and code from unauthorized users.
               </li>
               <li>
-                <strong>Cross Language interoperability: </strong> - Object or complied code of one language can be used in other .NET compatible language.
+                <strong>Cross Language interoperability: </strong> - Object or
+                complied code of one language can be used in other .NET
+                compatible language.
               </li>
               <li>
-                <strong>Side by side execution: </strong> - In the same application we can use multiple versions of CLR simultaneously.
+                <strong>Side by side execution: </strong> - In the same
+                application we can use multiple versions of CLR simultaneously.
               </li>
               <li>
                 <strong>Common Type System</strong>

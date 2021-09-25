@@ -127,9 +127,13 @@ export default function Server() {
               </p>
               <ul>
                 <li>Apache</li>
-                <li>Internet Information Services (IIS)</li>
+                <li>
+                  <Link to="/iis">Internet Information Services (IIS)</Link>
+                </li>
                 <li>Nginx</li>
-                <li>Kestrel</li>
+                <li>
+                  <Link to="/kestrel">Kestrel</Link>
+                </li>
               </ul>
             </div>
           </article>
@@ -138,18 +142,27 @@ export default function Server() {
             <div>
               <p>ASP.NET Core est fourni avec les composants suivants :</p>
               <ul>
-                <li>Kestrel server</li>
-                <li>IIS HTTP Server</li>
-                <li>HTTP.sys server</li>
+                <li>
+                  <Link to="/kestrel">Kestrel server</Link>
+                </li>
+                <li>
+                  <Link to="/iis">IIS HTTP Server</Link>
+                </li>
+                <li>
+                  <Link to="/httpsys">HTTP.sys server</Link>
+                </li>
               </ul>
             </div>
           </article>
           <article id="kestrel-httpsys">
-            <h6>Kestrel vs. HTTP.sys</h6>
+            <h6>
+              <Link to="/kestrel">Kestrel</Link> vs.{" "}
+              <Link to="/httpsys">HTTP.sys</Link>
+            </h6>
             <div>
               <p>
-                Kestrel offre les avantages suivants par rapport à
-                HTTP.sys&nbsp;:
+                <Link to="/kestrel">Kestrel</Link> offre les avantages suivants
+                par rapport à<Link to="/httpsys">HTTP.sys</Link>&nbsp;:
               </p>
               <ul>
                 <li>Meilleures performances et utilisation de la mémoire.</li>
@@ -167,14 +180,16 @@ export default function Server() {
                 </li>
               </ul>
               <p>
-                Http.Sys fonctionne comme un composant partagé en mode noyau
-                avec les fonctionnalités suivantes que Kestrel n’a pas:
+                <Link to="/httpsys">HTTP.sys</Link> fonctionne comme un
+                composant partagé en mode noyau avec les fonctionnalités
+                suivantes que <Link to="/kestrel">Kestrel</Link> n’a pas:
               </p>
               <ul>
                 <li>Partage de port</li>
                 <li>
-                  Authentification Windows en mode noyau. Kestrel prend en
-                  charge uniquement l’authentification en mode utilisateur.
+                  Authentification Windows en mode noyau.{" "}
+                  <Link to="/kestrel">Kestrel</Link> prend en charge uniquement
+                  l’authentification en mode utilisateur.
                 </li>
                 <li>Proxy rapide via les transferts de file d’attente</li>
                 <li>Transmission de fichier directe</li>
