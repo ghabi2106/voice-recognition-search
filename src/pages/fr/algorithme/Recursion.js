@@ -26,13 +26,17 @@ export default function Recursion() {
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#recursion"
-                  >Récursif et itératif</a>
+                  >
+                    Récursif et itératif
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#dis-advantages"
-                  >Advantages and disadvantages</a>
+                  >
+                    Advantages and disadvantages
+                  </a>
                 </li>
               </ul>
             </li>
@@ -167,7 +171,28 @@ export default function Recursion() {
               <div class="col-sm-6">
                 <ul>
                   <li>
+                    <i class="fa fa-fw fa-check" aria-hidden="true"></i> La
+                    récursivité ajoute de la clarté et réduit (parfois) le temps
+                    nécessaire à l'écriture et au débogage du code.
+                  </li>
+                  <li>
                     <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
+                    Fonctionne mieux dans la résolution de problèmes basés sur
+                    des structures arborescentes.
+                  </li>
+                  <li>
+                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
+                    <em>Immutabilité</em>: Les solutions itératives reposent
+                    souvent sur diverses variables temporaires, ce qui rend le
+                    code difficile à lire. Cela peut être évité avec la
+                    récursivité.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <ul>
+                  <li>
+                    <i class="fa fa-fw fa-times" aria-hidden="true"></i>{" "}
                     <em>Débordement de pile (Stack Overflow)</em>: Les méthodes
                     récursives génèrent souvent une exception
                     StackOverflowException lors du traitement de grands
@@ -175,30 +200,9 @@ export default function Recursion() {
                     cependant.
                   </li>
                   <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i> Un
+                    <i class="fa fa-fw fa-times" aria-hidden="true"></i> Un
                     appel de fonction prend plus de temps qu'une simple
                     itération de boucle.
-                  </li>
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i> La
-                    récursivité ajoute de la clarté et réduit (parfois) le temps
-                    nécessaire à l'écriture et au débogage du code.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i>{" "}
-                    Fonctionne mieux dans la résolution de problèmes basés sur
-                    des structures arborescentes.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i>{" "}
-                    <em>Immutabilité</em>: Les solutions itératives reposent
-                    souvent sur diverses variables temporaires, ce qui rend le
-                    code difficile à lire. Cela peut être évité avec la
-                    récursivité.
                   </li>
                 </ul>
               </div>
