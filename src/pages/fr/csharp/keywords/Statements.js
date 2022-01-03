@@ -27,6 +27,14 @@ export default function Statements() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#using"
+                  >
+                    using
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#lock"
                   >
                     lock
@@ -129,6 +137,25 @@ export default function Statements() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Mots clés d'instruction</h3>
+          <article id="using">
+            <h6>using</h6>
+            <div>
+              <p>
+                Le mot clé <code>using</code> a trois utilisations principales :
+              </p>
+              <ul>
+                <li>
+                  <strong>L’instruction using</strong> définit une portée à la
+                  fin de laquelle un objet est supprimé (dispose).
+                </li>
+                <li>
+                  La <strong>directive using</strong> crée un alias pour un
+                  espace de noms ou importe des types définis dans d’autres
+                  espaces de noms.
+                </li>
+              </ul>
+            </div>
+          </article>
           <article id="lock">
             <h6>lock</h6>
             <p>

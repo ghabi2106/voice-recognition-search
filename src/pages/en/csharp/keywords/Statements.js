@@ -27,6 +27,14 @@ export default function Statements() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#using"
+                  >
+                    using
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#lock"
                   >
                     lock
@@ -129,6 +137,24 @@ export default function Statements() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Statement keywords</h3>
+          <article id="using">
+            <h6>using</h6>
+            <div>
+              <p>
+                The <code>using</code> keyword has two major uses:
+              </p>
+              <ul>
+                <li>
+                  The <strong>using statement</strong> defines a scope at the
+                  end of which an object will be disposed.
+                </li>
+                <li>
+                  The <strong>using directive</strong> creates an alias for a
+                  namespace or imports types defined in other namespaces.
+                </li>
+              </ul>
+            </div>
+          </article>
           <article id="lock">
             <h6>lock</h6>
             <p>
@@ -274,7 +300,7 @@ int1 = unchecked(ConstantMax + 10);`}
               <caption>jump statements</caption>
               <thead>
                 <tr>
-                  <th>keyzords</th>
+                  <th>keywords</th>
                   <th>Description</th>
                 </tr>
               </thead>
