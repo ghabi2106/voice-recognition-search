@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
-export default function Angular() {
+export default function Observables() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +27,9 @@ export default function Angular() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
+                    href="#observables"
                   >
-                    Angular
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#features"
-                  >
-                    Features
+                    Promise vs Observable
                   </a>
                 </li>
               </ul>
@@ -70,42 +64,59 @@ export default function Angular() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Angular</h3>
-          <article id="introduction">
-            <h6>Angular</h6>
+          <h3>Observables</h3>
+          <article id="observables">
+            <h6>Promise vs Observable</h6>
             <div>
-              <p>
-                Angular est une plateforme de développement, construite sur
-                TypeScript. En tant que plateforme, Angular comprend :
-              </p>
-              <ul>
-                <li>
-                  Un cadre basé sur des composants pour la création
-                  d'applications web évolutives.
-                </li>
-                <li>
-                  Une collection de bibliothèques bien intégrées qui couvrent
-                  une grande variété de fonctionnalités, notamment le routage,
-                  la gestion des formulaires, la communication client-serveur,
-                  etc.
-                </li>
-                <li>
-                  Une suite d'outils de développement pour vous aider à
-                  développer, construire, tester et mettre à jour votre code.
-                </li>
-              </ul>
-            </div>
-          </article>
-          <article id="features">
-            <h6>Features</h6>
-            <div>
-              <p>What are the key components of Angular?</p>
-              <ul>
-                <li>Components</li>
-                <li>Templates</li>
-                <li>Directives</li>
-                <li>Dependency injection</li>
-              </ul>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Promise</th>
+                    <th>Observable</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Produit une seule valeur.</td>
+                    <td>
+                      Produit un "stream" de valeurs (potentiellement infini).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Non annulable.</td>
+                    <td>Annulable.</td>
+                  </tr>
+                  <tr>
+                    <td>Traitement immédiat.</td>
+                    <td>
+                      Lazy : le traitement n'est déclenché qu'à la première
+                      utilisation du résultat.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Deux méthodes uniquement (then/catch).</td>
+                    <td>Une centaine d'opérateurs de transformation natifs.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <Highlight language="ts">
+                {`import { Observable } from 'rxjs';
+
+const data$ = new Observable(observer => {
+
+    observer.next(1);
+    observer.next(2);
+    observer.next(3);
+    observer.complete();
+
+});
+
+data$.subscribe({
+    next: value => console.log(value),
+    error: err => console.error(err),
+    complete: () => console.log('DONE!')
+});`}
+              </Highlight>
             </div>
           </article>
         </section>

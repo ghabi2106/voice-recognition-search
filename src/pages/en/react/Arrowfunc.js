@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Arrowfunc() {
   return (
@@ -71,7 +73,20 @@ export default function Arrowfunc() {
                 you need to use arrow functions, it is not necessary to bind any
                 event to 'this.'
               </p>
-              <img src="/img/react/arrow-func.PNG" alt="arrow func" />
+              <Highlight language="jsx">
+                {`// general way
+render() {
+  return(
+    <MyInput onChange={this.handleChange.bind(this) } />
+  );
+}
+// with arrow function
+render() { 
+  return(
+    <MyInput onChange={ (e) => this.handleOnChange(e) } />
+  );
+}`}
+              </Highlight>
             </div>
           </article>
         </section>

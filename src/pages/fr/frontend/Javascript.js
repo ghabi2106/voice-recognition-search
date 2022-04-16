@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Javascript() {
   return (
@@ -110,14 +112,14 @@ export default function Javascript() {
                 className="list-unstyled ps-3 collapse show"
                 id="contents-collapse"
               >
-              <li>
-                <Link
-                  className="d-inline-flex align-items-center rounded"
-                  to="/css"
-                >
-                  CSS
-                </Link>
-              </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/css"
+                  >
+                    CSS
+                  </Link>
+                </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
@@ -187,60 +189,66 @@ export default function Javascript() {
               <ul>
                 <li>
                   Utilisation de variables non définies
-                  <img
-                    src="/img/front/strict-mode-variable.PNG"
-                    alt="strict-mode-variable"
-                  />
+                  <Highlight language="javascript">
+                    {`"use strict";
+x = 1; // error`}
+                  </Highlight>
                 </li>
                 <li>
                   Utilisation de mots-clés réservés comme nom de variable ou de
                   fonction
-                  <img
-                    src="/img/front/strict-mode-reserved-keyword.PNG"
-                    alt="strict-mode-reserved-keyword"
-                  />
+                  <Highlight language="javascript">
+                    {`"use strict";
+var for = 1; // error 
+var if = 1; // error`}
+                  </Highlight>
                 </li>
                 <li>
                   Propriétés dupliquées d'un objet
-                  <img
-                    src="/img/front/strict-mode-duplicate-property.PNG"
-                    alt="strict-mode-duplicate-property"
-                  />
+                  <Highlight language="javascript">
+                    {`"use strict";
+var myobj = {myprop: 100, myprop: "test strict mode"}; // error`}
+                  </Highlight>
                 </li>
                 <li>
                   Paramètres de fonction en double
-                  <img
-                    src="/img/front/strict-mode-duplicate-parameter.PNG"
-                    alt="strict-mode-duplicate-parameter"
-                  />
+                  <Highlight language="javascript">
+                    {`"use strict";
+function Sum(val, val){ return val + val }; // error`}
+                  </Highlight>
                 </li>
                 <li>
                   Attribuer des valeurs aux propriétés en lecture seule
-                  <img
-                    src="/img/front/strict-mode-readonly-property.PNG"
-                    alt="strict-mode-readonly-property"
-                  />
+                  <Highlight language="javascript">
+                    {`"use strict";
+var arr = [1, 2, 3, 4, 5]; 
+arr.length = 10; // error`}
+                  </Highlight>
                 </li>
                 <li>
                   Modification de l'objet arguments
-                  <img
-                    src="/img/front/strict-mode-modify-args.PNG"
-                    alt="strict-mode-modify-args"
-                  />
+                  <Highlight language="javascript">
+                    {`"use strict";
+function Sum(val1, val2){ 
+  arguments = 100 // error 
+};`}
+                  </Highlight>
                 </li>
                 <li>
                   with statement
-                  <img
-                    src="/img/front/strict-mode-with.PNG"
-                    alt="strict-mode-with.PNG"
-                  />
+                  <Highlight language="javascript">
+                    {`"use strict";
+with (Math){ 
+  x = abs(100.234, 2) // error 
+};`}
+                  </Highlight>
                 </li>
                 <li>
                   fonction eval pour créer une variable
-                  <img
-                    src="/img/front/strict-mode-eval.PNG"
-                    alt="strict-mode-eval"
-                  />
+                  <Highlight language="javascript">
+                    {`"use strict";
+eval("var x = 1;") // error`}
+                  </Highlight>
                 </li>
               </ul>
             </div>
@@ -262,7 +270,16 @@ export default function Javascript() {
                 Une fermeture est une fonction ayant accès à la portée parent,
                 même après la fermeture de la fonction parent.
               </p>
-              <img src="/img/front/js-closure.PNG" alt="js-closure" />
+              <Highlight language="javascript">
+                {`const add = (function () { 
+  let counter = 0; 
+  return function () {counter += 1; return counter}
+})(); 
+add(); 
+add(); 
+add(); 
+// the counter is now 3 `}
+              </Highlight>
             </div>
           </article>
           <article id="iife">
@@ -287,7 +304,16 @@ export default function Javascript() {
                 <li>Organiser le code JavaScript.</li>
                 <li>Rendre le code JavaScript maintenable.</li>
               </ul>
-              <img src="/img/front/js-iife.PNG" alt="js-iife" />
+              <Highlight>
+                {`var userName = "Bill"; 
+(function (name) { 
+  function display(name) { 
+    alert("MyScript2.js: " + name); 
+  } 
+  display(name); 
+})(userName); 
+ `}
+              </Highlight>
             </div>
           </article>
           <article id="this">
@@ -314,7 +340,16 @@ export default function Javascript() {
                   fonction
                 </li>
               </ul>
-              <img src="/img/front/js-callback.PNG" alt="js-callback" />
+              <Highlight>
+                {`function myDisplayer(some) { 
+  document.getElementById("demo").innerHTML = some;
+} 
+function myCalculator(numl, num2, myCallback) { 
+  let sum = numl + num2; 
+  myCallback(sum); 
+}
+myCalculator(5, 5, myDisplayer); `}
+              </Highlight>
             </div>
           </article>
           <article id="async">
@@ -324,7 +359,17 @@ export default function Javascript() {
                 <li>async fait qu'une fonction renvoie Promise</li>
                 <li>await fait attendre une fonction pour Promise</li>
               </ul>
-              <img src="/img/front/js-async.PNG" alt="js-async" />
+              <Highlight>
+                {`async function myFunction() { 
+  return "Hello";
+}`}
+              </Highlight>             
+<p>is the same as</p>
+<Highlight>
+                {`async function myFunction() { 
+  return Promise.resolve("Hello");
+}`}
+              </Highlight>  
             </div>
           </article>
           <article id="promise">
@@ -334,7 +379,18 @@ export default function Javascript() {
                 Un objet JavaScript Promise contient à la fois le code
                 producteur et les appels au code consommateur :
               </p>
-              <img src="/img/front/js-promise" alt="js-promise" />
+              <Highlight>
+                {`let myPromise = new Promise(function(myResolve, myReject) { 
+  // "Producing Code" (May take some time) 
+  myResolve(); // when successful 
+  myReject(); // when error 
+}); 
+// "Consuming Code" (Must wait for a fulfilled Promise) 
+myPromise.then( 
+  function(value) { /* code if successful */ }, 
+  function(error) { /* code if some error */ } 
+);`}
+              </Highlight>  
             </div>
           </article>
         </section>

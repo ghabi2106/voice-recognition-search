@@ -114,10 +114,8 @@ export default function Clean() {
           <article id="monolithic">
             <h6>Monolithic</h6>
             <p>
-              Une application monolithique est une application qui se comporte
-              de façon totalement autonome. Son comportement est
-              fondamentalement géré en interne. L’ensemble de l’application est
-              généralement déployée comme une seule unité.
+              une application dont l'ensemble du code et des fonctionnalités est
+              implémenté dans un seul programme.
             </p>
           </article>
           <article id="introduction">
@@ -173,9 +171,13 @@ export default function Clean() {
           <article id="ui">
             <h6>UI Layer</h6>
             <ul>
-              <li><Link to="/controllers">Controllers</Link></li>
+              <li>
+                <Link to="/controllers">Controllers</Link>
+              </li>
               <li>Filters</li>
-              <li><Link to="/mvc">Views</Link></li>
+              <li>
+                <Link to="/mvc">Views</Link>
+              </li>
               <li>ViewModels</li>
               <li>Startup</li>
             </ul>

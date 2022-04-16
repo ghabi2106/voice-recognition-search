@@ -115,9 +115,9 @@ export default function Clean() {
             <h6>Monolithic</h6>
             <div>
               <p>
-                A monolithic application is one that is entirely self-contained,
-                in terms of its behavior. The entire application is typically
-                deployed as a single unit.
+                A monolithic application describes a single-tiered software
+                application in which the user interface and data access code are
+                combined into a single program.
               </p>
               <img
                 className="img-dimension"

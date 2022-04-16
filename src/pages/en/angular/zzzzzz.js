@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Angular() {
+export default function zzzzzzzzzzzz() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +25,33 @@ export default function Angular() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
+                    href="#"
                   >
-                    Angular
+                    
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#features"
+                    href="#"
                   >
-                    Features
+                    
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#"
+                  >
+                    
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#"
+                  >
+                    
                   </a>
                 </li>
               </ul>
@@ -70,45 +86,40 @@ export default function Angular() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Angular</h3>
-          <article id="introduction">
-            <h6>Angular</h6>
+          <h3>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</h3>
+          <article id="">
+            <h6></h6>
             <div>
               <p>
-                Angular est une plateforme de développement, construite sur
-                TypeScript. En tant que plateforme, Angular comprend :
               </p>
-              <ul>
-                <li>
-                  Un cadre basé sur des composants pour la création
-                  d'applications web évolutives.
-                </li>
-                <li>
-                  Une collection de bibliothèques bien intégrées qui couvrent
-                  une grande variété de fonctionnalités, notamment le routage,
-                  la gestion des formulaires, la communication client-serveur,
-                  etc.
-                </li>
-                <li>
-                  Une suite d'outils de développement pour vous aider à
-                  développer, construire, tester et mettre à jour votre code.
-                </li>
-              </ul>
+              <img src="/img/angular/" alt="zzzzzzzzzzzzzz" />
             </div>
           </article>
-          <article id="features">
-            <h6>Features</h6>
+          <article id="">
+            <h6></h6>
             <div>
-              <p>What are the key components of Angular?</p>
-              <ul>
-                <li>Components</li>
-                <li>Templates</li>
-                <li>Directives</li>
-                <li>Dependency injection</li>
-              </ul>
+              <p>
+              </p>
+              <img src="/img/angular/" alt="zzzzzzzzzzzzzz" />
             </div>
           </article>
-        </section>
+          <article id="">
+            <h6></h6>
+            <div>
+              <p>
+              </p>
+              <img src="/img/angular/" alt="zzzzzzzzzzzzzz" />
+            </div>
+          </article>
+          <article id="">
+            <h6></h6>
+            <div>
+              <p>
+              </p>
+              <img src="/img/angular/" alt="zzzzzzzzzzzzzz" />
+            </div>
+          </article>
+</section>
       </div>
     </>
   );

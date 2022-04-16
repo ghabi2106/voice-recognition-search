@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Sass() {
   return (
@@ -94,14 +96,14 @@ export default function Sass() {
                 className="list-unstyled ps-3 collapse show"
                 id="contents-collapse"
               >
-              <li>
-                <Link
-                  className="d-inline-flex align-items-center rounded"
-                  to="/css"
-                >
-                  CSS
-                </Link>
-              </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/css"
+                  >
+                    CSS
+                  </Link>
+                </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
@@ -155,8 +157,8 @@ export default function Sass() {
             <h6>Sass</h6>
             <div>
               <p>
-                Sass (signifie Syntactically Awesome Style Sheets) est
-                un langage de script déclaratif, une extension de CSS, pas un
+                Sass (signifie Syntactically Awesome Style Sheets) est un
+                langage de script déclaratif, une extension de CSS, pas un
                 langage de programmation procédural comme JavaScript.
               </p>
               <p>
@@ -175,10 +177,7 @@ export default function Sass() {
           </article>
           <article id="variable">
             <h6>Variable</h6>
-            <img
-              src="img/front/sass-variable-syntax.PNG"
-              alt="sass variable syntax"
-            />
+            <Highlight language="scss">{`$variablename: value;`}</Highlight>
           </article>
           <article id="data-types">
             <h6>Sass - Data Types</h6>
@@ -193,22 +192,25 @@ export default function Sass() {
                 </li>
                 <li>
                   <b>String</b>
-                  <img
-                    src="img/front/sass-data-string.PNG"
-                    alt="sass data string"
-                  />
+                  <Highlight language="scss">{`$default-font: 'Lucida';`}</Highlight>
                 </li>
                 <li>
                   <b>List</b>: Une liste SassScript est une série de valeurs
                   séparées par des espaces ou des virgules.
-                  <img
-                    src="img/front/sass-data-list.PNG"
-                    alt="sass-data list"
-                  />
+                  <Highlight language="scss">
+                    {`$body-font: Helvetica, Arial, sans-serif; 
+$body-margin: 0 0 10px 15px; `}
+                  </Highlight>
                 </li>
                 <li>
                   <b>maps</b> sont des paires clé-valeur.
-                  <img src="img/front/sass-data-map.PNG" alt="sass-data  map" />
+                  <Highlight language="scss">
+                    {`map-get() 
+$red-map: (light: #e57373, medium: #f44336, dark: #b71c1c); 
+p { 
+  color: map-get($red-map, light); 
+} `}
+                  </Highlight>
                 </li>
               </ul>
             </div>
@@ -218,31 +220,35 @@ export default function Sass() {
             <ul>
               <li>
                 <b>Conditional Execution - @if</b>
-                <img
-                  src="img/front/sass-control-if.PNG"
-                  alt="sass-control-if"
-                />
+                <Highlight language="scss">
+                  {`@if <Boolean expression> { 
+  <statements> 
+} `}
+                </Highlight>
               </li>
               <li>
                 <b>Conditional Looping - @while</b>
-                <img
-                  src="img/front/sass-control-while.PNG"
-                  alt="sass-control-while"
-                />
+                <Highlight language="scss">
+                  {`@while <boolean expression> { 
+  <statements> 
+} `}
+                </Highlight>
               </li>
               <li>
                 <b>Unconditional Looping - @for</b>
-                <img
-                  src="img/front/sass-control-for.PNG"
-                  alt="sass-control-for"
-                />
+                <Highlight language="scss">
+                  {`@for <var> from <start> through <end> { 
+  <statements> 
+} `}
+                </Highlight>
               </li>
               <li>
                 <b>@each</b>
-                <img
-                  src="img/front/sass-control-each.PNG"
-                  alt="sass-control-each"
-                />
+                <Highlight language="scss">
+                  {`@each <vars> in <list or map> { 
+  <statements> 
+} `}
+                </Highlight>
               </li>
             </ul>
           </article>
@@ -260,18 +266,18 @@ export default function Sass() {
                   d'un fichier dans un autre.
                 </li>
               </ul>
-              <img
-                src="img/front/sass-import-syntax.PNG"
-                alt="sass-import-syntax"
-              />
-              <img
-                src="img/front/sass-import-example.PNG"
-                alt="sass-import-example"
-              />
-              <img
-                src="img/front/sass-import-partial.PNG"
-                alt="sass-import-partial"
-              />
+              <Highlight language="scss">{`@import filename;`}</Highlight>
+              <Highlight language="scss">
+                {`@import "colors.css"; //the .css extension is specified 
+@import http://test.com/colors.css; //the http:// prefix is used 
+@import "colors" screen; //the import statement includes a media query 
+@import url(colors); //the url() function is used 
+`}
+              </Highlight>
+              <Highlight language="scss">
+                {`@import "colors"; //by convention, omit the underscore
+@import "_colors"; //but this works, too `}
+              </Highlight>
             </div>
           </article>
           <article id="mixin-include">
@@ -285,14 +291,18 @@ export default function Sass() {
                 <code>@include</code> directive est créée pour vous permettre
                 d'utiliser (inclure) le mixin.
               </p>
-              <img
-                src="img/front/sass-mixin-syntax.PNG"
-                alt="sass-mixin-syntax"
-              />
-              <img
-                src="img/front/sass-include-syntax.PNG"
-                alt="sass-include-syntax"
-              />
+              <Highlight language="scss">
+                {`@mixin name {
+  property: value;
+  property: value;
+  ...
+}`}
+              </Highlight>
+              <Highlight language="scss">
+                {`selector {
+  @include mixin-name;
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="extend">
@@ -314,10 +324,17 @@ export default function Sass() {
                 style presque identique qui ne diffèrent que par quelques petits
                 détails.
               </p>
-              <img
-                src="img/front/sass-extend-example.PNG"
-                alt="sass-extend-example"
-              />
+              <Highlight language="scss">
+                {`.button-basic  {
+  border: none;
+  padding: 15px 30px;
+}
+
+.button-report  {
+  @extend .button-basic;
+  background-color: red;
+}`}
+              </Highlight>
             </div>
           </article>
         </section>

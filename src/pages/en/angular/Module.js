@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
-export default function Angular() {
+export default function Module() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,17 +27,9 @@ export default function Angular() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
+                    href="#module"
                   >
-                    Angular
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#features"
-                  >
-                    Features
+                    Module
                   </a>
                 </li>
               </ul>
@@ -70,42 +64,61 @@ export default function Angular() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Angular</h3>
-          <article id="introduction">
-            <h6>Angular</h6>
+          <h3>Module</h3>
+          <article id="module">
+            <h6>Module</h6>
             <div>
               <p>
-                Angular est une plateforme de développement, construite sur
-                TypeScript. En tant que plateforme, Angular comprend :
+                A module is a mechanism to group components, directives, pipes
+                and services that are related, in such a way that can be
+                combined with other modules to create an application.
               </p>
-              <ul>
-                <li>
-                  Un cadre basé sur des composants pour la création
-                  d'applications web évolutives.
-                </li>
-                <li>
-                  Une collection de bibliothèques bien intégrées qui couvrent
-                  une grande variété de fonctionnalités, notamment le routage,
-                  la gestion des formulaires, la communication client-serveur,
-                  etc.
-                </li>
-                <li>
-                  Une suite d'outils de développement pour vous aider à
-                  développer, construire, tester et mettre à jour votre code.
+              <ul class="nav nav-pills mb-3" id="pills-tab-1" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="pills-home-tab-1"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-home-1"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-home-1"
+                    aria-selected="true"
+                  >
+                    src/app/heroes/hero.service.ts (CLI-generated)
+                  </button>
                 </li>
               </ul>
-            </div>
-          </article>
-          <article id="features">
-            <h6>Features</h6>
-            <div>
-              <p>What are the key components of Angular?</p>
-              <ul>
-                <li>Components</li>
-                <li>Templates</li>
-                <li>Directives</li>
-                <li>Dependency injection</li>
-              </ul>
+              <div class="tab-content" id="pills-tabContent-1">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-home-1"
+                  role="tabpanel"
+                  aria-labelledby="pills-home-tab-1"
+                >
+                  <Highlight language="ts">
+                    {`import { NgModule } from '@angular/core';
+
+import { PictureModule } from '../picture/picture.module';
+import { BookPreviewComponent } from './book-preview/book-preview.component';
+
+@NgModule({
+    declarations: [
+        BookPreviewComponent
+    ],
+    exports: [
+        BookPreviewComponent
+    ],
+    imports: [
+        HttpModule,
+        PictureModule
+    ]
+})
+export class BookModule {
+}`}
+                  </Highlight>
+                </div>
+              </div>
             </div>
           </article>
         </section>
