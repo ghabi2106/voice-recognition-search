@@ -85,10 +85,8 @@ export default function Forms() {
             <h6>Template-driven Forms 🤢</h6>
             <div>
               <p>
-                L'approche "Template-driven Forms" nécessite de mettre la
-                majeure partie de la logique du formulaire dans le template.
-                Cela donne une fausse impression de "quick win" au départ et le
-                code devient rapidement difficile à maintenir et à tester.
+                Template-Driven Forms places most of the form handling logic
+                within that form's template
               </p>
               <b>ngModel</b>
               <p>
@@ -172,13 +170,8 @@ submitBook() {
             <div>
               <ul>
                 <li>
-                  La logique des formulaires se fait dans le code TypeScript. Le
-                  formulaire devient alors plus facile à tester et à générer
-                  dynamiquement.
-                </li>
-                <li>
-                  Les "Reactive Forms" utilisent des Observables pour faciliter
-                  et encourager le "Reactive Programming".F
+                  Reactive Forms places form handling logic within a component's
+                  class properties and provides interaction through observables
                 </li>
               </ul>
               <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">

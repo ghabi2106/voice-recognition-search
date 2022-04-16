@@ -18,6 +18,11 @@ export default function Navangular() {
         </Link>
       </li>
       <li className="nav-item">
+        <Link className="nav-link" to="/component">
+          Component
+        </Link>
+      </li>
+      <li className="nav-item">
         <Link className="nav-link" to="/di">
           DI
         </Link>
@@ -28,6 +33,16 @@ export default function Navangular() {
         </Link>
       </li>
       <li className="nav-item">
+        <Link className="nav-link" to="/elementref">
+          ElementRef
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/encapsulation">
+          Encapsulation
+        </Link>
+      </li>
+      <li className="nav-item">
         <Link className="nav-link" to="/forms">
           Forms
         </Link>
@@ -35,6 +50,11 @@ export default function Navangular() {
       <li className="nav-item">
         <Link className="nav-link" to="/hooks">
           Hooks
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/interceptors">
+          Interceptors
         </Link>
       </li>
       <li className="nav-item">
