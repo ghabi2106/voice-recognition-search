@@ -25,6 +25,14 @@ export default function Home() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#capgemini"
+                  >
+                    Capgemini
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#diginov"
                   >
                     Diginov
@@ -79,8 +87,8 @@ export default function Home() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Presentation</h3>
-          <article id="diginov">
-            <h6>Diginov</h6>
+          <article id="capgemini">
+            <h6>Capgemini</h6>
             <div>
               <p>
                 I am Assaad Ghabi, I was graduated as an engineer from
@@ -89,10 +97,25 @@ export default function Home() {
                 development process for small to medium-sized companies.
               </p>
               <p>
-                My last job was at Diginov, where I was in charge of the
-                Economic ministry of United Arabic Emirates for 1.5 year. During
-                this part i have successfully completed two projects with good
-                results.
+                My last job was at Capgemini, where I was in charge with
+                customer VolksWagen for less than 1 year until now. I am already
+                working on 2 projects TV and AskMe.
+              </p>
+              <p>
+                The goal principal from the two projects is to manage all the
+                production process and organize the test process for electronic
+                cards as a part of the automobile departement.
+              </p>
+            </div>
+          </article>
+          <article id="diginov">
+            <h6>Diginov</h6>
+            <div>
+              <p>
+                Before my current position, I had worked at Diginov, where I was
+                in charge of the Economic ministry of United Arabic Emirates for
+                1.5 year. During this part i have successfully completed two
+                projects with good results.
               </p>
               <p>
                 We developed the national program portal for SME’s that give
@@ -116,8 +139,8 @@ export default function Home() {
             <h6>ITGWANA</h6>
             <div>
               <p>
-                Before my current position, I completed a one year with ITGWANA,
-                where I was in charge with customer Nexans and I achieved a web
+                Prior to this role, I completed a one year with ITGWANA, where I
+                was in charge with customer Nexans and I achieved a web
                 application called <strong>« Carry Track »</strong> in the field
                 industry 4.0 which helps for treacebility of industrial
                 equipment, history of movements.
@@ -127,12 +150,6 @@ export default function Home() {
           <article id="taysir">
             <h6>Taysir Solutions</h6>
             <div>
-              <p>
-                Auparavant j’ai notamment travaillé pour Taysir Solutions ≈ 2ans
-                dans les secteurs médecines, facturation et agence des voyages.
-                J’ai travaillé en plusieurs projets « ADD Invoice », « DMI » et
-                « Ticketing ».
-              </p>
               <p>
                 Prior to this role, I was a junior software engineer with Taysir
                 Solutions for two years. While working there, I committed to web

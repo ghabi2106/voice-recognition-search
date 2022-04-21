@@ -25,6 +25,14 @@ export default function Home() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#capgemini"
+                  >
+                    Capgemini
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#diginov"
                   >
                     Diginov
@@ -79,13 +87,37 @@ export default function Home() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Presentation</h3>
+          <article id="capgemini">
+            <h6>Capgemini</h6>
+            <div>
+              <p>
+                Je suis Ghabi Assaad, je suis un ingénieur de développement .Net
+                senior. Je suis actuellement en poste chez Capgemini au sein de
+                département automobile à partir de début d'october de 2021. J’ai
+                travaillé en deux projets « TV » et « AskMe » pour client
+                allemand Volkswagen.
+              </p>
+              <p>
+                Le but de ces deux projets est gérrer les processus des test
+                pour les cartes electroniques.
+              </p>
+              <p>
+                <strong>La méthodologie</strong> suivie dans les deux projets
+                Agile Scrum. On travaille par sprint, chaque sprint dure 2
+                semaines, et chaque semaine on a une réunion avec le client.
+              </p>
+              <p>
+                <strong>Les technologies</strong> de développement .Net Core
+                3.1, Orchard CMS, Clean Architecture, Razor Pages, SCSS.
+              </p>
+            </div>
+          </article>
           <article id="diginov">
             <h6>Diginov</h6>
             <div>
               <p>
-                Je suis Ghabi Assaad, je suis un ingénieur de développement .Net
-                senior. Je suis actuellement en poste chez Diginov à partir de
-                début de 2020. J’ai travaillé en deux projets « UAE SME » et «
+                Auparavant j’ai travaillé pendant ≈ 1.5 ans au sein de la
+                société Diginov. J’ai travaillé en deux projets « UAE SME » et «
                 FGIC » pour des clients émiratis (Ministère d’économie).
               </p>
               <p>
@@ -107,8 +139,7 @@ export default function Home() {
               </p>
               <p>
                 <strong>La méthodologie</strong> suivie dans les deux projets
-                Agile Scrum. On travaille par sprint, chaque sprint dure 2
-                semaines, et chaque semaine on a une réunion avec le client.
+                Agile Scrum.
               </p>
               <p>
                 <strong>Les technologies</strong> de développement .Net Core
@@ -120,10 +151,10 @@ export default function Home() {
             <h6>ITGWANA</h6>
             <div>
               <p>
-                Auparavant j’ai travaillé pendant ≈ 1 ans au sein de la société
-                ITGWANA | RFIT TECH qui aide au développement de l’industrie
-                4.0. J’ai travaillé sur le projet Carry Track pour un client
-                français Nexans.
+                Auparavant j’ai notamment travaillé pendant ≈ 1 ans au sein de
+                la société ITGWANA | RFIT TECH qui aide au développement de
+                l’industrie 4.0. J’ai travaillé sur le projet Carry Track pour
+                un client français Nexans.
               </p>
               <p>
                 <strong>« Carry Track »</strong> c’est une solution de gestion
