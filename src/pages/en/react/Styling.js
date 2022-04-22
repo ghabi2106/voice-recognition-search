@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Styling() {
   return (
@@ -97,10 +99,16 @@ export default function Styling() {
                 a CSS string. The style attribute is consistent with accessing
                 the properties on DOM nodes in JavaScript.
               </p>
-              <img
-                src="/img/react/styling-use-react.PNG"
-                alt="styling use react"
-              />
+              <Highlight language="jsx">
+                {`const divstyle = {
+    color: 'blue',
+    backgroundImage: 'url(' + imgUrl + ')'
+};
+
+function HelloWorldComponent() {
+    return <div style={divStyle}>Hello World!</div>
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="styling">

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Propsstate() {
   return (
@@ -101,7 +103,25 @@ export default function Propsstate() {
                 behavior. They are mutable unlike the props and create dynamic
                 and interactive components. They are accessed via this.state().
               </p>
-              <img src="/img/react/state-script.PNG" alt="state script" />
+              <Highlight language="jsx">
+                {`import React from 'react'
+class User extends React.Component {
+    constructor (props) {
+        super (props)
+        this.state = {
+            message: 'Welcome to Skyeagle'
+        }
+    }   
+    render() {
+        return(
+            <div>
+                <h1>{this.state.message}</h1>
+            </div>
+        )
+    }
+}
+export default User`}
+              </Highlight>
             </div>
           </article>
         </section>

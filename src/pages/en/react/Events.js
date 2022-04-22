@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Events() {
   return (
@@ -98,7 +100,19 @@ export default function Events() {
           </article>
           <article id="create-event">
             <h6>How do you create an event in React?</h6>
-            <img src="/img/react/event-script.PNG" alt="event script" />
+            <Highlight language="jsx">
+              {`class Display extends React.Component({
+    show(evt) {
+        // code
+    },   
+    render() {
+        // Render the div with an onClick prop (value is a function)
+        return (
+            <div onClick={this.show}>Click Me!</div>
+        );
+    }
+});`}
+            </Highlight>
           </article>
           <article id="synthetic">
             <h6>What are synthetic events in React?</h6>
@@ -109,7 +123,19 @@ export default function Events() {
                 behavior of different browser's native event into one API,
                 including stopPropagation() and preventDefault().
               </p>
-              <img src="/img/react/event-synthetic.PNG" alt="event synthetic" />
+              <Highlight language="jsx">
+                {`function ActionLink() {
+    function handleClick(e) {
+        e.preventDefault();
+        console.log('You had clicked a Link.');
+    }
+    return (
+        <a href="#" onClick={handleClick}>
+            Click_Me
+        </a>
+    );
+}`}
+              </Highlight>
             </div>
           </article>
         </section>

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Router() {
   return (
@@ -118,7 +120,13 @@ export default function Router() {
                 to our app that allows creating multiple routes with each
                 leading to us a unique view.
               </p>
-              <img src="/img/react/router-react.PNG" alt="router react" />
+              <Highlight language="jsx">
+                {`<switch>
+    <route exact path=&rsquo; /&rsquo;&nbsp; component={Home}/>
+    <route path=&rsquo;/posts/:id&rsquo; component={Newpost}/>
+    <route path=&rsquo; /posts&rsquo;&nbsp;&nbsp; component={Post}/>
+</switch>`}
+              </Highlight>
             </div>
           </article>
           <article id="switch">

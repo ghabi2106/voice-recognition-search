@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Refs() {
   return (
@@ -99,7 +101,23 @@ export default function Refs() {
                 come in handy when we need DOM measurements or to add methods to
                 the components.
               </p>
-              <img src="/img/react/ref-react.PNG" alt="ref react" />
+              <Highlight language="jsx">
+                {`class ReferenceDemo extends React.Component{
+    display() {
+        const name = this.inputDemo.value;
+        document.getElementById('disp').innerHTML = name;
+    }
+    render() {
+        return(
+            <div>
+                Name: <input type="text" ref={input => this.inputDemo = input} />
+                <button name="Click" onClick={this.display}>Click</button>
+                <h2>Hello <span id="disp"></span> !!!</h2>
+            </div>
+        );
+    }
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="use">
@@ -122,7 +140,34 @@ export default function Refs() {
                 particularly useful with higher-order components and specially
                 used in reusable component libraries.
               </p>
-              <img src="/img/react/forward-ref.PNG" alt="forward ref" />
+              <Highlight language="jsx">
+                {`import React, { Component } from 'react';
+import { render } from 'react-dom';
+
+const TextInput = React.forwardRef((props, ref) => (
+    <input type="text" placeholder="Hello World" ref={ref} />
+));
+
+const inputRef = React.createRef();
+
+class CustomfextInput extends React.Component {
+    handeSubmit = e => {
+        e.preventDefault();
+        console.log(inputRef.current.value);
+    };
+    render() {
+        return (
+            <div>
+                <form onSubmit={e => this-handleSubmit (e) }>
+                    <TextInput ref={inputRef} />
+                    <button>Submit</button>
+                </form>
+            </div>
+        )
+    }
+}
+export default App;`}
+              </Highlight>
             </div>
           </article>
           <article id="find-dom-node">
@@ -136,9 +181,27 @@ export default function Refs() {
                 set and unset whereas findDOMNode() prevents certain
                 improvements in React in the future.
               </p>
-              <img src="/img/react/find-dom-node-1.PNG" alt="find dom node" />
+              <Highlight language="jsx">
+                {`class MyComponent extends Component {
+    componentDidMount() {
+        findDOMNode(this).scrollIntoview()
+    }  
+    render() {
+        return <div />
+    }
+}`}
+              </Highlight>
               <p>The recommended approach is:</p>
-              <img src="/img/react/find-dom-node-2.PNG" alt="find dom node" />
+              <Highlight language="jsx">
+                {`class MyComponent extends Component {
+    ComponentDidMount() {
+        this.node.scrollIntoView()
+    }
+    render(){
+        return <div ref={node => this.node = node} />
+    }
+}`}
+              </Highlight>
             </div>
           </article>
         </section>

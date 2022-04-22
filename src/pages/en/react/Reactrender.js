@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Reactrender() {
   return (
@@ -81,17 +83,44 @@ export default function Reactrender() {
                 be rendered, then they must be grouped together inside one
                 enclosing tag.
               </p>
-              <img src="/img/react/render-script.PNG" alt="render script" />
+              <Highlight language="jsx">
+                {`import React from 'react'
+class App extends React.Component {
+    render() {
+        return (
+            <h1>Hello World</h1>
+        )
+    }
+}
+export default App`}
+              </Highlight>
             </div>
           </article>
           <article id="embed">
             <h6>How can you embed two or more components into one?</h6>
             <div>
-              <p>You can embed two or more components into the following way:</p>
-              <img src="/img/react/embed-components.PNG" alt="embed components" />
+              <p>
+                You can embed two or more components into the following way:
+              </p>
+              <Highlight language="jsx">
+                {`import React from 'react'
+class App extends React.Component{
+    render() {
+        return(
+            <hi>Hello World</h1>
+        )
+    }
+    render (){
+        return (
+            <hi>Hello Skyeagle</h1>
+        )
+    }
+}
+export default App;`}
+              </Highlight>
             </div>
           </article>
-       </section>
+        </section>
       </div>
     </>
   );
