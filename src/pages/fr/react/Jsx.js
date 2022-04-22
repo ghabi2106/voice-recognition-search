@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function JSX() {
   return (
@@ -94,12 +96,24 @@ export default function JSX() {
                 children.
               </p>
               <strong>Example</strong>
-              <img src="/img/react/jsx-script-1.PNG" alt="jsx script" />
+              <Highlight language="jsx">
+                {`class App extends React.Component {
+    render() {
+        return (
+            <div>
+                <hil>Hello Skyeagle</h1>
+            </div>
+        )
+    }
+}`}
+              </Highlight>
               <p>
                 After compilation, the JSX expression becomes a normal
                 JavaScript function.
               </p>
-              <img src="/img/react/jsx-script-2.PNG" alt="jsx script" />
+              <Highlight language="jsx">
+                {`React.createFlement ("h1i", null, "Hello Skyeagle");`}
+              </Highlight>
             </div>
           </article>
           <article id="browsers">

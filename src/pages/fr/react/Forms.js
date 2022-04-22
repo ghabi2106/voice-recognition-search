@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Forms() {
   return (
@@ -82,7 +84,25 @@ export default function Forms() {
                 function. This function has full access to the data that is
                 entered by the user into a form.
               </p>
-              <img src="/img/react/forms-react.PNG" alt="forms react" />
+              <Highlight language="jsx">
+                {`handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+}
+
+render() {
+    return (
+
+        <form onSubmit={this.handleSubmit}>    
+            <label>
+                Name:
+                <input type="text" value={this.state.value} onChange={this.handleSubmit} />
+            </label>
+            <input type="submit" value="Submit" />
+        </form>    
+    );
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="proptypes">
@@ -96,7 +116,12 @@ export default function Forms() {
                 props, although it is not necessary to define components with
                 propTypes.
               </p>
-              <img src="/img/react/proptypes-react.PNG" alt="propTypes" />
+              <Highlight language="jsx">
+                {`class App extends React.Component {
+    render() {}
+}
+Component.propTypes = { /* Definition */ };`}
+              </Highlight>
             </div>
           </article>
         </section>

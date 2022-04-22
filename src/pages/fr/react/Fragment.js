@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Fragment() {
   return (
@@ -87,8 +89,27 @@ export default function Fragment() {
                 It allows you to group a list of multiple children without
                 adding an extra node to the DOM.
               </p>
-              <img src="/img/react/fragment-react-1.PNG" alt="fragment react" />
-              <img src="/img/react/fragment-react-2.PNG" alt="fragment react" />
+              <Highlight language="jsx">
+                {`render() {
+    return (
+        <React.Fragment>
+            <ChildA />
+            <ChildB />
+            <Childc />
+        </React.Fragment>
+    )
+}
+
+render() {
+    return (
+        <>
+            <ChildA />
+            <ChildB />
+            <Childc />
+        </>
+    )
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="better">

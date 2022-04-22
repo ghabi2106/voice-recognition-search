@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Redux() {
   return (
@@ -209,7 +211,14 @@ export default function Redux() {
                 Redux, actions are created using the functions called Action
                 Creators. Below is an example of Action and Action Creator:
               </p>
-              <img src="/img/react/redux-actions.PNG" alt="redux actions" />
+              <Highlight language="jsx">
+                {`function addTodo(text) {
+    return {
+        type: ADD_TODO,
+        text
+    }
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="reducer-role">
@@ -304,7 +313,10 @@ export default function Redux() {
                 with createStore() method. Also, you need to assure that it will
                 not pollute the global window space.
               </p>
-              <img src="/img/react/redux-store-outside.PNG" alt="redux store outside" />
+              <Highlight language="jsx">
+                {`store = createStore (myReducer)
+export default store`}
+              </Highlight>
             </div>
           </article>
         </section>
