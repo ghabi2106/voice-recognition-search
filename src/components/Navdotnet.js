@@ -41,6 +41,11 @@ export default function Navdotnet() {
               MVC
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/ddd">
+              DDD
+            </Link>
+          </li>
         </ul>
       </li>
       {

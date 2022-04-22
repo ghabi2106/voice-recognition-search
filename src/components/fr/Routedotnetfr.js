@@ -9,6 +9,7 @@ import HostedservicePage from "../../pages/fr/dotnet/Hostedservice";
 import CqrsPage from "../../pages/fr/dotnet/architecture/Cqrs";
 import CleanPage from "../../pages/fr/dotnet/architecture/Clean";
 import MvcPage from "../../pages/fr/dotnet/architecture/Mvc";
+import DddPage from "../../pages/fr/dotnet/architecture/Ddd";
 //#endregion
 
 //#region Csharp
@@ -130,6 +131,7 @@ export default function Routedotnetfr() {
       <Route path="/clean" component={CleanPage} />
       <Route path="/cqrs" component={CqrsPage} />
       <Route path="/mvc" component={MvcPage} />
+      <Route path="/ddd" component={DddPage} />
       {
         //#endregion
       }
@@ -267,7 +269,10 @@ export default function Routedotnetfr() {
       <Route path="/enumindexer" component={EnumindexerPage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/operatoroverloading" component={OperatoroverloadingPage} />
-      <Route path="/preprocessordirectives" component={PreprocessordirectivesPage} />
+      <Route
+        path="/preprocessordirectives"
+        component={PreprocessordirectivesPage}
+      />
       <Route path="/string2int" component={String2intPage} />
       <Route path="/stringbuilder" component={StringbuilderPage} />
       <Route path="/threads" component={ThreadsPage} />

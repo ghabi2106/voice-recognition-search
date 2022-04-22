@@ -3,6 +3,10 @@
   height: 300px;
 }
 
+.mw-900 {
+  max-width: 1000px;
+}
+
 .select-lang {
   width: 105px;
 }

@@ -102,6 +102,14 @@ export default function Clean() {
                     CQRS
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/ddd"
+                  >
+                    DDD
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>

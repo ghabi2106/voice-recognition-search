@@ -115,6 +115,8 @@ export const pagesdotnet = [
   // CQRS
   "cqrs",
   "command queries responbility segregation",
+  // DDD
+  "domain driven design",
   // Dependency injection
   "dependency injection",
   "inversion of control",

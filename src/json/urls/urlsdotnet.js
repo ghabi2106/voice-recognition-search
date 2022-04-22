@@ -114,6 +114,8 @@ export const urlsdotnet = {
   // CQRS
   cqrs: "/cqrs",
   "command queries responbility segregation": "/cqrs",
+  // DDD
+  "domain driven design": "/ddd",
   // Dependency injection
   "dependency injection": "/di",
   "inversion of control": "/di",

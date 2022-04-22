@@ -9,6 +9,7 @@ import HostedservicePage from "../../pages/en/dotnet/Hostedservice";
 import CqrsPage from "../../pages/en/dotnet/architecture/Cqrs";
 import CleanPage from "../../pages/en/dotnet/architecture/Clean";
 import MvcPage from "../../pages/en/dotnet/architecture/Mvc";
+import DddPage from "../../pages/en/dotnet/architecture/Ddd";
 //#endregion
 
 //#region Csharp
@@ -130,6 +131,7 @@ export default function Routecsharpen() {
       <Route path="/clean" component={CleanPage} />
       <Route path="/cqrs" component={CqrsPage} />
       <Route path="/mvc" component={MvcPage} />
+      <Route path="/ddd" component={DddPage} />
       {
         //#endregion
       }
