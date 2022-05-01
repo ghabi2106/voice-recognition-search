@@ -3,15 +3,6 @@ export const urlsdotnet = {
   // Adapter
   adapter: "/adapter",
   "adapter principle": "/adapter",
-  // Agile
-  agile: "/agile",
-  "agile scrum": "/agile",
-  sprint: "/agile",
-  backlog: "/agile",
-  "scrum master": "/agile",
-  "test driven development": "/agile",
-  "agile values": "/agile",
-  "agile principles": "/agile",
   // Clean Code
   dry: "/cleancode",
   "clean code": "/cleancode",

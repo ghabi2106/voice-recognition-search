@@ -3,15 +3,6 @@ export const pagesdotnet = [
   // Adapter
   "adapter",
   "adapter principle",
-  // Agile
-  "agile",
-  "agile scrum",
-  "sprint",
-  "backlog",
-  "scrum master",
-  "test driven development",
-  "agile values",
-  "agile principles",
   // Clean Code
   "dry",
   "clean code",

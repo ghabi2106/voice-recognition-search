@@ -204,7 +204,7 @@ export default function Agile() {
         </nav>
       </aside>
       <div className="bd-cheatsheet container-fluid bg-body">
-        <section id="dotnet-core">
+        <section id="agile">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Agile</h3>
           <article id="agile">
@@ -221,14 +221,14 @@ export default function Agile() {
               </p>
               <figure>
                 <img
-                  src="/img/dotnet/traditional-development-method.svg"
+                  src="/img/agile/traditional-development-method.svg"
                   alt="traditional-development-method"
                 />
                 <figcaption>Traditional Development Method</figcaption>
               </figure>
               <figure>
                 <img
-                  src="/img/dotnet/agile-development-method.svg"
+                  src="/img/agile/agile-development-method.svg"
                   alt="agile-development-method"
                 />
                 <figcaption>Agile Development Method</figcaption>
@@ -301,7 +301,7 @@ export default function Agile() {
             <h6>Agile software development cycle</h6>
             <div>
               <img
-                src="/img/dotnet/software_quality-agile_software_dev_cycle_mobile.jpg"
+                src="/img/agile/software_quality-agile_software_dev_cycle_mobile.jpg"
                 alt="software_quality-agile_software_dev_cycle_mobile"
               />
               <ul>

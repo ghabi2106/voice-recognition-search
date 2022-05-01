@@ -272,11 +272,6 @@ export default function Navdotnet() {
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
-            <Link className="dropdown-item" to="/agile">
-              Agile
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link className="dropdown-item" to="/cleancode">
               Clean-Code
             </Link>

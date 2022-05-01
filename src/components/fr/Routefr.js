@@ -4,6 +4,7 @@ import Routeangularfr from "./Routeangularfr";
 import Routedotnetfr from "./Routedotnetfr";
 import Routereactfr from "./Routereactfr";
 import Routesqlfr from "./Routesqlfr";
+import Routeagilefr from "./Routeagilefr";
 import Routefrontendfr from "./Routefrontendfr";
 import Routepresentationfr from "./Routepresentationfr";
 
@@ -32,6 +33,12 @@ export default function Routefr() {
           <>
             <Routefrontendfr />
             <Routesqlfr />
+          </>
+        );
+      case "agile":
+        return (
+          <>
+            <Routeagilefr />
           </>
         );
       default:

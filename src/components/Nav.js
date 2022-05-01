@@ -5,6 +5,7 @@ import Navreact from "./Navreact";
 import Navangular from "./Navangular";
 import Navdotnet from "./Navdotnet";
 import Navsql from "./Navsql";
+import Navagile from "./Navagile";
 import Navfrontend from "./Navfrontend";
 
 export default function Nav() {
@@ -32,6 +33,12 @@ export default function Nav() {
           <>
             <Navfrontend />
             <Navsql />
+          </>
+        );
+      case "agile":
+        return (
+          <>
+            <Navagile />
           </>
         );
       default:

@@ -89,14 +89,6 @@ export default function Solid() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/agile"
-                  >
-                    Agile
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="d-inline-flex align-items-center rounded"
                     to="/cleancode"
                   >
                     Clean code

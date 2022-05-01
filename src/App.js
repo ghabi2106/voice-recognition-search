@@ -13,11 +13,13 @@ import { pagesdotnet } from "./json/search/searchdotnet";
 import { pagesreact } from "./json/search/searchreact";
 import { pagesangular } from "./json/search/searchangular";
 import { pagessql } from "./json/search/searchsql";
+import { pagesagile } from "./json/search/searchagile";
 
 import { urlsdotnet } from "./json/urls/urlsdotnet";
 import { urlsreact } from "./json/urls/urlsreact";
 import { urlsangular } from "./json/urls/urlsangular";
 import { urlssql } from "./json/urls/urlssql";
+import { urlsagile } from "./json/urls/urlsagile";
 //#endregion
 
 //import logo from './logo.svg';
@@ -42,6 +44,8 @@ function App() {
         return pagesangular;
       case "sql":
         return pagessql;
+      case "agile":
+        return pagesagile;
       default:
         return pagesdotnet;
     }
@@ -57,6 +61,8 @@ function App() {
         return urlsangular;
       case "sql":
         return urlssql;
+      case "agile":
+        return urlsagile;
       default:
         return urlsdotnet;
     }
@@ -113,6 +119,11 @@ function App() {
         setUrls(urlssql);
         localStorage.setItem("course", "sql");
         break;
+      case "agile":
+        setPages(pagesagile);
+        setUrls(urlsagile);
+        localStorage.setItem("course", "agile");
+        break;
       default:
         setPages(pagesdotnet);
         setUrls(urlsdotnet);
@@ -149,6 +160,7 @@ function App() {
                 <option value="angular">Angular</option>
                 <option value="react">React</option>
                 <option value="sql">SQL</option>
+                <option value="agile">Agile</option>
               </select>
               <button
                 className="btn btn-outline-success"
@@ -164,13 +176,13 @@ function App() {
         </header>
 
         {/* <Switch> */}
-          <LangContext.Provider value={lang}>
-            <CourseContext.Provider value={selectedCourse}>
-              <Routing />
-            </CourseContext.Provider>
-          </LangContext.Provider>
+        <LangContext.Provider value={lang}>
+          <CourseContext.Provider value={selectedCourse}>
+            <Routing />
+          </CourseContext.Provider>
+        </LangContext.Provider>
 
-          {redirect}
+        {redirect}
         {/* </Switch> */}
       </BrowserRouter>
       <footer className="bd-cheatsheet container-fluid bg-body vh-100"></footer>

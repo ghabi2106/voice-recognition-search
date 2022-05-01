@@ -44,3 +44,41 @@
   max-height: 650px;
   overflow-y: scroll;
 }
+
+.card-head {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  color: white;
+  text-align: center;
+}
+
+.card {
+  padding: 0.5rem;
+  border: 1px solid #b8b4b4;
+  border-radius: 0;
+  height: 100%;
+}
+
+.card-body {
+  padding: 0.75rem;
+}
+
+.bg-blue-contrast {
+  background-color: rgb(8,116,220, 0.5);
+}
+
+.bg-blue {
+  background-color: rgb(8,116,220);
+}
+
+.bg-orange-contrast {
+  background-color: rgb(256, 132, 44, 0.5);
+}
+
+.bg-orange {
+  background-color: rgb(256, 132, 44);
+}
+
+.mb-row {
+  margin-bottom: var(--bs-gutter-x);
+}

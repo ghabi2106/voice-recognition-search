@@ -4,6 +4,7 @@ import Routeangularen from "./Routeangularen";
 import Routereacten from "./Routereacten";
 import Routecsharpen from "./Routecsharpen";
 import Routesqlen from "./Routesqlen";
+import Routeagileen from "./Routeagileen";
 import Routefrontenden from "./Routefrontenden";
 import Routepresentationen from "./Routepresentationen";
 
@@ -28,13 +29,19 @@ export default function Routeen() {
             <Routeangularen />
           </>
         );
-      case "sql":
-        return (
-          <>
-            <Routefrontenden />
-            <Routesqlen />
-          </>
-        );
+        case "sql":
+          return (
+            <>
+              <Routefrontenden />
+              <Routesqlen />
+            </>
+          );
+          case "agile":
+            return (
+              <>
+                <Routeagileen />
+              </>
+            );
       default:
         return <h1>No project match</h1>;
     }

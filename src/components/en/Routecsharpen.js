@@ -72,7 +72,6 @@ import CommandPage from "../../pages/en/dotnet/design/Command";
 import CleancodePage from "../../pages/en/dotnet/methodology/Cleancode";
 import Cleancode1Page from "../../pages/en/dotnet/methodology/Cleancode1";
 import SolidPage from "../../pages/en/dotnet/methodology/Solid";
-import AgilePage from "../../pages/en/dotnet/methodology/Agile";
 //#endregion
 
 //#region Host Deployment
@@ -208,7 +207,6 @@ export default function Routecsharpen() {
       {
         //#region methodology
       }
-      <Route path="/agile" component={AgilePage} />
       <Route path="/cleancode" component={CleancodePage} />
       <Route path="/cleancode1" component={Cleancode1Page} />
       <Route path="/solid" component={SolidPage} />
