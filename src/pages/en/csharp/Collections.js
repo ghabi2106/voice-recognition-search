@@ -109,7 +109,7 @@ export default function Collections() {
                     className="d-inline-flex align-items-center rounded"
                     to="/enumindexer"
                   >
-                    Enumeration, Indexer and Generics 
+                    Enumeration, Indexer and Generics
                   </Link>
                 </li>
                 <li>
@@ -178,6 +178,70 @@ export default function Collections() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Collections</h3>
+          <article id="collections">
+            <h6>Collections</h6>
+            <div>
+              <p>
+                There are two types of collections available in C#: non-generic
+                collections and generic collections.
+              </p>
+              <p>
+                The <code>System.Collections</code> namespace contains the
+                non-generic collection types and{" "}
+                <code>System.Collections.Generic</code> namespace includes
+                generic collection types.
+              </p>
+              <p>
+                The key difference between Generic and Non-generic Collection is
+                that a Generic Collection is strongly typed while a Non-Generic
+                Collection is not strongly typed.
+              </p>
+              <img
+                src="/img/dotnet/Ilist ICollection IEnumerable IQueryable.PNG"
+                alt="Ilist ICollection IEnumerable IQueryable"
+              />
+              <ul>
+                <li>
+                  <p>
+                    <b>IEnumerable</b> is an enumerator that helps in iterating
+                    over the elements. An IEnumerable does not hold even the
+                    count of the items in the list, instead, you have to iterate
+                    over the elements to get the count of items.
+                  </p>
+                  <p>
+                    An IEnumerable supports filtering elements using where
+                    clause.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <b>ICollection</b> which derives from IEnumerable and
+                    extends it’s functionality to add, remove, update element in
+                    the list. ICollection also holds the count of elements in it
+                    and we does not need to iterate over all elements to get
+                    total number of elements.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <b>IList</b> extends ICollection. An IList can perform all
+                    operations combined from IEnumerable and ICollection, and
+                    some more operations like inserting or removing an element
+                    by index.
+                  </p>
+                  <p>
+                    You can use a foreach loop or a for loop to iterate over the
+                    elements.
+                  </p>
+                </li>
+                <li>
+                  <b>IQueryable</b> extends ICollection. An IQueryable generates
+                  a LINQ to SQL expression that is executed over the database
+                  layer.
+                </li>
+              </ul>
+            </div>
+          </article>
           <article id="dictionnary">
             <h6>Dictionary</h6>
             <div>
