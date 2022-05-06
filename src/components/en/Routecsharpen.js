@@ -95,6 +95,7 @@ import StatementsPage from "../../pages/en/csharp/keywords/Statements";
 import ThisbasePage from "../../pages/en/csharp/keywords/Thisbase";
 //#endregion
 import AdvancedPage from "../../pages/en/csharp/Advanced";
+import ArrayPage from "../../pages/en/csharp/Array";
 import BindingPage from "../../pages/en/csharp/Binding";
 import BoxingPage from "../../pages/en/csharp/Boxing";
 import CollectionsPage from "../../pages/en/csharp/Collections";
@@ -258,6 +259,7 @@ export default function Routecsharpen() {
         //#region others
       }
       <Route path="/advanced" component={AdvancedPage} />
+      <Route path="/array" component={ArrayPage} />
       <Route path="/binding" component={BindingPage} />
       <Route path="/boxing" component={BoxingPage} />
       <Route path="/collections" component={CollectionsPage} />

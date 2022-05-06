@@ -360,6 +360,12 @@ export const pagesdotnet = [
   "marshaling",
   "platform invoke",
   "simd",
+  // Array
+  "array",
+  "jagged array",
+  "multidimensional array",
+  "jagged",
+  "multidimensional",
   // binding
   "binding",
   "early bound",

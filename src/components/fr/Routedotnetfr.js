@@ -95,6 +95,7 @@ import StatementsPage from "../../pages/fr/csharp/keywords/Statements";
 import ThisbasePage from "../../pages/fr/csharp/keywords/Thisbase";
 //#endregion
 import AdvancedPage from "../../pages/fr/csharp/Advanced";
+import ArrayPage from "../../pages/fr/csharp/Array";
 import BindingPage from "../../pages/fr/csharp/Binding";
 import BoxingPage from "../../pages/fr/csharp/Boxing";
 import CollectionsPage from "../../pages/fr/csharp/Collections";
@@ -258,6 +259,7 @@ export default function Routedotnetfr() {
         //#region others
       }
       <Route path="/advanced" component={AdvancedPage} />
+      <Route path="/array" component={ArrayPage} />
       <Route path="/binding" component={BindingPage} />
       <Route path="/boxing" component={BoxingPage} />
       <Route path="/collections" component={CollectionsPage} />

@@ -363,6 +363,12 @@ export const urlsdotnet = {
   marshaling: "/advanced",
   "platform invoke": "/advanced",
   simd: "/advanced",
+  // Array
+  "array": "/array",
+  "jagged array": "/array",
+  "multidimensional array": "/array",
+  "jagged": "/array",
+  "multidimensional": "/array",
   // binding
   binding: "/binding",
   "early bound": "/binding",

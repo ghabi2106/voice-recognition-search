@@ -125,7 +125,9 @@ export default function Navdotnet() {
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/clr">
-              CLR
+              <mark>CLR</mark> <mark>MSIL</mark> <mark>JIT</mark>{" "}
+              <mark>GAC</mark> <mark>CTS</mark> <mark>CAS</mark>{" "}
+              <mark>CLS</mark>
             </Link>
           </li>
           <li className="nav-item">
@@ -186,22 +188,23 @@ export default function Navdotnet() {
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/controller">
-              Controller
+              Controller <mark>Action Method</mark> <mark>Result</mark>{" "}
+              <mark>Selector</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/controllervuedata">
-              Controller-Vue-Data
+              Controller-Vue-Data <mark>ViewBag</mark> <mark>ViewData</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/https">
-              Https
+              Https <mark>Http</mark> <mark>SSL</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/httpmethods">
-              Https-Methods
+              Https-Methods <mark>Get</mark> <mark>Post</mark> <mark>Put</mark>
             </Link>
           </li>
           <li className="nav-item">
@@ -278,7 +281,8 @@ export default function Navdotnet() {
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/cleancode1">
-              Clean-Code1
+              Clean-Code1 <mark>DBUF</mark> <mark>MVP</mark> <mark>POC</mark>{" "}
+              <mark>Waterfall</mark>
             </Link>
           </li>
           <li className="nav-item">
@@ -370,27 +374,33 @@ export default function Navdotnet() {
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
             <Link className="dropdown-item" to="/oop">
-              OOP
+              OOP <mark>Inheritance</mark> <mark>Polymorphism</mark>{" "}
+              <mark>Encapsulation</mark> <mark>overloading</mark>{" "}
+              <mark>Diamond</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/oop2">
-              OOP2
+              OOP2 <mark>Association</mark> <mark>Aggregation</mark>{" "}
+              <mark>Composition</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/oop3">
-              OOP3
+              OOP3 <mark>Delegation</mark> <mark>Coupling</mark>{" "}
+              <mark>Cohesion</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/composition">
-              Composition
+              Composition over inheritance
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/typesystem">
-              Type-System
+              Type-System <mark>Struct</mark> <mark>Class</mark>{" "}
+              <mark>Record</mark> <mark>object</mark> <mark>constructor</mark>{" "}
+              <mark>Serialization</mark>
             </Link>
           </li>
         </ul>
@@ -462,32 +472,40 @@ export default function Navdotnet() {
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
             <Link className="dropdown-item" to="/contextual">
-              Contextual
+              Contextual <mark>partial</mark> <mark>var</mark> <mark>when</mark>{" "}
+              <mark>where</mark> <mark>yield</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/modifiers">
-              Modifiers
+              Modifiers <mark>virtual</mark> <mark>override</mark>{" "}
+              <mark>abstract-interface</mark> <mark>const-readonly</mark>{" "}
+              <mark>sealed</mark> <mark>static</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/operators">
-              Operators
+              Operators <mark>typeof-GetType</mark> <mark>Type-Casting</mark>{" "}
+              <mark>is</mark> <mark>as</mark> <mark>switch-with</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/parameters">
-              Parameters
+              Parameters <mark>params</mark> <mark>in</mark> <mark>ref</mark>{" "}
+              <mark>out</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/statements">
-              Statements
+              Statements <mark>using</mark> <mark>throw-try-catch-finally</mark>{" "}
+              <mark>break-continue-goto-return</mark> <br />
+              <mark>lock</mark> <mark>fixed</mark> <mark>checked</mark>
+              <mark>unchecked</mark>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/thisbase">
-              Thisbase
+              This base
             </Link>
           </li>
         </ul>
@@ -512,13 +530,8 @@ export default function Navdotnet() {
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
-            <Link className="dropdown-item" to="/advanced">
-              Advanced
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/binding">
-              Binding
+            <Link className="dropdown-item" to="/array">
+              Array <mark>Multidimensional</mark> <mark>Jagged</mark>
             </Link>
           </li>
           <li className="nav-item">
@@ -528,7 +541,86 @@ export default function Navdotnet() {
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/collections">
-              Collections
+              Collections <mark>Dictionnary</mark> <mark>Hashtable</mark>{" "}
+              <mark>Array</mark> <mark>List</mark> <br />
+              <mark>Stack</mark> <mark>Queue</mark>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/datatype">
+              Datatype <mark>Type-Safety</mark> <mark>Anonyme</mark>{" "}
+              <mark>dynamic</mark> <mark>nullable</mark> <mark>Discards</mark>{" "}
+              <br />
+              <mark>Method-Extension</mark>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/delegate">
+              Delegate <mark>Func</mark> <mark>Action</mark>{" "}
+              <mark>Predicate</mark> <mark>Event</mark>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/enumindexer">
+              Enum-indexer <mark>Generic</mark>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/hostedservice">
+              Hosted-Service Background-Service
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/string2int">
+              String2Int <mark>Parse</mark> <mark>TryParse</mark>{" "}
+              <mark>Convert</mark>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/stringbuilder">
+              String-Builder
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/threads">
+              Threads <mark>Task</mark> <mark>Deadlock</mark>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/tuple">
+              Tuple
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
+
+      {
+        //#region Others1
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Others1
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/advanced">
+              Advanced <mark>Marshaling</mark> <mark>P/Invoke</mark>{" "}
+              <mark>SIMD</mark> <mark>Vetor-Matrix</mark>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/binding">
+              Binding <mark>Late-Bound</mark> <mark>Early-Bound</mark>
             </Link>
           </li>
           <li className="nav-item">
@@ -537,28 +629,8 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/datatype">
-              Datatype
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/delegate">
-              Delegate
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/enumindexer">
-              Enumindexer
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/hostedservice">
-              Hosted-Service
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link className="dropdown-item" to="/memberwiseclone">
-              Memberwiseclone
+              Memberwiseclone <mark>Shallow-copy</mark> <mark>Deep-copy</mark>
             </Link>
           </li>
           <li className="nav-item">
@@ -569,26 +641,6 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/preprocessordirectives">
               Preprocessordirectives
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/string2int">
-              String2Int
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/stringbuilder">
-              String-Builder
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/threads">
-              Threads
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/tuple">
-              Tuple
             </Link>
           </li>
           <li className="nav-item">
