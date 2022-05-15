@@ -27,7 +27,7 @@ export default function Refs() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#ref"
+                    href="#definition"
                   >
                     Refs
                   </a>
@@ -43,17 +43,17 @@ export default function Refs() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#forward-refs"
+                    href="#ref"
                   >
-                    Forward Refs?
+                    React.Ref
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#find-dom-node"
+                    href="#forward-ref"
                   >
-                    callback refs vs findDOMNode()?
+                    React.ForwardRef
                   </a>
                 </li>
               </ul>
@@ -89,118 +89,68 @@ export default function Refs() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>refs in React</h3>
-          <article id="ref">
-            <h6>What do you understand by refs in React?</h6>
+          <article id="definition">
+            <h6>refs</h6>
             <div>
               <p>
-                Refs is the short hand for References in React. It is an
-                attribute which helps to store a reference to a particular React
-                element or component, which will be returned by the components
-                render configuration function. It is used to return references
-                to a particular element or component returned by render(). They
-                come in handy when we need DOM measurements or to add methods to
-                the components.
+                Refs provide a way to access DOM nodes or React elements created
+                in the render method.
               </p>
-              <Highlight language="jsx">
-                {`class ReferenceDemo extends React.Component{
-    display() {
-        const name = this.inputDemo.value;
-        document.getElementById('disp').innerHTML = name;
-    }
-    render() {
-        return(
-            <div>
-                Name: <input type="text" ref={input => this.inputDemo = input} />
-                <button name="Click" onClick={this.display}>Click</button>
-                <h2>Hello <span id="disp"></span> !!!</h2>
-            </div>
-        );
-    }
-}`}
-              </Highlight>
             </div>
           </article>
           <article id="use">
-            <h6>List some of the cases when you should use Refs.</h6>
+            <h6>There are a few good use cases for refs:</h6>
             <ul>
-              <li>
-                When you need to manage focus, select text or media playback
-              </li>
-              <li>To trigger imperative animations</li>
-              <li>Integrate with third-party DOM libraries</li>
+              <li>Managing focus, text selection, or media playback.</li>
+              <li>Triggering imperative animations.</li>
+              <li>Integrating with third-party DOM libraries.</li>
             </ul>
           </article>
-          <article id="forward-refs">
-            <h6>What are Forward Refs?</h6>
+          <article id="ref">
+            <h6>React.createRef</h6>
             <div>
               <p>
-                Ref forwarding is a feature which is used for passing a ref
-                through a component to one of its child components. It can be
-                performed by making use of the React.forwardRef() method. It is
-                particularly useful with higher-order components and specially
-                used in reusable component libraries.
+                <code>React.createRef</code> creates a ref that can be attached
+                to React elements via the ref attribute.
               </p>
               <Highlight language="jsx">
-                {`import React, { Component } from 'react';
-import { render } from 'react-dom';
+                {`class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
 
-const TextInput = React.forwardRef((props, ref) => (
-    <input type="text" placeholder="Hello World" ref={ref} />
-));
+    this.inputRef = React.createRef();
+  }
 
-const inputRef = React.createRef();
+  render() {
+    return <input type="text" ref={this.inputRef} />;
+  } 
 
-class CustomfextInput extends React.Component {
-    handeSubmit = e => {
-        e.preventDefault();
-        console.log(inputRef.current.value);
-    };
-    render() {
-        return (
-            <div>
-                <form onSubmit={e => this-handleSubmit (e) }>
-                    <TextInput ref={inputRef} />
-                    <button>Submit</button>
-                </form>
-            </div>
-        )
-    }
-}
-export default App;`}
+  componentDidMount() {
+    this.inputRef.current.focus();
+  }
+}`}
               </Highlight>
             </div>
           </article>
-          <article id="find-dom-node">
-            <h6>
-              Which is the preferred option callback refs or findDOMNode()?
-            </h6>
+          <article id="forward-ref">
+            <h6>React.forwardRef</h6>
             <div>
               <p>
-                The preferred option is to use callback refs over findDOMNode()
-                API. Because callback refs give better control when the refs are
-                set and unset whereas findDOMNode() prevents certain
-                improvements in React in the future.
+                <code>React.forwardRef</code> creates a React component that
+                forwards the ref attribute it receives to another component
+                below in the tree. This technique is not very common but is
+                particularly useful in two scenarios:
               </p>
               <Highlight language="jsx">
-                {`class MyComponent extends Component {
-    componentDidMount() {
-        findDOMNode(this).scrollIntoview()
-    }  
-    render() {
-        return <div />
-    }
-}`}
-              </Highlight>
-              <p>The recommended approach is:</p>
-              <Highlight language="jsx">
-                {`class MyComponent extends Component {
-    ComponentDidMount() {
-        this.node.scrollIntoView()
-    }
-    render(){
-        return <div ref={node => this.node = node} />
-    }
-}`}
+                {`const FancyButton = React.forwardRef((props, ref) => (
+  <button ref={ref} className="FancyButton">
+    {props.children}
+  </button>
+));
+
+// You can now get a ref directly to the DOM button:
+const ref = React.createRef();
+<FancyButton ref={ref}>Click me!</FancyButton>;`}
               </Highlight>
             </div>
           </article>

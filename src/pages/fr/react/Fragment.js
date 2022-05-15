@@ -40,14 +40,6 @@ export default function Fragment() {
                     Fragments better than container divs?
                   </a>
                 </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#capital"
-                  >
-                    Components starts with a capital letter
-                  </a>
-                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -85,9 +77,12 @@ export default function Fragment() {
             <h6>What are fragments?</h6>
             <div>
               <p>
-                Fragments are used for components to return multiple elements.
-                It allows you to group a list of multiple children without
-                adding an extra node to the DOM.
+                <p>
+                  Le composant <code>React.Fragment</code> vous permet de
+                  renvoyer plusieurs éléments depuis une méthode{" "}
+                  <code>render()</code> sans avoir à créer un élément DOM
+                  supplémentaire :
+                </p>
               </p>
               <Highlight language="jsx">
                 {`render() {
@@ -124,20 +119,7 @@ render() {
                 parent-child relationship and add &lt;div&gt; tags in the
                 middle, which makes it hard to keep the desired layout.
               </li>
-              <li>The DOM Inspector is less cluttered.</li>
             </ul>
-          </article>
-          <article id="capital">
-            <h6>
-              Why is it necessary to start component names with a capital
-              letter?
-            </h6>
-            <p>
-              In React, it is necessary to start component names with a capital
-              letter. If we start the component name with lower case, it will
-              throw an error as an unrecognized tag. It is because, in JSX,
-              lower case tag names are considered as HTML tags.
-            </p>
           </article>
         </section>
       </div>

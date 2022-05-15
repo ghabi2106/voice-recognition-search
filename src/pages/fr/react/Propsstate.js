@@ -77,19 +77,20 @@ export default function Propsstate() {
             <h6>What is Props?</h6>
             <div>
               <p>
-                Props stand for "Properties" in React. They are read-only inputs
-                to components. Props are an object which stores the value of
-                attributes of a tag and work similar to the HTML attributes. It
-                gives a way to pass data from the parent to the child components
-                throughout the application.
+                Props signifient "Propriétés" dans React. Ce sont des entrées en
+                lecture seule pour les composants. Les Props sont un objet qui
+                stocke la valeur des attributs d'une balise et fonctionne de
+                manière similaire aux attributs HTML. Il permet de transmettre
+                des données du parent aux composants enfants dans toute
+                l'application.
               </p>
               <p>
-                It is similar to function arguments and passed to the component
-                in the same way as arguments passed in a function.
+                Il est similaire aux arguments de fonction et passé au composant
+                de la même manière que les arguments passés dans une fonction.
               </p>
               <p>
-                Props are immutable so we cannot modify the props from inside
-                the component.
+                Props sont immuables, nous ne pouvons donc pas modifier les
+                props depuis l'intérieur du composant.
               </p>
             </div>
           </article>

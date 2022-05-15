@@ -85,9 +85,9 @@ export default function Fragment() {
             <h6>What are fragments?</h6>
             <div>
               <p>
-                Fragments are used for components to return multiple elements.
-                It allows you to group a list of multiple children without
-                adding an extra node to the DOM.
+                The <code>React.Fragment</code> component lets you return
+                multiple elements in a <code>render()</code> method without
+                creating an additional DOM element:
               </p>
               <Highlight language="jsx">
                 {`render() {
@@ -124,20 +124,7 @@ render() {
                 parent-child relationship and add &lt;div&gt; tags in the
                 middle, which makes it hard to keep the desired layout.
               </li>
-              <li>The DOM Inspector is less cluttered.</li>
             </ul>
-          </article>
-          <article id="capital">
-            <h6>
-              Why is it necessary to start component names with a capital
-              letter?
-            </h6>
-            <p>
-              In React, it is necessary to start component names with a capital
-              letter. If we start the component name with lower case, it will
-              throw an error as an unrecognized tag. It is because, in JSX,
-              lower case tag names are considered as HTML tags.
-            </p>
           </article>
         </section>
       </div>

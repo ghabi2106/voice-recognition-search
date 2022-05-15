@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Highlight from "react-highlight";
-import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
-export default function Refs() {
+export default function Components() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -29,31 +29,39 @@ export default function Refs() {
                     className="d-inline-flex align-items-center rounded"
                     href="#definition"
                   >
-                    Refs
+                    Components
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#use"
+                    href="#component"
                   >
-                    Use of refs
+                    React.Component
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#ref"
+                    href="#pure-component"
                   >
-                    React.Ref
+                    React.PureComponent
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#forward-ref"
+                    href="#memo"
                   >
-                    React.ForwardRef
+                    React.memo
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#capital"
+                  >
+                    Components starts with a capital letter
                   </a>
                 </li>
               </ul>
@@ -88,73 +96,74 @@ export default function Refs() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>refs in React</h3>
+          <h3>Components</h3>
           <article id="definition">
-            <h6>Les refs</h6>
+            <h6>Components</h6>
             <div>
               <p>
-                Les refs fournissent un moyen d’accéder aux nœuds du DOM ou
-                éléments React créés dans la méthode de rendu.
+                React components let you split the UI into independent, reusable
+                pieces, and think about each piece in isolation. React
+                components can be defined by subclassing{" "}
+                <code>React.Component</code> or <code>React.PureComponent</code>
+                .
+              </p>
+              <p>
+                React components can also be defined as functions which can be
+                wrapped: <code>React.memo</code>
               </p>
             </div>
           </article>
-          <article id="use">
-            <h6>Les cas d’usages tout trouvés pour les refs :</h6>
-            <ul>
-              <li>
-                Gérer le focus, la sélection du texte, ou la lecture de média.
-              </li>
-              <li>Lancer des animations impératives.</li>
-              <li>S’interfacer avec des bibliothèques DOM tierces.</li>
-            </ul>
-          </article>
-          <article id="ref">
-            <h6>React.createRef</h6>
+          <article id="component">
+            <h6>React.Component</h6>
             <div>
-              <p>
-                <code>React.createRef</code> crée une <code>ref</code> qui peut
-                être associée à des éléments React via l’attribut{" "}
-                <code>ref</code>.
-              </p>
               <Highlight language="jsx">
-                {`class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.inputRef = React.createRef();
-  }
-
+                {`class Greeting extends React.Component {
   render() {
-    return <input type="text" ref={this.inputRef} />;
-  } 
-
-  componentDidMount() {
-    this.inputRef.current.focus();
+    return <h1>Hello, {this.props.name}</h1>;
   }
 }`}
               </Highlight>
             </div>
           </article>
-          <article id="forward-ref">
-            <h6>React.forwardRef</h6>
+          <article id="pure-component">
+            <h6>React.PureComponent</h6>
             <div>
               <p>
-                <code>React.forwardRef</code> crée un composant React qui
-                transfère la valeur de l’attribut ref qu’il reçoit à un autre
-                composant plus bas dans l’arbre.
+                <code>React.PureComponent</code> is similar to{" "}
+                <code>React.Component</code>. The difference between them is
+                that <code>React.Component</code> doesn’t implement{" "}
+                <code>shouldComponentUpdate()</code>, but{" "}
+                <code>React.PureComponent</code> implements it with a shallow
+                prop and state comparison.
               </p>
-              <Highlight language="jsx">
-                {`const FancyButton = React.forwardRef((props, ref) => (
-  <button ref={ref} className="FancyButton">
-    {props.children}
-  </button>
-));
-
-// You can now get a ref directly to the DOM button:
-const ref = React.createRef();
-<FancyButton ref={ref}>Click me!</FancyButton>;`}
-              </Highlight>
             </div>
+          </article>
+          <article id="memo">
+            <h6>React.memo</h6>
+            <div>
+              <p>
+                If your component renders the same result given the same props,
+                you can wrap it in a call to <code>React.memo</code> for a
+                performance boost in some cases by memoizing the result. This
+                means that React will skip rendering the component, and reuse
+                the last rendered result.
+              </p>
+              <Highlight language="jsx">{`const MyComponent = React.memo(function MyComponent(props) {
+  /* render using props */
+});`}</Highlight>
+            </div>
+          </article>
+          <article id="capital">
+            <h6>
+              Why is it necessary to start component names with a capital
+              letter?
+            </h6>
+            <p>
+              In React, it is necessary to start component names with a capital
+              letter. If we start the component name with lower case, it will
+              throw an error as an unrecognized tag. It is because, in JSX,
+              lower case tag names are considered as HTML tags.
+            </p>
           </article>
         </section>
       </div>

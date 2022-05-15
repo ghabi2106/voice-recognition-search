@@ -3,6 +3,7 @@ import { Route, Redirect } from "react-router-dom";
 
 //#region react
 import ArrowfuncPage from "../../pages/fr/react/Arrowfunc";
+import ComponentsPage from "../../pages/fr/react/Components";
 import ControlledPage from "../../pages/fr/react/Controlled";
 import DomPage from "../../pages/fr/react/Dom";
 import EcmascriptPage from "../../pages/fr/react/Ecmascript";
@@ -10,8 +11,10 @@ import EventsPage from "../../pages/fr/react/Events";
 import FormsPage from "../../pages/fr/react/Forms";
 import FragmentPage from "../../pages/fr/react/Fragment";
 import HocPage from "../../pages/fr/react/Hoc";
+import HooksPage from "../../pages/fr/react/Hooks";
 import JsxPage from "../../pages/fr/react/Jsx";
 import LifecyclePage from "../../pages/fr/react/Lifecycle";
+import SuspensePage from "../../pages/fr/react/Suspense";
 import ModularizePage from "../../pages/fr/react/Modularize";
 import PropsstatePage from "../../pages/fr/react/Propsstate";
 import ReactjsPage from "../../pages/fr/react/Reactjs";
@@ -31,6 +34,7 @@ export default function Routereactfr() {
         //#region react
       }
       <Route path="/arrowfunc" component={ArrowfuncPage} />
+      <Route path="/components" component={ComponentsPage} />
       <Route path="/controlled" component={ControlledPage} />
       <Route path="/dom" component={DomPage} />
       <Route path="/ecmascript" component={EcmascriptPage} />
@@ -38,7 +42,9 @@ export default function Routereactfr() {
       <Route path="/forms" component={FormsPage} />
       <Route path="/fragment" component={FragmentPage} />
       <Route path="/hoc" component={HocPage} />
+      <Route path="/hooks" component={HooksPage} />
       <Route path="/jsx" component={JsxPage} />
+      <Route path="/lazy" component={SuspensePage} />
       <Route path="/lifecycle" component={LifecyclePage} />
       <Route path="/modularize" component={ModularizePage} />
       <Route path="/propsstate" component={PropsstatePage} />

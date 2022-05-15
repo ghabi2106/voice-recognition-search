@@ -76,31 +76,36 @@ export default function Forms() {
           <article id="forms">
             <h6>How are forms created in React?</h6>
             <div>
-              <p>
-                React forms are similar to HTML forms. But in React, the state
-                is contained in the state property of the component and is only
-                updated via setState(). Thus the elements can’t directly update
-                their state and their submission is handled by a JavaScript
-                function. This function has full access to the data that is
-                entered by the user into a form.
-              </p>
               <Highlight language="jsx">
-                {`handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+                {`class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('Le nom a été soumis : ' + this.state.value);
     event.preventDefault();
-}
+  }
 
-render() {
+  render() {
     return (
-
-        <form onSubmit={this.handleSubmit}>    
-            <label>
-                Name:
-                <input type="text" value={this.state.value} onChange={this.handleSubmit} />
-            </label>
-            <input type="submit" value="Submit" />
-        </form>    
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Nom :
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Envoyer" />
+      </form>
     );
+  }
 }`}
               </Highlight>
             </div>
@@ -117,10 +122,19 @@ render() {
                 propTypes.
               </p>
               <Highlight language="jsx">
-                {`class App extends React.Component {
-    render() {}
+                {`import PropTypes from 'prop-types';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
 }
-Component.propTypes = { /* Definition */ };`}
+
+Greeting.propTypes = {
+  name: PropTypes.string
+};`}
               </Highlight>
             </div>
           </article>

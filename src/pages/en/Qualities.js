@@ -167,16 +167,61 @@ export default function Qualities() {
           <article id="strengths">
             <h6>What are your strengths?</h6>
             <div>
-              <p>
-                Sometimes, I spend more time than necessary on a task or take on
-                tasks personally that could easily be delegated to someone else.
-                Although I've never missed a deadline, it is still an effort for
-                me to know when to move on to the next task, and to be confident
-                when assigning others work. In my recent position, I implemented
-                a project management tool that allowed me to easily oversee the
-                progress of all the tasks I assigned, which helped me feel much
-                more comfortable delegating work.
-              </p>
+              <ul>
+                <li>
+                  <p>
+                    My <strong>people skills</strong> are my greatest strength.
+                    I find it easy to connect with almost anyone, and I often
+                    know how to empathize with others in an appropriate way.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    I am very <strong>honest</strong>. When I feel that my
+                    workload is too large to accept another task, or if I don't
+                    understand something, I always let my supervisor know.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    I consider my <strong>leadership skills</strong> to be one
+                    of my greatest strengths.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article id="weakness">
+            <h6>What are your weakness?</h6>
+            <div>
+              <ul>
+                <li>
+                  <p>
+                    I struggle with <strong>negative criticism</strong> and can
+                    become obsessed with perfecting my work after receiving
+                    notes from a supervisor. While I appreciate the guidance, I
+                    think I can learn to be less harsh on myself.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    I find <strong>public speaking</strong> intimidating and
+                    have often struggled with presentations. As a result, I am
+                    currently taking a public speaking course at a community
+                    college to become more confident and learn to structure a
+                    speech more effectively.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Shyness</strong> is something that I struggle with
+                    in large groups. I find it intimidating to ask questions or
+                    raise points, so I have often remained quiet in the past. I
+                    have been trying to be more vocal in smaller groups to
+                    become more confident.
+                  </p>
+                </li>
+              </ul>
             </div>
           </article>
           <article id="accomplish">

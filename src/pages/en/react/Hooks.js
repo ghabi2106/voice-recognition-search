@@ -121,25 +121,48 @@ export default function Hooks() {
           <h3>Hooks</h3>
           <article id="hooks">
             <h6>What is a Hook?</h6>
-            <p>
-              Hooks are functions that let you “hook into” React state and
-              lifecycle features from function components. Hooks don’t work
-              inside classes — they let you use React without classes. React
-              provides built-in hooks like useState, useEffect, useReducer,
-              useRef, useCallback, useContext, useMemo and you can also create
-              you own custom hooks.
-            </p>
+            <div>
+              <p>
+                Hooks are a new addition in React 16.8. They let you use state
+                and other React features without writing a class.
+              </p>
+              <p>
+                Hooks are functions that let you “hook into” React state and
+                lifecycle features from function components.
+              </p>
+            </div>
+          </article>
+          <article id="rules">
+            <h6>Rules of hooks</h6>
+            <ol>
+              <li>
+                Only Call Hooks at the Top Level :
+                <ul>
+                  <li>
+                    Don’t call Hooks inside loops, conditions, or nested
+                    functions.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Only Call Hooks from React Functions :
+                <ul>
+                  <li>
+                    Don’t call Hooks from regular JavaScript functions. Instead,
+                    you can:
+                    <ul>
+                      <li>Call Hooks from React function components.</li>
+                      <li>Call Hooks from custom Hooks</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ol>
           </article>
           <article id="advantages">
             <h6>What are the advantages of react Hooks?</h6>
             <ul>
-              <li>
-                The main advantage of react hooks is the{" "}
-                <strong>re-usability of stateful logic</strong>. It can be done
-                with the help of <strong>custom hooks</strong>. Without changing
-                component hierarchy, you can reuse stateful logic and it is easy
-                to share custom hooks with other components.
-              </li>
+              <li>Reuse stateful logic between components</li>
               <li>
                 In react class component, we split our work in different
                 life-cycle methods like componentDidMount, componentDidUpdate
@@ -151,15 +174,6 @@ export default function Hooks() {
                 and also we have to <strong>bind event listeners</strong>, which
                 increases complexity. This is prevented in react functional
                 components.
-              </li>
-              <li>
-                React class components don’t minify very well, and they make hot
-                reloading flaky and unreliable
-              </li>
-              <li>
-                React hooks are easier to test and work with, makes the code
-                look cleaner, easier to read and has less number of lines of
-                code.
               </li>
             </ul>
           </article>
@@ -239,7 +253,10 @@ export default function Hooks() {
             <h6>useReducer</h6>
             <div>
               <p>useReducer is a hook that is used for state management.</p>
-              <img src="/img/react/hook-usereducer-script.PNG" alt="hook usereducer script" />
+              <img
+                src="/img/react/hook-usereducer-script.PNG"
+                alt="hook usereducer script"
+              />
             </div>
           </article>
           <article id="reduce">
@@ -252,43 +269,56 @@ export default function Hooks() {
               </p>
               <img src="/img/react/hooks-reduce-js.PNG" alt="hooks reduce js" />
               <table class="table table-bordered">
-              <caption>
-                <h4>reduce vs useReducer</h4>
-              </caption>
-              <tbody>
-                <tr>
-                  <th>
-                    <strong>reduce in javascript</strong>
-                  </th>
-                  <th>
-                    <strong>useReducer in React</strong>
-                  </th>
-                </tr>
-                <tr>
-                  <td>array.<code>reduce</code>(<code>reducer</code>, initialValue)</td>
-                  <td><code>useReducer</code>(<code>reducer</code>, intialState)</td>
-                </tr>
-                <tr>
-                  <td>SingleValue = <code>reducer</code>(accumulator, itemValue)</td>
-                  <td>newState = <code>reducer</code>(currentState, action)</td>
-                </tr>
-                <tr>
-                  <td><code>reduce</code> method returns a single value</td>
-                  <td>useReducer returns a pair values [newState, dispatch]</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+                <caption>
+                  <h4>reduce vs useReducer</h4>
+                </caption>
+                <tbody>
+                  <tr>
+                    <th>
+                      <strong>reduce in javascript</strong>
+                    </th>
+                    <th>
+                      <strong>useReducer in React</strong>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      array.<code>reduce</code>(<code>reducer</code>,
+                      initialValue)
+                    </td>
+                    <td>
+                      <code>useReducer</code>(<code>reducer</code>, intialState)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      SingleValue = <code>reducer</code>(accumulator, itemValue)
+                    </td>
+                    <td>
+                      newState = <code>reducer</code>(currentState, action)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>reduce</code> method returns a single value
+                    </td>
+                    <td>
+                      useReducer returns a pair values [newState, dispatch]
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </article>
           <article id="usestate-usereducer">
-            <h6>useState vs useReducer</h6>            
-              <table class="table table-bordered">
+            <h6>useState vs useReducer</h6>
+            <table class="table table-bordered">
               <caption>
                 <h4>useState vs useReducer</h4>
               </caption>
               <tbody>
                 <tr>
-                <th>
+                  <th>
                     <strong>Scenario</strong>
                   </th>
                   <th>
@@ -318,7 +348,7 @@ export default function Hooks() {
                   <td>Local</td>
                   <td>Global</td>
                 </tr>
-                </tbody>
+              </tbody>
             </table>
           </article>
         </section>

@@ -32,22 +32,6 @@ export default function Events() {
                     Event
                   </a>
                 </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#create-event"
-                  >
-                    Create Event
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#synthetic"
-                  >
-                    Synthetic Event
-                  </a>
-                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -85,56 +69,27 @@ export default function Events() {
             <h6>What is an event in React?</h6>
             <div>
               <p>
-                In React, events are the triggered reactions to specific actions
-                like mouse hover, mouse click, key press, etc. Handling these
-                events are similar to handling events in DOM elements.
+                Handling events with React elements is very similar to handling
+                events on DOM elements. There are some syntax differences:
               </p>
               <ul>
                 <li>
-                  Events are named using camel case instead of just using the
-                  lowercase.
+                  React events are named using camelCase, rather than lowercase
                 </li>
-                <li>Events are passed as functions instead of strings.</li>
+                <li>
+                  With JSX you pass a function as the event handler, rather than
+                  a string.
+                </li>
               </ul>
-            </div>
-          </article>
-          <article id="create-event">
-            <h6>How do you create an event in React?</h6>
-            <Highlight language="jsx">
-              {`class Display extends React.Component({
-    show(evt) {
-        // code
-    },   
-    render() {
-        // Render the div with an onClick prop (value is a function)
-        return (
-            <div onClick={this.show}>Click Me!</div>
-        );
-    }
-});`}
-            </Highlight>
-          </article>
-          <article id="synthetic">
-            <h6>What are synthetic events in React?</h6>
-            <div>
-              <p>
-                A synthetic event is an object which acts as a cross-browser
-                wrapper around the browser's native event. It combines the
-                behavior of different browser's native event into one API,
-                including stopPropagation() and preventDefault().
-              </p>
               <Highlight language="jsx">
-                {`function ActionLink() {
-    function handleClick(e) {
-        e.preventDefault();
-        console.log('You had clicked a Link.');
-    }
-    return (
-        <a href="#" onClick={handleClick}>
-            Click_Me
-        </a>
-    );
-}`}
+                {`<button onclick="activateLasers()">
+  Activate Lasers
+</button>`}
+              </Highlight>
+              <Highlight language="jsx">
+                {`<button onClick={activateLasers}>
+  Activate Lasers
+</button>`}
               </Highlight>
             </div>
           </article>

@@ -8,13 +8,8 @@ export default function Navreact() {
         //#region react
       }
       <li className="nav-item">
-        <Link className="nav-link" to="/arrowfunc">
-          Arrow-Func
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/controlled">
-          Controlled
+        <Link className="nav-link" to="/reactjs">
+          Reactjs
         </Link>
       </li>
       <li className="nav-item">
@@ -28,26 +23,6 @@ export default function Navreact() {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/events">
-          Events
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/forms">
-          Forms
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/fragment">
-          Fragment
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/hoc">
-          HOC
-        </Link>
-      </li>
-      <li className="nav-item">
         <Link className="nav-link" to="/jsx">
           JSX
         </Link>
@@ -58,8 +33,13 @@ export default function Navreact() {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/modularize">
-          Modular
+        <Link className="nav-link" to="/hooks">
+          Hooks
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/hoc">
+          HOC
         </Link>
       </li>
       <li className="nav-item">
@@ -68,8 +48,33 @@ export default function Navreact() {
         </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/reactjs">
-          Reactjs
+        <Link className="nav-link" to="/components">
+          Components
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/fragment">
+          Fragment
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/refs">
+          Refs
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/lazy">
+          Lazy
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/events">
+          Events
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" to="/forms">
+          Forms
         </Link>
       </li>
       <li className="nav-item">
@@ -80,16 +85,6 @@ export default function Navreact() {
       <li className="nav-item">
         <Link className="nav-link" to="/redux">
           Redux
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/refs">
-          Refs
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" to="/router">
-          Router
         </Link>
       </li>
       <li className="nav-item dropdown">
@@ -105,6 +100,11 @@ export default function Navreact() {
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
+            <Link className="dropdown-item" to="/router">
+              Router
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/reactvsangular">
               React-Angular
             </Link>
@@ -117,6 +117,21 @@ export default function Navreact() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/styling">
               Styling
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/arrowfunc">
+              Arrow-Func
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/controlled">
+              Controlled
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/modularize">
+              Modular
             </Link>
           </li>
         </ul>

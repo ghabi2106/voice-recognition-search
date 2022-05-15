@@ -30,22 +30,6 @@ export default function Hoc() {
                     HOC
                   </a>
                 </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#use"
-                  >
-                    use of HOC
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#pure"
-                  >
-                    Pure Component
-                  </a>
-                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -81,32 +65,19 @@ export default function Hoc() {
           <h3>HOC and Pure</h3>
           <article id="definition">
             <h6>What are Higher Order Components(HOC)?</h6>
-            <p>
-              In React, Higher Order Component is an advanced technique for
-              reusing component logic. It is a function that takes a component
-              and returns a new component. In other words, it is a function
-              which accepts another function as an argument. According to the
-              official website, it is not the feature(part) in React API, but a
-              pattern that emerges from React's compositional nature.
-            </p>
-          </article>
-          <article id="use">
-            <h6>What can you do with HOC?</h6>
-            <ul>
-              <li>Code Reusability</li>
-              <li>Props manipulation</li>
-              <li>State manipulation</li>
-              <li>Render highjacking</li>
-            </ul>
-          </article>
-          <article id="pure">
-            <h6>What are Pure Components?</h6>
-            <p>
-              Pure components are the simplest and fastest components which can
-              be written. They can replace any component which only has a
-              render(). These components enhance the simplicity of the code and
-              performance of the application.
-            </p>
+            <div>
+              <p>
+                A higher-order component (HOC) is an advanced technique in React
+                for reusing component logic.
+              </p>
+              <p>
+                Concretely,{" "}
+                <strong>
+                  a higher-order component is a function that takes a component
+                  and returns a new component.
+                </strong>
+              </p>
+            </div>
           </article>
         </section>
       </div>
