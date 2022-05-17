@@ -75,23 +75,28 @@ export default function Meeting() {
                 <div className="col-sm-6 mb-row">
                   <div className="card">
                     <div className="card-head bg-blue-contrast">
-                      <h5>SPRINT PLANNING MEETING</h5>
+                      <h5>RÉUNION DE PLANIFICATION DE SPRINT</h5>
                     </div>
                     <div className="card-body">
                       <p>
-                        Is held a few days before a sprint and can last a few
-                        hours.
+                        Se tient quelques jours avant un sprint et peut durer
+                        quelques heures.
                       </p>
-                      <h6>In the meeting:</h6>
+                      <h6>Dans la réunion:</h6>
                       <ul>
-                        <li>Score/prioritize backlog items</li>
-                        <li>Determine individual and team availability</li>
-                        <li>Determine which items the sprint will include</li>
+                        <li>Noter/prioriser les éléments du backlog</li>
                         <li>
-                          Distribute decided tasks among team (typically on a
-                          volunteer basis)
+                          Déterminer la disponibilité individuelle et d'équipe
                         </li>
-                        <li>Set goals/address obstacles for sprint</li>
+                        <li>Déterminez quels éléments le sprint comprendra</li>
+                        <li>
+                          Répartir les tâches décidées parmi l'équipe
+                          (généralement sur une base volontaire)
+                        </li>
+                        <li>
+                          Fixer des objectifs / surmonter les obstacles pour le
+                          sprint
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -103,14 +108,16 @@ export default function Meeting() {
                     </div>
                     <div className="card-body">
                       <p>
-                        A quick (&lt;10 min.) meeting held at the beginning of
-                        each day in a sprint.
+                        Une réunion rapide (&lt;10 min.) tenue au début de
+                        chaque journée dans un sprint.
                       </p>
-                      <h6>In the meeting:</h6>
+                      <h6>Dans la réunion:</h6>
                       <ul>
-                        <li>What they did yesterday</li>
-                        <li>What they’ll do today</li>
-                        <li>Any obstacles* they face</li>
+                        <li>Ce qu'ils ont fait hier</li>
+                        <li>Ce qu'ils vont faire aujourd'hui</li>
+                        <li>
+                          Tous les obstacles* auxquels ils sont confrontés
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -118,22 +125,24 @@ export default function Meeting() {
                 <div className="col-sm-6 mb-row">
                   <div className="card">
                     <div className="card-head bg-blue">
-                      <h5>SPRINT RETROSPECTIVE</h5>
+                      <h5>RÉTROSPECTIVE DU SPRINT</h5>
                     </div>
                     <div className="card-body">
                       <p>
-                        A brief (&lt;1 hour) meeting held soon after, or in
-                        conjunction with, the Sprint Review to review the “how”
-                        of the sprint.
+                        Une brève réunion (&lt;1 heure) tenue peu de temps après
+                        ou en conjonction avec la revue de sprint pour revoir le
+                        "comment" du sprint.
                       </p>
-                      <h6>In the meeting:</h6>
+                      <h6>Dans la réunion:</h6>
                       <ul>
-                        <li>Compare projected vs. actual results</li>
-                        <li>Discuss setbacks and wins</li>
-                        <li>Set goals to improve future sprints</li>
+                        <li>Comparez les résultats projetés et réels</li>
+                        <li>Discutez des revers et des victoires</li>
                         <li>
-                          Discuss what worked and what didn’t work and make
-                          relevant adjustments
+                          Fixer des objectifs pour améliorer les futurs sprints
+                        </li>
+                        <li>
+                          Discutez de ce qui a fonctionné et de ce qui n'a pas
+                          fonctionné et faites les ajustements pertinents
                         </li>
                       </ul>
                     </div>
@@ -142,21 +151,27 @@ export default function Meeting() {
                 <div className="col-sm-6 mb-row">
                   <div className="card">
                     <div className="card-head bg-orange-contrast">
-                      <h5>SPRINT REVIEW</h5>
+                      <h5>REVUE DE SPRINT</h5>
                     </div>
                     <div className="card-body">
                       <p>
-                        An informal meeting held at the end of a sprint to
-                        review the “what” (i.e., what work was addressed) of the
-                        sprint.
+                        Une réunion informelle tenue à la fin d'un sprint pour
+                        revoir le « quoi » (c'est-à-dire, quel travail a été
+                        abordé) du sprint.
                       </p>
-                      <h6>In the meeting:</h6>
+                      <h6>Dans la réunion:</h6>
                       <ul>
-                        <li>Invite product owner and stakeholders</li>
                         <li>
-                          Display deliverables/progress achieved during sprint
+                          Inviter le propriétaire du produit et les parties
+                          prenantes
                         </li>
-                        <li>PowerPoint presentations are not allowed</li>
+                        <li>
+                          Afficher les livrables/progrès réalisés pendant le
+                          sprint
+                        </li>
+                        <li>
+                          Les présentations PowerPoint ne sont pas autorisées
+                        </li>
                       </ul>
                     </div>
                   </div>

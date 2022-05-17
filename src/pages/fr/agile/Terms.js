@@ -130,75 +130,99 @@ export default function Terms() {
           <article id="scrum">
             <h6>Scrum</h6>
             <p>
-              An Agile framework for managing work in which a small team works
-              as a unit to reach a common goal as opposed to a traditional,
-              sequential approach to project management.
+              La méthode « Scrum de Scrums » est une technique Agile à grande
+              échelle qui vous permet de connecter plusieurs équipes devant
+              travailler ensemble pour livrer des solutions complexes.
             </p>
           </article>
           <article id="story-point">
             <h6>Story Points</h6>
-            <p>
-              Les story points sont des unités de mesure qui permettent
-              d'estimer l'effort global nécessaire pour implémenter
-              intégralement une tâche du backlog produit ou autre. Les équipes
-              assignent des story points en fonction de la complexité et du
-              volume du travail, mais aussi du risque ou de l'incertitude.
-            </p>
+            <div>
+              <p>
+                Les story points se définissent comme une unité de mesure,
+                utilisée majoritairement en gestion de projet agile Scrum. Ils
+                servent à estimer la charge de travail globale des équipes, afin
+                de planifier au mieux chaque sprint ou itération.
+              </p>
+              <p>
+                Une estimation est fournie à chaque user story. Elle est
+                réalisée en équipe durant l’une des cérémonies Scrum.
+              </p>
+            </div>
           </article>
           <article id="backlog">
             <h6>Backlog</h6>
-            <p>
-              Un backlog produit est une liste hiérarchisée de tâches destinées
-              à l'équipe de développement. Il est créé à partir de la feuille de
-              route et de ses exigences.
-            </p>
+            <div>
+              <p>
+                Le backlog est une liste de tâches priorisées définissant les
+                caractéristiques d’un produit. Il est un des éléments
+                fondamentaux de la méthodologie Scrum. Il s’agit de l’outil de
+                travail principal du Product Owner qui se charge de recueillir
+                les besoins auprès des parties prenantes et de les transformer
+                en liste de fonctionnalités prêtes à être développées par
+                l’équipe de développement.
+              </p>
+              <p>
+                Le product backlog est en quelque sorte un réservoir de
+                fonctionnalités à développer dans les prochaines itérations.
+              </p>
+            </div>
           </article>
           <article id="storyboard">
             <h6>Storyboard</h6>
             <p>
-              A visual representation of work derived from Kanban. Storyboards
-              are typically created either manually, using whiteboards and
-              sticky notes, or digitally in work management solutions.
-              Storyboards consist of at least three columns (called swimlanes)
-              representing the progress of work in a sprint and several cards or
-              sticky notes that represent the individual stories in the sprint.
-              The cards are moved across the board to show progress as the
-              sprint progresses.
+              Le StoryBoard est une méthodologie qui permet à l'équipe de
+              séquencer visuellement et en détail son projet avant de passer à
+              sa réalisation.
             </p>
           </article>
           <article id="swimlanes">
             <h6>Swimlanes</h6>
             <p>
-              Columns that break up a storyboard into story statuses. Typical
-              swimlane titles include, from right to left, “New,” “In Progress,”
-              “Awaiting Approval,” and “Complete.” Story cards progress across
-              swimlanes during a sprint.
+              Les swimlanes Kanban sont des lignes horizontales qui divisent un
+              tableau Kanban en sections. Les équipes les utilisent généralement
+              pour séparer visuellement les différents types de travail sur un
+              même tableau et organiser ensemble les tâches homogènes.
             </p>
           </article>
           <article id="sprint">
             <h6>Sprint</h6>
-            <p>
-              A one, two, or three week (generally) stretch of time in which an
-              Agile team will work together to complete a predetermined list of
-              stories from the backlog.
-            </p>
+            <div>
+              <p>
+                Sprint désigne le cycle de développement pendant lequel vont
+                s’enchaîner un certain nombre de tâches pour, à terme, s’achever
+                par la conception d’un produit final.
+              </p>
+              <p>
+                Le sprint commence par un Sprint Planning et se termine par une
+                Revue de Sprint (et une Retrospective)
+              </p>
+            </div>
           </article>
           <article id="story">
-            <h6>Story</h6>
-            <p>
-              A high-level definition of a work request, project task, or
-              subtask. Each story is assigned a point value based on the
-              estimated number of hours required to complete it. Requests,
-              tasks, or projects are converted to stories before they move from
-              the backlog to a sprint.
-            </p>
+            <h6>User Story</h6>
+            <div>
+              <p>
+                Une User story, ou récit utilisateur, sont des descriptions
+                d’exigences pour toutes fonctionnalités ou “tâches” nécessaires
+                au fonctionnement du produit ou du service en développement.
+              </p>
+              <p>
+                Les user stories sont écrites par le Product Owner de manière
+                concise et ne concerne qu’une seule fonctionnalité à la fois.{" "}
+              </p>
+              <p>
+                Une fois rédigée, elle va s’ajouter aux autres récits du produit
+                et ensemble ; elles constituent le “product backlog”.{" "}
+              </p>
+            </div>
           </article>
           <article id="epic">
             <h6>Epic</h6>
             <p>
-              An overarching initiative that includes multiple stories and that
-              might span many sprints. In Agile Marketing a multi-stage campaign
-              would be considered an epic.
+              Une epic est un travail important qui peut être découpé en un
+              certain nombre de petites stories, quelquefois appelées demandes /
+              issues dans Jira.
             </p>
           </article>
           <article id="kanban">

@@ -97,22 +97,34 @@ export default function Retrospective() {
           <h3>Sprint Retrospective</h3>
           <article id="introduction">
             <h6>Sprint Retrospective</h6>
-            <p>
-              The sprint retrospective is a recurring meeting held at the end of
-              a sprint used to discuss what went well during the previous sprint
-              cycle and what can be improved for the next sprint.
-            </p>
+            <div>
+              <p>
+                La sprint retrospective est une réunion ou un atelier qui a lieu
+                à la fin de chaque sprint. Elle intervient :
+              </p>
+              <ul>
+                <li>à la suite de la sprint review</li>
+                <li>et avant la réunion de planification du sprint à venir.</li>
+              </ul>
+              <p>
+                la sprint retrospective s'inscrit dans le principe
+                d'amélioration continue. L'objectif est que le prochain sprint
+                soit plus efficace que le précédent et ainsi de suite. C'est une
+                méthode empirique, c'est-à-dire basée sur l'expérience et sur
+                l'auto-apprentissage.
+              </p>
+            </div>
           </article>
           <article id="participants">
             <h6>Participants</h6>
-            <p>
-              The sprint retrospective team usually includes all development
-              team members, the Scrum Master, and the product owner. The
-              development team is everyone who is designing, building, and
-              testing the product. Collectively, its members have a wide range
-              of valuable perspectives for identifying process improvements from
-              different points of view.
-            </p>
+            <div>
+              <p>chaque membre de l’équipe Scrum doit y participerة</p>
+              <ul>
+                <li>le Product Owner</li>
+                <li>l’équipe de développement</li>
+                <li>le Scrum Master.</li>
+              </ul>
+            </div>
           </article>
           <article id="purpose">
             <h6>Purpose</h6>
@@ -141,21 +153,21 @@ export default function Retrospective() {
             </ul>
           </article>
           <article id="length">
-            <h6>Length</h6>
+            <h6>Longueur</h6>
             <div>
               <p>A sprint retrospectives often run:</p>
               <ul>
                 <li>
-                  <p>45 minutes for a one-week sprint</p>
+                  <p>45 minutes pour un sprint d'une semaine</p>
                 </li>
                 <li>
-                  <p>1.5 hours for a two-week sprint</p>
+                  <p>1h30 pour un sprint de deux semaines</p>
                 </li>
                 <li>
-                  <p>2.25 hours for a three-week sprint</p>
+                  <p>2h25 pour un sprint de trois semaines</p>
                 </li>
                 <li>
-                  <p>3 hours for a month-long sprint</p>
+                  <p>3 heures pour un sprint d'un mois</p>
                 </li>
               </ul>
             </div>
@@ -163,36 +175,28 @@ export default function Retrospective() {
           <article id="questions">
             <h6>Questions</h6>
             <div>
-              <p>Questions commonly asked in a sprint retrospective include:</p>
+              <p>
+                Les questions fréquemment posées dans une rétrospective de
+                sprint incluent :
+              </p>
               <ul>
                 <li>
                   <p>
-                    <strong>What went well in the sprint? </strong>Success in an
-                    iteration can be analyzed by looking at what was done
-                    differently to achieve it; who contributed to it and how;
-                    and what skills, training, or knowledge made a difference.
+                    <strong>
+                      Qu'est-ce qui s'est bien passé dans le sprint ?{" "}
+                    </strong>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>What went wrong in the sprint?</strong> The point is
-                    not to penalize the team or individual members but look at
-                    things that didn’t go according to plan, with a view of
-                    improving performance in the future.
+                    <strong>Qu'est-ce qui n'allait pas dans le sprint ?</strong>
                   </p>
                 </li>
                 <li>
                   <p>
-                    <strong>What did we learn?</strong> What did the team learn
-                    in the sprint so that they can improve their way of working?
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>How should the next sprint play out?</strong> This
-                    will determine corrective actions to take in the next
-                    sprint, preventing the same mistakes from occurring, and
-                    making successful actions a repeatable outcome.
+                    <strong>Qu'avons-nous appris ? </strong> Qu'est-ce que
+                    l'équipe a appris dans le sprint afin qu'elle puisse
+                    améliorer sa façon de travailler ?
                   </p>
                 </li>
               </ul>

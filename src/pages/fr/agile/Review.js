@@ -114,30 +114,44 @@ export default function Review() {
           <article id="introduction">
             <h6>sprint review meeting</h6>
             <p>
-              A sprint review is an informal meeting held at the end of a
-              sprint, in which the Scrum team shows what was accomplished during
-              this period. This typically takes the form of a demonstration of
-              new features, with the goal of creating transparency, fostering
-              collaboration, and generating feedback.
+              La sprint review est une réunion a lieu à la fin de chaque sprint,
+              afin de passer en revue le travail accompli durant le sprint
+              écoulé. C’est le moment de présenter les développements logiciels
+              apportés au produit, qui sont testés et fonctionnels.
             </p>
           </article>
           <article id="participants">
             <h6>Participants</h6>
-            <p>
-              The sprint review is usually attended by the Scrum Master, the
-              Scrum team, the product owner, and the internal and external
-              stakeholders. The product owner runs and manages the review
-              process, while the Scrum Master ensures that the event takes place
-              and everyone understands its purpose.
-            </p>
+            <div>
+              <p>Les participants à la revue de sprint sont :</p>
+              <ul>
+                <li>
+                  l’<strong>équipe scrum</strong> dans son ensemble (soit le
+                  Product owner, le Scrum master et l’équipe de développement),
+                </li>
+                <li>
+                  les parties prenantes ou{" "}
+                  <strong>
+                    <em>stakeholders</em>
+                  </strong>
+                  ,
+                </li>
+                <li>
+                  les <strong>utilisateurs</strong>,
+                </li>
+                <li>
+                  les <strong>sponsors</strong>, le cas échéant.
+                </li>
+              </ul>
+            </div>
           </article>
           <article id="purpose">
             <h6>Purpose</h6>
             <p>
-              The purpose of the sprint review meeting is for the development
-              team to show the stakeholders the work they have accomplished over
-              the sprint and compare it to what they set out to do at the
-              beginning of the sprint.
+              Le but de la réunion de revue de sprint est que l'équipe de
+              développement montre aux parties prenantes le travail qu'elles ont
+              accompli au cours du sprint et le compare à ce qu'elles ont prévu
+              de faire au début du sprint.
             </p>
           </article>
           <article id="long">
@@ -159,39 +173,40 @@ export default function Review() {
           <article id="discussion">
             <h6>Discussion</h6>
             <p>
-              The product owner explains the backlog items that have and haven’t
-              been completed during the sprint. After the development team
-              discusses what went well and didn’t go well, they demonstrate the
-              work that was done and answer any questions and receive feedback
-              about their work. The whole group collaborates on the next steps,
-              providing valuable input for the upcoming sprint planning meeting.
+              Le propriétaire du produit explique les éléments du backlog qui
+              ont et n'ont pas été complétés pendant le sprint. Une fois que
+              l'équipe de développement a discuté de ce qui s'est bien passé et
+              de ce qui ne s'est pas bien passé, elle montre le travail qui a
+              été fait, répond à toutes les questions et reçoit des commentaires
+              sur son travail. L'ensemble du groupe collabore sur les prochaines
+              étapes, fournissant une contribution précieuse pour la prochaine
+              réunion de planification de sprint.
             </p>
           </article>
           <article id="goal">
             <h6>Goal</h6>
             <p>
-              The goal of a sprint review is to ensure that a potentially
-              shippable product increment has been produced during the
-              sprint—the team has created a coded, tested, and usable piece of
-              software.
+              L'objectif d'une revue de sprint est de s'assurer qu'un incrément
+              de produit potentiellement livrable a été produit pendant le
+              sprint - l'équipe a créé un logiciel codé, testé et utilisable.
             </p>
           </article>
           <article id="review-retrospective">
             <h6>Sprint Review vs Retrospective</h6>
             <div>
               <p>
-                The sprint retrospective meeting, comes after the sprint review.
-                While the Agile sprint review is focused on examining what the
-                team is building, the sprint retrospective concentrates on how
-                it is being built.
+                La réunion de rétrospective de sprint vient après la revue de
+                sprint. Alors que la revue de sprint Agile se concentre sur
+                l'examen de ce que l'équipe construit, la rétrospective de
+                sprint se concentre sur la façon dont il est construit.
               </p>
               <p>
-                The sprint retrospective is a formal opportunity for the Scrum
-                team to fine-tune the development process, provide their ideas,
-                and voice their opinions, discussing what worked well during the
-                sprint and what needs to be adjusted. The group will ask
-                themselves, “What can be done to make the team and how it works
-                more productive?”
+                La rétrospective de sprint est une opportunité formelle pour
+                l'équipe Scrum d'affiner le processus de développement, de
+                fournir ses idées et d'exprimer ses opinions, en discutant de ce
+                qui a bien fonctionné pendant le sprint et de ce qui doit être
+                ajusté. Le groupe se demandera : « Que peut-on faire pour rendre
+                l'équipe et comment elle fonctionne plus productive ? »
               </p>
             </div>
           </article>
