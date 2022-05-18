@@ -269,7 +269,10 @@ export default function Routecsharpen() {
       <Route path="/enumindexer" component={EnumindexerPage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/operatoroverloading" component={OperatoroverloadingPage} />
-      <Route path="/preprocessordirectives" component={PreprocessordirectivesPage} />
+      <Route
+        path="/preprocessordirectives"
+        component={PreprocessordirectivesPage}
+      />
       <Route path="/string2int" component={String2intPage} />
       <Route path="/stringbuilder" component={StringbuilderPage} />
       <Route path="/threads" component={ThreadsPage} />
@@ -280,7 +283,7 @@ export default function Routecsharpen() {
         //#endregion
       }
 
-      <Route path="*" render={() => <Redirect to="/dotnet" />} />
+      <Route path="*" render={() => <Redirect to="/" />} />
     </>
   );
 }

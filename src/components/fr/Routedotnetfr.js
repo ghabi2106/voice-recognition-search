@@ -283,7 +283,7 @@ export default function Routedotnetfr() {
         //#endregion
       }
 
-      <Route path="*" render={() => <Redirect to="/dotnet" />} />
+      <Route path="*" render={() => <Redirect to="/" />} />
     </>
   );
 }
