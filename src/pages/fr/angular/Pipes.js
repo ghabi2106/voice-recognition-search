@@ -69,7 +69,8 @@ export default function Pipes() {
             <h6>pipes</h6>
             <div>
               <p>
-              Les Pipes sont des filtres utilisables directement depuis la vue afin de transformer les valeurs lors du "binding".
+                Les Pipes sont des filtres utilisables directement depuis la vue
+                afin de transformer les valeurs lors du "binding".
               </p>
               <table className="table table-bordered">
                 <thead>
@@ -83,27 +84,29 @@ export default function Pipes() {
                     <td>
                       <code>DatePipe</code>
                     </td>
-                    <td>Formats a date value according to locale rules.</td>
+                    <td>
+                      Formate une valeur de date selon les règles locales.
+                    </td>
                   </tr>
                   <tr>
                     <td>
                       <code>UpperCasePipe</code>
                     </td>
-                    <td>Transforms text to all upper case.</td>
+                    <td>Transforme le texte en majuscules.</td>
                   </tr>
                   <tr>
                     <td>
                       <code>LowerCasePipe</code>
                     </td>
-                    <td>Transforms text to all lower case.</td>
+                    <td>Transforme le texte en minuscules.</td>
                   </tr>
                   <tr>
                     <td>
                       <code>CurrencyPipe</code>
                     </td>
                     <td>
-                      Transforms a number to a currency string, formatted
-                      according to locale rules.
+                      transforme un nombre en une chaîne de devise, formatée
+                      selon les règles locales.
                     </td>
                   </tr>
                   <tr>
@@ -111,8 +114,8 @@ export default function Pipes() {
                       <code>DecimalPipe</code>
                     </td>
                     <td>
-                      Transforms a number into a string with a decimal point,
-                      formatted according to locale rules.
+                      Transforme un nombre en une chaîne avec un point décimal,
+                      formaté selon les règles locales.
                     </td>
                   </tr>
                   <tr>
@@ -120,8 +123,8 @@ export default function Pipes() {
                       <code>PercentPipe</code>
                     </td>
                     <td>
-                      Transforms a number to a percentage string, formatted
-                      according to locale rules.
+                      Transforme un nombre en une chaîne de pourcentage,
+                      formatée selon les règles locales.
                     </td>
                   </tr>
                 </tbody>

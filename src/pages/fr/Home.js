@@ -186,13 +186,28 @@ export default function Home() {
                   </div>
                   <div class="card-body text-dark collapse show" id="fgic">
                     <h6 class="card-title">Description</h6>
-                    <p>
+                    <p class="card-text">
+                      Un logiciel SIG (GIS software en anglais), également
+                      appelé système d'information géographique, crée, analyse
+                      et affiche des données géographiques sur des cartes
+                      numériques. L'outil SIG inclut des solutions de bureau, de
+                      serveur, web et mobiles et offre des fonctionnalités
+                      telles que la manipulation d'images, l'analyse spatiale et
+                      la création de cartes. Avec un SIG, vous pourrez
+                      collecter, stocker, analyser et diffuser des informations
+                      aux quatre coins du globe. Parcourez notre liste de
+                      produits pour trouver le logiciel qui répondra à vos
+                      besoins en termes de systèmes d'information géographique.
+                      Vous pouvez également sélectionner les logiciels SIG
+                      gratuits.
+                    </p>
+                    <p class="card-text">
                       Le portail FGIC est un SIG (systèmes d'information
                       géospatiale) désormais responsable d'organiser et de
                       présenter des données alphanumériques qui sont
                       spatialement référencées (données géospatiales).
                     </p>
-                    <p>
+                    <p class="card-text">
                       Le « FGIC » est utilisée pour ajouter la synchronisation
                       et la localisation aux types de données traditionnels et
                       pour créer des visualisations de données. Ces
@@ -232,36 +247,110 @@ export default function Home() {
                     class="card-body text-dark collapse show"
                     id="carrytrack"
                   >
-                    <h6 class="card-title">Description</h6>
+                    <h6 class="card-title">Description :</h6>
                     <p>
-                      <strong>« Carry Track »</strong> c’est une solution de
-                      gestion et de traçabilité es contenants en utilisant la
-                      technologie RFID permet de suivre et de gérer tout les
-                      matériel de manutention et de stockage qui circule en
-                      circuit fermé dans un supply chain pour optimiser sa
-                      disponibilité et l’ensemble de la logistique.
+                      Un logiciel WMS (ou logiciel de gestion d'entrepôt) permet
+                      le déplacement, le suivi et le stockage des matériaux dans
+                      tout l'entrepôt. Il augmente l'efficacité et réduit les
+                      coûts grâce au partage facile des données clés dans toute
+                      l'entreprise. Il inclut généralement des fonctionnalités
+                      pour le contrôle et le suivi des stocks ainsi que pour la
+                      gestion des achats et la surveillance des canaux. Ce type
+                      de système de gestion d'entrepôt wms intègre également des
+                      outils de gestion client et fournisseur, de comptabilité
+                      et de reporting des activités. Parmi les avantages d'un
+                      WMS vous retrouverez l'optimisation et une meilleure
+                      visibilité des stocks ainsi que des coûts opérationnels
+                      moindres.
+                    </p>
+                    <p>
+                      <strong>« Carry Track »</strong> (WMS (Warehouse
+                      Management System) signifie logiciel de gestion
+                      d'entrepôt) est un outil qui permet aux organisations de
+                      contrôler les mouvements et le stockage de marchandises
+                      dans des entrepôts. Il contribue à la gestion d'opérations
+                      telles que le suivi des stocks, la conception des
+                      entrepôts, le prélèvement et l'emballage des marchandises,
+                      l'expédition, la gestion des quais et des docks, ainsi que
+                      la dotation en personnel.
+                    </p>
+                    <h6 class="card-title">Fonctionnalités :</h6>
+                    <ul>
+                      <li>
+                        <strong>Codes-barres/RFID :</strong>
+                        identifiez des articles à l'aide de codes-barres et de
+                        balises RFID et effectuez-en le suivi.
+                      </li>
+                      <li>
+                        <strong>Gestion des stock :</strong>
+                        gérez le trafic des stocks pour garantir un volume
+                        optimal du stock et un approvisionnement sortant
+                        approprié.
+                      </li>
+                      <li>
+                        <strong>Gestion des expédition :</strong>
+                        organisez et suivez les processus d'expédition des
+                        commandes.
+                      </li>
+                      <li>
+                        <strong>Mise en kit :</strong>
+                        rassemblez au sein d'un kit des articles prélevés
+                        individuellement pour le traitement d'un ordre de
+                        travail ou d'une expédition.
+                      </li>
+                      <li>
+                        <strong>Gestion des commande :</strong>
+                        organisez, suivez et surveillez les commandes des
+                        clients au fur et à mesure de leur progression dans la
+                        chaîne d'approvisionnement.
+                      </li>
+                      <li>
+                        <strong>Gestion de la qualité :</strong>
+                        vérifiez et gérez la qualité des produits par rapport à
+                        des normes définies.
+                      </li>
+                    </ul>
+                    <h6 class="card-title">Avantages :</h6>
+                    <p>
+                      <strong>« Carry Track »</strong> facilite la gestion des
+                      opérations en entrée et en sortie en rationalisant les
+                      opérations manuelles et en augmentant l'efficacité
+                      générale. Un logiciel de gestion d'entrepôt présente de
+                      nombreux avantages, notamment :
                     </p>
                     <ul>
                       <li>
-                        Portiques RFID pour contrôle automatique des entrées /
-                        sorties d’une zone
+                        <strong>Optimisation du stock :</strong>
+                        un WMS permet aux utilisateurs de suivre les mouvements
+                        des marchandises dans leur chaîne d'approvisionnement.
+                        Les utilisateurs peuvent ainsi mieux surveiller et
+                        contrôler leurs niveaux de stock. Un WMS prend en charge
+                        de nombreux modèles de gestion des stocks, tels que
+                        LIFO, FIFO et au moment adéquat.
                       </li>
                       <li>
-                        Gestion des affectations : à un site, à une zone
-                        (fabrication, conditionnement, stockage, expédition…), à
-                        un client, à un fournisseur…
+                        <strong>Meilleure visibilité sur les stock :</strong>
+                        les appareils RFID (identification par radiofréquence)
+                        et les lecteurs de codes-barres font office d'extensions
+                        matérielles d'un WMS dans les entrepôts. La lecture des
+                        codes-barres et le marquage RFID des marchandises à
+                        différents points de contrôle dans la chaîne
+                        d'approvisionnement offrent aux utilisateurs une
+                        excellente visibilité sur les mouvements de leurs
+                        expéditions.
                       </li>
-                      <li>Gestion des seuils de réapprovisionnement</li>
-                      <li>Gestion de la maintenance</li>
                       <li>
-                        Optimisation de la gestion d’un parc de contenants :
-                        visibilité sur la localisation et l’état des stocks,
-                        diminution du stock de réserve, facturation des
-                        contenants consignés…
+                        <strong>Coûts opérationnels réduit :</strong>
+                        en exploitant des données telles que les expéditions
+                        entrantes et sortantes attendues et l'espace disponible,
+                        les solutions WMS facilitent l'optimisation de
+                        l'utilisation de l'espace dans les entrepôts. Certaines
+                        solutions proposent des simulateurs qui permettent aux
+                        utilisateurs de créer des plans de sol virtuels
+                        (indiquant notamment l'emplacement des palettes,
+                        étagères et docks de chargement) pour déterminer la
+                        meilleure utilisation possible de l'espace disponible.
                       </li>
-                      <li>Historique des mouvements</li>
-                      <li>Tableaux de bord et rapports</li>
-                      <li>Analyse des temps de rétention moyens par client</li>
                     </ul>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
@@ -297,12 +386,59 @@ export default function Home() {
                   >
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
+                      Un logiciel de facturation vous est utile pour faciliter
+                      la gestion des factures de vente (en ligne). Ce type
+                      d'outil vous permet de créer facilement une facture et de
+                      la traiter efficacement grâce à ses processus automatisés
+                      (production, envoi de factures et réception des
+                      paiements). La solution de facturation est conçue pour
+                      fonctionner avec des applications de comptabilité et
+                      fournit une variété d'outils de reporting des activités.
+                    </p>
+                    <p class="card-text">
                       est le logiciel de facturation permet la création de devis
                       et factures, la planification des factures récurrentes, la
                       gestion des factures impayées et même la signature
                       électronique et le paiement en ligne.
                     </p>
                     <h6 class="card-title">Fonctionnalités</h6>
+                    <ul>
+                      <li>
+                        <strong>Historique des factures :</strong>
+                        gérez les archives de chaque facture, client par client,
+                        pour un reporting, une gestion des risques, des
+                        relations avec les clients et une exploration des
+                        données de vente simples et précis.
+                      </li>
+                      <li>
+                        <strong>Suivi du temps et des dépenses :</strong>
+                        conservez un registre du temps facturable et des
+                        dépenses accumulés. Ajoutez automatiquement ces données
+                        aux factures pour une facturation plus rapide avec moins
+                        de risques d'erreur.
+                      </li>
+                      <li>
+                        <strong>Base de données de contacts :</strong>
+                        élaborez une base de données d'informations de contact
+                        pour les clients au sein du système de facturation pour
+                        éviter les frais redondants d'un outil de CRM dédié.
+                      </li>
+                      <li>
+                        <strong>Factures personnalisables :</strong>
+                        concevez des dispositions de factures, contenus et
+                        images de marque pour raconter la meilleure histoire
+                        possible. Obtenez la confiance du client en proposant un
+                        contenu conforme aux matériels de marque existants.
+                      </li>
+                      <li>
+                        <strong>Factures en ligne :</strong>
+                        fournissez et affichez des factures en ligne pour plus
+                        de simplicité et d'accessibilité à l'échelon
+                        international, dans n'importe quelle devise. Recevez
+                        immédiatement vos paiements par le biais d'une interface
+                        de facturation en ligne.
+                      </li>
+                    </ul>
                     <ul>
                       <li>Personnalisez les modèles de facture</li>
                       <li>Émettre des reçus de paiement et des rappels</li>
@@ -333,6 +469,28 @@ export default function Home() {
                     <p class="card-text">
                       Réalisation d’une solution permettant aux médecins
                       d’accéder au dossier médical de ses patients.
+                    </p>
+                    <p>
+                      Un logiciel de dossier patient informatisé automatise la
+                      documentation, le stockage et la récupération des dossiers
+                      médicaux des patients. Il rationalise la saisie des
+                      données, automatise le diagnostic et la sélection du code
+                      CPT, limite les enregistrements papier requis, réduit les
+                      coûts de transcription, fournit l'historique actualisé des
+                      dossiers de patients et diminue les délais pour les
+                      consultations des patients et l'obtention des résultats de
+                      laboratoire. Grâce aux outils de dossier patient
+                      informatisé, les médecins, les cabinets et les organismes
+                      de soins de santé gagnent du temps, réduisent les erreurs
+                      médicales, exécutent moins de tâches administratives et
+                      fournissent des diagnostics plus précis à leurs patients.
+                      Parcourez notre liste de produits pour trouver le logiciel
+                      qui répondra à vos besoins en termes de dossier de patient
+                      informatisé. Vous pouvez également sélectionner les
+                      logiciels de dossier patient infomatisé gratuits. Voir
+                      aussi : logiciel de gestion des soins de santé, logiciel
+                      de facturation pour le secteur médical et logiciel de
+                      transcription médicale.
                     </p>
                     <p>
                       Le déploiement du Dossier Médical Informatisé (DMI) dans
@@ -420,6 +578,20 @@ export default function Home() {
                   </div>
                   <div class="card-body text-dark collapse show" id="ticketing">
                     <h6 class="card-title">Description</h6>
+                    <p class="card-text">
+                      Un logiciel pour tour opérateurs gère les forfaits, les
+                      clients, l'émission de billets et les itinéraires pour les
+                      tour opérateurs, les organisateurs de forfaits vacances,
+                      les spécialistes du marketing de destinations et les
+                      entreprises de transport en commun. Il permet de générer
+                      des devis, de définir des itinéraires et de gérer les
+                      réservations des clients de voyages organisés. Il aide
+                      également les tour opérateurs à automatiser leurs
+                      processus métier, tels que la comptabilité, la
+                      facturation, le marketing et le reporting des activités.
+                      Voir aussi : logiciel de réservation et logiciel pour
+                      agences de voyages.
+                    </p>
                     <p class="card-text">
                       <strong>« Ticketing »</strong> est un plateforme pour les
                       agences de voyages et les tour-opérateurs. Les

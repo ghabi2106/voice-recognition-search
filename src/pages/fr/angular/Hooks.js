@@ -80,14 +80,15 @@ export default function Hooks() {
                       <code>ngOnChanges()</code>
                     </td>
                     <td>
-                      Respond when Angular sets or resets data-bound input
-                      properties. The method receives a SimpleChanges object of
-                      current and previous property values.
+                      Répondez lorsque Angular définit ou réinitialise les
+                      propriétés d'entrée liées aux données. La méthode reçoit
+                      un objet SimpleChanges des valeurs de propriété actuelles
+                      et précédentes.
                     </td>
                     <td>
-                      Called before <code>ngOnInit()</code> (if the component
-                      has bound inputs) and whenever one or more data-bound
-                      input properties change.
+                      Appelé avant <code>ngOnInit()</code> (si le composant a
+                      des entrées liées) et chaque fois qu'une ou plusieurs
+                      propriétés d'entrée liées aux données changent.
                     </td>
                   </tr>
                   <tr>
@@ -95,15 +96,17 @@ export default function Hooks() {
                       <code>ngOnInit()</code>
                     </td>
                     <td>
-                      Initialize the directive or component after Angular first
-                      displays the data-bound properties and sets the directive
-                      or component's input properties.
+                      Initialisez la directive ou le composant après qu'Angular
+                      ait d'abord affiché les propriétés liées aux données et
+                      défini les propriétés d'entrée de la directive ou du
+                      composant.
                     </td>
                     <td>
-                      Called once, after the first <code>ngOnChanges()</code>.{" "}
-                      <code>ngOnInit()</code> is still called even when{" "}
-                      <code>ngOnChanges()</code> is not (which is the case when
-                      there are no template-bound inputs).
+                      Appelé une fois, après le premier{" "}
+                      <code>ngOnChanges()</code> .<code>ngOnInit()</code> est
+                      toujours appelé même lorsque <code>ngOnChanges()</code>
+                      ne l'est pas (ce qui est le cas lorsqu'il n'y a pas
+                      d'entrées liées au modèle).
                     </td>
                   </tr>
                   <tr>
@@ -111,13 +114,14 @@ export default function Hooks() {
                       <code>ngDoCheck()</code>
                     </td>
                     <td>
-                      Detect and act upon changes that Angular can't or won't
-                      detect on its own.
+                      Détectez et agissez sur les changements qu'Angular ne peut
+                      pas ou ne détectera pas par lui-même.
                     </td>
                     <td>
-                      Called immediately after <code>ngOnChanges()</code> on
-                      every change detection run, and immediately after{" "}
-                      <code>ngOnInit()</code> on the first run.
+                      Appelé immédiatement après <code>ngOnChanges()</code> à
+                      chaque exécution de détection de changement, et
+                      immédiatement après <code>ngOnInit()</code> lors de la
+                      première exécution.
                     </td>
                   </tr>
                   <tr>
@@ -125,11 +129,12 @@ export default function Hooks() {
                       <code>ngAfterContentInit()</code>
                     </td>
                     <td>
-                      Respond after Angular projects external content into the
-                      component's view, or into the view that a directive is in.
+                      Réagit après qu'Angular ait projeté du contenu externe
+                      dans la vue du composant,ou dans la vue dans laquelle se
+                      trouve une directive.
                     </td>
                     <td>
-                      Called <em>once</em> after the first{" "}
+                      Appelé <em>une fois</em> après le premier{" "}
                       <code>ngDoCheck()</code>.
                     </td>
                   </tr>
@@ -138,12 +143,12 @@ export default function Hooks() {
                       <code>ngAfterContentChecked()</code>
                     </td>
                     <td>
-                      Respond after Angular checks the content projected into
-                      the directive or component.
+                      Répond après qu'Angular ait vérifié le contenu projeté
+                      dans la directive ou le composant.
                     </td>
                     <td>
-                      Called after <code>ngAfterContentInit()</code> and every
-                      subsequent <code>ngDoCheck()</code>.
+                      Appelé après <code>ngAfterContentInit()</code> et chaque{" "}
+                      <code>ngDoCheck()</code>.
                     </td>
                   </tr>
                   <tr>
@@ -151,11 +156,12 @@ export default function Hooks() {
                       <code>ngAfterViewInit()</code>
                     </td>
                     <td>
-                      Respond after Angular initializes the component's views
-                      and child views, or the view that contains the directive.
+                      Répond après qu'Angular ait initialisé les vues et les
+                      vues enfants du composant,ou la vue qui contient la
+                      directive.
                     </td>
                     <td>
-                      Called <em>once</em> after the first{" "}
+                      Appelé <em>une fois</em> après le premier{" "}
                       <code>ngAfterContentChecked()</code>.
                     </td>
                   </tr>
@@ -164,12 +170,12 @@ export default function Hooks() {
                       <code>ngAfterViewChecked()</code>
                     </td>
                     <td>
-                      Respond after Angular checks the component's views and
-                      child views, or the view that contains the directive.
+                      Répond après qu'Angular ait vérifié les vues et les vues
+                      enfant du composant,ou la vue qui contient la directive.
                     </td>
                     <td>
-                      Called after the <code>ngAfterViewInit()</code> and every
-                      subsequent <code>ngAfterContentChecked()</code>.
+                      Appelé après le <code>ngAfterViewInit()</code> et chaque{" "}
+                      <code>ngAfterContentChecked()</code>.
                     </td>
                   </tr>
                   <tr>
@@ -177,13 +183,14 @@ export default function Hooks() {
                       <code>ngOnDestroy()</code>
                     </td>
                     <td>
-                      Cleanup just before Angular destroys the directive or
-                      component. Unsubscribe Observables and detach event
-                      handlers to avoid memory leaks.
+                      Nettoyage juste avant qu'Angular ne détruise la directive
+                      ou le composant. Désabonnez-vous à Observables et détachez
+                      les gestionnaires d'événements pour éviter les fuites de
+                      mémoire.
                     </td>
                     <td>
-                      Called immediately before Angular destroys the directive
-                      or component.
+                      Appelé immédiatement avant qu'Angular ne détruise la
+                      directive ou le composant.
                     </td>
                   </tr>
                 </tbody>

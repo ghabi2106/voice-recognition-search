@@ -30,6 +30,14 @@ export default function Component() {
                     Components
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#component-directive"
+                  >
+                    Components vs Directive
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -67,20 +75,78 @@ export default function Component() {
             <h6>Compnents</h6>
             <div>
               <p>
-                Un composant, c'est une classe Typescript avec des attributs,
-                méthodes et constructeur et qui sert d'unité de découpage visuel
-                dans un projet front. Il possède aussi des métadonnées qu'on lui
-                injecte via la directive @Component.
+                Components let you split the UI into independent, reusable
+                pieces, and think about each piece in isolation. We create
+                Component with the help of @Component meta-data annotation.
               </p>
+              <img alt="ng-component" src="/img/angular/ng-component.png" />
+            </div>
+          </article>
+          <article id="component-directive">
+            <h6>Component vs Directive</h6>
+            <div>
               <p>
-                On définit un composant dans Angular par un ensemble de
-                ressources :
+                Directiveis used to add behaviour to an existing element. while
+                Component is used to create a component with attached behaviour.
               </p>
-              <ul>
-                <li>une portion de HTML</li>
-                <li>une ou des feuilles de styles associée(s) à ce HTML</li>
-                <li>une classe TypeScript ou JavaScript</li>
-              </ul>
+              <table className="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Directive</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      A component is a directive used to shadow DOM to create
+                      and encapsulate visual behavior called components. They
+                      are typically used to create UI widgets.
+                    </td>
+                    <td>
+                      A Directive is usually used while adding behavior to an
+                      existing DOM element.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      For registering a component, we use{" "}
+                      <code>@Component</code> metadata annotation attributes.
+                    </td>
+                    <td>
+                      For registering directives, we use the{" "}
+                      <code>@Directive</code> meta-data annotation attribute.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      It is also used to break up the application into smaller
+                      components.
+                    </td>
+                    <td>It is mainly used to design re-usable components.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Only one component is allowed to be present per DOM
+                      element.
+                    </td>
+                    <td>
+                      Multiple directives can be used in a per DOM element.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <code>@View</code> decorator or template URL template is
+                      mandatory in a component.
+                    </td>
+                    <td>A Directive does not have View</td>
+                  </tr>
+                  <tr>
+                    <td>A component is used to define pipes.</td>
+                    <td>You can’t define Pipes in a directive.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </article>
         </section>

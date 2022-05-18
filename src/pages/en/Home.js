@@ -183,17 +183,30 @@ export default function Home() {
                   </div>
                   <div class="card-body text-dark collapse show" id="fgic">
                     <h6 class="card-title">Description</h6>
-                    <p>
-                      The FGIC provides access to a map library of over 100 high
-                      resolution vector and raster layers in the Geospatial Data
-                      Warehouse.
+                    <p class="card-text">
+                      GIS software, or geographic information system, is a tool
+                      that helps businesses create, analyze, and display
+                      geographic data on digital maps. This tool is used by GIS
+                      specialists, city planners, environmental scientists, and
+                      law enforcement teams to analyze the spatial and
+                      geographical data. It enables collaboration between
+                      different business teams to add and edit asset and
+                      location details, thereby acting as a repository of asset
+                      data.
                     </p>
-                    <p>
+                    <p class="card-text">
+                      GIS software is deployed by various sectors such as
+                      manufacturing, real estate, government, healthcare, and
+                      public safety, among others. It can also be used for
+                      operations including engineering, planning, management,
+                      insurance, transport, and business.
+                    </p>
+                    <p class="card-text">
                       It allows a user to choose an area of interest, browse and
                       select data, customize the format, then download or have
                       it shipped on media.
                     </p>
-                    <p>
+                    <p class="card-text">
                       The map layers include data on: Public Land Survey System
                       (PLSS), Census data, demographic statistics,
                       precipitation, temperature, disaster events, conservation
@@ -202,6 +215,147 @@ export default function Home() {
                       and land cover, map indexes, ortho imagery, soils,
                       topographic images, and streets and roads.
                     </p>
+                    <h6 class="card-title">Features</h6>
+                    <ul>
+                      <li>
+                        <p>
+                          <strong>Data visualization:</strong> Visualize
+                          geographical data in 2D or 3D format by customizing
+                          the font, style, color, pattern, charts, pop-ups, and
+                          infographics. Annotate maps in different ways,
+                          including icons to represent various assets and
+                          places, color-coded regions, text labels, legends,
+                          topographical layers, and more.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Map creation:</strong> Create comprehensive
+                          maps notated with elements such as geospatial
+                          information, latitude and longitude, coordinates, and
+                          visualization, among others.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Spatial analysis:</strong> Perform spatial
+                          analysis to identify geographical issues, predict
+                          patterns, derive results by computer processing, and
+                          make informed decisions. Spatial analysis assists in
+                          understanding the characteristics of a location and
+                          finding relationships between them.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>3D imaging:</strong> Develop 3D images from
+                          the collected geographical data to offer
+                          photorealistic rendering. It reduces errors and
+                          duplications to maximize reliability.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Geocoding:</strong> Determine geographic
+                          coordinates for locations, street addresses, place
+                          names, and codes (such as zip codes) you need to
+                          track. The process of geocoding is the digital
+                          equivalent of pinning a spot/location on a physical
+                          map.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Color codes/icons:</strong> Customize color
+                          codes and icons to add value to different attributes
+                          of a geographical map.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Data import/export:</strong> Import/export
+                          datasets from different locations into GIS software
+                          and vice versa.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Image management:</strong> Store and track all
+                          project-related images in a single database that only
+                          authorized stakeholders can access.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Map sharing:</strong> Share your maps with
+                          other teams to collaborate or publicly to drive
+                          awareness and action.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Reporting and analysis:</strong> Create
+                          reports and display data to answer critical
+                          operational questions regarding asset health, field
+                          worker efficiency, and which areas produce the most
+                          work requests.
+                        </p>
+                      </li>
+                    </ul>
+                    <h6 class="card-title">Benefits</h6>
+                    <ul>
+                      <li>
+                        <p>
+                          <strong>Improves decision making:</strong> GIS
+                          software stores detailed information about the
+                          characteristics of a location which helps businesses
+                          gain critical ideas and assist in making better
+                          decisions related to site selection, planning, zoning,
+                          conservation, and routing. Companies can use spatial
+                          analysis data to pick trading locations, assistance
+                          regions, and clients of interest, and then store the
+                          information in thematic maps to make effective
+                          business decisions.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>
+                            Provides accurate geographic information and
+                            record-keeping:
+                          </strong>{" "}
+                          This software enables organizations to maintain
+                          geographic records of physical, environmental, health,
+                          economic, transportation, and cultural geographies
+                          under a comprehensive framework having necessary
+                          reporting tools.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>
+                            Automates data collection and analysis:
+                          </strong>{" "}
+                          GIS software enables businesses to automatically
+                          gather data required for a location or project
+                          planning, eliminating tedious manual data collection
+                          and storage procedures. It allows users to build,
+                          update, and amend their geographic data on the same
+                          platform where it is stored. GIS software consists of
+                          analytical tools that help in examining the data,
+                          making it a time-efficient tool.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Enhances communication:</strong> Visualization
+                          of geographical maps substantially aids the
+                          understanding of geographic characteristics. This
+                          software helps teams, departments, professionals, and
+                          the general public communicate more effectively.
+                        </p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -214,8 +368,7 @@ export default function Home() {
                 Prior to this role, I completed a one year with ITGWANA, where I
                 was in charge with customer Nexans and I achieved a web
                 application called <strong>« Carry Track »</strong> in the field
-                industry 4.0 which helps for treacebility of industrial
-                equipment, history of movements.
+                industry 4.0 which is a WMS (Warehouses Management System).
               </p>
               <div class="mt-3">
                 <div class="card border-warning mb-3">
@@ -232,19 +385,79 @@ export default function Home() {
                   >
                     <h6 class="card-title">Description</h6>
                     <p>
-                      est un system degestion informatisé permet de suivre et de
-                      gérer tout les matériel de manutention et de stockage qui
-                      circule en circuit fermé dans un supply chain pour
-                      optimiser sa disponibilité et l’ensemble de la logistique.
+                      <strong>« Carry Track »</strong> is a tool that allows
+                      organizations to control the movement and storage of goods
+                      within warehouses. It helps in managing operations such as
+                      inventory tracking, warehouse designing, picking and
+                      packaging goods, shipping, managing yards and docks, and
+                      staffing.
+                    </p>
+                    <h6 class="card-title">Features</h6>
+                    <ul>
+                      <li>
+                        <strong>BARCODING/RFID :</strong> Identify and track
+                        items using barcodes or RFID tags.
+                      </li>
+                      <li>
+                        <strong>INVENTORY MANAGEMENT :</strong> Manage inventory
+                        traffic to ensure optimal stock volume and a proper
+                        outbound supply.
+                      </li>
+                      <li>
+                        <strong>SHIPPING MANAGEMENT :</strong> Organize and
+                        track order shipping processes.
+                      </li>
+                      <li>
+                        <strong>KITTING :</strong> Consolidate individually
+                        picked materials into one kit for processing a work
+                        order or shipment.
+                      </li>
+                      <li>
+                        <strong>ORDER MANAGEMENT :</strong> Organize, track, and
+                        monitor customer orders as they move through the supply
+                        chain.
+                      </li>
+                      <li>
+                        <strong>QUALITY MANAGEMENT :</strong> Review and manage
+                        product quality against defined standards.
+                      </li>
+                    </ul>
+                    <h6 class="card-title">Benefits</h6>
+                    <p>
+                      <strong>« Carry Track »</strong> assists in handling
+                      inbound and outbound operations by streamlining most
+                      manual operations and increasing overall efficiency. There
+                      are many benefits of using warehouse management software,
+                      including
                     </p>
                     <ul>
                       <li>
-                        RFID gates for automatic entry/exit control of an area
+                        <strong>
+                          INVENTORY OPTIMIZATION : « Carry Track »
+                        </strong>{" "}
+                        allows users to monitor the movement of goods along
+                        their supply chain. This further helps them monitor and
+                        control stock levels.
                       </li>
-                      <li>Maintenance management</li>
-                      <li>Movement history</li>
-                      <li>Dashboards and reports</li>
-                      <li>Analysis of average retention times per customer</li>
+                      <li>
+                        <strong>ENHANCED INVENTORY VISIBILITY :</strong>{" "}
+                        Radio-frequency identification (RFID) devices and
+                        barcode scanners act as tangible extensions of{" "}
+                        <strong>« Carry Track »</strong> in warehouses. Barcode
+                        scanning and RFID tagging of goods along different
+                        checkpoints in the supply chain gives users clear
+                        visibility into the movement of their shipments.
+                      </li>
+                      <li>
+                        <strong>REDUCED OPERATIONAL COSTS :</strong> Leveraging
+                        data such as expected inbound and outbound shipments and
+                        space availability, <strong>« Carry Track »</strong>{" "}
+                        solutions facilitate optimum warehouse space
+                        utilization. Some solutions also offer simulators that
+                        allow users to create virtual floor plans - including
+                        placement of pallets, shelves, and loading docks - to
+                        identify ways to make the best use of available space.
+                      </li>
                     </ul>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
@@ -280,7 +493,49 @@ export default function Home() {
                     id="addinvoice"
                   >
                     <h6 class="card-title">Description</h6>
-                    <p class="card-text">is an invoicing app allows to:</p>
+                    <p class="card-text">
+                      Billing and invoicing software automates payment
+                      invoicing, receiving, and processing. These systems
+                      efficiently process complex accounts across multiple
+                      customers and product lines by incorporating contract data
+                      and customer relationship management (CRM) tools. Billing
+                      and invoicing solutions work in tandem with accounting
+                      applications and provide a variety of revenue reporting
+                      and compliance tools.
+                    </p>
+                    <h6 class="card-title">Features</h6>
+                    <ul>
+                      <li>
+                        <strong>Invoice history:</strong> Maintain a
+                        client-by-client archive of every invoice for simple and
+                        accurate reporting, risk management, client relations,
+                        and sales data mining.
+                      </li>
+                      <li>
+                        <strong>Time and expense tracking:</strong> Keep a log
+                        of accumulated billable time and expenses. Automatically
+                        add this data to invoices for faster billing with fewer
+                        opportunities for error.{" "}
+                      </li>
+                      <li>
+                        <strong>Contact database:</strong> Build a client
+                        contact information database within the billing and
+                        invoicing system to avoid the redundant expense of a
+                        dedicated CRM tool.{" "}
+                      </li>
+                      <li>
+                        <strong>Customizable invoices:</strong> Design invoice
+                        layouts, content, and branding to tell the best possible
+                        story. Develop customer trust by delivering content
+                        consistent with existing brand materials.
+                      </li>
+                      <li>
+                        <strong>Online invoices:</strong> Deliver and display
+                        invoices online for simplicity and global accessibility
+                        in any currency. Receive payments immediately through
+                        online invoice interface.
+                      </li>
+                    </ul>
                     <ul>
                       <li>Customize Invoice designs</li>
                       <li>Issue payment receipts and reminders</li>
@@ -332,6 +587,48 @@ export default function Home() {
                       centralize patient records.
                     </p>
                     <h6 class="card-title">Features</h6>
+                    <ul>
+                      <li>
+                        <strong>Charting:</strong> Prepares a comprehensive
+                        record of the patient's clinical data and medical
+                        history such as demographics, vital signs, medications,
+                        treatments, and laboratory notes.{" "}
+                      </li>
+                      <li>
+                        <strong>Code and charge entry:</strong> Assigns an
+                        appropriate cost to treatment codes, allowing you to
+                        bill patients according to the codes listed on their
+                        prescriptions or checkout bills.
+                      </li>
+                      <li>
+                        <strong>Decision support:</strong> Provides doctors the
+                        relevant information to support their decisions about
+                        patient care. This information is the analysis of
+                        historical data and records.
+                      </li>
+                      <li>
+                        <strong>Order entry:</strong> Enters and sends
+                        medication orders and treatment instructions
+                        electronically from within the application.
+                      </li>
+                      <li>
+                        <strong>Appointment scheduling:</strong> Books patient
+                        appointments, displays bookings on a calendar, manages
+                        no-shows, waitlists, and reschedules requests.
+                      </li>
+                      <li>
+                        <strong>Compliance tracking:</strong> Tracks core
+                        practice operations to ensure that they are performed in
+                        accordance with the medical industry standards and
+                        regulations.
+                      </li>
+                      <li>
+                        <strong>Self-service portal:</strong> Offers a dedicated
+                        portal for patients where they can book appointments,
+                        communicate with their doctor, receive test results and
+                        prescriptions, as well as make payments.
+                      </li>
+                    </ul>
                     <ul>
                       <li>Customizable Templates</li>
                       <li>
@@ -423,6 +720,12 @@ export default function Home() {
                       solution to manage travel agencies.
                     </p>
                     <h6 class="card-title">Description</h6>
+                    <p class="card-text">
+                      Tour Operator software manages packages, customers,
+                      ticketing, and itineraries for tour operators, vacation
+                      package companies, destination marketers, and transit
+                      companies.
+                    </p>
                     <p class="card-text">
                       <strong>« Ticketing »</strong> is back-office system
                       tailored to the travel industry: Tour creation, Voucher
