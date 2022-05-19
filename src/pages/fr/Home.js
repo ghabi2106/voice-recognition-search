@@ -154,8 +154,8 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="uaesme">
                     <h6 class="card-title">Description</h6>
                     <p>
-                      Le portail UAE SME offre aux PME un accès pratique à des
-                      informations détaillées sur tous les programmes
+                      Le portail « UAE SME » offre aux PME un accès pratique à
+                      des informations détaillées sur tous les programmes
                       gouvernementaux de développement des PME , y compris les
                       différents régimes de financement et services de soutien
                       aux entreprises, offerts aux PME
@@ -187,24 +187,17 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="fgic">
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
-                      Un logiciel SIG (GIS software en anglais), également
-                      appelé système d'information géographique, crée, analyse
-                      et affiche des données géographiques sur des cartes
-                      numériques. L'outil SIG inclut des solutions de bureau, de
-                      serveur, web et mobiles et offre des fonctionnalités
+                      « FGIC » est un SIG (système d'information géographique),
+                      crée, analyse et affiche des données géographiques sur des
+                      cartes numériques. « FGIC » offre des fonctionnalités
                       telles que la manipulation d'images, l'analyse spatiale et
                       la création de cartes. Avec un SIG, vous pourrez
                       collecter, stocker, analyser et diffuser des informations
-                      aux quatre coins du globe. Parcourez notre liste de
-                      produits pour trouver le logiciel qui répondra à vos
-                      besoins en termes de systèmes d'information géographique.
-                      Vous pouvez également sélectionner les logiciels SIG
-                      gratuits.
+                      aux quatre coins du globe.
                     </p>
                     <p class="card-text">
-                      Le portail FGIC est un SIG (systèmes d'information
-                      géospatiale) désormais responsable d'organiser et de
-                      présenter des données alphanumériques qui sont
+                      Le portail « FGIC » désormais responsable d'organiser et
+                      de présenter des données alphanumériques qui sont
                       spatialement référencées (données géospatiales).
                     </p>
                     <p class="card-text">
@@ -249,30 +242,28 @@ export default function Home() {
                   >
                     <h6 class="card-title">Description :</h6>
                     <p>
-                      Un logiciel WMS (ou logiciel de gestion d'entrepôt) permet
+                      <strong>« Carry Track »</strong> est un WMS (Warehouse
+                      Management System - logiciel de gestion d'entrepôt) permet
                       le déplacement, le suivi et le stockage des matériaux dans
                       tout l'entrepôt. Il augmente l'efficacité et réduit les
                       coûts grâce au partage facile des données clés dans toute
                       l'entreprise. Il inclut généralement des fonctionnalités
                       pour le contrôle et le suivi des stocks ainsi que pour la
-                      gestion des achats et la surveillance des canaux. Ce type
-                      de système de gestion d'entrepôt wms intègre également des
-                      outils de gestion client et fournisseur, de comptabilité
-                      et de reporting des activités. Parmi les avantages d'un
-                      WMS vous retrouverez l'optimisation et une meilleure
-                      visibilité des stocks ainsi que des coûts opérationnels
-                      moindres.
+                      gestion des achats et la surveillance des canaux. intègre
+                      également des outils de gestion client et fournisseur, de
+                      comptabilité et de reporting des activités. Parmi les
+                      avantages d'un WMS vous retrouverez l'optimisation et une
+                      meilleure visibilité des stocks ainsi que des coûts
+                      opérationnels moindres.
                     </p>
                     <p>
-                      <strong>« Carry Track »</strong> (WMS (Warehouse
-                      Management System) signifie logiciel de gestion
-                      d'entrepôt) est un outil qui permet aux organisations de
-                      contrôler les mouvements et le stockage de marchandises
-                      dans des entrepôts. Il contribue à la gestion d'opérations
-                      telles que le suivi des stocks, la conception des
-                      entrepôts, le prélèvement et l'emballage des marchandises,
-                      l'expédition, la gestion des quais et des docks, ainsi que
-                      la dotation en personnel.
+                      <strong>« Carry Track »</strong> est un outil qui permet
+                      aux organisations de contrôler les mouvements et le
+                      stockage de marchandises dans des entrepôts. Il contribue
+                      à la gestion d'opérations telles que le suivi des stocks,
+                      la conception des entrepôts, le prélèvement et l'emballage
+                      des marchandises, l'expédition, la gestion des quais et
+                      des docks, ainsi que la dotation en personnel.
                     </p>
                     <h6 class="card-title">Fonctionnalités :</h6>
                     <ul>
@@ -386,20 +377,21 @@ export default function Home() {
                   >
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
-                      Un logiciel de facturation vous est utile pour faciliter
-                      la gestion des factures de vente (en ligne). Ce type
-                      d'outil vous permet de créer facilement une facture et de
-                      la traiter efficacement grâce à ses processus automatisés
+                      <strong>« AddInvoice »</strong> est Un logiciel de
+                      facturation vous est utile pour faciliter la gestion des
+                      factures de vente (en ligne). Ce type d'outil vous permet
+                      de créer facilement une facture et de la traiter
+                      efficacement grâce à ses processus automatisés
                       (production, envoi de factures et réception des
                       paiements). La solution de facturation est conçue pour
                       fonctionner avec des applications de comptabilité et
                       fournit une variété d'outils de reporting des activités.
                     </p>
                     <p class="card-text">
-                      est le logiciel de facturation permet la création de devis
-                      et factures, la planification des factures récurrentes, la
-                      gestion des factures impayées et même la signature
-                      électronique et le paiement en ligne.
+                      <strong>« AddInvoice »</strong> permet la création de
+                      devis et factures, la planification des factures
+                      récurrentes, la gestion des factures impayées et même la
+                      signature électronique et le paiement en ligne.
                     </p>
                     <h6 class="card-title">Fonctionnalités</h6>
                     <ul>
@@ -471,26 +463,20 @@ export default function Home() {
                       d’accéder au dossier médical de ses patients.
                     </p>
                     <p>
-                      Un logiciel de dossier patient informatisé automatise la
-                      documentation, le stockage et la récupération des dossiers
-                      médicaux des patients. Il rationalise la saisie des
-                      données, automatise le diagnostic et la sélection du code
-                      CPT, limite les enregistrements papier requis, réduit les
-                      coûts de transcription, fournit l'historique actualisé des
-                      dossiers de patients et diminue les délais pour les
-                      consultations des patients et l'obtention des résultats de
-                      laboratoire. Grâce aux outils de dossier patient
-                      informatisé, les médecins, les cabinets et les organismes
-                      de soins de santé gagnent du temps, réduisent les erreurs
-                      médicales, exécutent moins de tâches administratives et
-                      fournissent des diagnostics plus précis à leurs patients.
-                      Parcourez notre liste de produits pour trouver le logiciel
-                      qui répondra à vos besoins en termes de dossier de patient
-                      informatisé. Vous pouvez également sélectionner les
-                      logiciels de dossier patient infomatisé gratuits. Voir
-                      aussi : logiciel de gestion des soins de santé, logiciel
-                      de facturation pour le secteur médical et logiciel de
-                      transcription médicale.
+                      <strong>« DMI »</strong>Un logiciel de dossier patient
+                      informatisé automatise la documentation, le stockage et la
+                      récupération des dossiers médicaux des patients. Il
+                      rationalise la saisie des données, automatise le
+                      diagnostic et la sélection du code CPT, limite les
+                      enregistrements papier requis, réduit les coûts de
+                      transcription, fournit l'historique actualisé des dossiers
+                      de patients et diminue les délais pour les consultations
+                      des patients et l'obtention des résultats de laboratoire.
+                      Grâce aux outils de dossier patient informatisé, les
+                      médecins, les cabinets et les organismes de soins de santé
+                      gagnent du temps, réduisent les erreurs médicales,
+                      exécutent moins de tâches administratives et fournissent
+                      des diagnostics plus précis à leurs patients.
                     </p>
                     <p>
                       Le déploiement du Dossier Médical Informatisé (DMI) dans
@@ -579,18 +565,18 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="ticketing">
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
-                      Un logiciel pour tour opérateurs gère les forfaits, les
-                      clients, l'émission de billets et les itinéraires pour les
-                      tour opérateurs, les organisateurs de forfaits vacances,
-                      les spécialistes du marketing de destinations et les
-                      entreprises de transport en commun. Il permet de générer
-                      des devis, de définir des itinéraires et de gérer les
-                      réservations des clients de voyages organisés. Il aide
-                      également les tour opérateurs à automatiser leurs
-                      processus métier, tels que la comptabilité, la
-                      facturation, le marketing et le reporting des activités.
-                      Voir aussi : logiciel de réservation et logiciel pour
-                      agences de voyages.
+                      <strong>« Ticketing »</strong> est un logiciel pour tour
+                      opérateurs gère les forfaits, les clients, l'émission de
+                      billets et les itinéraires pour les tour opérateurs, les
+                      organisateurs de forfaits vacances, les spécialistes du
+                      marketing de destinations et les entreprises de transport
+                      en commun. Il permet de générer des devis, de définir des
+                      itinéraires et de gérer les réservations des clients de
+                      voyages organisés. Il aide également les tour opérateurs à
+                      automatiser leurs processus métier, tels que la
+                      comptabilité, la facturation, le marketing et le reporting
+                      des activités. Voir aussi : logiciel de réservation et
+                      logiciel pour agences de voyages.
                     </p>
                     <p class="card-text">
                       <strong>« Ticketing »</strong> est un plateforme pour les

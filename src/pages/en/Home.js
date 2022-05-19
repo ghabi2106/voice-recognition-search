@@ -153,10 +153,11 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="uaesme">
                     <h6 class="card-title">Description</h6>
                     <p>
-                      The UAE SME Portal provides SMEs with convenient access to
-                      detail information on all Government programmes for SME
-                      development , including the various financing schemes and
-                      business support services, offered to SMEs.
+                      The <strong>« UAE SME »</strong> Portal provides SMEs with
+                      convenient access to detail information on all Government
+                      programmes for SME development , including the various
+                      financing schemes and business support services, offered
+                      to SMEs.
                     </p>
                     <p>
                       The Portal also offers information for SMEs on where and
@@ -184,37 +185,31 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="fgic">
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
-                      GIS software, also known as Geographic Information
-                      Systems, creates, analyses, and displays geographic data
+                      <strong>« FGIC »</strong> is a GIS (Geographic Information
+                      Systems), creates, analyses, and displays geographic data
                       on digital maps. Some of the main features of GIS software
                       include map creation and sharing, geocoding, labelling,
                       spacial analysis etc. Geographic Information Systems can
                       help you solve location-related problems using interactive
                       analytical maps. GIS apps can also help manage your land
-                      assets and monitor remote locations on demand. Discover
-                      the most suitable Geographic Information Systems software
-                      for your UK business on Capterra. GIS software includes
-                      desktop, server, web, and mobile solutions and provides
-                      capabilities including image manipulation, spatial
-                      analysis, and map creation.
+                      assets and monitor remote locations on demand.
                     </p>
                     <p class="card-text">
-                      GIS software, or geographic information system, is a tool
-                      that helps businesses create, analyze, and display
-                      geographic data on digital maps. This tool is used by GIS
-                      specialists, city planners, environmental scientists, and
-                      law enforcement teams to analyze the spatial and
-                      geographical data. It enables collaboration between
-                      different business teams to add and edit asset and
-                      location details, thereby acting as a repository of asset
-                      data.
+                      <strong>« FGIC »</strong> is a tool that helps businesses
+                      create, analyze, and display geographic data on digital
+                      maps. This tool is used by GIS specialists, city planners,
+                      environmental scientists, and law enforcement teams to
+                      analyze the spatial and geographical data. It enables
+                      collaboration between different business teams to add and
+                      edit asset and location details, thereby acting as a
+                      repository of asset data.
                     </p>
                     <p class="card-text">
-                      GIS software is deployed by various sectors such as
-                      manufacturing, real estate, government, healthcare, and
-                      public safety, among others. It can also be used for
-                      operations including engineering, planning, management,
-                      insurance, transport, and business.
+                      <strong>« FGIC »</strong> is deployed by various sectors
+                      such as manufacturing, real estate, government,
+                      healthcare, and public safety, among others. It can also
+                      be used for operations including engineering, planning,
+                      management, insurance, transport, and business.
                     </p>
                     <p class="card-text">
                       It allows a user to choose an area of interest, browse and
@@ -509,18 +504,18 @@ export default function Home() {
                   >
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
-                      Billing and Invoicing software automates the process of
-                      producing and sending invoices and receiving payments.
-                      These applications enable the efficient processing of
-                      complex accounts across multiple customers and product
-                      lines, incorporating contract data and customer
-                      relationship management tools. Billing and Invoicing
-                      solutions are designed to work with accounting
-                      applications and provide a variety of business reporting
-                      tools.
+                      <strong>« AddInvoice »</strong> is a Billing and Invoicing
+                      software that automates the process of producing and
+                      sending invoices and receiving payments. These
+                      applications enable the efficient processing of complex
+                      accounts across multiple customers and product lines,
+                      incorporating contract data and customer relationship
+                      management tools. Billing and Invoicing solutions are
+                      designed to work with accounting applications and provide
+                      a variety of business reporting tools.
                     </p>
                     <p class="card-text">
-                      Billing and invoicing software automates payment
+                      <strong>« AddInvoice »</strong> automates payment
                       invoicing, receiving, and processing. These systems
                       efficiently process complex accounts across multiple
                       customers and product lines by incorporating contract data
@@ -602,27 +597,28 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="dmi">
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
-                      EMR is a digital version of the traditional paper-based
-                      medical records, that is normally found in a paper chart.
-                      it stores patient’s medical history, medications,
-                      immunization dates, doctors notes, etc. Also, it helps
-                      centralize patient records.
+                      <strong>« DMI »</strong> EMR (Electronic Medical Records
+                      software) is a digital version of the traditional
+                      paper-based medical records, that is normally found in a
+                      paper chart. it stores patient’s medical history,
+                      medications, immunization dates, doctors notes, etc. Also,
+                      it helps centralize patient records.
                     </p>
                     <p class="card-text">
-                      Electronic Medical Records software (EMR) automates the
-                      documentation, storage and retrieval of patient records.
-                      EMR software streamlines data entry, automates diagnosis
-                      and CPT code selection, minimizes required paper records,
-                      reduces transcription costs, provides up-to-date patient
-                      histories and reduces the turnaround time for patient
-                      visits and retrieving lab results. Using Electronic
-                      Medical Records solutions, doctors, offices and healthcare
-                      organizations save time, reduce medical errors, perform
-                      less paperwork and provide more accurate diagnoses for
-                      their patients. Electronic Medical Records software is
-                      related to Healthcare Management software, Medical Billing
-                      software, Medical Practice Management software, Medical
-                      Scheduling software and Medical Transcription software.
+                      <strong>« DMI »</strong> automates the documentation,
+                      storage and retrieval of patient records. EMR software
+                      streamlines data entry, automates diagnosis and CPT code
+                      selection, minimizes required paper records, reduces
+                      transcription costs, provides up-to-date patient histories
+                      and reduces the turnaround time for patient visits and
+                      retrieving lab results. Using Electronic Medical Records
+                      solutions, doctors, offices and healthcare organizations
+                      save time, reduce medical errors, perform less paperwork
+                      and provide more accurate diagnoses for their patients.{" "}
+                      <strong>« DMI »</strong> is related to Healthcare
+                      Management software, Medical Billing software, Medical
+                      Practice Management software, Medical Scheduling software
+                      and Medical Transcription software.
                     </p>
                     <h6 class="card-title">Features</h6>
                     <ul>
@@ -759,23 +755,22 @@ export default function Home() {
                     </p>
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
-                      Travel Agency software automates the front and back office
-                      activities of travel agencies, vacation packagers,
-                      destination marketers and transit companies. These
-                      applications assist in generating price quotes, developing
-                      itineraries and managing reservations for tour customers
-                      as well as providing easy integration into third party
-                      reservation systems. Travel Agency solutions assist
-                      agencies in automating their business processes, such as
-                      accounting, invoicing, marketing and business reporting.
-                      Travel Agency software is related to Reservations software
-                      and Tour Operator software.
+                      <strong>« Ticketing »</strong> is a Travel Agency software
+                      automates the front and back office activities of travel
+                      agencies, vacation packagers, destination marketers and
+                      transit companies. These applications assist in generating
+                      price quotes, developing itineraries and managing
+                      reservations for tour customers as well as providing easy
+                      integration into third party reservation systems. Travel
+                      Agency solutions assist agencies in automating their
+                      business processes, such as accounting, invoicing,
+                      marketing and business reporting.
                     </p>
                     <p class="card-text">
-                      Tour Operator software manages packages, customers,
-                      ticketing, and itineraries for tour operators, vacation
-                      package companies, destination marketers, and transit
-                      companies.
+                      <strong>« Ticketing »</strong> manages packages,
+                      customers, ticketing, and itineraries for tour operators,
+                      vacation package companies, destination marketers, and
+                      transit companies.
                     </p>
                     <p class="card-text">
                       <strong>« Ticketing »</strong> is back-office system
