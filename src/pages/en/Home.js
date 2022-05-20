@@ -112,9 +112,8 @@ export default function Home() {
                   </div>
                   <div class="card-body text-dark collapse show" id="tv">
                     <h6 class="card-title">Description</h6>
-
                     <p>
-                      The goal principal from the two projects is to manage all
+                      The principal goal from the two projects is to manage all
                       the production process for emdded systems projects by
                       gathering the necessary data from various group to ensure
                       the progress of projects and generating reports for
@@ -127,6 +126,65 @@ export default function Home() {
                       <li>Activity History</li>
                       <li>Scheduling Features</li>
                     </ul>
+                    <h6 class="card-title">Intervention level : </h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#requirements-tv"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="requirements-tv"
+                        >
+                          Requirements analysis and specification
+                        </a>
+                        <div class="collapse" id="requirements-tv">
+                          <ul>
+                            <li>
+                              <strong>Gathering requirements</strong> to
+                              understand and document what is required by users
+                              and other stakeholders.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#design-development-tv"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="design-development-tv"
+                        >
+                          Design and development
+                        </a>
+                        <div class="collapse" id="design-development-tv">
+                          <ul>
+                            <li>
+                              <strong>Developing a design</strong> around
+                              solutions to the problems presented by
+                              requirements, often involving process models and
+                              storyboards.
+                            </li>
+                            <li>
+                              <strong>Building a model</strong> with a modeling
+                              tool that uses a modeling language like SysML or
+                              UML to conduct early validation, prototyping and
+                              simulation of the design.
+                            </li>
+                            <li>
+                              <strong>Constructing code </strong>in the
+                              appropriate programming language. Involves peer
+                              and team review to eliminate problems early and
+                              produce quality software faster.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>Testing</li>
+                      <li>Deployment</li>
+                      <li>Maintenance and support</li>
+                    </ol>
                   </div>
                 </div>
               </div>
@@ -172,6 +230,75 @@ export default function Home() {
                       on the products and services being offered, and contact
                       details.
                     </p>
+                    <h6 class="card-title">Intervention level : </h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#requirements-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="requirements-uaesme"
+                        >
+                          Requirements analysis and specification
+                        </a>
+                        <div class="collapse" id="requirements-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Gathering requirements</strong> to
+                              understand and document what is required by users
+                              and other stakeholders.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Choosing or building an architecture</strong> as
+                        the underlying structure within which the software will
+                        operate.
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#design-development-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="design-development-uaesme"
+                        >
+                          Design and development
+                        </a>
+                        <div class="collapse" id="design-development-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Developing a design </strong>around
+                              solutions to the problems presented by
+                              requirements, often involving process models and
+                              storyboards.
+                            </li>
+                            <li>
+                              <strong>Building a model</strong> with a modeling
+                              tool that uses a modeling language like SysML or
+                              UML to conduct early validation, prototyping and
+                              simulation of the design.
+                            </li>
+                            <li>
+                              <strong>Constructing code </strong>in the
+                              appropriate programming language. Involves peer
+                              and team review to eliminate problems early and
+                              produce quality software faster.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Migrating data</strong> to the new or updated
+                        software from existing applications or data sources if
+                        necessary.
+                      </li>
+                      <li>Testing</li>
+                      <li>Deployment</li>
+                      <li>Maintenance and support</li>
+                    </ol>
                   </div>
                 </div>
                 <div class="card border-warning mb-3">
@@ -366,6 +493,75 @@ export default function Home() {
                         </p>
                       </li>
                     </ul>
+                    <h6 class="card-title">Intervention level : </h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#requirements-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="requirements-uaesme"
+                        >
+                          Requirements analysis and specification
+                        </a>
+                        <div class="collapse" id="requirements-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Gathering requirements</strong> to
+                              understand and document what is required by users
+                              and other stakeholders.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Choosing or building an architecture</strong> as
+                        the underlying structure within which the software will
+                        operate.
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#design-development-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="design-development-uaesme"
+                        >
+                          Design and development
+                        </a>
+                        <div class="collapse" id="design-development-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Developing a design </strong>around
+                              solutions to the problems presented by
+                              requirements, often involving process models and
+                              storyboards.
+                            </li>
+                            <li>
+                              <strong>Building a model</strong> with a modeling
+                              tool that uses a modeling language like SysML or
+                              UML to conduct early validation, prototyping and
+                              simulation of the design.
+                            </li>
+                            <li>
+                              <strong>Constructing code </strong>in the
+                              appropriate programming language. Involves peer
+                              and team review to eliminate problems early and
+                              produce quality software faster.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Migrating data</strong> to the new or updated
+                        software from existing applications or data sources if
+                        necessary.
+                      </li>
+                      <li>Testing</li>
+                      <li>Deployment</li>
+                      <li>Maintenance and support</li>
+                    </ol>
                   </div>
                 </div>
               </div>
@@ -469,6 +665,68 @@ export default function Home() {
                         identify ways to make the best use of available space.
                       </li>
                     </ul>
+                    <h6 class="card-title">Intervention level : </h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#requirements-carrytrack"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="requirements-carrytrack"
+                        >
+                          Requirements analysis and specification
+                        </a>
+                        <div class="collapse" id="requirements-carrytrack">
+                          <ul>
+                            <li>
+                              <strong>Gathering requirements</strong> to
+                              understand and document what is required by users
+                              and other stakeholders.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#design-development-carrytrack"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="design-development-carrytrack"
+                        >
+                          Design and development
+                        </a>
+                        <div
+                          class="collapse"
+                          id="design-development-carrytrack"
+                        >
+                          <ul>
+                            <li>
+                              <strong>Developing a design </strong>around
+                              solutions to the problems presented by
+                              requirements, often involving process models and
+                              storyboards.
+                            </li>
+                            <li>
+                              <strong>Building a model</strong> with a modeling
+                              tool that uses a modeling language like SysML or
+                              UML to conduct early validation, prototyping and
+                              simulation of the design.
+                            </li>
+                            <li>
+                              <strong>Constructing code </strong>in the
+                              appropriate programming language. Involves peer
+                              and team review to eliminate problems early and
+                              produce quality software faster.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>Testing</li>
+                      <li>Deployment</li>
+                      <li>Maintenance and support</li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
                       .Net Framework 4, Architecture Multi layer, MVC.
@@ -580,6 +838,75 @@ export default function Home() {
                         </a>
                       </li>
                     </ul>
+                    <h6 class="card-title">Intervention level : </h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#requirements-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="requirements-uaesme"
+                        >
+                          Requirements analysis and specification
+                        </a>
+                        <div class="collapse" id="requirements-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Gathering requirements</strong> to
+                              understand and document what is required by users
+                              and other stakeholders.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Choosing or building an architecture</strong> as
+                        the underlying structure within which the software will
+                        operate.
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#design-development-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="design-development-uaesme"
+                        >
+                          Design and development
+                        </a>
+                        <div class="collapse" id="design-development-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Developing a design </strong>around
+                              solutions to the problems presented by
+                              requirements, often involving process models and
+                              storyboards.
+                            </li>
+                            <li>
+                              <strong>Building a model</strong> with a modeling
+                              tool that uses a modeling language like SysML or
+                              UML to conduct early validation, prototyping and
+                              simulation of the design.
+                            </li>
+                            <li>
+                              <strong>Constructing code </strong>in the
+                              appropriate programming language. Involves peer
+                              and team review to eliminate problems early and
+                              produce quality software faster.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Migrating data</strong> to the new or updated
+                        software from existing applications or data sources if
+                        necessary.
+                      </li>
+                      <li>Testing</li>
+                      <li>Deployment</li>
+                      <li>Maintenance and support</li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
                       .Net Framework 4, Architecture Multi layer, MVC.
@@ -732,6 +1059,75 @@ export default function Home() {
                         </ul>
                       </li>
                     </ul>
+                    <h6 class="card-title">Intervention level : </h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#requirements-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="requirements-uaesme"
+                        >
+                          Requirements analysis and specification
+                        </a>
+                        <div class="collapse" id="requirements-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Gathering requirements</strong> to
+                              understand and document what is required by users
+                              and other stakeholders.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Choosing or building an architecture</strong> as
+                        the underlying structure within which the software will
+                        operate.
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#design-development-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="design-development-uaesme"
+                        >
+                          Design and development
+                        </a>
+                        <div class="collapse" id="design-development-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Developing a design </strong>around
+                              solutions to the problems presented by
+                              requirements, often involving process models and
+                              storyboards.
+                            </li>
+                            <li>
+                              <strong>Building a model</strong> with a modeling
+                              tool that uses a modeling language like SysML or
+                              UML to conduct early validation, prototyping and
+                              simulation of the design.
+                            </li>
+                            <li>
+                              <strong>Constructing code </strong>in the
+                              appropriate programming language. Involves peer
+                              and team review to eliminate problems early and
+                              produce quality software faster.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Migrating data</strong> to the new or updated
+                        software from existing applications or data sources if
+                        necessary.
+                      </li>
+                      <li>Testing</li>
+                      <li>Deployment</li>
+                      <li>Maintenance and support</li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
                       .Net Core 2.0, Clean Architecture, MVC.
@@ -793,6 +1189,75 @@ export default function Home() {
                       &amp; improving customer satisfaction through a complete
                       system including online booking (B2B/B2C)
                     </p>
+                    <h6 class="card-title">Intervention level : </h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#requirements-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="requirements-uaesme"
+                        >
+                          Requirements analysis and specification
+                        </a>
+                        <div class="collapse" id="requirements-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Gathering requirements</strong> to
+                              understand and document what is required by users
+                              and other stakeholders.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Choosing or building an architecture</strong> as
+                        the underlying structure within which the software will
+                        operate.
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#design-development-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="design-development-uaesme"
+                        >
+                          Design and development
+                        </a>
+                        <div class="collapse" id="design-development-uaesme">
+                          <ul>
+                            <li>
+                              <strong>Developing a design </strong>around
+                              solutions to the problems presented by
+                              requirements, often involving process models and
+                              storyboards.
+                            </li>
+                            <li>
+                              <strong>Building a model</strong> with a modeling
+                              tool that uses a modeling language like SysML or
+                              UML to conduct early validation, prototyping and
+                              simulation of the design.
+                            </li>
+                            <li>
+                              <strong>Constructing code </strong>in the
+                              appropriate programming language. Involves peer
+                              and team review to eliminate problems early and
+                              produce quality software faster.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>Migrating data</strong> to the new or updated
+                        software from existing applications or data sources if
+                        necessary.
+                      </li>
+                      <li>Testing</li>
+                      <li>Deployment</li>
+                      <li>Maintenance and support</li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
                       .Net Core 2.1, Clean Architecture, Restful Api, React.

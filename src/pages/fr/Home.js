@@ -108,7 +108,7 @@ export default function Home() {
                   </div>
                   <div class="card-body text-dark collapse show" id="tv">
                     <h6 class="card-title">Description</h6>
-                    <p>
+                    <p class="card-text">
                       Le but de ces deux applications est de collecter les
                       données nécessaires des différents phase de production des
                       projets en système embarqués à partir des différents
@@ -123,11 +123,114 @@ export default function Home() {
                       <li>Historique des activités</li>
                       <li>Plannification</li>
                     </ul>
+                    <h6 class="card-title">Niveau d'intervention :</h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-détaillée-tv"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-détaillée-tv"
+                        >
+                          Conception détaillée
+                        </a>
+                        <div class="collapse" id="conception-détaillée-tv">
+                          La conception détaillée est la phase de développement
+                          du projet. C’est ici que l’on construit le projet dans
+                          son intégralité et dans le respect des cahiers des
+                          charges.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#tests-recettes-tv"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="tests-recettes-tv"
+                        >
+                          Tests / Recettes
+                        </a>
+                        <div class="collapse" id="tests-recettes-tv">
+                          <p>
+                            La phase de test intervient ensuite pour{" "}
+                            <strong>
+                              identifier les bugs potentiels et vérifier le bon
+                              respect des cahiers charges
+                            </strong>
+                            . Dans le milieu du web, la phase de test est
+                            souvent réalisée avec des{" "}
+                            <strong>“beta-testeurs”</strong> qui testent et font
+                            remonter les bugs éventuels qu’ils rencontrent en
+                            échange d’une utilisation privilégiée avant le
+                            lancement du projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#déploiement-tv"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="déploiement-tv"
+                        >
+                          Déploiement
+                        </a>
+                        <div class="collapse" id="déploiement-tv"></div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#suivi-pilotage-tv"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="suivi-pilotage-tv"
+                        >
+                          Suivi / Pilotage
+                        </a>
+                        <div class="collapse" id="suivi-pilotage-tv">
+                          <p>
+                            La phase de suivi consiste à{" "}
+                            <strong>
+                              mesurer périodiquement l’efficacité du projet
+                            </strong>{" "}
+                            par rapport aux objectifs initialement fixés, et
+                            mettre en place des{" "}
+                            <strong>actions correctives</strong> pour réellement
+                            “<strong>piloter</strong>” le projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#amélioration-continue-tv"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="amélioration-continue-tv"
+                        >
+                          Amélioration continue
+                        </a>
+                        <div class="collapse" id="amélioration-continue-tv">
+                          <p>
+                            L’amélioration continue consiste à mettre en place
+                            des actions correctives en regard des{" "}
+                            <strong>retombées mesurées</strong> dans la phase de
+                            suivi.
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
-                    <p>
+                    <p class="card-text">
+                      .Net Core 3.1, .Net Standard 4.6, Angular 10, dapper, EF
+                    </p>
+                    <h6 class="card-title">Methodologies</h6>
+                    <p class="card-text">
                       La méthodologie suivie dans les deux projets Agile Scrum.
-                      On travaille par sprint, chaque sprint dure 2 semaines, et
-                      chaque semaine on a une réunion avec le client.
+                      On travaille par sprint, chaque sprint dure 2 semaines.
                     </p>
                   </div>
                 </div>
@@ -174,6 +277,205 @@ export default function Home() {
                       leurs entreprises, une description des produits et
                       services proposés et des coordonnées.
                     </p>
+                    <h6 class="card-title">Niveau d'intervention :</h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#definition-objectifs-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="definition-objectifs-uaesme"
+                        >
+                          Définition d'objectifs
+                        </a>
+                        <div class="collapse" id="definition-objectifs-uaesme">
+                          Il vous faudra répondre à la question “Pourquoi ?”.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#recherche-solutions-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="recherche-solutions-uaesme"
+                        >
+                          Recherche de solutions
+                        </a>
+                        <div class="collapse" id="recherche-solutions-uaesme">
+                          Une fois vos objectifs définis, vous devez rechercher
+                          des solutions permettant d’y répondre. Vous devez donc
+                          lister l’ensemble des solutions possibles et les
+                          classer en fonction de vos critères de choix (les plus
+                          souvent efficacité/coût/délai).
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-fonctionnel-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-fonctionnel-uaesme"
+                        >
+                          Cahier des charges fonctionnel
+                        </a>
+                        <div
+                          class="collapse"
+                          id="cahier-charges-fonctionnel-uaesme"
+                        >
+                          Vous devez lister, définir et détailler l’ensemble des
+                          fonctions auxquelles votre solution devra répondre
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-technique-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-technique-uaesme"
+                        >
+                          Cahier des charges technique
+                        </a>
+                        <div
+                          class="collapse"
+                          id="cahier-charges-technique-uaesme"
+                        >
+                          Le cahier des charges techniques est l’étape qui va
+                          définir les solutions technologiques à utiliser pour
+                          répondre au cahier des charges fonctionnelles. Le
+                          cahier des charges techniques statuera sur les
+                          librairies à utiliser(Bootstrap, Angular, ...)
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-preliminaire-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-preliminaire-uaesme"
+                        >
+                          Conception préliminaire
+                        </a>
+                        <div
+                          class="collapse"
+                          id="conception-preliminaire-uaesme"
+                        >
+                          la conception préliminaire est la première étape de la
+                          conception pure, c’est ici que vous allez réaliser
+                          dans les grandes lignes la maquette visuelle (web
+                          design) de votre projet. Dans cette étape les
+                          principales composantes à prendre en compte sont
+                          l’ergonomie et l’expérience utilisateur que vous
+                          souhaitez offrir.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-détaillée-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-détaillée-uaesme"
+                        >
+                          Conception détaillée
+                        </a>
+                        <div class="collapse" id="conception-détaillée-uaesme">
+                          La conception détaillée est la phase de développement
+                          du projet. C’est ici que l’on construit le projet dans
+                          son intégralité et dans le respect des cahiers des
+                          charges.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#tests-recettes-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="tests-recettes-uaesme"
+                        >
+                          Tests / Recettes
+                        </a>
+                        <div class="collapse" id="tests-recettes-uaesme">
+                          <p>
+                            La phase de test intervient ensuite pour{" "}
+                            <strong>
+                              identifier les bugs potentiels et vérifier le bon
+                              respect des cahiers charges
+                            </strong>
+                            . Dans le milieu du web, la phase de test est
+                            souvent réalisée avec des{" "}
+                            <strong>“beta-testeurs”</strong> qui testent et font
+                            remonter les bugs éventuels qu’ils rencontrent en
+                            échange d’une utilisation privilégiée avant le
+                            lancement du projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#déploiement-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="déploiement-uaesme"
+                        >
+                          Déploiement
+                        </a>
+                        <div class="collapse" id="déploiement-uaesme"></div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#suivi-pilotage-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="suivi-pilotage-uaesme"
+                        >
+                          Suivi / Pilotage
+                        </a>
+                        <div class="collapse" id="suivi-pilotage-uaesme">
+                          <p>
+                            La phase de suivi consiste à{" "}
+                            <strong>
+                              mesurer périodiquement l’efficacité du projet
+                            </strong>{" "}
+                            par rapport aux objectifs initialement fixés, et
+                            mettre en place des{" "}
+                            <strong>actions correctives</strong> pour réellement
+                            “<strong>piloter</strong>” le projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#amélioration-continue-uaesme"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="amélioration-continue-uaesme"
+                        >
+                          Amélioration continue
+                        </a>
+                        <div class="collapse" id="amélioration-continue-uaesme">
+                          <p>
+                            L’amélioration continue consiste à mettre en place
+                            des actions correctives en regard des{" "}
+                            <strong>retombées mesurées</strong> dans la phase de
+                            suivi.
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
+                    <h6 class="card-title">Outils</h6>
+                    <p>
+                      .Net Core 3.1, Orchard CMS, Clean Architecture, Razor
+                      Pages, SCSS.
+                    </p>
                   </div>
                 </div>
                 <div class="card border-warning mb-3">
@@ -208,6 +510,197 @@ export default function Home() {
                       des statistiques et des cartogrammes qui montrent les
                       changements historiques et les évolutions actuelles.
                     </p>
+                    <h6 class="card-title">Niveau d'intervention :</h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#definition-objectifs-fgic"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="definition-objectifs-fgic"
+                        >
+                          Définition d'objectifs
+                        </a>
+                        <div class="collapse" id="definition-objectifs-fgic">
+                          Il vous faudra répondre à la question “Pourquoi ?”.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#recherche-solutions-fgic"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="recherche-solutions-fgic"
+                        >
+                          Recherche de solutions
+                        </a>
+                        <div class="collapse" id="recherche-solutions-fgic">
+                          Une fois vos objectifs définis, vous devez rechercher
+                          des solutions permettant d’y répondre. Vous devez donc
+                          lister l’ensemble des solutions possibles et les
+                          classer en fonction de vos critères de choix (les plus
+                          souvent efficacité/coût/délai).
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-fonctionnel-fgic"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-fonctionnel-fgic"
+                        >
+                          Cahier des charges fonctionnel
+                        </a>
+                        <div
+                          class="collapse"
+                          id="cahier-charges-fonctionnel-fgic"
+                        >
+                          Vous devez lister, définir et détailler l’ensemble des
+                          fonctions auxquelles votre solution devra répondre
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-technique-fgic"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-technique-fgic"
+                        >
+                          Cahier des charges technique
+                        </a>
+                        <div
+                          class="collapse"
+                          id="cahier-charges-technique-fgic"
+                        >
+                          Le cahier des charges techniques est l’étape qui va
+                          définir les solutions technologiques à utiliser pour
+                          répondre au cahier des charges fonctionnelles. Le
+                          cahier des charges techniques statuera sur les
+                          librairies à utiliser(Bootstrap, Angular, ...)
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-preliminaire-fgic"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-preliminaire-fgic"
+                        >
+                          Conception préliminaire
+                        </a>
+                        <div class="collapse" id="conception-preliminaire-fgic">
+                          la conception préliminaire est la première étape de la
+                          conception pure, c’est ici que vous allez réaliser
+                          dans les grandes lignes la maquette visuelle (web
+                          design) de votre projet. Dans cette étape les
+                          principales composantes à prendre en compte sont
+                          l’ergonomie et l’expérience utilisateur que vous
+                          souhaitez offrir.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-détaillée"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-détaillée-fgic"
+                        >
+                          Conception détaillée
+                        </a>
+                        <div class="collapse" id="conception-détaillée-fgic">
+                          La conception détaillée est la phase de développement
+                          du projet. C’est ici que l’on construit le projet dans
+                          son intégralité et dans le respect des cahiers des
+                          charges.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#tests-recettes-fgic"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="tests-recettes-fgic"
+                        >
+                          Tests / Recettes
+                        </a>
+                        <div class="collapse" id="tests-recettes-fgic">
+                          <p>
+                            La phase de test intervient ensuite pour{" "}
+                            <strong>
+                              identifier les bugs potentiels et vérifier le bon
+                              respect des cahiers charges
+                            </strong>
+                            . Dans le milieu du web, la phase de test est
+                            souvent réalisée avec des{" "}
+                            <strong>“beta-testeurs”</strong> qui testent et font
+                            remonter les bugs éventuels qu’ils rencontrent en
+                            échange d’une utilisation privilégiée avant le
+                            lancement du projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#déploiement-fgic"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="déploiement-fgic"
+                        >
+                          Déploiement
+                        </a>
+                        <div class="collapse" id="déploiement-fgic"></div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#suivi-pilotage-fgic"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="suivi-pilotage-fgic"
+                        >
+                          Suivi / Pilotage
+                        </a>
+                        <div class="collapse" id="suivi-pilotage-fgic">
+                          <p>
+                            La phase de suivi consiste à{" "}
+                            <strong>
+                              mesurer périodiquement l’efficacité du projet
+                            </strong>{" "}
+                            par rapport aux objectifs initialement fixés, et
+                            mettre en place des{" "}
+                            <strong>actions correctives</strong> pour réellement
+                            “<strong>piloter</strong>” le projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#amélioration-continue-fgic"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="amélioration-continue-fgic"
+                        >
+                          Amélioration continue
+                        </a>
+                        <div class="collapse" id="amélioration-continue-fgic">
+                          <p>
+                            L’amélioration continue consiste à mettre en place
+                            des actions correctives en regard des{" "}
+                            <strong>retombées mesurées</strong> dans la phase de
+                            suivi.
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
                     <p>
                       .Net Core 3.1, Orchard CMS, Clean Architecture, Razor
@@ -343,6 +836,112 @@ export default function Home() {
                         meilleure utilisation possible de l'espace disponible.
                       </li>
                     </ul>
+                    <h6 class="card-title">Niveau d'intervention :</h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-détaillée-carrytrack"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-détaillée-carrytrack"
+                        >
+                          Conception détaillée
+                        </a>
+                        <div
+                          class="collapse"
+                          id="conception-détaillée-carrytrack"
+                        >
+                          La conception détaillée est la phase de développement
+                          du projet. C’est ici que l’on construit le projet dans
+                          son intégralité et dans le respect des cahiers des
+                          charges.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#tests-recette-carrytracks"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="tests-recettes-carrytrack"
+                        >
+                          Tests / Recettes
+                        </a>
+                        <div class="collapse" id="tests-recettes-carrytrack">
+                          <p>
+                            La phase de test intervient ensuite pour{" "}
+                            <strong>
+                              identifier les bugs potentiels et vérifier le bon
+                              respect des cahiers charges
+                            </strong>
+                            . Dans le milieu du web, la phase de test est
+                            souvent réalisée avec des{" "}
+                            <strong>“beta-testeurs”</strong> qui testent et font
+                            remonter les bugs éventuels qu’ils rencontrent en
+                            échange d’une utilisation privilégiée avant le
+                            lancement du projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#déploiement-carrytrack"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="déploiement-carrytrack"
+                        >
+                          Déploiement
+                        </a>
+                        <div class="collapse" id="déploiement-carrytrack"></div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#suivi-pilotage-carrytrack"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="suivi-pilotage-carrytrack"
+                        >
+                          Suivi / Pilotage
+                        </a>
+                        <div class="collapse" id="suivi-pilotage-carrytrack">
+                          <p>
+                            La phase de suivi consiste à{" "}
+                            <strong>
+                              mesurer périodiquement l’efficacité du projet
+                            </strong>{" "}
+                            par rapport aux objectifs initialement fixés, et
+                            mettre en place des{" "}
+                            <strong>actions correctives</strong> pour réellement
+                            “<strong>piloter</strong>” le projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#amélioration-continue-carrytrack"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="amélioration-continue-carrytrack"
+                        >
+                          Amélioration continue
+                        </a>
+                        <div
+                          class="collapse"
+                          id="amélioration-continue-carrytrack"
+                        >
+                          <p>
+                            L’amélioration continue consiste à mettre en place
+                            des actions correctives en regard des{" "}
+                            <strong>retombées mesurées</strong> dans la phase de
+                            suivi.
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
                       .Net Core 2.1, CSLA.NET, Architecture Multi layer, MVC,
@@ -442,6 +1041,212 @@ export default function Home() {
                       <li>Historique des activités</li>
                       <li>La gestion des clients</li>
                     </ul>
+                    <h6 class="card-title">Niveau d'intervention :</h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#definition-objectifs-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="definition-objectifs-addinvoice"
+                        >
+                          Définition d'objectifs
+                        </a>
+                        <div
+                          class="collapse"
+                          id="definition-objectifs-addinvoice"
+                        >
+                          Il vous faudra répondre à la question “Pourquoi ?”.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#recherche-solutions-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="recherche-solutions-addinvoice"
+                        >
+                          Recherche de solutions
+                        </a>
+                        <div
+                          class="collapse"
+                          id="recherche-solutions-addinvoice"
+                        >
+                          Une fois vos objectifs définis, vous devez rechercher
+                          des solutions permettant d’y répondre. Vous devez donc
+                          lister l’ensemble des solutions possibles et les
+                          classer en fonction de vos critères de choix (les plus
+                          souvent efficacité/coût/délai).
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-fonctionnel-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-fonctionnel-addinvoice"
+                        >
+                          Cahier des charges fonctionnel
+                        </a>
+                        <div
+                          class="collapse"
+                          id="cahier-charges-fonctionnel-addinvoice"
+                        >
+                          Vous devez lister, définir et détailler l’ensemble des
+                          fonctions auxquelles votre solution devra répondre
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-technique-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-technique-addinvoice"
+                        >
+                          Cahier des charges technique
+                        </a>
+                        <div
+                          class="collapse"
+                          id="cahier-charges-technique-addinvoice"
+                        >
+                          Le cahier des charges techniques est l’étape qui va
+                          définir les solutions technologiques à utiliser pour
+                          répondre au cahier des charges fonctionnelles. Le
+                          cahier des charges techniques statuera sur les
+                          librairies à utiliser(Bootstrap, Angular, ...)
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-preliminaire-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-preliminaire-addinvoice"
+                        >
+                          Conception préliminaire
+                        </a>
+                        <div
+                          class="collapse"
+                          id="conception-preliminaire-addinvoice"
+                        >
+                          la conception préliminaire est la première étape de la
+                          conception pure, c’est ici que vous allez réaliser
+                          dans les grandes lignes la maquette visuelle (web
+                          design) de votre projet. Dans cette étape les
+                          principales composantes à prendre en compte sont
+                          l’ergonomie et l’expérience utilisateur que vous
+                          souhaitez offrir.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-détaillée-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-détaillée-addinvoice"
+                        >
+                          Conception détaillée
+                        </a>
+                        <div
+                          class="collapse"
+                          id="conception-détaillée-addinvoice"
+                        >
+                          La conception détaillée est la phase de développement
+                          du projet. C’est ici que l’on construit le projet dans
+                          son intégralité et dans le respect des cahiers des
+                          charges.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#tests-recettes-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="tests-recettes-addinvoice"
+                        >
+                          Tests / Recettes
+                        </a>
+                        <div class="collapse" id="tests-recettes-addinvoice">
+                          <p>
+                            La phase de test intervient ensuite pour{" "}
+                            <strong>
+                              identifier les bugs potentiels et vérifier le bon
+                              respect des cahiers charges
+                            </strong>
+                            . Dans le milieu du web, la phase de test est
+                            souvent réalisée avec des{" "}
+                            <strong>“beta-testeurs”</strong> qui testent et font
+                            remonter les bugs éventuels qu’ils rencontrent en
+                            échange d’une utilisation privilégiée avant le
+                            lancement du projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#déploiement-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="déploiement-addinvoice"
+                        >
+                          Déploiement
+                        </a>
+                        <div class="collapse" id="déploiement-addinvoice"></div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#suivi-pilotage-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="suivi-pilotage-addinvoice"
+                        >
+                          Suivi / Pilotage
+                        </a>
+                        <div class="collapse" id="suivi-pilotage-addinvoice">
+                          <p>
+                            La phase de suivi consiste à{" "}
+                            <strong>
+                              mesurer périodiquement l’efficacité du projet
+                            </strong>{" "}
+                            par rapport aux objectifs initialement fixés, et
+                            mettre en place des{" "}
+                            <strong>actions correctives</strong> pour réellement
+                            “<strong>piloter</strong>” le projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#amélioration-continue-addinvoice"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="amélioration-continue-addinvoice"
+                        >
+                          Amélioration continue
+                        </a>
+                        <div
+                          class="collapse"
+                          id="amélioration-continue-addinvoice"
+                        >
+                          <p>
+                            L’amélioration continue consiste à mettre en place
+                            des actions correctives en regard des{" "}
+                            <strong>retombées mesurées</strong> dans la phase de
+                            suivi.
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
                       .Net Framework 4, Architecture Multi layer, MVC.
@@ -548,6 +1353,194 @@ export default function Home() {
                         </ul>
                       </li>
                     </ul>
+                    <h6 class="card-title">Niveau d'intervention :</h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#definition-objectifs-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="definition-objectifs-dmi"
+                        >
+                          Définition d'objectifs
+                        </a>
+                        <div class="collapse" id="definition-objectifs-dmi">
+                          Il vous faudra répondre à la question “Pourquoi ?”.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#recherche-solutions-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="recherche-solutions-dmi"
+                        >
+                          Recherche de solutions
+                        </a>
+                        <div class="collapse" id="recherche-solutions-dmi">
+                          Une fois vos objectifs définis, vous devez rechercher
+                          des solutions permettant d’y répondre. Vous devez donc
+                          lister l’ensemble des solutions possibles et les
+                          classer en fonction de vos critères de choix (les plus
+                          souvent efficacité/coût/délai).
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-fonctionnel-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-fonctionnel-dmi"
+                        >
+                          Cahier des charges fonctionnel
+                        </a>
+                        <div
+                          class="collapse"
+                          id="cahier-charges-fonctionnel-dmi"
+                        >
+                          Vous devez lister, définir et détailler l’ensemble des
+                          fonctions auxquelles votre solution devra répondre
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-technique-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-technique-dmi"
+                        >
+                          Cahier des charges technique
+                        </a>
+                        <div class="collapse" id="cahier-charges-technique-dmi">
+                          Le cahier des charges techniques est l’étape qui va
+                          définir les solutions technologiques à utiliser pour
+                          répondre au cahier des charges fonctionnelles. Le
+                          cahier des charges techniques statuera sur les
+                          librairies à utiliser(Bootstrap, Angular, ...)
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-preliminaire-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-preliminaire-dmi"
+                        >
+                          Conception préliminaire
+                        </a>
+                        <div class="collapse" id="conception-preliminaire-dmi">
+                          la conception préliminaire est la première étape de la
+                          conception pure, c’est ici que vous allez réaliser
+                          dans les grandes lignes la maquette visuelle (web
+                          design) de votre projet. Dans cette étape les
+                          principales composantes à prendre en compte sont
+                          l’ergonomie et l’expérience utilisateur que vous
+                          souhaitez offrir.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-détaillée-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-détaillée-dmi"
+                        >
+                          Conception détaillée
+                        </a>
+                        <div class="collapse" id="conception-détaillée-dmi">
+                          La conception détaillée est la phase de développement
+                          du projet. C’est ici que l’on construit le projet dans
+                          son intégralité et dans le respect des cahiers des
+                          charges.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#tests-recettes-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="tests-recettes-dmi"
+                        >
+                          Tests / Recettes
+                        </a>
+                        <div class="collapse" id="tests-recettes-dmi">
+                          <p>
+                            La phase de test intervient ensuite pour{" "}
+                            <strong>
+                              identifier les bugs potentiels et vérifier le bon
+                              respect des cahiers charges
+                            </strong>
+                            . Dans le milieu du web, la phase de test est
+                            souvent réalisée avec des{" "}
+                            <strong>“beta-testeurs”</strong> qui testent et font
+                            remonter les bugs éventuels qu’ils rencontrent en
+                            échange d’une utilisation privilégiée avant le
+                            lancement du projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#déploiement-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="déploiement-dmi"
+                        >
+                          Déploiement
+                        </a>
+                        <div class="collapse" id="déploiement-dmi"></div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#suivi-pilotage-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="suivi-pilotage-dmi"
+                        >
+                          Suivi / Pilotage
+                        </a>
+                        <div class="collapse" id="suivi-pilotage-dmi">
+                          <p>
+                            La phase de suivi consiste à{" "}
+                            <strong>
+                              mesurer périodiquement l’efficacité du projet
+                            </strong>{" "}
+                            par rapport aux objectifs initialement fixés, et
+                            mettre en place des{" "}
+                            <strong>actions correctives</strong> pour réellement
+                            “<strong>piloter</strong>” le projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#amélioration-continue-dmi"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="amélioration-continue-dmi"
+                        >
+                          Amélioration continue
+                        </a>
+                        <div class="collapse" id="amélioration-continue-dmi">
+                          <p>
+                            L’amélioration continue consiste à mettre en place
+                            des actions correctives en regard des{" "}
+                            <strong>retombées mesurées</strong> dans la phase de
+                            suivi.
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
                       .Net Core 2.0, Clean Architecture, MVC.
@@ -621,6 +1614,212 @@ export default function Home() {
                       <li>Traitement des paiements</li>
                       <li>Devis</li>
                     </ul>
+                    <h6 class="card-title">Niveau d'intervention :</h6>
+                    <ol>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#definition-objectifs-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="definition-objectifs-ticketing"
+                        >
+                          Définition d'objectifs
+                        </a>
+                        <div
+                          class="collapse"
+                          id="definition-objectifs-ticketing"
+                        >
+                          Il vous faudra répondre à la question “Pourquoi ?”.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#recherche-solutions-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="recherche-solutions-ticketing"
+                        >
+                          Recherche de solutions
+                        </a>
+                        <div
+                          class="collapse"
+                          id="recherche-solutions-ticketing"
+                        >
+                          Une fois vos objectifs définis, vous devez rechercher
+                          des solutions permettant d’y répondre. Vous devez donc
+                          lister l’ensemble des solutions possibles et les
+                          classer en fonction de vos critères de choix (les plus
+                          souvent efficacité/coût/délai).
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-fonctionnel-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-fonctionnel-ticketing"
+                        >
+                          Cahier des charges fonctionnel
+                        </a>
+                        <div
+                          class="collapse"
+                          id="cahier-charges-fonctionnel-ticketing"
+                        >
+                          Vous devez lister, définir et détailler l’ensemble des
+                          fonctions auxquelles votre solution devra répondre
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#cahier-charges-technique-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="cahier-charges-technique-ticketing"
+                        >
+                          Cahier des charges technique
+                        </a>
+                        <div
+                          class="collapse"
+                          id="cahier-charges-technique-ticketing"
+                        >
+                          Le cahier des charges techniques est l’étape qui va
+                          définir les solutions technologiques à utiliser pour
+                          répondre au cahier des charges fonctionnelles. Le
+                          cahier des charges techniques statuera sur les
+                          librairies à utiliser(Bootstrap, Angular, ...)
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-preliminaire-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-preliminaire-ticketing"
+                        >
+                          Conception préliminaire
+                        </a>
+                        <div
+                          class="collapse"
+                          id="conception-preliminaire-ticketing"
+                        >
+                          la conception préliminaire est la première étape de la
+                          conception pure, c’est ici que vous allez réaliser
+                          dans les grandes lignes la maquette visuelle (web
+                          design) de votre projet. Dans cette étape les
+                          principales composantes à prendre en compte sont
+                          l’ergonomie et l’expérience utilisateur que vous
+                          souhaitez offrir.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#conception-détaillée-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="conception-détaillée-ticketing"
+                        >
+                          Conception détaillée
+                        </a>
+                        <div
+                          class="collapse"
+                          id="conception-détaillée-ticketing"
+                        >
+                          La conception détaillée est la phase de développement
+                          du projet. C’est ici que l’on construit le projet dans
+                          son intégralité et dans le respect des cahiers des
+                          charges.
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#tests-recettes-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="tests-recettes-ticketing"
+                        >
+                          Tests / Recettes
+                        </a>
+                        <div class="collapse" id="tests-recettes-ticketing">
+                          <p>
+                            La phase de test intervient ensuite pour{" "}
+                            <strong>
+                              identifier les bugs potentiels et vérifier le bon
+                              respect des cahiers charges
+                            </strong>
+                            . Dans le milieu du web, la phase de test est
+                            souvent réalisée avec des{" "}
+                            <strong>“beta-testeurs”</strong> qui testent et font
+                            remonter les bugs éventuels qu’ils rencontrent en
+                            échange d’une utilisation privilégiée avant le
+                            lancement du projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#déploiement-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="déploiement-ticketing"
+                        >
+                          Déploiement
+                        </a>
+                        <div class="collapse" id="déploiement-ticketing"></div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#suivi-pilotage-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="suivi-pilotage-ticketing"
+                        >
+                          Suivi / Pilotage
+                        </a>
+                        <div class="collapse" id="suivi-pilotage-ticketing">
+                          <p>
+                            La phase de suivi consiste à{" "}
+                            <strong>
+                              mesurer périodiquement l’efficacité du projet
+                            </strong>{" "}
+                            par rapport aux objectifs initialement fixés, et
+                            mettre en place des{" "}
+                            <strong>actions correctives</strong> pour réellement
+                            “<strong>piloter</strong>” le projet.
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          data-bs-toggle="collapse"
+                          href="#amélioration-continue-ticketing"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="amélioration-continue-ticketing"
+                        >
+                          Amélioration continue
+                        </a>
+                        <div
+                          class="collapse"
+                          id="amélioration-continue-ticketing"
+                        >
+                          <p>
+                            L’amélioration continue consiste à mettre en place
+                            des actions correctives en regard des{" "}
+                            <strong>retombées mesurées</strong> dans la phase de
+                            suivi.
+                          </p>
+                        </div>
+                      </li>
+                    </ol>
                     <h6 class="card-title">Outils</h6>
                     <p class="card-text">
                       .Net Core 2.1, Clean Architecture, Restful Api, React.
