@@ -334,42 +334,53 @@ Stack<int> myStack = new Stack<int>(arr);`}
           <article id="hashtable">
             <h6>Hashtable vs dictionnary</h6>
             <table class="table table-bordered">
-              <tbody>
-                <tr>
-                  <th>Hashtable</th>
-                  <th>Dictionary</th>
-                </tr>
-                <tr>
-                  <td>
-                    elle stocke des paires clé-valeur de n'importe quel type de
-                    données.
-                  </td>
-                  <td>
-                    Dictionary est une collection générique. Il peut donc
-                    stocker des paires clé-valeur de types de données
-                    spécifiques.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Hashtable renvoie null si nous essayons de trouver une clé
-                    qui n'existe pas.
-                  </td>
-                  <td>
-                    Dictionary lève une exception si nous essayons de trouver
-                    une clé qui n'existe pas.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    La récupération des données est plus lente que le
-                    dictionnaire en raison du boxing-unboxing.
-                  </td>
-                  <td>
-                    La récupération des données est plus rapide que Hashtable.
-                  </td>
-                </tr>
-              </tbody>
+              <div>
+                <p>
+                  Un objet Hashtable est constitué de compartiments contenant
+                  les éléments de la collection. Un compartiment est un
+                  sous-groupe virtuel d'éléments dans la Hashtable, ce qui rend
+                  la recherche et la récupération plus facile et plus rapide que
+                  dans la plupart des collections. Chaque compartiment est
+                  associé à un code de hachage qui est généré à l'aide d'une
+                  fonction de hachage et qui est basé sur la clé de l'élément.
+                </p>
+                <tbody>
+                  <tr>
+                    <th>Hashtable</th>
+                    <th>Dictionary</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      elle stocke des paires clé-valeur de n'importe quel type
+                      de données.
+                    </td>
+                    <td>
+                      Dictionary est une collection générique. Il peut donc
+                      stocker des paires clé-valeur de types de données
+                      spécifiques.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Hashtable renvoie null si nous essayons de trouver une clé
+                      qui n'existe pas.
+                    </td>
+                    <td>
+                      Dictionary lève une exception si nous essayons de trouver
+                      une clé qui n'existe pas.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      La récupération des données est plus lente que le
+                      dictionnaire en raison du boxing-unboxing.
+                    </td>
+                    <td>
+                      La récupération des données est plus rapide que Hashtable.
+                    </td>
+                  </tr>
+                </tbody>
+              </div>
             </table>
           </article>
         </section>

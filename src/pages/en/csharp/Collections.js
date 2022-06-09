@@ -324,7 +324,14 @@ Stack<int> myStack = new Stack<int>(arr);`}
           </article>
           <article id="hashtable">
             <h6>Hashtable vs dictionnary</h6>
-            <table class="table table-bordered">
+            <div>
+              <p>
+                A Hashtable object consists of buckets that contain the elements
+                of the collection. A bucket is a virtual subgroup of elements
+                within the Hashtable, which makes searching and retrieving
+                easier and faster than in most collections.
+              </p>
+              <table class="table table-bordered">
               <tbody>
                 <tr>
                   <th>Hashtable</th>
@@ -359,6 +366,7 @@ Stack<int> myStack = new Stack<int>(arr);`}
                 </tr>
               </tbody>
             </table>
+            </div>
           </article>
         </section>
       </div>

@@ -566,6 +566,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/hashcode">
+              GetHashCode
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/hostedservice">
               Hosted-Service Background-Service
             </Link>
@@ -646,6 +651,11 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/userdefinedtype">
               Userdefinedtype
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/references">
+              References
             </Link>
           </li>
         </ul>

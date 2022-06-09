@@ -103,6 +103,7 @@ import CovariancePage from "../../pages/fr/csharp/Covariance";
 import DatatypePage from "../../pages/fr/csharp/Datatype";
 import DelegatePage from "../../pages/fr/csharp/Delegate";
 import EnumindexerPage from "../../pages/fr/csharp/Enumindexer";
+import HashPage from "../../pages/fr/csharp/Hash";
 import MemberwiseclonePage from "../../pages/fr/csharp/Memberwiseclone";
 import OperatoroverloadingPage from "../../pages/fr/csharp/Operatoroverloading";
 import PreprocessordirectivesPage from "../../pages/fr/csharp/Preprocessordirectives";
@@ -264,6 +265,7 @@ export default function Routedotnetfr() {
       <Route path="/boxing" component={BoxingPage} />
       <Route path="/collections" component={CollectionsPage} />
       <Route path="/covariance" component={CovariancePage} />
+      <Route path="/hashcode" component={HashPage} />
       <Route path="/datatype" component={DatatypePage} />
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />

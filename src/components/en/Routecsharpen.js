@@ -103,6 +103,7 @@ import CovariancePage from "../../pages/en/csharp/Covariance";
 import DatatypePage from "../../pages/en/csharp/Datatype";
 import DelegatePage from "../../pages/en/csharp/Delegate";
 import EnumindexerPage from "../../pages/en/csharp/Enumindexer";
+import HashPage from "../../pages/en/csharp/Hash";
 import MemberwiseclonePage from "../../pages/en/csharp/Memberwiseclone";
 import OperatoroverloadingPage from "../../pages/en/csharp/Operatoroverloading";
 import PreprocessordirectivesPage from "../../pages/en/csharp/Preprocessordirectives";
@@ -111,6 +112,7 @@ import StringbuilderPage from "../../pages/en/csharp/Stringbuilder";
 import ThreadsPage from "../../pages/en/csharp/Threads";
 import TuplePage from "../../pages/en/csharp/Tuple";
 import UserdefinedtypePage from "../../pages/en/csharp/Userdefinedtype";
+import ReferencesPage from "../../pages/en/csharp/References";
 //#endregion
 
 export default function Routecsharpen() {
@@ -267,6 +269,7 @@ export default function Routecsharpen() {
       <Route path="/datatype" component={DatatypePage} />
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />
+      <Route path="/hashcode" component={HashPage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/operatoroverloading" component={OperatoroverloadingPage} />
       <Route
@@ -279,6 +282,7 @@ export default function Routecsharpen() {
       <Route path="/tuple" component={TuplePage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/userdefinedtype" component={UserdefinedtypePage} />
+      <Route path="/references" component={ReferencesPage} />
       {
         //#endregion
       }
