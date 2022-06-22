@@ -217,13 +217,19 @@ export default function Nested() {
                 all parts are combined when the application is compiled.
               </p>
               <Highlight language="csharp">
-                {`object o = 10;
-int i = (int)o; //performs unboxing`}
+                {`// Definition in file1.cs
+partial void OnNameChanged();
+
+// Implementation in file2.cs
+partial void OnNameChanged()
+{
+  // method body
+}`}
               </Highlight>
             </div>
           </article>
           <article id="local-functions">
-            <h6>Partial Classes and Methods</h6>
+            <h6>Local Functions</h6>
             <div>
               <p>
                 Starting with C# 7.0, C# supports <em>local functions</em>.
