@@ -217,6 +217,21 @@ export default function Nested() {
                 all parts are combined when the application is compiled.
               </p>
               <Highlight language="csharp">
+                {`public partial class Employee
+{
+    public void DoWork()
+    {
+    }
+}
+
+public partial class Employee
+{
+    public void GoToLunch()
+    {
+    }
+}`}
+              </Highlight>
+              <Highlight language="csharp">
                 {`// Definition in file1.cs
 partial void OnNameChanged();
 
