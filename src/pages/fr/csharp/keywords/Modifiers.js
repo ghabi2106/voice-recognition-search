@@ -469,30 +469,40 @@ private static extern void AVIFileInit();`}
                 </tr>
                 <tr>
                   <td>
-                    Une interface déclare simplement un contrat ou un
-                    comportement que les classes d'implémentation devraient
-                    avoir.
+                    L'héritage multiple n'est pas réalisé par la classe
+                    abstraite.
                   </td>
-                  <td>
-                    Une classe abstraite fournit une implémentation partielle
-                    d'une fonctionnalité qui doit être implémentée par les
-                    entités qui héritent.
-                  </td>
+                  <td>On peut implémenter pusieurs interfaces.</td>
                 </tr>
                 <tr>
-                  <td>
-                    Une interface ne peut déclarer que des propriétés, des
-                    méthodes et des événements sans modificateur d'accès.
-                  </td>
-                  <td>Une classe abstraite déclare également des champs.</td>
+                  <td>La classe hérite d'une autre classe</td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td>Contient constructeur</td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td>Peut contenir des membres statiques</td>
+                  <td>Non</td>
+                </tr>
+                <tr>
+                  <td>Il peut contenir différents types de modificateurs d'accès tels que public, privé, protégé, etc.</td>
+                  <td>Il ne contient que le modificateur d'accès public car tout dans l'interface est public.</td>
+                </tr>
+                <tr>
+                  <td>La classe abstraite peut contenir des méthodes, des champs, des constantes, etc.</td>
+                  <td>L'interface ne peut contenir que des méthodes, des propriétés, des indexeurs et des événements.</td>
+                </tr>
+                <tr>
+                  <td>Il peut être entièrement, partiellement ou non implémenté.</td>
+                  <td>Il doit être entièrement implémenté</td>
                 </tr>
               </tbody>
             </table>
           </article>
           <article id="new">
-            <h6>
-              new (modificateur de membre)
-            </h6>
+            <h6>new (modificateur de membre)</h6>
             <div>
               <p>
                 En cas d'utilisation comme un modificateur de déclaration, le

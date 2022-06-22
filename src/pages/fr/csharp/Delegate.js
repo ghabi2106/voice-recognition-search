@@ -64,6 +64,14 @@ export default function Delegate() {
                     Events
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#event-delegate"
+                  >
+                    Event vs Delegate
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -109,7 +117,7 @@ export default function Delegate() {
                     className="d-inline-flex align-items-center rounded"
                     to="/enumindexer"
                   >
-                    Enumeration, Indexer and Generics 
+                    Enumeration, Indexer and Generics
                   </Link>
                 </li>
                 <li>
@@ -301,6 +309,106 @@ static void Main(string[] args)
                 reçoit la notification est appelée Subscriber . Il peut y avoir
                 plusieurs abonnés à un même événement.
               </p>
+            </div>
+          </article>
+          <article id="event-delegate">
+            <h6>Event vs Delegate</h6>
+            <div>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Delegate</th>
+                    <th>Event</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Un délégué est déclaré à l'aide du mot-clé delegate.
+                    </td>
+                    <td>Un événement est déclaré à l'aide du mot-clé event.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Delegate est un pointeur de fonction. Il contient la
+                      référence d'une ou plusieurs méthodes à l'exécution
+                      (runtime).
+                    </td>
+                    <td>
+                      L'événement est un mécanisme de notification qui dépend
+                      des délégués
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Le délégué est indépendant et ne dépend pas des
+                      événements.
+                    </td>
+                    <td>
+                      An event is dependent on a delegate and cannot be created
+                      without delegates. Event is a wrapper around delegate
+                      instance to prevent users of the delegate from resetting
+                      the delegate and its invocation list and only allows
+                      adding or removing targets from the invocation list.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Delegate includes Combine() and Remove() methods to add
+                      methods to the invocation list.
+                    </td>
+                    <td>
+                      <a
+                        href="https://docs.microsoft.com/en-us/dotnet/api/system.reflection.eventinfo?view=netframework-4.8"
+                        target="_blank"
+                      >
+                        EventInfo
+                      </a>{" "}
+                      class inspect events and to hook up event handlers that
+                      include methods AddEventHandler() and RemoveEventHandler()
+                      methods to add and remove methods to invocation list,
+                      respectively.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Un délégué peut être passé comme paramètre de méthode.
+                    </td>
+                    <td>
+                      Un événement est déclenché mais ne peut pas être passé en
+                      tant que paramètre de méthode.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      L'opérateur = est utilisé pour affecter une seule méthode
+                      et l'opérateur += est utilisé pour affecter plusieurs
+                      méthodes à un délégué.
+                    </td>
+                    <td>
+                      L'opérateur = ne peut pas être utilisé avec des
+                      événements, et seuls les opérateurs += et -= peuvent être
+                      utilisés avec un événement qui ajoute ou supprime un
+                      gestionnaire d'événements. Ces méthodes appellent en
+                      interne les méthodes AddEventHandler et
+                      RemoveEventHandler.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <Highlight language="csharp">
+                {`public delegate void Notify();
+public Notify MyDelegate;
+
+MyDelegate = MyMethod;// valid
+MyDelegate += MyMethod;// valid
+
+public delegate void Notify();
+public event Notify MyEvent;
+
+MyEvent = MyEventHandler;// Error
+MyEvent += MyEventHandler;// valid`}
+              </Highlight>
             </div>
           </article>
         </section>

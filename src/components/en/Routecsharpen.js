@@ -27,6 +27,7 @@ import DotnetPage from "../../pages/en/dotnet/framework/Dotnet";
 import DotnetcomponentsPage from "../../pages/en/dotnet/framework/Dotnetcomponents";
 import AssemblyPage from "../../pages/en/dotnet/framework/Assembly";
 import CLRPage from "../../pages/en/dotnet/framework/Clr";
+import CodedomPage from "../../pages/en/dotnet/framework/Codedom";
 import DllexePage from "../../pages/en/dotnet/framework/Dllexe";
 import EntityframeworkPage from "../../pages/en/dotnet/framework/Entityframework";
 import GcPage from "../../pages/en/dotnet/framework/Gc";
@@ -143,6 +144,7 @@ export default function Routecsharpen() {
       }
       <Route path="/assembly" component={AssemblyPage} />
       <Route path="/clr" component={CLRPage} />
+      <Route path="/codedom" component={CodedomPage} />
       <Route path="/dllexe" component={DllexePage} />
       <Route path="/dotnet" component={DotnetPage} />
       <Route path="/dotnetcomponents" component={DotnetcomponentsPage} />

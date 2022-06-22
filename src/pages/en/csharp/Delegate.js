@@ -64,6 +64,14 @@ export default function Delegate() {
                     Events
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#event-delegate"
+                  >
+                    Event vs Delegate
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -109,7 +117,7 @@ export default function Delegate() {
                     className="d-inline-flex align-items-center rounded"
                     to="/enumindexer"
                   >
-                    Enumeration, Indexer and Generics 
+                    Enumeration, Indexer and Generics
                   </Link>
                 </li>
                 <li>
@@ -297,6 +305,97 @@ static void Main(string[] args)
                 the class who receives the notification is called Subscriber.
                 There can be multiple subscribers of a single event.
               </p>
+            </div>
+          </article>
+          <article id="event-delegate">
+            <h6>Event vs Delegate</h6>
+            <div>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Delegate</th>
+                    <th>Event</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A delegate is declared using the delegate keyword.</td>
+                    <td>An event is declared using the event keyword.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Delegate is a function pointer. It holds the reference of
+                      one or more methods at runtime.
+                    </td>
+                    <td>
+                      The event is a notification mechanism that depends on
+                      delegates
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Delegate is independent and not dependent on events.
+                    </td>
+                    <td>
+                      An event is dependent on a delegate and cannot be created
+                      without delegates. Event is a wrapper around delegate
+                      instance to prevent users of the delegate from resetting
+                      the delegate and its invocation list and only allows
+                      adding or removing targets from the invocation list.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Delegate includes Combine() and Remove() methods to add
+                      methods to the invocation list.
+                    </td>
+                    <td>
+                      <a
+                        href="https://docs.microsoft.com/en-us/dotnet/api/system.reflection.eventinfo?view=netframework-4.8"
+                        target="_blank"
+                      >
+                        EventInfo
+                      </a>{" "}
+                      class inspect events and to hook up event handlers that
+                      include methods AddEventHandler() and RemoveEventHandler()
+                      methods to add and remove methods to invocation list,
+                      respectively.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>A delegate can be passed as a method parameter.</td>
+                    <td>
+                      An event is raised but cannot be passed as a method
+                      parameter.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      = operator is used to assigning a single method, and +=
+                      operator is used to assign multiple methods to a delegate.
+                    </td>
+                    <td>
+                      = operator cannot be used with events, and only += and -=
+                      operator can be used with an event that adds or remove
+                      event handler. These methods internally call
+                      AddEventHandler and RemoveEventHandler methods.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <Highlight language="csharp">
+                {`public delegate void Notify();
+public Notify MyDelegate;
+
+MyDelegate = MyMethod;// valid
+MyDelegate += MyMethod;// valid
+
+public delegate void Notify();
+public event Notify MyEvent;
+
+MyEvent = MyEventHandler;// Error
+MyEvent += MyEventHandler;// valid`}
+              </Highlight>
             </div>
           </article>
         </section>

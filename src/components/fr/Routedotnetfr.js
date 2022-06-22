@@ -27,6 +27,7 @@ import DotnetPage from "../../pages/fr/dotnet/framework/Dotnet";
 import DotnetcomponentsPage from "../../pages/fr/dotnet/framework/Dotnetcomponents";
 import AssemblyPage from "../../pages/fr/dotnet/framework/Assembly";
 import CLRPage from "../../pages/fr/dotnet/framework/Clr";
+import CodedomPage from "../../pages/en/dotnet/framework/Codedom";
 import DllexePage from "../../pages/fr/dotnet/framework/Dllexe";
 import EntityframeworkPage from "../../pages/fr/dotnet/framework/Entityframework";
 import GcPage from "../../pages/fr/dotnet/framework/Gc";
@@ -142,6 +143,7 @@ export default function Routedotnetfr() {
       }
       <Route path="/assembly" component={AssemblyPage} />
       <Route path="/clr" component={CLRPage} />
+      <Route path="/codedom" component={CodedomPage} />
       <Route path="/dllexe" component={DllexePage} />
       <Route path="/dotnet" component={DotnetPage} />
       <Route path="/dotnetcomponents" component={DotnetcomponentsPage} />
