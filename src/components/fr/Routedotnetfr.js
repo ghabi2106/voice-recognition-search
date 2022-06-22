@@ -107,6 +107,7 @@ import EnumindexerPage from "../../pages/fr/csharp/Enumindexer";
 import HashPage from "../../pages/fr/csharp/Hash";
 import MemberwiseclonePage from "../../pages/fr/csharp/Memberwiseclone";
 import OperatoroverloadingPage from "../../pages/fr/csharp/Operatoroverloading";
+import NestedPage from "../../pages/fr/csharp/Nested";
 import PreprocessordirectivesPage from "../../pages/fr/csharp/Preprocessordirectives";
 import String2intPage from "../../pages/fr/csharp/String2int";
 import StringbuilderPage from "../../pages/fr/csharp/Stringbuilder";
@@ -273,6 +274,7 @@ export default function Routedotnetfr() {
       <Route path="/enumindexer" component={EnumindexerPage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/operatoroverloading" component={OperatoroverloadingPage} />
+      <Route path="/nested" component={NestedPage} />
       <Route
         path="/preprocessordirectives"
         component={PreprocessordirectivesPage}

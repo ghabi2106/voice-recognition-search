@@ -107,6 +107,7 @@ import EnumindexerPage from "../../pages/en/csharp/Enumindexer";
 import HashPage from "../../pages/en/csharp/Hash";
 import MemberwiseclonePage from "../../pages/en/csharp/Memberwiseclone";
 import OperatoroverloadingPage from "../../pages/en/csharp/Operatoroverloading";
+import NestedPage from "../../pages/en/csharp/Nested";
 import PreprocessordirectivesPage from "../../pages/en/csharp/Preprocessordirectives";
 import String2intPage from "../../pages/en/csharp/String2int";
 import StringbuilderPage from "../../pages/en/csharp/Stringbuilder";
@@ -274,6 +275,7 @@ export default function Routecsharpen() {
       <Route path="/hashcode" component={HashPage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/operatoroverloading" component={OperatoroverloadingPage} />
+      <Route path="/nested" component={NestedPage} />
       <Route
         path="/preprocessordirectives"
         component={PreprocessordirectivesPage}
