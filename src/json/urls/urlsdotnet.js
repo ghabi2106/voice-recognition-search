@@ -287,6 +287,9 @@ export const urlsdotnet = {
   // New features in C# 10
   "csharp 10": "/csharp10",
   "c# 10": "/csharp10",
+  // New features in C# 11
+  "csharp 11": "/csharp11",
+  "c# 11": "/csharp11",
   // OOP
   "object oriented programming": "/oop",
   oop: "/oop",

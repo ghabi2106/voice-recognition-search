@@ -15,6 +15,8 @@ import DddPage from "../../pages/fr/dotnet/architecture/Ddd";
 //#region Csharp
 import Csharp9Page from "../../pages/fr/csharp/csharp/Csharp9";
 import Csharp10Page from "../../pages/fr/csharp/csharp/Csharp10";
+import Csharp11Page from "../../pages/fr/csharp/csharp/Csharp11";
+import DotnetfeatuesPage from "../../pages/fr/csharp/csharp/Dotnetfeatues";
 //#endregion
 
 //#region algorithme
@@ -233,6 +235,8 @@ export default function Routedotnetfr() {
       }
       <Route path="/csharp9" component={Csharp9Page} />
       <Route path="/csharp10" component={Csharp10Page} />
+      <Route path="/csharp11" component={Csharp11Page} />
+      <Route path="/dotnetfeatures" component={DotnetfeatuesPage} />
       {
         //#endregion
       }

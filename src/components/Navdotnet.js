@@ -78,6 +78,16 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/csharp11">
+              C# 11
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/dotnetfeatues">
+              new in .Net
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/algo">
               Algorithme
             </Link>
