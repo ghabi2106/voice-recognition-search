@@ -83,7 +83,7 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/dotnetfeatues">
+            <Link className="dropdown-item" to="/dotnetfeatures">
               new in .Net
             </Link>
           </li>
