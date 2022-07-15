@@ -147,9 +147,9 @@ export default function ParallelLoops() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/readwriterlock"
+                    to="/readerwriterlock"
                   >
-                    ReadWriterLock
+                    ReaderWriterLock
                   </Link>
                 </li>
                 <li>
