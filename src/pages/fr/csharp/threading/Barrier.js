@@ -213,14 +213,16 @@ export default function Barrier() {
             <h6>Barrier</h6>
             <div>
               <p>
-                Barrier is a synchronization primitive that enables multiple
-                threads (known as participants) to work concurrently on an
-                algorithm in phases.
+                Barrier est une primitive de synchronisation définie par
+                l’utilisateur qui permet à plusieurs threads (appelés
+                participants) de travailler simultanément sur un algorithme en
+                plusieurs phases.
               </p>
               <p>
-                When phase 1 is completed by all threads then they will continue
-                to further phases. All the threads must be in same phases in all
-                time. There is no chance of threads to work in different phases.
+                Lorsque la phase 1 est terminée par tous les threads, ils
+                continueront vers d'autres phases. Tous les threads doivent être
+                dans les mêmes phases à tout moment. Il n'y a aucune chance que
+                les threads fonctionnent dans différentes phases.
               </p>
               <Highlight language="csharp">
                 {`using System;

@@ -220,35 +220,36 @@ export default function Task() {
           <article id="task-thread">
             <h6>Task vs Thread</h6>
             <div>
-              <p>Represents an asynchronous operation.</p>
+              <p>Représente une opération asynchrone.</p>
               <ul>
                 <li>
-                  A Task can return a result but there is no proper way to
-                  return a result from Thread.
+                  Une tâche peut renvoyer un résultat, mais il n'existe aucun
+                  moyen approprié de renvoyer un résultat à partir de Thread.
                 </li>
                 <li>
-                  We can apply chaining on multiple tasks but we can not in
-                  threads.
+                  Nous pouvons appliquer le chaînage sur plusieurs tâches mais
+                  nous ne le pouvons pas dans les threads.
                 </li>
                 <li>
-                  We can wait on Tasks without using Signalling. But in Threads
-                  we have to use event signals like AutoResetEvent and
-                  ManualResetEvent.
+                  Nous pouvons attendre les tâches sans utiliser la
+                  signalisation. Mais dans Threads, nous devons utiliser des
+                  signaux d'événement comme AutoResetEvent et ManualResetEvent.
                 </li>
                 <li>
-                  We can apply Parent/Child relationship in Tasks. A Task at one
-                  time becomes parent of multiple tasks. Parent Task does not
-                  complete until it's child tasks are completed. We do not have
-                  any such mechanim in Thread class.
+                  Nous pouvons appliquer la relation parent/enfant dans les
+                  tâches. Une tâche devient à la fois parent de plusieurs
+                  tâches. La tâche parent ne se termine pas tant que ses tâches
+                  enfants ne sont pas terminées. Nous n'avons pas de mécanisme
+                  de ce type dans la classe Thread.
                 </li>
                 <li>
-                  Child Tasks can propagate their exceptions to to parent Task
-                  and All child exceptions are available in AggregateException
-                  class.
+                  Les tâches enfants peuvent propager leurs exceptions à la
+                  tâche parent et toutes les exceptions enfants sont disponibles
+                  dans la classe AggregateException.
                 </li>
                 <li>
-                  Tasks has in-build cancellation mechanism using
-                  CancellationToken class.
+                  Les tâches ont un mécanisme d'annulation intégré à l'aide de
+                  la classe CancellationToken.
                 </li>
               </ul>
               <Highlight language="csharp">

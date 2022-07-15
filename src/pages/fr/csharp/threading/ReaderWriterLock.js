@@ -213,8 +213,8 @@ export default function ReaderWriterLock() {
             <h6>ReaderWriterLock | ReaderWriterLockSlim</h6>
             <div>
               <p>
-                Defines a lock that supports single writers and multiple
-                readers.
+                Définit un verrou qui prend en charge les writers uniques et les
+                lecteurs multiples.
               </p>
               <Highlight language="csharp">
                 {`public class SynchronizedCache 

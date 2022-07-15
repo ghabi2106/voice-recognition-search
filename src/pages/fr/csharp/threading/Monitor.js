@@ -212,15 +212,17 @@ export default function Monitor() {
           <article id="monitor">
             <h6>lock | Monitor</h6>
             <div>
-              <p>Provides a mechanism that synchronizes access to objects.</p>
               <p>
-                The lock statement acquires the mutual-exclusion lock for a
-                given object, executes a statement block, and then releases the
-                lock.
+                Monitor fournit un mécanisme qui synchronise l'accès aux objets.{" "}
               </p>
               <p>
-                You can't use the await operator in the body of a lock
-                statement.
+                L’instruction lock obtient le verrou d’exclusion mutuelle d’un
+                objet donné, exécute un bloc d’instructions, puis libère le
+                verrou.
+              </p>
+              <p>
+                Vous ne pouvez pas utiliser l’opérateur await dans le corps
+                d’une instruction lock.
               </p>
               <Highlight language="csharp">
                 {`lock (x)

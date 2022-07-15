@@ -213,16 +213,16 @@ export default function Semaphore() {
             <h6>Semaphore | SemaphoreSlim</h6>
             <div>
               <p>
-                Limits the number of threads that can access a resource or pool
-                of resources concurrently.
+                Limite le nombre de threads qui peuvent accéder simultanément à
+                une ressource ou à un pool de ressources.
               </p>
               <p>
-                Semaphores are visible throughout the operating system, and can
-                be used to synchronize the activities of processes.
+                Sémaphore est visible par tous les threads de tous les processus.
               </p>
               <p>
-                The SemaphoreSlim class represents a lightweight, fast semaphore
-                that can be used for waiting within a single process
+                SemaphoreSlim représente un sémaphore léger et rapide qui peut
+                être utilisé pour l'attente dans un processus unique quand les
+                temps d'attente sont censés être très courts.
               </p>
               <Highlight language="csharp">
                 {`private static Semaphore semaphoreObject = new Semaphore(initialCount: 3, maximumCount: 3, name: "PrinterApp");

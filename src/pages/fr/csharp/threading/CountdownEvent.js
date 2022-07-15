@@ -213,11 +213,11 @@ export default function CountdownEvent() {
             <h6>CountdownEvent</h6>
             <div>
               <p>
-                CountdownEvent is a synchronization primitive that unblocks its
-                waiting threads after it has been signaled a certain number of
-                times.
+                CountdownEvent est une primitive de synchronisation qui débloque
+                ses threads en attente après avoir été signalée un certain
+                nombre de fois.
               </p>
-              <p>It is signaled when its count reaches zero.</p>
+              <p>Il est signalée lorsque son décompte atteint zéro.</p>
               <Highlight language="csharp">
                 {`CountdownEvent countObject = new CountdownEvent(10);
 int[] result = new int[10];

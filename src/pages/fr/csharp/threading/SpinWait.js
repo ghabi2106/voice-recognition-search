@@ -213,13 +213,15 @@ export default function SpinWait() {
             <h6>SpinWait</h6>
             <div>
               <p>
-                SpinWait is a lightweight synchronization type that you can use
-                in low-level scenarios to avoid the expensive context switches
-                and kernel transitions that are required for kernel events.
+                .SpinWait est un type de synchronisation léger que vous pouvez
+                utiliser dans des scénarios de bas niveau pour éviter des
+                changements de contexte onéreux et des transitions de noyau
+                requises pour les événements de noyau.
               </p>
               <p>
-                SpinWait is designed to be used in conjunction with the .NET
-                types that wrap kernel events such as ManualResetEvent.
+                SpinWait est conçu pour être utilisé conjointement avec les
+                types .NET qui encapsulent des événements de noyau tels que
+                ManualResetEvent.
               </p>
               <Highlight language="csharp">
                 {`public class LockFreeStack<T>

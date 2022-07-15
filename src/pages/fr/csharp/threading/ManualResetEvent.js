@@ -213,13 +213,13 @@ export default function ManualResetEvent() {
             <h6>ManualResetEvent</h6>
             <div>
               <p>
-                Represents a thread synchronization event that, when signaled,
-                must be reset manually.
+                Représente un événement de synchronisation de thread qui, quand
+                il est signalé, doit être réinitialisé manuellement.
               </p>
               <p>
-                You can use ManualResetEventSlim class for better performance
-                than ManualResetEvent when wait times are expected to be very
-                short
+                Vous pouvez utiliser cette classe pour de meilleures
+                performances que ManualResetEvent lorsque les temps d’attente
+                sont censés être très courts.
               </p>
               <Highlight language="csharp">
                 {`class Program

@@ -235,12 +235,12 @@ export default function SyncPrimitives() {
                   </a>
                   <div class="collapse" id="mutex">
                     <p>
-                      A synchronization primitive that can also be used for
-                      interprocess synchronization.
+                      Primitive de synchronisation qui peut également être
+                      utilisée pour la synchronisation entre processus.
                     </p>
                     <p>
-                      You can use a Mutex object to provide exclusive access to
-                      a resource.
+                      Vous pouvez utiliser un objet Mutex pour octroyer un droit
+                      d’accès exclusif à une ressource.
                     </p>
                     <Highlight language="csharp">
                       {`private static void UseResource()  
@@ -267,16 +267,17 @@ export default function SyncPrimitives() {
                   </a>
                   <div class="collapse" id="lock">
                     <p>
-                      Provides a mechanism that synchronizes access to objects.
+                      Monitor fournit un mécanisme qui synchronise l'accès aux
+                      objets.{" "}
                     </p>
                     <p>
-                      The lock statement acquires the mutual-exclusion lock for
-                      a given object, executes a statement block, and then
-                      releases the lock.
+                      L’instruction lock obtient le verrou d’exclusion mutuelle
+                      d’un objet donné, exécute un bloc d’instructions, puis
+                      libère le verrou.
                     </p>
                     <p>
-                      You can't use the await operator in the body of a lock
-                      statement.
+                      Vous ne pouvez pas utiliser l’opérateur await dans le
+                      corps d’une instruction lock.
                     </p>
                     <Highlight language="csharp">
                       {`lock (x)
@@ -329,8 +330,8 @@ static void UseResource()
                   </a>
                   <div class="collapse" id="interlocked">
                     <p>
-                      Provides atomic operations for variables that are shared
-                      by multiple threads.
+                      Fournit des opérations atomiques pour des variables
+                      partagées par plusieurs threads.
                     </p>
                     <Highlight language="csharp">
                       {`private static int usingResource = 0;
@@ -356,18 +357,17 @@ static bool UseResource()
                   </a>
                   <div class="collapse" id="semaphore">
                     <p>
-                      Limits the number of threads that can access a resource or
-                      pool of resources concurrently.
+                      Limite le nombre de threads qui peuvent accéder
+                      simultanément à une ressource ou à un pool de ressources.
                     </p>
                     <p>
-                      Semaphores are visible throughout the operating system,
-                      and can be used to synchronize the activities of
-                      processes.
+                      Sémaphore est visible par tous les threads de tous les
+                      processus.
                     </p>
                     <p>
-                      The SemaphoreSlim class represents a lightweight, fast
-                      semaphore that can be used for waiting within a single
-                      process
+                      SemaphoreSlim représente un sémaphore léger et rapide qui
+                      peut être utilisé pour l'attente dans un processus unique
+                      quand les temps d'attente sont censés être très courts.
                     </p>
                     <Highlight language="csharp">
                       {`private static Semaphore semaphoreObject = new Semaphore(initialCount: 3, maximumCount: 3, name: "PrinterApp");
@@ -395,15 +395,17 @@ static void UseResource()
                   </a>
                   <div class="collapse" id="barrier">
                     <p>
-                      Barrier is a synchronization primitive that enables
-                      multiple threads (known as participants) to work
-                      concurrently on an algorithm in phases.
+                      Barrier est une primitive de synchronisation définie par
+                      l’utilisateur qui permet à plusieurs threads (appelés
+                      participants) de travailler simultanément sur un
+                      algorithme en plusieurs phases.
                     </p>
                     <p>
-                      When phase 1 is completed by all threads then they will
-                      continue to further phases. All the threads must be in
-                      same phases in all time. There is no chance of threads to
-                      work in different phases.
+                      Lorsque la phase 1 est terminée par tous les threads, ils
+                      continueront vers d'autres phases. Tous les threads
+                      doivent être dans les mêmes phases à tout moment. Il n'y a
+                      aucune chance que les threads fonctionnent dans
+                      différentes phases.
                     </p>
                     <Highlight language="csharp">
                       {`using System;
@@ -475,9 +477,10 @@ namespace TaskCoordination
                   </a>
                   <div class="collapse" id="spinlock">
                     <p>
-                      Provides a mutual exclusion lock primitive where a thread
-                      trying to acquire the lock waits in a loop repeatedly
-                      checking until the lock becomes available.
+                      Fournit une primitive de verrou d'exclusion mutuelle où un
+                      thread, qui tente d'acquérir le verrou, attend dans une
+                      boucle en effectuant des vérifications de manière répétée
+                      jusqu'à ce que le verrou devienne disponible.
                     </p>
                     <Highlight language="csharp">
                       {`public static void SpinLockDemo()
@@ -553,11 +556,11 @@ namespace TaskCoordination
                   </a>
                   <div class="collapse" id="count-down-event">
                     <p>
-                      CountdownEvent is a synchronization primitive that
-                      unblocks its waiting threads after it has been signaled a
-                      certain number of times.
+                      CountdownEvent est une primitive de synchronisation qui
+                      débloque ses threads en attente après avoir été signalée
+                      un certain nombre de fois.
                     </p>
-                    <p>It is signaled when its count reaches zero.</p>
+                    <p>Il est signalée lorsque son décompte atteint zéro.</p>
                     <Highlight language="csharp">
                       {`CountdownEvent countObject = new CountdownEvent(10);
 int[] result = new int[10];
@@ -595,9 +598,9 @@ countObject.Wait();`}
                   </a>
                   <div class="collapse" id="auto-reset-event">
                     <p>
-                      Represents a thread synchronization event that, when
-                      signaled, resets automatically after releasing a single
-                      waiting thread.
+                      Représente un événement de synchronisation de threads qui,
+                      quand il est signalé, se réinitialise automatiquement
+                      après avoir libéré un thread en attente.
                     </p>
                     <Highlight language="csharp">
                       {`class Program
@@ -643,13 +646,13 @@ countObject.Wait();`}
                   </a>
                   <div class="collapse" id="manual-reset-event">
                     <p>
-                      Represents a thread synchronization event that, when
-                      signaled, must be reset manually.
+                      Représente un événement de synchronisation de thread qui,
+                      quand il est signalé, doit être réinitialisé manuellement.
                     </p>
                     <p>
-                      You can use ManualResetEventSlim class for better
-                      performance than ManualResetEvent when wait times are
-                      expected to be very short
+                      Vous pouvez utiliser cette classe pour de meilleures
+                      performances que ManualResetEvent lorsque les temps
+                      d’attente sont censés être très courts.
                     </p>
                     <Highlight language="csharp">
                       {`class Program
@@ -696,15 +699,16 @@ countObject.Wait();`}
                   </a>
                   <div class="collapse" id="spinwait">
                     <p>
-                      SpinWait is a lightweight synchronization type that you
-                      can use in low-level scenarios to avoid the expensive
-                      context switches and kernel transitions that are required
-                      for kernel events.
+                      .SpinWait est un type de synchronisation léger que vous
+                      pouvez utiliser dans des scénarios de bas niveau pour
+                      éviter des changements de contexte onéreux et des
+                      transitions de noyau requises pour les événements de
+                      noyau.
                     </p>
                     <p>
-                      SpinWait is designed to be used in conjunction with the
-                      .NET types that wrap kernel events such as
-                      ManualResetEvent.
+                      SpinWait est conçu pour être utilisé conjointement avec
+                      les types .NET qui encapsulent des événements de noyau
+                      tels que ManualResetEvent.
                     </p>
                     <Highlight language="csharp">
                       {`public class LockFreeStack<T>
@@ -763,8 +767,8 @@ countObject.Wait();`}
                   </a>
                   <div class="collapse" id="reader-writer-lock">
                     <p>
-                      Defines a lock that supports single writers and multiple
-                      readers.
+                      Définit un verrou qui prend en charge les writers uniques
+                      et les lecteurs multiples.
                     </p>
                     <Highlight language="csharp">
                       {`public class SynchronizedCache 

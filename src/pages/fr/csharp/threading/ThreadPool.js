@@ -213,21 +213,24 @@ export default function ThreadPool() {
             <h6>ThreadPool</h6>
             <div>
               <p>
-                Thread pool is a collection of threads which can be used to
-                perform multiple tasks in background. Once thread completes its
-                task then it sent to the pool to a queue of waiting threads,
-                where it can be reused. This reusability avoids an application
-                to create more threads and this enables less memory consumption.
+                Le pool de threads est une collection de threads qui peuvent
+                être utilisés pour effectuer aucune tâche en arrière-plan. Une
+                fois que le thread a terminé sa tâche, il est envoyé au pool
+                dans une file d'attente de threads en attente, où il peut être
+                réutilisé. Cette réutilisabilité évite à une application de
+                créer plus de threads et cela permet de consommer moins de
+                mémoire.
               </p>
               <p>
-                Once task is completed in thread pool, .NET framework sends
-                these task completed threads to thread pool rather than sending
-                these threads to garbage collector. Further which can be reused
-                for other new task.
+                Une fois la tâche terminée dans le pool de threads, le framework
+                .NET envoie ces threads terminés de tâche au pool de threads
+                plutôt que d'envoyer ces threads au ramasse-miettes. En outre,
+                qui peut être réutilisé pour d'autres nouvelles tâches.
               </p>
               <p>
-                So this is a benefit of working with thread pool which enable
-                less memory consumption for large number of task.
+                C'est donc un avantage de travailler avec un pool de threads qui
+                permet de consommer moins de mémoire pour un grand nombre de
+                tâches.
               </p>
               <Highlight language="csharp">
                 {`using System;

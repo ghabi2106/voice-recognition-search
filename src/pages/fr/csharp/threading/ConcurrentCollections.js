@@ -245,8 +245,8 @@ export default function ConcurrentCollections() {
             <h6>ConcurrentDictionary</h6>
             <div>
               <p>
-                Represents a thread-safe collection of key/value pairs that can
-                be accessed by multiple threads concurrently.
+                Représente une collection thread-safe de paires clé/valeur
+                accessibles par plusieurs threads simultanément.
               </p>
               <Highlight language="csharp">
                 {`static void Main(string[] args)
@@ -266,7 +266,8 @@ export default function ConcurrentCollections() {
             <h6>ConcurrentQueue</h6>
             <div>
               <p>
-                Represents a thread-safe first in-first out (FIFO) collection
+                Représente une collection thread-safe de type premier entré,
+                premier sorti (FIFO, First-In-First-Out).
               </p>
               <Highlight language="csharp">
                 {`int item;
@@ -283,7 +284,8 @@ int count = coll.Count();
             <h6>ConcurrentStack</h6>
             <div>
               <p>
-                Represents a thread-safe last in-first out (LIFO) collection.
+                Représente une collection thread-safe de type dernier entré,
+                premier sorti (LIFO, Last-In-First-Out).
               </p>
               <Highlight language="csharp">
                 {`int[] ints = { 1, 2, 3 };
@@ -298,8 +300,10 @@ stack.TryPop(out item);`}
           <article id="concurrent-bag">
             <h6>ConcurrentBag</h6>
             <div>
-              <p>Represents a thread-safe, unordered collection of objects.</p>
-              <p>bags support duplicates.</p>
+              <p>
+                Représente une collection d'objets thread-safe, non ordonnée.
+              </p>
+              <p>les sacs -Bags- prennent en charge les doublons.</p>
               <Highlight language="csharp">
                 {`int[] ints = { 1, 2, 3 };
 ConcurrentBag<int> bag = new ConcurrentBag<int>(ints);
@@ -315,7 +319,7 @@ bag.TryTake(out item);
             <h6>BlockingCollection</h6>
             <div>
               <p>
-                Provides{" "}
+                Fournit des fonctions bloquantes et englobantes{" "}
                 <a
                   data-bs-toggle="collapse"
                   href="#blocking-bounding"
@@ -323,25 +327,27 @@ bag.TryTake(out item);
                   aria-expanded="false"
                   aria-controls="blocking-bounding"
                 >
-                  blocking and bounding
+                  - blocking and bounding -
                 </a>{" "}
-                capabilities for thread-safe collections that implement
+                pour les collections thread-safe qui implémentent
+                IProducerConsumerCollection.
               </p>
               <div class="collapse" id="blocking-bounding">
                 <p>
-                  Bounding means we can set the maximum number of objects that
-                  we can store in the collection. When a producer thread reaches
-                  BlockingCollection maximum limit, it is blocked to add new
-                  objects. In the blocked stage, thread goes in the sleep mode.
-                  It will unblock when consumer thread remove item from the
-                  collection.
+                  La délimitation -Bounding- signifie que nous pouvons définir le nombre
+                  maximum d'objets que nous pouvons stocker dans la collection.
+                  Lorsqu'un thread producteur atteint la limite maximale de
+                  BlockingCollection, il est bloqué pour ajouter de nouveaux
+                  objets. Dans l'étape bloquée, le thread passe en mode veille.
+                  Il se débloquera lorsque le thread consommateur supprimera
+                  l'élément de la collection.
                 </p>
               </div>
               <p>
-                It implements the <code>producer-consumer</code> pattern. In
-                this pattern, there are two threads one is called producer and
-                other is called consumer. Both threads share a common collection
-                class to exchange data between them.
+                Il implémente le modèle <code>producteur-consommateur</code> .
+                Dans ce modèle, il y a deux threads, l'un appelé producteur et
+                l'autre consommateur. Les deux threads partagent une classe de
+                collection commune pour échanger des données entre eux.
               </p>
               <Highlight language="csharp">
                 {`using System;

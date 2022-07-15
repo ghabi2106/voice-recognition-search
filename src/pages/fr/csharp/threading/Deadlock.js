@@ -24,14 +24,14 @@ export default function Deadlock() {
                 className="list-unstyled ps-3 collapse show"
                 id="contents-collapse"
               >
-              <li>
-                <a
-                  className="d-inline-flex align-items-center rounded"
-                  href="#critical-section"
-                >
-                  Critical Section
-                </a>
-              </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#critical-section"
+                  >
+                    Critical Section
+                  </a>
+                </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
@@ -245,10 +245,10 @@ export default function Deadlock() {
             <h6>Critical Section</h6>
             <div>
               <p>
-                Critical section is any piece of code that has the possibility
-                of being executed concurrently by more than one thread of the
-                application and exposes any shared data or resources used by the
-                application for access.
+                La section critique est tout morceau de code qui a la
+                possibilité d'être exécuté simultanément par plus d'un thread de
+                l'application et expose toutes les données ou ressources
+                partagées utilisées par l'application pour l'accès.
               </p>
             </div>
           </article>
@@ -256,8 +256,8 @@ export default function Deadlock() {
             <h6>Race Condition</h6>
             <div>
               <p>
-                A race condition occurs when two threads access a shared
-                variable at the same time.
+                Une condition de concurrence se produit lorsque deux threads
+                accèdent simultanément à une variable partagée.
               </p>
               <Highlight language="csharp">
                 {`using System;
@@ -290,14 +290,12 @@ namespace RaceCondition
             <h6>deadlock</h6>
             <div>
               <p>
-                A deadlock is a situation where two or more threads are{" "}
-                <strong>frozen</strong> in their execution because they are
-                waiting for each other to finish. For example, thread A is
-                waiting on <strong>lock_1</strong> that is held by thread B.
-                Thread B can’t finish and release <strong>lock_1</strong>{" "}
-                because it waits on <strong>lock_2</strong>, which is held by
-                thread A. Too confusing? I’ll show you an example in a moment,
-                but first let’s talk about <strong>Locks</strong>.
+                A deadlock est une situation où deux threads ou plus sont gelés
+                dans leur exécution car ils attendent que l'autre se termine.
+                Par exemple, le thread A attend le verrou_1 qui est détenu par
+                le thread B. Le thread B ne peut pas terminer et libérer le
+                verrou_1 car il attend le verrou_2, qui est détenu par le thread
+                A.
               </p>
               <h6>Explanation of the code:</h6>
               <Highlight language="csharp">
@@ -404,16 +402,13 @@ private Task Transfer(Account acc1, Account acc2, int sum)
             <h6>livelock</h6>
             <div>
               <p>
-                A livelock is very similar to deadlock except involved threads
-                states are continually changing their state but still they
-                cannot complete their work.
+                Un livelock est similaire à un deadlock , sauf que les états des
+                processus impliqués dans le livelock changent constamment les
+                uns par rapport aux autres, aucun ne progressant.
               </p>
               <p>
-                A real-world example of livelock occurs when two people meet in
-                a narrow corridor, and each tries to be polite by moving aside
-                to let the other pass, but they end up swaying from side to side
-                without making any progress because they both repeatedly move
-                the same way at the same time.
+                Un exemple dans une situation réelle est le problème « Deux
+                personnes qui se gênent dans un couloir ».
               </p>
               <Highlight language="csharp">
                 {`var l1 = .... // lock object like semaphore or mutex etc
@@ -458,12 +453,8 @@ Thread.Start( ()=> {
             <h6>Starvation</h6>
             <div>
               <p>
-                Starvation happens when “greedy” threads make shared resources
-                unavailable for long periods. For instance, suppose an object
-                provides a synchronized method that often takes a long time to
-                return. If one thread invokes this method frequently, other
-                threads that also need frequent synchronized access to the same
-                object will often be blocked.
+                Un processus qui nécessite d'accomplir une tâche qui ne peut pas
+                obtenir un accès régulier aux ressources partagées.
               </p>
               <Highlight language="csharp">
                 {`Queue q = .....

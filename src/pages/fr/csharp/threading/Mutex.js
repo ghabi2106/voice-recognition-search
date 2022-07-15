@@ -213,12 +213,12 @@ export default function Mutex() {
             <h6>Mutex</h6>
             <div>
               <p>
-                A synchronization primitive that can also be used for
-                interprocess synchronization.
+                Primitive de synchronisation qui peut également être utilisée
+                pour la synchronisation entre processus.
               </p>
               <p>
-                You can use a Mutex object to provide exclusive access to a
-                resource.
+                Vous pouvez utiliser un objet Mutex pour octroyer un droit
+                d’accès exclusif à une ressource.
               </p>
               <Highlight language="csharp">
                 {`private static void UseResource()  

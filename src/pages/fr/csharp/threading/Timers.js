@@ -213,16 +213,17 @@ export default function Timers() {
             <h6>Timers</h6>
             <div>
               <p>
-                .NET provides two timers to use in a multithreaded environment:
+                .NET propose deux minuteurs à utiliser dans un environnement
+                multithread :
               </p>
               <ul>
                 <li>
-                  System.Threading.Timer, which executes a single callback
-                  method on a ThreadPool thread at regular intervals.
+                  System.Threading.Timer, qui exécute une méthode de rappel
+                  unique sur un thread ThreadPool à intervalles réguliers.
                 </li>
                 <li>
-                  System.Timers.Timer, which by default raises an event on a
-                  ThreadPool thread at regular intervals.
+                  System.Timers.Timer qui, par défaut, déclenche un événement
+                  sur un thread ThreadPool à intervalles réguliers.
                 </li>
               </ul>
               <Highlight language="csharp">

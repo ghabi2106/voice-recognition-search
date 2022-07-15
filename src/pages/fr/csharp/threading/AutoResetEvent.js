@@ -213,8 +213,9 @@ export default function AutoResetEvent() {
             <h6>AutoResetEvent</h6>
             <div>
               <p>
-                Represents a thread synchronization event that, when signaled,
-                resets automatically after releasing a single waiting thread.
+                Représente un événement de synchronisation de threads qui, quand
+                il est signalé, se réinitialise automatiquement après avoir
+                libéré un thread en attente.
               </p>
               <Highlight language="csharp">
                 {`class Program

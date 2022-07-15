@@ -213,12 +213,14 @@ export default function Process() {
             <h6>Process vs Thread</h6>
             <div>
               <p>
-                A process is started when you start an Application. A process
-                can start multiple threads. Every process is start with a single
-                thread called primary thread. You can create n number of threads
-                in a process. Threads share the resources allocated to process.
+                Un processus, en termes les plus simples, est un programme en
+                cours d’exécution.
               </p>
-              <p>A process is the parent and threads are his children.</p>
+              <p>
+                Chaque processus est démarré avec un seul thread, souvent appelé
+                thread principal, mais peut créer des threads supplémentaires à
+                partir de l’un de ses threads.
+              </p>
               <Highlight language="csharp">
                 {`public static void Main()
 {

@@ -213,8 +213,8 @@ export default function Interlocked() {
             <h6>Interlocked</h6>
             <div>
               <p>
-                Provides atomic operations for variables that are shared by
-                multiple threads.
+                Fournit des opérations atomiques pour des variables partagées
+                par plusieurs threads.
               </p>
               <Highlight language="csharp">
                 {`private static int usingResource = 0;

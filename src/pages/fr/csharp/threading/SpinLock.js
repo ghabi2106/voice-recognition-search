@@ -213,9 +213,10 @@ export default function SpinLock() {
             <h6>SpinLock</h6>
             <div>
               <p>
-                Provides a mutual exclusion lock primitive where a thread trying
-                to acquire the lock waits in a loop repeatedly checking until
-                the lock becomes available.
+                Fournit une primitive de verrou d'exclusion mutuelle où un
+                thread, qui tente d'acquérir le verrou, attend dans une boucle
+                en effectuant des vérifications de manière répétée jusqu'à ce
+                que le verrou devienne disponible.
               </p>
               <Highlight language="csharp">
                 {`public static void SpinLockDemo()
