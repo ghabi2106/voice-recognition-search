@@ -97,6 +97,27 @@ import ParametersPage from "../../pages/en/csharp/keywords/Parameters";
 import StatementsPage from "../../pages/en/csharp/keywords/Statements";
 import ThisbasePage from "../../pages/en/csharp/keywords/Thisbase";
 //#endregion
+//#region threading
+import AutoResetEventPage from "../../pages/en/csharp/threading/AutoResetEvent";
+import BarrierPage from "../../pages/en/csharp/threading/Barrier";
+import ConcurrentCollectionsPage from "../../pages/en/csharp/threading/ConcurrentCollections";
+import CountdownEventPage from "../../pages/en/csharp/threading/CountdownEvent";
+import DeadlockPage from "../../pages/en/csharp/threading/Deadlock";
+import InterlockedPage from "../../pages/en/csharp/threading/Interlocked";
+import ManualResetEventPage from "../../pages/en/csharp/threading/ManualResetEvent";
+import MonitorPage from "../../pages/en/csharp/threading/Monitor";
+import MutexPage from "../../pages/en/csharp/threading/Mutex";
+import ParallelLoopsPage from "../../pages/en/csharp/threading/ParallelLoops";
+import ProcessPage from "../../pages/en/csharp/threading/Process";
+import ReaderWriterLockPage from "../../pages/en/csharp/threading/ReaderWriterLock";
+import SemaphorePage from "../../pages/en/csharp/threading/Semaphore";
+import SpinLockPage from "../../pages/en/csharp/threading/SpinLock";
+import SpinWaitPage from "../../pages/en/csharp/threading/SpinWait";
+import SyncPrimitivesPage from "../../pages/en/csharp/threading/SyncPrimitives";
+import TaskPage from "../../pages/en/csharp/threading/Task";
+import ThreadPoolPage from "../../pages/en/csharp/threading/ThreadPool";
+import TimersPage from "../../pages/en/csharp/threading/Timers";
+//#endregion
 import AdvancedPage from "../../pages/en/csharp/Advanced";
 import ArrayPage from "../../pages/en/csharp/Array";
 import BindingPage from "../../pages/en/csharp/Binding";
@@ -260,6 +281,32 @@ export default function Routecsharpen() {
       <Route path="/parameters" component={ParametersPage} />
       <Route path="/statements" component={StatementsPage} />
       <Route path="/thisbase" component={ThisbasePage} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region threading
+      }
+      <Route path="/autoresetevent" component={AutoResetEventPage} />
+      <Route path="/barrier" component={BarrierPage} />
+      <Route path="/concurrentcollections" component={ConcurrentCollectionsPage} />
+      <Route path="/countdownevent" component={CountdownEventPage} />
+      <Route path="/deadlock" component={DeadlockPage} />
+      <Route path="/interlocked" component={InterlockedPage} />
+      <Route path="/manualresetevent" component={ManualResetEventPage} />
+      <Route path="/monitor" component={MonitorPage} />
+      <Route path="/mutex" component={MutexPage} />
+      <Route path="/parallelloops" component={ParallelLoopsPage} />
+      <Route path="/process" component={ProcessPage} />
+      <Route path="/readerwriterlock" component={ReaderWriterLockPage} />
+      <Route path="/semaphore" component={SemaphorePage} />
+      <Route path="/spinlock" component={SpinLockPage} />
+      <Route path="/spinwait" component={SpinWaitPage} />
+      <Route path="/syncprimitives" component={SyncPrimitivesPage} />
+      <Route path="/task" component={TaskPage} />
+      <Route path="/threadpool" component={ThreadPoolPage} />
+      <Route path="/timers" component={TimersPage} />
       {
         //#endregion
       }

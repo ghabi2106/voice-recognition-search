@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Highlight from "react-highlight";
 import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
-export default function Threads() {
+export default function Task() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -35,25 +35,9 @@ export default function Threads() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#thread"
-                  >
-                    Thread
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
                     href="#task-thread"
                   >
-                    Task vs Thread
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#deadlock"
-                  >
-                    Deadlock
+                    Task | Thread
                   </a>
                 </li>
               </ul>
@@ -75,90 +59,153 @@ export default function Threads() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/stringbuilder"
+                    to="/autoresetevent"
                   >
-                    String Builder
+                    AutoResetEvent
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/tuple"
+                    to="/barrier"
                   >
-                    Tuple
+                    Barrier
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/collections"
+                    to="/concurrentcollections"
                   >
-                    Collections
+                    ConcurrentCollections
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/enumindexer"
+                    to="/countdownevent"
                   >
-                    Enumeration, Indexer and Generics
+                    CountdownEvent
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/parameters"
+                    to="/deadlock"
                   >
-                    Ref, in and Out
+                    deadlock | livelock
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/covariance"
+                    to="/interlocked"
                   >
-                    Covariance
+                    Interlocked
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/delegate"
+                    to="/manualresetevent"
                   >
-                    Delegate
+                    ManualResetEvent
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/string2int"
+                    to="/monitor"
                   >
-                    string to int
+                    Monitor
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/threads"
+                    to="/mutex"
                   >
-                    Task And Thread
+                    Mutex
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/operators"
+                    to="/parallelloops"
                   >
-                    Operators
+                    Parallel Loops
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/datatype"
+                    to="/process"
                   >
-                    Dynamic, Nullables, Discards and Anonymous Types, Extension
-                    methods
+                    Process
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/readwriterlock"
+                  >
+                    ReadWriterLock
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/semaphore"
+                  >
+                    Semaphore
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/spinlock"
+                  >
+                    SpinLock
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/spinwait"
+                  >
+                    SpinWait
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/syncprimitives"
+                  >
+                    Synchronization Primitives
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/task"
+                  >
+                    Task
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/threadpool"
+                  >
+                    TreadPool
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/timers"
+                  >
+                    Timers
                   </Link>
                 </li>
               </ul>
@@ -169,7 +216,7 @@ export default function Threads() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Task | Thread | Process</h3>
+          <h3>Task | Thread</h3>
           <article id="task-thread">
             <h6>Task vs Thread</h6>
             <div>

@@ -352,6 +352,7 @@ public void getMyName() {} `}
                 allez dans <strong>Debug | Windows | Threads</strong>.
               </p>
               <img
+                className="mw-900"
                 src="/img/dotnet/nested_deadlock_breakall.png"
                 alt="nested_deadlock_breakall"
               />

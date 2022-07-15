@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Highlight from "react-highlight";
 import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
-export default function Threads() {
+export default function Mutex() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -27,33 +27,9 @@ export default function Threads() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#task"
+                    href="#mutex"
                   >
-                    Task
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#thread"
-                  >
-                    Thread
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#task-thread"
-                  >
-                    Task vs Thread
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#deadlock"
-                  >
-                    Deadlock
+                    Mutex
                   </a>
                 </li>
               </ul>
@@ -75,90 +51,153 @@ export default function Threads() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/stringbuilder"
+                    to="/autoresetevent"
                   >
-                    String Builder
+                    AutoResetEvent
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/tuple"
+                    to="/barrier"
                   >
-                    Tuple
+                    Barrier
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/collections"
+                    to="/concurrentcollections"
                   >
-                    Collections
+                    ConcurrentCollections
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/enumindexer"
+                    to="/countdownevent"
                   >
-                    Enumeration, Indexer and Generics
+                    CountdownEvent
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/parameters"
+                    to="/deadlock"
                   >
-                    Ref, in and Out
+                    deadlock | livelock
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/covariance"
+                    to="/interlocked"
                   >
-                    Covariance
+                    Interlocked
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/delegate"
+                    to="/manualresetevent"
                   >
-                    Delegate
+                    ManualResetEvent
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/string2int"
+                    to="/monitor"
                   >
-                    string to int
+                    Monitor
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/threads"
+                    to="/mutex"
                   >
-                    Task And Thread
+                    Mutex
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/operators"
+                    to="/parallelloops"
                   >
-                    Operators
+                    Parallel Loops
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/datatype"
+                    to="/process"
                   >
-                    Dynamic, Nullables, Discards and Anonymous Types, Extension
-                    methods
+                    Process
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/readwriterlock"
+                  >
+                    ReadWriterLock
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/semaphore"
+                  >
+                    Semaphore
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/spinlock"
+                  >
+                    SpinLock
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/spinwait"
+                  >
+                    SpinWait
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/syncprimitives"
+                  >
+                    Synchronization Primitives
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/task"
+                  >
+                    Task
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/threadpool"
+                  >
+                    TreadPool
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="d-inline-flex align-items-center rounded"
+                    to="/timers"
+                  >
+                    Timers
                   </Link>
                 </li>
               </ul>
@@ -169,54 +208,25 @@ export default function Threads() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Task | Thread | Process</h3>
-          <article id="task-thread">
-            <h6>Task vs Thread</h6>
+          <h3>Mutex</h3>
+          <article id="mutex">
+            <h6>Mutex</h6>
             <div>
-              <p>Represents an asynchronous operation.</p>
-              <ul>
-                <li>
-                  A Task can return a result but there is no proper way to
-                  return a result from Thread.
-                </li>
-                <li>
-                  We can apply chaining on multiple tasks but we can not in
-                  threads.
-                </li>
-                <li>
-                  We can wait on Tasks without using Signalling. But in Threads
-                  we have to use event signals like AutoResetEvent and
-                  ManualResetEvent.
-                </li>
-                <li>
-                  We can apply Parent/Child relationship in Tasks. A Task at one
-                  time becomes parent of multiple tasks. Parent Task does not
-                  complete until it's child tasks are completed. We do not have
-                  any such mechanim in Thread class.
-                </li>
-                <li>
-                  Child Tasks can propagate their exceptions to to parent Task
-                  and All child exceptions are available in AggregateException
-                  class.
-                </li>
-                <li>
-                  Tasks has in-build cancellation mechanism using
-                  CancellationToken class.
-                </li>
-              </ul>
+              <p>
+                A synchronization primitive that can also be used for
+                interprocess synchronization.
+              </p>
+              <p>
+                You can use a Mutex object to provide exclusive access to a
+                resource.
+              </p>
               <Highlight language="csharp">
-                {`static void Main(string[] args) {  
-    Task <string> obTask = Task.Run(() => (  
-        return“ Hello”));  
-    Console.WriteLine(obTask.result);  
-} `}
-              </Highlight>
-              <Highlight language="csharp">
-                {`static void Main(string[] args) {  
-    Thread thread = new Thread(new ThreadStart(getMyName));  
-    thread.Start();  
-}  
-public void getMyName() {} `}
+                {`private static void UseResource()  
+{  
+    mutex.WaitOne();   // Wait until it is safe to enter.
+    // Your code...
+    mutex.ReleaseMutex();    // Release the Mutex.  
+}`}
               </Highlight>
             </div>
           </article>
