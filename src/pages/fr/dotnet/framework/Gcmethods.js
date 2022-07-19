@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Gcmethods() {
   return (
@@ -22,6 +24,14 @@ export default function Gcmethods() {
                 className="list-unstyled ps-3 collapse show"
                 id="contents-collapse"
               >
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#dispose"
+                  >
+                    dispose()
+                  </a>
+                </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
@@ -135,6 +145,35 @@ export default function Gcmethods() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>GC Methods</h3>
+          <article id="dispose">
+            <h6>Dispose</h6>
+            <div>
+              <p>
+                La méthode <code>Dispose()</code> libère les resources non
+                managées. Elle est définie dans une interface IDisposable
+              </p>
+              <Highlight language="csharp">
+                {`//preceeding code
+using (con = new Connection()) {
+    con.Open()
+    //do whatever
+}
+//following code`}
+              </Highlight>
+              <p>
+                <code>using</code> statement est équivalete à:
+              </p>
+              <Highlight language="csharp">
+                {`var con = new Connection();
+try {
+    con.Open()
+    //do whatever
+} finally {
+    if (con != null) con.Dispose();
+}`}
+              </Highlight>
+            </div>
+          </article>
           <article id="dispose-finalize">
             <h6>dispose() vs finalize()</h6>
             <div>

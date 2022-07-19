@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Gcmethods() {
   return (
@@ -25,14 +27,26 @@ export default function Gcmethods() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#dispose"
+                  >
+                    dispose()
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#dispose-finalize"
-                  >dispose() vs finalize()</a>
+                  >
+                    dispose() vs finalize()
+                  </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
                     href="#metods"
-                  >GC Methods and properties</a>
+                  >
+                    GC Methods and properties
+                  </a>
                 </li>
               </ul>
             </li>
@@ -131,6 +145,35 @@ export default function Gcmethods() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>GC Methods</h3>
+          <article id="dispose">
+            <h6>Dispose</h6>
+            <div>
+              <p>
+                <code>Dispose()</code> method release unmanaged resources. It is
+                defined in an interface <strong>IDisposable</strong>
+              </p>
+              <Highlight language="csharp">
+                {`//preceeding code
+using (con = new Connection()) {
+    con.Open()
+    //do whatever
+}
+//following code`}
+              </Highlight>
+              <p>
+                <code>using</code> statement equivalant to:
+              </p>
+              <Highlight language="csharp">
+                {`var con = new Connection();
+try {
+    con.Open()
+    //do whatever
+} finally {
+    if (con != null) con.Dispose();
+}`}
+              </Highlight>
+            </div>
+          </article>
           <article id="dispose-finalize">
             <h6>dispose() vs finalize()</h6>
             <div>
@@ -239,19 +282,27 @@ export default function Gcmethods() {
                     <td>
                       <code>Collect()</code>
                     </td>
-                    <td>Forces an immediate garbage collection of all generations.</td>
+                    <td>
+                      Forces an immediate garbage collection of all generations.
+                    </td>
                   </tr>
                   <tr>
                     <td>
                       <code>Collect(Int32)</code>
                     </td>
-                    <td>Forces an immediate garbage collection from generation 0 through a specified generation.</td>
+                    <td>
+                      Forces an immediate garbage collection from generation 0
+                      through a specified generation.
+                    </td>
                   </tr>
                   <tr>
                     <td>
                       <code>SuppressFinalize(Object)</code>
                     </td>
-                    <td>Requests that the common language runtime not call the finalizer for the specified object.</td>
+                    <td>
+                      Requests that the common language runtime not call the
+                      finalizer for the specified object.
+                    </td>
                   </tr>
                 </tbody>
               </table>
