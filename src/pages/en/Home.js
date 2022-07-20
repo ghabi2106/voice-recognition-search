@@ -113,11 +113,24 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="tv">
                     <h6 class="card-title">Description</h6>
                     <p>
-                      The principal goal from the two projects is to manage all
-                      the production process for emdded systems projects by
-                      gathering the necessary data from various group to ensure
-                      the progress of projects and generating reports for
-                      analysis.
+                      TV is a automotive management solution designed to help
+                      small to midsize auto shops manage estimates, scheduling,
+                      operations, inspections, and more.
+                    </p>
+                    <p>
+                      TV’s key features include work wizard review, automated
+                      reminders, calendar integration, real-time job tracking,
+                      current progress status, activity flags, and electronic
+                      records. The inspection module allows users to digitally
+                      inspect all vehicles and upload document findings directly
+                      to work orders. TV also enables users to maintain repair
+                      recommendations and deferred work lists for future
+                      references.
+                    </p>
+                    <p>
+                      TV offers a customizable report manager and dashboard,
+                      allowing shop owners to track revenue performance with
+                      real-time analytics and key metrics.
                     </p>
                     <h6 class="card-title">Features</h6>
                     <ul>

@@ -109,12 +109,29 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="tv">
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
-                      Le but de ces deux applications est de collecter les
-                      données nécessaires des différents phase de production des
-                      projets en système embarqués à partir des différents
-                      group, en enregistrant les essais et les résultats au fur
-                      et à mesure de suivre le progrès des projets et de
-                      faciliter l'analyse.
+                      L'application est une solution de gestion automobile
+                      conçue pour aider les ateliers automobiles de Volkswagen à
+                      gérer les estimations, la planification, les opérations,
+                      les inspections, etc.
+                    </p>
+                    <p>
+                      Les principales fonctionnalités de TV comprennent la
+                      vérification de l'assistant des tâches, des rappels
+                      automatisés, l'intégration du calendrier, le suivi des
+                      tâches en temps réel, le statut actuel de progrès, les
+                      indicateurs d'activité et les dossiers électroniques. Le
+                      module d'inspection permet aux utilisateurs d'inspecter
+                      numériquement tous les véhicules et de télécharger les
+                      résultats des documents directement sur les ordres de
+                      travail. TV permet également aux utilisateurs de conserver
+                      des recommandations de réparation et des listes de travail
+                      différées pour référence ultérieure.
+                    </p>
+                    <p>
+                      TV offre un gestionnaire de rapports et un tableau de bord
+                      personnalisables permettant aux différents départements de
+                      suivre les performances des recettes grâce à une
+                      analytique en temps réel et des mesures clés.
                     </p>
                     <h6 class="card-title">Fonctionnalités</h6>
                     <ul>
