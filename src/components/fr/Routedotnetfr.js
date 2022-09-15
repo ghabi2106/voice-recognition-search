@@ -75,6 +75,7 @@ import CommandPage from "../../pages/fr/dotnet/design/Command";
 import CleancodePage from "../../pages/fr/dotnet/methodology/Cleancode";
 import Cleancode1Page from "../../pages/fr/dotnet/methodology/Cleancode1";
 import SolidPage from "../../pages/fr/dotnet/methodology/Solid";
+import TddPage from "../../pages/fr/dotnet/methodology/Tdd";
 //#endregion
 
 //#region Host Deployment
@@ -237,6 +238,7 @@ export default function Routedotnetfr() {
       <Route path="/cleancode" component={CleancodePage} />
       <Route path="/cleancode1" component={Cleancode1Page} />
       <Route path="/solid" component={SolidPage} />
+      <Route path="/tdd" component={TddPage} />
       {
         //#endregion
       }
