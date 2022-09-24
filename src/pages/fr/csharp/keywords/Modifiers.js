@@ -64,6 +64,14 @@ export default function Struct() {
                     new
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#static-singleton"
+                  >
+                    static vs singleton
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -487,15 +495,29 @@ private static extern void AVIFileInit();`}
                   <td>Non</td>
                 </tr>
                 <tr>
-                  <td>Il peut contenir différents types de modificateurs d'accès tels que public, privé, protégé, etc.</td>
-                  <td>Il ne contient que le modificateur d'accès public car tout dans l'interface est public.</td>
+                  <td>
+                    Il peut contenir différents types de modificateurs d'accès
+                    tels que public, privé, protégé, etc.
+                  </td>
+                  <td>
+                    Il ne contient que le modificateur d'accès public car tout
+                    dans l'interface est public.
+                  </td>
                 </tr>
                 <tr>
-                  <td>La classe abstraite peut contenir des méthodes, des champs, des constantes, etc.</td>
-                  <td>L'interface ne peut contenir que des méthodes, des propriétés, des indexeurs et des événements.</td>
+                  <td>
+                    La classe abstraite peut contenir des méthodes, des champs,
+                    des constantes, etc.
+                  </td>
+                  <td>
+                    L'interface ne peut contenir que des méthodes, des
+                    propriétés, des indexeurs et des événements.
+                  </td>
                 </tr>
                 <tr>
-                  <td>Il peut être entièrement, partiellement ou non implémenté.</td>
+                  <td>
+                    Il peut être entièrement, partiellement ou non implémenté.
+                  </td>
                   <td>Il doit être entièrement implémenté</td>
                 </tr>
               </tbody>
@@ -542,6 +564,94 @@ Output:
 22
 */`}
               </Highlight>
+            </div>
+          </article>
+          <article id="static-singleton">
+            <h6>static vs singleton</h6>
+            <div>
+              <h6>Similarities between Singleton and Static</h6>
+              <ul>
+                <li>
+                  Both Static and Singleton classes can have only one instance
+                  available in the memory.
+                </li>
+                <li>
+                  Both classes can be used for holding the global state of an
+                  application.
+                </li>
+              </ul>
+              <h6>Differences between Singleton and Static</h6>
+              <ul>
+                <li>
+                  A Singleton class supports <strong>interface</strong>{" "}
+                  implementation, while static classes cannot implement
+                  interfaces.
+                </li>
+                <li>
+                  A Singleton class supports <strong>inheritance</strong>, while
+                  a Static class is a sealed class, and therefore cannot be
+                  inherited.
+                </li>
+                <li>
+                  A Singleton class can <strong>inherit</strong> from other
+                  classes, while a Static class cannot (not even from other
+                  static classes).
+                </li>
+                <li>
+                  A Singleton class can be <strong>instantiated</strong> using
+                  the new keyword, while static can not be instantiated (static
+                  class can be used directly).
+                </li>
+                <li>
+                  Both Singleton and static are stored on the Heap memory, but
+                  static classes are stored in a special area of the Heap Memory
+                  called the <strong>High-Frequency Heap</strong> (Objects in
+                  High Frequency Heap are not garbage collected by GC, and hence
+                  static members are available throughout the application
+                  lifetime).
+                </li>
+                <li>
+                  Singleton class can <strong>Dispose</strong>, while a static
+                  class can not.
+                </li>
+                <li>
+                  A Singleton class can have a <strong>constructor</strong>,
+                  while a static class can only have a{" "}
+                  <strong>private static parameterless constructor</strong> and
+                  cannot have instance constructors.
+                </li>
+                <li>
+                  A Static class has better performance since static methods are
+                  bonded on compile time.
+                </li>
+                <li>
+                  A Singleton class can be <strong>lazy loaded</strong> when
+                  needed, while static classes are always loaded. Static classes
+                  are loaded automatically by the .NET Framework common language
+                  runtime (CLR) when the program or namespace containing the
+                  class is loaded.
+                </li>
+              </ul>
+              <h6>used in :</h6>
+              <ul>
+                <li>
+                  <strong>Static</strong> classes can be used when you need to
+                  implement some kind of <strong>utility</strong> classes that
+                  do not need many modifications, classes such as{" "}
+                  <strong>extension, helper, constant</strong>, etc. As Static
+                  classes don’t allow instantiation, there will be no duplicate
+                  objects, avoiding extra usage of memory.
+                </li>
+                <li>
+                  <strong>Singleton</strong> classes can be used when only one
+                  instance of a particular class needs to be created, and then a
+                  simple global access to that instance is going to be provided
+                  for the entire application, for example when you have some{" "}
+                  <strong>service proxies</strong>, a
+                  <strong>Logger class, caching, database connections,</strong>{" "}
+                  etc.
+                </li>
+              </ul>
             </div>
           </article>
         </section>

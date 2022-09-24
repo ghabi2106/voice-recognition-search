@@ -500,7 +500,8 @@ export default function Navdotnet() {
             <Link className="dropdown-item" to="/modifiers">
               Modifiers <mark>virtual</mark> <mark>override</mark>{" "}
               <mark>abstract-interface</mark> <mark>const-readonly</mark>{" "}
-              <mark>sealed</mark> <mark>static</mark>
+              <mark>sealed</mark> <mark>static</mark>{" "}
+              <mark>static-singleton</mark>
             </Link>
           </li>
           <li className="nav-item">
@@ -596,7 +597,7 @@ export default function Navdotnet() {
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/parallelloops">
-            Parallel Loops
+              Parallel Loops
             </Link>
           </li>
           <li className="nav-item">
