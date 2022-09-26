@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Di() {
   return (
@@ -68,6 +70,14 @@ export default function Di() {
                     href="#lifetime"
                   >
                     Lifetime manager
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#demonstration"
+                  >
+                    Demonstration
                   </a>
                 </li>
               </ul>
@@ -179,10 +189,9 @@ export default function Di() {
             <h6>Introduction</h6>
             <div>
               <p>
-                In an object-oriented world you create flexible applications by
-                combining objects. You'll want to keep those objects loosely
-                coupled, though, so that a change in one class doesn't force you
-                to rewrite every class. Here's how to keep them loosely coupled.
+                Dependency injection (DI) design pattern, which is a technique
+                for achieving Inversion of Control (IoC) between classes and
+                their dependencies.
               </p>
               <img src="/img/dotnet/ioc-steps.png" alt="ioc steps" />
               <img
@@ -320,6 +329,180 @@ export default function Di() {
                 </tr>
               </tbody>
             </table>
+          </article>
+          <article id="demonstration">
+            <h6>DI Demonstration</h6>
+            <div>
+              <p>We will create one type per lifetime option:</p>
+              <Highlight language="csharp">
+                {`using System;
+
+namespace DependencyInjectionSample.Interfaces
+{
+    public interface IOperation
+    {
+        Guid OperationId { get; }
+    }
+
+    public interface IOperationTransient : IOperation
+    {
+    }
+
+    public interface IOperationScoped : IOperation
+    {
+    }
+
+    public interface IOperationSingleton : IOperation
+    {
+    }
+
+    public interface IOperationSingletonInstance : IOperation
+    {
+    }
+}`}
+              </Highlight>
+              <p>
+                We implement these interfaces using a single class,{" "}
+                <code>Operation</code>, that accepts a GUID in its constructor,
+                or uses a new GUID if none is provided:
+              </p>
+              <Highlight language="csharp">
+                {`using System;
+using DependencyInjectionSample.Interfaces;
+namespace DependencyInjectionSample.Classes
+{
+    public class Operation : IOperationTransient, IOperationScoped, IOperationSingleton, IOperationSingletonInstance
+    {
+        Guid _guid;
+        public Operation() : this(Guid.NewGuid())
+        {
+
+        }
+
+        public Operation(Guid guid)
+        {
+            _guid = guid;
+        }
+
+        public Guid OperationId => _guid;
+    }
+}`}
+              </Highlight>
+              <p>
+                Next, in <code>ConfigureServices</code>, each type is added to
+                the container according to its named lifetime:
+              </p>
+              <Highlight language="csharp">
+                {`services.AddTransient<IOperationTransient, Operation>();
+services.AddScoped<IOperationScoped, Operation>();
+services.AddSingleton<IOperationSingleton, Operation>();
+services.AddSingleton<IOperationSingletonInstance>(new Operation(Guid.Empty));
+services.AddTransient<OperationService, OperationService>();`}
+              </Highlight>
+              <p>
+                Note that the <code>IOperationSingletonInstance</code> service
+                is using a specific instance with a known ID of{" "}
+                <code>Guid.Empty</code>, so it will be clear when this type is
+                in use. We have also registered an <code>OperationService</code>{" "}
+                that depends on each of the other <code>Operation</code> types,
+                so that it will be clear within a request whether this service
+                is getting the same instance as the controller, or a new one,
+                for each operation type. All this service does is expose its
+                dependencies as properties, so they can be displayed in the
+                view.
+              </p>
+              <Highlight language="csharp">
+                {`using DependencyInjectionSample.Interfaces;
+
+namespace DependencyInjectionSample.Services
+{
+    public class OperationService
+    {
+        public IOperationTransient TransientOperation { get; }
+        public IOperationScoped ScopedOperation { get; }
+        public IOperationSingleton SingletonOperation { get; }
+        public IOperationSingletonInstance SingletonInstanceOperation { get; }
+
+        public OperationService(IOperationTransient transientOperation,
+            IOperationScoped scopedOperation,
+            IOperationSingleton singletonOperation,
+            IOperationSingletonInstance instanceOperation)
+        {
+            TransientOperation = transientOperation;
+            ScopedOperation = scopedOperation;
+            SingletonOperation = singletonOperation;
+            SingletonInstanceOperation = instanceOperation;
+        }
+    }
+}`}
+              </Highlight>
+              <p>
+                To demonstrate the object lifetimes within and between separate
+                individual requests to the application, the sample includes an{" "}
+                <code>OperationsController</code> that requests each kind of{" "}
+                <code>IOperation</code> type as well as an{" "}
+                <code>OperationService</code>. The <code>Index</code> action
+                then displays all of the controller’s and service’s{" "}
+                <code>OperationId</code> values.
+              </p>
+              <Highlight language="csharp">
+                {`using DependencyInjectionSample.Interfaces;
+using DependencyInjectionSample.Services;
+using Microsoft.AspNetCore.Mvc;
+
+namespace DependencyInjectionSample.Controllers
+{
+    public class OperationsController : Controller
+    {
+        private readonly OperationService _operationService;
+        private readonly IOperationTransient _transientOperation;
+        private readonly IOperationScoped _scopedOperation;
+        private readonly IOperationSingleton _singletonOperation;
+        private readonly IOperationSingletonInstance _singletonInstanceOperation;
+
+        public OperationsController(OperationService operationService,
+            IOperationTransient transientOperation,
+            IOperationScoped scopedOperation,
+            IOperationSingleton singletonOperation,
+            IOperationSingletonInstance singletonInstanceOperation)
+        {
+            _operationService = operationService;
+            _transientOperation = transientOperation;
+            _scopedOperation = scopedOperation;
+            _singletonOperation = singletonOperation;
+            _singletonInstanceOperation = singletonInstanceOperation;
+        }
+
+        public IActionResult Index()
+        {
+            // ViewBag contains controller-requested services
+            ViewBag.Transient = _transientOperation;
+            ViewBag.Scoped = _scopedOperation;
+            ViewBag.Singleton = _singletonOperation;
+            ViewBag.SingletonInstance = _singletonInstanceOperation;
+
+            // Operation service has its own requested services
+            ViewBag.Service = _operationService;
+            return View();
+        }
+    }
+}
+`}
+              </Highlight>
+              <p>
+                Now two separate requests are made to this controller action:
+              </p>
+              <img
+                src="/img/dotnet/request1_di.png"
+                alt="request1_di"
+                style={{ maxWidth: "485px" }}
+              />
+              <img
+                src="/img/dotnet/request2_di.png"
+                alt="request2_di"
+                style={{ maxWidth: "485px" }}
+              />
+            </div>
           </article>
         </section>
       </div>

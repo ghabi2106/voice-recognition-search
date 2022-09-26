@@ -244,37 +244,6 @@ export default function Navdotnet() {
       }
 
       {
-        //#region Services
-      }
-      <li className="nav-item dropdown">
-        <a
-          className="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Services
-        </a>
-        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/service">
-              Service
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/ideals">
-              IDEALS
-            </Link>
-          </li>
-        </ul>
-      </li>
-      {
-        //#endregion
-      }
-
-      {
         //#region methodology
       }
       <li className="nav-item dropdown">
@@ -308,6 +277,11 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/tdd">
               TDD <mark>BDD</mark>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/ideals">
+              IDEALS
             </Link>
           </li>
         </ul>
@@ -348,7 +322,8 @@ export default function Navdotnet() {
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/di">
-              DI
+              DI <mark>Singleton</mark> <mark>Transcient</mark>{" "}
+              <mark>Scope</mark>
             </Link>
           </li>
           <li className="nav-item">

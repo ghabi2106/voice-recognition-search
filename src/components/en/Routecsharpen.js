@@ -53,11 +53,7 @@ import HttpsPage from "../../pages/en/dotnet/http/Https";
 import HttpmethodsPage from "../../pages/en/dotnet/http/Httpmethods";
 import JwtPage from "../../pages/en/dotnet/http/Jwt";
 import MiddlewarePage from "../../pages/en/dotnet/http/Middleware";
-//#endregion
-
-//#region Services
-import ServicePage from "../../pages/en/dotnet/services/Service";
-import IdealsPage from "../../pages/en/dotnet/services/Ideals";
+import ServicePage from "../../pages/en/dotnet/http/Service";
 //#endregion
 
 //#region design pattern
@@ -76,6 +72,7 @@ import CleancodePage from "../../pages/en/dotnet/methodology/Cleancode";
 import Cleancode1Page from "../../pages/en/dotnet/methodology/Cleancode1";
 import SolidPage from "../../pages/en/dotnet/methodology/Solid";
 import TddPage from "../../pages/en/dotnet/methodology/Tdd";
+import IdealsPage from "../../pages/en/dotnet/methodology/Ideals";
 //#endregion
 
 //#region Host Deployment
@@ -203,6 +200,7 @@ export default function Routecsharpen() {
       <Route path="/httpmethods" component={HttpmethodsPage} />
       <Route path="/jwt" component={JwtPage} />
       <Route path="/middleware" component={MiddlewarePage} />
+      <Route path="/service" component={ServicePage} />
       {
         //#endregion
       }
@@ -241,15 +239,7 @@ export default function Routecsharpen() {
       <Route path="/cleancode1" component={Cleancode1Page} />
       <Route path="/solid" component={SolidPage} />
       <Route path="/tdd" component={TddPage} />
-      {
-        //#endregion
-      }
-
-      {
-        //#region Services
-      }
       <Route path="/ideals" component={IdealsPage} />
-      <Route path="/service" component={ServicePage} />
       {
         //#endregion
       }

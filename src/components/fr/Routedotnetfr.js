@@ -53,11 +53,7 @@ import HttpsPage from "../../pages/fr/dotnet/http/Https";
 import HttpmethodsPage from "../../pages/fr/dotnet/http/Httpmethods";
 import JwtPage from "../../pages/fr/dotnet/http/Jwt";
 import MiddlewarePage from "../../pages/fr/dotnet/http/Middleware";
-//#endregion
-
-//#region Services
-import ServicePage from "../../pages/fr/dotnet/services/Service";
-import IdealsPage from "../../pages/fr/dotnet/services/Ideals";
+import ServicePage from "../../pages/fr/dotnet/http/Service";
 //#endregion
 
 //#region design pattern
@@ -76,6 +72,7 @@ import CleancodePage from "../../pages/fr/dotnet/methodology/Cleancode";
 import Cleancode1Page from "../../pages/fr/dotnet/methodology/Cleancode1";
 import SolidPage from "../../pages/fr/dotnet/methodology/Solid";
 import TddPage from "../../pages/fr/dotnet/methodology/Tdd";
+import IdealsPage from "../../pages/fr/dotnet/methodology/Ideals";
 //#endregion
 
 //#region Host Deployment
@@ -201,6 +198,7 @@ export default function Routedotnetfr() {
       <Route path="/httpmethods" component={HttpmethodsPage} />
       <Route path="/jwt" component={JwtPage} />
       <Route path="/middleware" component={MiddlewarePage} />
+      <Route path="/service" component={ServicePage} />
       {
         //#endregion
       }
@@ -239,15 +237,7 @@ export default function Routedotnetfr() {
       <Route path="/cleancode1" component={Cleancode1Page} />
       <Route path="/solid" component={SolidPage} />
       <Route path="/tdd" component={TddPage} />
-      {
-        //#endregion
-      }
-
-      {
-        //#region Services
-      }
       <Route path="/ideals" component={IdealsPage} />
-      <Route path="/service" component={ServicePage} />
       {
         //#endregion
       }
