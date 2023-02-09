@@ -92,12 +92,17 @@ export default function Nav() {
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li className="nav-item">
                   <Link className="dropdown-item" to="/">
-                    Presentation
+                    Home
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="dropdown-item" to="/qualities">
                     Qualities
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="dropdown-item" to="/presentation">
+                    Presentation
                   </Link>
                 </li>
               </ul>
