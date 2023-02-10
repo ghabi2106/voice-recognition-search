@@ -316,7 +316,6 @@ export default function Routecsharpen() {
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />
       <Route path="/hashcode" component={HashPage} />
-      <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/operatoroverloading" component={OperatoroverloadingPage} />
       <Route path="/nested" component={NestedPage} />
       <Route

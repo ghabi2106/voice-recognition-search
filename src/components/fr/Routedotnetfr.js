@@ -314,7 +314,6 @@ export default function Routedotnetfr() {
       <Route path="/datatype" component={DatatypePage} />
       <Route path="/delegate" component={DelegatePage} />
       <Route path="/enumindexer" component={EnumindexerPage} />
-      <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/operatoroverloading" component={OperatoroverloadingPage} />
       <Route path="/nested" component={NestedPage} />
       <Route
