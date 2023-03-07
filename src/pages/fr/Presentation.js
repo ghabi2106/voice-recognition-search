@@ -129,8 +129,8 @@ export default function Presentation() {
             <h6>Diginov</h6>
             <div>
               <p>
-                Après javais intégré Diginov pendant 2. J’avais développé from
-                scratch deux plateformes « UAE SME » et « FGIC » pour le
+                Après javais intégré Diginov pendant 2 ans. J’avais développé
+                from scratch deux plateformes « UAE SME » et « FGIC » pour le
                 ministère d’économiede l'Emirates.
               </p>
               <p>
@@ -144,16 +144,44 @@ export default function Presentation() {
                 d'organiser et de présenter des données alphanumériques qui sont
                 spatialement référencées.
               </p>
+              <p>
+                Durant cette mission c'était générallement de conception,
+                analyse de cahier de charges et développement des applications
+                ASP.Net back et front from scratch avec la méthodologie agile
+                scrum avec sprint d'une semaine.
+              </p>
             </div>
           </article>
           <article id="capgemini">
             <h6>Capgemini</h6>
             <div>
               <p>
-                qui sont des solution de gestion automobile conçue pour
-                aider les ateliers automobiles de Volkswagen à gérer les
+                Après javais intégré Capgemini pendant 2 ans. J’avais contribué
+                au développment de deux projets « AskMe » et « TV » pour
+                Volkswagen au sein d'une équipe de 20 personnes.
+              </p>
+              <p>
+                Ces deux projets sont des solution de gestion automobile conçue
+                pour aider les ateliers automobiles de Volkswagen à gérer les
                 estimations, la planification, les opérations, les inspections,
                 etc.
+              </p>
+              <p>
+                là au niveau de cette mission c'était générallement de
+                développement de nouveaux modules de l'applications front et
+                back, déboggage, des tests unitaires et d'autres fonctionnalités
+                comme support des membres de l'équipe et faciliter
+                l'intégrations des nouveaux membres par la présentation des
+                projets et préparation des environnements de travails
+              </p>
+              <p>
+                On travaille par la méthodologie agile scrum qui est
+                parfaitement appliqué aux projets avec sprint de 2 semaines
+              </p>
+              <p>
+                Ce qui concerne les céromonies, on a tout les céromonies: daily
+                stand-up meeting, sprint revue, sprint retrospective et sprint
+                planning et nous communiquons avec l'anglais
               </p>
               <p>
                 voilà c'était tout de ma part, j'espère que j'étais précis au
