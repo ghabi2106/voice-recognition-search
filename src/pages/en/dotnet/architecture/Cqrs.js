@@ -56,6 +56,30 @@ export default function Cqrs() {
                     Handler
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#command"
+                  >
+                    Command
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#command-handler"
+                  >
+                    Command Handler
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#controller"
+                  >
+                    Controller
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -117,28 +141,29 @@ export default function Cqrs() {
             <h6>Introduction</h6>
             <div>
               <p>
-                In traditional architectures, the same data model is used to
-                query and update a database. That's simple and works well for
-                basic CRUD operations. In more complex applications, however,
-                this approach can become unwieldy. For example, on the read
-                side, the application may perform many different queries,
-                returning data transfer objects (DTOs) with different shapes.
-                Object mapping can become complicated. On the write side, the
-                model may implement complex validation and business logic. As a
-                result, you can end up with an overly complex model that does
-                too much.
+                CQRS (Command Query Responsibility Segregation) is an
+                architectural pattern that separates the responsibility of
+                reading data (queries) from modifying data (commands).
               </p>
               <p>
                 CQRS separates reads and writes into different models, using
                 commands to update data, and queries to read data.
               </p>
-              <b>avoid thin controllers</b>
+              <ul>
+                <li>
+                  <strong>Command</strong>: Modifies data, often using domain
+                  logic.
+                </li>
+                <li>
+                  <strong>Query</strong>: Retrieves data, optimized for reading.
+                </li>
+              </ul>
               <p>
-                In the traditional Controllers, you usually implement almost
-                business logic flow in like as Validation, Mapping Objects,
-                Savings Object, or Get Object, Return HTTP status code of
-                request and the data response if have, your controller will get
-                more fat.
+                CQRS is useful in systems with complex business logic or high
+                performance demands, improving scalability and maintainability
+                by handling reads and writes independently. <br />
+                It can be combined with Event Sourcing for even more powerful
+                tracking of state changes.
               </p>
             </div>
           </article>
@@ -147,15 +172,19 @@ export default function Cqrs() {
               <Link to="/mediator">MediatR</Link>
             </h6>
             <p>
-              <Link to="/mediator">MediatR</Link> allows you to compose
-              messages, create and listen for events using synchronous or
-              asynchronous patterns. It helps to reduce coupling and isolate the
-              concerns of requesting the work to be done and creating the
-              handler that dispatches the work.
+              <Link to="/mediator">MediatR</Link> is a .NET library that
+              implements the Mediator pattern, simplifying the communication
+              between different parts of an application. <br/>It decouples requests
+              (commands, queries) from handlers, making code more maintainable.
+              <br/>You define request objects (e.g., commands, queries) and implement
+              handlers to process them. <br/>MediatR supports asynchronous operations
+              and can be easily integrated with the Dependency Injection system
+              in ASP.NET Core. <br/>It's often used to implement CQRS, event
+              handling, and pipeline behaviors in a clean and decoupled way
             </p>
           </article>
           <article id="request">
-            <h6>Request</h6>
+            <h6>Query</h6>
             <div>
               <p>Queries describe the behavior of your commands and queries.</p>
               <Highlight language="csharp">
@@ -171,7 +200,7 @@ export default function Cqrs() {
             </div>
           </article>
           <article id="handler">
-            <h6>Handler</h6>
+            <h6>Query Handler</h6>
             <div>
               <p>
                 When a request is created, we need a manager to resolve this
@@ -197,6 +226,73 @@ export default function Cqrs() {
     
     var userDto = _userMapper.MapUserDto(user);
     return userDto;
+    }
+}`}
+              </Highlight>
+            </div>
+          </article>
+          <article id="command">
+            <h6>Command</h6>
+            <div>
+              <p>Commands describe the behavior of your commands and queries.</p>
+              <Highlight language="csharp">
+                {`public class CreateUserCommand : IRequest<User>
+{
+    public string Name { get; set; }
+    public string Email { get; set; }
+}`}
+              </Highlight>
+            </div>
+          </article>
+          <article id="command-handler">
+            <h6>Command Handler</h6>
+            <div>
+              <p>
+                When a request is created, we need a manager to resolve this
+                request.
+              </p>
+              <Highlight language="csharp">
+                {`public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, User>
+{
+    private readonly ApplicationDbContext _context;
+
+    public CreateUserCommandHandler(ApplicationDbContext context)
+    {
+        _context = context;
+    }
+
+    public async Task<User> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    {
+        var user = new User { Name = request.Name, Email = request.Email };
+        _context.Users.Add(user);
+        await _context.SaveChangesAsync(cancellationToken);
+        return user;
+    }
+}`}
+              </Highlight>
+            </div>
+          </article>
+          <article id="controller">
+            <h6>Controller</h6>
+            <div>
+              <p>
+              Send a Command
+              </p>
+              <Highlight language="csharp">
+                {`public class UserController : Controller
+{
+    private readonly IMediator _mediator;
+
+    public UserController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    public async Task<IActionResult> CreateUser(string name, string email)
+    {
+        var command = new CreateUserCommand { Name = name, Email = email };
+        var user = await _mediator.Send(command);
+        return Ok(user);
     }
 }`}
               </Highlight>

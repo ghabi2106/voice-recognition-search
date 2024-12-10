@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
 export default function Solid() {
   return (
@@ -68,6 +70,14 @@ export default function Solid() {
                     href="#d"
                   >
                     Dependency inversion
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#examples"
+                  >
+                    Examples
                   </a>
                 </li>
               </ul>
@@ -171,11 +181,9 @@ export default function Solid() {
             <h6>SOLID principles</h6>
             <div>
               <p>
-                SOLID is a{" "}
-                <strong>dispositif mnémotechnique pour 5 principes de conception</strong> of
-                object-oriented programs (OOP) that result in readable,
-                adaptable, and scalable code. SOLID can be applied to any OOP
-                program.
+                SOLID is a set of five principles for object-oriented design
+                aimed at making software more understandable, flexible, and
+                maintainable:
               </p>
               <p>The 5 principles of SOLID are:</p>
               <ul>
@@ -202,44 +210,42 @@ export default function Solid() {
               <strong>S</strong>: Single-responsibility principle
             </h6>
             <p>
-              <strong>Single Responsibility (SRP)</strong> ensures that every
-              module or class should be responsible for single functionality
-              supported by software system. In other words, Every class should
-              have one and only reason to change it. <br /> For example, In
-              ASP.NET MVC <code>HomeController</code> class should be
-              responsible related to Home Page functionality of software system.
+              <strong>Single Responsibility (SRP)</strong> A class should have
+              one reason to change.
+              <br />A class <code>InvoiceManager</code> should handle only
+              invoice-related operations, not customer management. Split
+              responsibilities into separate classes like{" "}
+              <code>CustomerManager</code> and <code>InvoiceManager</code>.
             </p>
           </article>
           <article id="o">
             <h6>
               <strong>O</strong>: Open-closed principle
             </h6>
-            <p>
-              <strong>Open Close Principle (OCP)</strong> states or ensures that
-              A class, component or entity should be open for extension but
-              close for modification. In detail, We can extend any class via
-              Interface, Inheritance or Composition whenever it's required
-              instead of opening a class and modifying it's code.
-              <br />
-              For example, suppose you have implemented a functionality to
-              calculate area of Rectangle and after some time you need to
-              calculate the area of Square, then In this case you should not
-              modify your original class code to add extra code for square.
-              Instead you should create one base class initially and now you
-              should extend this base class by your square class.
-            </p>
+            <div>
+              <p>
+                <strong>Open Close Principle (OCP)</strong> Software entities
+                should be open for extension, but closed for modification.
+                <br />A <code>PaymentProcessor</code> class can be extended to
+                support new payment methods like <code>CreditCardPayment</code>{" "}
+                or <code>PayPalPayment</code> without modifying the{" "}
+                <code>PaymentProcessor</code>.
+              </p>
+            </div>
           </article>
           <article id="l">
             <h6>
               <strong>L</strong>: Liskov substitution principle
             </h6>
             <p>
-              <strong>Liskov Substitution Principle (LSP)</strong> states that
-              Objects in a program can be replaced by the instances of their
-              subtypes without modifying the correctness of a program. <br />
-              In other words, if A is subtype of B then instances of B may be
-              replaced by the instances of A without altering the program
-              correctness.
+              <strong>Liskov Substitution Principle (LSP)</strong> Objects of a
+              superclass should be replaceable with objects of its subclasses
+              without affecting correctness
+              <br />
+              If <code>Bird</code> is a superclass and <code>Penguin</code> is a
+              subclass, a <code>Penguin</code>
+              object should be usable in place of <code>Bird</code> without
+              breaking functionality.
             </p>
           </article>
           <article id="i">
@@ -247,14 +253,13 @@ export default function Solid() {
               <strong>I</strong>: Interface segregation principle
             </h6>
             <p class="answer">
-              <strong>Interface Segregation Principle (ISP)</strong> states that
-              use many client specific interfaces instead of one general purpose
-              interface.
+              <strong>Interface Segregation Principle (ISP)</strong> No client
+              should be forced to depend on methods it does not use
               <br />
-              In other words No client should be forced to implement other
-              methods which it does not require. It means it's better to create
-              a separate interface and allow your classes to implement multiple
-              interfaces.
+              Split a <code>Printer</code> interface into smaller ones, like{" "}
+              <code>TextPrinter</code> and
+              <code>ImagePrinter</code>, to avoid forcing clients to implement
+              unused methods.
             </p>
           </article>
           <article id="d">
@@ -263,19 +268,116 @@ export default function Solid() {
             </h6>
             <div>
               <p>
-                The <strong>dependency inversion principle</strong> (DIP) has
-                two parts:
+                The <strong>dependency inversion principle</strong> (DIP)
+                High-level modules should not depend on low-level modules. Both
+                should depend on abstractions.
+                <br />A class <code>OrderProcessor</code> should depend on an
+                interface
+                <code>IPaymentService</code> rather than a concrete class like
+                <code>CreditCardPayment</code>. This allows for flexibility in
+                payment method choices.
               </p>
-              <ol>
-                <li>
-                  High-level modules should not depend on low-level modules.
-                  Instead, both should depend on abstractions (interfaces)
-                </li>
-                <li>
-                  Abstractions should not depend on details. Details (like
-                  concrete implementations) should depend on abstractions.
-                </li>
-              </ol>
+            </div>
+          </article>
+          <article id="examples">
+            <h6>Examples</h6>
+            <div>
+              <p>
+                <strong>Single Responsibility Principle (SRP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public class InvoiceManager
+{
+    public void GenerateInvoice() { /* Generate invoice logic */ }
+}
+
+public class CustomerManager
+{
+    public void AddCustomer() { /* Add customer logic */ }
+}`}
+              </Highlight>
+              <p>
+                <strong>Open/Closed Principle (OCP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public interface IPaymentMethod
+{
+    void ProcessPayment();
+}
+
+public class CreditCardPayment : IPaymentMethod
+{
+    public void ProcessPayment() { /* Process credit card payment */ }
+}
+
+public class PayPalPayment : IPaymentMethod
+{
+    public void ProcessPayment() { /* Process PayPal payment */ }
+}`}
+              </Highlight>
+              <p>
+                <strong>Liskov Substitution Principle (LSP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public class Bird
+{
+    public virtual void Fly() { /* Fly logic */ }
+}
+
+public class Sparrow : Bird
+{
+    public override void Fly() { /* Sparrow flying logic */ }
+}
+
+public class Penguin : Bird
+{
+    public override void Fly() { throw new NotImplementedException(); }
+}`}
+              </Highlight>
+              <p>
+                <strong>Interface Segregation Principle (ISP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public interface IPrinter
+{
+    void PrintText(string text);
+}
+
+public interface IImagePrinter
+{
+    void PrintImage(string imagePath);
+}
+
+public class TextPrinter : IPrinter
+{
+    public void PrintText(string text) { /* Print text */ }
+}
+
+public class ImagePrinter : IImagePrinter
+{
+    public void PrintImage(string imagePath) { /* Print image */ }
+}`}
+              </Highlight>
+              <p>
+                <strong>Dependency Inversion Principle (DIP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public interface IPaymentService
+{
+    void ProcessPayment();
+}
+
+public class OrderProcessor
+{
+    private readonly IPaymentService _paymentService;
+    public OrderProcessor(IPaymentService paymentService)
+    {
+        _paymentService = paymentService;
+    }
+
+    public void ProcessOrder() { _paymentService.ProcessPayment(); }
+}`}
+              </Highlight>
             </div>
           </article>
         </section>

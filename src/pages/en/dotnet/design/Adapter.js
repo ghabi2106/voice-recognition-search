@@ -141,105 +141,65 @@ export default function Adapter() {
             <h6>Adapter</h6>
             <div>
               <p>
-                <strong>Adapter</strong> is a structural design pattern that
-                allows objects with incompatible interfaces to collaborate.
+                The Adapter Pattern is a structural design pattern used to allow
+                two incompatible interfaces to work together. <br />
+                It acts as a bridge by converting the interface of a class into
+                another interface that a client expects.
               </p>
+              <ul>
+                <li>
+                  <strong>VGADevice</strong> is the existing device using VGA.
+                </li>
+                <li>
+                  <strong>HDMIAdapter</strong> allows the VGA device to be used
+                  via an HDMI interface.
+                </li>
+                <li>
+                  The client can now use the device with an HDMI connection.
+                </li>
+              </ul>
               <Highlight language="csharp">
-                {`public interface ILightningPhone
+                {`// Target interface
+public interface IDisplayDevice
 {
-	void ConnectLightning();
-	void Recharge();
+    void Display();
 }
 
-public interface IUsbPhone
+// Adaptee (existing incompatible class)
+public class VGADevice
 {
-	void ConnectUsb();
-	void Recharge();
+    public void DisplayWithVGA()
+    {
+        Console.WriteLine("Displaying through VGA connection.");
+    }
 }
 
-public sealed class AndroidPhone : IUsbPhone
+// Adapter
+public class HDMIAdapter : IDisplayDevice
 {
-	private bool isConnected;
-	
-	public void ConnectUsb()
-	{
-		this.isConnected = true;
-		Console.WriteLine("Android phone connected.");
-	}
+    private VGADevice _vgaDevice;
 
-	public void Recharge()
-	{
-		if (this.isConnected)
-		{
-			Console.WriteLine("Android phone recharging.");
-		}
-		else
-		{
-			Console.WriteLine("Connect the USB cable first.");
-		}
-	}
+    public HDMIAdapter(VGADevice vgaDevice)
+    {
+        _vgaDevice = vgaDevice;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine("Using HDMI adapter...");
+        _vgaDevice.DisplayWithVGA();
+    }
 }
 
-public sealed class ApplePhone : ILightningPhone
+// Client code
+public class Program
 {
-	private bool isConnected;
-	
-	public void ConnectLightning()
-	{
-		this.isConnected = true;
-		Console.WriteLine("Apple phone connected.");
-	}
-
-	public void Recharge()
-	{
-		if (this.isConnected)
-		{
-			Console.WriteLine("Apple phone recharging.");
-		}
-		else
-		{
-			Console.WriteLine("Connect the Lightning cable first.");
-		}
-	}
-}
-
-public sealed class LightningToUsbAdapter : IUsbPhone
-{
-	private readonly ILightningPhone lightningPhone;
-	
-	private bool isConnected;
-	
-	public LightningToUsbAdapter(ILightningPhone lightningPhone)
-	{
-		this.lightningPhone = lightningPhone;
-		this.lightningPhone.ConnectLightning();
-	}
-	
-	public void ConnectUsb()
-	{
-		this.isConnected = true;
-		Console.WriteLine("Adapter cable connected.");
-	}
-
-	public void Recharge()
-	{
-		if (this.isConnected)
-		{
-			this.lightningPhone.Recharge();
-		}
-		else
-		{
-			Console.WriteLine("Connect the USB cable first.");
-		}
-	}
-}
-
-public void Main()
-{
-	ILightningPhone applePhone = new ApplePhone();
-	IUsbPhone adapterCable = new LightningToUsbAdapter(applePhone);
-	adapterCable.ConnectUsb();
-	adapterCable.Recharge();
+    public static void Main()
+    {
+        VGADevice vgaDevice = new VGADevice();
+        IDisplayDevice hdmiAdapter = new HDMIAdapter(vgaDevice);
+        hdmiAdapter.Display(); // Displays using HDMI adapter
+    }
 }`}
               </Highlight>
             </div>

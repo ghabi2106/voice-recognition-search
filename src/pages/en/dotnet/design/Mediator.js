@@ -174,18 +174,19 @@ export default function Mediator() {
             <h6>Common use</h6>
             <ul>
               <li>
-                Use the Mediator pattern when it’s hard to change some of the
-                classes because they are tightly coupled to a bunch of other
-                classes.
+                <strong>Decoupling Components</strong>: Use it when multiple
+                components or objects interact extensively, creating tightly
+                coupled code. Mediator centralizes this communication.
               </li>
               <li>
-                Use the pattern when you can’t reuse a component in a different
-                program because it’s too dependent on other components.
+                <strong>Complex Workflows</strong>: It simplifies complex
+                workflows where objects need to coordinate actions by delegating
+                the orchestration logic to a single mediator.
               </li>
               <li>
-                Use the Mediator when you find yourself creating tons of
-                component subclasses just to reuse some basic behavior in
-                various contexts.
+                <strong>Scalability</strong>: When you anticipate adding or
+                modifying components in a system without altering existing ones,
+                a mediator reduces the risk of breaking changes.
               </li>
             </ul>
           </article>
@@ -228,146 +229,103 @@ export default function Mediator() {
           </article>
           <article id="code">
             <h6>Structural code in C#</h6>
-            <Highlight language="csharp">
-              {`using System;
-
-namespace Mediator.Structural
+            <div>
+              <ul>
+                <li>
+                  <strong>Mediator</strong>: The Air Traffic Control centralizes
+                  communication, ensuring all airplanes are coordinated.
+                </li>
+                <li>
+                  <strong>Colleagues</strong>: Airplanes (Passenger and Cargo)
+                  communicate only through the mediator.
+                </li>
+                <li>
+                  <strong>Benefits</strong>: The pattern simplifies
+                  communication, reducing dependencies and making the system
+                  scalable.
+                </li>
+              </ul>
+              <Highlight language="csharp">
+                {`// Mediator Interface
+public interface IAirTrafficControl
 {
-    /// <summary>
-    /// Mediator Design Pattern
-    /// </summary>
+    void RegisterAircraft(Aircraft aircraft);
+    void NotifyAircraft(string message, Aircraft sender);
+}
 
-    public class Program
+// Concrete Mediator
+public class AirTrafficControl : IAirTrafficControl
+{
+    private readonly List<Aircraft> _aircrafts = new();
+
+    public void RegisterAircraft(Aircraft aircraft) => _aircrafts.Add(aircraft);
+
+    public void NotifyAircraft(string message, Aircraft sender)
     {
-        public static void Main(string[] args)
+        foreach (var aircraft in _aircrafts)
         {
-            ConcreteMediator m = new ConcreteMediator();
-
-            ConcreteColleague1 c1 = new ConcreteColleague1(m);
-            ConcreteColleague2 c2 = new ConcreteColleague2(m);
-
-            m.Colleague1 = c1;
-            m.Colleague2 = c2;
-
-            c1.Send("How are you?");
-            c2.Send("Fine, thanks");
-
-            // Wait for user
-
-            Console.ReadKey();
-        }
-    }
-
-    /// <summary>
-    /// The 'Mediator' abstract class
-    /// </summary>
-
-    public abstract class Mediator
-    {
-        public abstract void Send(string message,
-            Colleague colleague);
-    }
-
-    /// <summary>
-    /// The 'ConcreteMediator' class
-    /// </summary>
-
-    public class ConcreteMediator : Mediator
-    {
-        ConcreteColleague1 colleague1;
-        ConcreteColleague2 colleague2;
-
-        public ConcreteColleague1 Colleague1
-        {
-            set { colleague1 = value; }
-        }
-
-        public ConcreteColleague2 Colleague2
-        {
-            set { colleague2 = value; }
-        }
-
-        public override void Send(string message, Colleague colleague)
-        {
-            if (colleague == colleague1)
+            if (aircraft != sender)
             {
-                colleague2.Notify(message);
+                aircraft.ReceiveMessage(message);
             }
-            else
-            {
-                colleague1.Notify(message);
-            }
-        }
-    }
-
-    /// <summary>
-    /// The 'Colleague' abstract class
-    /// </summary>
-
-    public abstract class Colleague
-    {
-        protected Mediator mediator;
-
-        // Constructor
-
-        public Colleague(Mediator mediator)
-        {
-            this.mediator = mediator;
-        }
-    }
-
-    /// <summary>
-    /// A 'ConcreteColleague' class
-    /// </summary>
-
-    public class ConcreteColleague1 : Colleague
-    {
-        // Constructor
-
-        public ConcreteColleague1(Mediator mediator)
-            : base(mediator)
-        {
-        }
-
-        public void Send(string message)
-        {
-            mediator.Send(message, this);
-        }
-
-        public void Notify(string message)
-        {
-            Console.WriteLine("Colleague1 gets message: "
-                + message);
-        }
-    }
-
-    /// <summary>
-    /// A 'ConcreteColleague' class
-    /// </summary>
-
-    public class ConcreteColleague2 : Colleague
-    {
-        // Constructor
-
-        public ConcreteColleague2(Mediator mediator)
-            : base(mediator)
-        {
-        }
-
-        public void Send(string message)
-        {
-            mediator.Send(message, this);
-        }
-
-        public void Notify(string message)
-        {
-            Console.WriteLine("Colleague2 gets message: "
-                + message);
         }
     }
 }
+
+// Colleague Base Class
+public abstract class Aircraft
+{
+    protected IAirTrafficControl Mediator;
+
+    protected Aircraft(IAirTrafficControl mediator) => Mediator = mediator;
+
+    public abstract void ReceiveMessage(string message);
+    public abstract void SendMessage(string message);
+}
+
+// Concrete Colleagues
+public class PassengerAircraft : Aircraft
+{
+    public PassengerAircraft(IAirTrafficControl mediator) : base(mediator) { }
+
+    public override void ReceiveMessage(string message) =>
+        Console.WriteLine($"Passenger Aircraft received: {message}");
+
+    public override void SendMessage(string message) =>
+        Mediator.NotifyAircraft($"Passenger Aircraft: {message}", this);
+}
+
+public class CargoAircraft : Aircraft
+{
+    public CargoAircraft(IAirTrafficControl mediator) : base(mediator) { }
+
+    public override void ReceiveMessage(string message) =>
+        Console.WriteLine($"Cargo Aircraft received: {message}");
+
+    public override void SendMessage(string message) =>
+        Mediator.NotifyAircraft($"Cargo Aircraft: {message}", this);
+}
+
+// Client
+public class Program
+{
+    public static void Main()
+    {
+        var airTrafficControl = new AirTrafficControl();
+
+        var passengerAircraft = new PassengerAircraft(airTrafficControl);
+        var cargoAircraft = new CargoAircraft(airTrafficControl);
+
+        airTrafficControl.RegisterAircraft(passengerAircraft);
+        airTrafficControl.RegisterAircraft(cargoAircraft);
+
+        passengerAircraft.SendMessage("Requesting landing clearance.");
+        cargoAircraft.SendMessage("Acknowledged landing request.");
+    }
+}
 `}
-            </Highlight>
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

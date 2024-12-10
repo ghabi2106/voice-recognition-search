@@ -164,11 +164,11 @@ export default function Command() {
           <article id="command">
             <h6>Command</h6>
             <p>
-              <strong>Command</strong> is a behavioral design pattern that turns
-              a request into a stand-alone object that contains all information
-              about the request. This transformation lets you pass requests as a
-              method arguments, delay or queue a request’s execution, and
-              support undoable operations.
+              <strong>Command</strong> Pattern is a behavioral design pattern
+              that encapsulates requests as objects, allowing you to
+              parameterize methods with different requests, queue them, or log
+              their execution. <br />
+              It decouples the sender of a request from its receiver.
             </p>
           </article>
           <article id="use">
@@ -231,106 +231,101 @@ export default function Command() {
           </article>
           <article id="code">
             <h6>Structural code in C#</h6>
-            <Highlight language="csharp">
-              {`using System;
-
-namespace Command.Structural
+            <div>
+              <ul>
+                <li>
+                  <strong>Encapsulation of Commands</strong>: Each operation
+                  (e.g., brewing coffee or tea) is encapsulated in a command
+                  object implementing a common <code>ICommand</code> interface.
+                  This encapsulation decouples the request sender from the
+                  request receiver.
+                </li>
+                <li>
+                  <strong>
+                    Invoker (<code>Waiter</code>)
+                  </strong>
+                  : The <code>Waiter</code> holds a reference to a command and
+                  invokes its Execute method. This allows the invoker to work
+                  with different commands without knowing their details.
+                </li>
+                <li>
+                  <strong>
+                    Receiver (<code>CoffeeMaker</code>/<code>TeaMaker</code>)
+                  </strong>
+                  : The actual work is done by the receiver classes. Commands
+                  delegate the execution to these classes.
+                </li>
+                <li>
+                  <strong>Client</strong>: The client configures the system by
+                  creating command objects with specific receivers and assigning
+                  them to the invoker. For example, assigning{" "}
+                  <code>MakeCoffeeCommand</code> to the <code>Waiter</code>.
+                </li>
+              </ul>
+              <Highlight language="csharp">
+                {`//Command Interface
+public interface ICommand
 {
-    /// <summary>
-    /// Command Design Pattern
-    /// </summary>
+    void Execute();
+}
 
-    public class Program
+// Concrete Commands
+public class MakeCoffeeCommand : ICommand
+{
+    private CoffeeMaker _coffeeMaker;
+    public MakeCoffeeCommand(CoffeeMaker coffeeMaker) => _coffeeMaker = coffeeMaker;
+    public void Execute() => _coffeeMaker.BrewCoffee();
+}
+
+public class MakeTeaCommand : ICommand
+{
+    private TeaMaker _teaMaker;
+    public MakeTeaCommand(TeaMaker teaMaker) => _teaMaker = teaMaker;
+    public void Execute() => _teaMaker.BrewTea();
+}
+
+// Receivers
+public class CoffeeMaker
+{
+    public void BrewCoffee() => Console.WriteLine("Coffee is being brewed.");
+}
+
+public class TeaMaker
+{
+    public void BrewTea() => Console.WriteLine("Tea is being brewed.");
+}
+
+// Invoker
+public class Waiter
+{
+    private ICommand _command;
+    public void SetCommand(ICommand command) => _command = command;
+    public void PlaceOrder() => _command.Execute();
+}
+
+// Client Code
+public class Program
+{
+    public static void Main()
     {
-        public static void Main(string[] args)
-        {
-            // Create receiver, command, and invoker
+        CoffeeMaker coffeeMaker = new CoffeeMaker();
+        TeaMaker teaMaker = new TeaMaker();
 
-            Receiver receiver = new Receiver();
-            Command command = new ConcreteCommand(receiver);
-            Invoker invoker = new Invoker();
+        ICommand coffeeCommand = new MakeCoffeeCommand(coffeeMaker);
+        ICommand teaCommand = new MakeTeaCommand(teaMaker);
 
-            // Set and execute command
+        Waiter waiter = new Waiter();
 
-            invoker.SetCommand(command);
-            invoker.ExecuteCommand();
+        waiter.SetCommand(coffeeCommand);
+        waiter.PlaceOrder(); // Output: Coffee is being brewed.
 
-            // Wait for user
-
-            Console.ReadKey();
-        }
-    }
-
-    /// <summary>
-    /// The 'Command' abstract class
-    /// </summary>
-
-    public abstract class Command
-    {
-        protected Receiver receiver;
-
-        // Constructor
-
-        public Command(Receiver receiver)
-        {
-            this.receiver = receiver;
-        }
-
-        public abstract void Execute();
-    }
-
-    /// <summary>
-    /// The 'ConcreteCommand' class
-    /// </summary>
-
-    public class ConcreteCommand : Command
-    {
-        // Constructor
-
-        public ConcreteCommand(Receiver receiver) :
-            base(receiver)
-        {
-        }
-
-        public override void Execute()
-        {
-            receiver.Action();
-        }
-    }
-
-    /// <summary>
-    /// The 'Receiver' class
-    /// </summary>
-
-    public class Receiver
-    {
-        public void Action()
-        {
-            Console.WriteLine("Called Receiver.Action()");
-        }
-    }
-
-    /// <summary>
-    /// The 'Invoker' class
-    /// </summary>
-
-    public class Invoker
-    {
-        Command command;
-
-        public void SetCommand(Command command)
-        {
-            this.command = command;
-        }
-
-        public void ExecuteCommand()
-        {
-            command.Execute();
-        }
+        waiter.SetCommand(teaCommand);
+        waiter.PlaceOrder(); // Output: Tea is being brewed.
     }
 }
 `}
-            </Highlight>
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

@@ -107,22 +107,29 @@ export default function Ddd() {
             <h6>Introduction</h6>
             <div>
               <p>
-                Domain-driven design (DDD) advocates modeling based on the
-                reality of business as relevant to your use cases. In the
-                context of building applications, DDD talks about problems as
-                domains. It describes independent problem areas as Bounded
-                Contexts (each Bounded Context correlates to a microservice),
-                and emphasizes a common language to talk about these problems.
-                It also suggests many technical concepts and patterns, like
-                domain entities with rich models, value objects, aggregates, and
-                aggregate root (or root entity) rules to support the internal
-                implementation.
+                Domain-Driven Design (DDD) is a software development approach
+                that focuses on creating applications deeply aligned with
+                complex business needs. <br />
+                Key elements of DDD include:
               </p>
-              <p>
-                In summary, DDD is a great pattern for systems with complex
-                business logic, systems that require future maintenance and
-                enhancement.
-              </p>
+              <ul>
+                <li>
+                  <strong>Domain Model</strong>: A central abstraction capturing
+                  the core business concepts, rules, and logic.
+                </li>
+                <li>
+                  <strong>Ubiquitous Language</strong>: A shared vocabulary
+                  between developers and domain experts.
+                </li>
+                <li>
+                  <strong>Bounded Contexts</strong>: Dividing the domain into
+                  distinct, manageable sub-domains.
+                </li>
+                <li>
+                  <strong>Aggregates and Entities</strong>: Representing key
+                  domain objects and their lifecycle.
+                </li>
+              </ul>
             </div>
           </article>
           <article id="layers">

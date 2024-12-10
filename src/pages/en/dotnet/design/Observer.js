@@ -165,8 +165,9 @@ export default function Observer() {
             <h6>Observer</h6>
             <p>
               <strong>Observer</strong> is a behavioral design pattern that lets
-              you define a subscription mechanism to notify multiple objects
-              about any events that happen to the object they’re observing.
+              you define a subscription mechanism to notify multiple
+              objects(observers) about any events that happen to the
+              object(subject) they’re observing.
             </p>
           </article>
           <article id="use">
@@ -212,129 +213,96 @@ export default function Observer() {
           </article>
           <article id="code">
             <h6>Structural code in C#</h6>
-            <Highlight language="csharp">
-              {`using System;
+            <div>
+              <ul>
+                <li>
+                  <code>WeatherStation</code>: The subject that holds a state
+                  (temperature) and notifies observers when it changes.
+                </li>
+                <li>
+                  <code>IObserver</code>: Interface for observers to implement
+                  the <code>Update</code> method.
+                </li>
+                <li>
+                  <code>PhoneDisplay/DesktopDisplay</code>: Observers that react
+                  to state changes in the subject.
+                </li>
+              </ul>
+              <Highlight language="csharp">
+                {`using System;
 using System.Collections.Generic;
 
-namespace Observer.Structural
+// Subject
+public class WeatherStation
 {
-    /// <summary>
-    /// Observer Design Pattern
-    /// </summary>
+    private List<IObserver> observers = new List<IObserver>();
+    private int temperature;
 
-    public class Program
+    public void AddObserver(IObserver observer) => observers.Add(observer);
+    public void RemoveObserver(IObserver observer) => observers.Remove(observer);
+
+    public int Temperature
     {
-        public static void Main(string[] args)
+        get => temperature;
+        set
         {
-            // Configure Observer pattern
-
-            ConcreteSubject s = new ConcreteSubject();
-
-            s.Attach(new ConcreteObserver(s, "X"));
-            s.Attach(new ConcreteObserver(s, "Y"));
-            s.Attach(new ConcreteObserver(s, "Z"));
-
-            // Change subject and notify observers
-
-            s.SubjectState = "ABC";
-            s.Notify();
-
-            // Wait for user
-
-            Console.ReadKey();
+            temperature = value;
+            NotifyObservers();
         }
     }
 
-    /// <summary>
-    /// The 'Subject' abstract class
-    /// </summary>
-
-    public abstract class Subject
+    private void NotifyObservers()
     {
-        private List<Observer> observers = new List<Observer>();
-
-        public void Attach(Observer observer)
+        foreach (var observer in observers)
         {
-            observers.Add(observer);
-        }
-
-        public void Detach(Observer observer)
-        {
-            observers.Remove(observer);
-        }
-
-        public void Notify()
-        {
-            foreach (Observer o in observers)
-            {
-                o.Update();
-            }
-        }
-    }
-
-    /// <summary>
-    /// The 'ConcreteSubject' class
-    /// </summary>
-
-    public class ConcreteSubject : Subject
-    {
-        private string subjectState;
-
-        // Gets or sets subject state
-
-        public string SubjectState
-        {
-            get { return subjectState; }
-            set { subjectState = value; }
-        }
-    }
-
-    /// <summary>
-    /// The 'Observer' abstract class
-    /// </summary>
-
-    public abstract class Observer
-    {
-        public abstract void Update();
-    }
-
-    /// <summary>
-    /// The 'ConcreteObserver' class
-    /// </summary>
-
-    public class ConcreteObserver : Observer
-    {
-        private string name;
-        private string observerState;
-        private ConcreteSubject subject;
-
-        // Constructor
-
-        public ConcreteObserver(
-            ConcreteSubject subject, string name)
-        {
-            this.subject = subject;
-            this.name = name;
-        }
-
-        public override void Update()
-        {
-            observerState = subject.SubjectState;
-            Console.WriteLine("Observer {0}'s new state is {1}",
-                name, observerState);
-        }
-
-        // Gets or sets subject
-
-        public ConcreteSubject Subject
-        {
-            get { return subject; }
-            set { subject = value; }
+            observer.Update(temperature);
         }
     }
 }
-`}
-            </Highlight>
+
+// Observer Interface
+public interface IObserver
+{
+    void Update(int temperature);
+}
+
+// Concrete Observer
+public class PhoneDisplay : IObserver
+{
+    public void Update(int temperature)
+    {
+        Console.WriteLine($"Phone Display: Temperature updated to {temperature}°C");
+    }
+}
+
+// Another Concrete Observer
+public class DesktopDisplay : IObserver
+{
+    public void Update(int temperature)
+    {
+        Console.WriteLine($"Desktop Display: Temperature updated to {temperature}°C");
+    }
+}
+
+// Example Usage
+class Program
+{
+    static void Main()
+    {
+        var weatherStation = new WeatherStation();
+
+        var phoneDisplay = new PhoneDisplay();
+        var desktopDisplay = new DesktopDisplay();
+
+        weatherStation.AddObserver(phoneDisplay);
+        weatherStation.AddObserver(desktopDisplay);
+
+        weatherStation.Temperature = 25; // Notify all observers
+        weatherStation.Temperature = 30; // Notify all observers
+    }
+}`}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

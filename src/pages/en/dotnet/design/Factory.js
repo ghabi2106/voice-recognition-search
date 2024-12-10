@@ -160,13 +160,15 @@ export default function Factory() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Factory Method</h3>
+          <h3>Factory</h3>
           <article id="factory">
-            <h6>Factory Method</h6>
+            <h6>Factory</h6>
             <p>
-              Factory Method is a creational design pattern that provides an
-              interface for creating objects in a superclass, but allows
-              subclasses to alter the type of objects that will be created.
+              The Factory Pattern is a creational design pattern in which a
+              method or class is responsible for creating objects, abstracting
+              the instantiation process from the client. <br />
+              It promotes loose coupling by delegating the responsibility of
+              object creation to a dedicated factory.
             </p>
           </article>
           <article id="use">
@@ -215,105 +217,80 @@ export default function Factory() {
           </article>
           <article id="code">
             <h6>Structural code in C#</h6>
-            <Highlight language="csharp">
-              {`using System;
-
-namespace DoFactory.GangOfFour.Factory.Structural
+            <div>
+              <ul>
+                <li>
+                  <strong>
+                    Interface (<code>IBeverage</code>)
+                  </strong>
+                  : Defines the structure for all beverage types.
+                </li>
+                <li>
+                  <strong>
+                    Concrete Classes (<code>Coffee</code>, <code>Tea</code>)
+                  </strong>
+                  : Implement the behavior of specific beverages.
+                </li>
+                <li>
+                  <strong>
+                    Factory (<code>BeverageFactory</code>)
+                  </strong>
+                  : Centralizes object creation logic.
+                </li>
+                <li>
+                  <strong>Client</strong>: Requests objects through the factory
+                  without knowing their concrete classes.
+                </li>
+              </ul>
+              <Highlight language="csharp">
+                {`// Product Interface
+public interface IBeverage
 {
-    /// <summary>
-    /// MainApp startup class for Structural 
-    /// Factory Method Design Pattern.
-    /// </summary>
+    void Serve();
+}
 
-    class MainApp
+// Concrete Products
+public class Coffee : IBeverage
+{
+    public void Serve() => Console.WriteLine("Serving a hot Coffee");
+}
+
+public class Tea : IBeverage
+{
+    public void Serve() => Console.WriteLine("Serving a refreshing Tea");
+}
+
+// Factory
+public class BeverageFactory
+{
+    public IBeverage GetBeverage(string beverageType)
     {
-        /// <summary>
-        /// Entry point into console application.
-        /// </summary>
-
-        static void Main()
+        return beverageType.ToLower() switch
         {
-            // An array of creators
-
-            Creator[] creators = new Creator[2];
-
-            creators[0] = new ConcreteCreatorA();
-            creators[1] = new ConcreteCreatorB();
-
-            // Iterate over creators and create products
-
-            foreach (Creator creator in creators)
-            {
-                Product product = creator.FactoryMethod();
-                Console.WriteLine("Created {0}",
-                  product.GetType().Name);
-            }
-
-            // Wait for user
-
-            Console.ReadKey();
-        }
+            "coffee" => new Coffee(),
+            "tea" => new Tea(),
+            _ => throw new ArgumentException("Invalid beverage type")
+        };
     }
+}
 
-    /// <summary>
-    /// The 'Product' abstract class
-    /// </summary>
-
-    abstract class Product
+// Client
+class Program
+{
+    static void Main()
     {
-    }
+        var factory = new BeverageFactory();
 
-    /// <summary>
-    /// A 'ConcreteProduct' class
-    /// </summary>
+        IBeverage coffee = factory.GetBeverage("coffee");
+        coffee.Serve();
 
-    class ConcreteProductA : Product
-    {
-    }
-
-    /// <summary>
-    /// A 'ConcreteProduct' class
-    /// </summary>
-
-    class ConcreteProductB : Product
-    {
-    }
-
-    /// <summary>
-    /// The 'Creator' abstract class
-    /// </summary>
-
-    abstract class Creator
-    {
-        public abstract Product FactoryMethod();
-    }
-
-    /// <summary>
-    /// A 'ConcreteCreator' class
-    /// </summary>
-
-    class ConcreteCreatorA : Creator
-    {
-        public override Product FactoryMethod()
-        {
-            return new ConcreteProductA();
-        }
-    }
-
-    /// <summary>
-    /// A 'ConcreteCreator' class
-    /// </summary>
-
-    class ConcreteCreatorB : Creator
-    {
-        public override Product FactoryMethod()
-        {
-            return new ConcreteProductB();
-        }
+        IBeverage tea = factory.GetBeverage("tea");
+        tea.Serve();
     }
 }
 `}
-            </Highlight>
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

@@ -149,18 +149,13 @@ export default function Designpattern() {
               <p>
                 Design Pattern provides low-level solutions related to
                 implementation, of commonly occurring object-oriented problems.
-                In other words, design pattern suggests a specific
-                implementation for the specific object-oriented programming
-                problem. For example, if you want to create a class that can
-                only have one object at a time, then you can use the Singleton
-                design pattern which suggests the best way to create a class
-                that can only have one object.
+                <br />
+                They help create flexible, scalable, and maintainable systems.
               </p>
               <ul>
                 <li>
-                  Creational patterns provide various object creation
-                  mechanisms, which increase flexibility and reuse of existing
-                  code.
+                  <strong>Creational patterns</strong>: Deal with object
+                  creation
                   <ul>
                     <li>Singleton</li>
                     <li>Factory Method</li>
@@ -168,9 +163,8 @@ export default function Designpattern() {
                   </ul>
                 </li>
                 <li>
-                  Structural patterns explain how to assemble objects and
-                  classes into larger structures while keeping these structures
-                  flexible and efficient.
+                  <strong>Structural patterns</strong>: Organize objects or
+                  classes.
                   <ul>
                     <li>Proxy</li>
                     <li>Bridge</li>
@@ -178,8 +172,8 @@ export default function Designpattern() {
                   </ul>
                 </li>
                 <li>
-                  Behavioral design patterns are concerned with algorithms and
-                  the assignment of responsibilities between objects.
+                  <strong>Behavioral patterns</strong>: Handle object
+                  interaction and responsibility
                   <ul>
                     <li>Mediator</li>
                     <li>Command</li>
@@ -191,13 +185,34 @@ export default function Designpattern() {
           </article>
           <article id="design-principle">
             <h6>Design principle</h6>
-            <p>
-              Design principles provide high level guidelines to design better
-              software applications. They do not provide implementation
-              guidelines and are not bound to any programming language. The
-              SOLID (SRP, OCP, LSP, ISP, DIP) principles are one of the most
-              popular sets of design principles.
-            </p>
+            <div>
+              <p>
+                Design principles provide high level guidelines to design better
+                software applications. <br />
+                They do not provide implementation guidelines and are not bound
+                to any programming language.
+              </p>
+              <ul>
+                <li>
+                  <strong>SOLID</strong>: A set of five principles for
+                  object-oriented design (Single Responsibility, Open/Closed,
+                  Liskov Substitution, Interface Segregation, Dependency
+                  Inversion).
+                </li>
+                <li>
+                  <strong>DRY (Don't Repeat Yourself)</strong>: Avoid code
+                  duplication to improve maintainability.
+                </li>
+                <li>
+                  <strong>KISS (Keep It Simple, Stupid)</strong>: Keep solutions
+                  as simple as possible.
+                </li>
+                <li>
+                  <strong>YAGNI (You Aren't Gonna Need It)</strong>: Don't add
+                  functionality until necessary.
+                </li>
+              </ul>
+            </div>
           </article>
         </section>
       </div>

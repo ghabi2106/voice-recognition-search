@@ -91,15 +91,29 @@ export default function Home() {
             <h6>Capgemini</h6>
             <div>
               <p>
-                I am Assaad Ghabi, I was graduated as an engineer from
-                university of Monastir Tunisia in 2017, with over 5 years of
-                experience in .Net development managing all aspects of the
-                development process for small to medium-sized companies.
+                I am a full-stack developer with over 8 years of experience
+                specializing in .NET and Angular. <br />I graduated as an
+                engineer from the University of Monastir, Tunisia, in 2017.{" "}
+                <br />
+                My expertise spans diverse sectors, including automotive,
+                healthcare, GIS, and entrepreneurship. <br />
+                Currently, I am working at Capgemini. <br />I have extensive
+                experience in software architecture, design, development,
+                testing, and deployment, with a strong background in Agile
+                methodology.
               </p>
               <p>
-                My last job was at Capgemini, where I was in charge with
-                customer VolksWagen for less than 1 year until now. I am already
-                working on 2 projects TV and AskMe.
+                I currently work at Capgemini with Volkswagen as the client,
+                where I have been for three years. <br />I contribute to
+                multiple projects, including TV, AskMe, and PPRobEE. <br />
+                These automotive management solutions help small to mid-sized
+                auto shops with tasks such as estimating, scheduling,
+                inspections, job tracking, and reporting. <br />I worked on the
+                full lifecycle of these applications, covering requirements
+                analysis, design, development, testing, deployment, and
+                maintenance. <br />
+                The team, using Agile methodology, developed the apps with .NET
+                Core 5, Angular 13, and SQL Server.
               </p>
               <div class="mt-3">
                 <div class="card border-warning mb-3">
@@ -207,10 +221,17 @@ export default function Home() {
             <h6>Diginov</h6>
             <div>
               <p>
-                Before my current position, I had worked at Diginov, where I was
-                in charge of the Economic ministry of United Arabic Emirates for
-                1.5 year. During this part i have successfully completed two
-                projects with good results.
+                I worked at Diginov for 2 years as a full-stack developer,
+                primarily contributing to projects in the geospatial (FGIC) and
+                entrepreneurship (UAE SME) sectors. <br />
+                FGIC is a GIS application for geographic data analysis, while
+                UAE SME is a portal designed to support small businesses with
+                government programs. <br />I was involved in the full
+                development lifecycle, including design, deployment, and
+                maintenance. <br />
+                As part of a four-person Agile team, I contributed to developing
+                both applications using .NET Core 3.1, ASP.NET Core, SQL Server,
+                and Orchard CMS for the admin interface
               </p>
               <div class="mt-3">
                 <div class="card border-warning mb-3">
@@ -224,24 +245,15 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="uaesme">
                     <h6 class="card-title">Description</h6>
                     <p>
-                      The <strong>« UAE SME »</strong> Portal provides SMEs with
-                      convenient access to detail information on all Government
-                      programmes for SME development , including the various
-                      financing schemes and business support services, offered
-                      to SMEs.
-                    </p>
-                    <p>
-                      The Portal also offers information for SMEs on where and
-                      how to obtain financing, advisory services, training
-                      programmes, product and technology development, and
-                      marketing information.
-                    </p>
-                    <p>
-                      Through the SME Directory, SMEs can advertise their
-                      companies and products to large potential customers by
-                      providing information about their companies, description
-                      on the products and services being offered, and contact
-                      details.
+                      The <strong>« UAE SME »</strong> portal supports small and
+                      medium enterprises by providing access to government
+                      programs, financial schemes, and business support
+                      services. <br />
+                      It helps SMEs find funding, market their products, and
+                      access advisory services, fostering business growth and
+                      sustainability. <br />
+                      The platform also includes a directory for SMEs to
+                      advertise and gain visibility
                     </p>
                     <h6 class="card-title">Intervention level : </h6>
                     <ol>
@@ -325,184 +337,54 @@ export default function Home() {
                   <div class="card-body text-dark collapse show" id="fgic">
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
-                      <strong>« FGIC »</strong> is a GIS (Geographic Information
-                      Systems), creates, analyses, and displays geographic data
-                      on digital maps. Some of the main features of GIS software
-                      include map creation and sharing, geocoding, labelling,
-                      spacial analysis etc. Geographic Information Systems can
-                      help you solve location-related problems using interactive
-                      analytical maps. GIS apps can also help manage your land
-                      assets and monitor remote locations on demand.
+                      <strong>« FGIC »</strong> is dedicated to organizations in
+                      sectors like manufacturing, real estate, government,
+                      healthcare, and public safety. <br />
+                      It helps professionals such as GIS specialists, city
+                      planners, environmental scientists, and law enforcement
+                      teams analyze and visualize geographic data for informed
+                      decision-making and efficient asset management
                     </p>
-                    <p class="card-text">
-                      <strong>« FGIC »</strong> is a tool that helps businesses
-                      create, analyze, and display geographic data on digital
-                      maps. This tool is used by GIS specialists, city planners,
-                      environmental scientists, and law enforcement teams to
-                      analyze the spatial and geographical data. It enables
-                      collaboration between different business teams to add and
-                      edit asset and location details, thereby acting as a
-                      repository of asset data.
-                    </p>
-                    <p class="card-text">
-                      <strong>« FGIC »</strong> is deployed by various sectors
-                      such as manufacturing, real estate, government,
-                      healthcare, and public safety, among others. It can also
-                      be used for operations including engineering, planning,
-                      management, insurance, transport, and business.
-                    </p>
-                    <p class="card-text">
-                      It allows a user to choose an area of interest, browse and
-                      select data, customize the format, then download or have
-                      it shipped on media.
-                    </p>
-                    <p class="card-text">
-                      The map layers include data on: Public Land Survey System
-                      (PLSS), Census data, demographic statistics,
-                      precipitation, temperature, disaster events, conservation
-                      easements, elevation, geographic names, geology,
-                      government units, hydrography, hydrologic units, land use
-                      and land cover, map indexes, ortho imagery, soils,
-                      topographic images, and streets and roads.
-                    </p>
-                    <h6 class="card-title">Features</h6>
+                    <h6 class="card-title">
+                      GIS can help solve problems related to:
+                    </h6>
                     <ul>
                       <li>
                         <p>
-                          <strong>Data visualization:</strong> Visualize
-                          geographical data in 2D or 3D format by customizing
-                          the font, style, color, pattern, charts, pop-ups, and
-                          infographics. Annotate maps in different ways,
-                          including icons to represent various assets and
-                          places, color-coded regions, text labels, legends,
-                          topographical layers, and more.
+                          <strong>Urban Planning:</strong> Identifying optimal
+                          locations for new infrastructure or development.
                         </p>
                       </li>
                       <li>
                         <p>
-                          <strong>Map creation:</strong> Create comprehensive
-                          maps notated with elements such as geospatial
-                          information, latitude and longitude, coordinates, and
-                          visualization, among others.
+                          <strong>Disaster Management:</strong> Mapping flood
+                          zones, fire hazards, or disaster-affected areas for
+                          effective response.
                         </p>
                       </li>
                       <li>
                         <p>
-                          <strong>Spatial analysis:</strong> Perform spatial
-                          analysis to identify geographical issues, predict
-                          patterns, derive results by computer processing, and
-                          make informed decisions. Spatial analysis assists in
-                          understanding the characteristics of a location and
-                          finding relationships between them.
+                          <strong>Environmental Protection:</strong> Monitoring
+                          land use, deforestation, and conservation efforts.
                         </p>
                       </li>
                       <li>
                         <p>
-                          <strong>3D imaging:</strong> Develop 3D images from
-                          the collected geographical data to offer
-                          photorealistic rendering. It reduces errors and
-                          duplications to maximize reliability.
+                          <strong>Transportation:</strong> Optimizing routes for
+                          traffic flow and logistics.
                         </p>
                       </li>
                       <li>
                         <p>
-                          <strong>Geocoding:</strong> Determine geographic
-                          coordinates for locations, street addresses, place
-                          names, and codes (such as zip codes) you need to
-                          track. The process of geocoding is the digital
-                          equivalent of pinning a spot/location on a physical
-                          map.
+                          <strong>Healthcare:</strong> Identifying regions with
+                          health risks or planning the placement of healthcare
+                          facilities.
                         </p>
                       </li>
                       <li>
                         <p>
-                          <strong>Color codes/icons:</strong> Customize color
-                          codes and icons to add value to different attributes
-                          of a geographical map.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>Data import/export:</strong> Import/export
-                          datasets from different locations into GIS software
-                          and vice versa.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>Image management:</strong> Store and track all
-                          project-related images in a single database that only
-                          authorized stakeholders can access.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>Map sharing:</strong> Share your maps with
-                          other teams to collaborate or publicly to drive
-                          awareness and action.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>Reporting and analysis:</strong> Create
-                          reports and display data to answer critical
-                          operational questions regarding asset health, field
-                          worker efficiency, and which areas produce the most
-                          work requests.
-                        </p>
-                      </li>
-                    </ul>
-                    <h6 class="card-title">Benefits</h6>
-                    <ul>
-                      <li>
-                        <p>
-                          <strong>Improves decision making:</strong> GIS
-                          software stores detailed information about the
-                          characteristics of a location which helps businesses
-                          gain critical ideas and assist in making better
-                          decisions related to site selection, planning, zoning,
-                          conservation, and routing. Companies can use spatial
-                          analysis data to pick trading locations, assistance
-                          regions, and clients of interest, and then store the
-                          information in thematic maps to make effective
-                          business decisions.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>
-                            Provides accurate geographic information and
-                            record-keeping:
-                          </strong>{" "}
-                          This software enables organizations to maintain
-                          geographic records of physical, environmental, health,
-                          economic, transportation, and cultural geographies
-                          under a comprehensive framework having necessary
-                          reporting tools.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>
-                            Automates data collection and analysis:
-                          </strong>{" "}
-                          GIS software enables businesses to automatically
-                          gather data required for a location or project
-                          planning, eliminating tedious manual data collection
-                          and storage procedures. It allows users to build,
-                          update, and amend their geographic data on the same
-                          platform where it is stored. GIS software consists of
-                          analytical tools that help in examining the data,
-                          making it a time-efficient tool.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>Enhances communication:</strong> Visualization
-                          of geographical maps substantially aids the
-                          understanding of geographic characteristics. This
-                          software helps teams, departments, professionals, and
-                          the general public communicate more effectively.
+                          <strong>Agriculture:</strong> Mapping soil health and
+                          crop conditions for precision farming.
                         </p>
                       </li>
                     </ul>
@@ -584,10 +466,14 @@ export default function Home() {
             <h6>ITGWANA</h6>
             <div>
               <p>
-                Prior to this role, I completed a one year with ITGWANA, where I
-                was in charge with customer Nexans and I achieved a web
-                application called <strong>« Carry Track »</strong> in the field
-                industry 4.0 which is a WMS (Warehouses Management System).
+                Prior to joining Diginov, I worked as a full-stack .NET
+                developer at ITGWANA for half year, where I contributed to the
+                Carry Track project for Nexans. <br />
+                <strong>Carry Track</strong> is a Warehouse Management System
+                (WMS) designed to optimize warehouse operations such as
+                inventory, order management, and shipping. <br />I was involved
+                in the full development lifecycle, including design, deployment,
+                and maintenance, using .NET Framework 4.6 and SQL Server
               </p>
               <div class="mt-3">
                 <div class="card border-warning mb-3">
@@ -753,12 +639,40 @@ export default function Home() {
             <h6>Taysir Solutions</h6>
             <div>
               <p>
-                Prior to this role, I was a junior software engineer with Taysir
-                Solutions for two years. While working there, I committed to web
-                application development, I've already contributed to over a four
-                projects « ADD Invoice », « DMI » et « Ticketing », and assisted
-                with managing one project for one of the firm's long-time
-                clients.
+                At Taysir Solutions, I started my career as a .NET and React
+                developer. <br />
+                My work included developing applications for various sectors
+                like healthcare and invoicing. <br />I was involved in all
+                aspects of the software development lifecycle, from requirements
+                analysis to deployment. <br />I collaborated with a team to
+                create efficient, scalable solutions while gaining hands-on
+                experience with .NET and React. <br />
+                This role helped me build a strong foundation in full-stack
+                development
+              </p>
+              <p>
+                <strong>AddInvoice</strong> is a billing and invoicing software
+                that automates invoice creation, payment tracking, and account
+                management. <br />
+                It streamlines financial operations with features like
+                customizable invoices, recurring billing, online payments, and
+                automated reporting
+              </p>
+              <p>
+                <strong>DMI</strong> is an Electronic Medical Records (EMR)
+                software designed to digitize and centralize patient records.{" "}
+                <br />
+                It automates documentation, scheduling, prescriptions, and lab
+                result management, streamlining healthcare operations for
+                improved accuracy and efficiency.
+              </p>
+              <p>
+                <strong>Ticketing</strong> is a B2B travel agency management
+                solution that automates key operations, including itinerary
+                creation, package management, and payment tracking. <br />
+                It integrates with Global Distribution Systems (GDS) like
+                Amadeus and Sabre to streamline reservations and enhance agency
+                workflows
               </p>
               <div class="mt-3">
                 <div class="card border-warning mb-3">
@@ -1279,8 +1193,15 @@ export default function Home() {
                 </div>
               </div>
               <p>
-                Currently i seeking for a opportunity to learn and grow, team
-                oriented and a happy workplace.
+                Throughout my career, I’ve focused on building scalable and
+                efficient software solutions, collaborating with
+                cross-functional teams, and continuously learning new
+                technologies to enhance my skills. <br />I thrive in
+                environments where I can contribute to the overall success of a
+                project while ensuring timely delivery. <br />I am also
+                passionate about maintaining high-quality code and fostering
+                effective communication within teams to meet project goals
+                efficiently.
               </p>
             </div>
           </article>

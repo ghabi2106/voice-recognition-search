@@ -33,6 +33,14 @@ export default function Ideals() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
+                    href="#ideals-details"
+                  >
+                    Details
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
                     href="#interface-segregation"
                   >
                     Interface Segregation
@@ -163,10 +171,10 @@ export default function Ideals() {
             <h6>IDEALS</h6>
             <div>
               <p>
-                The <strong>Ideals</strong> principles don’t cover the whole
-                spectrum of design decisions for microservices-based solutions,
-                but they touch the key concerns and success factors for creating
-                modern service-based systems.
+                The <strong>Ideals</strong> pattern is a set of software
+                development principles that help guide the design of systems,
+                particularly in the context of{" "}
+                <strong>microservices architectures</strong>
               </p>
               <ul>
                 <li>
@@ -189,6 +197,95 @@ export default function Ideals() {
                 </li>
               </ul>
             </div>
+          </article>
+          <article id="ideals-details">
+            <h6>Details</h6>
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>Principle</strong>
+                  </th>
+                  <th>
+                    <strong>Description</strong>
+                  </th>
+                  <th>
+                    <strong>Example</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Interface Segregation</strong>
+                  </td>
+                  <td>
+                    Split large interfaces into smaller, more focused ones to
+                    avoid unnecessary dependencies.
+                  </td>
+                  <td>
+                    Splitting a <code>UserService</code> interface into smaller
+                    services.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Deployability</strong>
+                  </td>
+                  <td>
+                    The development team should ensure the system is deployable
+                    and manageable throughout its lifecycle.
+                  </td>
+                  <td>Implementing CI/CD pipelines.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Event-Driven</strong>
+                  </td>
+                  <td>
+                    Components should communicate using events, making the
+                    system more flexible and scalable.
+                  </td>
+                  <td>
+                    Using events like "OrderCreated" to trigger actions in other
+                    services.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Availability over Consistency</strong>
+                  </td>
+                  <td>
+                    Prioritize system availability over strict consistency in
+                    distributed systems.
+                  </td>
+                  <td>Using eventual consistency in distributed databases.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Loose Coupling</strong>
+                  </td>
+                  <td>
+                    Components should have minimal dependencies on each other,
+                    making them more independent and resilient.
+                  </td>
+                  <td>Microservices communicating through APIs.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Single Responsibility</strong>
+                  </td>
+                  <td>
+                    Each component (class, module, service) should have one
+                    responsibility and one reason to change.
+                  </td>
+                  <td>
+                    Dividing the logic for pricing, orders, and customers into
+                    separate services.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </article>
           <article id="interface-segregation">
             <h6>Interface Segregation</h6>

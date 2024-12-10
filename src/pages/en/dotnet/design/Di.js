@@ -27,14 +27,6 @@ export default function Di() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
-                  >
-                    Introduction
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
                     href="#ioc"
                   >
                     Inversion of control
@@ -42,26 +34,10 @@ export default function Di() {
                 </li>
                 <li>
                   <a
-                    className="d-inline-flex align-items-center rounded active"
-                    href="#dip"
-                  >
-                    DIP
-                  </a>
-                </li>
-                <li>
-                  <a
                     className="d-inline-flex align-items-center rounded"
                     href="#di"
                   >
-                    DI
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#ioc-container"
-                  >
-                    IoC Container
+                    Dependency Injection
                   </a>
                 </li>
                 <li>
@@ -69,7 +45,7 @@ export default function Di() {
                     className="d-inline-flex align-items-center rounded"
                     href="#lifetime"
                   >
-                    Lifetime manager
+                    DI Lifecycle
                   </a>
                 </li>
                 <li>
@@ -185,324 +161,234 @@ export default function Di() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Dependency injection</h3>
-          <article id="introduction">
-            <h6>Introduction</h6>
-            <div>
-              <p>
-                Dependency injection (DI) design pattern, which is a technique
-                for achieving Inversion of Control (IoC) between classes and
-                their dependencies.
-              </p>
-              <img src="/img/dotnet/ioc-steps.png" alt="ioc steps" />
-              <img
-                src="/img/dotnet/principles-and-patterns.png"
-                alt="principles and patterns"
-              />
-            </div>
-          </article>
           <article id="ioc">
             <h6>Inversion of Control</h6>
-            <p>
-              The IoC principle suggests to invert the control. This means to
-              delegate the control to another class.
-            </p>
-          </article>
-          <article id="dip">
-            <h6>DIP</h6>
-            <p>
-              DIP is one of the SOLID object-oriented principle. High-level
-              modules should not depend on low-level modules. Both should depend
-              on the abstraction.
-            </p>
+            <ul>
+              <li>
+                <p>
+                  <strong>Definition</strong>:
+                </p>
+                <ul>
+                  <li>
+                    IoC is a design principle in which the control of object
+                    creation, configuration, and management is shifted from the
+                    object itself to a framework or container.
+                  </li>
+                  <li>
+                    It "inverts" the traditional flow of control where an object
+                    is responsible for managing its dependencies.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>
+                  <strong>Key Idea</strong>:
+                </p>
+                <ul>
+                  <li>
+                    Rather than an object creating its dependencies or managing
+                    its lifecycle, these responsibilities are handed over to an
+                    external framework.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>
+                  <strong>How It Works</strong>:
+                </p>
+                <ul>
+                  <li>
+                    IoC containers manage object instantiation and dependency
+                    resolution.
+                  </li>
+                  <li>
+                    Developers specify how objects and their dependencies are
+                    related (usually through configuration or annotations), and
+                    the IoC container handles the rest.
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </article>
           <article id="di">
-            <h6>DI</h6>
+            <h6>Dependency Injection</h6>
             <div>
-              <p>
-                Dependency Injection (DI) is a design pattern used to implement
-                IoC. It allows the creation of dependent objects outside of a
-                class and provides those objects to a class through different
-                ways
-              </p>
-              <p>Types of Dependency Injection :</p>
               <ul>
-                <li>Constructor Injection</li>
-                <li>Property Injection</li>
-                <li>Method Injection</li>
-              </ul>
-            </div>
-          </article>
-          <article id="ioc-container">
-            <h6>IoC Container</h6>
-            <div>
-              <p>
-                IoC Container is a framework for implementing automatic
-                dependency injection. It manages object creation and it's
-                life-time, and also injects dependencies to the class.
-              </p>
-              <p>There are many containers available for .NET</p>
-              <ul>
-                <li>Unity</li>
-                <li>Autofac</li>
-                <li>Ninject</li>
+                <li>
+                  <p>
+                    <strong>Definition</strong>:
+                  </p>
+                  <ul>
+                    <li>
+                      DI is a specific implementation of the IoC principle. It
+                      focuses on providing objects (dependencies) to a class,
+                      rather than the class creating them itself.
+                    </li>
+                    <li>It is a design pattern used to achieve IoC.</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>Types of Dependency Injection :</strong>:
+                  </p>
+                  <ul>
+                    <li>Constructor Injection</li>
+                    <li>Property Injection</li>
+                    <li>Method Injection</li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </article>
           <article id="lifetime">
-            <h6>Lifetime managers</h6>
-            <table class="table table-bordered">
-              <tbody>
-                <tr>
-                  <th>Parameter</th>
-                  <th>Add Transient</th>
-                  <th>Add Scoped</th>
-                  <th>Add Singleton</th>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Meaning</strong>
-                  </td>
-                  <td>
-                    Transient lifetime services are created each time when they
-                    are requested.
-                  </td>
-                  <td>
-                    Scoped lifetime services are created once per request.
-                  </td>
-                  <td>
-                    Singleton lifetime services are created only the first time
-                    when they are requested (or when ConfigureServices is run if
-                    you specify an instance there).
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Description</strong>
-                  </td>
-                  <td>
-                    It means the Transient lifetime service creates a new
-                    instance for every controller/service as well as for every
-                    request and every user.
-                  </td>
-                  <td>
-                    It means the Scoped objects are the same within a request,
-                    but different across different requests.
-                  </td>
-                  <td>
-                    It means the Singleton lifetime service creates the instance
-                    for the first request then the same is available throughout
-                    the application and for each subsequent request.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Used In</strong>
-                  </td>
-                  <td>
-                    This lifetime works best for lightweight and stateless
-                    services.
-                  </td>
-                  <td>
-                    This lifetime works best for applications which have
-                    different behavior per user.
-                  </td>
-                  <td>
-                    This lifetime used, when Singleton implementation is
-                    required.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Syntax</strong>
-                  </td>
-                  <td>services.AddTransient()</td>
-                  <td>services.AddScoped()</td>
-                  <td>services.AddSingleton()</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Disposed</strong>
-                  </td>
-                  <td>End of request</td>
-                  <td>End of request</td>
-                  <td>App shutdown</td>
-                </tr>
-              </tbody>
-            </table>
+            <h6>DI Lifecycles</h6>
+            <div>
+              <p>
+                The <strong>lifecycle of dependency injection (DI)</strong>{" "}
+                refers to how the lifespan of an object (dependency) is managed
+                by an IoC container. The lifecycle determines when an object is
+                created, how long it is retained, and when it is destroyed.
+              </p>
+              <table className="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>
+                      <strong>Lifecycle</strong>
+                    </th>
+                    <th>
+                      <strong>Behavior</strong>
+                    </th>
+                    <th>
+                      <strong>Advantages</strong>
+                    </th>
+                    <th>
+                      <strong>Disadvantages</strong>
+                    </th>
+                    <th>
+                      <strong>Use Cases</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Transient</strong>
+                    </td>
+                    <td>Creates a new instance every time it is requested.</td>
+                    <td>
+                      - Complete isolation.
+                      <br />- Avoids shared state issues.
+                    </td>
+                    <td>
+                      - Higher memory and CPU usage due to frequent
+                      instantiation.
+                    </td>
+                    <td>
+                      - Lightweight and stateless objects.
+                      <br />- Services that don’t need to maintain state between
+                      calls.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Scoped</strong>
+                    </td>
+                    <td>
+                      Creates one instance per scope (e.g., HTTP request).
+                      Shared within that scope.
+                    </td>
+                    <td>
+                      - Balances resource usage and isolation.
+                      <br />- Ensures consistency for a unit of work.
+                    </td>
+                    <td>
+                      - Requires careful scope management in non-web
+                      applications.
+                    </td>
+                    <td>
+                      - Services tied to a single operation or HTTP request
+                      (e.g., database context in web apps).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Singleton</strong>
+                    </td>
+                    <td>
+                      Creates one instance and shares it throughout the
+                      application lifetime.
+                    </td>
+                    <td>
+                      - Minimizes resource usage for expensive objects.
+                      <br />- Useful for shared state.
+                    </td>
+                    <td>
+                      - Risk of memory leaks if not managed carefully.
+                      <br />- Shared state issues in multithreaded environments.
+                    </td>
+                    <td>
+                      - Configuration managers.
+                      <br />- Logging services.
+                      <br />- Caches and shared, immutable services.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Custom Lifecycle</strong>
+                    </td>
+                    <td>
+                      Defines custom rules for creation and disposal based on
+                      specific application requirements.
+                    </td>
+                    <td>
+                      - Highly flexible.
+                      <br />- Tailored to specific needs.
+                    </td>
+                    <td>
+                      - Requires manual implementation and additional
+                      complexity.
+                    </td>
+                    <td>
+                      - Batch jobs.
+                      <br />- Custom transaction lifecycles.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </article>
           <article id="demonstration">
             <h6>DI Demonstration</h6>
-            <div>
-              <p>We will create one type per lifetime option:</p>
-              <Highlight language="csharp">
-                {`using System;
+            <Highlight language="csharp">
+              {`// Defining Services:
+public interface IMyService { void DoWork(); }
+public class MyService : IMyService { public void DoWork() => Console.WriteLine("Work done."); }
 
-namespace DependencyInjectionSample.Interfaces
+// Registering Services
+var services = new ServiceCollection();
+services.AddTransient<IMyService, MyService>(); // Transient
+services.AddScoped<IMyService, MyService>();   // Scoped
+services.AddSingleton<IMyService, MyService>(); // Singleton
+
+var provider = services.BuildServiceProvider();
+
+// Resolving Services
+var transient1 = provider.GetService<IMyService>();
+var transient2 = provider.GetService<IMyService>();
+Console.WriteLine(object.ReferenceEquals(transient1, transient2)); // False: Different instances
+
+using (var scope = provider.CreateScope())
 {
-    public interface IOperation
-    {
-        Guid OperationId { get; }
-    }
-
-    public interface IOperationTransient : IOperation
-    {
-    }
-
-    public interface IOperationScoped : IOperation
-    {
-    }
-
-    public interface IOperationSingleton : IOperation
-    {
-    }
-
-    public interface IOperationSingletonInstance : IOperation
-    {
-    }
-}`}
-              </Highlight>
-              <p>
-                We implement these interfaces using a single class,{" "}
-                <code>Operation</code>, that accepts a GUID in its constructor,
-                or uses a new GUID if none is provided:
-              </p>
-              <Highlight language="csharp">
-                {`using System;
-using DependencyInjectionSample.Interfaces;
-namespace DependencyInjectionSample.Classes
-{
-    public class Operation : IOperationTransient, IOperationScoped, IOperationSingleton, IOperationSingletonInstance
-    {
-        Guid _guid;
-        public Operation() : this(Guid.NewGuid())
-        {
-
-        }
-
-        public Operation(Guid guid)
-        {
-            _guid = guid;
-        }
-
-        public Guid OperationId => _guid;
-    }
-}`}
-              </Highlight>
-              <p>
-                Next, in <code>ConfigureServices</code>, each type is added to
-                the container according to its named lifetime:
-              </p>
-              <Highlight language="csharp">
-                {`services.AddTransient<IOperationTransient, Operation>();
-services.AddScoped<IOperationScoped, Operation>();
-services.AddSingleton<IOperationSingleton, Operation>();
-services.AddSingleton<IOperationSingletonInstance>(new Operation(Guid.Empty));
-services.AddTransient<OperationService, OperationService>();`}
-              </Highlight>
-              <p>
-                Note that the <code>IOperationSingletonInstance</code> service
-                is using a specific instance with a known ID of{" "}
-                <code>Guid.Empty</code>, so it will be clear when this type is
-                in use. We have also registered an <code>OperationService</code>{" "}
-                that depends on each of the other <code>Operation</code> types,
-                so that it will be clear within a request whether this service
-                is getting the same instance as the controller, or a new one,
-                for each operation type. All this service does is expose its
-                dependencies as properties, so they can be displayed in the
-                view.
-              </p>
-              <Highlight language="csharp">
-                {`using DependencyInjectionSample.Interfaces;
-
-namespace DependencyInjectionSample.Services
-{
-    public class OperationService
-    {
-        public IOperationTransient TransientOperation { get; }
-        public IOperationScoped ScopedOperation { get; }
-        public IOperationSingleton SingletonOperation { get; }
-        public IOperationSingletonInstance SingletonInstanceOperation { get; }
-
-        public OperationService(IOperationTransient transientOperation,
-            IOperationScoped scopedOperation,
-            IOperationSingleton singletonOperation,
-            IOperationSingletonInstance instanceOperation)
-        {
-            TransientOperation = transientOperation;
-            ScopedOperation = scopedOperation;
-            SingletonOperation = singletonOperation;
-            SingletonInstanceOperation = instanceOperation;
-        }
-    }
-}`}
-              </Highlight>
-              <p>
-                To demonstrate the object lifetimes within and between separate
-                individual requests to the application, the sample includes an{" "}
-                <code>OperationsController</code> that requests each kind of{" "}
-                <code>IOperation</code> type as well as an{" "}
-                <code>OperationService</code>. The <code>Index</code> action
-                then displays all of the controller’s and service’s{" "}
-                <code>OperationId</code> values.
-              </p>
-              <Highlight language="csharp">
-                {`using DependencyInjectionSample.Interfaces;
-using DependencyInjectionSample.Services;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DependencyInjectionSample.Controllers
-{
-    public class OperationsController : Controller
-    {
-        private readonly OperationService _operationService;
-        private readonly IOperationTransient _transientOperation;
-        private readonly IOperationScoped _scopedOperation;
-        private readonly IOperationSingleton _singletonOperation;
-        private readonly IOperationSingletonInstance _singletonInstanceOperation;
-
-        public OperationsController(OperationService operationService,
-            IOperationTransient transientOperation,
-            IOperationScoped scopedOperation,
-            IOperationSingleton singletonOperation,
-            IOperationSingletonInstance singletonInstanceOperation)
-        {
-            _operationService = operationService;
-            _transientOperation = transientOperation;
-            _scopedOperation = scopedOperation;
-            _singletonOperation = singletonOperation;
-            _singletonInstanceOperation = singletonInstanceOperation;
-        }
-
-        public IActionResult Index()
-        {
-            // ViewBag contains controller-requested services
-            ViewBag.Transient = _transientOperation;
-            ViewBag.Scoped = _scopedOperation;
-            ViewBag.Singleton = _singletonOperation;
-            ViewBag.SingletonInstance = _singletonInstanceOperation;
-
-            // Operation service has its own requested services
-            ViewBag.Service = _operationService;
-            return View();
-        }
-    }
+    var scoped1 = scope.ServiceProvider.GetService<IMyService>();
+    var scoped2 = scope.ServiceProvider.GetService<IMyService>();
+    Console.WriteLine(object.ReferenceEquals(scoped1, scoped2)); // True: Same instance in scope
 }
+
+var singleton1 = provider.GetService<IMyService>();
+var singleton2 = provider.GetService<IMyService>();
+Console.WriteLine(object.ReferenceEquals(singleton1, singleton2)); // True: Same instance
 `}
-              </Highlight>
-              <p>
-                Now two separate requests are made to this controller action:
-              </p>
-              <img
-                src="/img/dotnet/request1_di.png"
-                alt="request1_di"
-                style={{ maxWidth: "485px" }}
-              />
-              <img
-                src="/img/dotnet/request2_di.png"
-                alt="request2_di"
-                style={{ maxWidth: "485px" }}
-              />
-            </div>
+            </Highlight>
           </article>
         </section>
       </div>

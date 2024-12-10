@@ -123,9 +123,10 @@ export default function Clean() {
             <h6>Monolithic</h6>
             <div>
               <p>
-                A monolithic application describes a single-tiered software
-                application in which the user interface and data access code are
-                combined into a single program.
+                A monolithic application is a single, unified system where all
+                components are integrated into one codebase, making it easier to
+                develop initially but harder to scale and maintain over time.
+                Changes often require redeploying the entire application.
               </p>
               <img
                 className="img-dimension"
@@ -138,14 +139,13 @@ export default function Clean() {
             <h6>Introduction</h6>
             <div>
               <p>
-                Clean architecture puts the business logic and application model
-                at the center of the application. Instead of having business
-                logic depend on data access or other infrastructure concerns,
-                this dependency is inverted: infrastructure and implementation
-                details depend on the Application Core. This functionality is
-                achieved by defining abstractions, or interfaces, in the
-                Application Core, which are then implemented by types defined in
-                the Infrastructure layer.
+                Clean architecture divides an application into layers, promoting
+                separation of concerns. <br />
+                It isolates core business logic from external dependencies like
+                databases or UI, ensuring better maintainability, testability,
+                and scalability. <br />
+                The structure enhances flexibility, allowing updates or changes
+                in one layer without affecting others.
               </p>
               <div className="d-flex">
                 <img
