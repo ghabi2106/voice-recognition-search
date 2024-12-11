@@ -35,41 +35,17 @@ export default function Docker() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#container-image"
+                    href="#compose"
                   >
-                    Container image
+                    Compose
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#dockerfile"
+                    href="#orchestrator"
                   >
-                    Dockerfile
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#build"
-                  >
-                    Build
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#container"
-                  >
-                    Container
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#volumes"
-                  >
-                    Volumes
+                    Orchestrator
                   </a>
                 </li>
                 <li>
@@ -78,14 +54,6 @@ export default function Docker() {
                     href="#docker-hub"
                   >
                     Docker Hub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#compose"
-                  >
-                    Compose
                   </a>
                 </li>
                 <li>
@@ -102,14 +70,6 @@ export default function Docker() {
                     href="#cluster"
                   >
                     Cluster
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#orchestrator"
-                  >
-                    Orchestrator
                   </a>
                 </li>
               </ul>
@@ -179,129 +139,118 @@ export default function Docker() {
           <h3>Docker</h3>
           <article id="docker">
             <h6>Docker</h6>
-            <p>
-              Docker is an open-source project for automating the deployment of
-              applications as portable, self-sufficient containers that can run
-              on the cloud or on-premises.
-            </p>
-          </article>
-          <article id="container-image">
-            <h6>Container image</h6>
-            <p>
-              A package with all the dependencies and information needed to
-              create a container. An image includes all the dependencies (such
-              as frameworks) plus deployment and execution configuration to be
-              used by a container runtime. An image is immutable once it has
-              been created.
-            </p>
-          </article>
-          <article id="dockerfile">
-            <h6>Dockerfile</h6>
-            <p>
-              A text file that contains instructions for building a Docker
-              image. It's like a batch script, the first line states the base
-              image to begin with and then follow the instructions to install
-              required programs, copy files, and so on, until you get the
-              working environment you need.
-            </p>
-          </article>
-          <article id="build">
-            <h6>Build</h6>
-            <div>
+            <div class="markdown prose w-full break-words dark:prose-invert light">
               <p>
-                The action of building a container image based on the
-                information and context provided by its Dockerfile, plus
-                additional files in the folder where the image is built.
+                <strong>Docker</strong> is an open-source platform designed to
+                create, deploy, and manage applications in lightweight, portable
+                containers. Containers package an application and its
+                dependencies together, ensuring consistency across environments.
               </p>
-              <Highlight language="bash">{`docker build`}</Highlight>
+              <h6>Key Concepts:</h6>
+              <ul>
+                <li>
+                  <strong>Images</strong>: Read-only templates to create
+                  containers.
+                </li>
+                <li>
+                  <strong>Containers</strong>: Runtime instances of images.
+                </li>
+                <li>
+                  <strong>Dockerfile</strong>: A script defining instructions to
+                  build a Docker image.
+                </li>
+                <li>
+                  <strong>Volumes</strong>: Persistent storage for containers.
+                </li>
+              </ul>
+              <h6>Benefits:</h6>
+              <ul>
+                <li>Platform-independent applications.</li>
+                <li>Streamlined deployment.</li>
+                <li>Resource-efficient compared to virtual machines.</li>
+              </ul>
+              <h6>Use Cases:</h6>
+              <ul>
+                <li>Microservices.</li>
+                <li>DevOps automation.</li>
+                <li>Testing and continuous integration/deployment (CI/CD).</li>
+              </ul>
             </div>
           </article>
-          <article id="container">
-            <h6>Container</h6>
-            <p>
-              An instance of a Docker image. A container represents the
-              execution of a single application, process, or service. It
-              consists of the contents of a Docker image, an execution
-              environment, and a standard set of instructions. When scaling a
-              service, you create multiple instances of a container from the
-              same image.
-            </p>
+          <article id="compose">
+            <h6>Compose</h6>
+            <div>
+              <p>
+                <strong>Docker Compose</strong> is a tool for defining and
+                running multi-container Docker applications using a YAML file to
+                configure services, networks, and volumes.
+              </p>
+              <p>
+                <strong>Docker Compose</strong> is a tool used to define and
+                manage multi-container Docker applications. <br />
+                With Docker Compose, you can use a YAML file (
+                <code>docker-compose.yml</code>) to configure your application’s
+                services, networks, and volumes. <br />
+                It simplifies the process of orchestrating and running multiple
+                containers together.
+              </p>
+              <h6>Key Features:</h6>
+              <ul>
+                <li>
+                  <strong>Multi-container applications</strong>: Define services
+                  for databases, web servers, and more.
+                </li>
+                <li>
+                  <strong>Isolation</strong>: Each service runs in its own
+                  container.
+                </li>
+                <li>
+                  <strong>Simplified Commands</strong>: Use{" "}
+                  <code>docker-compose up</code> to start all services and{" "}
+                  <code>docker-compose down</code> to stop them.
+                </li>
+              </ul>
+              <h6>Use Case Example:</h6>
+              <p>
+                Run a web application with separate containers for the frontend,
+                backend, and database.
+              </p>
+            </div>
           </article>
-          <article id="volumes">
-            <h6>Volumes</h6>
+          <article id="orchestrator">
+            <h6>Orchestrator</h6>
             <p>
-              Offer a writable filesystem that the container can use. Since
-              images are read-only but most programs need to write to the
-              filesystem, volumes add a writable layer, on top of the container
-              image, so the programs have access to a writable filesystem. The
-              program doesn't know it's accessing a layered filesystem, it's
-              just the filesystem as usual. Volumes live in the host system and
-              are managed by Docker.
+              An orchestrator is a tool or system that automates the deployment,
+              management, and scaling of containerized applications, ensuring
+              optimal resource allocation and efficient operations across a
+              cluster. Example Kubernetes.
             </p>
           </article>
           <article id="docker-hub">
             <h6>Docker Hub</h6>
             <p>
-              A public registry to upload images and work with them. Docker Hub
-              provides Docker image hosting, public or private registries, build
-              triggers and web hooks, and integration with GitHub and Bitbucket.
-            </p>
-          </article>
-          <article id="compose">
-            <h6>Compose</h6>
-            <p>
-              A command-line tool and YAML file format with metadata for
-              defining and running multi-container applications. You define a
-              single application based on multiple images with one or more .yml
-              files that can override values depending on the environment. After
-              you've created the definitions, you can deploy the whole
-              multi-container application with a single command (docker-compose
-              up) that creates a container per image on the Docker host.
+              Docker Hub is a cloud-based registry that allows users to store,
+              share, and access Docker container images, enabling easy
+              distribution of official and community-contributed images.
             </p>
           </article>
           <article id="registry">
             <h6>Registry</h6>
             <p>
-              A service that provides access to repositories. The default
-              registry for most public images is Docker Hub (owned by Docker as
-              an organization). A registry usually contains repositories from
-              multiple teams. Companies often have private registries to store
-              and manage images they've created.
+              A Docker registry is a storage and distribution system for Docker
+              images. It allows users to store, share, and manage Docker
+              container images. Docker Hub is the default public registry, but
+              private registries can also be set up.
             </p>
           </article>
           <article id="cluster">
             <h6>Cluster</h6>
             <p>
-              A collection of Docker hosts exposed as if it were a single
-              virtual Docker host, so that the application can scale to multiple
-              instances of the services spread across multiple hosts within the
-              cluster. Docker clusters can be created with Kubernetes, Azure
-              Service Fabric, Docker Swarm and Mesosphere DC/OS.
-            </p>
-          </article>
-          <article id="orchestrator">
-            <h6>Orchestrator</h6>
-            <p>
-              A tool that simplifies management of clusters and Docker hosts.
-              Orchestrators enable you to manage their images, containers, and
-              hosts through a command-line interface (CLI) or a graphical UI.
-              You can manage container networking, configurations, load
-              balancing, service discovery, high availability, Docker host
-              configuration, and more. An orchestrator is responsible for
-              running, distributing, scaling, and healing workloads across a
-              collection of nodes. Typically, orchestrator products are the same
-              products that provide cluster infrastructure, like Kubernetes and
-              Azure Service Fabric, among other offerings in the market.A tool
-              that simplifies management of clusters and Docker hosts.
-              Orchestrators enable you to manage their images, containers, and
-              hosts through a command-line interface (CLI) or a graphical UI.
-              You can manage container networking, configurations, load
-              balancing, service discovery, high availability, Docker host
-              configuration, and more. An orchestrator is responsible for
-              running, distributing, scaling, and healing workloads across a
-              collection of nodes. Typically, orchestrator products are the same
-              products that provide cluster infrastructure, like Kubernetes and
-              Azure Service Fabric, among other offerings in the market.
+              Cluster is a group of Docker nodes (machines) that work together
+              to run containers in a distributed manner, often managed by an
+              orchestration tool like Kubernetes or Docker Swarm, ensuring
+              scalability, availability, and fault tolerance across multiple
+              systems.
             </p>
           </article>
         </section>

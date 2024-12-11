@@ -19,7 +19,7 @@ export default function Home() {
                 Contents
               </button>
               <ul
-                className="list-unstyled ps-3 collapse show"
+                className="list-unstyled ps-3 collapse"
                 id="contents-collapse"
               >
                 <li>
@@ -67,7 +67,7 @@ export default function Home() {
                 Related links
               </button>
               <ul
-                className="list-unstyled ps-3 collapse show"
+                className="list-unstyled ps-3 collapse"
                 id="contents-collapse"
               >
                 <li>
@@ -124,7 +124,7 @@ export default function Home() {
                   >
                     <b>AskMe &amp; TV</b>
                   </div>
-                  <div class="card-body text-dark collapse show" id="tv">
+                  <div class="card-body text-dark collapse" id="tv">
                     <h6 class="card-title">Description</h6>
                     <p>
                       TV is a automotive management solution designed to help
@@ -242,7 +242,7 @@ export default function Home() {
                   >
                     <b>UAE SME</b>
                   </div>
-                  <div class="card-body text-dark collapse show" id="uaesme">
+                  <div class="card-body text-dark collapse" id="uaesme">
                     <h6 class="card-title">Description</h6>
                     <p>
                       The <strong>« UAE SME »</strong> portal supports small and
@@ -334,7 +334,7 @@ export default function Home() {
                   >
                     <b>FGIC</b>
                   </div>
-                  <div class="card-body text-dark collapse show" id="fgic">
+                  <div class="card-body text-dark collapse" id="fgic">
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
                       <strong>« FGIC »</strong> is dedicated to organizations in
@@ -485,7 +485,7 @@ export default function Home() {
                     <b>Carry Track</b>
                   </div>
                   <div
-                    class="card-body text-dark collapse show"
+                    class="card-body text-dark collapse"
                     id="carrytrack"
                   >
                     <h6 class="card-title">Description</h6>
@@ -684,7 +684,7 @@ export default function Home() {
                     <b>AddInvoice</b>
                   </div>
                   <div
-                    class="card-body text-dark collapse show"
+                    class="card-body text-dark collapse"
                     id="addinvoice"
                   >
                     <h6 class="card-title">Description</h6>
@@ -848,7 +848,7 @@ export default function Home() {
                   >
                     <b>EMR</b>(Electronic Medical Records)
                   </div>
-                  <div class="card-body text-dark collapse show" id="dmi">
+                  <div class="card-body text-dark collapse" id="dmi">
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
                       <strong>« DMI »</strong> EMR (Electronic Medical Records
@@ -1069,7 +1069,7 @@ export default function Home() {
                   >
                     <b>Ticketing</b>
                   </div>
-                  <div class="card-body text-dark collapse show" id="ticketing">
+                  <div class="card-body text-dark collapse" id="ticketing">
                     <p>
                       I've also had the opportunity to serve as the software
                       engineer lead for the last project{" "}
