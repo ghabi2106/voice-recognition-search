@@ -194,15 +194,26 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);`}
             <h6>Platform Invoke (P/Invoke)</h6>
             <div>
               <p>
-                P/Invoke is a technology that allows you to access structs,
-                callbacks, and functions in unmanaged libraries from your
-                managed code. Most of the P/Invoke API is contained in two
-                namespaces: <code>System</code> and{" "}
-                <code>System.Runtime.InteropServices</code>. Using these two
-                namespaces give you the tools to describe how you want to
-                communicate with the native component.
+                <strong>P/Invoke</strong> (Platform Invocation Services) allows
+                .NET code to call unmanaged functions implemented in dynamic
+                link libraries (DLLs), such as C or C++ libraries. It bridges
+                the gap between managed and unmanaged code, enabling
+                interoperation.
               </p>
-              <Highlight language="csharp">{`using System;
+              <h6>Key Components:</h6>
+              <ul>
+                <li>
+                  <strong>DllImport Attribute</strong>: Specifies the DLL
+                  containing the unmanaged function.
+                </li>
+                <li>
+                  <strong>Marshaling</strong>: Handles data conversion between
+                  managed and unmanaged memory.
+                </li>
+              </ul>
+              <h6>Example:</h6>
+              <Highlight language="csharp">
+                {`using System;
 using System.Runtime.InteropServices;
 
 public class Program
@@ -217,20 +228,25 @@ public class Program
         // Invoke the function as a regular managed method.
         MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
     }
-}`}</Highlight>
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="simd">
-            <h6>Use SIMD-accelerated numeric types</h6>
+            <h6>SIMD</h6>
             <div>
               <p>
-                SIMD (Single instruction, multiple data) provides hardware
-                support for performing an operation on multiple pieces of data,
-                in parallel, using a single instruction. In .NET, there's set of
-                SIMD-accelerated types under the System.Numerics namespace. SIMD
-                operations can be parallelized at the hardware level. That
-                increases the throughput of the vectorized computations, which
-                are common in mathematical, scientific, and graphics apps.
+                <strong>SIMD (Single Instruction, Multiple Data)</strong> is a
+                parallel computing method where a single instruction operates
+                simultaneously on multiple data points. <br />
+                It’s commonly used in modern CPUs and GPUs for tasks like image
+                processing, scientific simulations, and AI workloads.
+              </p>
+              <h6>Example in .NET:</h6>
+              <p>
+                Using SIMD via the <strong>System.Numerics.Vectors</strong>{" "}
+                library optimizes operations like matrix math and vector
+                calculations.
               </p>
             </div>
           </article>
