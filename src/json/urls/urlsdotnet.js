@@ -105,6 +105,9 @@ export const urlsdotnet = {
   // CQRS
   cqrs: "/cqrs",
   "command queries responbility segregation": "/cqrs",
+  // Event Sourcing
+  sourcing: "/event-sourcing",
+  "event sourcing": "/event-sourcing",
   // DDD
   "domain driven design": "/ddd",
   // Dependency injection
@@ -290,6 +293,9 @@ export const urlsdotnet = {
   // New features in C# 11
   "csharp 11": "/csharp11",
   "c# 11": "/csharp11",
+  // New features in C# 12
+  "csharp 12": "/csharp12",
+  "c# 12": "/csharp12",
   // OOP
   "object oriented programming": "/oop",
   oop: "/oop",
@@ -367,11 +373,11 @@ export const urlsdotnet = {
   "platform invoke": "/advanced",
   simd: "/advanced",
   // Array
-  "array": "/array",
+  array: "/array",
   "jagged array": "/array",
   "multidimensional array": "/array",
-  "jagged": "/array",
-  "multidimensional": "/array",
+  jagged: "/array",
+  multidimensional: "/array",
   // binding
   binding: "/binding",
   "early bound": "/binding",

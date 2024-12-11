@@ -10,12 +10,14 @@ import CqrsPage from "../../pages/en/dotnet/architecture/Cqrs";
 import CleanPage from "../../pages/en/dotnet/architecture/Clean";
 import MvcPage from "../../pages/en/dotnet/architecture/Mvc";
 import DddPage from "../../pages/en/dotnet/architecture/Ddd";
+import EventSourcingPage from "../../pages/en/dotnet/architecture/EventSourcing";
 //#endregion
 
 //#region Csharp
 import Csharp9Page from "../../pages/en/csharp/csharp/Csharp9";
 import Csharp10Page from "../../pages/en/csharp/csharp/Csharp10";
 import Csharp11Page from "../../pages/en/csharp/csharp/Csharp11";
+import Csharp12Page from "../../pages/en/csharp/csharp/Csharp12";
 import DotnetfeatuesPage from "../../pages/en/csharp/csharp/Dotnetfeatues";
 //#endregion
 
@@ -155,6 +157,7 @@ export default function Routecsharpen() {
       }
       <Route path="/clean" component={CleanPage} />
       <Route path="/cqrs" component={CqrsPage} />
+      <Route path="/event-sourcing" component={EventSourcingPage} />
       <Route path="/mvc" component={MvcPage} />
       <Route path="/ddd" component={DddPage} />
       {
@@ -250,6 +253,7 @@ export default function Routecsharpen() {
       <Route path="/csharp9" component={Csharp9Page} />
       <Route path="/csharp10" component={Csharp10Page} />
       <Route path="/csharp11" component={Csharp11Page} />
+      <Route path="/csharp12" component={Csharp12Page} />
       <Route path="/dotnetfeatures" component={DotnetfeatuesPage} />
       {
         //#endregion

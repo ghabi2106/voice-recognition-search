@@ -48,10 +48,10 @@ export const pagesdotnet = [
   // Garbage collector
   "gc",
   "garbage collector",
-  "unmanaged" ,
-  "managed" ,
+  "unmanaged",
+  "managed",
   "unmanaged code",
-  "managed  code" ,
+  "managed  code",
   "managed versus unmanaged",
   "unmanaged versus managed",
   "managed unmanaged",
@@ -106,6 +106,9 @@ export const pagesdotnet = [
   // CQRS
   "cqrs",
   "command queries responbility segregation",
+  // Event Sourcing
+  "sourcing",
+  "event sourcing",
   // DDD
   "domain driven design",
   // Dependency injection
@@ -282,9 +285,15 @@ export const pagesdotnet = [
   "record",
   "pattern matching",
   "target typed new",
-  // New features in C# 9
+  // New features in C# 10
   "csharp 10",
   "c# 10",
+  // New features in C# 11
+  "csharp 11",
+  "c# 11",
+  // New features in C# 12
+  "csharp 12",
+  "c# 12",
   // OOP
   "object oriented programming",
   "inheritance",

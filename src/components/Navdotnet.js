@@ -37,6 +37,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/event-sourcing">
+              Event Sourcing
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/mvc">
               MVC
             </Link>
@@ -80,6 +85,11 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/csharp11">
               C# 11
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/csharp12">
+              C# 12
             </Link>
           </li>
           <li className="nav-item">
