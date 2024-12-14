@@ -153,6 +153,7 @@ import SagaPage from "../../pages/en/dotnet/microservices/Saga";
 import SecurityPage from "../../pages/en/dotnet/microservices/Security";
 import TracingPage from "../../pages/en/dotnet/microservices/Tracing";
 import VersioningPage from "../../pages/en/dotnet/microservices/Versioning";
+import UnitTestingPage from "../../pages/en/dotnet/microservices/UnitTesting";
 //#endregion
 
 export default function Routecsharpen() {
@@ -366,6 +367,7 @@ export default function Routecsharpen() {
       <Route path="/saga" component={SagaPage} />
       <Route path="/security" component={SecurityPage} />
       <Route path="/tracing" component={TracingPage} />
+      <Route path="/unit-testing" component={UnitTestingPage} />
       <Route path="/versionning" component={VersioningPage} />
       {
         //#endregion
