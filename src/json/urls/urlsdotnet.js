@@ -135,6 +135,9 @@ export const urlsdotnet = {
   "hyper text transfer protocol": "/https",
   "secure socket layer": "/https",
   "transfert socket layer": "/https",
+  // WebSocket
+  socket: "/websocket",
+  "web socket": "/websocket",
   // HTTP Request Methods
   "http request methods": "/httpmethods",
   "http methods": "/httpmethods",
@@ -450,4 +453,31 @@ export const urlsdotnet = {
   // Userdefinedtype
   "user-defined conversion": "/userdefinedtype",
   "user-defined type": "/userdefinedtype",
+  // Ocelot
+  ocelot: "/ocelot",
+  "api gateway": "/ocelot",
+  gateway: "/ocelot",
+  // Grpc
+  grpc: "/grpc",
+  // Message Broker
+  "message broker": "/message-broker",
+  rabbitmq: "/message-broker",
+  masstransit: "/message-broker",
+  redis: "/message-broker",
+  // Identity Server
+  "identity Server": "/identity-server",
+  // Saga
+  saga: "/saga",
+  // cap
+  cap: "/cap",
+  // polly
+  polly: "/polly",
+  // resilience
+  resilience: "/resilience",
+  // security
+  security: "/security",
+  // tracing
+  tracing: "/tracing",
+  // versionning
+  versionning: "/versionning",
 };

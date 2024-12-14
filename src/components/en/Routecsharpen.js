@@ -55,7 +55,7 @@ import HttpsPage from "../../pages/en/dotnet/http/Https";
 import HttpmethodsPage from "../../pages/en/dotnet/http/Httpmethods";
 import JwtPage from "../../pages/en/dotnet/http/Jwt";
 import MiddlewarePage from "../../pages/en/dotnet/http/Middleware";
-import ServicePage from "../../pages/en/dotnet/http/Service";
+import WebSocketPage from "../../pages/en/dotnet/http/WebSocket";
 //#endregion
 
 //#region design pattern
@@ -140,6 +140,21 @@ import UserdefinedtypePage from "../../pages/en/csharp/Userdefinedtype";
 import ReferencesPage from "../../pages/en/csharp/References";
 //#endregion
 
+//#region Architecture
+import CAPPage from "../../pages/en/dotnet/microservices/CAP";
+import GrpcPage from "../../pages/en/dotnet/microservices/Grpc";
+import IdentityServerPage from "../../pages/en/dotnet/microservices/IdentityServer";
+import MessageBrokerPage from "../../pages/en/dotnet/microservices/MessageBroker";
+import MicroservicePage from "../../pages/en/dotnet/microservices/Microservice";
+import OcelotPage from "../../pages/en/dotnet/microservices/Ocelot";
+import PollyPage from "../../pages/en/dotnet/microservices/Polly";
+import ResiliencePage from "../../pages/en/dotnet/microservices/Resilience";
+import SagaPage from "../../pages/en/dotnet/microservices/Saga";
+import SecurityPage from "../../pages/en/dotnet/microservices/Security";
+import TracingPage from "../../pages/en/dotnet/microservices/Tracing";
+import VersioningPage from "../../pages/en/dotnet/microservices/Versioning";
+//#endregion
+
 export default function Routecsharpen() {
   return (
     <>
@@ -203,7 +218,7 @@ export default function Routecsharpen() {
       <Route path="/httpmethods" component={HttpmethodsPage} />
       <Route path="/jwt" component={JwtPage} />
       <Route path="/middleware" component={MiddlewarePage} />
-      <Route path="/service" component={ServicePage} />
+      <Route path="/websocket" component={WebSocketPage} />
       {
         //#endregion
       }
@@ -333,6 +348,25 @@ export default function Routecsharpen() {
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/userdefinedtype" component={UserdefinedtypePage} />
       <Route path="/references" component={ReferencesPage} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region Microservices
+      }
+      <Route path="/cap" component={CAPPage} />
+      <Route path="/grpc" component={GrpcPage} />
+      <Route path="/identity-server" component={IdentityServerPage} />
+      <Route path="/message-broker" component={MessageBrokerPage} />
+      <Route path="/service" component={MicroservicePage} />
+      <Route path="/ocelot" component={OcelotPage} />
+      <Route path="/polly" component={PollyPage} />
+      <Route path="/resilience" component={ResiliencePage} />
+      <Route path="/saga" component={SagaPage} />
+      <Route path="/security" component={SecurityPage} />
+      <Route path="/tracing" component={TracingPage} />
+      <Route path="/versionning" component={VersioningPage} />
       {
         //#endregion
       }

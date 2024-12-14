@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Highlight from "react-highlight";
-import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Docker() {
   return (
@@ -139,7 +137,7 @@ export default function Docker() {
           <h3>Docker</h3>
           <article id="docker">
             <h6>Docker</h6>
-            <div class="markdown prose w-full break-words dark:prose-invert light">
+            <div>
               <p>
                 <strong>Docker</strong> is an open-source platform designed to
                 create, deploy, and manage applications in lightweight, portable

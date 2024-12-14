@@ -198,7 +198,7 @@ export class HighlightDirective {
             <h6>Structural Directives</h6>
             <div>
               <p></p>
-              <table>
+              <table className="table table-bordered">
                 <thead>
                   <tr>
                     <th>Common built-in structural directives</th>

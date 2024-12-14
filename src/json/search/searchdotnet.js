@@ -155,6 +155,9 @@ export const pagesdotnet = [
   "delete method",
   "patch method",
   "options method",
+  // WebSocket
+  "socket",
+  "web socket",
   // Hosted service
   "hoster service",
   "background service",
@@ -447,4 +450,31 @@ export const pagesdotnet = [
   // Userdefinedtype
   "user-defined conversion",
   "user-defined type",
+  // Ocelot
+  "ocelot",
+  "api gateway",
+  "gateway",
+  // Grpc
+  "grpc",
+  // Message Broker
+  "message broker",
+  "rabbitmq",
+  "masstransit",
+  "redis",
+  // Identity Server
+  "identity Server",
+  // Saga
+  "saga",
+  // cap
+  "cap",
+  // polly
+  "polly",
+  // resilience
+  "resilience",
+  // security
+  "security",
+  // tracing
+  "tracing",
+  // versionning
+  "versionning",
 ];

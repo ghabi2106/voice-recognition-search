@@ -201,7 +201,7 @@ export class HighlightDirective {
                 Les "Structural Directives" permettent de manipuler le DOM en
                 ajoutant ou en retirant des éléments.
               </p>
-              <table>
+              <table className="table table-bordered">
                 <thead>
                   <tr>
                     <th>
