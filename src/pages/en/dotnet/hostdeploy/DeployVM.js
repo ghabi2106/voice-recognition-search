@@ -111,9 +111,9 @@ export default function DeployVM() {
               <h6>
                 Publish Profile using <code>IISProfile.pubxml</code>
               </h6>
-              <h3>
+              <h6>
                 <strong>1. Prerequisites</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -170,15 +170,15 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>2. Create a Publish Profile</strong>
-              </h3>
+              </h6>
               <p>
                 A publish profile (<code>*.pubxml</code>) contains all the
                 deployment configuration settings, such as the target server,
                 site name, and credentials.
               </p>
-              <h4>Steps to Create:</h4>
+              <h6>Steps to Create:</h6>
               <ol>
                 <li>
                   <p>
@@ -236,16 +236,16 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>3. Deploy Using the Publish Profile</strong>
-              </h3>
+              </h6>
               <p>
                 Once the publish profile is ready, you can deploy your
                 application directly using Visual Studio or the command line.
               </p>
-              <h4>
+              <h6>
                 <strong>Method 1: Visual Studio</strong>
-              </h4>
+              </h6>
               <ol>
                 <li>
                   Right-click on your project in{" "}
@@ -263,9 +263,9 @@ export default function DeployVM() {
                   the VM.
                 </li>
               </ol>
-              <h4>
+              <h6>
                 <strong>Method 2: Command Line</strong>
-              </h4>
+              </h6>
               <p>
                 You can use the publish profile with the <code>dotnet</code>{" "}
                 CLI:
@@ -283,9 +283,9 @@ export default function DeployVM() {
                 <li>Package it for deployment.</li>
                 <li>Deploy it to the IIS server on the virtual machine.</li>
               </ul>
-              <h3>
+              <h6>
                 <strong>4. Post-Deployment Configuration</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -331,9 +331,9 @@ export default function DeployVM() {
             <h6>Publish CI-CD</h6>
             <div>
               <h6>Publish using CI-CD</h6>
-              <h4>
+              <h6>
                 <strong>1. Prerequisites</strong>
-              </h4>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -411,14 +411,16 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h4>
+              <h6>
                 <strong>2. Define the GitHub Actions Workflow</strong>
-              </h4>
+              </h6>
               <p>
                 Create a <code>.github/workflows/deploy.yml</code> file in your
                 repository with the following content:
-                <Highlight language="yaml">
-                  {`name: Deploy to IIS
+              </p>
+
+              <Highlight language="yaml">
+                {`name: Deploy to IIS
 
 on:
   push:
@@ -455,16 +457,15 @@ jobs:
         IIS_USER: secrets.IIS_USER
         IIS_PASSWORD: secrets.IIS_PASSWORD
       run: |
-        dotnet publish -c Release -p:PublishProfile=IISProfile.pubxml \
-          /p:Password=$IIS_PASSWORD \
-          /p:UserName=$IIS_USER \
+        dotnet publish -c Release -p:PublishProfile=IISProfile.pubxml 
+          /p:Password=$IIS_PASSWORD 
+          /p:UserName=$IIS_USER 
           /p:PublishUrl=https://$IIS_SERVER/MSDeploy.axd
 `}
-                </Highlight>
-              </p>
-              <h4>
+              </Highlight>
+              <h6>
                 <strong>3. Explanation of Workflow Steps</strong>
-              </h4>
+              </h6>
               <ol>
                 <li>
                   <p>

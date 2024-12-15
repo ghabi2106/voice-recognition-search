@@ -282,9 +282,9 @@ export default function ServiceDiscovery() {
                   </tr>
                 </tbody>
               </table>
-              <h3>
+              <h6>
                 <strong>When to Use Consul</strong>
-              </h3>
+              </h6>
               <p>
                 Consider using <strong>Consul</strong> if your microservices
                 architecture involves:

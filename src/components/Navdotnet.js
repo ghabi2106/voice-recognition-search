@@ -430,7 +430,7 @@ export default function Navdotnet() {
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
-            <Link className="dropdown-item" to="//deploy-vm">
+            <Link className="dropdown-item" to="/deploy-vm">
               Deploy to VM
             </Link>
           </li>
