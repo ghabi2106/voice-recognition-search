@@ -471,12 +471,16 @@ export const pagesdotnet = [
   "saga",
   // cap
   "cap",
+  // create project
+  "create project",
   // polly
   "polly",
   // resilience
   "resilience",
   // security
   "security",
+  // service discovery
+  "service discovery",
   // tracing
   "tracing",
   // unit testing

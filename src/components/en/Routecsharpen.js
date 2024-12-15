@@ -143,6 +143,7 @@ import ReferencesPage from "../../pages/en/csharp/References";
 
 //#region Architecture
 import CAPPage from "../../pages/en/dotnet/microservices/CAP";
+import CreateProjectPage from "../../pages/en/dotnet/microservices/CreateProject";
 import GrpcPage from "../../pages/en/dotnet/microservices/Grpc";
 import IdentityServerPage from "../../pages/en/dotnet/microservices/IdentityServer";
 import MessageBrokerPage from "../../pages/en/dotnet/microservices/MessageBroker";
@@ -152,6 +153,7 @@ import PollyPage from "../../pages/en/dotnet/microservices/Polly";
 import ResiliencePage from "../../pages/en/dotnet/microservices/Resilience";
 import SagaPage from "../../pages/en/dotnet/microservices/Saga";
 import SecurityPage from "../../pages/en/dotnet/microservices/Security";
+import ServiceDiscoveryPage from "../../pages/en/dotnet/microservices/ServiceDiscovery";
 import TracingPage from "../../pages/en/dotnet/microservices/Tracing";
 import VersioningPage from "../../pages/en/dotnet/microservices/Versioning";
 import UnitTestingPage from "../../pages/en/dotnet/microservices/UnitTesting";
@@ -359,6 +361,7 @@ export default function Routecsharpen() {
         //#region Microservices
       }
       <Route path="/cap" component={CAPPage} />
+      <Route path="/create-project" component={CreateProjectPage} />
       <Route path="/grpc" component={GrpcPage} />
       <Route path="/identity-server" component={IdentityServerPage} />
       <Route path="/message-broker" component={MessageBrokerPage} />
@@ -368,6 +371,7 @@ export default function Routecsharpen() {
       <Route path="/resilience" component={ResiliencePage} />
       <Route path="/saga" component={SagaPage} />
       <Route path="/security" component={SecurityPage} />
+      <Route path="/service-discovery" component={ServiceDiscoveryPage} />
       <Route path="/tracing" component={TracingPage} />
       <Route path="/unit-testing" component={UnitTestingPage} />
       <Route path="/versionning" component={VersioningPage} />

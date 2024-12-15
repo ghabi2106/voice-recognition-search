@@ -474,12 +474,16 @@ export const urlsdotnet = {
   saga: "/saga",
   // cap
   cap: "/cap",
+  // create project
+  "create project": "/create-project",
   // polly
   polly: "/polly",
   // resilience
   resilience: "/resilience",
   // security
   security: "/security",
+  // service discovery
+  "service discovery": "/service discovery",
   // tracing
   tracing: "/tracing",
   // tracing

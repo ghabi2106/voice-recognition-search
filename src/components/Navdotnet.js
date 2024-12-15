@@ -817,6 +817,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/create-project">
+              Create Project
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/grpc">
               Grpc
             </Link>
@@ -860,6 +865,11 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/security">
               Security
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/service-discovery">
+              Service Discovery
             </Link>
           </li>
           <li className="nav-item">
