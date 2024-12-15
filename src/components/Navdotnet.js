@@ -430,6 +430,11 @@ export default function Navdotnet() {
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
+            <Link className="dropdown-item" to="//deploy-vm">
+              Deploy to VM
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/docker">
               Docker
             </Link>
@@ -806,9 +811,9 @@ export default function Navdotnet() {
           Microservices
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li className="nav-item">
+          <li className="nav-item">
             <Link className="dropdown-item" to="/cap">
-            CAP
+              CAP
             </Link>
           </li>
           <li className="nav-item">
@@ -829,7 +834,7 @@ export default function Navdotnet() {
           </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/service">
-            Microservices
+              Microservices
             </Link>
           </li>
           <li className="nav-item">

@@ -78,6 +78,7 @@ import IdealsPage from "../../pages/en/dotnet/methodology/Ideals";
 //#endregion
 
 //#region Host Deployment
+import DeployVMPage from "../../pages/en/dotnet/hostdeploy/DeployVM";
 import DockerPage from "../../pages/en/dotnet/hostdeploy/Docker";
 import HttpsysPage from "../../pages/en/dotnet/hostdeploy/Httpsys";
 import IisPage from "../../pages/en/dotnet/hostdeploy/Iis";
@@ -201,6 +202,7 @@ export default function Routecsharpen() {
       {
         //#region Host Deploy
       }
+      <Route path="/deploy-vm" component={DeployVMPage} />
       <Route path="/docker" component={DockerPage} />
       <Route path="/httpsys" component={HttpsysPage} />
       <Route path="/iis" component={IisPage} />

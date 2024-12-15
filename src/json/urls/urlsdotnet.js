@@ -426,6 +426,10 @@ export const urlsdotnet = {
   "difference between object and class": "/typesystem",
   "difference between class and object": "/typesystem",
   serialization: "/typesystem",
+  // DeployVM
+  "deploy vm": "/deploy-vm",
+  "deploy virtual machine": "/deploy-vm",
+  deploy: "/deploy-vm",
   // Docker
   docker: "/docker",
   container: "/docker",

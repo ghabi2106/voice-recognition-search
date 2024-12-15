@@ -423,6 +423,10 @@ export const pagesdotnet = [
   "difference between object and class",
   "difference between class and object",
   "serialization",
+  // DeployVM
+  "deploy vm",
+  "deploy virtual machine",
+  "deploy",
   // Docker
   "docker",
   "container",
