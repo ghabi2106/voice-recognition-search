@@ -105,6 +105,11 @@ export default function Nav() {
                     Presentation
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="dropdown-item" to="/company">
+                    Company
+                  </Link>
+                </li>
               </ul>
             </li>
             {
