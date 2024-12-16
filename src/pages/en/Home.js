@@ -96,8 +96,7 @@ export default function Home() {
                 engineer from the University of Monastir, Tunisia, in 2017.{" "}
                 <br />
                 My expertise spans diverse sectors, including automotive,
-                healthcare, GIS, and entrepreneurship. <br />
-                Currently, I am working at Capgemini. <br />I have extensive
+                healthcare, GIS, and entrepreneurship. <br />I have extensive
                 experience in software architecture, design, development,
                 testing, and deployment, with a strong background in Agile
                 methodology.
