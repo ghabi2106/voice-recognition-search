@@ -32,6 +32,14 @@ export default function Adapter() {
                     Adapter
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#example"
+                  >
+                    Exemple
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -141,106 +149,233 @@ export default function Adapter() {
             <h6>Adapter</h6>
             <div>
               <p>
-                L'<strong>adaptateur</strong> est un patron de conception structurel
-                qui permet de faire collaborer des objets ayant des interfaces
-                normalement incompatibles.
+                L'<strong>adaptateur</strong> est un patron de conception
+                structurel qui permet de faire collaborer des objets ayant des
+                interfaces normalement incompatibles.
               </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <strong>Aspect</strong>
+                    </th>
+                    <th>
+                      <strong>Description</strong>
+                    </th>
+                    <th>
+                      <strong>Exemple</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Définition</strong>
+                    </td>
+                    <td>
+                      Transforme l'interface d'une classe existante pour qu'elle
+                      soit compatible avec une autre interface attendue.
+                    </td>
+                    <td>
+                      Un adaptateur pour connecter un chargeur européen à une
+                      prise américaine.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Structure</strong>
+                    </td>
+                    <td>
+                      - <strong>Client</strong> : Utilise l'interface cible.
+                      <br />- <strong>Cible</strong> : Interface attendue par le
+                      client.
+                      <br />- <strong>Adaptateur</strong> : Relie l'interface
+                      cible à une interface existante.
+                      <br />- <strong>Adaptee</strong> : Classe à adapter.
+                    </td>
+                    <td>
+                      Une application de messagerie qui adapte un service
+                      existant pour fonctionner avec une nouvelle API.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Avantages</strong>
+                    </td>
+                    <td>
+                      - Favorise la réutilisation de code existant.
+                      <br />- Simplifie l'intégration avec des systèmes tiers.
+                    </td>
+                    <td>
+                      Permet de connecter des systèmes hétérogènes sans modifier
+                      leur code.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Inconvénients</strong>
+                    </td>
+                    <td>
+                      - Peut ajouter une couche de complexité supplémentaire.
+                      <br />- Nécessite parfois une duplication d'interface.
+                    </td>
+                    <td>
+                      Peut alourdir le code si trop d'adaptateurs sont
+                      nécessaires.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Cas d'utilisation</strong>
+                    </td>
+                    <td>
+                      - Intégration avec une API ou une bibliothèque tierce.
+                      <br />- Migration de code ou transition entre systèmes.
+                    </td>
+                    <td>
+                      Adapter une ancienne bibliothèque pour fonctionner avec
+                      une nouvelle application.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article id="example">
+            <h6>Example</h6>
+            <div>
+              <h6>Exemple d'un Adaptateur VGA vers HDMI</h6>
+              <h3>
+                <strong>Explication :</strong>
+              </h3>
+              <ol>
+                <li>
+                  <p>
+                    <strong>
+                      Interface cible (<code>IHDMI</code>)
+                    </strong>{" "}
+                    :
+                  </p>
+                  <ul>
+                    <li>Définit l'interface pour les appareils HDMI.</li>
+                    <li>
+                      Le client (ordinateur) utilise cette interface pour
+                      envoyer des vidéos.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>
+                      Classe existante (<code>VGA</code>)
+                    </strong>{" "}
+                    :
+                  </p>
+                  <ul>
+                    <li>
+                      Le moniteur VGA accepte uniquement des signaux via sa
+                      méthode <code>DisplayVGA</code>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>
+                      Adaptateur (<code>HDMIToVGAAdapter</code>)
+                    </strong>{" "}
+                    :
+                  </p>
+                  <ul>
+                    <li>
+                      Implémente l'interface HDMI (<code>IHDMI</code>) et
+                      utilise une instance de <code>VGA</code> pour rediriger
+                      les signaux après conversion.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>
+                      Client (<code>Computer</code>)
+                    </strong>{" "}
+                    :
+                  </p>
+                  <ul>
+                    <li>
+                      Le client (ordinateur) fonctionne uniquement avec{" "}
+                      <code>IHDMI</code>. L'adaptateur permet au client de
+                      communiquer avec le moniteur VGA.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
               <Highlight language="csharp">
-                {`public interface ILightningPhone
+                {`// Interface cible (HDMI)
+public interface IHDMI
 {
-	void ConnectLightning();
-	void Recharge();
+    void DisplayHDMI(string video);
 }
 
-public interface IUsbPhone
+// Classe existante (VGA)
+public class VGA
 {
-	void ConnectUsb();
-	void Recharge();
+    public void DisplayVGA(string video)
+    {
+        Console.WriteLine($"Affichage via VGA : {video}");
+    }
 }
 
-public sealed class AndroidPhone : IUsbPhone
+// Adaptateur : permet à une source HDMI d'utiliser un moniteur VGA
+public class HDMIToVGAAdapter : IHDMI
 {
-	private bool isConnected;
-	
-	public void ConnectUsb()
-	{
-		this.isConnected = true;
-		Console.WriteLine("Android phone connected.");
-	}
+    private readonly VGA _vgaDevice;
 
-	public void Recharge()
-	{
-		if (this.isConnected)
-		{
-			Console.WriteLine("Android phone recharging.");
-		}
-		else
-		{
-			Console.WriteLine("Connect the USB cable first.");
-		}
-	}
+    public HDMIToVGAAdapter(VGA vgaDevice)
+    {
+        _vgaDevice = vgaDevice;
+    }
+
+    public void DisplayHDMI(string video)
+    {
+        // Conversion et affichage via VGA
+        Console.WriteLine("Conversion du signal HDMI en VGA...");
+        _vgaDevice.DisplayVGA(video);
+    }
 }
 
-public sealed class ApplePhone : ILightningPhone
+// Client
+public class Computer
 {
-	private bool isConnected;
-	
-	public void ConnectLightning()
-	{
-		this.isConnected = true;
-		Console.WriteLine("Apple phone connected.");
-	}
+    private readonly IHDMI _hdmiOutput;
 
-	public void Recharge()
-	{
-		if (this.isConnected)
-		{
-			Console.WriteLine("Apple phone recharging.");
-		}
-		else
-		{
-			Console.WriteLine("Connect the Lightning cable first.");
-		}
-	}
+    public Computer(IHDMI hdmiOutput)
+    {
+        _hdmiOutput = hdmiOutput;
+    }
+
+    public void OutputVideo(string video)
+    {
+        _hdmiOutput.DisplayHDMI(video);
+    }
 }
 
-public sealed class LightningToUsbAdapter : IUsbPhone
+// Programme principal
+class Program
 {
-	private readonly ILightningPhone lightningPhone;
-	
-	private bool isConnected;
-	
-	public LightningToUsbAdapter(ILightningPhone lightningPhone)
-	{
-		this.lightningPhone = lightningPhone;
-		this.lightningPhone.ConnectLightning();
-	}
-	
-	public void ConnectUsb()
-	{
-		this.isConnected = true;
-		Console.WriteLine("Adapter cable connected.");
-	}
+    static void Main()
+    {
+        // Moniteur VGA existant
+        VGA vgaMonitor = new VGA();
 
-	public void Recharge()
-	{
-		if (this.isConnected)
-		{
-			this.lightningPhone.Recharge();
-		}
-		else
-		{
-			Console.WriteLine("Connect the USB cable first.");
-		}
-	}
-}
+        // Adaptateur HDMI vers VGA
+        IHDMI hdmiToVgaAdapter = new HDMIToVGAAdapter(vgaMonitor);
 
-public void Main()
-{
-	ILightningPhone applePhone = new ApplePhone();
-	IUsbPhone adapterCable = new LightningToUsbAdapter(applePhone);
-	adapterCable.ConnectUsb();
-	adapterCable.Recharge();
+        // Ordinateur avec sortie HDMI
+        Computer computer = new Computer(hdmiToVgaAdapter);
+
+        // Affichage de la vidéo
+        computer.OutputVideo("Vidéo de présentation");
+    }
 }`}
               </Highlight>
             </div>

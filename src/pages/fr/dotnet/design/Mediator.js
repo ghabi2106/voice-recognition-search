@@ -35,25 +35,9 @@ export default function Mediator() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#use"
+                    href="#example"
                   >
-                    Common use
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#dis-advantages"
-                  >
-                    Advantages and disadvantages
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#code"
-                  >
-                    Structural code in C#
+                    Example
                   </a>
                 </li>
               </ul>
@@ -163,216 +147,268 @@ export default function Mediator() {
           <h3>Mediator</h3>
           <article id="mediator">
             <h6>Mediator</h6>
-            <p>
-              <strong>Médiateur</strong> est un patron de conception
-              comportemental qui diminue les dépendances chaotiques entre les
-              objets. Il restreint les communications directes entre les objets
-              et les force à collaborer uniquement via un objet médiateur.
-            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <strong>Aspect</strong>
+                  </th>
+                  <th>
+                    <strong>Description</strong>
+                  </th>
+                  <th>
+                    <strong>Exemple</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Définition</strong>
+                  </td>
+                  <td>
+                    Un objet qui centralise les communications entre plusieurs
+                    objets, réduisant ainsi le couplage direct entre eux.
+                  </td>
+                  <td>
+                    Permet à plusieurs classes d'interagir sans se connaître
+                    directement. Chaque classe envoie des messages au médiateur,
+                    qui transmet les informations aux autres classes.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>But</strong>
+                  </td>
+                  <td>
+                    Découpler les objets, réduire le nombre de dépendances
+                    directes et centraliser la logique de communication.
+                  </td>
+                  <td>
+                    Simplifier la gestion des interactions entre objets, en
+                    particulier dans les systèmes complexes où de nombreuses
+                    entités doivent communiquer entre elles.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Structure</strong>
+                  </td>
+                  <td>
+                    1. <strong>Médiateur</strong> : Centralise la logique de
+                    communication.
+                    <br />
+                    2. <strong>Colleague</strong> : Les objets qui communiquent
+                    via le médiateur.
+                  </td>
+                  <td>
+                    Un <strong>mediator</strong> reçoit les messages de ses{" "}
+                    <strong>colleagues</strong> (par exemple, des boutons ou des
+                    fenêtres dans une interface graphique) et les redirige ou
+                    les gère.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Avantages</strong>
+                  </td>
+                  <td>
+                    - Réduit le couplage entre objets.
+                    <br />- Simplifie la gestion des interactions.
+                    <br />- Permet une gestion centralisée des communications.
+                  </td>
+                  <td>
+                    - Si un composant est modifié, il n'affecte pas directement
+                    les autres composants, car tout passe par le médiateur.
+                    <br />- Le médiateur peut contenir des règles complexes de
+                    gestion des messages.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Inconvénients</strong>
+                  </td>
+                  <td>
+                    - Le médiateur peut devenir un point de complexité s'il gère
+                    trop de logique.
+                    <br />- Difficile à maintenir si le médiateur devient trop
+                    complexe.
+                  </td>
+                  <td>
+                    Si trop de classes sont envoyées au médiateur, ce dernier
+                    peut devenir trop volumineux et difficile à maintenir.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Exemple d'application</strong>
+                  </td>
+                  <td>
+                    - Interfaces utilisateur complexes avec de nombreux
+                    composants.
+                    <br />- Gestion des messages dans une application avec des
+                    interactions complexes.
+                  </td>
+                  <td>
+                    1. Dans une application de chat où chaque utilisateur
+                    communique avec les autres via un médiateur.
+                    <br />
+                    2. Dans une interface graphique, le médiateur pourrait gérer
+                    les événements entre des boutons, des champs de texte et des
+                    menus.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </article>
-          <article id="use">
-            <h6>Common use</h6>
-            <ul>
-              <li>
-                Utilisez ce patron si vous rencontrez des difficultés pour
-                modifier certaines classes trop fortement couplées avec
-                d’autres.
-              </li>
-              <li>
-                Utilisez ce patron quand vous ne pouvez pas réutiliser un
-                composant ailleurs, car il est trop dépendant des autres
-                composants.
-              </li>
-              <li>
-                Utilisez le médiateur lorsque vous créez des tonnes de
-                sous-classes pour les composants, juste pour pouvoir bénéficier
-                de leur comportement de base dans différents contextes.
-              </li>
-            </ul>
-          </article>
-          <article id="dis-advantages">
-            <h6>Advantages and disadvantages</h6>
-            <div class="row">
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Principe de responsabilité unique</em>. Vous pouvez
-                    mettre les communications entre les différents composants au
-                    même endroit, rendant le code plus facile à comprendre et à
-                    maintenir.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Principe ouvert/fermé</em>. Vous pouvez ajouter de
-                    nouveaux médiateurs sans avoir à modifier les composants
-                    déjà en place.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i> Vous
-                    diminuez le couplage entre les différents composants d’un
-                    programme.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i> Vous
-                    pouvez réutiliser les composants individuels plus
-                    facilement.
-                  </li>
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i> Avec le
-                    temps, un médiateur peut évoluer en Objet Omniscient(God
-                    Object).
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-          <article id="code">
-            <h6>Structural code in C#</h6>
-            <Highlight language="csharp">
-              {`using System;
-
-namespace Mediator.Structural
+          <article id="example">
+            <h6>Example</h6>
+            <div>
+              <p>
+                Un exemple réel d'utilisation du Mediator Pattern est le
+                contrôle aérien dans un aéroport, où un tour de contrôle joue le
+                rôle de médiateur pour coordonner les communications entre
+                plusieurs avions (les collègues).
+              </p>
+              <h3>
+                <strong>Explication :</strong>
+              </h3>
+              <ol>
+                <li>
+                  <p>
+                    <strong>Interface IAirTrafficControl</strong> :
+                  </p>
+                  <ul>
+                    <li>
+                      Définit les méthodes pour enregistrer des avions et
+                      transmettre des messages.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>Classe AirTrafficControl</strong> :
+                  </p>
+                  <ul>
+                    <li>
+                      Agit comme un médiateur, recevant les messages des avions
+                      et transmettant les instructions aux autres avions.
+                    </li>
+                    <li>
+                      Centralise la gestion des communications pour éviter les
+                      collisions ou les interférences.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>Classe Aircraft</strong> :
+                  </p>
+                  <ul>
+                    <li>
+                      Chaque avion est un collègue qui interagit uniquement avec
+                      le médiateur (la tour de contrôle) et non directement avec
+                      d'autres avions.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>Exécution</strong> :
+                  </p>
+                  <ul>
+                    <li>L'avion "A" envoie une demande d'atterrissage.</li>
+                    <li>
+                      La tour de contrôle transmet ce message aux autres avions,
+                      qui reçoivent l'information.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <Highlight language="csharp">
+                {`// Interface du médiateur
+public interface IAirTrafficControl
 {
-    /// <summary>
-    /// Mediator Design Pattern
-    /// </summary>
+    void RegisterAircraft(Aircraft aircraft);
+    void SendMessage(string message, Aircraft sender);
+}
 
-    public class Program
+// Classe Mediator
+public class AirTrafficControl : IAirTrafficControl
+{
+    private List<Aircraft> _aircrafts;
+
+    public AirTrafficControl()
     {
-        public static void Main(string[] args)
-        {
-            ConcreteMediator m = new ConcreteMediator();
-
-            ConcreteColleague1 c1 = new ConcreteColleague1(m);
-            ConcreteColleague2 c2 = new ConcreteColleague2(m);
-
-            m.Colleague1 = c1;
-            m.Colleague2 = c2;
-
-            c1.Send("How are you?");
-            c2.Send("Fine, thanks");
-
-            // Wait for user
-
-            Console.ReadKey();
-        }
+        _aircrafts = new List<Aircraft>();
     }
 
-    /// <summary>
-    /// The 'Mediator' abstract class
-    /// </summary>
-
-    public abstract class Mediator
+    public void RegisterAircraft(Aircraft aircraft)
     {
-        public abstract void Send(string message,
-            Colleague colleague);
+        _aircrafts.Add(aircraft);
     }
 
-    /// <summary>
-    /// The 'ConcreteMediator' class
-    /// </summary>
-
-    public class ConcreteMediator : Mediator
+    public void SendMessage(string message, Aircraft sender)
     {
-        ConcreteColleague1 colleague1;
-        ConcreteColleague2 colleague2;
-
-        public ConcreteColleague1 Colleague1
+        foreach (var aircraft in _aircrafts)
         {
-            set { colleague1 = value; }
-        }
-
-        public ConcreteColleague2 Colleague2
-        {
-            set { colleague2 = value; }
-        }
-
-        public override void Send(string message, Colleague colleague)
-        {
-            if (colleague == colleague1)
+            if (aircraft != sender)
             {
-                colleague2.Notify(message);
+                aircraft.ReceiveMessage($"{sender.Name}: {message}");
             }
-            else
-            {
-                colleague1.Notify(message);
-            }
-        }
-    }
-
-    /// <summary>
-    /// The 'Colleague' abstract class
-    /// </summary>
-
-    public abstract class Colleague
-    {
-        protected Mediator mediator;
-
-        // Constructor
-
-        public Colleague(Mediator mediator)
-        {
-            this.mediator = mediator;
-        }
-    }
-
-    /// <summary>
-    /// A 'ConcreteColleague' class
-    /// </summary>
-
-    public class ConcreteColleague1 : Colleague
-    {
-        // Constructor
-
-        public ConcreteColleague1(Mediator mediator)
-            : base(mediator)
-        {
-        }
-
-        public void Send(string message)
-        {
-            mediator.Send(message, this);
-        }
-
-        public void Notify(string message)
-        {
-            Console.WriteLine("Colleague1 gets message: "
-                + message);
-        }
-    }
-
-    /// <summary>
-    /// A 'ConcreteColleague' class
-    /// </summary>
-
-    public class ConcreteColleague2 : Colleague
-    {
-        // Constructor
-
-        public ConcreteColleague2(Mediator mediator)
-            : base(mediator)
-        {
-        }
-
-        public void Send(string message)
-        {
-            mediator.Send(message, this);
-        }
-
-        public void Notify(string message)
-        {
-            Console.WriteLine("Colleague2 gets message: "
-                + message);
         }
     }
 }
-`}
-            </Highlight>
+
+// Classe Colleague (Avion)
+public class Aircraft
+{
+    private IAirTrafficControl _mediator;
+    public string Name { get; }
+
+    public Aircraft(IAirTrafficControl mediator, string name)
+    {
+        _mediator = mediator;
+        Name = name;
+    }
+
+    public void SendMessage(string message)
+    {
+        Console.WriteLine($"{Name} envoie un message : {message}");
+        _mediator.SendMessage(message, this);
+    }
+
+    public void ReceiveMessage(string message)
+    {
+        Console.WriteLine($"{Name} reçoit un message : {message}");
+    }
+}
+
+// Programme principal
+class Program
+{
+    static void Main()
+    {
+        // Création de la tour de contrôle (médiateur)
+        IAirTrafficControl airTrafficControl = new AirTrafficControl();
+
+        // Création des avions
+        Aircraft aircraft1 = new Aircraft(airTrafficControl, "Avion A");
+        Aircraft aircraft2 = new Aircraft(airTrafficControl, "Avion B");
+        Aircraft aircraft3 = new Aircraft(airTrafficControl, "Avion C");
+
+        // Enregistrement des avions dans la tour de contrôle
+        airTrafficControl.RegisterAircraft(aircraft1);
+        airTrafficControl.RegisterAircraft(aircraft2);
+        airTrafficControl.RegisterAircraft(aircraft3);
+
+        // Communication via la tour de contrôle
+        aircraft1.SendMessage("Je demande la permission d'atterrir.");
+        aircraft2.SendMessage("Je suis en approche.");
+    }
+}`}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>
