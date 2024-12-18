@@ -143,7 +143,7 @@ export default function ServiceDiscovery() {
                   </ul>
                 </li>
               </ul>
-              <table>
+              <table className="table table-bordered">
                 <thead>
                   <tr>
                     <th>

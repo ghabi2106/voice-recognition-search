@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Highlight from "react-highlight";
+import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Solid() {
   return (
@@ -68,6 +70,14 @@ export default function Solid() {
                     href="#d"
                   >
                     Dependency inversion
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#examples"
+                  >
+                    Examples
                   </a>
                 </li>
               </ul>
@@ -171,13 +181,8 @@ export default function Solid() {
             <h6>SOLID principles</h6>
             <div>
               <p>
-                SOLID est un{" "}
-                <strong>
-                  dispositif mnémotechnique pour 5 principes de conception
-                </strong>{" "}
-                de programmes orientés objet (POO) qui se traduisent par un code
-                lisible, adaptable et évolutif. SOLID peut être appliqué à
-                n'importe quel programme de POO.
+                Le principe SOLID est un acronyme qui représente cinq principes
+                de conception orientée objet
               </p>
               <p>Les 5 principes de SOLID sont :</p>
               <ul>
@@ -204,15 +209,8 @@ export default function Solid() {
               <strong>S</strong>: Single-responsibility principle
             </h6>
             <p class="answer">
-              Dans la programmation orientée objet, la{" "}
-              <strong>responsabilité unique (SRP)</strong> garantit que chaque
-              module ou classe doit être responsable d'une fonctionnalité unique
-              prise en charge par le système logiciel. En d'autres termes,
-              chaque classe devrait avoir une seule et unique raison de la
-              changer. <br />
-              Par exemple, la classe dans ASP.NET MVC{" "}
-              <code>HomeController</code> devrait être responsable de la
-              fonctionnalité de la page d'accueil du système logiciel.
+              Une classe ne doit avoir qu'une seule raison de changer,
+              c'est-à-dire qu'elle ne doit avoir qu'une seule responsabilité.
             </p>
           </article>
           <article id="o">
@@ -220,20 +218,9 @@ export default function Solid() {
               <strong>O</strong>: Open-closed principle
             </h6>
             <p>
-              <strong>Open Close Principle (OCP)</strong> stipule ou garantit
-              qu'une classe, un composant ou une entité doit être ouvert pour
-              extension mais fermé pour modification. En détail, nous pouvons
-              étendre n'importe quelle classe via Interface, Héritage ou
-              Composition chaque fois que cela est nécessaire au lieu d'ouvrir
-              une classe et de modifier son code.
-              <br />
-              Par exemple, supposons que vous ayez implémenté une fonctionnalité
-              pour calculer l'aire du rectangle et qu'après un certain temps,
-              vous deviez calculer l'aire du carré, alors dans ce cas, vous ne
-              devriez pas modifier votre code de classe d'origine pour ajouter
-              du code supplémentaire pour le carré. Au lieu de cela, vous devez
-              d'abord créer une classe de base et maintenant vous devez étendre
-              cette classe de base par votre classe carrée.
+              Les entités logicielles (classes, modules, fonctions, etc.)
+              doivent être ouvertes à l'extension mais fermées à la
+              modification.
             </p>
           </article>
           <article id="l">
@@ -241,13 +228,9 @@ export default function Solid() {
               <strong>L</strong>: Liskov substitution principle
             </h6>
             <p>
-              <strong>Liskov Substitution Principle (LSP)</strong> stipule que
-              les objets d'un programme peuvent être remplacés par les instances
-              de leurs sous-types sans modifier l'exactitude d'un programme.{" "}
-              <br />
-              En d'autres termes, si A est un sous-type de B, alors les
-              instances de B peuvent être remplacées par les instances de A sans
-              altérer l'exactitude du programme.
+              Les objets d'une classe dérivée doivent pouvoir être remplacés par
+              des objets de la classe de base sans altérer le bon fonctionnement
+              du programme.
             </p>
           </article>
           <article id="i">
@@ -255,14 +238,8 @@ export default function Solid() {
               <strong>I</strong>: Interface segregation principle
             </h6>
             <p>
-              <strong>Interface Segregation Principle (ISP)</strong> indique
-              qu'il utilise de nombreuses interfaces spécifiques au client au
-              lieu d'une interface à usage général.
-              <br />
-              En d'autres termes, aucun client ne devrait être obligé
-              d'implémenter d'autres méthodes dont il n'a pas besoin. Cela
-              signifie qu'il est préférable de créer une interface distincte et
-              de permettre à vos classes d'implémenter plusieurs interfaces.
+              Il est préférable d'avoir plusieurs interfaces spécifiques plutôt
+              qu'une interface générale.
             </p>
           </article>
           <article id="d">
@@ -271,21 +248,110 @@ export default function Solid() {
             </h6>
             <div>
               <p>
-                Le <strong>principe d'inversion de dépendance</strong> (DIP)
-                comporte deux parties :
+                Les modules de haut niveau ne doivent pas dépendre des modules
+                de bas niveau, mais les deux doivent dépendre d'abstractions.
               </p>
-              <ol>
-                <li>
-                  Les modules de haut niveau ne doivent pas dépendre des modules
-                  de bas niveau. Au lieu de cela, les deux devraient dépendre
-                  d'abstractions (interfaces)
-                </li>
-                <li>
-                  Les abstractions ne doivent pas dépendre des détails. Les
-                  détails (comme les implémentations concrètes) devraient
-                  dépendre des abstractions.
-                </li>
-              </ol>
+            </div>
+          </article>
+          <article id="examples">
+            <h6>Examples</h6>
+            <div>
+              <p>
+                <strong>Single Responsibility Principle (SRP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public class InvoiceManager
+{
+    public void GenerateInvoice() { /* Generate invoice logic */ }
+}
+
+public class CustomerManager
+{
+    public void AddCustomer() { /* Add customer logic */ }
+}`}
+              </Highlight>
+              <p>
+                <strong>Open/Closed Principle (OCP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public interface IPaymentMethod
+{
+    void ProcessPayment();
+}
+
+public class CreditCardPayment : IPaymentMethod
+{
+    public void ProcessPayment() { /* Process credit card payment */ }
+}
+
+public class PayPalPayment : IPaymentMethod
+{
+    public void ProcessPayment() { /* Process PayPal payment */ }
+}`}
+              </Highlight>
+              <p>
+                <strong>Liskov Substitution Principle (LSP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public class Bird
+{
+    public virtual void Fly() { /* Fly logic */ }
+}
+
+public class Sparrow : Bird
+{
+    public override void Fly() { /* Sparrow flying logic */ }
+}
+
+public class Penguin : Bird
+{
+    public override void Fly() { throw new NotImplementedException(); }
+}`}
+              </Highlight>
+              <p>
+                <strong>Interface Segregation Principle (ISP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public interface IPrinter
+{
+    void PrintText(string text);
+}
+
+public interface IImagePrinter
+{
+    void PrintImage(string imagePath);
+}
+
+public class TextPrinter : IPrinter
+{
+    public void PrintText(string text) { /* Print text */ }
+}
+
+public class ImagePrinter : IImagePrinter
+{
+    public void PrintImage(string imagePath) { /* Print image */ }
+}`}
+              </Highlight>
+              <p>
+                <strong>Dependency Inversion Principle (DIP):</strong>
+              </p>
+              <Highlight language="csharp">
+                {`public interface IPaymentService
+{
+    void ProcessPayment();
+}
+
+public class OrderProcessor
+{
+    private readonly IPaymentService _paymentService;
+    public OrderProcessor(IPaymentService paymentService)
+    {
+        _paymentService = paymentService;
+    }
+
+    public void ProcessOrder() { _paymentService.ProcessPayment(); }
+}`}
+              </Highlight>
             </div>
           </article>
         </section>
