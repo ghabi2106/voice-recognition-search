@@ -245,9 +245,9 @@ export default function Adapter() {
             <h6>Example</h6>
             <div>
               <h6>Exemple d'un Adaptateur VGA vers HDMI</h6>
-              <h3>
+              <h6>
                 <strong>Explication :</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>

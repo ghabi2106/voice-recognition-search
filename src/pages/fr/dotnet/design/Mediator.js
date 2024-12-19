@@ -270,9 +270,9 @@ export default function Mediator() {
                 rôle de médiateur pour coordonner les communications entre
                 plusieurs avions (les collègues).
               </p>
-              <h3>
+              <h6>
                 <strong>Explication :</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>

@@ -40,6 +40,14 @@ export default function Tdd() {
                     BDD
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#bdd"
+                  >
+                    TDD vs BDD
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -141,104 +149,162 @@ export default function Tdd() {
             <h6>TDD</h6>
             <div>
               <p>
-                <b>Le développement piloté par les tests (TDD)</b> est une
-                approche de développement logiciel itérative consiste à
-                concevoir les différentes fonctionnalités d'une application de
-                manière itérative en écrivant les tests avant le code source,
-                puis en remaniant le code jusqu'à ce que les tests passent.
+                <strong>Test-Driven Development (TDD)</strong> est une
+                méthodologie de développement logiciel qui consiste à écrire
+                d'abord des tests automatisés avant d'implémenter le code. Cette
+                approche favorise la qualité, la maintenabilité et la robustesse
+                du logiciel.
               </p>
-              <p>
-                La démarche à suivre pour mettre en place cette l’approche TDD
-                est décomposée en trois phases appelé <b>RGR</b>
-              </p>
-              <ul>
-                <li>
-                  <b>
-                    <font color="red"> R (Red) </font>
-                  </b>
-                  : écrire un code de test et les faire échouer
-                </li>
-                <li>
-                  <b>
-                    <font color="green">G (Green)</font>
-                  </b>{" "}
-                  : écrire le code métier qui valide le test
-                </li>
-                <li>
-                  <b>R (Refractor) </b>: remaniement du code afin d'en améliorer
-                  la qualité
-                </li>
-              </ul>
-              <p>
-                Le cycle de développement préconisé par TDD comporte{" "}
-                <b>cinq étapes</b> :
-              </p>
-              <ol>
-                <li> Ecriture d'un premier test </li>
-                <li>
-                  Exécuter le test et vérifier qu'il échoue (car le code qu'il
-                  teste n'a pas encore été implémenté)
-                </li>
-                <li>
-                  Ecriture de l'implémentation pour faire passer le test (il
-                  existe différentes manières de corriger ce code)
-                </li>
-                <li>
-                  Exécution des tests afin de contrôler que les tests passent et
-                  dans ce présent l'implémentation respectera les règles
-                  fonctionnelles des tests unitaires
-                </li>
-                <li>
-                  Remaniement (Refractor) du code afin d'en améliorer la qualité
-                  mais en conservant les mêmes fonctionnalités{" "}
-                </li>
-              </ol>
-              <img
-                src="/img/agile/Test cases TestDrivenD2.png"
-                alt="Test cases TestDrivenD2.png"
-              />
-              <img src="/img/agile/tdd.png" alt="tdd" />
-              <img
-                style={{ height: "180px" }}
-                src="/img/agile/RGR.png"
-                alt="RGR"
-              />
+              <div className="d-flex">
+                <div>
+                  <p>
+                    La démarche à suivre pour mettre en place cette l’approche
+                    TDD est décomposée en trois phases appelé <b>RGR</b>
+                  </p>
+                  <ul>
+                    <li>
+                      <b>
+                        <font color="red"> R (Red) </font>
+                      </b>
+                      : écrire un code de test et les faire échouer
+                    </li>
+                    <li>
+                      <b>
+                        <font color="green">G (Green)</font>
+                      </b>{" "}
+                      : écrire le code métier qui valide le test
+                    </li>
+                    <li>
+                      <b>R (Refractor) </b>: remaniement du code afin d'en
+                      améliorer la qualité
+                    </li>
+                  </ul>
+                </div>
+                <img
+                  style={{ height: "160px" }}
+                  src="/img/agile/RGR.png"
+                  alt="RGR"
+                />
+              </div>
+              <div className="d-flex">
+                <div>
+                  <h6>Étapes du TDD :</h6>
+                  <ol>
+                    <li>
+                      <p>
+                        <strong>Écrire un test</strong> :
+                        <ul>
+                          <li>
+                            Définissez un test unitaire pour une fonctionnalité
+                            ou un comportement attendu.
+                          </li>
+                          <li>
+                            Ce test échoue initialement car le code n'est pas
+                            encore implémenté.
+                          </li>
+                        </ul>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <strong>Écrire le code minimal</strong> :
+                        <ul>
+                          <li>
+                            Implémentez juste assez de code pour que le test
+                            réussisse.
+                          </li>
+                          <li>
+                            L'objectif est de respecter la spécification du
+                            test.
+                          </li>
+                        </ul>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <strong>Refactoriser le code</strong> :
+                        <ul>
+                          <li>
+                            Améliorez la structure ou l'efficacité du code tout
+                            en maintenant le succès des tests.
+                          </li>
+                          <li>
+                            Assurez-vous que le code reste propre et
+                            maintenable.
+                          </li>
+                        </ul>
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <strong>Répéter</strong> :
+                        <ul>
+                          <li>
+                            Ajoutez de nouveaux tests, implémentez les
+                            fonctionnalités correspondantes, et refactorisez.
+                          </li>
+                        </ul>
+                      </p>
+                    </li>
+                  </ol>
+                </div>
+                <img
+                  src="/img/agile/tdd.png"
+                  style={{ height: "250px" }}
+                  alt="tdd"
+                />
+              </div>
             </div>
           </article>
           <article id="bdd">
             <h6>BDD</h6>
             <div>
               <p>
-                Le <strong>BDD</strong> est donc une méthode de développement
-                dérivée du <strong>Test-Driven Development</strong>, ou TDD, qui
-                a émergé pour répondre{" "}
-                <strong>aux difficultés rencontrées par cette dernière</strong>{" "}
-                :
+                <strong>Behavior-Driven Development (BDD)</strong> est une
+                méthodologie de développement logiciel qui se concentre sur la
+                collaboration entre développeurs, testeurs et parties prenantes
+                non techniques pour définir le comportement attendu d'une
+                application à travers des scénarios lisibles et compréhensibles
+                par tous.
               </p>
-              <ul>
+              <h6>
+                <strong>Principes clés :</strong>
+              </h6>
+              <ol>
                 <li>
-                  <strong>L’interprétation de l’expression du besoin</strong>{" "}
-                  suite à l’utilisation d’un langage technique, non commun à
-                  l’ensemble des intervenants du projet (métier, PO, QA et
-                  développeur)
+                  <p>
+                    <strong>Focus sur le comportement</strong> :
+                  </p>
+                  <ul>
+                    <li>
+                      Le développement est guidé par la manière dont le logiciel
+                      doit se comporter du point de vue de l'utilisateur.
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <strong>L’imprécision sur le périmètre de test</strong> entre
-                  ce qui doit être ou ne pas être testé car celui-ci se base sur
-                  la vérification de codes unitaires successifs et non d’un
-                  comportement attendu d’un utilisateur
+                  <p>
+                    <strong>Langage commun</strong> :
+                  </p>
+                  <ul>
+                    <li>
+                      Utilisation de formats lisibles comme Gherkin pour décrire
+                      les fonctionnalités en langage naturel.
+                    </li>
+                  </ul>
                 </li>
-              </ul>
-              <p>
-                La pratique de la BDD pourrait se résumer par 4 phases
-                distinctes :
-              </p>
-              <img src="/img/agile/EtapesBDD-768x365.png" alt="EtapesBDD" />
-              <p>
-                Le langage Gherkin est un langage simple et naturel, contenant
-                des phrases utilisées dans le quotidien, des phrases
-                compréhensibles par tous
-              </p>
+                <li>
+                  <p>
+                    <strong>Collaboration accrue</strong> :
+                  </p>
+                  <ul>
+                    <li>
+                      Implique toutes les parties prenantes (développeurs,
+                      testeurs, clients) dans la définition des exigences.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
               <img
                 src="/img/agile/Traduction-768x487.png"
                 alt="Traduction BDD"
@@ -264,104 +330,140 @@ Scenario: A different situation
               </Highlight>
             </div>
           </article>
-          <article id="ddd">
-            <h6>DDD</h6>
+          <article id="tdd-bdd">
+            <h6>TDD vs BDD</h6>
             <div>
-              <p>
-                DDD, le Domain Driven Design « conception dirigée par le domaine
-                » ou « conception pilotée par le métier ». C’est une approche en
-                conception logicielle guidée par le métier.
-              </p>
-              <p>
-                Le DDD est une manière de penser et de communiquer les problèmes
-                et leurs solutions, entre les équipes techniques et
-                fonctionnelles.
-              </p>
-              <p>
-                La conception est conduite par un modèle. Ce modèle est en
-                partie constitué d’un langage de communication commun aux
-                experts fonctionnels et aux équipes de développement
-                (l’Ubiquitous Language), en plaçant les besoins des utilisateurs
-                finaux au cœur des préoccupations. Le projet se concentre autour
-                de plusieurs objectifs :
-              </p>
-              <ul>
-                <li>La satisfaction client</li>
-                <li>La coopération entre les équipes</li>
-                <li>La responsabilisation des équipes</li>
-              </ul>
-              <p>Les avantages d’avoir un Domain Model sont :</p>
               <ul>
                 <li>
-                  Créer un modèle commun et intelligible entre les équipes
-                  fonctionnelles et les équipes techniques
+                  <strong>TDD</strong> se concentre sur la qualité du code en
+                  écrivant des tests unitaires techniques avant le
+                  développement.
                 </li>
                 <li>
-                  Le modèle est modulaire, flexible et maintenable car il doit
-                  refléter la conception fonctionnelle
-                </li>
-                <li>
-                  Améliorer la testabilité et la réutilisation des objets
-                  métiers.
+                  <strong>BDD</strong> se concentre sur le comportement attendu
+                  du logiciel en utilisant un langage lisible par tous pour
+                  décrire les fonctionnalités métier.
                 </li>
               </ul>
-              <p>
-                <b>Une architecture en couches</b>
-              </p>
-              <p>
-                Avant de parler du domaine, il faut savoir qu’une application
-                n’est pas composée que de code métier. Eric Evans découpe
-                l’architecture logicielle d’une application en 4 couches :
-              </p>
-              <ul>
-                <li>
-                  <p>
-                    <strong>Couche interface utilisateur :</strong>
-                    La partie de l’application qui permet d’afficher les rendus
-                    visuels à l’utilisateur et lui permet d’interagir.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>Couche application :</strong>
-                    Une couche fine qui coordonne les interactions avec la
-                    couche domaine. Elle peut par exemple vérifier les accès des
-                    utilisateurs, sérialiser les données échangées et valider
-                    leur format.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>Couche domaine :</strong>
-                    C’est le cœur de l’application qui représente le métier et
-                    regroupe ses règles. C’est cette couche que nous allons
-                    détailler dans la suite de l’article.
-                  </p>
-                </li>
-                <li>
-                  <p>
-                    <strong>Couche infrastructure :</strong>
-                    Cette couche sert principalement à fournir des outils pour
-                    établir des liens entre les différentes couches.
-                  </p>
-                </li>
-              </ul>
-              <ul>
-                <li>Conception pilotée par le domaine</li>
-                <li>Domain Driven Design</li>
-                <li>DDD Vite Fait</li>
-                <li>
-                  Domain Driven Design : des armes pour affronter la complexité
-                </li>
-                <li>DDD : la conception qui lie le fonctionnel et le code</li>
-                <li>Domain Driven Design, DDD pour les intimes</li>
-                <li>
-                  Devoxx France 2016 : DDD, et si on reprenait tout depuis le
-                  bon bout
-                </li>
-                <li>La philosophie du Domain Driven Design</li>
-                <li>La conception pilotée par le domaine</li>
-              </ul>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <strong>Aspect</strong>
+                    </th>
+                    <th>
+                      <strong>TDD (Test-Driven Development)</strong>
+                    </th>
+                    <th>
+                      <strong>BDD (Behavior-Driven Development)</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Objectif principal</strong>
+                    </td>
+                    <td>
+                      Vérifier que le code fonctionne correctement en écrivant
+                      des tests avant le développement.
+                    </td>
+                    <td>
+                      Définir et vérifier le comportement attendu du logiciel du
+                      point de vue de l'utilisateur.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Cible</strong>
+                    </td>
+                    <td>
+                      Orienté vers les développeurs pour garantir la qualité du
+                      code.
+                    </td>
+                    <td>
+                      Inclut les parties prenantes (métier, testeurs,
+                      développeurs) pour aligner les exigences.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Langage utilisé</strong>
+                    </td>
+                    <td>
+                      Langage technique (exemple : frameworks de tests unitaires
+                      comme xUnit, NUnit).
+                    </td>
+                    <td>
+                      Langage lisible par tous (exemple : Gherkin, utilisant
+                      Given-When-Then).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Type de test</strong>
+                    </td>
+                    <td>Principalement des tests unitaires.</td>
+                    <td>
+                      Tests d'acceptation fonctionnelle décrivant des scénarios
+                      utilisateur.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Processus</strong>
+                    </td>
+                    <td>
+                      - Écrire un test. <br /> - Écrire le code pour faire
+                      passer le test. <br /> - Refactoriser.
+                    </td>
+                    <td>
+                      - Définir des scénarios décrivant les comportements
+                      métier. <br /> - Implémenter et valider les comportements.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Outils courants</strong>
+                    </td>
+                    <td>xUnit, NUnit, MSTest (en .NET).</td>
+                    <td>SpecFlow, Cucumber, Behave.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Exemple d'écriture</strong>
+                    </td>
+                    <td>
+                      Code pur dans le test unitaire (Assert, Act, Arrange).
+                    </td>
+                    <td>
+                      Scénarios en langage naturel utilisant Given-When-Then.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Collaboration</strong>
+                    </td>
+                    <td>
+                      Moins de collaboration avec les parties prenantes non
+                      techniques.
+                    </td>
+                    <td>
+                      Favorise la collaboration avec toutes les parties
+                      prenantes, y compris non techniques.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Focus</strong>
+                    </td>
+                    <td>Centré sur les implémentations techniques.</td>
+                    <td>
+                      Centré sur le comportement attendu et les besoins métier.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </article>
         </section>

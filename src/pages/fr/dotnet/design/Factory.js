@@ -256,9 +256,9 @@ export default function Factory() {
           <article id="example">
             <h6>Example</h6>
             <div>
-              <h3>
+              <h6>
                 <strong>Explication :</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <strong>

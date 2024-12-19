@@ -114,9 +114,9 @@ export default function DeployVM() {
           <article id="deloy">
             <h6>Deploy manuelle</h6>
             <div>
-              <h3>
+              <h6>
                 <strong>Étape 1 : Préparer la machine virtuelle</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -157,9 +157,9 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>Étape 2 : Publier l'application .NET</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -192,9 +192,9 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>Étape 3 : Transférer les fichiers sur la VM</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -231,9 +231,9 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>Étape 4 : Configurer IIS (si applicable)</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -292,9 +292,9 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>Étape 5 : Configurer le pare-feu</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -318,9 +318,9 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>Étape 6 : Tester l'application</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -354,9 +354,9 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>Étape 7 : Maintenance et optimisation</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <p>
@@ -404,11 +404,11 @@ export default function DeployVM() {
           <article id="publish-profile">
             <h6>Publish Profile</h6>
             <div>
-              <h3>
+              <h6>
                 <strong>
                   Étape 1 : Créer un profil de publication dans Visual Studio
                 </strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <strong>Ouvrir le projet dans Visual Studio</strong>.
@@ -466,11 +466,11 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>
                   Étape 2 : Configurer IIS sur la machine virtuelle
                 </strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <strong>Installer IIS (si ce n'est pas déjà fait)</strong> :
@@ -505,11 +505,11 @@ export default function DeployVM() {
                   </ul>
                 </li>
               </ol>
-              <h3>
+              <h6>
                 <strong>
                   Étape 3 : Publier l'application à partir de Visual Studio
                 </strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <strong>Choisir le profil de publication</strong> :

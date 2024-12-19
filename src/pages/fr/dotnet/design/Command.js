@@ -247,9 +247,9 @@ export default function Command() {
             <h6>Structural code in C#</h6>
             <div>
               <h6>Exemple : Télécommande pour allumer/éteindre une lumière</h6>
-              <h3>
+              <h6>
                 <strong>Explication :</strong>
-              </h3>
+              </h6>
               <ol>
                 <li>
                   <strong>

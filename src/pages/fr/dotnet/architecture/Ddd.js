@@ -30,22 +30,6 @@ export default function Ddd() {
                     Introduction
                   </a>
                 </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#layers"
-                  >
-                    Layers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#dis-advantages"
-                  >
-                    Advantages and disadvantages
-                  </a>
-                </li>
               </ul>
             </li>
             <li className="my-2">
@@ -107,104 +91,237 @@ export default function Ddd() {
             <h6>Introduction</h6>
             <div>
               <p>
-                La conception DDD (Domain-Driven Design) préconise une
-                modélisation basée sur la réalité de l’entreprise applicable à
-                vos cas d’usage. Dans le contexte de la génération
-                d’applications, DDD traite les problèmes comme des domaines.
-                Elle décrit les problèmes indépendants comme des contextes
-                délimités (chaque contexte délimité correspond à un
-                microservice) et met l’accent sur un langage commun pour
-                discuter de ces problèmes. Il suggère également de nombreux
-                concepts et modèles techniques, tels que les entités de domaine
-                avec des modèles enrichis, des objets de valeur, des agrégats et
-                des règles racine d’agrégation (ou entité racine) pour prendre
-                en charge l’implémentation interne.
+                <strong>Domain-Driven Design (DDD)</strong> est une approche de
+                conception logicielle qui place le domaine métier au cœur du
+                développement. Il vise à aligner la structure du logiciel sur
+                les concepts métier, facilitant la compréhension, la
+                collaboration et l'adaptation aux besoins métier.
               </p>
+              <h6>
+                <strong>Principes clés de DDD :</strong>
+              </h6>
+              <ol>
+                <li>
+                  <p>
+                    <strong>Focus sur le domaine métier</strong> :
+                    <ul>
+                      <li>
+                        Le logiciel doit refléter les règles, concepts et
+                        logiques métier.
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>
+                      Collaboration entre experts métier et développeurs
+                    </strong>{" "}
+                    :
+                    <ul>
+                      <li>
+                        Les experts métier (domain experts) travaillent
+                        étroitement avec les équipes techniques pour garantir un
+                        alignement précis.
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Modèle métier explicite</strong> :
+                    <ul>
+                      <li>
+                        Le code doit être organisé pour représenter clairement
+                        les concepts métier.
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Utilisation d'un langage ubiquitaire</strong> :
+                    <ul>
+                      <li>
+                        Un vocabulaire partagé entre les développeurs et les
+                        experts métier, utilisé dans le code et la
+                        documentation.
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+              </ol>
+              <h6>
+                <strong>1. Identification des concepts métier :</strong>
+              </h6>
+              <ul>
+                <li>
+                  <p>
+                    <strong>Domaines métier :</strong>
+                  </p>
+                  <ul>
+                    <li>Commandes (Order Management)</li>
+                    <li>Paiement (Payment Processing)</li>
+                    <li>Livraison (Shipping)</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>Concepts clés :</strong>
+                  </p>
+                  <ul>
+                    <li>
+                      <strong>Commande</strong> (Order) : Une entité avec des
+                      produits, un client, une adresse.
+                    </li>
+                    <li>
+                      <strong>Produit</strong> (Product) : Un objet valeur avec
+                      nom, prix et quantité.
+                    </li>
+                    <li>
+                      <strong>Paiement</strong> : Processus métier gérant les
+                      transactions financières.
+                    </li>
+                    <li>
+                      <strong>Livraison</strong> : Gestion de l'expédition des
+                      commandes.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h6>
+                <strong>2. Définir les Bounded Contexts :</strong>
+              </h6>
               <p>
-                En résumé, DDD est un excellent modèle pour les systèmes avec
-                une logique métier complexe, les systèmes qui nécessitent une
-                maintenance et une amélioration futures.
+                Chaque domaine est isolé dans son propre contexte pour éviter
+                les dépendances non maîtrisées.
               </p>
-            </div>
-          </article>
-          <article id="layers">
-            <h6>Layers in DDD microservices</h6>
-            <div>
-              <img
-                className="mw-900"
-                src="/img/dotnet/domain-driven-design-microservice.png"
-                alt="clean-architecture-monolothic"
-              />
-              <p>
-                Dépendances dans un service de conception DDD : la couche
-                Application dépend des couches Domaine et Infrastructure, la
-                couche Infrastructure dépend de la couche Domaine, mais la
-                couche Domaine ne dépend d’aucune couche. Cette conception de
-                couche doit être indépendante pour chaque microservice.
-              </p>
-              <img
-                className="mw-900"
-                src="/img/dotnet/ddd-service-layer-dependencies.png"
-                alt="clean-architecture-monolothic"
-              />
-            </div>
-          </article>
-          <article id="dis-advantages">
-            <h6>Advantages and disadvantages</h6>
-            <div class="row">
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Couplage lâche</em>:
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Flexibilité</em>: Les couplages lâches et les
-                    définitions de haut niveau permettent à l'équipe d'améliorer
-                    et de s'adapter aux nouvelles exigences fonctionnelles avec
-                    plus de flexibilité sans impact considérable sur le système
-                    global.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Testabilité</em>:
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Maintenance</em>:
-                  </li>
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i>{" "}
-                    <em>Expertise du domaine</em>: DDD requires extensive domain
-                    expertise. It means that your team needs to have at least
-                    one domain expert. They will help you define all of the
-                    processes, procedures, and terminology of that domain.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i>{" "}
-                    <em>Faibles interactions</em>: La connexion lâche entre les
-                    différentes parties oblige l'équipe à communiquer et à
-                    échanger régulièrement. Ainsi, avant d'appliquer l'approche
-                    DDD, l'équipe doit d'abord discuter de ses principes en
-                    détail.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i>{" "}
-                    <em>Coûts de développement</em>: les experts du domaine et
-                    l'équipe doivent implémenter une grande partie de
-                    l'isolation et de l'encapsulation dans le modèle de domaine.
-                    Cela se traduit souvent par un développement et une durée
-                    plus longs qui peuvent avoir un coût relativement élevé. Par
-                    conséquent, il n'est pas bien adapté aux projets à court
-                    terme ou aux projets sans complexité de domaine élevée.
-                  </li>
-                </ul>
-              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <strong>Bounded Context</strong>
+                    </th>
+                    <th>
+                      <strong>Responsabilité</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Commande</strong>
+                    </td>
+                    <td>Création, gestion et suivi des commandes.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Paiement</strong>
+                    </td>
+                    <td>
+                      Traitement des paiements et vérification des transactions.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Livraison</strong>
+                    </td>
+                    <td>Gestion des adresses et suivi de l'expédition.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h6>
+                <strong>
+                  3. Définir les composants clés pour le contexte Commande :
+                </strong>
+              </h6>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <strong>Composant</strong>
+                    </th>
+                    <th>
+                      <strong>Description</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Entity</strong>
+                    </td>
+                    <td>
+                      <code>Order</code> (possède une identité unique).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Value Object</strong>
+                    </td>
+                    <td>
+                      <code>Product</code> (défini uniquement par ses attributs
+                      comme le nom et le prix).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Aggregate</strong>
+                    </td>
+                    <td>
+                      <code>Order</code> (agrège les produits et gère leur
+                      cohérence).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Repository</strong>
+                    </td>
+                    <td>
+                      <code>OrderRepository</code> (interagit avec la base de
+                      données pour les commandes).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Domain Event</strong>
+                    </td>
+                    <td>
+                      <code>OrderPlaced</code> (signale qu'une commande a été
+                      passée).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Service</strong>
+                    </td>
+                    <td>
+                      <code>OrderService</code> (contient les logiques métier
+                      complexes comme les promotions).
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h6>
+                <strong>
+                  5. Domain Events pour les intégrations inter-contexte :
+                </strong>
+              </h6>
+              4
+              <ul>
+                <li>
+                  <strong>Event</strong> : <code>OrderPlaced</code> déclenche :
+                  <ul>
+                    <li>
+                      Contexte Paiement : Démarrer le traitement du paiement.
+                    </li>
+                    <li>
+                      Contexte Livraison : Préparer la commande pour
+                      l'expédition.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </article>
         </section>
