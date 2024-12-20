@@ -105,7 +105,7 @@ export default function Dotnetfeatues() {
           <h3>What is new in Dotnet</h3>
           <article id="dotnet8">
             <h6>New Features in .Net 8</h6>
-            <div class="markdown prose w-full break-words dark:prose-invert light">
+            <div>
               <h6>
                 <strong>Key Features in .NET 8</strong>
               </h6>
@@ -274,7 +274,7 @@ export default function Dotnetfeatues() {
           </article>
           <article id="dotnet8-dotnet5">
             <h6>.Net 8 vs .Net 5</h6>
-            <div class="markdown prose w-full break-words dark:prose-invert light">
+            <div>
               <ol>
                 <li>
                   <p>

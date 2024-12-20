@@ -19,6 +19,7 @@ import Csharp10Page from "../../pages/en/csharp/csharp/Csharp10";
 import Csharp11Page from "../../pages/en/csharp/csharp/Csharp11";
 import Csharp12Page from "../../pages/en/csharp/csharp/Csharp12";
 import DotnetfeatuesPage from "../../pages/en/csharp/csharp/Dotnetfeatues";
+import PlanPage from "../../pages/en/csharp/csharp/Plan";
 //#endregion
 
 //#region algorithme
@@ -255,6 +256,7 @@ export default function Routecsharpen() {
       <Route path="/csharp11" component={Csharp11Page} />
       <Route path="/csharp12" component={Csharp12Page} />
       <Route path="/dotnetfeatures" component={DotnetfeatuesPage} />
+      <Route path="/plan" component={PlanPage} />
       {
         //#endregion
       }

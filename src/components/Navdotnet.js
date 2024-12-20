@@ -98,6 +98,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/plan">
+              Plan
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/algo">
               Algorithme
             </Link>

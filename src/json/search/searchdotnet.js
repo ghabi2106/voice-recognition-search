@@ -294,6 +294,9 @@ export const pagesdotnet = [
   // New features in C# 12
   "csharp 12",
   "c# 12",
+  // Plan Project
+  "plan project",
+  "plan",
   // OOP
   "object oriented programming",
   "inheritance",

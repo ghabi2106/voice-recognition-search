@@ -91,7 +91,7 @@ export default function Home() {
             <h6>Capgemini</h6>
             <div>
               <p>
-                I am a full-stack developer with over 8 years of experience
+                I am a full-stack developer with about 8 years of experience
                 specializing in .NET and Angular. <br />I graduated as an
                 engineer from the University of Monastir, Tunisia, in 2017.{" "}
                 <br />
@@ -484,10 +484,7 @@ export default function Home() {
                   >
                     <b>Carry Track</b>
                   </div>
-                  <div
-                    class="card-body text-dark collapse"
-                    id="carrytrack"
-                  >
+                  <div class="card-body text-dark collapse" id="carrytrack">
                     <h6 class="card-title">Description</h6>
                     <p>
                       <strong>« Carry Track »</strong> is a tool that allows
@@ -683,10 +680,7 @@ export default function Home() {
                   >
                     <b>AddInvoice</b>
                   </div>
-                  <div
-                    class="card-body text-dark collapse"
-                    id="addinvoice"
-                  >
+                  <div class="card-body text-dark collapse" id="addinvoice">
                     <h6 class="card-title">Description</h6>
                     <p class="card-text">
                       <strong>« AddInvoice »</strong> is a Billing and Invoicing

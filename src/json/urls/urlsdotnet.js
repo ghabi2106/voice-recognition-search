@@ -296,6 +296,9 @@ export const urlsdotnet = {
   // New features in C# 12
   "csharp 12": "/csharp12",
   "c# 12": "/csharp12",
+  // Plan project
+  "plan project": "/plan",
+  "plan": "/plan",
   // OOP
   "object oriented programming": "/oop",
   oop: "/oop",
