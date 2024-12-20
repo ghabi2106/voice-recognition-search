@@ -27,9 +27,17 @@ export default function Cqrs() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
+                    href="#cqrs"
                   >
-                    Introduction
+                    CQRS
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded active"
+                    href="#example"
+                  >
+                    Exemple
                   </a>
                 </li>
                 <li>
@@ -38,22 +46,6 @@ export default function Cqrs() {
                     href="#mediator"
                   >
                     MediatR
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded active"
-                    href="#request"
-                  >
-                    Request
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#handler"
-                  >
-                    Handler
                   </a>
                 </li>
               </ul>
@@ -113,100 +105,155 @@ export default function Cqrs() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>CQRS</h3>
-          <article id="introduction">
-            <h6>Introduction</h6>
+          <article id="cqrs">
+            <h6>CQRS</h6>
             <div>
               <p>
-                Dans les architectures traditionnelles, le même modèle de
-                données est utilisé pour interroger et mettre à jour une base de
-                données. C'est simple et fonctionne bien pour les opérations
-                CRUD de base. Dans des applications plus complexes, cependant,
-                cette approche peut devenir lourde.Par exemple, côté lecture,
-                l'application peut effectuer de nombreuses requêtes différentes,
-                renvoyant des objets de transfert de données (DTO) avec des
-                formes différentes. Le mappage d'objets peut devenir compliqué.
-                Du côté de l'écriture, le modèle peut implémenter une validation
-                et une logique métier complexes. En conséquence, vous pouvez
-                vous retrouver avec un modèle trop complexe qui en fait trop.
+                CQRS sépare les modèles de données pour les opérations de
+                lecture et d'écriture, permettant une meilleure évolutivité et
+                optimisation tout en réduisant la complexité des systèmes à
+                grande échelle.
               </p>
-              <p>
-                CQRS traite des lectures et des écritures distinctes dans des
-                modèles distincts, en utilisant des commandes pour mettre à jour
-                les données et des requêtes pour lire les données.
-              </p>
-              <b>avoid thin controllers</b>
-              <p>
-                Dans les contrôleurs traditionnels, vous implémentez
-                généralement presque un flux de logique métier comme Validation,
-                Mapping Objects, Savings Object ou Get Object, Return HTTP
-                status code of request et data response. Cependant, votre
-                contrôleur deviendra plus gros.
-              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <strong>Composant</strong>
+                    </th>
+                    <th>
+                      <strong>Description</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Command Model</strong>
+                    </td>
+                    <td>
+                      Représente le modèle de données utilisé pour traiter les
+                      écritures et les mises à jour.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Query Model</strong>
+                    </td>
+                    <td>
+                      Représente le modèle de données utilisé pour effectuer des
+                      lectures (requêtes).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Command Handler</strong>
+                    </td>
+                    <td>
+                      Responsable de l'exécution de la commande, validant et
+                      effectuant la logique métier.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Query Handler</strong>
+                    </td>
+                    <td>
+                      Responsable de la récupération et du traitement des
+                      données pour les requêtes.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Event Sourcing</strong>
+                    </td>
+                    <td>
+                      Souvent utilisé avec CQRS, cet aspect permet de stocker
+                      les changements d'état sous forme d'événements.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article id="example">
+            <h6>Exemple</h6>
+            <div>
+              <Highlight language="csharp">
+                {`// Commande : Créer une commande (ajouter des produits, calculer le prix total).
+public class CreateOrderCommand
+{
+    public List<Product> Products { get; set; }
+    public Customer Customer { get; set; }
+}
+
+//Command Handler : Créer la commande dans la base de données.
+public class CreateOrderCommandHandler : ICommandHandler<CreateOrderCommand>
+{
+    private readonly IOrderRepository _orderRepository;
+
+    public CreateOrderCommandHandler(IOrderRepository orderRepository)
+    {
+        _orderRepository = orderRepository;
+    }
+
+    public void Handle(CreateOrderCommand command)
+    {
+        var order = new Order(command.Products, command.Customer);
+        _orderRepository.Save(order);
+    }
+}
+
+// Requête : Récupérer les commandes d'un utilisateur.
+public class GetOrdersQuery
+{
+    public Guid CustomerId { get; set; }
+}
+
+// Query Handler : Récupérer les commandes de la base de données.
+public class GetOrdersQueryHandler : IQueryHandler<GetOrdersQuery, List<Order>>
+{
+    private readonly IOrderRepository _orderRepository;
+
+    public GetOrdersQueryHandler(IOrderRepository orderRepository)
+    {
+        _orderRepository = orderRepository;
+    }
+
+    public List<Order> Handle(GetOrdersQuery query)
+    {
+        return _orderRepository.GetOrdersByCustomer(query.CustomerId);
+    }
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="mediator">
             <h6>
               <Link to="/mediator">MediatR</Link>
             </h6>
-            <p>
-              <Link to="/mediator">MediatR</Link> permet de composer des
-              messages, de créer et d'écouter des événements en utilisant des
-              modèles synchrones ou asynchrones. Cela aide à réduire le couplage
-              et à isoler les préoccupations de demander le travail à
-              faire(Request) et de créer le gestionnaire qui répartit le
-              travail(Handler).
-            </p>
-          </article>
-          <article id="request">
-            <h6>Request</h6>
-            <div>
-              <p>
-                Les requêtes décrivent le comportement de vos commandes et
-                requêtes.
-              </p>
-              <Highlight language="csharp">
-                {`public class GetUserDetailQuery : IRequest<UserDto>
+            <Highlight language="csharp">
+              {`public class OrderService
 {
-    public GetUserDetailQuery(int id) {
-    	Id = id;
+    private readonly IMediator _mediator;
+
+    public OrderService(IMediator mediator)
+    {
+        _mediator = mediator;
     }
-    
-    public int Id {get;}
-}`}
-              </Highlight>
-            </div>
-          </article>
-          <article id="handler">
-            <h6>Handler</h6>
-            <div>
-              <p>
-                Lorsqu'une rquète est créée, On abesoin besoin d'un gestionnaire
-                pour résoudre cette demande demande.
-              </p>
-              <Highlight language="csharp">
-                {`public class GetUserDetailHandler : IRequestHandler<GetUserDetailQuery, UserDto> 
-{
-   	private readonly IUserRepository _userRepository;
-    private readonly IUserMapper _userMapper;
-    
-    public GetUserDetailHandler(IUserRepository userRepository, IUserMapper userMapper) {
-    	_userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
-    	_userMapper = userMapper ?? throw new ArgumentNullException(nameof(userMapper));
+
+    public async Task<Order> CreateOrder(List<Product> products, Customer customer)
+    {
+        var command = new CreateOrderCommand { Products = products, Customer = customer };
+        return await _mediator.Send(command); // Envoie la commande au handler
     }
-    
-    public async Task<UserDto> Handle(GetUserDetailQuery request, CancellationToken cancellationToken) {
-    var user = await _userRepository.GetAsync(u => u.Id == request.Id)
-    
-    if user == null {
-    	return null
-    }
-    
-    var userDto = _userMapper.MapUserDto(user);
-    return userDto;
+
+    public async Task<List<Order>> GetOrders(Guid customerId)
+    {
+        var query = new GetOrdersQuery { CustomerId = customerId };
+        return await _mediator.Send(query); // Envoie la requête au handler
     }
 }`}
-              </Highlight>
-            </div>
+            </Highlight>
           </article>
         </section>
       </div>

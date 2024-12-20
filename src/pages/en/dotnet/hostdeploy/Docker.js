@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Highlight from "react-highlight";
-import "react-highlight/node_modules/highlight.js/styles/solarized-light.css";
 
 export default function Docker() {
   return (

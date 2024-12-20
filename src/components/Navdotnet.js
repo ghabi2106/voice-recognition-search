@@ -248,8 +248,8 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/service">
-              Service
+            <Link className="dropdown-item" to="/websocket">
+              WebSocket
             </Link>
           </li>
         </ul>
@@ -434,6 +434,11 @@ export default function Navdotnet() {
           Host
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/deploy-vm">
+              Deploy to VM
+            </Link>
+          </li>
           <li className="nav-item">
             <Link className="dropdown-item" to="/docker">
               Docker
@@ -788,6 +793,103 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/references">
               References
+            </Link>
+          </li>
+        </ul>
+      </li>
+      {
+        //#endregion
+      }
+
+      {
+        //#region Others1
+      }
+      <li className="nav-item dropdown">
+        <a
+          className="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Microservices
+        </a>
+        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/cap">
+              CAP
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/create-project">
+              Create Project
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/grpc">
+              Grpc
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/identity-server">
+              Identity Server
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/message-broker">
+              Message Broker <mark>RabbitMq</mark> <mark>MassTransit</mark>{" "}
+              <mark>Redis</mark>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/service">
+              Microservices
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/ocelot">
+              Ocelot Api Gateway
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/polly">
+              Polly
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/resilience">
+              Resilience
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/saga">
+              Saga
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/security">
+              Security
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/service-discovery">
+              Service Discovery
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/tracing">
+              Tracing
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/unit-testing">
+              Unit testing
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/versionning">
+              Versionning
             </Link>
           </li>
         </ul>

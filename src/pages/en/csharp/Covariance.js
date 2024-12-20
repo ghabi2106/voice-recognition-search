@@ -482,3 +482,6 @@ dogDelegate(new Dog());`}
     </>
   );
 }
+<Highlight language="csharp">
+                        {``}
+                      </Highlight>

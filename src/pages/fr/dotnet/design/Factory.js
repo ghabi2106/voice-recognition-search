@@ -29,31 +29,15 @@ export default function Factory() {
                     className="d-inline-flex align-items-center rounded"
                     href="#factory"
                   >
-                    Factory Method
+                    Factory Pattern
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#use"
+                    href="#example"
                   >
-                    Common use
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#dis-advantages"
-                  >
-                    Advantages and disadvantages
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#code"
-                  >
-                    Structural code in C#
+                    Example
                   </a>
                 </li>
               </ul>
@@ -163,158 +147,221 @@ export default function Factory() {
           <h3>Factory Method</h3>
           <article id="factory">
             <h6>Factory Method</h6>
-            <p>
-              Fabrique est un patron de conception de création qui définit une
-              interface pour créer des objets dans une classe mère, mais délègue
-              le choix des types d’objets à créer aux sous-classes.
-            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <strong>Aspect</strong>
+                  </th>
+                  <th>
+                    <strong>Description</strong>
+                  </th>
+                  <th>
+                    <strong>Exemple</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Définition</strong>
+                  </td>
+                  <td>
+                    Un patron de conception qui fournit une interface pour créer
+                    des objets dans une classe spécialisée, sans spécifier leur
+                    classe concrète.
+                  </td>
+                  <td>
+                    Une fabrique d'objets pour créer des voitures électriques,
+                    essence ou hybrides selon un type demandé.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>But</strong>
+                  </td>
+                  <td>
+                    Découpler la logique de création d'objets du reste de
+                    l'application.
+                  </td>
+                  <td>
+                    Simplifier l'ajout de nouvelles sous-classes sans modifier
+                    le code existant.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Structure</strong>
+                  </td>
+                  <td>
+                    1. <strong>Factory</strong> : Classe ou méthode responsable
+                    de la création.
+                    <br />
+                    2. <strong>Produit</strong> : Objet créé.
+                    <br />
+                    3. <strong>Client</strong> : Code qui utilise les objets
+                    créés par la factory.
+                  </td>
+                  <td>
+                    Une classe <code>VehicleFactory</code> retourne des
+                    instances de <code>Car</code>, <code>Truck</code>, ou{" "}
+                    <code>Motorcycle</code> selon un paramètre.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Avantages</strong>
+                  </td>
+                  <td>
+                    - Simplifie le code client.
+                    <br />- Réduit le couplage entre le client et les classes
+                    concrètes.
+                    <br />- Favorise l'extensibilité.
+                  </td>
+                  <td>
+                    L'ajout de nouvelles classes dérivées n'affecte pas le code
+                    client, car tout passe par la factory.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Inconvénients</strong>
+                  </td>
+                  <td>
+                    - Peut introduire de la complexité supplémentaire.
+                    <br />- Risque de surutilisation dans des cas simples.
+                  </td>
+                  <td>
+                    Nécessite une gestion de maintenance si le nombre de
+                    produits ou de types devient très élevé.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Cas d'utilisation</strong>
+                  </td>
+                  <td>
+                    - Lorsque la logique de création est complexe.
+                    <br />- Lorsque les types exacts des objets à créer sont
+                    inconnus au moment de la compilation.
+                  </td>
+                  <td>
+                    Génération d'objets dans des jeux vidéo (ennemis, bonus) ou
+                    pour des systèmes comme des connecteurs de base de données.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </article>
-          <article id="use">
-            <h6>utilisation</h6>
-            <p>
-              on utilise la fabrique lorsque vous voulez économiser des
-              ressources système en réutilisant des objets au lieu d’en
-              construire de nouveaux.
-            </p>
-          </article>
-          <article id="dis-advantages">
-            <h6>Avantages et disavantages</h6>
-            <div class="row">
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i> Vous
-                    désolidarisez le Créateur des produits concrets..
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Single Responsibility Principle</em>. Vous pouvez
-                    déplacer tout le code de création des produits au même
-                    endroit, permettant ainsi une meilleure maintenabilité.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Open/Closed Principle</em>. Vous pouvez ajouter de
-                    nouveaux types de produits dans le programme sans endommager
-                    l’existant.
-                  </li>
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i> Le code
-                    peut devenir plus complexe puisque vous devez introduire de
-                    nombreuses sous-classes pour la mise en place du patron. La
-                    condition optimale d’intégration du patron dans du code
-                    existant se présente lorsque vous avez déjà une hiérarchie
-                    existante de classes de création.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-          <article id="code">
-            <h6>Structural code in C#</h6>
-            <Highlight language="csharp">
-              {`using System;
-
-namespace DoFactory.GangOfFour.Factory.Structural
+          <article id="example">
+            <h6>Example</h6>
+            <div>
+              <h6>
+                <strong>Explication :</strong>
+              </h6>
+              <ol>
+                <li>
+                  <strong>
+                    Interface <code>IVehicle</code>
+                  </strong>{" "}
+                  :
+                  <ul>
+                    <li>
+                      Définit un contrat commun pour tous les types de
+                      véhicules.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>
+                    Classes concrètes (<code>Car</code>, <code>Truck</code>,{" "}
+                    <code>Motorcycle</code>)
+                  </strong>{" "}
+                  :
+                  <ul>
+                    <li>
+                      Implémentent l'interface <code>IVehicle</code>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>
+                    Classe <code>VehicleFactory</code>
+                  </strong>{" "}
+                  :
+                  <ul>
+                    <li>
+                      Une fabrique statique qui décide quel type d'objet créer
+                      en fonction du paramètre d'entrée (<code>type</code>).
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Code client</strong> :
+                  <ul>
+                    <li>
+                      Le client demande un type de véhicule sans se soucier de
+                      sa classe concrète. Par exemple, un objet <code>Car</code>{" "}
+                      est obtenu en passant "car" à la fabrique.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <Highlight language="csharp">
+                {`// Interface produit
+public interface IVehicle
 {
-    /// <summary>
-    /// MainApp startup class for Structural 
-    /// Factory Method Design Pattern.
-    /// </summary>
+    void Drive();
+}
 
-    class MainApp
+// Classes concrètes (produits)
+public class Car : IVehicle
+{
+    public void Drive() => Console.WriteLine("Driving a car.");
+}
+
+public class Truck : IVehicle
+{
+    public void Drive() => Console.WriteLine("Driving a truck.");
+}
+
+public class Motorcycle : IVehicle
+{
+    public void Drive() => Console.WriteLine("Riding a motorcycle.");
+}
+
+// Classe Factory
+public static class VehicleFactory
+{
+    public static IVehicle CreateVehicle(string type)
     {
-        /// <summary>
-        /// Entry point into console application.
-        /// </summary>
-
-        static void Main()
+        return type.ToLower() switch
         {
-            // An array of creators
-
-            Creator[] creators = new Creator[2];
-
-            creators[0] = new ConcreteCreatorA();
-            creators[1] = new ConcreteCreatorB();
-
-            // Iterate over creators and create products
-
-            foreach (Creator creator in creators)
-            {
-                Product product = creator.FactoryMethod();
-                Console.WriteLine("Created {0}",
-                  product.GetType().Name);
-            }
-
-            // Wait for user
-
-            Console.ReadKey();
-        }
-    }
-
-    /// <summary>
-    /// The 'Product' abstract class
-    /// </summary>
-
-    abstract class Product
-    {
-    }
-
-    /// <summary>
-    /// A 'ConcreteProduct' class
-    /// </summary>
-
-    class ConcreteProductA : Product
-    {
-    }
-
-    /// <summary>
-    /// A 'ConcreteProduct' class
-    /// </summary>
-
-    class ConcreteProductB : Product
-    {
-    }
-
-    /// <summary>
-    /// The 'Creator' abstract class
-    /// </summary>
-
-    abstract class Creator
-    {
-        public abstract Product FactoryMethod();
-    }
-
-    /// <summary>
-    /// A 'ConcreteCreator' class
-    /// </summary>
-
-    class ConcreteCreatorA : Creator
-    {
-        public override Product FactoryMethod()
-        {
-            return new ConcreteProductA();
-        }
-    }
-
-    /// <summary>
-    /// A 'ConcreteCreator' class
-    /// </summary>
-
-    class ConcreteCreatorB : Creator
-    {
-        public override Product FactoryMethod()
-        {
-            return new ConcreteProductB();
-        }
+            "car" => new Car(),
+            "truck" => new Truck(),
+            "motorcycle" => new Motorcycle(),
+            _ => throw new ArgumentException("Invalid vehicle type")
+        };
     }
 }
-`}
-            </Highlight>
+
+// Utilisation du Factory Pattern
+class Program
+{
+    static void Main()
+    {
+        IVehicle car = VehicleFactory.CreateVehicle("car");
+        car.Drive();
+
+        IVehicle truck = VehicleFactory.CreateVehicle("truck");
+        truck.Drive();
+
+        IVehicle motorcycle = VehicleFactory.CreateVehicle("motorcycle");
+        motorcycle.Drive();
+    }
+}`}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

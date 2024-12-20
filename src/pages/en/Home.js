@@ -96,8 +96,7 @@ export default function Home() {
                 engineer from the University of Monastir, Tunisia, in 2017.{" "}
                 <br />
                 My expertise spans diverse sectors, including automotive,
-                healthcare, GIS, and entrepreneurship. <br />
-                Currently, I am working at Capgemini. <br />I have extensive
+                healthcare, GIS, and entrepreneurship. <br />I have extensive
                 experience in software architecture, design, development,
                 testing, and deployment, with a strong background in Agile
                 methodology.
@@ -1196,6 +1195,11 @@ export default function Home() {
                 passionate about maintaining high-quality code and fostering
                 effective communication within teams to meet project goals
                 efficiently.
+              </p>
+              <p>
+                I hope my experience aligns well with what you're looking for.
+                Do you have any questions or need clarification about any part
+                of my background or the projects I've worked on?
               </p>
             </div>
           </article>

@@ -29,31 +29,15 @@ export default function Command() {
                     className="d-inline-flex align-items-center rounded"
                     href="#command"
                   >
-                    Command
+                    Commande
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#use"
+                    href="#example"
                   >
-                    Common use
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#dis-advantages"
-                  >
-                    Advantages and disadvantages
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#code"
-                  >
-                    Structural code in C#
+                    Exemple
                   </a>
                 </li>
               </ul>
@@ -163,178 +147,242 @@ export default function Command() {
           <h3>Command</h3>
           <article id="command">
             <h6>Commande</h6>
-            <p>
-              <strong>Commande</strong> est un patron de conception
-              comportemental qui prend une action à effectuer et la transforme
-              en un objet autonome qui contient tous les détails de cette
-              action. Cette transformation permet de paramétrer des méthodes
-              avec différentes actions, planifier leur exécution, les mettre
-              dans une file d’attente ou d’annuler des opérations effectuées.
-            </p>
-          </article>
-          <article id="use">
-            <h6>Common use</h6>
-            <ul>
-              <li>
-                Utilisez le patron de conception commande lorsque vous voulez
-                paramétrer des objets avec des traitements.
-              </li>
-              <li>
-                Utilisez ce patron si vous voulez mettre des traitements dans
-                une file d’attente, programmer leur déclenchement, ou les
-                exécuter à distance.
-              </li>
-              <li>
-                Utilisez le patron de conception commande quand vous voulez
-                implémenter des opérations réversibles.
-              </li>
-            </ul>
-          </article>
-          <article id="dis-advantages">
-            <h6>Avantages and disavantages</h6>
-            <div class="row">
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Principe de responsabilité unique</em>. Vous pouvez
-                    découpler les classes qui appellent des traitements, de
-                    celles qui les exécutent.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Principe ouvert/fermé</em>. Vous pouvez ajouter de
-                    nouvelles commandes dans le programme sans endommager le
-                    code client existant.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i> Vous
-                    pouvez mettre en place une fonctionnalité annuler-rétablir.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i> Vous
-                    pouvez différer l’exécution de vos traitements.
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i> Vous
-                    pouvez assembler plusieurs commandes simples en une seule
-                    plus complexe.
-                  </li>
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i> Le code
-                    peut devenir plus compliqué, car vous créez une nouvelle
-                    couche entre les demandeurs et les récepteurs.
-                  </li>
-                </ul>
-              </div>
+            <div>
+              <p>
+                Le <strong>Command Pattern</strong> (ou{" "}
+                <strong>Patron Commande</strong>) est un patron de conception
+                comportemental qui transforme une demande ou une action en un
+                objet indépendant. Cela permet de paramétrer des requêtes, de
+                les mettre en file, de les annuler ou de les rejouer.
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <strong>Aspect</strong>
+                    </th>
+                    <th>
+                      <strong>Description</strong>
+                    </th>
+                    <th>
+                      <strong>Exemple</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Définition</strong>
+                    </td>
+                    <td>
+                      Encapsule une requête dans un objet, permettant de la
+                      gérer de manière flexible et indépendante de l'appelant.
+                    </td>
+                    <td>
+                      Une application de gestion de tâches où les actions (comme
+                      "Annuler", "Rétablir") sont gérées via des commandes.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Structure</strong>
+                    </td>
+                    <td>
+                      - <strong>Commande</strong> : Encapsule l'action.
+                      <br />- <strong>Receveur</strong> : Exécute la commande.
+                      <br />- <strong>Invocateur</strong> : Demande l'exécution.
+                      <br />- <strong>Client</strong> : Configure la commande.
+                    </td>
+                    <td>
+                      Une télécommande (invocateur) envoie des commandes pour
+                      allumer ou éteindre la lumière (receveur).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Avantages</strong>
+                    </td>
+                    <td>
+                      - Séparation des responsabilités entre l'appelant et
+                      l'exécutant.
+                      <br />- Historique des commandes.
+                      <br />- Support d'annulation/rétablissement.
+                    </td>
+                    <td>
+                      Implémentation d'une fonctionnalité d'annulation dans un
+                      éditeur de texte.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Inconvénients</strong>
+                    </td>
+                    <td>
+                      - Complexité accrue avec de nombreuses commandes.
+                      <br />- Augmente le nombre de classes.
+                    </td>
+                    <td>
+                      Un système complexe peut devenir difficile à maintenir.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Cas d'utilisation</strong>
+                    </td>
+                    <td>
+                      - Gestion des actions annuler/rétablir.
+                      <br />- Systèmes de mise en file d'attente.
+                      <br />- Paramétrage ou journalisation des actions.
+                    </td>
+                    <td>
+                      Commandes dans un éditeur graphique (dessiner, effacer),
+                      automatisation de tâches répétitives.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </article>
-          <article id="code">
+          <article id="example">
             <h6>Structural code in C#</h6>
-            <Highlight language="csharp">
-              {`using System;
-
-namespace Command.Structural
+            <div>
+              <h6>Exemple : Télécommande pour allumer/éteindre une lumière</h6>
+              <h6>
+                <strong>Explication :</strong>
+              </h6>
+              <ol>
+                <li>
+                  <strong>
+                    Commande (<code>ICommand</code>)
+                  </strong>{" "}
+                  :
+                  <ul>
+                    <li>
+                      Définit une interface avec les méthodes{" "}
+                      <code>Execute</code> et <code>Undo</code>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>
+                    Receveur (<code>Light</code>)
+                  </strong>{" "}
+                  :
+                  <ul>
+                    <li>
+                      Contient la logique réelle pour allumer ou éteindre la
+                      lumière.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>
+                    Commandes concrètes (<code>TurnOnLightCommand</code>,{" "}
+                    <code>TurnOffLightCommand</code>)
+                  </strong>{" "}
+                  :
+                  <ul>
+                    <li>
+                      Implémentent <code>ICommand</code> et encapsulent l'action
+                      sur le receveur.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>
+                    Invocateur (<code>RemoteControl</code>)
+                  </strong>{" "}
+                  :
+                  <ul>
+                    <li>
+                      Déclenche les commandes en appelant <code>Execute</code>{" "}
+                      ou <code>Undo</code>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Client</strong> :
+                  <ul>
+                    <li>
+                      Configure le système en associant des commandes concrètes
+                      au receveur et en les affectant à l'invocateur.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <Highlight language="csharp">
+                {`// Interface Commande
+public interface ICommand
 {
-    /// <summary>
-    /// Command Design Pattern
-    /// </summary>
-
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            // Create receiver, command, and invoker
-
-            Receiver receiver = new Receiver();
-            Command command = new ConcreteCommand(receiver);
-            Invoker invoker = new Invoker();
-
-            // Set and execute command
-
-            invoker.SetCommand(command);
-            invoker.ExecuteCommand();
-
-            // Wait for user
-
-            Console.ReadKey();
-        }
-    }
-
-    /// <summary>
-    /// The 'Command' abstract class
-    /// </summary>
-
-    public abstract class Command
-    {
-        protected Receiver receiver;
-
-        // Constructor
-
-        public Command(Receiver receiver)
-        {
-            this.receiver = receiver;
-        }
-
-        public abstract void Execute();
-    }
-
-    /// <summary>
-    /// The 'ConcreteCommand' class
-    /// </summary>
-
-    public class ConcreteCommand : Command
-    {
-        // Constructor
-
-        public ConcreteCommand(Receiver receiver) :
-            base(receiver)
-        {
-        }
-
-        public override void Execute()
-        {
-            receiver.Action();
-        }
-    }
-
-    /// <summary>
-    /// The 'Receiver' class
-    /// </summary>
-
-    public class Receiver
-    {
-        public void Action()
-        {
-            Console.WriteLine("Called Receiver.Action()");
-        }
-    }
-
-    /// <summary>
-    /// The 'Invoker' class
-    /// </summary>
-
-    public class Invoker
-    {
-        Command command;
-
-        public void SetCommand(Command command)
-        {
-            this.command = command;
-        }
-
-        public void ExecuteCommand()
-        {
-            command.Execute();
-        }
-    }
+    void Execute();
+    void Undo();
 }
-`}
-            </Highlight>
+
+// Classe Receveur
+public class Light
+{
+    public void TurnOn() => Console.WriteLine("Lumière allumée.");
+    public void TurnOff() => Console.WriteLine("Lumière éteinte.");
+}
+
+// Commande pour allumer la lumière
+public class TurnOnLightCommand : ICommand
+{
+    private readonly Light _light;
+
+    public TurnOnLightCommand(Light light) => _light = light;
+
+    public void Execute() => _light.TurnOn();
+    public void Undo() => _light.TurnOff();
+}
+
+// Commande pour éteindre la lumière
+public class TurnOffLightCommand : ICommand
+{
+    private readonly Light _light;
+
+    public TurnOffLightCommand(Light light) => _light = light;
+
+    public void Execute() => _light.TurnOff();
+    public void Undo() => _light.TurnOn();
+}
+
+// Invocateur
+public class RemoteControl
+{
+    private ICommand _command;
+
+    public void SetCommand(ICommand command) => _command = command;
+    public void PressButton() => _command.Execute();
+    public void PressUndo() => _command.Undo();
+}
+
+// Programme principal
+class Program
+{
+    static void Main()
+    {
+        Light livingRoomLight = new Light();
+
+        ICommand turnOnCommand = new TurnOnLightCommand(livingRoomLight);
+        ICommand turnOffCommand = new TurnOffLightCommand(livingRoomLight);
+
+        RemoteControl remote = new RemoteControl();
+
+        // Allumer la lumière
+        remote.SetCommand(turnOnCommand);
+        remote.PressButton();
+
+        // Éteindre la lumière
+        remote.SetCommand(turnOffCommand);
+        remote.PressButton();
+
+        // Annuler la dernière action
+        remote.PressUndo();
+    }
+}`}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

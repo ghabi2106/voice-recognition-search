@@ -29,31 +29,15 @@ export default function Observer() {
                     className="d-inline-flex align-items-center rounded"
                     href="#observer"
                   >
-                    Observer
+                    Observateur
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#use"
+                    href="#example"
                   >
-                    Common use
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#dis-advantages"
-                  >
-                    Avantages and disavantages
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#code"
-                  >
-                    Structural code in C#
+                    Example
                   </a>
                 </li>
               </ul>
@@ -163,183 +147,237 @@ export default function Observer() {
           <h3>Observer</h3>
           <article id="observer">
             <h6>Observer</h6>
-            <p>
-              L’Observateur est un patron de conception comportemental qui
-              permet de mettre en place un mécanisme de souscription pour
-              envoyer des notifications à plusieurs objets, au sujet
-              d’événements concernant les objets qu’ils observent.
-            </p>
-          </article>
-          <article id="use">
-            <h6>Common use</h6>
-            <ul>
-              <li>
-                Utilisez le patron de conception Observateur quand des
-                modifications de l’état d’un objet peuvent en impacter d’autres,
-                et que l’ensemble des objets n’est pas connu à l’avance ou qu’il
-                change dynamiquement.
-              </li>
-              <li>
-                Utilisez ce patron quand certains objets de votre application
-                doivent en suivre d’autres, mais seulement pendant un certain
-                temps ou dans des cas spécifiques.
-              </li>
-            </ul>
-          </article>
-          <article id="dis-advantages">
-            <h6>Advantages and disadvantages</h6>
-            <div class="row">
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i>{" "}
-                    <em>Principe ouvert/fermé</em>. Vous pouvez ajouter de
-                    nouvelles classes souscripteur sans avoir à modifier le code
-                    du diffuseur (et inversement si vous avez une interface
-                    diffuseur).
-                  </li>
-                  <li>
-                    <i class="fa fa-fw fa-check" aria-hidden="true"></i> Vous
-                    pouvez établir des relations entre les objets lors du
-                    lancement de l’application.
-                  </li>
-                </ul>
-              </div>
-              <div class="col-sm-6">
-                <ul>
-                  <li>
-                    <i class="fa fa-fw fa-times" aria-hidden="true"></i> Les
-                    souscripteurs sont avertis dans un ordre aléatoire.
-                  </li>
-                </ul>
-              </div>
+            <div>
+              <p>
+                L’Observateur est un patron de conception comportemental qui
+                permet de mettre en place un mécanisme de souscription pour
+                envoyer des notifications à plusieurs objets, au sujet
+                d’événements concernant les objets qu’ils observent.
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <strong>Aspect</strong>
+                    </th>
+                    <th>
+                      <strong>Description</strong>
+                    </th>
+                    <th>
+                      <strong>Exemple</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Définition</strong>
+                    </td>
+                    <td>
+                      Permet de notifier plusieurs objets lorsque l'état d'un
+                      objet change, tout en maintenant un faible couplage.
+                    </td>
+                    <td>
+                      Un système de messagerie : chaque utilisateur
+                      (observateur) reçoit une alerte d'un nouvel événement.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Structure</strong>
+                    </td>
+                    <td>
+                      - <strong>Sujet (Subject)</strong> : Gère la liste des
+                      observateurs et les notifie des changements.
+                      <br />- <strong>Observateurs (Observers)</strong> :
+                      S'abonnent au sujet pour recevoir les notifications.
+                    </td>
+                    <td>
+                      Une classe <code>WeatherStation</code> (sujet) informe
+                      plusieurs <code>DisplayDevices</code> (observateurs) des
+                      changements météo.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Avantages</strong>
+                    </td>
+                    <td>
+                      - Faible couplage entre le sujet et ses observateurs.
+                      <br />- Extensible : de nouveaux observateurs peuvent être
+                      ajoutés sans modifier le sujet.
+                    </td>
+                    <td>
+                      Plusieurs modules reçoivent les mises à jour sans changer
+                      la logique du sujet principal.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Inconvénients</strong>
+                    </td>
+                    <td>
+                      - Risque de surcharge si trop d'observateurs sont
+                      enregistrés.
+                      <br />- Complexité accrue dans les systèmes avec beaucoup
+                      d'observateurs.
+                    </td>
+                    <td>
+                      Une boucle infinie peut survenir si des notifications
+                      mutuelles sont mal gérées.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Cas d'utilisation</strong>
+                    </td>
+                    <td>
+                      - Interfaces utilisateur dynamiques.
+                      <br />- Mises à jour d'état en temps réel.
+                      <br />- Systèmes de publication/souscription.
+                    </td>
+                    <td>
+                      Notifications push, systèmes météo, observateurs de
+                      fichiers ou journaux.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </article>
-          <article id="code">
-            <h6>Structural code in C#</h6>
-            <Highlight language="csharp">
-              {`using System;
-using System.Collections.Generic;
-
-namespace Observer.Structural
+          <article id="example">
+            <h6>Exemple : Système météo</h6>
+            <div>
+              <h6>
+                <strong>Explication :</strong>
+              </h6>
+              <ol>
+                <li>
+                  <p>
+                    <strong>Sujet (WeatherStation)</strong> :
+                  </p>
+                  <ul>
+                    <li>
+                      Gère la liste des observateurs via{" "}
+                      <code>RegisterObserver</code>, <code>RemoveObserver</code>
+                      , et notifie les observateurs avec{" "}
+                      <code>NotifyObservers</code>.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>Observateurs (DisplayDevice)</strong> :
+                  </p>
+                  <ul>
+                    <li>
+                      Implémentent l'interface <code>IObserver</code> et mettent
+                      à jour leur état à chaque notification.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    <strong>Interaction</strong> :
+                  </p>
+                  <ul>
+                    <li>
+                      Le sujet (station météo) informe tous les afficheurs des
+                      nouvelles mesures, et chaque afficheur met à jour ses
+                      données.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <Highlight language="csharp">
+                {`// Interface Observateur
+public interface IObserver
 {
-    /// <summary>
-    /// Observer Design Pattern
-    /// </summary>
+    void Update(float temperature, float humidity);
+}
 
-    public class Program
+// Interface Sujet
+public interface ISubject
+{
+    void RegisterObserver(IObserver observer);
+    void RemoveObserver(IObserver observer);
+    void NotifyObservers();
+}
+
+// Classe Sujet (WeatherStation)
+public class WeatherStation : ISubject
+{
+    private readonly List<IObserver> _observers;
+    private float _temperature;
+    private float _humidity;
+
+    public WeatherStation()
     {
-        public static void Main(string[] args)
+        _observers = new List<IObserver>();
+    }
+
+    public void RegisterObserver(IObserver observer) => _observers.Add(observer);
+    public void RemoveObserver(IObserver observer) => _observers.Remove(observer);
+
+    public void NotifyObservers()
+    {
+        foreach (var observer in _observers)
         {
-            // Configure Observer pattern
-
-            ConcreteSubject s = new ConcreteSubject();
-
-            s.Attach(new ConcreteObserver(s, "X"));
-            s.Attach(new ConcreteObserver(s, "Y"));
-            s.Attach(new ConcreteObserver(s, "Z"));
-
-            // Change subject and notify observers
-
-            s.SubjectState = "ABC";
-            s.Notify();
-
-            // Wait for user
-
-            Console.ReadKey();
+            observer.Update(_temperature, _humidity);
         }
     }
 
-    /// <summary>
-    /// The 'Subject' abstract class
-    /// </summary>
-
-    public abstract class Subject
+    public void SetMeasurements(float temperature, float humidity)
     {
-        private List<Observer> observers = new List<Observer>();
-
-        public void Attach(Observer observer)
-        {
-            observers.Add(observer);
-        }
-
-        public void Detach(Observer observer)
-        {
-            observers.Remove(observer);
-        }
-
-        public void Notify()
-        {
-            foreach (Observer o in observers)
-            {
-                o.Update();
-            }
-        }
-    }
-
-    /// <summary>
-    /// The 'ConcreteSubject' class
-    /// </summary>
-
-    public class ConcreteSubject : Subject
-    {
-        private string subjectState;
-
-        // Gets or sets subject state
-
-        public string SubjectState
-        {
-            get { return subjectState; }
-            set { subjectState = value; }
-        }
-    }
-
-    /// <summary>
-    /// The 'Observer' abstract class
-    /// </summary>
-
-    public abstract class Observer
-    {
-        public abstract void Update();
-    }
-
-    /// <summary>
-    /// The 'ConcreteObserver' class
-    /// </summary>
-
-    public class ConcreteObserver : Observer
-    {
-        private string name;
-        private string observerState;
-        private ConcreteSubject subject;
-
-        // Constructor
-
-        public ConcreteObserver(
-            ConcreteSubject subject, string name)
-        {
-            this.subject = subject;
-            this.name = name;
-        }
-
-        public override void Update()
-        {
-            observerState = subject.SubjectState;
-            Console.WriteLine("Observer {0}'s new state is {1}",
-                name, observerState);
-        }
-
-        // Gets or sets subject
-
-        public ConcreteSubject Subject
-        {
-            get { return subject; }
-            set { subject = value; }
-        }
+        _temperature = temperature;
+        _humidity = humidity;
+        NotifyObservers();
     }
 }
-`}
-            </Highlight>
+
+// Classe Observateur (Afficheur)
+public class DisplayDevice : IObserver
+{
+    private readonly string _name;
+
+    public DisplayDevice(string name)
+    {
+        _name = name;
+    }
+
+    public void Update(float temperature, float humidity)
+    {
+        Console.WriteLine($"{_name} : Température = {temperature}°C, Humidité = {humidity}%");
+    }
+}
+
+// Programme principal
+class Program
+{
+    static void Main()
+    {
+        // Création du sujet
+        WeatherStation weatherStation = new WeatherStation();
+
+        // Création des observateurs
+        IObserver display1 = new DisplayDevice("Afficheur 1");
+        IObserver display2 = new DisplayDevice("Afficheur 2");
+
+        // Enregistrement des observateurs
+        weatherStation.RegisterObserver(display1);
+        weatherStation.RegisterObserver(display2);
+
+        // Mise à jour des mesures
+        weatherStation.SetMeasurements(25.5f, 65);
+        weatherStation.SetMeasurements(22.3f, 70);
+
+        // Suppression d'un observateur
+        weatherStation.RemoveObserver(display1);
+        weatherStation.SetMeasurements(20.0f, 60);
+    }
+}`}
+              </Highlight>
+            </div>
           </article>
         </section>
       </div>

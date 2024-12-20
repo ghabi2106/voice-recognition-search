@@ -135,6 +135,9 @@ export const urlsdotnet = {
   "hyper text transfer protocol": "/https",
   "secure socket layer": "/https",
   "transfert socket layer": "/https",
+  // WebSocket
+  socket: "/websocket",
+  "web socket": "/websocket",
   // HTTP Request Methods
   "http request methods": "/httpmethods",
   "http methods": "/httpmethods",
@@ -426,6 +429,10 @@ export const urlsdotnet = {
   "difference between object and class": "/typesystem",
   "difference between class and object": "/typesystem",
   serialization: "/typesystem",
+  // DeployVM
+  "deploy vm": "/deploy-vm",
+  "deploy virtual machine": "/deploy-vm",
+  deploy: "/deploy-vm",
   // Docker
   docker: "/docker",
   container: "/docker",
@@ -453,4 +460,37 @@ export const urlsdotnet = {
   // Userdefinedtype
   "user-defined conversion": "/userdefinedtype",
   "user-defined type": "/userdefinedtype",
+  // Ocelot
+  ocelot: "/ocelot",
+  "api gateway": "/ocelot",
+  gateway: "/ocelot",
+  // Grpc
+  grpc: "/grpc",
+  // Message Broker
+  "message broker": "/message-broker",
+  rabbitmq: "/message-broker",
+  masstransit: "/message-broker",
+  redis: "/message-broker",
+  // Identity Server
+  "identity Server": "/identity-server",
+  // Saga
+  saga: "/saga",
+  // cap
+  cap: "/cap",
+  // create project
+  "create project": "/create-project",
+  // polly
+  polly: "/polly",
+  // resilience
+  resilience: "/resilience",
+  // security
+  security: "/security",
+  // service discovery
+  "service discovery": "/service discovery",
+  // tracing
+  tracing: "/tracing",
+  // tracing
+  "unit testing": "/unit-testing",
+  // versionning
+  versionning: "/versionning",
 };

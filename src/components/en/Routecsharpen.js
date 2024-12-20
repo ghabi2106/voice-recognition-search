@@ -56,7 +56,7 @@ import HttpsPage from "../../pages/en/dotnet/http/Https";
 import HttpmethodsPage from "../../pages/en/dotnet/http/Httpmethods";
 import JwtPage from "../../pages/en/dotnet/http/Jwt";
 import MiddlewarePage from "../../pages/en/dotnet/http/Middleware";
-import ServicePage from "../../pages/en/dotnet/http/Service";
+import WebSocketPage from "../../pages/en/dotnet/http/WebSocket";
 //#endregion
 
 //#region design pattern
@@ -79,6 +79,7 @@ import IdealsPage from "../../pages/en/dotnet/methodology/Ideals";
 //#endregion
 
 //#region Host Deployment
+import DeployVMPage from "../../pages/en/dotnet/hostdeploy/DeployVM";
 import DockerPage from "../../pages/en/dotnet/hostdeploy/Docker";
 import HttpsysPage from "../../pages/en/dotnet/hostdeploy/Httpsys";
 import IisPage from "../../pages/en/dotnet/hostdeploy/Iis";
@@ -141,6 +142,24 @@ import UserdefinedtypePage from "../../pages/en/csharp/Userdefinedtype";
 import ReferencesPage from "../../pages/en/csharp/References";
 //#endregion
 
+//#region Architecture
+import CAPPage from "../../pages/en/dotnet/microservices/CAP";
+import CreateProjectPage from "../../pages/en/dotnet/microservices/CreateProject";
+import GrpcPage from "../../pages/en/dotnet/microservices/Grpc";
+import IdentityServerPage from "../../pages/en/dotnet/microservices/IdentityServer";
+import MessageBrokerPage from "../../pages/en/dotnet/microservices/MessageBroker";
+import MicroservicePage from "../../pages/en/dotnet/microservices/Microservice";
+import OcelotPage from "../../pages/en/dotnet/microservices/Ocelot";
+import PollyPage from "../../pages/en/dotnet/microservices/Polly";
+import ResiliencePage from "../../pages/en/dotnet/microservices/Resilience";
+import SagaPage from "../../pages/en/dotnet/microservices/Saga";
+import SecurityPage from "../../pages/en/dotnet/microservices/Security";
+import ServiceDiscoveryPage from "../../pages/en/dotnet/microservices/ServiceDiscovery";
+import TracingPage from "../../pages/en/dotnet/microservices/Tracing";
+import VersioningPage from "../../pages/en/dotnet/microservices/Versioning";
+import UnitTestingPage from "../../pages/en/dotnet/microservices/UnitTesting";
+//#endregion
+
 export default function Routecsharpen() {
   return (
     <>
@@ -186,6 +205,7 @@ export default function Routecsharpen() {
       {
         //#region Host Deploy
       }
+      <Route path="/deploy-vm" component={DeployVMPage} />
       <Route path="/docker" component={DockerPage} />
       <Route path="/httpsys" component={HttpsysPage} />
       <Route path="/iis" component={IisPage} />
@@ -204,7 +224,7 @@ export default function Routecsharpen() {
       <Route path="/httpmethods" component={HttpmethodsPage} />
       <Route path="/jwt" component={JwtPage} />
       <Route path="/middleware" component={MiddlewarePage} />
-      <Route path="/service" component={ServicePage} />
+      <Route path="/websocket" component={WebSocketPage} />
       {
         //#endregion
       }
@@ -335,6 +355,28 @@ export default function Routecsharpen() {
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/userdefinedtype" component={UserdefinedtypePage} />
       <Route path="/references" component={ReferencesPage} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region Microservices
+      }
+      <Route path="/cap" component={CAPPage} />
+      <Route path="/create-project" component={CreateProjectPage} />
+      <Route path="/grpc" component={GrpcPage} />
+      <Route path="/identity-server" component={IdentityServerPage} />
+      <Route path="/message-broker" component={MessageBrokerPage} />
+      <Route path="/service" component={MicroservicePage} />
+      <Route path="/ocelot" component={OcelotPage} />
+      <Route path="/polly" component={PollyPage} />
+      <Route path="/resilience" component={ResiliencePage} />
+      <Route path="/saga" component={SagaPage} />
+      <Route path="/security" component={SecurityPage} />
+      <Route path="/service-discovery" component={ServiceDiscoveryPage} />
+      <Route path="/tracing" component={TracingPage} />
+      <Route path="/unit-testing" component={UnitTestingPage} />
+      <Route path="/versionning" component={VersioningPage} />
       {
         //#endregion
       }

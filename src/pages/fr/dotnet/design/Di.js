@@ -27,9 +27,9 @@ export default function Di() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#introduction"
+                    href="#di"
                   >
-                    Introduction
+                  Dependency Injection
                   </a>
                 </li>
                 <li>
@@ -38,30 +38,6 @@ export default function Di() {
                     href="#ioc"
                   >
                     Inversion of control
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded active"
-                    href="#dip"
-                  >
-                    DIP
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#di"
-                  >
-                    DI
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#ioc-container"
-                  >
-                    IoC Container
                   </a>
                 </li>
                 <li>
@@ -185,102 +161,258 @@ export default function Di() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Dependency injection</h3>
-          <article id="introduction">
-            <h6>Introduction</h6>
-            <div>
-              <p>
-                le modèle de conception logicielle d’injection de dépendances,
-                technique qui permet d’obtenir une inversion de contrôle entre
-                les classes et leurs dépendances.
-              </p>
-              <img src="/img/dotnet/ioc-steps.png" alt="ioc steps" />
-              <img
-                src="/img/dotnet/principles-and-patterns.png"
-                alt="principles and patterns"
-              />
-            </div>
-          </article>
-          <article id="ioc">
-            <h6>Inversion de contrôle</h6>
-            <p>
-              Le principe IoC suggère d'inverser le contrôle. Cela signifie de
-              déléguer le contrôle à une autre classe.
-            </p>
-          </article>
-          <article id="dip">
-            <h6>DIP</h6>
-            <p>
-              DIP est l'un des principes orientés objet SOLID. Les modules de
-              haut niveau ne doivent pas dépendre des modules de bas niveau. Les
-              deux devraient dépendre de l'abstraction.
-            </p>
-          </article>
           <article id="di">
-            <h6>DI</h6>
-            <div>
-              <p>
-                L'injection de dépendance (DI) est un modèle de conception
-                utilisé pour implémenter l'IoC. Il permet la création d'objets
-                dépendants en dehors d'une classe et fournit ces objets à une
-                classe de différentes manières.
-              </p>
-              <p>Types d'injection de dépendance :</p>
-              <ul>
-                <li>Injection de constructeur</li>
-                <li>Injection de propriété</li>
-                <li>Injection de méthode</li>
-              </ul>
-            </div>
-          </article>
-          <article id="ioc-container">
-            <h6>IoC Container</h6>
-            <div>
-              <p>
-                IoC Container est un framework pour la mise en œuvre de
-                l'injection automatique de dépendances. Il gère la création
-                d'objets et sa durée de vie, et injecte également des
-                dépendances à la classe.
-              </p>
-              <p>Il existe de nombreux conteneurs</p>
-              <ul>
-                <li>Unité</li>
-                <li>Autofac</li>
-                <li>Ninject</li>
-              </ul>
-            </div>
-          </article>
-          <article id="lifetime">
-            <h6>Lifetime managers</h6>
-            <table class="table table-bordered">
+            <h6>Introduction</h6>
+            <table>
               <thead>
                 <tr>
-                  <th>Gestionnaire à vie</th>
-                  <th>La description</th>
+                  <th>
+                    <strong>Aspect</strong>
+                  </th>
+                  <th>
+                    <strong>Description</strong>
+                  </th>
+                  <th>
+                    <strong>Exemple</strong>
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>AddSingleton</td>
                   <td>
-                    Si un service est enregistré avec Singleton life ,
-                    l'instance de ce service n'est créée qu'une seule fois et la
-                    même instance de ce service est ensuite utilisée dans
-                    l'ensemble de l'application.
+                    <strong>Définition</strong>
+                  </td>
+                  <td>
+                    Principe de conception où les dépendances d'un objet sont
+                    fournies plutôt que créées par l'objet lui-même.
+                  </td>
+                  <td>
+                    Au lieu que la classe <code>ClientService</code> crée une
+                    instance de <code>DataService</code>, elle reçoit une
+                    instance via le constructeur.
                   </td>
                 </tr>
                 <tr>
-                  <td>AddScoped</td>
                   <td>
-                    Si un service est enregistré avec Scoped life , une nouvelle
-                    instance de ce service est créée pour chaque demande.
+                    <strong>Types</strong>
+                  </td>
+                  <td>
+                    1. Injection par constructeur
+                    <br />
+                    2. Injection par propriété
+                    <br />
+                    3. Injection par méthode
+                  </td>
+                  <td>
+                    1.{" "}
+                    <code>public ClientService(IDataService dataService)</code>
+                    <br />
+                    2.{" "}
+                    <code>
+                      public IDataService DataService {"{"} get; set; {"}"}
+                    </code>
+                    <br />
+                    3.{" "}
+                    <code>
+                      public void SetDataService(IDataService dataService)
+                    </code>
                   </td>
                 </tr>
                 <tr>
-                  <td>AddTransient</td>
                   <td>
-                    Si un service est enregistré avec Transient life , une
-                    nouvelle instance de ce service est toujours créée chaque
-                    fois que le service est demandé.
+                    <strong>Avantages</strong>
+                  </td>
+                  <td>
+                    - Découplage du code
+                    <br />- Testabilité améliorée
+                    <br />- Maintenance simplifiée
+                  </td>
+                  <td>
+                    Vous pouvez changer la dépendance <code>DataService</code>{" "}
+                    sans modifier <code>ClientService</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Exemple dans .NET Core</strong>
+                  </td>
+                  <td>
+                    - Configurez dans <code>Startup.cs</code> :{" "}
+                    <code>
+                      services.AddTransient&lt;IDataService, DataService&gt;();
+                    </code>
+                    <br />- Utilisation dans un contrôleur via le constructeur.
+                  </td>
+                  <td>
+                    <code>
+                      csharp public class MyController {"{"} private readonly
+                      IDataService _dataService; public
+                      MyController(IDataService dataService) {"{"} _dataService
+                      = dataService; {"}"}
+                      {"}"}
+                    </code>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Rôle dans l'architecture</strong>
+                  </td>
+                  <td>
+                    Favorise une architecture plus modulaire et facilite
+                    l'injection d'objets nécessaires dans les composants sans
+                    les coupler directement à leur création.
+                  </td>
+                  <td>
+                    Permet de gérer les dépendances de manière centralisée,
+                    comme les services ou les repositories.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="ioc">
+            <h6>Inversion de contrôle</h6>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <strong>Aspect</strong>
+                  </th>
+                  <th>
+                    <strong>Injection de Dépendances (DI)</strong>
+                  </th>
+                  <th>
+                    <strong>Inversion de Contrôle (IoC)</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Définition</strong>
+                  </td>
+                  <td>
+                    Technique permettant d'injecter les dépendances d'un objet
+                    plutôt que de les créer à l'intérieur de l'objet.
+                  </td>
+                  <td>
+                    Principe général où le contrôle du flux d'exécution est
+                    inversé par rapport à l'approche classique.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>But principal</strong>
+                  </td>
+                  <td>
+                    Fournir des dépendances externes à une classe pour éviter le
+                    couplage direct.
+                  </td>
+                  <td>
+                    Permettre à un conteneur ou framework de gérer le cycle de
+                    vie et l'exécution des objets dans une application.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Relation</strong>
+                  </td>
+                  <td>
+                    L'injection de dépendances est une forme spécifique
+                    d'inversion de contrôle.
+                  </td>
+                  <td>
+                    L'inversion de contrôle est le concept global, et
+                    l'injection de dépendances est une implémentation de ce
+                    principe.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Exemple</strong>
+                  </td>
+                  <td>
+                    Passer une dépendance à travers un constructeur ou une
+                    méthode.
+                  </td>
+                  <td>
+                    Utilisation d'un framework IoC comme Unity ou Autofac pour
+                    gérer l'injection de dépendances dans une application.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Objectif</strong>
+                  </td>
+                  <td>
+                    Réduire le couplage entre les classes en permettant à un
+                    conteneur de fournir les dépendances au lieu des classes
+                    elles-mêmes.
+                  </td>
+                  <td>
+                    Découpler le code de la gestion des dépendances et du
+                    contrôle de l'exécution, souvent utilisé pour centraliser
+                    l'initialisation des objets.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article id="lifetime">
+            <h6>Lifetime managers</h6>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <strong>Cycle de Vie</strong>
+                  </th>
+                  <th>
+                    <strong>Description</strong>
+                  </th>
+                  <th>
+                    <strong>Quand l'utiliser</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Transient</strong>
+                  </td>
+                  <td>Nouvelle instance à chaque demande</td>
+                  <td>
+                    Objets légers, sans état ou indépendants entre les appels.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Scoped</strong>
+                  </td>
+                  <td>Une instance par portée (ex : requête HTTP)</td>
+                  <td>
+                    Objets liés à une session ou une requête, mais pas à long
+                    terme.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Singleton</strong>
+                  </td>
+                  <td>
+                    Une seule instance partagée pendant toute l'application
+                  </td>
+                  <td>
+                    Objets globaux, état partagé, ou services coûteux à créer.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Custom</strong>
+                  </td>
+                  <td>Cycle de vie personnalisé</td>
+                  <td>
+                    Pour des cas spécifiques qui ne rentrent pas dans les autres
+                    catégories.
                   </td>
                 </tr>
               </tbody>
@@ -288,177 +420,36 @@ export default function Di() {
           </article>
           <article id="demonstration">
             <h6>DI Demonstration</h6>
-            <div>
-              <p>We will create one type per lifetime option:</p>
-              <Highlight language="csharp">
-                {`using System;
+            <Highlight language="csharp">
+              {`// Defining Services:
+public interface IMyService { void DoWork(); }
+public class MyService : IMyService { public void DoWork() => Console.WriteLine("Work done."); }
 
-namespace DependencyInjectionSample.Interfaces
+// Registering Services
+var services = new ServiceCollection();
+services.AddTransient<IMyService, MyService>(); // Transient
+services.AddScoped<IMyService, MyService>();   // Scoped
+services.AddSingleton<IMyService, MyService>(); // Singleton
+
+var provider = services.BuildServiceProvider();
+
+// Resolving Services
+var transient1 = provider.GetService<IMyService>();
+var transient2 = provider.GetService<IMyService>();
+Console.WriteLine(object.ReferenceEquals(transient1, transient2)); // False: Different instances
+
+using (var scope = provider.CreateScope())
 {
-    public interface IOperation
-    {
-        Guid OperationId { get; }
-    }
-
-    public interface IOperationTransient : IOperation
-    {
-    }
-
-    public interface IOperationScoped : IOperation
-    {
-    }
-
-    public interface IOperationSingleton : IOperation
-    {
-    }
-
-    public interface IOperationSingletonInstance : IOperation
-    {
-    }
-}`}
-              </Highlight>
-              <p>
-                We implement these interfaces using a single class,{" "}
-                <code>Operation</code>, that accepts a GUID in its constructor,
-                or uses a new GUID if none is provided:
-              </p>
-              <Highlight language="csharp">
-                {`using System;
-using DependencyInjectionSample.Interfaces;
-namespace DependencyInjectionSample.Classes
-{
-    public class Operation : IOperationTransient, IOperationScoped, IOperationSingleton, IOperationSingletonInstance
-    {
-        Guid _guid;
-        public Operation() : this(Guid.NewGuid())
-        {
-
-        }
-
-        public Operation(Guid guid)
-        {
-            _guid = guid;
-        }
-
-        public Guid OperationId => _guid;
-    }
-}`}
-              </Highlight>
-              <p>
-                Next, in <code>ConfigureServices</code>, each type is added to
-                the container according to its named lifetime:
-              </p>
-              <Highlight language="csharp">
-                {`services.AddTransient<IOperationTransient, Operation>();
-services.AddScoped<IOperationScoped, Operation>();
-services.AddSingleton<IOperationSingleton, Operation>();
-services.AddSingleton<IOperationSingletonInstance>(new Operation(Guid.Empty));
-services.AddTransient<OperationService, OperationService>();`}
-              </Highlight>
-              <p>
-                Note that the <code>IOperationSingletonInstance</code> service
-                is using a specific instance with a known ID of{" "}
-                <code>Guid.Empty</code>, so it will be clear when this type is
-                in use. We have also registered an <code>OperationService</code>{" "}
-                that depends on each of the other <code>Operation</code> types,
-                so that it will be clear within a request whether this service
-                is getting the same instance as the controller, or a new one,
-                for each operation type. All this service does is expose its
-                dependencies as properties, so they can be displayed in the
-                view.
-              </p>
-              <Highlight language="csharp">
-                {`using DependencyInjectionSample.Interfaces;
-
-namespace DependencyInjectionSample.Services
-{
-    public class OperationService
-    {
-        public IOperationTransient TransientOperation { get; }
-        public IOperationScoped ScopedOperation { get; }
-        public IOperationSingleton SingletonOperation { get; }
-        public IOperationSingletonInstance SingletonInstanceOperation { get; }
-
-        public OperationService(IOperationTransient transientOperation,
-            IOperationScoped scopedOperation,
-            IOperationSingleton singletonOperation,
-            IOperationSingletonInstance instanceOperation)
-        {
-            TransientOperation = transientOperation;
-            ScopedOperation = scopedOperation;
-            SingletonOperation = singletonOperation;
-            SingletonInstanceOperation = instanceOperation;
-        }
-    }
-}`}
-              </Highlight>
-              <p>
-                To demonstrate the object lifetimes within and between separate
-                individual requests to the application, the sample includes an{" "}
-                <code>OperationsController</code> that requests each kind of{" "}
-                <code>IOperation</code> type as well as an{" "}
-                <code>OperationService</code>. The <code>Index</code> action
-                then displays all of the controller’s and service’s{" "}
-                <code>OperationId</code> values.
-              </p>
-              <Highlight language="csharp">
-                {`using DependencyInjectionSample.Interfaces;
-using DependencyInjectionSample.Services;
-using Microsoft.AspNetCore.Mvc;
-
-namespace DependencyInjectionSample.Controllers
-{
-    public class OperationsController : Controller
-    {
-        private readonly OperationService _operationService;
-        private readonly IOperationTransient _transientOperation;
-        private readonly IOperationScoped _scopedOperation;
-        private readonly IOperationSingleton _singletonOperation;
-        private readonly IOperationSingletonInstance _singletonInstanceOperation;
-
-        public OperationsController(OperationService operationService,
-            IOperationTransient transientOperation,
-            IOperationScoped scopedOperation,
-            IOperationSingleton singletonOperation,
-            IOperationSingletonInstance singletonInstanceOperation)
-        {
-            _operationService = operationService;
-            _transientOperation = transientOperation;
-            _scopedOperation = scopedOperation;
-            _singletonOperation = singletonOperation;
-            _singletonInstanceOperation = singletonInstanceOperation;
-        }
-
-        public IActionResult Index()
-        {
-            // ViewBag contains controller-requested services
-            ViewBag.Transient = _transientOperation;
-            ViewBag.Scoped = _scopedOperation;
-            ViewBag.Singleton = _singletonOperation;
-            ViewBag.SingletonInstance = _singletonInstanceOperation;
-
-            // Operation service has its own requested services
-            ViewBag.Service = _operationService;
-            return View();
-        }
-    }
+    var scoped1 = scope.ServiceProvider.GetService<IMyService>();
+    var scoped2 = scope.ServiceProvider.GetService<IMyService>();
+    Console.WriteLine(object.ReferenceEquals(scoped1, scoped2)); // True: Same instance in scope
 }
+
+var singleton1 = provider.GetService<IMyService>();
+var singleton2 = provider.GetService<IMyService>();
+Console.WriteLine(object.ReferenceEquals(singleton1, singleton2)); // True: Same instance
 `}
-              </Highlight>
-              <p>
-                Now two separate requests are made to this controller action:
-              </p>
-              <img
-                src="/img/dotnet/request1_di.png"
-                alt="request1_di"
-                style={{ maxWidth: "485px" }}
-              />
-              <img
-                src="/img/dotnet/request2_di.png"
-                alt="request2_di"
-                style={{ maxWidth: "485px" }}
-              />
-            </div>
+            </Highlight>
           </article>
         </section>
       </div>

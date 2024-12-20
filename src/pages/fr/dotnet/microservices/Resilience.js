@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Ideals() {
+export default function Resilience() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,9 +25,9 @@ export default function Ideals() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#ideals"
+                    href="#resilience"
                   >
-                    IDEALS
+                    Résilience
                   </a>
                 </li>
               </ul>
@@ -49,57 +49,41 @@ export default function Ideals() {
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/caching"
+                    to="/docker"
                   >
-                    Caching
+                    Docker
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/controller"
+                    to="/server"
                   >
-                    Action Method, Result, Selectors
+                    Web server implementations
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/controllervuedata"
+                    to="/httpsys"
                   >
-                    ViewBag, ViewData and TempData
+                    HTTP.sys web server
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/https"
+                    to="/iis"
                   >
-                    HTTPS, HTTP and SSL
+                    IIS
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="d-inline-flex align-items-center rounded"
-                    to="/httpmethods"
+                    to="/kestrel"
                   >
-                    HTTP Request Methods
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="d-inline-flex align-items-center rounded"
-                    to="/jwt"
-                  >
-                    JWT
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="d-inline-flex align-items-center rounded"
-                    to="/"
-                  >
-                    Services, Microservices, Web API, Web API vs WCF
+                    Kestrel
                   </Link>
                 </li>
               </ul>
@@ -110,23 +94,20 @@ export default function Ideals() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>IDEALS</h3>
-          <article id="ideals">
-            <h6>IDEALS</h6>
+          <h3>Résilience</h3>
+          <article id="resilience">
+            <h6>Résilience</h6>
             <div>
               <p>
-                Le patron IDEALS propose un ensemble de principes pour concevoir
-                des architectures distribuées flexibles, résilientes, et
-                adaptées aux environnements modernes comme les microservices.
+                La <strong>résilience</strong> désigne la capacité d'un système
+                à continuer de fonctionner normalement malgré les pannes ou
+                erreurs, et à se remettre rapidement de ces défaillances.
               </p>
-              <table>
+              <table className="table table-bordered">
                 <thead>
                   <tr>
                     <th>
-                      <strong>Lettre</strong>
-                    </th>
-                    <th>
-                      <strong>Principe</strong>
+                      <strong>Stratégie</strong>
                     </th>
                     <th>
                       <strong>Description</strong>
@@ -136,62 +117,68 @@ export default function Ideals() {
                 <tbody>
                   <tr>
                     <td>
-                      <strong>I</strong>
+                      <strong>Retry (Reprise automatique)</strong>
                     </td>
-                    <td>Interface Segregation</td>
                     <td>
-                      Découper les interfaces pour qu'elles soient spécifiques
-                      et adaptées à chaque consommateur.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>D</strong>
-                    </td>
-                    <td>Deployment Independently</td>
-                    <td>
-                      Les services doivent pouvoir être déployés ou mis à jour
-                      indépendamment les uns des autres.
+                      Réessayer automatiquement une opération échouée après un
+                      délai défini, souvent utilisé pour les erreurs
+                      temporaires.
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>E</strong>
+                      <strong>Circuit Breaker</strong>
                     </td>
-                    <td>Event-Driven</td>
                     <td>
-                      Utiliser une communication basée sur des événements pour
-                      dé-coupler les services et améliorer la scalabilité.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>A</strong>
-                    </td>
-                    <td>Availability over Consistency</td>
-                    <td>
-                      Prioriser la disponibilité du système même si cela
-                      implique une éventuelle incohérence temporaire.
+                      Interrompre les appels à un service défaillant pendant un
+                      certain temps pour éviter de surcharger le système.
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>L</strong>
+                      <strong>Fallback</strong>
                     </td>
-                    <td>Loose Coupling</td>
                     <td>
-                      Assurer un couplage faible entre les services pour une
-                      meilleure flexibilité et maintenabilité.
+                      Fournir une réponse par défaut ou utiliser un service de
+                      secours lorsqu'une opération échoue.
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <strong>S</strong>
+                      <strong>Timeout</strong>
                     </td>
-                    <td>Single Responsibility</td>
                     <td>
-                      Chaque service ou composant doit avoir une responsabilité
-                      unique, alignée sur le principe SRP de SOLID.
+                      Limiter le temps d'attente pour une opération, en annulant
+                      l'appel si le délai maximal est dépassé.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Bulkhead Isolation</strong>
+                    </td>
+                    <td>
+                      Isoler les ressources pour limiter l'impact des
+                      défaillances dans une partie du système (par exemple, en
+                      utilisant des threads ou des connexions distinctes).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Failover</strong>
+                    </td>
+                    <td>
+                      Rediriger le trafic vers une ressource ou une instance de
+                      secours en cas de défaillance d'un service principal.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Sharding</strong>
+                    </td>
+                    <td>
+                      Répartir les données ou les tâches sur plusieurs serveurs
+                      ou systèmes pour éviter qu'un échec sur un seul point
+                      n'affecte l'ensemble.
                     </td>
                   </tr>
                 </tbody>

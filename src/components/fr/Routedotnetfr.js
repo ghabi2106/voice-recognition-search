@@ -10,6 +10,7 @@ import CqrsPage from "../../pages/fr/dotnet/architecture/Cqrs";
 import CleanPage from "../../pages/fr/dotnet/architecture/Clean";
 import MvcPage from "../../pages/fr/dotnet/architecture/Mvc";
 import DddPage from "../../pages/fr/dotnet/architecture/Ddd";
+import EventSourcingPage from "../../pages/fr/dotnet/architecture/EventSourcing";
 //#endregion
 
 //#region Csharp
@@ -53,7 +54,7 @@ import HttpsPage from "../../pages/fr/dotnet/http/Https";
 import HttpmethodsPage from "../../pages/fr/dotnet/http/Httpmethods";
 import JwtPage from "../../pages/fr/dotnet/http/Jwt";
 import MiddlewarePage from "../../pages/fr/dotnet/http/Middleware";
-import ServicePage from "../../pages/fr/dotnet/http/Service";
+import WebSocketPage from "../../pages/fr/dotnet/http/WebSocket";
 //#endregion
 
 //#region design pattern
@@ -76,6 +77,7 @@ import IdealsPage from "../../pages/fr/dotnet/methodology/Ideals";
 //#endregion
 
 //#region Host Deployment
+import DeployVMPage from "../../pages/fr/dotnet/hostdeploy/DeployVM";
 import DockerPage from "../../pages/fr/dotnet/hostdeploy/Docker";
 import HttpsysPage from "../../pages/fr/dotnet/hostdeploy/Httpsys";
 import IisPage from "../../pages/fr/dotnet/hostdeploy/Iis";
@@ -136,6 +138,24 @@ import TuplePage from "../../pages/fr/csharp/Tuple";
 import UserdefinedtypePage from "../../pages/fr/csharp/Userdefinedtype";
 //#endregion
 
+//#region Architecture
+import CAPPage from "../../pages/fr/dotnet/microservices/CAP";
+import CreateProjectPage from "../../pages/fr/dotnet/microservices/CreateProject";
+import GrpcPage from "../../pages/fr/dotnet/microservices/Grpc";
+import IdentityServerPage from "../../pages/fr/dotnet/microservices/IdentityServer";
+import MessageBrokerPage from "../../pages/fr/dotnet/microservices/MessageBroker";
+import MicroservicePage from "../../pages/fr/dotnet/microservices/Microservice";
+import OcelotPage from "../../pages/fr/dotnet/microservices/Ocelot";
+import PollyPage from "../../pages/fr/dotnet/microservices/Polly";
+import ResiliencePage from "../../pages/fr/dotnet/microservices/Resilience";
+import SagaPage from "../../pages/fr/dotnet/microservices/Saga";
+import SecurityPage from "../../pages/fr/dotnet/microservices/Security";
+import ServiceDiscoveryPage from "../../pages/fr/dotnet/microservices/ServiceDiscovery";
+import TracingPage from "../../pages/fr/dotnet/microservices/Tracing";
+import VersioningPage from "../../pages/fr/dotnet/microservices/Versioning";
+import UnitTestingPage from "../../pages/fr/dotnet/microservices/UnitTesting";
+//#endregion
+
 export default function Routedotnetfr() {
   return (
     <>
@@ -153,6 +173,7 @@ export default function Routedotnetfr() {
       }
       <Route path="/clean" component={CleanPage} />
       <Route path="/cqrs" component={CqrsPage} />
+      <Route path="/event-sourcing" component={EventSourcingPage} />
       <Route path="/mvc" component={MvcPage} />
       <Route path="/ddd" component={DddPage} />
       {
@@ -180,6 +201,7 @@ export default function Routedotnetfr() {
       {
         //#region Host Deploy
       }
+      <Route path="/deploy-vm" component={DeployVMPage} />
       <Route path="/docker" component={DockerPage} />
       <Route path="/httpsys" component={HttpsysPage} />
       <Route path="/iis" component={IisPage} />
@@ -198,7 +220,7 @@ export default function Routedotnetfr() {
       <Route path="/httpmethods" component={HttpmethodsPage} />
       <Route path="/jwt" component={JwtPage} />
       <Route path="/middleware" component={MiddlewarePage} />
-      <Route path="/service" component={ServicePage} />
+      <Route path="/websocket" component={WebSocketPage} />
       {
         //#endregion
       }
@@ -280,7 +302,10 @@ export default function Routedotnetfr() {
       }
       <Route path="/autoresetevent" component={AutoResetEventPage} />
       <Route path="/barrier" component={BarrierPage} />
-      <Route path="/concurrentcollections" component={ConcurrentCollectionsPage} />
+      <Route
+        path="/concurrentcollections"
+        component={ConcurrentCollectionsPage}
+      />
       <Route path="/countdownevent" component={CountdownEventPage} />
       <Route path="/deadlock" component={DeadlockPage} />
       <Route path="/interlocked" component={InterlockedPage} />
@@ -326,6 +351,28 @@ export default function Routedotnetfr() {
       <Route path="/tuple" component={TuplePage} />
       <Route path="/memberwiseclone" component={MemberwiseclonePage} />
       <Route path="/userdefinedtype" component={UserdefinedtypePage} />
+      {
+        //#endregion
+      }
+
+      {
+        //#region Microservices
+      }
+      <Route path="/cap" component={CAPPage} />
+      <Route path="/create-project" component={CreateProjectPage} />
+      <Route path="/grpc" component={GrpcPage} />
+      <Route path="/identity-server" component={IdentityServerPage} />
+      <Route path="/message-broker" component={MessageBrokerPage} />
+      <Route path="/service" component={MicroservicePage} />
+      <Route path="/ocelot" component={OcelotPage} />
+      <Route path="/polly" component={PollyPage} />
+      <Route path="/resilience" component={ResiliencePage} />
+      <Route path="/saga" component={SagaPage} />
+      <Route path="/security" component={SecurityPage} />
+      <Route path="/service-discovery" component={ServiceDiscoveryPage} />
+      <Route path="/tracing" component={TracingPage} />
+      <Route path="/unit-testing" component={UnitTestingPage} />
+      <Route path="/versionning" component={VersioningPage} />
       {
         //#endregion
       }
