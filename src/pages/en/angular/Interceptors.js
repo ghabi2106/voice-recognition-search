@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Highlight from "react-highlight";
 import "react-highlight/node_modules/highlight.js/styles/stackoverflow-light.css";
 
-export default function yyyyyyyyyyyyyyyyyyyy() {
+export default function Interceptors() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function zzzzzzzzzzzz() {
+export default function Compilation() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,26 +25,14 @@ export default function zzzzzzzzzzzz() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#"
-                  ></a>
+                    href="#viewengine-ivy"
+                  >ViewEngine vs Ivy</a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    className="d-inline-flex align-items-center rounded"
-                    href="#"
-                  ></a>
+                    href="#aot"
+                  >Ahead-of-Time (AOT)</a>
                 </li>
               </ul>
             </li>
@@ -78,33 +66,50 @@ export default function zzzzzzzzzzzz() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</h3>
-          <article id="">
-            <h6></h6>
+          <h3>Compilation & Rendering</h3>
+          <article id="viewengine-ivy">
+            <h6>ViewEngine vs Ivy</h6>
             <div>
-              <p></p>
-              <img src="/img/angular/" alt="zzzzzzzzzzzzzz" />
+              <ul>
+                <li>
+                  <strong>ViewEngine (pre Angular 9):</strong> Legacy renderer
+                  with <strong>heavy runtime costs</strong>.
+                </li>
+                <li>
+                  <strong>Ivy (Angular 9+):</strong> New rendering engine with:
+                  <ul>
+                    <li>
+                      Faster compilation (<code>ngcc</code> replaced by{" "}
+                      <code>ngtsc</code>
+                      ).
+                    </li>
+                    <li>Smaller bundle size.</li>
+                    <li>
+                      Better debugging (<code>ng.getComponent(el)</code> in
+                      DevTools).
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </article>
-          <article id="">
-            <h6></h6>
+          <article id="aot">
+            <h6>Ahead-of-Time (AOT)</h6>
             <div>
-              <p></p>
-              <img src="/img/angular/" alt="zzzzzzzzzzzzzz" />
-            </div>
-          </article>
-          <article id="">
-            <h6></h6>
-            <div>
-              <p></p>
-              <img src="/img/angular/" alt="zzzzzzzzzzzzzz" />
-            </div>
-          </article>
-          <article id="">
-            <h6></h6>
-            <div>
-              <p></p>
-              <img src="/img/angular/" alt="zzzzzzzzzzzzzz" />
+              <ul>
+                <li>
+                  AOT compiles templates <strong>at build time</strong> instead
+                  of runtime.
+                </li>
+                <li>
+                  Benefits:
+                  <ul>
+                    <li>Faster rendering.</li>
+                    <li>Improved security (prevents XSS attacks).</li>
+                    <li>Smaller runtime overhead.</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </article>
         </section>

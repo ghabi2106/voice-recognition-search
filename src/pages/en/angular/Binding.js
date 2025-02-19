@@ -24,14 +24,22 @@ export default function Binding() {
                 className="list-unstyled ps-3 collapse show"
                 id="contents-collapse"
               >
-              <li>
-                <a
-                  className="d-inline-flex align-items-center rounded"
-                  href="#property-binding"
-                >
-                  Property Binding
-                </a>
-              </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#introduction"
+                  >
+                    Introduction
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#property-binding"
+                  >
+                    Property Binding
+                  </a>
+                </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
@@ -97,6 +105,74 @@ export default function Binding() {
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
           <h3>Data Binding</h3>
+          <article id="introduction">
+            <h6>Introduction</h6>
+            <div>
+              <table className="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Binding Type</th>
+                    <th>Syntax</th>
+                    <th>Direction</th>
+                    <th>Use Case</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Interpolation</strong>
+                    </td>
+                    <td>
+                      <code>{"{{ value }}"}</code>
+                    </td>
+                    <td>One-Way (Component → View)</td>
+                    <td>Displaying text or variables in HTML</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Property Binding</strong>
+                    </td>
+                    <td>
+                      <code>[property]="value"</code>
+                    </td>
+                    <td>One-Way (Component → View)</td>
+                    <td>Binding properties of elements</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Event Binding</strong>
+                    </td>
+                    <td>
+                      <code>(event)="method()"</code>
+                    </td>
+                    <td>One-Way (View → Component)</td>
+                    <td>Handling user interactions</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Two-Way Binding</strong>
+                    </td>
+                    <td>
+                      <code>[(ngModel)]="value"</code>
+                    </td>
+                    <td>Two-Way</td>
+                    <td>Syncing form inputs with variables</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Attribute/Class/Style</strong>
+                    </td>
+                    <td>
+                      <code>[attr]</code>, <code>[class]</code>,{" "}
+                      <code>[style]</code>
+                    </td>
+                    <td>One-Way</td>
+                    <td>Dynamically applying attributes, classes, or styles</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
           <article id="property-binding">
             <h6>Property binding</h6>
             <div>

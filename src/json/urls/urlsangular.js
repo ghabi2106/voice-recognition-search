@@ -26,13 +26,37 @@ export const urlsangular = {
   iife: "/javascript",
   promise: "/javascript",
   // spa
-  "spa": "/spa",
+  spa: "/spa",
   "single-page application": "/spa",
-  "mpa": "/spa",
+  mpa: "/spa",
   "multi-page application": "/spa",
-  "ajax": "/spa",
+  ajax: "/spa",
   "asynchronous javaScript and xml": "/spa",
   "search engine optimization": "/spa",
   // angular
   angular: "/angular",
+  // detection
+  detection: "/detection",
+  "detection strategies": "/detection",
+  // providers
+  providers: "/providers",
+  injectable: "/providers",
+  // micro frontend
+  micro: "/micro",
+  "micro frontend": "/micro",
+  // view child
+  "view child": "/view-child",
+  "view children": "/view-child",
+  child: "/view-child",
+  children: "/view-child",
+  // Providers Types
+  "use class": "/providers-type",
+  "use factory": "/providers-type",
+  "use existing": "/providers-type",
+  // SSR
+  ssr: "/ssr",
+  "server side rendering": "/ssr",
+  universal: "/ssr",
+  // Compilation
+  compilation: "/compilation",
 };

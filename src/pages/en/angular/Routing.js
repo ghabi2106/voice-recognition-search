@@ -124,15 +124,12 @@ export default function Routing() {
             <h6>Lazy Loading</h6>
             <div>
               <p>
-                Le module de "Routing" AppRoutingModule peut déléguer la gestion
-                du "Routing" d'une partie de l'application à un autre module. Ce
-                module "Lazy Loaded" sera donc chargé de façon asynchrone à la
-                visite des "routes" dont il est en charge.
+                This ensures the module is loaded{" "}
+                <strong>only when needed</strong>, reducing initial load time.
               </p>
               <Highlight language="ts">
-                {`RouterModule.forRoot(appRouteList, {
-    preloadingStrategy: PreloadAllModules
-})`}
+                {`{ path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
+`}
               </Highlight>
             </div>
           </article>
@@ -145,48 +142,32 @@ export default function Routing() {
                 enregistrement ou publication obligatoire avant départ).
               </p>
               <b>Configuration</b>
-              <p>Les "Guards" sont ajoutés au niveau de la configuration du "Routing" :</p>
+              <p>
+                Les "Guards" sont ajoutés au niveau de la configuration du
+                "Routing" :
+              </p>
               <Highlight language="ts">
-                {`export const appRouteList = [
-    {
-        path: 'cart',
-        loadChildren: './views/cart/cart-routing.module#CartRoutingModule',
-        canActivate: [
-            IsSignedInGuard
-        ]
-    },
-    {
-        path: 'signin',
-        component: SigninViewComponent,
-        canActivate: [
-            IsNotSignedInGuard
-        ]
-    },
-    {
-        path: 'profile',
-        component: ProfileViewComponent,
-        canDeactivate: [
-            IsNotDirtyGuard
-        ]
-    }
-]`}
+                {`{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
+`}
               </Highlight>
               <b>CanActivate</b>
-              <p>Une "Guard" d'activation est un service qui implémente l'interface CanActivate.</p>
+              <p>
+                Une "Guard" d'activation est un service qui implémente
+                l'interface CanActivate.
+              </p>
               <Highlight language="ts">
-                {`@Injectable({
-    providedIn: 'root'
-})
-export class IsSignedInGuard implements CanActivate {
+                {`export class AuthGuard implements CanActivate {
+  constructor(private authService: AuthService, private router: Router) {}
 
-    constructor(private _session: Session) {
+  canActivate(): boolean {
+    if (!this.authService.isAuthenticated()) {
+      this.router.navigate(['/login']);
+      return false;
     }
-
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-        return this._session.isSignedIn();
-    }
-
-}`}
+    return true;
+  }
+}
+`}
               </Highlight>
             </div>
           </article>

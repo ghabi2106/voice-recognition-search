@@ -66,6 +66,20 @@ export default function Hooks() {
           <article id="hooks">
             <h6>Hooks</h6>
             <div>
+              <strong>
+                What is the difference between ngOnInit and ngDoCheck?
+              </strong>
+              <ul>
+                <li>
+                  <code>ngOnInit()</code>: Runs <strong>once</strong> after
+                  component initialization.
+                </li>
+                <li>
+                  <code>ngDoCheck()</code>: Runs{" "}
+                  <strong>on every change detection cycle</strong>, useful for
+                  manual dirty checking.
+                </li>
+              </ul>
               <table className="table table-bordered">
                 <thead>
                   <tr>

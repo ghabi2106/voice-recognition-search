@@ -247,6 +247,17 @@ submitBook() {
                   </Highlight>
                 </div>
               </div>
+              <Highlight language="ts">
+                {`//How do you dynamically add form fields using FormArray?
+this.form = this.fb.group({
+  users: this.fb.array([])
+});
+
+addUser() {
+  this.users.push(this.fb.control(''));
+}
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="validation">

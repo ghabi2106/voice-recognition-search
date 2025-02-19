@@ -35,10 +35,32 @@ export const pagesangular = [
   "search engine optimization",
   // angular
   "angular",
-  // // ggggggggggggggggggggggggggggg
+  // Detection,
+  "detection",
+  "detection strategies",
+  // Providers
+  "providers",
+  "injectable",
+  // Micro Frontend
+  "micro",
+  "micro frontend",
+  // view child
+  "view child",
+  "view children",
+  "child",
+  "children",
+  // Providers Types
+  "use class",
+  "use factory",
+  "use existing",
+  // SSR
+  "ssr",
+  "server side rendering",
+  "universal",
+  // Compilation
+  "compilation",
+  // // zzzzzzzzzzzz
   // "",
-  // "",
-  // "",
-  // "",
+  // // zzzzzzzzzzzz
   // "",
 ];

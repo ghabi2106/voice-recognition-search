@@ -24,12 +24,28 @@ export default function Pipes() {
                 className="list-unstyled ps-3 collapse show"
                 id="contents-collapse"
               >
+              <li>
+                <a
+                  className="d-inline-flex align-items-center rounded"
+                  href="#pipes"
+                >
+                  pipes
+                </a>
+              </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#pipes"
+                    href="#custom-pipes"
                   >
-                    pipes
+                    custom pipes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="d-inline-flex align-items-center rounded"
+                    href="#async-pipes"
+                  >
+                    async pipes
                   </a>
                 </li>
               </ul>
@@ -155,6 +171,11 @@ export default function Pipes() {
                   </Highlight>
                 </div>
               </div>
+            </div>
+          </article>
+          <article id="custom-pipes">
+            <h6>Custom Pipes</h6>
+            <div>
               <ul class="nav nav-pills mb-3" id="pills-tab-1" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button
@@ -228,6 +249,96 @@ export class ExponentialStrengthPipe implements PipeTransform {
   '
 })
 export class PowerBoosterComponent { }`}
+                  </Highlight>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article id="async-pipes">
+            <h6>async Pipes</h6>
+            <div>
+              <ul class="nav nav-pills mb-3" id="pills-tab-2" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="pills-home-tab-2"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-home-2"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-home-2"
+                    aria-selected="true"
+                  >
+                    sample.component.ts
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-profile-tab-2"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile-2"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile-2"
+                    aria-selected="false"
+                  >
+                    data.service.ts
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent-2">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-home-2"
+                  role="tabpanel"
+                  aria-labelledby="pills-home-tab-2"
+                >
+                  <Highlight language="ts">
+                    {`// sample.component.ts
+import { Component } from '@angular/core';
+import { DataService } from './data.service';
+import { Observable } from 'rxjs';
+
+@Component({
+  selector: 'app-sample',
+  template: '
+    <div *ngIf="data$ | async as data">
+      <p>Data: {{ data }}</p>
+    </div>
+  '
+})
+export class SampleComponent {
+  data$: Observable<string>;
+
+  constructor(private dataService: DataService) {
+    this.data$ = this.dataService.getData();
+  }
+}
+`}
+                  </Highlight>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-profile-2"
+                  role="tabpanel"
+                  aria-labelledby="pills-profile-tab-2"
+                >
+                  <Highlight language="ts">
+                    {`// data.service.ts
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+  getData(): Observable<string> {
+    // Simulating async data with a simple observable
+    return of('Hello from DataService!');
+  }
+}
+`}
                   </Highlight>
                 </div>
               </div>
