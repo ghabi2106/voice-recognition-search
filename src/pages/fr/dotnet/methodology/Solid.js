@@ -202,155 +202,206 @@ export default function Solid() {
                   <strong>D</strong>ependency inversion principle
                 </li>
               </ul>
+              <p>
+                <strong>S: Le principe de responsabilité unique :</strong> Une
+                classe ne doit avoir qu'une seule raison de changer,
+                c'est-à-dire qu'elle ne doit avoir qu'une seule responsabilité.
+              </p>
+              <p>
+                <strong>O: Le principe ouvert/fermé :</strong> Les entités
+                logicielles (classes, modules, fonctions, etc.) doivent être
+                ouvertes à l'extension mais fermées à la modification.
+              </p>
+              <p>
+                <strong>L: Le principe de substitution de Liskov :</strong> Les
+                objets d'une classe dérivée doivent pouvoir être remplacés par
+                des objets de la classe de base sans altérer le bon
+                fonctionnement du programme.
+              </p>
+              <p>
+                <strong>I: Le principe de ségrégation des interfaces :</strong>{" "}
+                Il est préférable d'avoir plusieurs interfaces spécifiques
+                plutôt qu'une interface générale.
+              </p>
+              <p>
+                <strong>D: Le principe d’inversion des dépendances :</strong>{" "}
+                Les modules de haut niveau ne doivent pas dépendre des modules
+                de bas niveau, mais les deux doivent dépendre d'abstractions.
+              </p>
+            </div>
+          </article>
+
+          <article id="examples">
+            <h6>Examples</h6>
+            <div>
+              <Highlight language="csharp">
+                {`public class Square
+{
+    public int Length { get; set; }
+    public Square(int length)
+    {
+        Length = length;
+    }
+}`}
+              </Highlight>
+              <Highlight language="csharp">
+                {`public class Circle
+{
+    public double Radius { get; set; }
+    public Circle(double radius)
+    {
+        Radius = radius;
+    }
+}`}
+              </Highlight>
             </div>
           </article>
           <article id="s">
             <h6>
-              <strong>S</strong>: Single-responsibility principle
+              <strong>S</strong>: Principe de responsabilité unique
             </h6>
-            <p class="answer">
-              Une classe ne doit avoir qu'une seule raison de changer,
-              c'est-à-dire qu'elle ne doit avoir qu'une seule responsabilité.
-            </p>
+            <div>
+              <p>
+                Une classe ne doit avoir qu'une seule raison de changer,
+                c'est-à-dire qu'elle ne doit avoir qu'une seule responsabilité.
+              </p>
+              <Highlight language="csharp">
+                {`using System;
+using System.Collections.Generic;
+
+public class AreaCalculator
+{
+    protected List<object> shapes;
+
+    public AreaCalculator(List<object> shapes = null)
+    {
+        this.shapes = shapes ?? new List<object>();
+    }
+
+    public double Sum()
+    {
+        var area = new List<double>();
+
+        foreach (var shape in shapes)
+        {
+            if (shape is Square square)
+            {
+                area.Add(Math.Pow(square.Length, 2));
+            }
+            else if (shape is Circle circle)
+            {
+                area.Add(Math.PI * Math.Pow(circle.Radius, 2));
+            }
+        }
+
+        return area.Count > 0 ? area.Sum() : 0;
+    }
+
+    public string Output()
+    {
+        return $"Sum of the areas of provided shapes: {Sum()}";
+    }
+}
+`}
+              </Highlight>
+              <Highlight language="csharp">
+                {`using System.Text.Json;
+
+public class SumCalculatorOutputter
+{
+    protected AreaCalculator calculator;
+
+    public SumCalculatorOutputter(AreaCalculator calculator)
+    {
+        this.calculator = calculator;
+    }
+
+    public string ToJson()
+    {
+        var data = new
+        {
+            sum = calculator.Sum()
+        };
+
+        return JsonSerializer.Serialize(data);
+    }
+
+    public string ToHtml()
+    {
+        return $"Sum of the areas of provided shapes: {calculator.Sum()}";
+    }
+}
+`}
+              </Highlight>
+            </div>
           </article>
           <article id="o">
             <h6>
-              <strong>O</strong>: Open-closed principle
+              <strong>O</strong>: Ouvert/fermé
             </h6>
-            <p>
-              Les entités logicielles (classes, modules, fonctions, etc.)
-              doivent être ouvertes à l'extension mais fermées à la
-              modification.
-            </p>
+            <div>
+              <p>
+                Les entités logicielles (classes, modules, fonctions, etc.)
+                doivent être ouvertes à l'extension mais fermées à la
+                modification.
+              </p>
+              <Highlight language="csharp">
+                {``}
+              </Highlight>
+              <Highlight language="csharp">
+                {``}
+              </Highlight>
+            </div>
           </article>
           <article id="l">
             <h6>
-              <strong>L</strong>: Liskov substitution principle
+              <strong>L</strong>: Substitution de Liskov
             </h6>
-            <p>
-              Les objets d'une classe dérivée doivent pouvoir être remplacés par
-              des objets de la classe de base sans altérer le bon fonctionnement
-              du programme.
-            </p>
+            <div>
+              <p>
+                Les objets d'une classe dérivée doivent pouvoir être remplacés
+                par des objets de la classe de base sans altérer le bon
+                fonctionnement du programme.
+              </p>
+              <Highlight language="csharp">
+                {``}
+              </Highlight>
+              <Highlight language="csharp">
+                {``}
+              </Highlight>
+            </div>
           </article>
           <article id="i">
             <h6>
-              <strong>I</strong>: Interface segregation principle
+              <strong>I</strong>: Ségrégation des interfaces
             </h6>
-            <p>
-              Il est préférable d'avoir plusieurs interfaces spécifiques plutôt
-              qu'une interface générale.
-            </p>
+            <div>
+              <p>
+                Il est préférable d'avoir plusieurs interfaces spécifiques
+                plutôt qu'une interface générale.
+              </p>
+              <Highlight language="csharp">
+                {``}
+              </Highlight>
+              <Highlight language="csharp">
+                {``}
+              </Highlight>
+            </div>
           </article>
           <article id="d">
             <h6>
-              <strong>D</strong>: Dependency inversion principle
+              <strong>D</strong>: Inversion des dépendances
             </h6>
             <div>
               <p>
                 Les modules de haut niveau ne doivent pas dépendre des modules
                 de bas niveau, mais les deux doivent dépendre d'abstractions.
               </p>
-            </div>
-          </article>
-          <article id="examples">
-            <h6>Examples</h6>
-            <div>
-              <p>
-                <strong>Single Responsibility Principle (SRP):</strong>
-              </p>
               <Highlight language="csharp">
-                {`public class InvoiceManager
-{
-    public void GenerateInvoice() { /* Generate invoice logic */ }
-}
-
-public class CustomerManager
-{
-    public void AddCustomer() { /* Add customer logic */ }
-}`}
+                {``}
               </Highlight>
-              <p>
-                <strong>Open/Closed Principle (OCP):</strong>
-              </p>
               <Highlight language="csharp">
-                {`public interface IPaymentMethod
-{
-    void ProcessPayment();
-}
-
-public class CreditCardPayment : IPaymentMethod
-{
-    public void ProcessPayment() { /* Process credit card payment */ }
-}
-
-public class PayPalPayment : IPaymentMethod
-{
-    public void ProcessPayment() { /* Process PayPal payment */ }
-}`}
-              </Highlight>
-              <p>
-                <strong>Liskov Substitution Principle (LSP):</strong>
-              </p>
-              <Highlight language="csharp">
-                {`public class Bird
-{
-    public virtual void Fly() { /* Fly logic */ }
-}
-
-public class Sparrow : Bird
-{
-    public override void Fly() { /* Sparrow flying logic */ }
-}
-
-public class Penguin : Bird
-{
-    public override void Fly() { throw new NotImplementedException(); }
-}`}
-              </Highlight>
-              <p>
-                <strong>Interface Segregation Principle (ISP):</strong>
-              </p>
-              <Highlight language="csharp">
-                {`public interface IPrinter
-{
-    void PrintText(string text);
-}
-
-public interface IImagePrinter
-{
-    void PrintImage(string imagePath);
-}
-
-public class TextPrinter : IPrinter
-{
-    public void PrintText(string text) { /* Print text */ }
-}
-
-public class ImagePrinter : IImagePrinter
-{
-    public void PrintImage(string imagePath) { /* Print image */ }
-}`}
-              </Highlight>
-              <p>
-                <strong>Dependency Inversion Principle (DIP):</strong>
-              </p>
-              <Highlight language="csharp">
-                {`public interface IPaymentService
-{
-    void ProcessPayment();
-}
-
-public class OrderProcessor
-{
-    private readonly IPaymentService _paymentService;
-    public OrderProcessor(IPaymentService paymentService)
-    {
-        _paymentService = paymentService;
-    }
-
-    public void ProcessOrder() { _paymentService.ProcessPayment(); }
-}`}
+                {``}
               </Highlight>
             </div>
           </article>
