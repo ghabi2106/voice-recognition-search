@@ -7,6 +7,7 @@ import Navdotnet from "./Navdotnet";
 import Navsql from "./Navsql";
 import Navagile from "./Navagile";
 import Navfrontend from "./Navfrontend";
+import NavWpf from "./NavWpf";
 
 export default function Nav() {
   const course = useContext(CourseContext);
@@ -39,6 +40,12 @@ export default function Nav() {
         return (
           <>
             <Navagile />
+          </>
+        );
+      case "wpf":
+        return (
+          <>
+            <NavWpf />
           </>
         );
       default:

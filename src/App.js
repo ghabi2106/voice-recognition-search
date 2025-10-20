@@ -14,12 +14,14 @@ import { pagesreact } from "./json/search/searchreact";
 import { pagesangular } from "./json/search/searchangular";
 import { pagessql } from "./json/search/searchsql";
 import { pagesagile } from "./json/search/searchagile";
+import { pageswpf } from "./json/search/searchwpf";
 
 import { urlsdotnet } from "./json/urls/urlsdotnet";
 import { urlsreact } from "./json/urls/urlsreact";
 import { urlsangular } from "./json/urls/urlsangular";
 import { urlssql } from "./json/urls/urlssql";
 import { urlsagile } from "./json/urls/urlsagile";
+import { urlswpf } from "./json/urls/urlswpf";
 //#endregion
 
 //import logo from './logo.svg';
@@ -46,6 +48,8 @@ function App() {
         return pagessql;
       case "agile":
         return pagesagile;
+      case "wpf":
+        return pageswpf;
       default:
         return pagesdotnet;
     }
@@ -61,6 +65,8 @@ function App() {
         return urlsangular;
       case "sql":
         return urlssql;
+      case "wpf":
+        return urlswpf;
       case "agile":
         return urlsagile;
       default:
@@ -119,6 +125,11 @@ function App() {
         setUrls(urlssql);
         localStorage.setItem("course", "sql");
         break;
+      case "wpf":
+        setPages(pageswpf);
+        setUrls(urlswpf);
+        localStorage.setItem("course", "wpf");
+        break;
       case "agile":
         setPages(pagesagile);
         setUrls(urlsagile);
@@ -160,6 +171,7 @@ function App() {
                 <option value="angular">Angular</option>
                 <option value="react">React</option>
                 <option value="sql">SQL</option>
+                <option value="wpf">Wpf</option>
                 <option value="agile">Agile</option>
               </select>
               <button

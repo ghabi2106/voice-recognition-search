@@ -232,7 +232,7 @@ export default function Filters() {
                   </tr>
                 </tbody>
               </table>
-              <img src="/img/dotnet/filters.png" alt="Filters" />
+              <img src="/img/dotnet/filters.png" height="500px" alt="Filters" />
             </div>
           </article>
           <article id="syntax">

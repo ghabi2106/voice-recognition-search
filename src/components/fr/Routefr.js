@@ -7,6 +7,7 @@ import Routesqlfr from "./Routesqlfr";
 import Routeagilefr from "./Routeagilefr";
 import Routefrontendfr from "./Routefrontendfr";
 import Routepresentationfr from "./Routepresentationfr";
+import Routewpffr from "./Routewpffr";
 
 export default function Routefr() {
   const course = useContext(CourseContext);
@@ -33,6 +34,12 @@ export default function Routefr() {
           <>
             <Routefrontendfr />
             <Routesqlfr />
+          </>
+        );
+      case "wpf":
+        return (
+          <>
+            <Routewpffr />
           </>
         );
       case "agile":

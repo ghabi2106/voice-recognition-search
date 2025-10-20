@@ -7,6 +7,7 @@ import Routesqlen from "./Routesqlen";
 import Routeagileen from "./Routeagileen";
 import Routefrontenden from "./Routefrontenden";
 import Routepresentationen from "./Routepresentationen";
+import Routewpfen from "./Routewpfen";
 
 export default function Routeen() {
   const course = useContext(CourseContext);
@@ -36,6 +37,12 @@ export default function Routeen() {
               <Routesqlen />
             </>
           );
+          case "wpf":
+            return (
+              <>
+                <Routewpfen />
+              </>
+            );
           case "agile":
             return (
               <>
