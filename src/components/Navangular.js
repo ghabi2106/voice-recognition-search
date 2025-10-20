@@ -131,6 +131,11 @@ export default function Navangular() {
               Compilation
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/monorepo">
+              Monorepo
+            </Link>
+          </li>
         </ul>
       </li>
       {

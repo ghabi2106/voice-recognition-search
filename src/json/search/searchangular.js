@@ -59,6 +59,10 @@ export const pagesangular = [
   "universal",
   // Compilation
   "compilation",
+  // Monorepo Nx
+  "monolithic repository",
+  "monorepo",
+  "nx",
   // // zzzzzzzzzzzz
   // "",
   // // zzzzzzzzzzzz

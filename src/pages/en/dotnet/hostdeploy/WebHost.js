@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Server() {
+export default function WebHost() {
   return (
     <>
       <aside className="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -25,25 +25,25 @@ export default function Server() {
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#server"
+                    href="#web-host"
                   >
-                    Web server
+                    Web Host
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#in-process"
+                    href="#common-web-hosts"
                   >
-                    .Net core servers
+                    Common Web Hosts
                   </a>
                 </li>
                 <li>
                   <a
                     className="d-inline-flex align-items-center rounded"
-                    href="#kestrel-httpsys"
+                    href="#reverse-proxy"
                   >
-                    Kestrel vs. HTTP.sys
+                    Reverse Proxy
                   </a>
                 </li>
               </ul>
@@ -134,91 +134,137 @@ export default function Server() {
       <div className="bd-cheatsheet container-fluid bg-body">
         <section id="dotnet-core">
           <h2 className="sticky-xl-top fw-bold p-0 m-0">Contents</h2>
-          <h3>Web server implementations</h3>
-          <article id="server">
-            <h6>Web server</h6>
+          <h3>Web Host</h3>
+          <article id="web-host">
+            <h6>Web Host</h6>
             <div>
+              <h6>🧩 What Is a Web Host in .NET?</h6>
               <p>
-                A web server is software and hardware that uses HTTP (Hypertext
-                Transfer Protocol) and other protocols to respond to client
-                requests made over the World Wide Web. The main job of a web
-                server is to display website content through storing, processing
-                and delivering webpages to users. Besides HTTP, web servers also
-                support SMTP (Simple Mail Transfer Protocol) and FTP (File
-                Transfer Protocol), used for email, file transfer and storage.
+                A <strong>web host</strong> in .NET is the component responsible
+                for:
               </p>
               <ul>
-                <li>Apache</li>
                 <li>
-                  <Link
-                    className="d-inline-flex align-items-center rounded"
-                    to="/iis"
-                  >
-                    Internet Information Services (IIS)
-                  </Link>
+                  <strong>Listening</strong> for incoming HTTP requests.
                 </li>
-                <li>Nginx</li>
                 <li>
-                  <Link to="/kestrel">Kestrel</Link>
+                  <strong>Routing</strong> those requests to your ASP.NET Core
+                  application.
+                </li>
+                <li>
+                  <strong>Managing</strong> the application’s lifetime and
+                  environment (startup, configuration, etc.).
                 </li>
               </ul>
+              <p>
+                Essentially, it’s the{" "}
+                <strong>bridge between the web (HTTP)</strong> and your{" "}
+                <strong>.NET app</strong>.
+              </p>
             </div>
           </article>
-          <article id="in-process">
-            <h6> in-process HTTP</h6>
+          <article id="common-web-hosts">
+            <h6>Common Web Hosts</h6>
             <div>
-              <p>ASP.NET Core ships with the following:</p>
-              <ul>
-                <li>
-                  <Link to="/kestrel">Kestrel server</Link>
-                </li>
-                <li>
-                  <Link to="/iis">IIS HTTP Server</Link>
-                </li>
-                <li>
-                  <Link to="/httpsys">HTTP.sys server</Link>
-                </li>
-              </ul>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Host</th>
+                    <th>Description</th>
+                    <th>Use Case</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Kestrel</strong>
+                    </td>
+                    <td>
+                      Cross-platform, built-in web server for ASP.NET Core
+                    </td>
+                    <td>
+                      Default and required — runs on Windows, Linux, macOS
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>IIS (Internet Information Services)</strong>
+                    </td>
+                    <td>Windows-only web server, can proxy to Kestrel</td>
+                    <td>Enterprise or intranet deployments on Windows</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>IIS Express</strong>
+                    </td>
+                    <td>Lightweight version of IIS for local development</td>
+                    <td>Used by Visual Studio for debugging</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>HTTP.sys</strong>
+                    </td>
+                    <td>Windows-only server, used instead of Kestrel</td>
+                    <td>
+                      For high-performance or low-level control on Windows
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>NGINX / Apache (Reverse Proxy)</strong>
+                    </td>
+                    <td>
+                      External web servers acting as reverse proxies to Kestrel
+                    </td>
+                    <td>Common in Linux environments, cloud, and Docker</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </article>
-          <article id="kestrel-httpsys">
-            <h6>
-              <Link to="/kestrel">Kestrel</Link> vs.{" "}
-              <Link to="/httpsys">HTTP.sys</Link>
-            </h6>
+          <article id="reverse-proxy">
+            <h6>Reverse Proxy</h6>
             <div>
-              <p>
-                <Link to="/kestrel">Kestrel</Link> has the following advantages
-                over <Link to="/httpsys">HTTP.sys</Link>:
-              </p>
+              <h6>✅ Why use NGINX or IIS in front of Kestrel</h6>
               <ul>
-                <li>Better performance and memory utilization.</li>
-                <li>Cross platform</li>
                 <li>
-                  Agility, it's developed and patched independent of the OS.
+                  <strong>SSL termination</strong>
+                  (handle HTTPS certificates)
                 </li>
-                <li>Programmatic port and TLS configuration</li>
                 <li>
-                  Extensibility that allows for protocols like PPv2 and
-                  alternate transports.
+                  <strong>Static file caching</strong>
+                </li>
+                <li>
+                  <strong>Load balancing or routing multiple apps</strong>
+                </li>
+                <li>
+                  <strong>Advanced security or rate limiting</strong>
                 </li>
               </ul>
-              <p>
-                <Link to="/httpsys">HTTP.sys</Link> operates as a shared kernel
-                mode component with the following features that{" "}
-                <Link to="/kestrel">kestrel</Link> does not have:
-              </p>
-              <ul>
-                <li>Port sharing</li>
-                <li>
-                  Kernel mode windows authentication.{" "}
-                  <Link to="/kestrel">Kestrel</Link> supports only user-mode
-                  authentication.
-                </li>
-                <li>Fast proxying via queue transfers</li>
-                <li>Direct file transmission</li>
-                <li>Response caching</li>
-              </ul>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Platform</th>
+                    <th>Web Server</th>
+                    <th>Reverse Proxy Role</th>
+                    <th>.NET Hosting</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Windows</td>
+                    <td>IIS</td>
+                    <td>Uses ASP.NET Core Module (ANCM)</td>
+                    <td>Kestrel</td>
+                  </tr>
+                  <tr>
+                    <td>Linux</td>
+                    <td>NGINX / Apache</td>
+                    <td>Handles HTTP/S and forwards to Kestrel</td>
+                    <td>Kestrel</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </article>
         </section>

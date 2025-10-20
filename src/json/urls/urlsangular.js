@@ -59,4 +59,8 @@ export const urlsangular = {
   universal: "/ssr",
   // Compilation
   compilation: "/compilation",
+  // Monorepo Nx
+  "monolithic repository": "/monorepo",
+  monorepo: "/monorepo",
+  nx: "/monorepo",
 };

@@ -161,6 +161,9 @@ export const pagesdotnet = [
   // Hosted service
   "hoster service",
   "background service",
+  // Filters
+  "filters",
+  "action filter",
   // jwt
   "jwt",
   "json web token",
@@ -426,10 +429,6 @@ export const pagesdotnet = [
   "difference between object and class",
   "difference between class and object",
   "serialization",
-  // DeployVM
-  "deploy vm",
-  "deploy virtual machine",
-  "deploy",
   // Docker
   "docker",
   "container",
@@ -440,20 +439,6 @@ export const pagesdotnet = [
   "compose",
   "registry",
   "orchestrator",
-  // HTTPS.sys
-  "http.sys",
-  // IIS
-  "iis",
-  "Internet Information Services",
-  "in process hosting",
-  "out process hosting",
-  // Kestrel
-  "kestrel",
-  "reverse proxy",
-  "forwarded headers",
-  // Server
-  "server",
-  "web server",
   // Userdefinedtype
   "user-defined conversion",
   "user-defined type",
@@ -490,4 +475,19 @@ export const pagesdotnet = [
   "unit testing",
   // versionning
   "versionning",
+  // Docker and VM Deployment
+  "docker deployment",
+  // NGINX and VM Deployment
+  "nginx deployment",
+  "linux deployment",
+  // IIS and VM Deployment
+  "iis deployment",
+  "windows deployment",
+  // web hosting
+  "web hosting",
+  "hosting",
+  // ci-cd
+  "cicd",
+  "ci cd",
+  "continued integration continued development",
 ];

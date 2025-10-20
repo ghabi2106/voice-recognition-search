@@ -57,6 +57,7 @@ import HttpmethodsPage from "../../pages/en/dotnet/http/Httpmethods";
 import JwtPage from "../../pages/en/dotnet/http/Jwt";
 import MiddlewarePage from "../../pages/en/dotnet/http/Middleware";
 import WebSocketPage from "../../pages/en/dotnet/http/WebSocket";
+import FiltersPage from "../../pages/en/dotnet/http/Filters";
 //#endregion
 
 //#region design pattern
@@ -79,12 +80,12 @@ import IdealsPage from "../../pages/en/dotnet/methodology/Ideals";
 //#endregion
 
 //#region Host Deployment
-import DeployVMPage from "../../pages/en/dotnet/hostdeploy/DeployVM";
+import WebHostPage from "../../pages/en/dotnet/hostdeploy/WebHost";
 import DockerPage from "../../pages/en/dotnet/hostdeploy/Docker";
-import HttpsysPage from "../../pages/en/dotnet/hostdeploy/Httpsys";
-import IisPage from "../../pages/en/dotnet/hostdeploy/Iis";
-import KestrelPage from "../../pages/en/dotnet/hostdeploy/Kestrel";
-import ServerPage from "../../pages/en/dotnet/hostdeploy/Server";
+import IISDeployPage from "../../pages/en/dotnet/hostdeploy/IISDeploy";
+import NGINXDeployPage from "../../pages/en/dotnet/hostdeploy/NGINXDeploy";
+import DockerDeployPage from "../../pages/en/dotnet/hostdeploy/DockerDeploy";
+import CICDPage from "../../pages/en/dotnet/hostdeploy/CICD";
 //#endregion
 
 //#endregion
@@ -205,12 +206,12 @@ export default function Routecsharpen() {
       {
         //#region Host Deploy
       }
-      <Route path="/deploy-vm" component={DeployVMPage} />
+      <Route path="/iis-deploy" component={IISDeployPage} />
       <Route path="/docker" component={DockerPage} />
-      <Route path="/httpsys" component={HttpsysPage} />
-      <Route path="/iis" component={IisPage} />
-      <Route path="/kestrel" component={KestrelPage} />
-      <Route path="/server" component={ServerPage} />
+      <Route path="/nginx-deploy" component={NGINXDeployPage} />
+      <Route path="/docker-deploy" component={DockerDeployPage} />
+      <Route path="/web-hosting" component={WebHostPage} />
+      <Route path="/cicd" component={CICDPage} />
       {
         //#endregion
       }
@@ -222,6 +223,7 @@ export default function Routecsharpen() {
       <Route path="/controllervuedata" component={ControllervuedataPage} />
       <Route path="/https" component={HttpsPage} />
       <Route path="/httpmethods" component={HttpmethodsPage} />
+      <Route path="/filters" component={FiltersPage} />
       <Route path="/jwt" component={JwtPage} />
       <Route path="/middleware" component={MiddlewarePage} />
       <Route path="/websocket" component={WebSocketPage} />

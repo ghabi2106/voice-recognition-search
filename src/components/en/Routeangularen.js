@@ -23,6 +23,7 @@ import ViewChildPage from "../../pages/en/angular/ViewChild";
 import ProvidersTypePage from "../../pages/en/angular/ProvidersType";
 import SSRPage from "../../pages/en/angular/SSR";
 import CompilationPage from "../../pages/en/angular/Compilation";
+import MonoRepoPage from "../../pages/en/angular/Monorepo";
 //#endregion
 
 export default function Routeangularen() {
@@ -52,6 +53,7 @@ export default function Routeangularen() {
       <Route path="/view-child" component={ViewChildPage} />
       <Route path="/ssr" component={SSRPage} />
       <Route path="/compilation" component={CompilationPage} />
+      <Route path="/monorepo" component={MonoRepoPage} />
       {
         //#endregion
       }

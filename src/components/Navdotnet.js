@@ -238,6 +238,11 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="dropdown-item" to="/filters">
+              Filters
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link className="dropdown-item" to="/jwt">
               JWT
             </Link>
@@ -435,8 +440,23 @@ export default function Navdotnet() {
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
-            <Link className="dropdown-item" to="/deploy-vm">
-              Deploy to VM
+            <Link className="dropdown-item" to="/web-hosting">
+              Web Hosting
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/iis-deploy">
+              IIS deploy
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/nginx-deploy">
+              NGINX Deploy
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/docker-deploy">
+              Docker Deploy
             </Link>
           </li>
           <li className="nav-item">
@@ -445,23 +465,8 @@ export default function Navdotnet() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="dropdown-item" to="/httpsys">
-              Http.sys
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/iis">
-              IIS
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/kestrel">
-              Kestrel
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="dropdown-item" to="/server">
-              Server
+            <Link className="dropdown-item" to="/cicd">
+              ci-cd
             </Link>
           </li>
         </ul>

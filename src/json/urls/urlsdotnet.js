@@ -160,6 +160,9 @@ export const urlsdotnet = {
   // Hosted service
   "hoster service": "/hostedservice",
   "background service": "/hostedservice",
+  // Filters
+  filters: "/filters",
+  "action filter": "/filters",
   // jwt
   jwt: "/jwt",
   "json web token": "/jwt",
@@ -301,7 +304,7 @@ export const urlsdotnet = {
   "c# 12": "/csharp12",
   // Plan project
   "plan project": "/plan",
-  "plan": "/plan",
+  plan: "/plan",
   // OOP
   "object oriented programming": "/oop",
   oop: "/oop",
@@ -429,10 +432,21 @@ export const urlsdotnet = {
   "difference between object and class": "/typesystem",
   "difference between class and object": "/typesystem",
   serialization: "/typesystem",
-  // DeployVM
-  "deploy vm": "/deploy-vm",
-  "deploy virtual machine": "/deploy-vm",
-  deploy: "/deploy-vm",
+  // Docker and VM Deployment
+  "docker deployment": "/docker-deploy",
+  // NGINX and VM Deployment
+  "nginx deployment": "/nginx-deploy",
+  "linux deployment": "/nginx-deploy",
+  // IIS and VM Deployment
+  "iis deployment": "/iis-deploy",
+  "windows deployment": "/iis-deploy",
+  // web hosting
+  "web hosting": "/web-hosting",
+  hosting: "/web-hosting",
+  // ci-cd
+  cicd: "/cicd",
+  "ci cd": "/cicd",
+  "continued integration continued development": "/cicd",
   // Docker
   docker: "/docker",
   container: "/docker",
@@ -443,20 +457,6 @@ export const urlsdotnet = {
   compose: "/docker",
   registry: "/docker",
   orchestrator: "/docker",
-  // HTTPS.sys
-  "http.sys": "/httpsys",
-  // IIS
-  iis: "/iis",
-  "Internet Information Services": "/iis",
-  "in process hosting": "/iis",
-  "out process hosting": "/iis",
-  // Kestrel
-  kestrel: "/kestrel",
-  "reverse proxy": "/kestrel",
-  "forwarded headers": "/kestrel",
-  // Server
-  server: "/server",
-  "web server": "/server",
   // Userdefinedtype
   "user-defined conversion": "/userdefinedtype",
   "user-defined type": "/userdefinedtype",
