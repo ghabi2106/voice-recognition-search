@@ -304,6 +304,11 @@ export default function Navdotnet() {
               IDEALS
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/resolve-conflict">
+              Resolve Conflict
+            </Link>
+          </li>
         </ul>
       </li>
       {
@@ -895,6 +900,11 @@ export default function Navdotnet() {
           <li className="nav-item">
             <Link className="dropdown-item" to="/versionning">
               Versionning
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/tenant">
+              Multi Tenant
             </Link>
           </li>
         </ul>

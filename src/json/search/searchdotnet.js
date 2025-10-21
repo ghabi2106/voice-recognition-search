@@ -490,4 +490,9 @@ export const pagesdotnet = [
   "cicd",
   "ci cd",
   "continued integration continued development",
+  // tenant
+  "tenant",
+  "multi tenant",
+  // resolve conflict
+  "resolve conflict",
 ];

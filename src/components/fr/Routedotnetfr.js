@@ -75,6 +75,7 @@ import Cleancode1Page from "../../pages/fr/dotnet/methodology/Cleancode1";
 import SolidPage from "../../pages/fr/dotnet/methodology/Solid";
 import TddPage from "../../pages/fr/dotnet/methodology/Tdd";
 import IdealsPage from "../../pages/fr/dotnet/methodology/Ideals";
+import ResolveConflictPage from "../../pages/fr/dotnet/methodology/ResolveConflict";
 //#endregion
 
 //#region Host Deployment
@@ -154,6 +155,7 @@ import SecurityPage from "../../pages/fr/dotnet/microservices/Security";
 import ServiceDiscoveryPage from "../../pages/fr/dotnet/microservices/ServiceDiscovery";
 import TracingPage from "../../pages/fr/dotnet/microservices/Tracing";
 import VersioningPage from "../../pages/fr/dotnet/microservices/Versioning";
+import TenantPage from "../../pages/fr/dotnet/microservices/Tenant";
 import UnitTestingPage from "../../pages/fr/dotnet/microservices/UnitTesting";
 //#endregion
 
@@ -262,6 +264,7 @@ export default function Routedotnetfr() {
       <Route path="/solid" component={SolidPage} />
       <Route path="/tdd" component={TddPage} />
       <Route path="/ideals" component={IdealsPage} />
+            <Route path="/resolve-conflict" component={ResolveConflictPage} />
       {
         //#endregion
       }
@@ -375,6 +378,7 @@ export default function Routedotnetfr() {
       <Route path="/tracing" component={TracingPage} />
       <Route path="/unit-testing" component={UnitTestingPage} />
       <Route path="/versionning" component={VersioningPage} />
+            <Route path="/tenant" component={TenantPage} />
       {
         //#endregion
       }

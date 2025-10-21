@@ -493,4 +493,9 @@ export const urlsdotnet = {
   "unit testing": "/unit-testing",
   // versionning
   versionning: "/versionning",
+  // tenant
+  tenant: "/tenant",
+  "multi tenant": "/tenant",
+  // resolve conflict
+  "resolve conflict": "/resolve-conflict",
 };
