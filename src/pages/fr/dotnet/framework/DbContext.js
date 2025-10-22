@@ -99,7 +99,7 @@ export default function DbContet() {
                 <strong>C# classes (entities)</strong> and your{" "}
                 <strong>database tables</strong>.
               </p>
-              <h3>💬 Simple Definition:</h3>
+              <h6>💬 Simple Definition:</h6>
               <blockquote>
                 <p>
                   <code>DbContext</code> represents a <strong>session</strong>{" "}

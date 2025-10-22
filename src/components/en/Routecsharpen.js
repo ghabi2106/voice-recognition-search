@@ -208,9 +208,9 @@ export default function Routecsharpen() {
       <Route path="/nugetpackages" component={NugetpackagesPage} />
       <Route path="/connection-pooling" component={ConnectionPoolingPage} />
       <Route path="/dbcontext" component={DbContextPage} />
-      <Route path="/modelbinding" component={ModelBindingPage} />
+      <Route path="/model-binding" component={ModelBindingPage} />
       <Route path="/repository" component={RepositoryPage} />
-      <Route path="/unitofwork" component={UnitOfWorkPage} />
+      <Route path="/unit-of-work" component={UnitOfWorkPage} />
       {
         //#endregion
       }
