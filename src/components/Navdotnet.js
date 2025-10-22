@@ -190,6 +190,31 @@ export default function Navdotnet() {
               Nuget-Packages
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="dropdown-item" to="/connection-pooling">
+              Connection Pooling
+            </Link>
+          </li>
+            <li className="nav-item">
+            <Link className="dropdown-item" to="/dbcontext">
+              DbContext
+            </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="dropdown-item" to="/model-binding">
+                Model Binding <mark>FromBody</mark> <mark>FromQuery</mark> <mark>FromRoute</mark> <mark>Validation</mark>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="dropdown-item" to="/repository">
+                Repository
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="dropdown-item" to="/unit-of-work">
+                UnitOfWork
+              </Link>
+            </li>
         </ul>
       </li>
       {

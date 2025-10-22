@@ -63,8 +63,17 @@ export const pagesangular = [
   "monolithic repository",
   "monorepo",
   "nx",
-  // // zzzzzzzzzzzz
-  // "",
-  // // zzzzzzzzzzzz
-  // "",
+  // model binding
+  "model binding",
+  // DB context
+  "dbcontext",
+  "db context",
+  "database context",
+  // repository
+  "repository",
+  //Connection Pooling
+  "connection pooling",
+  // Unit Of Work
+  "unit of work",
+  "unit of work pattern",
 ];

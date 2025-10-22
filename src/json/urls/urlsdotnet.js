@@ -498,4 +498,18 @@ export const urlsdotnet = {
   "multi tenant": "/tenant",
   // resolve conflict
   "resolve conflict": "/resolve-conflict",
+  // Connection Pooling
+  "connection pooling": "/connection-pooling",
+  "pooling": "/connection-pooling",
+  // DbContext
+  dbcontext: "/dbcontext",
+  "db context": "/dbcontext",
+  "ef dbcontext": "/dbcontext",
+  "entity framework dbcontext": "/dbcontext",
+  // Model Binding
+  "model binding": "/model-binding",
+  // Repository
+  "repository": "/repository",
+  // UnitOfWork
+  "unit of work": "/unitofwork",
 };

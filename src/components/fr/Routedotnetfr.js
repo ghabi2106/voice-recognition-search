@@ -37,6 +37,11 @@ import GcPage from "../../pages/fr/dotnet/framework/Gc";
 import GcmethodsPage from "../../pages/fr/dotnet/framework/Gcmethods";
 import LinqPage from "../../pages/fr/dotnet/framework/Linq";
 import NugetpackagesPage from "../../pages/fr/dotnet/framework/Nugetpackages";
+import ConnectionPoolingPage from "../../pages/en/dotnet/framework/ConnectionPooling";
+import DbContextPage from "../../pages/en/dotnet/framework/DbContext";
+import ModelBindingPage from "../../pages/en/dotnet/framework/ModelBinding";
+import RepositoryPage from "../../pages/en/dotnet/framework/Repository";
+import UnitOfWorkPage from "../../pages/en/dotnet/framework/UnitOfWork";
 //#endregion
 
 //#region OOP
@@ -197,6 +202,11 @@ export default function Routedotnetfr() {
       <Route path="/gcmethods" component={GcmethodsPage} />
       <Route path="/linq" component={LinqPage} />
       <Route path="/nugetpackages" component={NugetpackagesPage} />
+      <Route path="/connection-pooling" component={ConnectionPoolingPage} />
+      <Route path="/dbcontext" component={DbContextPage} />
+      <Route path="/modelbinding" component={ModelBindingPage} />
+      <Route path="/repository" component={RepositoryPage} />
+      <Route path="/unitofwork" component={UnitOfWorkPage} />
       {
         //#endregion
       }
@@ -264,7 +274,7 @@ export default function Routedotnetfr() {
       <Route path="/solid" component={SolidPage} />
       <Route path="/tdd" component={TddPage} />
       <Route path="/ideals" component={IdealsPage} />
-            <Route path="/resolve-conflict" component={ResolveConflictPage} />
+      <Route path="/resolve-conflict" component={ResolveConflictPage} />
       {
         //#endregion
       }
@@ -378,7 +388,7 @@ export default function Routedotnetfr() {
       <Route path="/tracing" component={TracingPage} />
       <Route path="/unit-testing" component={UnitTestingPage} />
       <Route path="/versionning" component={VersioningPage} />
-            <Route path="/tenant" component={TenantPage} />
+      <Route path="/tenant" component={TenantPage} />
       {
         //#endregion
       }

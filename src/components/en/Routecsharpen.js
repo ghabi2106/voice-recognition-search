@@ -39,6 +39,11 @@ import GcPage from "../../pages/en/dotnet/framework/Gc";
 import GcmethodsPage from "../../pages/en/dotnet/framework/Gcmethods";
 import LinqPage from "../../pages/en/dotnet/framework/Linq";
 import NugetpackagesPage from "../../pages/en/dotnet/framework/Nugetpackages";
+import ConnectionPoolingPage from "../../pages/en/dotnet/framework/ConnectionPooling";
+import DbContextPage from "../../pages/en/dotnet/framework/DbContext";
+import ModelBindingPage from "../../pages/en/dotnet/framework/ModelBinding";
+import RepositoryPage from "../../pages/en/dotnet/framework/Repository";
+import UnitOfWorkPage from "../../pages/en/dotnet/framework/UnitOfWork";
 //#endregion
 
 //#region OOP
@@ -201,6 +206,11 @@ export default function Routecsharpen() {
       <Route path="/gcmethods" component={GcmethodsPage} />
       <Route path="/linq" component={LinqPage} />
       <Route path="/nugetpackages" component={NugetpackagesPage} />
+      <Route path="/connection-pooling" component={ConnectionPoolingPage} />
+      <Route path="/dbcontext" component={DbContextPage} />
+      <Route path="/modelbinding" component={ModelBindingPage} />
+      <Route path="/repository" component={RepositoryPage} />
+      <Route path="/unitofwork" component={UnitOfWorkPage} />
       {
         //#endregion
       }
@@ -313,7 +323,10 @@ export default function Routecsharpen() {
       }
       <Route path="/autoresetevent" component={AutoResetEventPage} />
       <Route path="/barrier" component={BarrierPage} />
-      <Route path="/concurrentcollections" component={ConcurrentCollectionsPage} />
+      <Route
+        path="/concurrentcollections"
+        component={ConcurrentCollectionsPage}
+      />
       <Route path="/countdownevent" component={CountdownEventPage} />
       <Route path="/deadlock" component={DeadlockPage} />
       <Route path="/interlocked" component={InterlockedPage} />
