@@ -159,24 +159,111 @@ export default function WebSocket() {
           <article id="multiple-chats">
             <h6>Multiple chats</h6>
             <div>
-              <p>
-                <strong>Connection Storage</strong>: Maintain a list of
-                connected clients using <code>ConcurrentDictionary</code>.
-                <br />
-                <code>ConcurrentDictionary</code> was used because it is a
-                thread-safe collection in .NET
-              </p>
-              <h6>Deployment considerations</h6>
+              <h6>1️⃣ Efficient server design</h6>
               <ul>
                 <li>
-                  <strong>Scaling</strong>: Use a message broker (e.g., Redis)
-                  for managing connections across servers.
+                  <p>
+                    Use <strong>Kestrel</strong> (async I/O model)
+                  </p>
                 </li>
                 <li>
-                  <strong>Load Balancing</strong>: Ensure WebSocket connections
-                  are sticky if using multiple backend instances.
+                  <p>
+                    Use <strong>ArrayPool&lt;byte&gt;</strong> for buffer reuse
+                  </p>
+                </li>
+                <li>
+                  <p>Optimize thread usage with async/await</p>
                 </li>
               </ul>
+              <h6>2️⃣ Horizontal scaling</h6>
+              <ul>
+                <li>
+                  <p>
+                    WebSocket connections are <strong>sticky</strong> to one
+                    server instance.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Use <strong>sticky sessions</strong> in load balancer or{" "}
+                    <strong>WebSocket backplane</strong> (like Redis).
+                  </p>
+                </li>
+              </ul>
+              <h6>3️⃣ Use SignalR for scale-out</h6>
+              <ul>
+                <li>
+                  <p>
+                    SignalR’s <strong>Redis backplane</strong> or{" "}
+                    <strong>Azure SignalR Service</strong> allows message
+                    broadcast across multiple nodes.
+                  </p>
+                </li>
+              </ul>
+              <ol data-start="5910" data-end="6465">
+                <li data-start="5910" data-end="6013">
+                  <p data-start="5913" data-end="6013">
+                    Use{" "}
+                    <strong data-start="5917" data-end="5928">
+                      Kestrel
+                    </strong>{" "}
+                    with{" "}
+                    <strong data-start="5934" data-end="5947">
+                      async I/O
+                    </strong>{" "}
+                    and{" "}
+                    <strong data-start="5952" data-end="5971">
+                      ArrayPool&lt;byte&gt;
+                    </strong>{" "}
+                    to minimize memory and thread overhead.
+                  </p>
+                </li>
+                <li data-start="6016" data-end="6108">
+                  <p data-start="6019" data-end="6108">
+                    Configure{" "}
+                    <strong data-start="6029" data-end="6048">
+                      sticky sessions
+                    </strong>{" "}
+                    at the load balancer level since WebSockets are stateful.
+                  </p>
+                </li>
+                <li data-start="6111" data-end="6209">
+                  <p data-start="6114" data-end="6209">
+                    Use a{" "}
+                    <strong data-start="6120" data-end="6156">
+                      Redis or Azure SignalR backplane
+                    </strong>{" "}
+                    to synchronize messages across multiple instances.
+                  </p>
+                </li>
+                <li data-start="6212" data-end="6275">
+                  <p data-start="6215" data-end="6275">
+                    Store user–connection mappings in a{" "}
+                    <strong data-start="6251" data-end="6272">
+                      distributed cache
+                    </strong>
+                    .
+                  </p>
+                </li>
+                <li data-start="6278" data-end="6344">
+                  <p data-start="6281" data-end="6344">
+                    Implement{" "}
+                    <strong data-start="6291" data-end="6310">
+                      heartbeat pings
+                    </strong>{" "}
+                    and monitor connection metrics.
+                  </p>
+                </li>
+                <li data-start="6347" data-end="6465">
+                  <p data-start="6350" data-end="6465">
+                    For enterprise-grade scalability, use{" "}
+                    <strong data-start="6388" data-end="6413">
+                      Azure SignalR Service
+                    </strong>{" "}
+                    — it handles millions of connections automatically.
+                  </p>
+                </li>
+              </ol>
             </div>
           </article>
           <article id="test-websocket">
